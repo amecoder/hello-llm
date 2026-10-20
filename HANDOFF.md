@@ -11,7 +11,7 @@
 ## Completed Tasks
 - [x] 프로젝트 초기 설정 (git init, CLAUDE.md, 폴더 구조) — 커밋 `a358655`
 - [x] GitHub 공개 저장소 생성 (amecoder/hello-llm)
-- [x] README.md 작성 (대상 독자·학습 로드맵·진행 상황)
+- [x] README.md 작성 (대상 독자·학습 로드맵·진행 상황) — PR #1, squash `d676be6`
 
 ## Key Decisions
 - 가이드 폴더는 단계 번호 방식 (`00-common` → `10/11` → `20/21` → `30-ai-sdlc`)
