@@ -9,6 +9,7 @@
 - GitHub 공개 저장소 생성 (amecoder/hello-llm)
 - README.md: 대상 독자, 4단계 학습 로드맵, 진행 상황 (#1, `d676be6`)
 - 공통 가이드 1~4장, 목차 계획, 경쟁 분석 리포트 (#2, `db3cc25`)
+- 공통 가이드 5장 프롬프트 패턴, 단계 나누기 그림 (#3, `a013702`)
 
 ### Changed
 - README 로드맵 그림을 Mermaid에서 Excalidraw SVG(`assets/roadmap.*`)로 교체 (#2)
