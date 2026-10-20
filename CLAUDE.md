@@ -13,8 +13,10 @@
   코치 마크(coach mark, 처음 쓰는 사람에게 버튼·입력창 위에 말풍선으로 안내를 띄우는 온보딩 UI)
 
 ## 기술 스택
-- 현재: Markdown 문서만
-- 실습 UI: **미정** — 스택 결정 전까지 코드를 만들지 않는다 (`HANDOFF.md` Pending 참조)
+- 본문: Markdown → **VitePress 1.6.4** 사이트 (각주: `markdown-it-footnote`)
+- 배포: GitHub Pages — `main` 푸시마다 `.github/workflows/deploy.yml` 이 자동 배포 → https://amecoder.github.io/hello-llm/
+- 사이트에는 `README.md`(홈)와 `guide/` 만 나간다. `docs/`·`HANDOFF.md`·`CHANGELOG.md`·`CLAUDE.md` 는 `srcExclude` 로 제외
+- 실습 UI: VitePress 페이지 안의 Vue 컴포넌트로 넣을 예정(미착수). 실제 LLM API 는 호출하지 않는다(비용 0 원칙) — 미리 준비한 답변으로 시뮬레이션
 
 ## 프로젝트 구조
 ```
@@ -37,5 +39,13 @@ assets/                # README 그림 (.excalidraw 원본 + .svg)
 - **사실 확인**: 서비스 기능·요금·메뉴 이름은 자주 바뀐다. 근거(공식 문서 URL)와 확인 날짜를 문서에 남긴다
 - **실습 UI의 상표**: 화면 배치는 재현하되 실제 로고·브랜드명을 그대로 쓰지 않고, 연습용 화면임을 명시한다(실제 서비스로 오인되지 않게)
 
+## 새 장을 추가할 때
+1. `guide/<단계>/NN-slug.md` 작성, 앞 장의 "다음 장" 링크 연결
+2. 단계 목차 `guide/<단계>/README.md` 갱신
+3. **`.vitepress/config.mts` 의 `sidebar` 에 항목 추가** — 빠뜨리면 사이트 왼쪽 목차에 안 보인다
+4. 아직 없는 장으로 링크하지 않는다 — VitePress 빌드가 죽은 링크에서 실패한다
+
 ## 주요 커맨드
-- (아직 없음 — 사이트·실습 UI 스택이 정해지면 추가)
+- `npm ci` — 의존성 설치
+- `npm run docs:dev` — 로컬 미리보기 (http://localhost:5173/hello-llm/)
+- `npm run docs:build` — 배포와 같은 빌드. 죽은 링크가 있으면 실패하므로 PR 전에 실행
