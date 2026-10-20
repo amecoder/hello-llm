@@ -1,12 +1,14 @@
 # HANDOFF.md
 
-## Current State: 공통 가이드 1~7장 공개 (2026-10-20) — 다음은 8장 안전하게 쓰기
+## Current State: 7장에 메타 프롬프팅 팁 + 프롬프트 편집기 추가 (2026-10-20, 브랜치 `feat/prompt-builder`) — 다음은 8장 안전하게 쓰기
 
 - 저장소: https://github.com/amecoder/hello-llm (public, 기본 브랜치 `main`)
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
 
 ## Pending Tasks
-- [ ] 실습 UI 구현 — VitePress 안 Vue 컴포넌트, 동일 UI + 코치 마크, API 호출 없는 시뮬레이션
+- [ ] 실습 UI 구현 — VitePress 안 Vue 컴포넌트, 동일 UI + 코치 마크, API 호출 없는 시뮬레이션 (첫 부품 `PromptBuilder` 완료)
+- [ ] (제안) 컴포넌트 E2E 테스트 영구화 — 지금은 scratchpad 의 Playwright 스크립트로 수동 검증만 함
+- [ ] (제안) favicon 추가 — 없어서 브라우저 콘솔에 404 가 한 줄 찍힘
 - [ ] (선택) deploy.yml 의 `configure-pages@v4`·`upload-pages-artifact@v3` 가 Node 20 경고 — 새 메이저 나오면 올리기
 - [ ] `guide/00-common` 8장 안전하게 쓰기(`08-safety.md`), 9장 실습(`09-practice.md`) 작성 — 7장 신설로 번호가 한 칸씩 밀림
 - [ ] 1~4장에도 용어 정리 표 추가 검토 (목차: `docs/plans/2026-10-20_공통-가이드-목차.md`)## Completed Tasks

@@ -17,7 +17,9 @@
 - 배포: GitHub Pages — `main` 푸시마다 `.github/workflows/deploy.yml` 이 자동 배포 → https://amecoder.github.io/hello-llm/
 - 사이트 홈은 `index.md`(사이트 전용), GitHub 첫 화면은 `README.md` — 둘은 따로 관리한다. 사이트에는 `index.md` 와 `guide/` 만 나가고 `README.md`·`docs/`·`HANDOFF.md`·`CHANGELOG.md`·`CLAUDE.md` 는 `srcExclude` 로 제외
 - ⚠️ `rewrites` 는 페이지 주소만 바꾸고 본문 링크는 안 바꾼다 — 사이트 페이지에서 단계 목차로 갈 때는 `.../README.md` 가 아니라 `/guide/00-common/` 처럼 쓴다(2026-10-20 404 원인)
-- 실습 UI: VitePress 페이지 안의 Vue 컴포넌트로 넣을 예정(미착수). 실제 LLM API 는 호출하지 않는다(비용 0 원칙) — 미리 준비한 답변으로 시뮬레이션
+- 실습 UI: VitePress 페이지 안의 Vue 컴포넌트(`.vitepress/theme/components/`, `theme/index.ts` 에서 전역 등록). 실제 LLM API 는 호출하지 않는다(비용 0 원칙) — 브라우저 안에서만 동작하거나 미리 준비한 답변으로 시뮬레이션
+  - 첫 컴포넌트: `<PromptBuilder />` (7장) — 조립 규칙은 `theme/prompt-builder.ts` 순수 함수로 분리해 `tests/` 에서 테스트
+- 테스트: Node 내장 테스트 러너(`node --test`, TS 는 Node 24 타입 제거 기능으로 바로 실행). 배포 워크플로가 빌드 전에 `npm test` 를 돌린다
 
 ## 프로젝트 구조
 ```
@@ -52,3 +54,4 @@ assets/                # README 그림 (.excalidraw 원본 + .svg)
 - `npm ci` — 의존성 설치
 - `npm run docs:dev` — 로컬 미리보기 (http://localhost:5173/hello-llm/)
 - `npm run docs:build` — 배포와 같은 빌드. 죽은 링크가 있으면 실패하므로 PR 전에 실행
+- `npm test` — 컴포넌트 로직 단위 테스트
