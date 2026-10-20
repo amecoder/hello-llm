@@ -31,8 +31,12 @@ features:
     link: /guide/00-common/04-prompt-basics
     linkText: 읽기
   - title: 5장. 프롬프트 패턴
-    details: 예시 보여 주기, 단계 나누기, 되묻게 하기 등 일곱 가지 요령
+    details: Few-shot, CoT 등 전문가들이 쓰는 여덟 가지 요청 요령
     link: /guide/00-common/05-prompt-patterns
+    linkText: 읽기
+  - title: 6장. 대화를 이어 가며 다듬기
+    details: 고쳐 달라고 잘 말하는 법, 새 대화로 옮겨 가는 법
+    link: /guide/00-common/06-conversation
     linkText: 읽기
 ---
 

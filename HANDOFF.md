@@ -1,6 +1,6 @@
 # HANDOFF.md
 
-## Current State: 공통 가이드 1~5장 공개, 사이트 배포 완료 (2026-10-20) — 다음은 6장
+## Current State: 6장 작성 + 5장 전문 용어 보강 (2026-10-20, 브랜치 `docs/common-ch6`) — 다음은 7장
 
 - 저장소: https://github.com/amecoder/hello-llm (public, 기본 브랜치 `main`)
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
@@ -8,7 +8,7 @@
 ## Pending Tasks
 - [ ] 실습 UI 구현 — VitePress 안 Vue 컴포넌트, 동일 UI + 코치 마크, API 호출 없는 시뮬레이션
 - [ ] (선택) deploy.yml 의 `configure-pages@v4`·`upload-pages-artifact@v3` 가 Node 20 경고 — 새 메이저 나오면 올리기
-- [ ] `guide/00-common` 6~8장 작성 (목차: `docs/plans/2026-10-20_공통-가이드-목차.md`)## Completed Tasks
+- [ ] `guide/00-common` 7~8장 작성 (1~4장에도 용어 정리 표 추가 검토) (목차: `docs/plans/2026-10-20_공통-가이드-목차.md`)## Completed Tasks
 - [x] 프로젝트 초기 설정 (git init, CLAUDE.md, 폴더 구조) — 커밋 `a358655`
 - [x] GitHub 공개 저장소 생성 (amecoder/hello-llm)
 - [x] README.md 작성 (대상 독자·학습 로드맵·진행 상황) — PR #1, squash `d676be6`
