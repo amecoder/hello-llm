@@ -7,9 +7,11 @@ export default defineConfig({
   description: '챗봇처럼 묻고 답만 받던 LLM을, 전문가처럼 쓰게 만드는 단계별 가이드',
   base: '/hello-llm/',
   // reader-facing pages only; project/ops docs stay on GitHub
-  srcExclude: ['docs/**', 'CLAUDE.md', 'HANDOFF.md', 'CHANGELOG.md', '.claude/**'],
+  // README.md is the GitHub landing page; the site home is index.md
+  srcExclude: ['docs/**', 'README.md', 'CLAUDE.md', 'HANDOFF.md', 'CHANGELOG.md', '.claude/**'],
+  // rewrites change page URLs only, not links inside pages:
+  // always link to '/guide/00-common/', never to '.../README.md'
   rewrites: {
-    'README.md': 'index.md',
     'guide/00-common/README.md': 'guide/00-common/index.md',
   },
   lastUpdated: true,

@@ -15,7 +15,8 @@
 ## 기술 스택
 - 본문: Markdown → **VitePress 1.6.4** 사이트 (각주: `markdown-it-footnote`)
 - 배포: GitHub Pages — `main` 푸시마다 `.github/workflows/deploy.yml` 이 자동 배포 → https://amecoder.github.io/hello-llm/
-- 사이트에는 `README.md`(홈)와 `guide/` 만 나간다. `docs/`·`HANDOFF.md`·`CHANGELOG.md`·`CLAUDE.md` 는 `srcExclude` 로 제외
+- 사이트 홈은 `index.md`(사이트 전용), GitHub 첫 화면은 `README.md` — 둘은 따로 관리한다. 사이트에는 `index.md` 와 `guide/` 만 나가고 `README.md`·`docs/`·`HANDOFF.md`·`CHANGELOG.md`·`CLAUDE.md` 는 `srcExclude` 로 제외
+- ⚠️ `rewrites` 는 페이지 주소만 바꾸고 본문 링크는 안 바꾼다 — 사이트 페이지에서 단계 목차로 갈 때는 `.../README.md` 가 아니라 `/guide/00-common/` 처럼 쓴다(2026-10-20 404 원인)
 - 실습 UI: VitePress 페이지 안의 Vue 컴포넌트로 넣을 예정(미착수). 실제 LLM API 는 호출하지 않는다(비용 0 원칙) — 미리 준비한 답변으로 시뮬레이션
 
 ## 프로젝트 구조
@@ -42,7 +43,7 @@ assets/                # README 그림 (.excalidraw 원본 + .svg)
 ## 새 장을 추가할 때
 1. `guide/<단계>/NN-slug.md` 작성, 앞 장의 "다음 장" 링크 연결
 2. 단계 목차 `guide/<단계>/README.md` 갱신
-3. **`.vitepress/config.mts` 의 `sidebar` 에 항목 추가** — 빠뜨리면 사이트 왼쪽 목차에 안 보인다
+3. **`.vitepress/config.mts` 의 `sidebar` 와 `index.md` 의 `features` 카드에 항목 추가** — 빠뜨리면 사이트 목차·첫 화면에 안 보인다
 4. 아직 없는 장으로 링크하지 않는다 — VitePress 빌드가 죽은 링크에서 실패한다
 
 ## 주요 커맨드
