@@ -1,13 +1,12 @@
 # HANDOFF.md
 
-## Current State: 초기 설정 완료 · README 추가 (2026-10-20)
+## Current State: 공통 가이드 5장 작성 중 (2026-10-20, 브랜치 `docs/common-ch5`)
 
 - 저장소: https://github.com/amecoder/hello-llm (public, 기본 브랜치 `main`)
 
 ## Pending Tasks
 - [ ] 실습 UI 기술 스택 결정 — 실제 서비스와 같은 UI 재현 + 코치 마크 필요
-- [ ] `guide/00-common` 5~8장 작성 (목차: `docs/plans/2026-10-20_공통-가이드-목차.md`)
-
+- [ ] `guide/00-common` 6~8장 작성 (목차: `docs/plans/2026-10-20_공통-가이드-목차.md`) — 5장은 1차 작성 완료, 검토 대기
 ## Completed Tasks
 - [x] 프로젝트 초기 설정 (git init, CLAUDE.md, 폴더 구조) — 커밋 `a358655`
 - [x] GitHub 공개 저장소 생성 (amecoder/hello-llm)
