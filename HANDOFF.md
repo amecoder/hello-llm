@@ -6,12 +6,15 @@
 
 ## Pending Tasks
 - [ ] 실습 UI 기술 스택 결정 — 실제 서비스와 같은 UI 재현 + 코치 마크 필요
-- [ ] `guide/00-common` 목차 설계 및 첫 문서 작성
+- [ ] `guide/00-common` 5~8장 작성 (목차: `docs/plans/2026-10-20_공통-가이드-목차.md`)
+- [ ] 1~4장 사용자 검토 (브랜치 `docs/common-intro`)
 
 ## Completed Tasks
 - [x] 프로젝트 초기 설정 (git init, CLAUDE.md, 폴더 구조) — 커밋 `a358655`
 - [x] GitHub 공개 저장소 생성 (amecoder/hello-llm)
 - [x] README.md 작성 (대상 독자·학습 로드맵·진행 상황) — PR #1, squash `d676be6`
+- [x] 경쟁 분석 리포트 (`docs/reports/2026-10-20_경쟁-분석.md`)
+- [x] 공통 가이드 1~4장 1차 작성 (LLM이란·화제인 이유·배워야 하는 이유·프롬프트 기초)
 
 ## Key Decisions
 - 가이드 폴더는 단계 번호 방식 (`00-common` → `10/11` → `20/21` → `30-ai-sdlc`)

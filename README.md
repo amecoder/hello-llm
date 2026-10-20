@@ -22,12 +22,7 @@ ChatGPT나 Claude에 질문은 해 봤지만 "이게 다인가?" 싶었던 분�
 | 3 | [`guide/20-claude-code`](guide/20-claude-code) · [`guide/21-codex`](guide/21-codex) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
 | 4 | [`guide/30-ai-sdlc`](guide/30-ai-sdlc) | AI와 함께 기획부터 배포까지 — 소프트웨어 개발 전 과정(SDLC) |
 
-```mermaid
-flowchart LR
-    A[1. 공통] --> B[2. Claude · ChatGPT]
-    B --> C[3. Claude Code · Codex]
-    C --> D[4. AI-SDLC]
-```
+![학습 로드맵: 1단계 공통 가이드(잘 묻는 법) → 2단계 Claude·ChatGPT(서비스별 기능) → 3단계 Claude Code·Codex(AI에게 일 맡기기) → 4단계 AI-SDLC(AI와 함께 만들기)](assets/roadmap.svg)
 
 ## 진행 상황
 

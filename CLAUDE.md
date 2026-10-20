@@ -25,7 +25,9 @@ guide/                 # 독자에게 보여줄 가이드 본문 (번호 = 학�
   30-ai-sdlc/
 docs/                  # 프로젝트 운영 문서 (독자용 아님)
   plans/  reports/  architecture/
+assets/                # README 그림 (.excalidraw 원본 + .svg)
 ```
+- 그림은 전역 `excalidraw` 스킬로 만든다. 원본 `.excalidraw` 와 결과 `.svg` 를 함께 커밋한다(Mermaid 사용 안 함)
 - 번호 규칙: 십의 자리 = 단계, 일의 자리 = 같은 단계 안의 도구. 새 도구는 같은 단계의 다음 번호(예: `12-gemini`)
 - `guide/` 는 독자용, `docs/` 는 작업용 — 섞지 않는다
 
