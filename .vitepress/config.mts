@@ -34,6 +34,7 @@ export default defineConfig({
             { text: '4장. 프롬프트 기초', link: '/guide/00-common/04-prompt-basics' },
             { text: '5장. 프롬프트 패턴', link: '/guide/00-common/05-prompt-patterns' },
             { text: '6장. 대화를 이어 가며 다듬기', link: '/guide/00-common/06-conversation' },
+            { text: '7장. 구조화 프롬프트', link: '/guide/00-common/07-structured-prompts' },
           ],
         },
       ],

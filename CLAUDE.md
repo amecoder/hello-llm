@@ -46,6 +46,7 @@ assets/                # README 그림 (.excalidraw 원본 + .svg)
 2. 단계 목차 `guide/<단계>/README.md` 갱신
 3. **`.vitepress/config.mts` 의 `sidebar` 와 `index.md` 의 `features` 카드에 항목 추가** — 빠뜨리면 사이트 목차·첫 화면에 안 보인다
 4. 아직 없는 장으로 링크하지 않는다 — VitePress 빌드가 죽은 링크에서 실패한다
+5. 본문의 `<태그>` 는 반드시 백틱이나 코드 블록 안에 쓴다 — 그냥 쓰면 VitePress(Vue)가 HTML 로 해석해 사라지거나 빌드가 깨진다
 
 ## 주요 커맨드
 - `npm ci` — 의존성 설치
