@@ -33,6 +33,7 @@ export default defineConfig({
             { text: '3장. 왜 배워야 하나', link: '/guide/00-common/03-why-learn' },
             { text: '4장. 프롬프트 기초', link: '/guide/00-common/04-prompt-basics' },
             { text: '5장. 프롬프트 패턴', link: '/guide/00-common/05-prompt-patterns' },
+            { text: '6장. 대화를 이어 가며 다듬기', link: '/guide/00-common/06-conversation' },
           ],
         },
       ],

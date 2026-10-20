@@ -1,0 +1,219 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "id": "start",
+   "x": 0,
+   "y": 40,
+   "width": 200,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "답이\n마음에 안 든다",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "diamond",
+   "id": "q1",
+   "x": 320,
+   "y": 0,
+   "width": 220,
+   "height": 150,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "방향은\n맞나?",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "fix",
+   "x": 700,
+   "y": 40,
+   "width": 230,
+   "height": 70,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "고칠 곳만 짚어\n수정 요청",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "diamond",
+   "id": "q2",
+   "x": 300,
+   "y": 250,
+   "width": 260,
+   "height": 170,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "대화가 길거나\n주제가 바뀌었나?",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "new",
+   "x": 700,
+   "y": 300,
+   "width": 230,
+   "height": 70,
+   "backgroundColor": "#a5d8ff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "요약을 받아\n새 대화 시작",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "retry",
+   "x": 320,
+   "y": 510,
+   "width": 220,
+   "height": 70,
+   "backgroundColor": "#a5d8ff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "요청을 다시 써서\n같은 대화에서",
+    "fontSize": 18
+   }
+  },
+  {
+   "x": 200,
+   "y": 75,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     118,
+     0
+    ]
+   ],
+   "start": {
+    "id": "start"
+   },
+   "end": {
+    "id": "q1"
+   },
+   "type": "arrow",
+   "width": 118,
+   "height": 0
+  },
+  {
+   "x": 540,
+   "y": 75,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     158,
+     0
+    ]
+   ],
+   "start": {
+    "id": "q1"
+   },
+   "end": {
+    "id": "fix"
+   },
+   "label": {
+    "text": "예",
+    "fontSize": 18
+   },
+   "type": "arrow",
+   "width": 158,
+   "height": 0
+  },
+  {
+   "x": 430,
+   "y": 150,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     98
+    ]
+   ],
+   "start": {
+    "id": "q1"
+   },
+   "end": {
+    "id": "q2"
+   },
+   "label": {
+    "text": "아니오",
+    "fontSize": 18
+   },
+   "type": "arrow",
+   "width": 0,
+   "height": 98
+  },
+  {
+   "x": 560,
+   "y": 335,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     138,
+     0
+    ]
+   ],
+   "start": {
+    "id": "q2"
+   },
+   "end": {
+    "id": "new"
+   },
+   "label": {
+    "text": "예",
+    "fontSize": 18
+   },
+   "type": "arrow",
+   "width": 138,
+   "height": 0
+  },
+  {
+   "x": 430,
+   "y": 420,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     88
+    ]
+   ],
+   "start": {
+    "id": "q2"
+   },
+   "end": {
+    "id": "retry"
+   },
+   "label": {
+    "text": "아니오",
+    "fontSize": 18
+   },
+   "type": "arrow",
+   "width": 0,
+   "height": 88
+  }
+ ]
+}
