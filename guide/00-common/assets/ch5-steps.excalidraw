@@ -1,0 +1,15 @@
+{"skeleton": [
+  {"type": "rectangle", "x": 0, "y": 0, "width": 160, "height": 60, "strokeColor": "transparent", "backgroundColor": "transparent", "label": {"text": "한 번에 요청", "fontSize": 20, "strokeColor": "#1e1e1e"}},
+  {"type": "rectangle", "id": "a1", "x": 180, "y": 0, "width": 200, "height": 60, "backgroundColor": "#e9ecef", "fillStyle": "solid", "label": {"text": "보고서 써 줘", "fontSize": 18}},
+  {"type": "rectangle", "id": "a2", "x": 480, "y": 0, "width": 220, "height": 60, "backgroundColor": "#ffc9c9", "fillStyle": "solid", "label": {"text": "긴 글이 나왔는데\n방향이 다름", "fontSize": 18}},
+  {"type": "rectangle", "id": "a3", "x": 800, "y": 0, "width": 200, "height": 60, "backgroundColor": "#ffc9c9", "fillStyle": "solid", "label": {"text": "처음부터 다시", "fontSize": 18}},
+  {"type": "arrow", "x": 380, "y": 30, "start": {"id": "a1"}, "end": {"id": "a2"}},
+  {"type": "arrow", "x": 700, "y": 30, "start": {"id": "a2"}, "end": {"id": "a3"}},
+
+  {"type": "rectangle", "x": 0, "y": 130, "width": 160, "height": 60, "strokeColor": "transparent", "backgroundColor": "transparent", "label": {"text": "단계 나눠 요청", "fontSize": 20, "strokeColor": "#1e1e1e"}},
+  {"type": "rectangle", "id": "b1", "x": 180, "y": 130, "width": 200, "height": 60, "backgroundColor": "#a5d8ff", "fillStyle": "solid", "label": {"text": "목차만 먼저", "fontSize": 18}},
+  {"type": "rectangle", "id": "b2", "x": 480, "y": 130, "width": 220, "height": 60, "backgroundColor": "#ffec99", "fillStyle": "solid", "label": {"text": "내가 확인하고 고침", "fontSize": 18}},
+  {"type": "rectangle", "id": "b3", "x": 800, "y": 130, "width": 200, "height": 60, "backgroundColor": "#b2f2bb", "fillStyle": "solid", "label": {"text": "본문 작성", "fontSize": 18}},
+  {"type": "arrow", "x": 380, "y": 160, "start": {"id": "b1"}, "end": {"id": "b2"}},
+  {"type": "arrow", "x": 700, "y": 160, "start": {"id": "b2"}, "end": {"id": "b3"}}
+]}
