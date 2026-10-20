@@ -15,18 +15,20 @@ ChatGPT나 Claude에 질문은 해 봤지만 "이게 다인가?" 싶었던 분�
 
 앞 단계가 다음 단계의 바탕이 되므로 번호 순서대로 읽는 것을 권합니다.
 
-| 단계 | 폴더 | 내용 |
+| 단계 | 가이드 | 내용 |
 |---|---|---|
-| 1 | [`guide/00-common`](guide/00-common) | 어떤 LLM에서든 통하는 공통 원리와 사용법 |
-| 2 | [`guide/10-claude`](guide/10-claude) · [`guide/11-chatgpt`](guide/11-chatgpt) | 서비스별 기능과 활용법 |
-| 3 | [`guide/20-claude-code`](guide/20-claude-code) · [`guide/21-codex`](guide/21-codex) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
-| 4 | [`guide/30-ai-sdlc`](guide/30-ai-sdlc) | AI와 함께 기획부터 배포까지 — 소프트웨어 개발 전 과정(SDLC) |
+| 1 | [공통 가이드](guide/00-common/README.md) | 어떤 LLM에서든 통하는 공통 원리와 사용법 |
+| 2 | Claude · ChatGPT (준비 중) | 서비스별 기능과 활용법 |
+| 3 | Claude Code · Codex (준비 중) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
+| 4 | AI-SDLC (준비 중) | AI와 함께 기획부터 배포까지 — 소프트웨어 개발 전 과정(SDLC) |
+
+웹사이트로 읽기: **https://amecoder.github.io/hello-llm/**
 
 ![학습 로드맵: 1단계 공통 가이드(잘 묻는 법) → 2단계 Claude·ChatGPT(서비스별 기능) → 3단계 Claude Code·Codex(AI에게 일 맡기기) → 4단계 AI-SDLC(AI와 함께 만들기)](assets/roadmap.svg)
 
 ## 진행 상황
 
-지금은 가이드 뼈대를 만든 단계이며, 1단계 공통 가이드부터 채워 나갈 예정입니다.
+1단계 공통 가이드를 채우는 중입니다(1~5장 공개).
 앞으로는 실제 서비스와 같은 화면에서 안내 말풍선(코치 마크)을 따라 직접 연습해 볼 수 있는 실습 환경도 준비합니다.
 
 ## 저장소 구조
