@@ -13,6 +13,8 @@
 - VitePress 사이트와 GitHub Pages 자동 배포 — https://amecoder.github.io/hello-llm/ (#4, `39c7994`)
 
 - 사이트 전용 홈 `index.md` — 시작 버튼, 장별 바로가기 카드 (#5, `023c0d4`)
+- 공통 가이드 6장 대화 다듬기, 판단 흐름도 (#6, `f391195`)
+- 5장 패턴별 전문 용어·원 논문 각주·용어 정리 표, 8번 패턴 Chain-of-Thought (#6)
 
 ### Fixed
 - 사이트 홈의 "공통 가이드" 링크가 404 로 가던 문제 — rewrites 가 본문 링크를 바꾸지 않는 것이 원인 (#5)
