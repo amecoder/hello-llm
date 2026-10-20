@@ -1,6 +1,6 @@
 # HANDOFF.md
 
-## Current State: 7장에 메타 프롬프팅 팁 + 프롬프트 편집기 추가 (2026-10-20, 브랜치 `feat/prompt-builder`) — 다음은 8장 안전하게 쓰기
+## Current State: 공통 가이드 1~7장 + 프롬프트 편집기 공개 (2026-10-20) — 다음은 8장 안전하게 쓰기
 
 - 저장소: https://github.com/amecoder/hello-llm (public, 기본 브랜치 `main`)
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
@@ -23,6 +23,7 @@
 - [x] 홈 "공통 가이드" 링크 404 수정 + 사이트 전용 홈(`index.md`, 장별 카드) — PR #5, squash `023c0d4`
 - [x] 6장 대화 다듬기 + 5장 전문 용어·CoT 보강 — PR #6, squash `f391195`
 - [x] 7장 구조화 프롬프트(마크다운·XML·JSON·JSONL) 신설, 안전·실습은 8·9장으로 — PR #7, squash `769ba51`
+- [x] 7장 메타 프롬프팅 팁 + `PromptBuilder` 편집기, 단위 테스트 7개, CI 테스트 단계 — PR #8, squash `b4b386c`
 
 ## Key Decisions
 - 가이드 폴더는 단계 번호 방식 (`00-common` → `10/11` → `20/21` → `30-ai-sdlc`)
