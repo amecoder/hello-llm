@@ -8,3 +8,7 @@
 - 가이드 단계별 폴더(`guide/00-common` ~ `guide/30-ai-sdlc`)와 `docs/` 디렉토리
 - GitHub 공개 저장소 생성 (amecoder/hello-llm)
 - README.md: 대상 독자, 4단계 학습 로드맵, 진행 상황 (#1, `d676be6`)
+- 공통 가이드 1~4장, 목차 계획, 경쟁 분석 리포트 (#2, `db3cc25`)
+
+### Changed
+- README 로드맵 그림을 Mermaid에서 Excalidraw SVG(`assets/roadmap.*`)로 교체 (#2)
