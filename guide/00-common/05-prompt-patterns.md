@@ -196,6 +196,8 @@ AI는 틀린 내용도 자신 있게 말합니다. 그래서 **어디가 불확�
 > 이런 모델은 시키지 않아도 속으로 단계를 밟기 때문에 CoT 문구의 효과가 예전보다 작을 수 있습니다.
 > 그래도 "과정을 보여 줘"라고 하면 내가 검산할 수 있다는 장점은 그대로입니다.
 > 다만 화면에 보이는 생각 글이 실제 계산을 빠짐없이 보여 주지는 않습니다. 과정이 그럴듯해도 결론은 따로 확인하세요([1장 「화면에 보이는 "생각"이 전부는 아닙니다」](01-what-is-llm.md)).
+> 또 **오래 생각하게 한다고 늘 나아지지는 않습니다.** 생각을 길게 시킬수록 오히려 정확도가 떨어지는 과제들이 있고,
+> 길게 생각하다가 상관없는 정보에 끌려가거나 문제의 겉모양에 휘둘리는 경우가 보고됐습니다.[^inverse] 간단한 질문에는 일반 모드로 충분합니다.
 
 ---
 
@@ -260,3 +262,4 @@ AI는 틀린 내용도 자신 있게 말합니다. 그래서 **어디가 불확�
 [^selfrefine]: Madaan 외, 「Self-Refine: Iterative Refinement with Self-Feedback」, 2023-03-30 arXiv 공개. https://arxiv.org/abs/2303.17651 (확인일 2026-10-20)
 [^cot]: Wei 외, 「Chain-of-Thought Prompting Elicits Reasoning in Large Language Models」, 2022-01-28 arXiv 공개. https://arxiv.org/abs/2201.11903 (확인일 2026-10-20)
 [^zeroshotcot]: Kojima 외, 「Large Language Models are Zero-Shot Reasoners」, 2022-05-24 arXiv 공개. https://arxiv.org/abs/2205.11916 (확인일 2026-10-20)
+[^inverse]: Gema 외, 「Inverse Scaling in Test-Time Compute」, 2025-07-19 arXiv 공개, TMLR 2025년 12월 게재. "extending the reasoning length of Large Reasoning Models (LRMs) deteriorates performance". https://arxiv.org/abs/2507.14417 (확인일 2026-10-21)
