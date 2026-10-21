@@ -1,0 +1,317 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 95,
+   "width": 180,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "대한민국의\n수도는",
+    "fontSize": 17
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 180,
+   "y": 130,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 260,
+   "y": 20,
+   "width": 440,
+   "height": 220,
+   "backgroundColor": "#fff9db",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 285,
+   "y": 45,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 337,
+   "y": 45,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 389,
+   "y": 45,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 441,
+   "y": 45,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 493,
+   "y": 45,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 545,
+   "y": 45,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 597,
+   "y": 45,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 649,
+   "y": 45,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 285,
+   "y": 97,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 337,
+   "y": 97,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 389,
+   "y": 97,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 441,
+   "y": 97,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 493,
+   "y": 97,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 545,
+   "y": 97,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 597,
+   "y": 97,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 649,
+   "y": 97,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 285,
+   "y": 149,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 337,
+   "y": 149,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 389,
+   "y": 149,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 441,
+   "y": 149,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 493,
+   "y": 149,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 545,
+   "y": 149,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 597,
+   "y": 149,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "ellipse",
+   "x": 649,
+   "y": 149,
+   "width": 34,
+   "height": 34,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "rectangle",
+   "x": 260,
+   "y": 200,
+   "width": 440,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "모델 안의 조절 손잡이 = 매개변수 (실제로는 수십억~수천억 개)",
+    "fontSize": 15,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 700,
+   "y": 130,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 780,
+   "y": 95,
+   "width": 150,
+   "height": 70,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "서울",
+    "fontSize": 20
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 260,
+   "width": 930,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "학습 = 다음 말을 잘 맞히도록 손잡이를 조금씩 돌려 맞추는 일. 손잡이가 많을수록 '모델이 크다'고 한다",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}
