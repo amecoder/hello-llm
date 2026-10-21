@@ -7,6 +7,7 @@
 AI 연구는 수십 년 동안 이어져 왔습니다. 지금의 LLM으로 이어지는 결정적인 계기는
 2017년 구글 연구진이 발표한 논문 「Attention Is All You Need」입니다.[^1]
 여기서 소개된 **트랜스포머(Transformer)** 라는 구조 덕분에, 아주 많은 글을 효율적으로 학습시킬 수 있게 되었습니다.
+예전 방식은 문장을 앞에서부터 한 단어씩 차례로 읽어야 했지만, 트랜스포머는 문장 속 단어들이 서로 어떤 관계인지 **한꺼번에** 살핍니다. 그래서 컴퓨터 여러 대로 나눠 빠르게 학습시킬 수 있게 됐습니다.
 지금 쓰이는 LLM 대부분이 이 구조를 바탕으로 합니다.
 
 하지만 일반인이 AI를 직접 체감하기 시작한 것은 그로부터 5년 뒤입니다.
@@ -79,6 +80,6 @@ LLM이 답한 날짜를 이 장의 각주와 비교해 보세요. 맞을 수도,
 
 ---
 
-[^1]: Vaswani 외, 「Attention Is All You Need」, 2017년 6월 arXiv 공개. https://arxiv.org/abs/1706.03762 (확인일 2026-10-20)
+[^1]: Vaswani 외, 「Attention Is All You Need」, 2017년 6월 arXiv(아카이브, 논문을 심사 전에 먼저 올려 두는 공개 사이트) 공개. https://arxiv.org/abs/1706.03762 (확인일 2026-10-20)
 [^2]: OpenAI, 「Introducing ChatGPT」, 2022-11-30. https://openai.com/index/chatgpt/ (확인일 2026-10-20)
 [^3]: Reuters, 「ChatGPT sets record for fastest-growing user base - analyst note」, 2023-02-01. https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/ (확인일 2026-10-20)
