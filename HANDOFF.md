@@ -1,6 +1,6 @@
 # HANDOFF.md
 
-## Current State: 공통 가이드 1~8장 작성 (2026-10-21, 8장 메타 프롬프팅 공개) — 다음은 9장 안전하게 쓰기
+## Current State: 공통 가이드 1~9장 작성 (2026-10-21, 9장 안전하게 쓰기 PR 대기) — 다음은 10장 실습 과제
 
 - 저장소: https://github.com/amecoder/hello-llm (public, 기본 브랜치 `main`)
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
@@ -10,7 +10,7 @@
 - [ ] (제안) 컴포넌트 E2E 테스트 영구화 — 지금은 scratchpad 의 Playwright 스크립트로 수동 검증만 함
 - [ ] (제안) favicon 추가 — 없어서 브라우저 콘솔에 404 가 한 줄 찍힘
 - [ ] (선택) deploy.yml 의 `configure-pages@v4`·`upload-pages-artifact@v3` 가 Node 20 경고 — 새 메이저 나오면 올리기
-- [ ] `guide/00-common` 9장 안전하게 쓰기(`09-safety.md`), 10장 실습(`10-practice.md`) 작성 — 7장 신설·8장 메타 프롬프팅 분리로 번호가 두 칸 밀림
+- [ ] `guide/00-common` 10장 실습(`10-practice.md`) 작성 — 실습 UI(코치 마크)와 연결
 - [ ] 2~4장에도 용어 정리 표 추가 검토 (1장은 PR #10 에서 추가) (목차: `docs/plans/2026-10-20_공통-가이드-목차.md`)
 
 ## Completed Tasks

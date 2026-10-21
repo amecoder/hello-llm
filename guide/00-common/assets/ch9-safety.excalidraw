@@ -1,0 +1,106 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "id": "before",
+   "x": 0,
+   "y": 0,
+   "width": 300,
+   "height": 170,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "보내기 전\n\n개인정보·비밀을 가렸나?\n남의 자료는 구분자로 감쌌나?",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "ai",
+   "x": 400,
+   "y": 50,
+   "width": 140,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "AI",
+    "fontSize": 22
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "after",
+   "x": 640,
+   "y": 0,
+   "width": 300,
+   "height": 170,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "받은 후\n\n숫자·날짜·출처를 확인했나?\n그대로 써도 되는 결과인가?",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 300,
+   "y": 85,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     98,
+     0
+    ]
+   ],
+   "width": 98,
+   "height": 0,
+   "start": {
+    "id": "before"
+   },
+   "end": {
+    "id": "ai"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 540,
+   "y": 85,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     98,
+     0
+    ]
+   ],
+   "width": 98,
+   "height": 0,
+   "start": {
+    "id": "ai"
+   },
+   "end": {
+    "id": "after"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 190,
+   "width": 940,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "위험은 넣을 때와 받을 때 두 곳에서 생긴다",
+    "fontSize": 18,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

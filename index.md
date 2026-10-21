@@ -46,6 +46,10 @@ features:
     details: 프롬프트를 AI에게 만들게 하기 — 정리, 질문받기, 고치기, 틀 만들기
     link: /guide/00-common/08-meta-prompting
     linkText: 읽기
+  - title: 9장. 안전하게 쓰기
+    details: 환각 확인, 개인정보 가리기, 저작권, 숨은 지시 막기 — 보내기 전과 받은 후 체크리스트
+    link: /guide/00-common/09-safety
+    linkText: 읽기
 ---
 
 ## 학습 로드맵
