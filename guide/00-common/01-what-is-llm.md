@@ -35,6 +35,54 @@ LLM은 "대한민국의 수도는" 다음에 올 말로 학습 중 수없이 본
 이 단순한 방식이 어마어마한 양의 글과 만나면서, 번역·요약·글쓰기·코드 작성처럼
 "생각하는 것처럼 보이는" 일까지 해내게 되었습니다.
 
+## 모델의 크기 — 매개변수(파라미터)
+
+AI 모델 이름 뒤에 "8B", "70B" 같은 숫자가 붙은 것을 본 적이 있을 겁니다. 이 숫자는 **모델이 얼마나 큰지**를 나타냅니다.
+크기를 재는 단위가 **매개변수**(parameter, 파라미터)입니다.
+
+### 매개변수란 — 모델 안의 조절 손잡이
+
+LLM 안에는 아주 많은 숫자가 들어 있고, 이 숫자들이 "다음에 어떤 말이 올지"를 계산합니다. 이 숫자 하나하나가 매개변수입니다.
+라디오의 주파수 손잡이를 돌려 원하는 방송을 맞추듯, **학습**은 다음 말을 잘 맞히도록 이 손잡이들을 조금씩 돌려 맞추는 일입니다.
+학습이 끝나면 손잡이 값이 고정되고, 그렇게 완성된 것이 우리가 쓰는 모델입니다.
+
+![입력 "대한민국의 수도는"이 수많은 조절 손잡이(매개변수)가 있는 모델을 거쳐 "서울"이 된다. 학습은 다음 말을 잘 맞히도록 손잡이를 조금씩 돌려 맞추는 일이고, 손잡이가 많을수록 모델이 크다고 한다](assets/ch1-parameters.svg)
+
+### 숫자 읽는 법
+
+"B"는 영어 billion(빌리언)의 첫 글자로 **10억**을 뜻합니다.
+
+| 표기 | 읽는 법 | 예 |
+|---|---|---|
+| 8B | 매개변수 80억 개 | Meta가 2024년 공개한 Llama 3.1의 가장 작은 모델[^llama] |
+| 70B | 700억 개 | Llama 3.1 중간 모델, 2022년 연구 모델 Chinchilla[^chinchilla] |
+| 175B | 1,750억 개 | 2020년 OpenAI의 GPT-3[^gpt3] |
+| 405B | 4,050억 개 | Llama 3.1의 가장 큰 모델[^llama] |
+
+일반적으로 손잡이가 많을수록 더 복잡한 패턴을 담을 수 있어, 큰 모델이 더 어려운 일을 잘하는 경향이 있습니다.
+대신 계산이 많아져 **더 느리고, 돌리는 비용이 더 듭니다.**
+
+### 크기와 "얼마나 많이 읽었나"는 다른 이야기입니다
+
+모델의 실력을 정하는 것은 크기만이 아닙니다. 둘을 나눠서 생각하세요.
+
+| | 무엇을 뜻하나 | 비유 | 예 |
+|---|---|---|---|
+| **매개변수 수** | 모델의 크기 | 머리(그릇)의 크기 | Llama 3.1 405B → 4,050억 개 |
+| **학습 데이터 양** | 학습 때 읽은 글의 양. 토큰(글 조각) 수로 셉니다 | 읽은 책의 양 | Llama 3.1 405B → 15조 개가 넘는 토큰[^llama] |
+
+그릇만 크고 읽은 것이 적으면 실력이 다 나오지 않습니다. 2022년에 나온 Chinchilla(친칠라) 연구가 이것을 보여 줬습니다.
+매개변수가 700억 개로 더 작은 대신 **글을 약 네 배 더 많이 읽힌** 모델이, 2,800억 개짜리 Gopher와 1,750억 개짜리 GPT-3보다 고르게 좋은 성적을 냈습니다.
+연구진은 **모델 크기와 학습 데이터 양을 같은 비율로 함께 늘려야 한다**고 결론 냈습니다.[^chinchilla]
+
+학습한 뒤에 어떻게 다듬었는지도 중요합니다. 아래 「더 알아보기」의 사람 피드백 훈련 연구에서는, 이 훈련을 받은 13억 개짜리 모델의 답이 1,750억 개짜리 GPT-3의 답보다 더 좋다고 평가받았습니다.[^instructgpt]
+
+### 그래서 숫자만 보고 고르지 않습니다
+
+- **요즘 상용 서비스는 크기를 잘 밝히지 않습니다.** 예를 들어 OpenAI는 2023년 GPT-4 기술 보고서에서 경쟁 상황과 안전 문제를 이유로 모델 크기를 포함한 구조를 공개하지 않는다고 밝혔습니다.[^gpt4] 다른 서비스 모델도 크기를 공식 발표하지 않는 경우가 많으니, 인터넷에 도는 숫자는 추측일 수 있습니다.
+- **크기를 공개하는 모델**은 주로 누구나 내려받아 쓸 수 있게 공개된 모델(예: Llama)입니다. 이런 모델을 내 컴퓨터에서 돌리는 이야기는 3단계에서 다룹니다.
+- 서비스 안에서 "빠른 모델"과 "더 똑똑한 모델"을 고를 수 있다면, 대개 이런 크기·속도·비용의 차이입니다. **간단한 일은 빠른 모델로, 어려운 일은 큰 모델로** 시켜 보고 결과를 비교하는 것이 가장 정확한 방법입니다.
+
 ## 그런데 정말 생각하는 걸까?
 
 써 보면 AI가 내 뜻을 알아듣고 생각해서 답하는 것처럼 느껴집니다. 그 느낌이 틀린 것만은 아닙니다.
@@ -265,6 +313,7 @@ AI가 센 개수를 직접 세어 본 것과 비교해 보세요. 어디서 틀�
 ## 정리
 
 - LLM은 "다음에 올 말"을 맞히는 방식으로 글을 만드는 프로그램이다.
+- 모델의 크기는 매개변수(조절 손잡이) 수로 잰다. 하지만 실력은 크기만이 아니라 읽은 글의 양과 학습 뒤 다듬기에도 달려 있다.
 - 말을 고르는 계산 안에서 사실을 조합하고 앞을 내다보는 등 생각에 가까운 일이 일어난다. 다만 늘 그러는 것은 아니고, AI의 자기 설명이나 생각 글이 실제 과정과 다를 수 있다.
 - 숫자만 바꾸거나 쓸데없는 정보가 섞인 낯선 문제에서는 더 쉽게 틀린다.
 - 요즘 모델은 사진도 조각으로 잘라 함께 배운다(멀티모달). 그림·영상을 만드는 AI는 주로 확산 모델이라는 다른 방식을 쓴다.
@@ -277,6 +326,9 @@ AI가 센 개수를 직접 세어 본 것과 비교해 보세요. 어디서 틀�
 |---|---|---|
 | LLM (Large Language Model) | 엘엘엠 (대규모 언어 모델) | 엄청난 양의 글로 "다음 말 맞히기"를 배운 프로그램 |
 | Token | 토큰 | 모델이 글이나 사진을 잘라 다루는 작은 조각 |
+| Parameter | 파라미터 (매개변수) | 모델 안에서 계산을 정하는 숫자, 즉 조절 손잡이. 개수가 모델의 크기 |
+| B (Billion) | 빌리언 | 10억. "70B"는 매개변수 700억 개 |
+| Training Data | 트레이닝 데이터 (학습 데이터) | 학습할 때 읽힌 글. 양은 토큰 수로 센다 |
 | Interpretability | 인터프리터빌리티 (해석 가능성) | 모델 내부 계산을 들여다보고 설명하는 연구 분야 |
 | Reasoning Model | 리즈닝 모델 (추론 모델) | 답하기 전에 생각하는 과정을 글로 써 가며 단계를 밟는 모델 |
 | Introspection | 인트로스펙션 (내성) | 모델이 자기 내부 상태를 알아차리고 말하는 능력 |
@@ -301,7 +353,11 @@ AI가 센 개수를 직접 세어 본 것과 비교해 보세요. 어디서 틀�
 [^gsm]: Mirzadeh 외(Apple), 「GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models」, 2024-10-07. "Adding a single clause that seems relevant to the question causes significant performance drops (up to 65%)". https://arxiv.org/abs/2410.05229 (확인일 2026-10-21)
 [^illusion]: Shojaee 외(Apple), 「The Illusion of Thinking」, 2025-06-07. https://arxiv.org/abs/2506.06941 / 반론: A. Lawsen, 「Comment on The Illusion of Thinking」, 2025-06-10. https://arxiv.org/abs/2506.09250 (확인일 2026-10-21)
 [^rethinking]: Dellibarda Varela 외, 「Rethinking the Illusion of Thinking」, 2025-07-01. "LRMs still stumble when complexity rises moderately (around 8 disks)" / 풀 수 있는 문제만 내면 "over 100 agent pairs" 규모도 해결. https://arxiv.org/abs/2507.01231 (확인일 2026-10-21)
-[^instructgpt]: Ouyang 외, 「Training language models to follow instructions with human feedback」, 2022. 사람 피드백으로 다듬은 13억 매개변수(모델 크기를 나타내는 숫자) 모델의 답이 1,750억 매개변수 GPT-3의 답보다 선호됐다. https://arxiv.org/abs/2203.02155 (확인일 2026-10-21)
+[^gpt3]: Brown 외(OpenAI), 「Language Models are Few-Shot Learners」, 2020. "an autoregressive language model with 175 billion parameters". https://arxiv.org/abs/2005.14165 (확인일 2026-10-21)
+[^chinchilla]: Hoffmann 외, 「Training Compute-Optimal Large Language Models」, 2022-03-29 arXiv 공개. "the model size and the number of training tokens should be scaled equally" / 70B Chinchilla가 "uniformly and significantly outperforms Gopher (280B), GPT-3 (175B)". https://arxiv.org/abs/2203.15556 (확인일 2026-10-21)
+[^llama]: Meta, 「Introducing Llama 3.1」, 2024-07-23. 8B·70B·405B 모델, "training Llama 3.1 405B on over 15 trillion tokens". https://ai.meta.com/blog/meta-llama-3-1/ (확인일 2026-10-21)
+[^gpt4]: OpenAI, 「GPT-4 Technical Report」, 2023. "this report contains no further details about the architecture (including model size), hardware, training compute, dataset construction, training method, or similar." https://arxiv.org/abs/2303.08774 (확인일 2026-10-21)
+[^instructgpt]: Ouyang 외, 「Training language models to follow instructions with human feedback」, 2022. 사람 피드백으로 다듬은 13억 매개변수 모델의 답이 1,750억 매개변수 GPT-3의 답보다 선호됐다. https://arxiv.org/abs/2203.02155 (확인일 2026-10-21)
 [^eliza]: Joseph Weizenbaum, 「ELIZA — a computer program for the study of natural language communication between man and machine」, Communications of the ACM 9(1), 1966년 1월. https://doi.org/10.1145/365153.365168 (서지 정보 확인일 2026-10-21)
 [^vit]: Dosovitskiy 외, 「An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale」, 2020. 사진을 작은 칸으로 잘라 글처럼 처리하는 방법. https://arxiv.org/abs/2010.11929 (확인일 2026-10-21)
 [^ddpm]: Ho 외, 「Denoising Diffusion Probabilistic Models」, 2020. 잡음을 단계적으로 걷어 내며 그림을 만드는 확산 모델의 대표 논문. https://arxiv.org/abs/2006.11239 (확인일 2026-10-21)
