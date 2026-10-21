@@ -1,6 +1,6 @@
 # HANDOFF.md
 
-## Current State: 공통 가이드 1~7장 + 프롬프트 편집기 공개 (2026-10-20) — 다음은 8장 안전하게 쓰기
+## Current State: 공통 가이드 1~8장 작성 (2026-10-21, 8장 메타 프롬프팅 PR 대기) — 다음은 9장 안전하게 쓰기
 
 - 저장소: https://github.com/amecoder/hello-llm (public, 기본 브랜치 `main`)
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
@@ -10,8 +10,10 @@
 - [ ] (제안) 컴포넌트 E2E 테스트 영구화 — 지금은 scratchpad 의 Playwright 스크립트로 수동 검증만 함
 - [ ] (제안) favicon 추가 — 없어서 브라우저 콘솔에 404 가 한 줄 찍힘
 - [ ] (선택) deploy.yml 의 `configure-pages@v4`·`upload-pages-artifact@v3` 가 Node 20 경고 — 새 메이저 나오면 올리기
-- [ ] `guide/00-common` 8장 안전하게 쓰기(`08-safety.md`), 9장 실습(`09-practice.md`) 작성 — 7장 신설로 번호가 한 칸씩 밀림
-- [ ] 1~4장에도 용어 정리 표 추가 검토 (목차: `docs/plans/2026-10-20_공통-가이드-목차.md`)## Completed Tasks
+- [ ] `guide/00-common` 9장 안전하게 쓰기(`09-safety.md`), 10장 실습(`10-practice.md`) 작성 — 7장 신설·8장 메타 프롬프팅 분리로 번호가 두 칸 밀림
+- [ ] 1~4장에도 용어 정리 표 추가 검토 (목차: `docs/plans/2026-10-20_공통-가이드-목차.md`)
+
+## Completed Tasks
 - [x] 프로젝트 초기 설정 (git init, CLAUDE.md, 폴더 구조) — 커밋 `a358655`
 - [x] GitHub 공개 저장소 생성 (amecoder/hello-llm)
 - [x] README.md 작성 (대상 독자·학습 로드맵·진행 상황) — PR #1, squash `d676be6`
