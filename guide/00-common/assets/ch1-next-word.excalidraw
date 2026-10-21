@@ -1,0 +1,131 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 60,
+   "width": 190,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "오늘 점심 뭐",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 190,
+   "y": 95,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 270,
+   "y": 0,
+   "width": 330,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "다음에 올 말 후보와 확률 (예시)",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 270,
+   "y": 40,
+   "width": 300,
+   "height": 40,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "먹지 62%",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 270,
+   "y": 88,
+   "width": 150,
+   "height": 40,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "먹을까 25%",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 270,
+   "y": 136,
+   "width": 70,
+   "height": 40,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "…",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 580,
+   "y": 95,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 660,
+   "y": 60,
+   "width": 230,
+   "height": 70,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "오늘 점심 뭐 먹지",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 200,
+   "width": 890,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "고른 말을 붙이고, 다시 다음 말을 고른다 — 이것을 계속 되풀이해 답이 완성된다 (숫자는 이해를 돕는 예시)",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

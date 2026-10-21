@@ -1,0 +1,12 @@
+/* Wide diagrams shrink until their text is unreadable on phones.
+   Keep them at a readable width and let the reader swipe sideways instead. */
+@media (max-width: 640px) {
+  .vp-doc p:has(> img[src$='.svg']) {
+    overflow-x: auto;
+  }
+
+  .vp-doc p > img[src$='.svg'] {
+    width: 640px;
+    max-width: none;
+  }
+}

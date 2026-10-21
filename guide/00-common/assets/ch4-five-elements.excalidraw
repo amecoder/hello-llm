@@ -1,0 +1,181 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 175,
+   "height": 80,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "1. 목표\n무엇을 원하나?",
+    "fontSize": 17
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 87,
+   "y": 80,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     88
+    ]
+   ],
+   "width": 0,
+   "height": 88
+  },
+  {
+   "type": "rectangle",
+   "x": 200,
+   "y": 0,
+   "width": 175,
+   "height": 80,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "2. 맥락\n어떤 상황인가?",
+    "fontSize": 17
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 287,
+   "y": 80,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     88
+    ]
+   ],
+   "width": 0,
+   "height": 88
+  },
+  {
+   "type": "rectangle",
+   "x": 400,
+   "y": 0,
+   "width": 175,
+   "height": 80,
+   "backgroundColor": "#fff3bf",
+   "fillStyle": "solid",
+   "label": {
+    "text": "3. 대상\n누가 읽나?",
+    "fontSize": 17
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 487,
+   "y": 80,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     88
+    ]
+   ],
+   "width": 0,
+   "height": 88
+  },
+  {
+   "type": "rectangle",
+   "x": 600,
+   "y": 0,
+   "width": 175,
+   "height": 80,
+   "backgroundColor": "#e5dbff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "4. 형식\n어떤 모양으로?",
+    "fontSize": 17
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 687,
+   "y": 80,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     88
+    ]
+   ],
+   "width": 0,
+   "height": 88
+  },
+  {
+   "type": "rectangle",
+   "x": 800,
+   "y": 0,
+   "width": 175,
+   "height": 80,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "label": {
+    "text": "5. 조건\n지킬 것·피할 것",
+    "fontSize": 17
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 887,
+   "y": 80,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     88
+    ]
+   ],
+   "width": 0,
+   "height": 88
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 170,
+   "width": 975,
+   "height": 70,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "좋은 프롬프트 — 다섯 가지를 담으면 AI가 짐작할 일이 줄어든다",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 255,
+   "width": 975,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "매번 다 넣을 필요는 없다. 답이 아쉬울 때 빠진 것을 점검하는 목록으로 쓴다",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}
