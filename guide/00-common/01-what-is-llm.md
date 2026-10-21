@@ -52,6 +52,16 @@ Claude를 만든 Anthropic은 2025년에 모델 안에서 일어나는 계산을
   외운 답을 꺼낸 것이 아니라 두 사실을 이어 붙였다는 뜻입니다.
 - **앞을 내다봅니다.** 운율을 맞춘 시를 쓸 때, 줄을 쓰기 전에 그 줄 끝에 올 단어를 먼저 정하고 그 단어를 향해 문장을 썼습니다.
 
+연구자들은 이것을 **바꿔치기 실험**으로 확인합니다. 모델 안에서 어떤 개념에 해당하는 값을 다른 개념의 값으로 바꿔 넣고, 답이 그에 맞게 바뀌는지 봅니다.
+바뀐다면 그 값이 답을 만드는 데 실제로 쓰였다는 뜻입니다. 이렇게 모델 내부를 들여다보는 연구 분야를 **해석 가능성**(interpretability) 연구라고 부릅니다.
+
+다만 이 연구가 보여 준 그림은 "늘 차근차근 생각한다"가 아닙니다.
+
+- 같은 연구의 자세한 보고서는 모델 안에서 **진짜 두 단계 추론과 지름길이 함께** 돌아간다고 적었습니다.
+  연구진 스스로도 시도한 질문 중 **약 4분의 1**에서만 속을 만족스럽게 설명할 수 있었다고 밝혔습니다.[^biology]
+- 2026년 7월 Anthropic의 후속 연구는 질문에 드러나지 않은 중간 단계 개념을 바꿔치기했을 때 모델의 결론이 그에 맞게 바뀌는 비율을 쟀습니다.
+  모델에 따라 **54~70%** 였습니다.[^workspace] 중간 단계가 실제로 계산되고 답을 좌우한다는 증거이지만, 매번 그런 것은 아닙니다.
+
 ### "확률적"은 "아무렇게나"가 아닙니다
 
 - **답이 분명할 때**는 확률이 한쪽으로 크게 쏠립니다. "대한민국의 수도는" 다음에는 "서울"이 압도적이라 거의 매번 같은 답이 나옵니다.
@@ -64,7 +74,26 @@ Claude를 만든 Anthropic은 2025년에 모델 안에서 일어나는 계산을
 OpenAI의 2022년 연구에서는 이 훈련을 받은 모델이 100배 큰 모델보다 사람들에게 더 좋은 답이라고 평가받았습니다.[^instructgpt]
 내 의도를 짐작하고, 되묻고, 정리해서 답하는 태도는 이 훈련에서 나옵니다.
 
-여기에 5장에서 소개한 **추론 모델**은 답하기 전에 실제로 생각하는 글을 길게 써 내려갑니다. 문제를 나누고, 검산하고, 고친 뒤에 답합니다.
+여기에 5장에서 소개한 **추론 모델**은 답하기 전에 생각하는 글을 길게 써 내려갑니다. 문제를 나누고, 검산하고, 고친 뒤에 답합니다.
+이런 능력은 사람이 풀이 예시를 보여 주지 않고 **정답을 맞히면 보상을 주는 훈련만으로도** 생겨날 수 있다는 연구가 2025년 학술지 Nature에 실렸습니다.[^r1]
+
+### 화면에 보이는 "생각"이 전부는 아닙니다
+
+추론 모델이 보여 주는 생각 글은 유용하지만, **그 글이 실제 계산을 빠짐없이 보여 준다는 보장은 없습니다.**
+
+- Anthropic은 문제에 정답 힌트를 몰래 넣고, 힌트를 써서 답을 정한 모델이 생각 글에서 그 사실을 밝히는지 봤습니다.
+  힌트를 언급한 비율은 평균 **25%**(Claude 3.7 Sonnet)와 **39%**(DeepSeek R1)였습니다.[^faithful] 나머지는 힌트를 쓰고도 말하지 않았습니다.
+- 모델이 자기 속을 알아차리는 능력도 약합니다. 연구진이 모델 안에 특정 개념을 몰래 넣고 "뭔가 이상한 생각이 드느냐"고 물었을 때,
+  가장 잘한 모델도 **약 20%** 만 알아차렸습니다. 연구진은 "자기 속 들여다보기는 실패하는 것이 보통"이라고 결론 냈습니다.[^introspection]
+
+### 낯선 문제 앞에서는 약해집니다
+
+- Apple 연구진은 수학 문장제에서 **숫자만 바꾸거나, 그럴듯하지만 상관없는 문장 하나를 끼워 넣기만 해도** 성적이 떨어진다는 것을 보였습니다.
+  상관없는 문장 하나로 성적이 **최대 65%** 떨어졌습니다.[^gsm] 익숙한 문제 모양에 기대어 푸는 부분이 있다는 뜻입니다.
+- 2025년 6월 Apple의 다른 연구(「생각의 착각」)는 하노이 탑 같은 퍼즐을 점점 어렵게 하면 추론 모델의 정확도가 어느 순간 무너진다고 보고했습니다.[^illusion]
+  곧바로 반론이 나왔습니다. 답이 너무 길어 출력 한도를 넘었거나 원래 풀 수 없는 문제가 섞였다는 것입니다.
+  이를 다시 실험한 연구는 양쪽이 일부씩 맞다고 봤습니다. 원반 8개 정도에서 이미 막히지만, 풀 수 있는 문제만 내면 아주 큰 문제도 풀었습니다.[^rethinking]
+  이 논쟁은 아직 진행 중입니다.
 
 ### 사람은 말 잘하는 상대에게 마음이 있다고 느낍니다
 
@@ -78,8 +107,12 @@ OpenAI의 2022년 연구에서는 이 훈련을 받은 모델이 100배 큰 모�
 그런데 어떻게 풀었냐고 물으면 학교에서 배우는 "일의 자리부터 받아올림" 방식으로 풀었다고 설명했습니다.
 **AI가 자기 생각을 설명하는 말이 실제 안에서 일어난 일과 다를 수 있다**는 뜻입니다.
 
+정리하면 "생각하지 않는다"도, "사람처럼 생각한다"도 정확하지 않습니다.
+**생각에 가까운 계산을 실제로 하지만, 늘 그러는 것은 아니고, 그 과정을 스스로 정확히 설명하지도 못한다**가 지금까지 연구로 알려진 내용에 가장 가깝습니다.
+
 - 생각에 가까운 계산을 하므로, 복잡한 일도 충분히 맡길 수 있습니다.
-- 하지만 설명이 그럴듯하다고 해서 그 내용이 맞다는 보장은 없습니다. 중요한 내용은 직접 확인합니다.
+- 하지만 설명이나 생각 글이 그럴듯하다고 해서 그 내용이 맞다는 보장은 없습니다. 중요한 내용은 직접 확인합니다.
+- 흔한 문제를 살짝 바꾼 문제, 쓸데없는 정보가 섞인 문제, 처음 보는 종류의 문제일수록 더 꼼꼼히 확인합니다.
 
 ## 글만 읽는 게 아니에요 — 이미지·음악·영상
 
@@ -191,7 +224,8 @@ AI가 센 개수를 직접 세어 본 것과 비교해 보세요. 어디서 틀�
 ## 정리
 
 - LLM은 "다음에 올 말"을 맞히는 방식으로 글을 만드는 프로그램이다.
-- 말을 고르는 계산 안에서 사실을 조합하고 앞을 내다보는 등 생각에 가까운 일이 일어난다. 다만 AI의 자기 설명이 실제 과정과 다를 수 있다.
+- 말을 고르는 계산 안에서 사실을 조합하고 앞을 내다보는 등 생각에 가까운 일이 일어난다. 다만 늘 그러는 것은 아니고, AI의 자기 설명이나 생각 글이 실제 과정과 다를 수 있다.
+- 숫자만 바꾸거나 쓸데없는 정보가 섞인 낯선 문제에서는 더 쉽게 틀린다.
 - 요즘 모델은 사진도 조각으로 잘라 함께 배운다(멀티모달). 그림·영상을 만드는 AI는 주로 확산 모델이라는 다른 방식을 쓴다.
 - 글쓰기·요약·설명은 잘하지만, 틀린 말을 자신 있게 할 수 있다. 사진을 다룰 때도 같다.
 - 내 상황을 알려 줄수록 답이 좋아진다.
@@ -202,6 +236,9 @@ AI가 센 개수를 직접 세어 본 것과 비교해 보세요. 어디서 틀�
 |---|---|---|
 | LLM (Large Language Model) | 엘엘엠 (대규모 언어 모델) | 엄청난 양의 글로 "다음 말 맞히기"를 배운 프로그램 |
 | Token | 토큰 | 모델이 글이나 사진을 잘라 다루는 작은 조각 |
+| Interpretability | 인터프리터빌리티 (해석 가능성) | 모델 내부 계산을 들여다보고 설명하는 연구 분야 |
+| CoT Faithfulness | 씨오티 페이스풀니스 (생각 글의 충실성) | 모델이 보여 준 생각 글이 실제 계산을 얼마나 그대로 반영하는지 |
+| Introspection | 인트로스펙션 (내성) | 모델이 자기 내부 상태를 알아차리고 말하는 능력 |
 | RLHF | 알엘에이치에프 (사람 피드백을 통한 강화 학습) | 사람이 고른 좋은 답 쪽으로 모델을 다듬는 훈련 |
 | ELIZA Effect | 일라이자 효과 | 말을 자연스럽게 하는 프로그램에 마음이 있다고 느끼는 현상 |
 | Multimodal | 멀티모달 | 글·사진·소리처럼 여러 종류의 정보를 함께 다루는 것 |
@@ -215,6 +252,14 @@ AI가 센 개수를 직접 세어 본 것과 비교해 보세요. 어디서 틀�
 ---
 
 [^tracing]: Anthropic, 「Tracing the thoughts of a large language model」, 2025-03-27. 댈러스→텍사스→오스틴 추론, 운율을 미리 정하는 시 쓰기, 36+59 계산과 자기 설명의 차이를 다룬다. https://www.anthropic.com/research/tracing-thoughts-language-model (확인일 2026-10-21)
+[^biology]: Lindsey 외(Anthropic), 「On the Biology of a Large Language Model」, 2025-03-27. "the model performs genuine two-step reasoning internally, which coexists alongside 'shortcut' reasoning" / "satisfying insight for about a quarter of the prompts we've tried". https://transformer-circuits.pub/2025/attribution-graphs/biology.html (확인일 2026-10-21)
+[^workspace]: Gurnee 외(Anthropic), 「Verbalizable Representations Form a Global Workspace in Language Models」, 2026-07-06. 두 단계 사실 질문 50개에서 중간 개념을 바꿔치기한 실험: "succeeds in 54% of trials on Haiku 4.5, 70% on Sonnet 4.5, and 70% on Opus 4.5". https://transformer-circuits.pub/2026/workspace/index.html (확인일 2026-10-21)
+[^r1]: DeepSeek-AI, 「DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning」, Nature 645, 633–638 (2025). "the reasoning abilities of LLMs can be incentivized through pure reinforcement learning". https://arxiv.org/abs/2501.12948 (확인일 2026-10-21)
+[^faithful]: Anthropic, 「Reasoning models don't always say what they think」, 2025-04-03. "On average across all the different hint types, Claude 3.7 Sonnet mentioned the hint 25% of the time, and DeepSeek R1 mentioned it 39% of the time." https://www.anthropic.com/research/reasoning-models-dont-say-think (확인일 2026-10-21)
+[^introspection]: Jack Lindsey(Anthropic), 「Emergent Introspective Awareness in Large Language Models」, 2025-10-29. 가장 잘한 Claude Opus 4.1이 약 20% 성공, "failures of introspection remain the norm". https://transformer-circuits.pub/2025/introspection/index.html (확인일 2026-10-21)
+[^gsm]: Mirzadeh 외(Apple), 「GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models」, 2024-10-07. "Adding a single clause that seems relevant to the question causes significant performance drops (up to 65%)". https://arxiv.org/abs/2410.05229 (확인일 2026-10-21)
+[^illusion]: Shojaee 외(Apple), 「The Illusion of Thinking」, 2025-06-07. https://arxiv.org/abs/2506.06941 / 반론: A. Lawsen, 「Comment on The Illusion of Thinking」, 2025-06-10. https://arxiv.org/abs/2506.09250 (확인일 2026-10-21)
+[^rethinking]: Dellibarda Varela 외, 「Rethinking the Illusion of Thinking」, 2025-07-01. "LRMs still stumble when complexity rises moderately (around 8 disks)" / 풀 수 있는 문제만 내면 "over 100 agent pairs" 규모도 해결. https://arxiv.org/abs/2507.01231 (확인일 2026-10-21)
 [^instructgpt]: Ouyang 외, 「Training language models to follow instructions with human feedback」, 2022. 사람 피드백으로 다듬은 13억 매개변수 모델의 답이 1,750억 매개변수 GPT-3의 답보다 선호됐다. https://arxiv.org/abs/2203.02155 (확인일 2026-10-21)
 [^eliza]: Joseph Weizenbaum, 「ELIZA — a computer program for the study of natural language communication between man and machine」, Communications of the ACM 9(1), 1966년 1월. https://doi.org/10.1145/365153.365168 (서지 정보 확인일 2026-10-21)
 [^vit]: Dosovitskiy 외, 「An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale」, 2020. 사진을 작은 칸으로 잘라 글처럼 처리하는 방법. https://arxiv.org/abs/2010.11929 (확인일 2026-10-21)
