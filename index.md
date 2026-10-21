@@ -39,7 +39,7 @@ features:
     link: /guide/00-common/06-conversation
     linkText: 읽기
   - title: 7장. 구조화 프롬프트
-    details: 마크다운·XML 태그로 긴 요청 정리하기, JSON으로 답 받기
+    details: 마크다운·XML 태그로 긴 요청 정리하기, 엑셀로 옮길 표 받기, 프롬프트 편집기
     link: /guide/00-common/07-structured-prompts
     linkText: 읽기
   - title: 8장. 메타 프롬프팅
