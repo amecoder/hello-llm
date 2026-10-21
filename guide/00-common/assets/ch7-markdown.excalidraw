@@ -1,0 +1,142 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 420,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "한 덩어리로 쓴 요청",
+    "fontSize": 18,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 40,
+   "width": 420,
+   "height": 200,
+   "backgroundColor": "#ffc9c9",
+   "fillStyle": "solid",
+   "label": {
+    "text": "다음 주에 고객사 세 곳이랑 미팅인데\n영업 3년 차고 질문 목록 만들어 줘\n회사마다 5개 가격은 마지막에\nA사는 작년에 해지했고 B사는 처음이고\nC사는 연장 검토 중이야 존댓말로",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 430,
+   "y": 140,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     118,
+     0
+    ]
+   ],
+   "width": 118,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 430,
+   "y": 72,
+   "width": 120,
+   "height": 50,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "제목으로\n나누기",
+    "fontSize": 15,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 0,
+   "width": 420,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "마크다운 제목으로 나눈 요청",
+    "fontSize": 18,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 40,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## 상황 — 다음 주 고객사 3곳 미팅, 영업 3년 차",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 92,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## 할 일 — 미팅마다 질문 목록",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 144,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#e5dbff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## 조건 — 회사마다 5개, 가격은 마지막, 존댓말",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 196,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## 고객사 정보 — A사 해지 / B사 처음 / C사 연장 검토",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 255,
+   "width": 980,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "내용은 같아도, 칸을 나누면 AI도 나도 빠진 조건을 찾기 쉽다",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

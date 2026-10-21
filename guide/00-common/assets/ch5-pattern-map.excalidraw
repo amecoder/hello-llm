@@ -1,0 +1,390 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 980,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "처음이라면 — 기본 패턴",
+    "fontSize": 18,
+    "strokeColor": "#1971c2"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 40,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "말투·형식을\n똑같이 맞추고 싶다",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 115,
+   "y": 100,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 130,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "1. 예시 보여 주기",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 250,
+   "y": 40,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "특정 관점의\n조언이 필요하다",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 365,
+   "y": 100,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 250,
+   "y": 130,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "2. 역할 맡기기",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 500,
+   "y": 40,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "긴 글·큰 작업이다",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 615,
+   "y": 100,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 500,
+   "y": 130,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "3. 단계 나누기",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 750,
+   "y": 40,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "무엇을 알려 줘야\n할지 모르겠다",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 865,
+   "y": 100,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 750,
+   "y": 130,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "4. 되묻게 하기",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 200,
+   "width": 980,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "필요할 때 — 상황별 패턴",
+    "fontSize": 18,
+    "strokeColor": "#e8590c"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 240,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "긴 자료를\n붙여 넣는다",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 115,
+   "y": 300,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 330,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "label": {
+    "text": "5. 구분자로 감싸기",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 250,
+   "y": 240,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "정답이\n하나가 아니다",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 365,
+   "y": 300,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 250,
+   "y": 330,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "label": {
+    "text": "6. 여러 안 받기",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 500,
+   "y": 240,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "틀리면\n곤란한 내용이다",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 615,
+   "y": 300,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 500,
+   "y": 330,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "label": {
+    "text": "7. 스스로 점검시키기",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 750,
+   "y": 240,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "계산·비교·판단이\n필요하다",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 865,
+   "y": 300,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 750,
+   "y": 330,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "label": {
+    "text": "8. 차근차근 생각하기",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 395,
+   "width": 980,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "회색 칸의 상황이 보이면 아래 패턴을 꺼내 쓴다. 여러 개를 섞어 써도 된다",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}
