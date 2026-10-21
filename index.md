@@ -42,6 +42,10 @@ features:
     details: 마크다운·XML 태그로 긴 요청 정리하기, JSON으로 답 받기
     link: /guide/00-common/07-structured-prompts
     linkText: 읽기
+  - title: 8장. 메타 프롬프팅
+    details: 프롬프트를 AI에게 만들게 하기 — 정리, 질문받기, 고치기, 틀 만들기
+    link: /guide/00-common/08-meta-prompting
+    linkText: 읽기
 ---
 
 ## 학습 로드맵
