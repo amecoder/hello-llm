@@ -42,6 +42,7 @@ export default defineConfig({
             { text: '6장. 대화를 이어 가며 다듬기', link: '/guide/00-common/06-conversation' },
             { text: '7장. 구조화 프롬프트', link: '/guide/00-common/07-structured-prompts' },
             { text: '8장. 메타 프롬프팅', link: '/guide/00-common/08-meta-prompting' },
+            { text: '9장. 안전하게 쓰기', link: '/guide/00-common/09-safety' },
           ],
         },
       ],
