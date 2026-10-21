@@ -17,6 +17,7 @@ export default defineConfig({
   lastUpdated: true,
   markdown: {
     config: (md) => {
+      // footnote type lives in .vitepress/env.d.ts
       md.use(footnote)
     },
   },
