@@ -21,7 +21,13 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    nav: [{ text: '1단계 · 공통 가이드', link: '/guide/00-common/' }],
+    // shortcuts so readers can try prompts right away; external links open in a new tab
+    nav: [
+      { text: '1단계 · 공통 가이드', link: '/guide/00-common/' },
+      { text: 'ChatGPT', link: 'https://chatgpt.com/' },
+      { text: 'Claude', link: 'https://claude.ai/new' },
+      { text: 'Gemini', link: 'https://gemini.google.com/app' },
+    ],
     sidebar: {
       '/guide/00-common/': [
         {

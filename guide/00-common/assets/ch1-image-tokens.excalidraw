@@ -1,0 +1,268 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "id": "photo",
+   "x": 0,
+   "y": 0,
+   "width": 180,
+   "height": 180,
+   "backgroundColor": "#fff3bf",
+   "fillStyle": "solid"
+  },
+  {
+   "type": "line",
+   "x": 60,
+   "y": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     180
+    ]
+   ],
+   "width": 0,
+   "height": 180
+  },
+  {
+   "type": "line",
+   "x": 0,
+   "y": 60,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     180,
+     0
+    ]
+   ],
+   "width": 180,
+   "height": 0
+  },
+  {
+   "type": "line",
+   "x": 120,
+   "y": 0,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     180
+    ]
+   ],
+   "width": 0,
+   "height": 180
+  },
+  {
+   "type": "line",
+   "x": 0,
+   "y": 120,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     180,
+     0
+    ]
+   ],
+   "width": 180,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "id": "pcap",
+   "x": -30,
+   "y": 190,
+   "width": 240,
+   "height": 30,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "고양이 사진을 칸으로 자르기",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 180,
+   "y": 90,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 260,
+   "y": 65,
+   "width": 62,
+   "height": 50,
+   "backgroundColor": "#fff3bf",
+   "fillStyle": "solid",
+   "label": {
+    "text": "칸1",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 328,
+   "y": 65,
+   "width": 62,
+   "height": 50,
+   "backgroundColor": "#fff3bf",
+   "fillStyle": "solid",
+   "label": {
+    "text": "칸2",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 396,
+   "y": 65,
+   "width": 62,
+   "height": 50,
+   "backgroundColor": "#fff3bf",
+   "fillStyle": "solid",
+   "label": {
+    "text": "…",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 464,
+   "y": 65,
+   "width": 62,
+   "height": 50,
+   "backgroundColor": "#fff3bf",
+   "fillStyle": "solid",
+   "label": {
+    "text": "칸9",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 532,
+   "y": 65,
+   "width": 62,
+   "height": 50,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "이게",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 600,
+   "y": 65,
+   "width": 62,
+   "height": 50,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "뭐야?",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 260,
+   "y": 125,
+   "width": 402,
+   "height": 30,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "사진 조각과 질문 글 조각을 한 줄로",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 668,
+   "y": 90,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     70,
+     0
+    ]
+   ],
+   "width": 70,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "id": "llm",
+   "x": 740,
+   "y": 55,
+   "width": 120,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "LLM",
+    "fontSize": 20
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 860,
+   "y": 90,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     70,
+     0
+    ]
+   ],
+   "width": 70,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "id": "ans",
+   "x": 932,
+   "y": 50,
+   "width": 200,
+   "height": 80,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "다음 말 예측:\n소파에서 자는\n고양이예요",
+    "fontSize": 16
+   }
+  }
+ ]
+}
