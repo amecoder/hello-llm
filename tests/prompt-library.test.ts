@@ -27,6 +27,13 @@ test('every prompt in the library is copied word for word from a chapter', () =>
   }
 })
 
+test('library prompts use markdown headings and fences, not XML tags', () => {
+  // readers copy these as is; tag pairs are hard to type correctly, chapter 7 teaches them separately
+  for (const block of codeBlocks(LIBRARY)) {
+    assert.doesNotMatch(block, /<\/?[\p{L}_][\p{L}\d_.-]*(\s[^<>]*)?\/?>/u, `XML tag in library prompt:\n${block}`)
+  }
+})
+
 test('no prompt is listed twice', () => {
   const blocks = codeBlocks(LIBRARY)
   assert.equal(new Set(blocks).size, blocks.length)
