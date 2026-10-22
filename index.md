@@ -50,6 +50,10 @@ features:
     details: 환각 확인, 개인정보 가리기, 저작권, 숨은 지시 막기 — 보내기 전과 받은 후 체크리스트
     link: /guide/00-common/09-safety
     linkText: 읽기
+  - title: LLM 이해 인증 시험
+    details: 1~9장에서 뽑은 20문제로 이해도를 확인하고 골드·실버·브론즈 배지 받기
+    link: /guide/00-common/certificate
+    linkText: 시험 보기
 ---
 
 ## 학습 로드맵
