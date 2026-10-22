@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import footnote from 'markdown-it-footnote'
+import { slugify } from './slugify'
 
 export default defineConfig({
   lang: 'ko-KR',
@@ -16,6 +17,7 @@ export default defineConfig({
   },
   lastUpdated: true,
   markdown: {
+    anchor: { slugify },
     config: (md) => {
       // footnote type lives in .vitepress/env.d.ts
       md.use(footnote)
@@ -44,6 +46,7 @@ export default defineConfig({
             { text: '7장. 구조화 프롬프트', link: '/guide/00-common/07-structured-prompts' },
             { text: '8장. 메타 프롬프팅', link: '/guide/00-common/08-meta-prompting' },
             { text: '9장. 안전하게 쓰기', link: '/guide/00-common/09-safety' },
+            { text: '바로 쓰는 프롬프트 모음', link: '/guide/00-common/prompt-library' },
             { text: 'LLM 이해 인증 시험', link: '/guide/00-common/certificate' },
           ],
         },
