@@ -19,6 +19,7 @@
 - ⚠️ `rewrites` 는 페이지 주소만 바꾸고 본문 링크는 안 바꾼다 — 사이트 페이지에서 단계 목차로 갈 때는 `.../README.md` 가 아니라 `/guide/00-common/` 처럼 쓴다(2026-10-20 404 원인)
 - 실습 UI: VitePress 페이지 안의 Vue 컴포넌트(`.vitepress/theme/components/`, `theme/index.ts` 에서 전역 등록). 실제 LLM API 는 호출하지 않는다(비용 0 원칙) — 브라우저 안에서만 동작하거나 미리 준비한 답변으로 시뮬레이션
   - 첫 컴포넌트: `<PromptBuilder />` (7장) — 조립 규칙은 `theme/prompt-builder.ts` 순수 함수로 분리해 `tests/` 에서 테스트
+  - 확인 퀴즈 `<Quiz id="chN-slug" />`(절마다 1문제)와 인증 시험 `<CertExam />`(`guide/00-common/certificate.md`) — 문제는 `theme/quiz-bank.ts`, 출제·채점·배지는 `theme/quiz.ts`. 배지는 공식 자격증이 아니라 학습 배지임을 화면에 밝힌다
 - 테스트: Node 내장 테스트 러너(`node --test`, TS 는 Node 24 타입 제거 기능으로 바로 실행). 배포 워크플로가 빌드 전에 `npm test` 를 돌린다
 
 ## 프로젝트 구조
@@ -51,7 +52,8 @@ assets/                # README 그림 (.excalidraw 원본 + .svg)
 2. 단계 목차 `guide/<단계>/README.md` 갱신
 3. **`.vitepress/config.mts` 의 `sidebar` 와 `index.md` 의 `features` 카드에 항목 추가** — 빠뜨리면 사이트 목차·첫 화면에 안 보인다
 4. 아직 없는 장으로 링크하지 않는다 — VitePress 빌드가 죽은 링크에서 실패한다
-5. 본문의 `<태그>` 는 반드시 백틱이나 코드 블록 안에 쓴다 — 그냥 쓰면 VitePress(Vue)가 HTML 로 해석해 사라지거나 빌드가 깨진다
+5. 내용을 설명하는 큰 절(h2)마다 끝에(「직접 해 보기」·「정리」·「용어 정리」·영상 절 제외) `<Quiz id="chN-slug" />` 를 넣고 `theme/quiz-bank.ts` 에 문제를 추가한다(`CHAPTERS` 에도 장 추가). 문제는 본문에 나온 내용만 묻는다. `tests/quiz-bank.test.ts` 가 본문과 문제 은행이 1:1인지 검사한다
+6. 본문의 `<태그>` 는 반드시 백틱이나 코드 블록 안에 쓴다 — 그냥 쓰면 VitePress(Vue)가 HTML 로 해석해 사라지거나 빌드가 깨진다
 
 ## 주요 커맨드
 - `npm ci` — 의존성 설치
