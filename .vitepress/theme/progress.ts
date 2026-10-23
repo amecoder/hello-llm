@@ -4,6 +4,7 @@ import { cleanName } from './quiz.ts'
 
 export type Progress = { nickname: string; read: readonly number[] }
 
+// kept as hello-llm after the rename to hello-ai: changing it would wipe saved progress
 export const STORAGE_KEY = 'hello-llm:progress'
 export const EMPTY_PROGRESS: Progress = { nickname: '', read: [] }
 

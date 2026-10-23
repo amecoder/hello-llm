@@ -80,7 +80,7 @@ async function savePng() {
     const href = URL.createObjectURL(blob)
     const link = document.createElement('a')
     link.href = href
-    link.download = `hello-llm-badge-${grade.value}.png`
+    link.download = `hello-ai-badge-${grade.value}.png`
     document.body.appendChild(link)
     link.click()
     link.remove()
