@@ -48,7 +48,7 @@ export default defineConfig({
             { text: '8장. 메타 프롬프팅', link: '/guide/00-common/08-meta-prompting' },
             { text: '9장. 안전하게 쓰기', link: '/guide/00-common/09-safety' },
             { text: '바로 쓰는 프롬프트 모음', link: '/guide/00-common/prompt-library' },
-            { text: 'LLM 이해 인증 시험', link: '/guide/00-common/certificate' },
+            { text: '이해도 확인 시험', link: '/guide/00-common/certificate' },
           ],
         },
       ],

@@ -19,7 +19,7 @@
 - ⚠️ `rewrites` 는 페이지 주소만 바꾸고 본문 링크는 안 바꾼다 — 사이트 페이지에서 단계 목차로 갈 때는 `.../README.md` 가 아니라 `/guide/00-common/` 처럼 쓴다(2026-10-20 404 원인)
 - 실습 UI: VitePress 페이지 안의 Vue 컴포넌트(`.vitepress/theme/components/`, `theme/index.ts` 에서 전역 등록). 실제 LLM API 는 호출하지 않는다(비용 0 원칙) — 브라우저 안에서만 동작하거나 미리 준비한 답변으로 시뮬레이션
   - 첫 컴포넌트: `<PromptBuilder />` (7장) — 조립 규칙은 `theme/prompt-builder.ts` 순수 함수로 분리해 `tests/` 에서 테스트
-  - 확인 퀴즈 `<Quiz id="chN-slug" />`(절마다 1문제)와 인증 시험 `<CertExam />`(`guide/00-common/certificate.md`) — 문제는 `theme/quiz-bank.ts`, 출제·채점·배지는 `theme/quiz.ts`. 배지는 공식 자격증이 아니라 학습 배지임을 화면에 밝힌다
+  - 확인 퀴즈 `<Quiz id="chN-slug" />`(절마다 1문제)와 이해도 확인 시험 `<CertExam />`(`guide/00-common/certificate.md`, 주소는 탈잉 안내문 때문에 유지) — 확인 퀴즈 문제는 `theme/quiz-bank.ts`, 시험 전용 문제(개념·상황 판단, 장마다 각 2개 이상)는 `theme/exam-bank.ts`, 출제·채점·입문/중급/상급 레벨·배지는 `theme/quiz.ts`. 문제는 그 장을 안 읽은 사람도 알아듣게, 가이드의 이름표 용어 대신 쉬운 말로 쓴다. 배지는 공식 자격증이 아니라 학습 배지임을 화면에 밝힌다
 - 테스트: Node 내장 테스트 러너(`node --test`, TS 는 Node 24 타입 제거 기능으로 바로 실행). 배포 워크플로가 빌드 전에 `npm test` 를 돌린다
 
 ## 프로젝트 구조
