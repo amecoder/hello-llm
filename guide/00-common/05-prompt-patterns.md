@@ -276,6 +276,8 @@ AI는 틀린 내용도 자신 있게 말합니다. 그래서 **어디가 불확�
 | Fact Check List | 팩트 체크 리스트 | 확인이 필요한 사실을 목록으로 뽑게 하기 |
 | Chain-of-Thought (CoT) | 체인 오브 소트 (씨오티) | 단계별로 생각을 적으며 답하게 하기 |
 
+<ChapterDone :chapter="5" />
+
 다음 장: [6장. 대화를 이어 가며 다듬기](06-conversation.md)
 
 ---

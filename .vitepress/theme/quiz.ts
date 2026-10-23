@@ -89,9 +89,14 @@ function isSafeChar(ch: string): boolean {
   return code >= 0x20 && !(code >= 0xd800 && code <= 0xdfff) && code !== 0xfffe && code !== 0xffff
 }
 
-export function normalizeName(name: string): string {
+// '' when nothing usable is left; the nickname form keeps it empty, the badge falls back
+export function cleanName(name: string): string {
   const chars = [...name].filter(isSafeChar).join('').trim()
-  return chars === '' ? DEFAULT_NAME : [...chars].slice(0, NAME_MAX).join('')
+  return [...chars].slice(0, NAME_MAX).join('')
+}
+
+export function normalizeName(name: string): string {
+  return cleanName(name) || DEFAULT_NAME
 }
 
 export function escapeXml(text: string): string {

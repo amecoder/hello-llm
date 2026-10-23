@@ -1,10 +1,12 @@
 <script setup lang="ts">
 // Self-check exam: draw questions from the bank, grade them, and hand out a badge image.
-// Everything runs in the browser — no answers, names or scores leave the page.
-import { computed, nextTick, ref } from 'vue'
+// Everything runs in the browser — no answers, names or scores leave the page or get stored;
+// the only stored value used here is the nickname the reader saved (progress-store).
+import { computed, nextTick, onMounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 import { CHAPTERS, QUESTIONS } from '../quiz-bank'
 import { buildBadgeSvg, drawExam, EXAM_SIZE, GRADES, gradeFor, scoreExam, type ExamItem } from '../quiz'
+import { loadProgress, progress } from '../progress-store'
 
 type Stage = 'intro' | 'exam' | 'result'
 
@@ -38,8 +40,12 @@ function start() {
   goTo('exam')
 }
 
+onMounted(loadProgress)
+
 function submit() {
   badgeDate.value = today()
+  // start from the saved nickname; the reader can still change it below
+  if (name.value.trim() === '') name.value = progress.value.nickname
   goTo('result')
 }
 
@@ -129,7 +135,7 @@ async function savePng() {
       <div v-if="grade && gradeInfo" class="ce-badge">
         <p>축하합니다! <strong :style="{ color: gradeInfo.color }">{{ gradeInfo.label }}</strong> 등급입니다.</p>
         <label class="ce-name">
-          <span>배지에 넣을 이름 (비워 두면 "학습자")</span>
+          <span>배지에 넣을 이름 (비워 두면 "학습자". 첫 화면에서 정한 닉네임이 미리 들어갑니다)</span>
           <input v-model="name" type="text" maxlength="20" placeholder="예: 김하늘" />
         </label>
         <img class="ce-badge-img" :src="`data:image/svg+xml;charset=utf-8,${encodeURIComponent(badgeSvg)}`" :alt="`LLM 이해 인증 ${gradeInfo.label} 배지`" />

@@ -53,8 +53,9 @@ assets/                # README 그림 (.excalidraw 원본 + .svg)
 3. **`.vitepress/config.mts` 의 `sidebar` 와 `guide/index.md`(전체 목차)의 `features` 카드에 항목 추가** — 빠뜨리면 사이트 목차에 안 보인다. `tests/site-pages.test.ts` 가 둘이 같은 순서로 맞는지 검사한다
 4. 아직 없는 장으로 링크하지 않는다 — VitePress 빌드가 죽은 링크에서 실패한다
 5. 내용을 설명하는 큰 절(h2)마다 끝에(「직접 해 보기」·「정리」·「용어 정리」·영상 절 제외) `<Quiz id="chN-slug" />` 를 넣고 `theme/quiz-bank.ts` 에 문제를 추가한다(`CHAPTERS` 에도 장 추가). 문제는 본문에 나온 내용만 묻는다. `tests/quiz-bank.test.ts` 가 본문과 문제 은행이 1:1인지 검사한다
-6. 새 장의 프롬프트 예시 중 바로 쓸 만한 것은 `guide/00-common/prompt-library.md` 의 쓰임새별 절에 추가한다(설명한 장으로 가는 링크 포함). 본문 프롬프트를 고치면 모음도 같이 고친다 — `tests/prompt-library.test.ts` 가 모음의 프롬프트가 본문과 글자 그대로 같은지 검사한다
-7. 본문의 `<태그>` 는 반드시 백틱이나 코드 블록 안에 쓴다 — 그냥 쓰면 VitePress(Vue)가 HTML 로 해석해 사라지거나 빌드가 깨진다
+6. 장 끝 「다음 장:」 줄 바로 위에 `<ChapterDone :chapter="N" />`(다 읽음 버튼)을 넣는다 — 진행 현황은 `theme/quiz-bank.ts` 의 `CHAPTERS` 로 장 수를 센다. `tests/progress.test.ts` 가 위치와 번호를 검사한다
+7. 새 장의 프롬프트 예시 중 바로 쓸 만한 것은 `guide/00-common/prompt-library.md` 의 쓰임새별 절에 추가한다(설명한 장으로 가는 링크 포함). 본문 프롬프트를 고치면 모음도 같이 고친다 — `tests/prompt-library.test.ts` 가 모음의 프롬프트가 본문과 글자 그대로 같은지 검사한다
+8. 본문의 `<태그>` 는 반드시 백틱이나 코드 블록 안에 쓴다 — 그냥 쓰면 VitePress(Vue)가 HTML 로 해석해 사라지거나 빌드가 깨진다
 
 ## 주요 커맨드
 - `npm ci` — 의존성 설치
