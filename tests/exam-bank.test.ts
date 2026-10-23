@@ -1,10 +1,10 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { CHAPTERS, QUESTIONS } from '../.vitepress/theme/quiz-bank.ts'
-import { EXAM_QUESTIONS } from '../.vitepress/theme/exam-bank.ts'
-import { drawLevelExam } from '../.vitepress/theme/quiz.ts'
+import { EXAM_CHAPTERS, EXAM_QUESTIONS } from '../.vitepress/theme/exam-bank.ts'
+import { drawLevelExam, PRACTICE_CHECKS } from '../.vitepress/theme/quiz.ts'
 
-const chapters = Object.keys(CHAPTERS).map(Number)
+const chapters = EXAM_CHAPTERS
 
 test('exam question ids are unique and name their chapter', () => {
   const ids = EXAM_QUESTIONS.map((q) => q.id)
@@ -18,7 +18,15 @@ test('every chapter has at least 2 concept and 2 situation questions', () => {
     assert.ok(inCh.filter((q) => q.kind === 'concept').length >= 2, `chapter ${ch} concept`)
     assert.ok(inCh.filter((q) => q.kind === 'situation').length >= 2, `chapter ${ch} situation`)
   }
-  for (const q of EXAM_QUESTIONS) assert.ok(CHAPTERS[q.chapter], q.id)
+  for (const q of EXAM_QUESTIONS) assert.ok(CHAPTERS[q.chapter] && chapters.includes(q.chapter), q.id)
+})
+
+test('chapter 10 practice ends with the same checklist as the advanced-level practice task', async () => {
+  const { readFileSync } = await import('node:fs')
+  const { join } = await import('node:path')
+  const md = readFileSync(join(import.meta.dirname, '..', 'guide', '00-common', '10-practice.md'), 'utf8')
+  const final = md.slice(md.indexOf('## 종합 과제'))
+  for (const check of PRACTICE_CHECKS) assert.ok(final.includes(`- ☐ ${check.text}`), check.text)
 })
 
 test('every exam question has 4 distinct choices, a valid answer and an explanation', () => {

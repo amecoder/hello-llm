@@ -2,6 +2,9 @@
 // Written so someone who has not just read the chapter can still understand each question.
 import type { ExamQuestion } from './quiz'
 
+// the exam covers chapters 1-9; chapter 10 (practice) is checked by the advanced-level practice task instead
+export const EXAM_CHAPTERS: readonly number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 export const EXAM_QUESTIONS: readonly ExamQuestion[] = [
   // chapter 1
   {

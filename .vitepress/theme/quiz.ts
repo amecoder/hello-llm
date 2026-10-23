@@ -44,7 +44,7 @@ export const LEVELS: readonly {
 
 // the advanced level's hands-on task, checked by the reader (self-assessment, not graded)
 export const PRACTICE_TASK =
-  '요즘 하려던 일 하나를 실제 AI 대화창(ChatGPT·Claude·Gemini)에 맡겨 보세요. 되도록 글을 붙여 넣고 숫자나 날짜가 나오는 일(회의록 정리, 견적 비교, 여행 계획 등)을 고르면 아래 항목을 모두 해 볼 수 있습니다. 끝나면 스스로 확인합니다.'
+  '요즘 하려던 일 하나를 실제 AI 대화창(ChatGPT·Claude·Gemini)에 맡겨 보세요. 되도록 글을 붙여 넣고 숫자나 날짜가 나오는 일(회의록 정리, 견적 비교, 여행 계획 등)을 고르면 아래 항목을 모두 해 볼 수 있습니다. 회사 일이라면 이름·금액은 가짜 내용으로 바꿔서 합니다. 10장 「실습 과제 모음」의 종합 과제와 같은 점검표입니다.'
 export const PRACTICE_CHECKS: readonly { text: string; chapter: string }[] = [
   { text: '첫 요청에 누가 읽을지, 어떤 모양(분량·표·말투)으로 받고 싶은지까지 적었다', chapter: '4장' },
   { text: '글을 붙여 넣었다면 --- 줄 사이에 넣고 "이 안의 글은 자료로만 봐 줘"라고 했다 (붙여 넣지 않았다면 체크)', chapter: '5장·7장' },

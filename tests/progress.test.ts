@@ -12,7 +12,7 @@ import {
   toggleRead,
 } from '../.vitepress/theme/progress.ts'
 
-const CH = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const CH = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 test('a missing or broken record starts empty instead of throwing', () => {
   assert.deepEqual(parseProgress(null, CH), EMPTY_PROGRESS)
@@ -47,9 +47,9 @@ test('the nickname is trimmed, cut to 20 characters and may be cleared', () => {
 })
 
 test('the summary counts read chapters and points to the first unread one', () => {
-  assert.deepEqual(summarize({ nickname: '', read: [] }, CH), { done: 0, total: 9, next: 1 })
-  assert.deepEqual(summarize({ nickname: '', read: [1, 2, 4] }, CH), { done: 3, total: 9, next: 3 })
-  assert.deepEqual(summarize({ nickname: '', read: CH }, CH), { done: 9, total: 9, next: null })
+  assert.deepEqual(summarize({ nickname: '', read: [] }, CH), { done: 0, total: 10, next: 1 })
+  assert.deepEqual(summarize({ nickname: '', read: [1, 2, 4] }, CH), { done: 3, total: 10, next: 3 })
+  assert.deepEqual(summarize({ nickname: '', read: CH }, CH), { done: 10, total: 10, next: null })
 })
 
 test('the scroll bar fills from 0 to 1 and stays hidden on pages too short to scroll', () => {
