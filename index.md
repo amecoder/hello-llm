@@ -11,64 +11,60 @@ hero:
       link: /guide/00-common/01-what-is-llm
     - theme: alt
       text: 전체 목차 보기
-      link: /guide/00-common/
+      link: /guide/
 
 features:
-  - title: 1장. LLM이란 무엇인가
-    details: AI가 어떻게 답을 만드는지, 왜 가끔 그럴듯하게 틀리는지
-    link: /guide/00-common/01-what-is-llm
-    linkText: 읽기
-  - title: 2장. 왜 이렇게 화제인가
-    details: 무엇이 달라졌길래 모두가 AI 이야기를 하는지, 그리고 논란들
-    link: /guide/00-common/02-why-it-matters
-    linkText: 읽기
-  - title: 3장. 왜 배워야 하나
-    details: 같은 AI를 써도 결과가 달라지는 이유와 일상 활용 예
-    link: /guide/00-common/03-why-learn
-    linkText: 읽기
-  - title: 4장. 프롬프트 기초
-    details: 좋은 답을 받는 요청 글의 5요소 — 목표·맥락·대상·형식·조건
-    link: /guide/00-common/04-prompt-basics
-    linkText: 읽기
-  - title: 5장. 프롬프트 패턴
-    details: Few-shot, CoT 등 전문가들이 쓰는 여덟 가지 요청 요령
-    link: /guide/00-common/05-prompt-patterns
-    linkText: 읽기
-  - title: 6장. 대화를 이어 가며 다듬기
-    details: 고쳐 달라고 잘 말하는 법, 새 대화로 옮겨 가는 법
-    link: /guide/00-common/06-conversation
-    linkText: 읽기
-  - title: 7장. 구조화 프롬프트
-    details: 마크다운·XML 태그로 긴 요청 정리하기, 엑셀로 옮길 표 받기, 프롬프트 편집기
-    link: /guide/00-common/07-structured-prompts
-    linkText: 읽기
-  - title: 8장. 메타 프롬프팅
-    details: 프롬프트를 AI에게 만들게 하기 — 정리, 질문받기, 고치기, 틀 만들기
-    link: /guide/00-common/08-meta-prompting
-    linkText: 읽기
-  - title: 9장. 안전하게 쓰기
-    details: 환각 확인, 개인정보 가리기, 저작권, 숨은 지시 막기 — 보내기 전과 받은 후 체크리스트
-    link: /guide/00-common/09-safety
-    linkText: 읽기
-  - title: 바로 쓰는 프롬프트 모음
-    details: 메일·요약·이력서·회의록·계약 준비 등 1~9장의 프롬프트 32개를 쓰임새별로 — 복사해서 빈칸만 바꾸면 끝
-    link: /guide/00-common/prompt-library
-    linkText: 모음 보기
-  - title: LLM 이해 인증 시험
-    details: 1~9장에서 뽑은 20문제로 이해도를 확인하고 골드·실버·브론즈 배지 받기
-    link: /guide/00-common/certificate
-    linkText: 시험 보기
+  - title: 원리부터 쉽게
+    details: AI가 어떻게 답을 만드는지, 왜 가끔 그럴듯하게 틀리는지를 수식 없이 일상의 예로 설명합니다
+  - title: 바로 따라 하는 예시
+    details: 개념마다 그대로 복사해 입력해 볼 수 있는 프롬프트(AI에게 보내는 부탁 글)가 붙어 있습니다. ChatGPT·Claude·Gemini 어디서나 통합니다
+  - title: 읽고 나서 확인
+    details: 내용 절 끝마다 확인 퀴즈, 장마다 직접 해 보기, 마지막에는 20문제 인증 시험으로 이해한 정도를 점검합니다
 ---
 
-## 학습 로드맵
+## 이런 분을 위한 가이드입니다
 
-앞 단계가 다음 단계의 바탕이 되므로 번호 순서대로 읽는 것을 권합니다. 지금은 1단계를 채우는 중입니다.
+- ChatGPT나 Claude를 써 봤지만 **검색창처럼 한 줄 묻고 끝내는** 분
+- 답이 엉뚱하거나 뻔하게 나와서 **"AI 별거 없네"** 하고 덮어 둔 분
+- 회사에서 AI를 쓰라는데 **어디서부터 배워야 할지 모르는** 분
+- 코딩은 모르지만 언젠가 **AI에게 일을 맡기는 단계**까지 가 보고 싶은 분
 
-![학습 로드맵: 1단계 공통 가이드(잘 묻는 법) → 2단계 Claude·ChatGPT(서비스별 기능) → 3단계 Claude Code·Codex(AI에게 일 맡기기) → 4단계 AI-SDLC(AI와 함께 만들기)](./assets/roadmap.svg)
+여기서 말하는 **LLM**(대규모 언어 모델, Large Language Model)은 ChatGPT·Claude·Gemini처럼 글로 묻고 답하는 AI를 가리킵니다.
+전문 용어는 처음 나올 때마다 쉬운 말로 풀고, 영어 원래 이름을 함께 적습니다. 미리 알아야 할 것은 없습니다.
 
-| 단계 | 가이드 | 내용 |
-|---|---|---|
-| 1 | [공통 가이드](/guide/00-common/) | 어떤 LLM에서든 통하는 공통 원리와 사용법 |
-| 2 | Claude · ChatGPT (준비 중) | 서비스별 기능과 활용법 |
-| 3 | Claude Code · Codex (준비 중) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
-| 4 | AI-SDLC (준비 중) | AI와 함께 기획부터 배포까지 — 소프트웨어 개발 전 과정(SDLC) |
+## 다 읽고 나면 이렇게 달라집니다
+
+| 지금 | 읽은 뒤 |
+|---|---|
+| "회의록 요약해 줘" 한 줄로 묻는다 | 누가 읽을지, 어떤 모양으로 받을지까지 알려 주고 원하는 답을 한 번에 받는다 |
+| 답이 마음에 안 들면 처음부터 다시 묻는다 | 어디가 왜 아쉬운지 짚어 이어서 고치게 한다 |
+| 긴 자료를 붙여 넣고 결과를 그대로 쓴다 | 자료와 지시를 나눠 넣고, 숫자·날짜·출처는 원래 자료에서 직접 확인한다 |
+| 개인정보가 든 글을 그대로 넣는다 | 이름·연락처·금액을 가리고 부탁한다 |
+
+## 이렇게 배웁니다
+
+1. **읽기** — 1장부터 9장까지 순서대로 읽습니다.
+2. **확인 퀴즈** — 내용을 설명하는 절 끝마다 한 문제로 방금 읽은 내용을 점검합니다.
+3. **직접 해 보기** — 장 끝의 과제를 실제 AI 대화창에 입력해 봅니다. 위쪽 메뉴의 ChatGPT·Claude·Gemini 바로가기로 바로 열 수 있습니다.
+4. **꺼내 쓰기** — [바로 쓰는 프롬프트 모음](/guide/00-common/prompt-library)에서 하려는 일에 맞는 프롬프트를 복사해 빈칸만 바꿔 씁니다.
+5. **점검하기** — [LLM 이해 인증 시험](/guide/00-common/certificate) 20문제를 풀고 골드·실버·브론즈 학습 배지를 받습니다. 공식 자격증이 아니라 스스로 이해한 정도를 확인하는 배지입니다.
+
+## 어디까지 가나요
+
+지금은 1단계 **공통 가이드**를 공개했습니다. 앞 단계가 다음 단계의 바탕이 되도록 이어서 만들고 있습니다.
+
+| 단계 | 배우는 것 |
+|---|---|
+| 1. 공통 가이드 (공개) | 어떤 AI에서든 통하는 원리와 잘 묻는 법 |
+| 2. Claude · ChatGPT (준비 중) | 서비스별 기능과 설정 |
+| 3. Claude Code · Codex (준비 중) | 내 컴퓨터에서 직접 파일을 읽고 고치는 AI 도구로 일 맡기기 |
+| 4. AI-SDLC (준비 중) | AI와 함께 기획부터 배포까지 소프트웨어 만들기 — SDLC는 소프트웨어 개발 전 과정(Software Development Life Cycle) |
+
+장별 내용은 [전체 목차](/guide/)에서 볼 수 있습니다.
+
+## 이 가이드의 약속
+
+- **무료로 읽습니다.** 회원 가입도 필요 없습니다.
+- **내 답을 모으지 않습니다.** 퀴즈 답, 시험 점수, 배지에 넣은 이름은 내 브라우저 안에서만 계산되고, 이 사이트는 그것을 저장하거나 어디로 보내지 않습니다. 그래서 페이지를 새로 고치면 지워집니다.
+- **근거를 남깁니다.** 서비스 기능이나 연구 수치에는 출처와 확인한 날짜를 각주로 답니다. AI 서비스는 자주 바뀌므로 오래된 내용이 보이면 알려 주세요.
+- **특정 서비스를 홍보하지 않습니다.** 1단계 내용은 ChatGPT·Claude·Gemini 어디서나 똑같이 통하도록 씁니다.
