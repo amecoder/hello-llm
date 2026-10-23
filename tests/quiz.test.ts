@@ -3,11 +3,15 @@ import assert from 'node:assert/strict'
 import {
   buildBadgeSvg,
   drawExam,
+  drawLevelExam,
   escapeXml,
-  gradeFor,
+  levelFor,
   normalizeName,
+  practiceUnlocked,
   scoreExam,
+  scoreParts,
   shuffle,
+  type ExamQuestion,
   type Question,
 } from '../.vitepress/theme/quiz.ts'
 
@@ -82,15 +86,58 @@ test('scoreExam counts matching picks and treats unanswered as wrong', () => {
   assert.equal(scoreExam(items, items.map((i) => (i.answer + 1) % 4)), 0)
 })
 
-test('gradeFor uses 90 / 70 / 50 percent cut-offs', () => {
-  assert.equal(gradeFor(20, 20), 'gold')
-  assert.equal(gradeFor(18, 20), 'gold')
-  assert.equal(gradeFor(17, 20), 'silver')
-  assert.equal(gradeFor(14, 20), 'silver')
-  assert.equal(gradeFor(13, 20), 'bronze')
-  assert.equal(gradeFor(10, 20), 'bronze')
-  assert.equal(gradeFor(9, 20), null)
-  assert.equal(gradeFor(0, 0), null)
+const score = (correct: number, situationCorrect: number) => ({ correct, total: 20, situationCorrect, situationTotal: 10 })
+
+test('levelFor: 60% is the beginner level, nothing below it', () => {
+  assert.equal(levelFor(score(12, 2), false), 'beginner')
+  assert.equal(levelFor(score(11, 6), false), null)
+  assert.equal(levelFor({ correct: 0, total: 0, situationCorrect: 0, situationTotal: 0 }, false), null)
+})
+
+test('levelFor: intermediate needs 75% overall and 7 of 10 situation questions', () => {
+  assert.equal(levelFor(score(15, 7), false), 'intermediate')
+  assert.equal(levelFor(score(15, 6), false), 'beginner')
+  assert.equal(levelFor(score(14, 10), false), 'beginner')
+})
+
+test('levelFor: advanced needs 90%, 9 situation questions and the practice check', () => {
+  assert.equal(levelFor(score(18, 9), true), 'advanced')
+  assert.equal(levelFor(score(18, 9), false), 'intermediate')
+  assert.equal(levelFor(score(18, 8), true), 'intermediate')
+  assert.equal(levelFor(score(17, 10), true), 'intermediate')
+  assert.equal(practiceUnlocked(score(18, 9)), true)
+  assert.equal(practiceUnlocked(score(18, 8)), false)
+})
+
+const eq = (id: string, chapter: number, kind: ExamQuestion['kind']): ExamQuestion => ({ ...q(id, chapter), kind })
+// 9 chapters x (2 concept + 2 situation), like the real exam bank
+const examBank: ExamQuestion[] = [1, 2, 3, 4, 5, 6, 7, 8, 9].flatMap((ch) => [
+  eq(`ex${ch}-c1`, ch, 'concept'),
+  eq(`ex${ch}-c2`, ch, 'concept'),
+  eq(`ex${ch}-s1`, ch, 'situation'),
+  eq(`ex${ch}-s2`, ch, 'situation'),
+])
+
+test('drawLevelExam takes 10 concept and 10 situation questions, every chapter at least once each', () => {
+  for (const seed of [1, 2, 3, 4, 5, 6]) {
+    const items = drawLevelExam(examBank, seeded(seed))
+    assert.equal(items.length, 20)
+    assert.equal(new Set(items.map((i) => i.question.id)).size, 20)
+    const kinds = items.map((i) => (i.question as ExamQuestion).kind)
+    assert.equal(kinds.filter((k) => k === 'situation').length, 10)
+    for (let ch = 1; ch <= 9; ch++) {
+      const inCh = items.filter((i) => i.question.chapter === ch).map((i) => (i.question as ExamQuestion).kind)
+      assert.ok(inCh.includes('concept') && inCh.includes('situation'), `seed ${seed} chapter ${ch}`)
+    }
+    const chapters = items.map((i) => i.question.chapter)
+    assert.deepEqual(chapters, [...chapters].sort((a, b) => a - b))
+  }
+})
+
+test('scoreParts counts situation answers separately', () => {
+  const items = drawLevelExam(examBank, seeded(9))
+  const picks = items.map((i) => ((i.question as ExamQuestion).kind === 'situation' ? (i.answer + 1) % 4 : i.answer))
+  assert.deepEqual(scoreParts(items, picks), { correct: 10, total: 20, situationCorrect: 0, situationTotal: 10 })
 })
 
 test('normalizeName trims, caps length and falls back to a default', () => {
@@ -103,7 +150,7 @@ test('normalizeName drops characters that would break the badge SVG', () => {
   assert.equal(normalizeName('하\u0001늘\u001f'), '하늘')
   assert.equal(normalizeName('하늘\ud83d'), '하늘') // lone surrogate from a cut emoji
   assert.equal(normalizeName('하늘😀'), '하늘😀')
-  assert.doesNotThrow(() => encodeURIComponent(buildBadgeSvg({ name: 'a\ud800b', grade: 'gold', correct: 20, total: 20, date: 'd' })))
+  assert.doesNotThrow(() => encodeURIComponent(buildBadgeSvg({ name: 'a\ud800b', level: 'advanced', ...score(20, 10), date: 'd' })))
 })
 
 test('drawExam mixes the order of questions within a chapter', () => {
@@ -116,11 +163,12 @@ test('escapeXml neutralises markup characters', () => {
   assert.equal(escapeXml(`<a href="x">&'</a>`), '&lt;a href=&quot;x&quot;&gt;&amp;&apos;&lt;/a&gt;')
 })
 
-test('buildBadgeSvg shows grade, score, date and an escaped name', () => {
-  const svg = buildBadgeSvg({ name: '<b>하늘</b>', grade: 'silver', correct: 15, total: 20, date: '2026-10-22' })
+test('buildBadgeSvg shows level, both scores, date and an escaped name', () => {
+  const svg = buildBadgeSvg({ name: '<b>하늘</b>', level: 'intermediate', ...score(15, 7), date: '2026-10-22' })
   assert.ok(svg.startsWith('<svg'))
-  assert.ok(svg.includes('실버'))
+  assert.ok(svg.includes('중급'))
   assert.ok(svg.includes('15 / 20'))
+  assert.ok(svg.includes('7 / 10'))
   assert.ok(svg.includes('2026-10-22'))
   assert.ok(svg.includes('&lt;b&gt;하늘&lt;/b&gt;'))
   assert.ok(!svg.includes('<b>'))

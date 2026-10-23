@@ -60,7 +60,7 @@ async function clearAll() {
           <input id="mp-nickname" ref="nameInput" v-model="draft" type="text" maxlength="20" placeholder="예: 하늘" autocomplete="nickname" />
           <button type="submit" class="mp-btn">저장</button>
         </div>
-        <p class="mp-hint">인증 시험 배지에 이 이름이 들어갑니다. 실명이 아니어도 됩니다.</p>
+        <p class="mp-hint">이해도 확인 시험의 레벨 배지에 이 이름이 들어갑니다. 실명이 아니어도 됩니다.</p>
       </form>
       <p v-else class="mp-hello">
         <strong>{{ progress.nickname }}</strong>님, 반가워요.
@@ -82,7 +82,7 @@ async function clearAll() {
           다음에 읽을 장: <a :href="withBase(nextChapter.link)">{{ nextChapter.title }}</a>
         </p>
         <p v-else>
-          모든 장을 읽었어요. <a :href="withBase('/guide/00-common/certificate')">LLM 이해 인증 시험</a>을 풀어 보세요.
+          모든 장을 읽었어요. <a :href="withBase('/guide/00-common/certificate')">이해도 확인 시험</a>으로 내 AI 이해 레벨을 확인해 보세요.
         </p>
       </div>
 

@@ -232,7 +232,7 @@ OWASP도 프롬프트 인젝션을 **확실하게 막는 방법이 있는지는 
 | Direct / Indirect Injection | 다이렉트 / 인다이렉트 인젝션 | 직접 입력한 지시 / 바깥 자료 속에 숨은 지시 |
 | OWASP | 오와스프 | 소프트웨어 보안 위험을 정리해 공개하는 국제 비영리 단체 |
 
-1~9장을 다 읽었다면 [LLM 이해 인증 시험](certificate.md)으로 이해도를 확인해 보세요.
+1~9장을 다 읽었다면 [이해도 확인 시험](certificate.md)으로 내 AI 이해 레벨을 확인해 보세요.
 
 <ChapterDone :chapter="9" />
 

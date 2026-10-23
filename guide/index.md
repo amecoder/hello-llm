@@ -54,8 +54,8 @@ features:
     details: 메일·요약·이력서·회의록·계약 준비 등 1~9장의 프롬프트 32개를 쓰임새별로 — 복사해서 빈칸만 바꾸면 끝
     link: /guide/00-common/prompt-library
     linkText: 모음 보기
-  - title: LLM 이해 인증 시험
-    details: 1~9장에서 뽑은 20문제로 이해도를 확인하고 골드·실버·브론즈 배지 받기
+  - title: 이해도 확인 시험 — 내 AI 이해 레벨은?
+    details: 개념 문제와 실제 장면을 보고 판단하는 문제 20개로 입문·중급·상급 레벨 확인하기
     link: /guide/00-common/certificate
     linkText: 시험 보기
 ---
