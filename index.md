@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: hello-llm
+  name: hello-ai
   text: LLM, 전문가처럼 쓰기
   tagline: 챗봇처럼 묻고 답만 받던 AI를 제대로 부리는 법. 개발 지식이 없어도 따라올 수 있습니다.
   actions:

@@ -119,7 +119,7 @@ export function buildBadgeSvg({ name, grade, correct, total, date }: BadgeInput)
 <circle cx="190" cy="240" r="98" fill="none" stroke="#ffffff" stroke-width="4" stroke-dasharray="6 8"/>
 <text x="190" y="225" ${font} font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">LLM 이해</text>
 <text x="190" y="275" ${font} font-size="44" font-weight="800" fill="#ffffff" text-anchor="middle">${info.label}</text>
-<text x="350" y="110" ${font} font-size="22" fill="#6b7280">hello-llm · 1단계 공통 가이드</text>
+<text x="350" y="110" ${font} font-size="22" fill="#6b7280">hello-ai · 1단계 공통 가이드</text>
 <text x="350" y="160" ${font} font-size="34" font-weight="800" fill="#111827">LLM 이해 인증 배지</text>
 <text x="350" y="235" ${font} font-size="40" font-weight="700" fill="#111827">${escapeXml(normalizeName(name))}</text>
 <text x="350" y="290" ${font} font-size="24" fill="#374151">점수 ${correct} / ${total} · 등급 ${info.label}</text>

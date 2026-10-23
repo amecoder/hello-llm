@@ -4,7 +4,7 @@ import { slugify } from './slugify'
 
 export default defineConfig({
   lang: 'ko-KR',
-  title: 'hello-llm',
+  title: 'hello-ai',
   description: '챗봇처럼 묻고 답만 받던 LLM을, 전문가처럼 쓰게 만드는 단계별 가이드',
   base: '/hello-llm/',
   // reader-facing pages only; project/ops docs stay on GitHub
