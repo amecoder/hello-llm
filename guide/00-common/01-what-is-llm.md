@@ -354,6 +354,8 @@ AI가 센 개수를 직접 세어 본 것과 비교해 보세요. 어디서 틀�
 | Knowledge Cutoff | 널리지 컷오프 (지식 컷오프) | 모델이 학습한 자료의 마지막 시점 |
 | Context Window | 컨텍스트 윈도우 | 한 번의 대화에서 모델이 참고할 수 있는 글의 양 |
 
+<ChapterDone :chapter="1" />
+
 다음 장: [2장. 왜 이렇게 화제인가](02-why-it-matters.md)
 
 ---

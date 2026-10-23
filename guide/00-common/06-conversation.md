@@ -166,4 +166,6 @@ AI는 무엇이 별로인지 모르기 때문에, 처음과 비슷한 수준의 
 | Regenerate | 리제너레이트 (다시 생성) | 같은 질문으로 다른 답을 받기 |
 | Prompt Template | 프롬프트 템플릿 | 빈칸만 바꿔 다시 쓰는 요청 틀 |
 
+<ChapterDone :chapter="6" />
+
 다음 장: [7장. 구조화 프롬프트 — 마크다운·XML 태그](07-structured-prompts.md)
