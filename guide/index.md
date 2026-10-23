@@ -62,6 +62,10 @@ features:
     details: 개념 문제와 실제 장면을 보고 판단하는 문제 20개로 입문·중급·상급 레벨 확인하기
     link: /guide/00-common/certificate
     linkText: 시험 보기
+  - title: AI 지식 레벨 시험 — 초급부터 전문가까지
+    details: 자격증 필기시험처럼 5과목 50문제, 과락 있음. 합격하면 다음 레벨이 열리는 초급·중급·고급·전문가 4단계
+    link: /guide/00-common/level-test
+    linkText: 도전하기
 ---
 
 ## 내 학습 현황

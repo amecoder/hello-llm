@@ -50,6 +50,7 @@ export default defineConfig({
             { text: '10장. 실습 과제 모음', link: '/guide/00-common/10-practice' },
             { text: '바로 쓰는 프롬프트 모음', link: '/guide/00-common/prompt-library' },
             { text: '이해도 확인 시험', link: '/guide/00-common/certificate' },
+            { text: 'AI 지식 레벨 시험', link: '/guide/00-common/level-test' },
           ],
         },
       ],

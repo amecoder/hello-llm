@@ -174,3 +174,9 @@ test('buildBadgeSvg shows level, both scores, date and an escaped name', () => {
   assert.ok(!svg.includes('<b>'))
   assert.ok(svg.includes('공식 자격증이 아닙니다'))
 })
+
+test('a long name is shrunk so it stays inside the guide exam badge too', () => {
+  const svg = buildBadgeSvg({ name: '가'.repeat(20), level: 'beginner', ...score(12, 5), date: 'd' })
+  const size = Number(svg.match(/font-size="(\d+)" font-weight="700" fill="#111827">/)![1])
+  assert.ok(size * 20 <= 430, `font ${size}`)
+})

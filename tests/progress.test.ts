@@ -4,6 +4,7 @@ import { readdirSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import {
   EMPTY_PROGRESS,
+  markPassed,
   parseProgress,
   serializeProgress,
   setNickname,
@@ -23,11 +24,11 @@ test('a missing or broken record starts empty instead of throwing', () => {
 
 test('a saved record comes back, dropping chapters that no longer exist and duplicates', () => {
   const raw = JSON.stringify({ nickname: '하늘', read: [3, 1, 3, 42, 'x'] })
-  assert.deepEqual(parseProgress(raw, CH), { nickname: '하늘', read: [1, 3] })
+  assert.deepEqual(parseProgress(raw, CH), { nickname: '하늘', read: [1, 3], passed: [] })
 })
 
 test('round trip through storage keeps the record', () => {
-  const p = { nickname: '하늘', read: [2, 5] }
+  const p = { nickname: '하늘', read: [2, 5], passed: ['basic' as const] }
   assert.deepEqual(parseProgress(serializeProgress(p), CH), p)
 })
 
@@ -77,8 +78,8 @@ test('every chapter ends with one "read" button for its own number, just before 
 })
 
 test('a broken chapter list does not throw away a good nickname, and control characters are dropped', () => {
-  assert.deepEqual(parseProgress('{"nickname":"하늘","read":"x"}', CH), { nickname: '하늘', read: [] })
-  assert.deepEqual(parseProgress('{"nickname":"하\\u0007늘","read":[]}', CH), { nickname: '하늘', read: [] })
+  assert.deepEqual(parseProgress('{"nickname":"하늘","read":"x"}', CH), { nickname: '하늘', read: [], passed: [] })
+  assert.deepEqual(parseProgress('{"nickname":"하\\u0007늘","read":[]}', CH), { nickname: '하늘', read: [], passed: [] })
 })
 
 test('the intro page and the table of contents both show the progress box', () => {
@@ -122,8 +123,18 @@ test('saved progress is written to and cleared from localStorage', async () => {
   const store = await import(`../.vitepress/theme/progress-store.ts?open`)
   store.loadProgress()
   store.saveProgress(setNickname(store.progress.value, '하늘'))
-  assert.equal(data.get('hello-llm:progress'), '{"nickname":"하늘","read":[]}')
+  assert.equal(data.get('hello-llm:progress'), '{"nickname":"하늘","read":[],"passed":[]}')
   store.clearProgress()
   assert.equal(data.has('hello-llm:progress'), false)
   assert.deepEqual(store.progress.value, EMPTY_PROGRESS)
+})
+
+test('passed level tests are kept, cleaned of unknown levels, and can be added once', () => {
+  const raw = JSON.stringify({ nickname: '', read: [], passed: ['basic', 'nope', 'basic', 'advanced'] })
+  assert.deepEqual(parseProgress(raw, CH).passed, ['basic', 'advanced'])
+  // records saved before level tests existed have no passed list
+  assert.deepEqual(parseProgress('{"nickname":"하늘","read":[1]}', CH).passed, [])
+  const once = markPassed(markPassed(EMPTY_PROGRESS, 'basic'), 'basic')
+  assert.deepEqual(once.passed, ['basic'])
+  assert.deepEqual(EMPTY_PROGRESS.passed, [])
 })
