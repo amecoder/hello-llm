@@ -1,6 +1,6 @@
 # HANDOFF.md
 
-## Current State: 공통 가이드 1~9장 공개 + 확인 퀴즈 49개·LLM 이해 인증 시험(배지)·바로 쓰는 프롬프트 모음 32개 · 모음은 마크다운 형식 · 첫 화면은 소개 페이지, 장별 카드는 /guide/ (2026-10-23) — 다음은 내용 추가(10장 실습 과제 등)
+## Current State: 공통 가이드 1~9장 공개 + 확인 퀴즈 49개·LLM 이해 인증 시험(배지)·바로 쓰는 프롬프트 모음 32개 · 모음은 마크다운 형식 · 첫 화면은 소개 페이지, 장별 카드는 /guide/ · 읽은 장 진행 현황·닉네임 (2026-10-23) — 다음은 내용 추가(10장 실습 과제 등)
 
 - 저장소: https://github.com/amecoder/hello-llm (public, 기본 브랜치 `main`)
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
@@ -40,6 +40,8 @@
 - [x] 바로 쓰는 프롬프트 모음(`prompt-library.md`, 1~9장 프롬프트 32개·쓰임새별 8절) + 한글 앵커 수정(`.vitepress/slugify.ts` — 기본 slugify 의 NFKD 가 한글을 자모로 쪼개 `#한글` 링크가 절로 안 가던 문제) — PR #18, squash `2526f0c`. 본문 프롬프트를 고치면 모음도 고친다(CLAUDE.md 6번, 테스트가 검사)
 - [x] 프롬프트 모음의 XML 예시 7개를 마크다운 제목(`## 상황/자료/할 일/답의 모양`) + 구분선 `---` 방식으로 교체 — 7장은 XML 설명 유지하고 마크다운 짝 예시 추가, 8·9장 예시는 마크다운으로. 모음에 XML 태그가 있으면 테스트 실패 — PR #19, squash `d664280`
 - [x] 첫 화면을 소개 페이지(`index.md`)로, 기존 홈의 장별 카드·로드맵은 「전체 목차」(`guide/index.md`, `/guide/`)로 이동. 카드와 사이드바가 같은 순서인지 `tests/site-pages.test.ts` 가 검사 — PR #20, squash `29b4b5e`
+- [x] 읽은 장 진행 현황(장 끝 「다 읽음」 `ChapterDone`, 첫 화면·목차 `MyProgress` — 닉네임·진행 현황·초기화), 시험 배지 이름 자동 채움, 모든 페이지 맨 위 스크롤 진행 막대(`ScrollProgress`). 저장은 localStorage `hello-llm:progress` 한 곳뿐(fingerprint·서버 저장은 「모으지 않음」 약속과 충돌해 사용자와 합의해 제외) — PR #21, squash `0d48b51`
+- [x] AI·LLM 인증 체계 리서치 리포트(`docs/reports/2026-10-23_LLM-인증-체계-리서치.md`) — 입문·중급·상급 배지 체계 제안, 시험 전용 문제 은행·브론즈 60% 검토, 「인증」 명칭의 자격기본법 확인 필요 — PR #22, squash `2a5178b`
 
 ## Key Decisions
 - 가이드 폴더는 단계 번호 방식 (`00-common` → `10/11` → `20/21` → `30-ai-sdlc`)
@@ -52,6 +54,8 @@
 - README.md 생성
 
 ## 주의
+- 「인증 시험」·배지를 탈잉 판매 혜택으로 안내 중 — 자격기본법상 민간자격 등록 대상인지 미확인(리포트 6절). 명칭 변경 여부는 사용자 결정 대기
+- 진행 현황 저장 키는 `hello-llm:progress`(localStorage). 구조를 바꾸면 `parseProgress` 가 옛 값을 걸러 내는지 테스트로 확인
 - 탈잉 판매용 PDF(「Hello AI - LLM을 이해하고 잘 사용하는 법」, 지은이 MOMO)는 저장소 밖 `~/문서/hello-llm-ebook/` 에 있고 만드는 스크립트는 세션 scratchpad 에만 있었다 — 사용자가 PDF 작업은 더 안 한다고 함(2026-10-22). 구매 안내문의 혜택 링크는 사이트 공개 주소라 저장소·사이트 주소를 바꾸면 안내문도 바꿔야 한다
 - `markdown.toc`·`markdown.headers` 를 켜면 `slugify.ts` 를 거기에도 넘겨야 한글 id 가 맞는다
 - PR 머지 명령을 사용자가 중단해도 GitHub 쪽에서는 이미 머지됐을 수 있다 — 중단 뒤에는 `gh pr view <번호> --json mergedAt` 으로 먼저 확인(PR #14 때 머지 후 브랜치에 올린 커밋이 main 에서 빠져 PR #15 로 옮김)
