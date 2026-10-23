@@ -12,6 +12,7 @@ export const CHAPTERS: Record<number, { title: string; link: string }> = {
   7: { title: '7장. 구조화 프롬프트', link: '/guide/00-common/07-structured-prompts' },
   8: { title: '8장. 메타 프롬프팅', link: '/guide/00-common/08-meta-prompting' },
   9: { title: '9장. 안전하게 쓰기', link: '/guide/00-common/09-safety' },
+  10: { title: '10장. 실습 과제 모음', link: '/guide/00-common/10-practice' },
 }
 
 export const QUESTIONS: readonly Question[] = [
@@ -663,5 +664,32 @@ export const QUESTIONS: readonly Question[] = [
     ],
     answer: 1,
     explain: 'AI가 읽는 자료 속에 몰래 지시를 숨겨 두는 이런 공격을 프롬프트 인젝션이라고 합니다. 자료는 구분선으로 감싸고, 답이 한쪽으로 쏠리면 원문을 직접 확인합니다.',
+  },
+  // chapter 10
+  {
+    id: 'ch10-how',
+    chapter: 10,
+    prompt: '실습 과제의 예시 프롬프트를 쓸 때, 가장 많이 얻어 가는 방법은?',
+    choices: [
+      '예시를 한 글자도 바꾸지 않고 그대로 복사해 보낸다',
+      '빈칸을 내가 실제로 해야 하는 일로 바꿔서 보낸다',
+      '여러 AI 서비스에 같은 예시를 한꺼번에 보내 본다',
+      '예시는 읽기만 하고 AI에게는 보내지 않고 넘어간다',
+    ],
+    answer: 1,
+    explain: '예시 그대로 보내도 되지만, 내가 실제로 할 일로 바꿀수록 내 일에 바로 쓸 수 있는 연습이 됩니다.',
+  },
+  {
+    id: 'ch10-check',
+    chapter: 10,
+    prompt: '이름과 금액을 [ ] 빈칸으로 비워 둔 문서 초안을 AI에게 받았습니다. 빈칸은 어디에서 채우는 것이 좋을까요?',
+    choices: [
+      'AI 대화창에 실제 이름과 금액을 알려 주고 채워 달라고 한다',
+      '다른 AI 서비스에 초안을 붙여 넣고 빈칸을 채워 달라고 한다',
+      '내 컴퓨터의 문서 파일에서 직접 채운다',
+      '빈칸은 그대로 둔 채 상대에게 보내도 된다',
+    ],
+    answer: 2,
+    explain: '빈칸을 내 컴퓨터에서 채우면 실제 이름·금액을 AI에 보내지 않고도 문서를 완성할 수 있습니다.',
   },
 ]

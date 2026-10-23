@@ -50,6 +50,10 @@ features:
     details: 환각 확인, 개인정보 가리기, 저작권, 숨은 지시 막기 — 보내기 전과 받은 후 체크리스트
     link: /guide/00-common/09-safety
     linkText: 읽기
+  - title: 10장. 실습 과제 모음
+    details: 1~9장에서 배운 것을 내 일에 직접 써 보는 과제 9개 — 과제마다 잘 됐는지 확인하는 점검표
+    link: /guide/00-common/10-practice
+    linkText: 해 보기
   - title: 바로 쓰는 프롬프트 모음
     details: 메일·요약·이력서·회의록·계약 준비 등 1~9장의 프롬프트 32개를 쓰임새별로 — 복사해서 빈칸만 바꾸면 끝
     link: /guide/00-common/prompt-library
