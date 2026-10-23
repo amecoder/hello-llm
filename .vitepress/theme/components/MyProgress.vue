@@ -41,7 +41,7 @@ async function editName() {
 }
 
 async function clearAll() {
-  if (!window.confirm('닉네임과 읽음 표시를 모두 지울까요? 되돌릴 수 없습니다.')) return
+  if (!window.confirm('닉네임·읽음 표시·레벨 시험 합격 기록을 모두 지울까요? 되돌릴 수 없습니다.')) return
   clearProgress()
   draft.value = ''
   editing.value = false
@@ -87,7 +87,7 @@ async function clearAll() {
       </div>
 
       <p class="mp-note">
-        닉네임과 읽음 표시는 <strong>이 브라우저에만</strong> 저장되고 어디로도 보내지지 않습니다. 그래서 다른 기기나 다른 브라우저에서는 이어지지 않습니다.
+        닉네임·읽음 표시·레벨 시험 합격 기록은 <strong>이 브라우저에만</strong> 저장되고 어디로도 보내지지 않습니다. 그래서 다른 기기나 다른 브라우저에서는 이어지지 않습니다.
         <span v-if="storageBlocked"> 지금은 브라우저가 저장을 막고 있어 페이지를 닫으면 사라집니다.</span>
       </p>
       <button type="button" class="mp-reset" @click="clearAll">진행 현황 초기화</button>

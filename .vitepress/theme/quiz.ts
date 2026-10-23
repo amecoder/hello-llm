@@ -157,6 +157,11 @@ export function normalizeName(name: string): string {
   return cleanName(name) || DEFAULT_NAME
 }
 
+// the name line has about 430px; shrink long names so they stay inside the badge
+export function nameFontSize(name: string): number {
+  return Math.min(40, Math.floor(430 / Math.max(1, [...normalizeName(name)].length)))
+}
+
 export function escapeXml(text: string): string {
   return text
     .replace(/&/g, '&amp;')
@@ -179,7 +184,7 @@ export function buildBadgeSvg({ name, level, correct, total, situationCorrect, s
 <text x="190" y="275" ${font} font-size="44" font-weight="800" fill="#ffffff" text-anchor="middle">${info.label}</text>
 <text x="350" y="110" ${font} font-size="22" fill="#6b7280">hello-ai · 1단계 공통 가이드</text>
 <text x="350" y="160" ${font} font-size="34" font-weight="800" fill="#111827">이해도 확인 · ${info.label} 레벨</text>
-<text x="350" y="235" ${font} font-size="40" font-weight="700" fill="#111827">${escapeXml(normalizeName(name))}</text>
+<text x="350" y="235" ${font} font-size="${nameFontSize(name)}" font-weight="700" fill="#111827">${escapeXml(normalizeName(name))}</text>
 <text x="350" y="290" ${font} font-size="24" fill="#374151">점수 ${correct} / ${total} · 상황 판단 ${situationCorrect} / ${situationTotal}</text>
 <text x="350" y="330" ${font} font-size="22" fill="#6b7280">${escapeXml(date)}</text>
 <text x="350" y="410" ${font} font-size="16" fill="#9ca3af">스스로 실력을 확인하는 학습 배지이며 공식 자격증이 아닙니다.</text>

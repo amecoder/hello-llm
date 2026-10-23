@@ -8,6 +8,7 @@ import CertExam from './components/CertExam.vue'
 import ChapterDone from './components/ChapterDone.vue'
 import MyProgress from './components/MyProgress.vue'
 import ScrollProgress from './components/ScrollProgress.vue'
+import LevelTest from './components/LevelTest.vue'
 import './custom.css'
 
 export default {
@@ -20,5 +21,6 @@ export default {
     app.component('CertExam', CertExam)
     app.component('ChapterDone', ChapterDone)
     app.component('MyProgress', MyProgress)
+    app.component('LevelTest', LevelTest)
   },
 } satisfies Theme
