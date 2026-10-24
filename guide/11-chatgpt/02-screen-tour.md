@@ -38,7 +38,7 @@
 | 돋보기 (「검색」) | 지난 대화를 찾는다 | [3장](03-chats.md) |
 | 「새 채팅」 | 빈 대화를 새로 시작한다 | [3장](03-chats.md) |
 | 「예약」 | 정해 둔 때에 실행되는 예약 작업을 모아 본다 | [11장](11-expert.md#정해진-때에-알아서-—-예약-작업) |
-| 「라이브러리」 | 올리거나 만든 파일을 모아 둔 곳 | [4장](04-files-images.md) |
+| 「라이브러리」 | 올리거나 만든 파일을 모아 둔 곳(「Space」로 바뀌는 중) | [4장](04-files-images.md#라이브러리-—-올린-파일을-모아-두는-곳) |
 | 「플러그인」 | ChatGPT에 기능을 더하는 확장을 찾는다 | [7장](07-projects-plugins.md) |
 | 「탐색」 | 그 밖의 기능을 둘러본다 | — |
 | 「고정된 스레드」 | 자주 여는 대화를 맨 위에 붙여 둔 목록 | [3장](03-chats.md) |
@@ -137,14 +137,21 @@ Work는 웹과 휴대폰에서 **유료 요금제(Free·Go 제외)** 에서만 �
 | 설정 메뉴 | 여기서 하는 일 | 자세히 |
 |---|---|---|
 | 「일반」 | 화면 언어 (「자동 감지」) | — |
-| 「보안 및 로그인」 | 계정 PIN(잠긴 대화를 여는 4자리 번호) | [3장](03-chats.md) |
+| 「모양」 | 밝은 화면·어두운 화면, 글자 대비, 강조 색 | — |
+| 「보안 및 로그인」 | 다중 인증, 로그인된 기기 확인, 계정 PIN(잠긴 대화를 여는 4자리 번호), 락다운 모드 | [8장](08-privacy.md#계정-지키기), [3장](03-chats.md) |
 | 「보관된 채팅」 | 보관해 둔 대화 보기 | [3장](03-chats.md) |
+| 「자녀 보호」 · 「신뢰할 수 있는 연락처」 | 청소년 자녀 계정 연결, 위기 때 알림을 받을 사람 지정 | [8장](08-privacy.md#가족과-안전을-위한-기능) |
 | 「저장 공간」 | 올린 파일이 차지한 용량 | [4장](04-files-images.md) |
 | 「개인 맞춤 설정」 | 메모리, 사용자 지정 지침, 말투 | [5장](05-memory.md) |
 | 「음성 스타일」 | 음성 대화의 목소리 | [9장](09-voice.md) |
+| 「사용량」 | 남은 사용 한도, 크레딧 | [1장](01-getting-started.md#유료로-바꾸기-전에-알아-둘-것) |
+| 「플러그인」 | 연결한 앱과 기본 권한 | [7장](07-projects-plugins.md#연결한-앱의-권한-정하기) |
 | 「데이터 관리」 | 학습 허용, 공유 링크, 데이터 내보내기 | [8장](08-privacy.md) |
 
 > 도움말 문서에는 「데이터 제어」라고 적힌 곳이 있지만, 실제 화면 이름은 **「데이터 관리」** 입니다.
+
+화면이 영어로 나오면 「Settings」 → 「General」 → 「Language」에서 한국어를 고르면 됩니다. 언어는 **로그인한 상태에서만** 바꿀 수 있습니다.[^lang]
+「모양」에서 고른 어두운 화면은 **기기마다 따로** 정합니다. 웹에서 바꿔도 휴대폰 앱은 그대로이니 앱에서 한 번 더 고르세요.[^appearance]
 
 <Quiz id="ch102-settings" />
 
@@ -181,3 +188,5 @@ Work는 웹과 휴대폰에서 **유료 요금제(Free·Go 제외)** 에서만 �
 [^paste]: OpenAI 도움말, 「ChatGPT release notes」 2026-08-04 항목. "If you paste more than 10k characters…". https://help.openai.com/en/articles/6825453 (확인일 2026-10-23)
 [^levels]: OpenAI 도움말, 모델 메뉴와 생각 수준 안내 문서(문서 제목에 현재 모델 이름이 들어 있어 이 가이드에는 적지 않음). 표 "Plus — Included / Not included / Not included" / "Asking ChatGPT to "think harder"… won't automatically switch". https://help.openai.com/en/articles/20001354 (확인일 2026-10-23)
 [^go-think]: OpenAI 도움말, 「What is ChatGPT Go?」. "On mobile, select Think harder from the + menu." https://help.openai.com/en/articles/11989085 (확인일 2026-10-23)
+[^lang]: OpenAI 도움말, 「How to change your language setting in ChatGPT」. "you can only update the ChatGPT language setting if you are logged in." https://help.openai.com/en/articles/8357869 (확인일 2026-10-24)
+[^appearance]: OpenAI 도움말, 「Updating your visual experience」. "changing the appearance on the web doesn't automatically change the appearance in the mobile app." 설정 메뉴 이름은 2026-10-24 웹 설정 화면에서 확인. https://help.openai.com/en/articles/11958281 (확인일 2026-10-24)

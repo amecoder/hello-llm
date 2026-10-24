@@ -54,6 +54,8 @@ OpenAI 도움말도 같은 기준을 제시합니다. **주고받는 대화**나
 
 답이 너무 길면 말로 바로 "더 짧게 말해 줘"라고 하면 됩니다. 글로 대화할 때 고쳐 달라고 하던 방식([1단계 6장](../00-common/06-conversation.md))과 같습니다.
 
+**운전 중에는 CarPlay**(카플레이, 아이폰을 차 화면에 연결하는 Apple 기능)**로도** 씁니다. CarPlay에서도 ChatGPT와 음성으로 대화할 수 있습니다. 모든 요금제, 전 세계에서 되고, iOS 26.4 이상의 아이폰이 필요합니다. 다만 **지도·차량 정보·현재 위치는 보지 못하므로** 길 안내 앱 대신 쓸 수는 없습니다.[^carplay]
+
 <Quiz id="ch109-start" />
 
 ## 음성 방식과 음성 스타일
@@ -110,6 +112,7 @@ OpenAI 도움말은 음성 대화 방식을 세 가지로 나눕니다.[^voice]
 |---|---|
 | 라이브·고급 | 음성 녹음 조각이 **대화 기록과 함께 30일** 보관된다 |
 | 표준 | 글로 받아 적은 뒤 **녹음은 지워진다** |
+| 받아쓰기(마이크) | 녹음이 **그 대화가 기록에 남아 있는 동안** 보관된다. 대화를 지우면 30일 안에 함께 지워진다(보안·법적 이유나 학습 공유에 동의한 경우 등 예외가 있다)[^dictation] |
 
 녹음 자체는 내가 따로 공유를 허락하지 않으면 학습에 쓰이지 않습니다. 도움말은 「내 오디오 녹음 포함」(Include your audio recordings) 설정을 따로 켜야 녹음이 학습에 쓰인다고 설명합니다. 다만 **받아 적은 글**은 일반 채팅처럼 「모델 개선을 위한 데이터 학습 허용」 설정을 따릅니다.[^voice] 이 설정은 [8장](08-privacy.md)에서 다뤘습니다.
 
@@ -120,6 +123,10 @@ OpenAI 도움말은 음성 대화 방식을 세 가지로 나눕니다.[^voice]
 - 지하철·카페·사무실에서는 이어폰을 쓰거나, 음성 대화 대신 **받아쓰기**로 조용히 입력합니다.
 - 이름·전화번호·주소·병원 기록처럼 [1단계 9장](../00-common/09-safety.md#넣지-말아야-할-것)에서 본 **넣지 말아야 할 정보는 소리 내어 말하지도 않습니다.** 글로 칠 때보다 무심코 말해 버리기 쉽습니다.
 - 다른 사람이 함께 있는 자리에서 그 사람의 목소리나 대화가 같이 녹음되지 않게 합니다.
+- 음성 대화에서는 연결한 앱([7장](07-projects-plugins.md#연결한-앱의-권한-정하기))이 안 될 수 있습니다. 안 되면 같은 부탁을 글로 입력해 봅니다.[^apps-voice]
+
+**회의를 받아 적게 할 때는 참석자 모두에게 먼저 알리고 동의를 받습니다.** Mac 컴퓨터 앱의 **Meetings 플러그인**(Pro·Business 요금제, 시험판)은 회의를 받아 적어 요약과 할 일을 만들어 주는데, 도움말은 시작 전에 모든 참석자에게 알리고 동의를 받으라고 안내합니다. 앱이 띄우는 동의 안내는 나에게만 보이고 다른 참석자에게는 가지 않습니다. 노트가 완성되면 녹음은 지워져 다시 들을 수 없습니다.[^meetings]
+
 
 <Quiz id="ch109-privacy" />
 
@@ -145,7 +152,7 @@ OpenAI 도움말은 음성 대화 방식을 세 가지로 나눕니다.[^voice]
 - 파란 물결 버튼은 **음성 대화**: 말로 주고받는다. 한 번에 하나만 할 수 있다.
 - 방식은 라이브·고급·표준 세 가지이고, 도움말은 설정의 음성 항목에서 고른다고 안내한다(웹 화면의 항목 이름은 「음성 스타일」). 영상·화면 공유는 휴대폰 앱의 고급 방식에서만 된다.
 - 사용 한도는 24시간 기준이고 요금제마다 다르며 자주 바뀐다.
-- 라이브·고급의 녹음은 30일 보관된다. 받아 적은 글은 학습 설정을 따른다. 공공장소에서는 받아쓰기나 이어폰을 쓰고, 개인정보는 말하지 않는다.
+- 라이브·고급의 녹음은 30일 보관되고, 받아쓰기 녹음은 대화가 남아 있는 동안 보관된다. 회의를 받아 적게 할 때는 모두의 동의를 먼저 받는다. 받아 적은 글은 학습 설정을 따른다. 공공장소에서는 받아쓰기나 이어폰을 쓰고, 개인정보는 말하지 않는다.
 
 ## 용어 정리
 
@@ -157,6 +164,7 @@ OpenAI 도움말은 음성 대화 방식을 세 가지로 나눕니다.[^voice]
 | Advanced | 어드밴스드 (고급) | 영상·화면 공유를 할 수 있는 음성 방식 |
 | Standard | 스탠더드 (표준) | 받아 적은 뒤 차례로 답하는 음성 방식 |
 | Transcript | 트랜스크립트 (받아 적은 글) | 말한 내용을 글로 옮긴 기록 |
+| CarPlay | 카플레이 | 아이폰을 차 화면에 연결해 쓰는 Apple 기능 |
 
 <ChapterDone :chapter="109" />
 
@@ -165,3 +173,7 @@ OpenAI 도움말은 음성 대화 방식을 세 가지로 나눕니다.[^voice]
 ---
 
 [^voice]: OpenAI 도움말, 「ChatGPT Voice」. 라이브·고급·표준 3가지 방식과 설정의 음성 항목에서 선택, 라이브는 영상·화면 공유 미지원(모바일 고급만), 한국어 목소리 햇살·한울, 24시간 기준 사용 한도(Free 제한적·Go 3시간·Plus 3시간·Pro 15시간 또는 무제한), 음성 아이콘 위치, 라이브·고급 오디오 클립 30일 보관·표준은 받아쓰기 후 삭제, 오디오는 따로 공유를 선택해야 학습에 사용, 음성 대화는 한 번에 1개, 받아쓰기(Dictation)와의 차이. https://help.openai.com/en/articles/20001274 (확인일 2026-10-23)
+[^dictation]: OpenAI 도움말, 「Voice Dictation - FAQ」. "Audio from dictation will be retained for as long as the chat is part of your chat history." / "When you delete the chat, we’ll also delete the associated audio clip within 30 days". https://help.openai.com/en/articles/12168547 (확인일 2026-10-24)
+[^apps-voice]: OpenAI 도움말, 「Troubleshooting plugins and apps in ChatGPT」. "If an app is unavailable in voice, try a supported text conversation." https://help.openai.com/en/articles/20001497 (확인일 2026-10-24)
+[^meetings]: OpenAI 도움말, 「The Meetings plugin in ChatGPT」. "Meetings is available in beta in the ChatGPT desktop app on macOS for all Pro plans and all Business plans." / "get everyone’s consent before you start." / "The consent reminder in your app is visible to you." / "Once your notes are ready, the audio is deleted from your Mac and OpenAI’s servers and can’t be replayed." https://help.openai.com/en/articles/20001546 (확인일 2026-10-24)
+[^carplay]: OpenAI 도움말, 「Using ChatGPT in CarPlay」. "ChatGPT is available in Apple CarPlay on supported iPhone models running iOS 26.4 or later." / "ChatGPT in CarPlay is available globally on all ChatGPT plans." / "It cannot access maps, vehicle information, or live location." https://help.openai.com/en/articles/20001153 (확인일 2026-10-24)
