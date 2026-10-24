@@ -49,6 +49,7 @@
 | 오늘 날씨·영업시간 같은 빠른 사실 | 웹 검색 | [6장 「웹 검색」](06-search.md#웹-검색-—-chatgpt가-인터넷을-찾아보게-하기) |
 | 여러 자료를 비교한 긴 보고서 | 심층 리서치 | [6장 「심층 리서치」](06-search.md#심층-리서치-—-보고서를-맡기기) |
 | 문서·표·발표 자료 같은 완성 파일 | Work(유료 요금제) | [7장 「Chat과 Work의 차이」](07-projects-plugins.md#chat과-work의-차이) |
+| 이미 있는 Word·PowerPoint 파일 고치기 | Microsoft 추가 기능 「ChatGPT」(무료 포함) | [이 장 아래](#word·powerpoint-안에서-쓰기) |
 | 어려운 계산·여러 조건이 얽힌 계획 | 추론 수준 올리기 | [2장 「추론 수준과 생각하기」](02-screen-tour.md#추론-수준과-생각하기-—-얼마나-깊이-생각할까) |
 | 표·숫자 분석과 차트 | 파일 올리고 데이터 분석 | [이 장 아래](#표와-숫자-맡기기-—-데이터-분석) |
 | 새로운 것 배우기 | 공부 모드 | [이 장 아래](#배우는-데-쓰기-—-공부-모드) |
@@ -56,6 +57,19 @@
 어떤 기능이 되는지 궁금할 때는 "너 이거 할 수 있어?"라고 묻기보다 **바로 시켜 보는** 편이 낫습니다. ChatGPT는 자기 시스템이 지금 어떻게 돌아가는지 볼 수 없어서, 물어보면 틀리게 답할 수 있기 때문입니다.[^ask]
 ```
 첨부한 영수증 사진 다섯 장에서 날짜·가게 이름·금액을 뽑아 표로 만들어 줘.
+```
+
+### Word·PowerPoint 안에서 쓰기
+
+Word·Excel·PowerPoint에는 **ChatGPT 추가 기능**(add-in, 프로그램 안에 붙여 쓰는 작은 기능)이 하나 있습니다. Microsoft 마켓플레이스에서 「ChatGPT」를 설치하면 문서 옆 창에서 바로 고칠 수 있습니다.[^word][^ppt]
+
+- Word용은 **무료(Free)를 포함한 모든 요금제**에서 쓸 수 있고, PowerPoint용은 Free·Go에서 제한적으로 쓸 수 있습니다. 회사 계정은 관리자가 허용해야 보입니다.[^word][^ppt]
+- 추가 기능 안의 대화는 ChatGPT 대화 기록과 **따로**이고, 메모리와 스킬도 넘어오지 않습니다.[^word]
+- **크게 고치기 전에 사본을 저장**하고, 큰 수정은 **계획부터** 보여 달라고 합니다. 두 가지 모두 도움말이 권하는 방법입니다.[^word][^ppt]
+
+```
+이 발표 자료의 3~5번 슬라이드를 한 장으로 줄이고 싶어. 바로 고치지 말고, 어떻게 합칠지 계획부터 보여 줘.
+숫자와 표는 그대로 두고, 제목은 15자 안으로 써 줘.
 ```
 
 <Quiz id="ch111-tools" />
@@ -95,6 +109,14 @@
 매번 넣을 정보: 그 주의 업무 메모.
 ```
 
+지침을 쓸 때는 OpenAI가 맞춤형 GPT 지침에 권하는 요령이 프로젝트 지침에도 통합니다.[^gpt-make] 원문은 맞춤형 GPT용이라, 프로젝트 지침에 옮겨 쓰는 것은 이 가이드의 해석입니다.
+
+| 요령 | 예 |
+|---|---|
+| "하지 마"를 늘어놓기보다 "이렇게 해 줘"를 구체적으로 | "길게 쓰지 마" 대신 "세 줄로 써 줘" |
+| 참고 파일은 **자료**, 규칙·말투는 **지침**에 | 회사 양식은 파일로, "표는 세 칸"은 지침으로 |
+| 결과가 아쉬우면 기능을 더하기 전에 지침을 다듬고 좋은 예를 하나 넣기 | "이런 메모가 오면 → 이렇게 정리" 예시 한 쌍 |
+
 **스킬**은 옆 메뉴 「플러그인」 → 「스킬」 탭 → 「만들기」에서 「채팅으로 만들기」 등으로 만듭니다.[^skills] 다만 도움말은 스킬을 **Business·Enterprise·Healthcare·Edu 요금제**에서 쓸 수 있다고 적고 있습니다. 개인 요금제 화면에도 「스킬」 탭이 보일 수 있지만, 쓸 수 있는지는 내 화면에서 직접 확인하세요. 남이 만든 스킬 파일을 올릴 때는 만든 곳을 믿을 수 있는지 먼저 봅니다. 자동 검사가 있어도 내 확인을 대신하지 않습니다.[^skills]
 
 <Quiz id="ch111-templates" />
@@ -116,7 +138,8 @@
 조심할 점도 있습니다.[^tasks]
 - **프로젝트 안에서 만든 작업은 그 프로젝트의 파일을 읽지 못합니다.** 파일 내용이 필요하면 지시문에 직접 적습니다.
 - 음성 대화·맞춤형 GPT·[잠긴 대화](03-chats.md#남이-못-열게-—-잠긴-대화)에서는 예약 작업을 만들 수 없습니다.
-- 작업을 **공유 링크**로 나누면 받는 사람에게 지시문이 그대로 보입니다. 건강·금융 정보나 비밀번호를 넣지 마세요.
+- 작업을 **공유 링크**로 나누면 받는 사람에게 지시문이 그대로 보입니다. 건강·금융 정보나 비밀번호를 넣지 마세요. 공유해도 내가 연결해 둔 앱(예: Slack)의 연결이나 권한은 넘어가지 않습니다.[^slack]
+- 연결한 앱으로 메일을 보내거나 파일을 바꾸는 작업은 **내가 승인할 때까지 멈춰** 있을 수 있습니다. 결과가 안 오면 옆 메뉴 「예약」에서 승인 대기인지 봅니다.[^apps-trouble]
 
 <Quiz id="ch111-scheduled" />
 
@@ -183,6 +206,8 @@ OpenAI 도움말 여러 문서에 "쓰기 전에 확인하라"는 문장이 있�
 | 심층 리서치 보고서 | 인용과 출처 링크를 직접 열어 본다([6장 「출처 확인하는 습관」](06-search.md#출처-확인하는-습관))[^deep] |
 | Work가 만든 파일 | 내용·레이아웃·수식·차트를 공유하기 전에 본다[^docs] |
 | Work가 웹사이트에서 한 일 | 결과와 출처를 확인하고, 중요한 행동은 승인 화면에서 직접 누른다[^work] |
+| 연결한 앱에서 찾은 파일 | 파일 **이름**을 찾았다고 **내용**까지 읽은 것은 아니다. 중요한 파일은 링크를 직접 붙여 읽게 한다[^drive] |
+| 연결한 앱으로 보낸 메일·메시지 | 작업이 멈추거나 결과가 애매하면, 다시 시키기 전에 보낸편지함과 받는 곳을 직접 확인한다. 같은 메일이 두 번 나갈 수 있다[^apps-trouble] |
 
 **링크도 조심합니다.** ChatGPT가 만든 링크는 제3자가 거짓 정보나 나쁜 지시를 끼워 넣었을 수 있습니다.[^links] 숨은 지시의 원리는 [1단계 9장 「4. 숨은 지시」](../00-common/09-safety.md#_4-숨은-지시-—-프롬프트-인젝션)에 있습니다. 내가 모르는 분야일수록 마지막에 이렇게 덧붙입니다.
 ```
@@ -210,7 +235,8 @@ OpenAI 도움말 여러 문서에 "쓰기 전에 확인하라"는 문장이 있�
 - 전문가는 일을 맡기듯 말한다. 결과·자료·남길 것·검토 기준·모양 다섯 줄을 적고, 결과물마다 정해 둔 곳을 확인한 뒤에 쓴다.
 - 빠른 사실은 검색, 깊은 조사는 심층 리서치, 완성 파일은 Work, 어려운 생각은 추론 수준. 기능이 되는지는 물어보지 말고 시켜 본다.
 - 잘 된 답은 「프로젝트 소스에 추가」로 쌓고, 반복하는 일은 지침 → 템플릿(Work) → 스킬(도움말 기준 회사·학교 요금제)로 틀을 만든다.
-- 예약 작업은 대화에서 부탁해 만들고 옆 메뉴 「예약」에서 관리한다. 프로젝트 안 작업은 프로젝트 파일을 못 읽는다.
+- Word·PowerPoint의 ChatGPT 추가 기능은 무료로도 쓸 수 있다. 크게 고치기 전에 사본을 저장하고 계획부터 받는다.
+- 예약 작업은 대화에서 부탁해 만들고 옆 메뉴 「예약」에서 관리한다. 프로젝트 안 작업은 프로젝트 파일을 못 읽고, 앱으로 바꾸는 작업은 승인을 기다리며 멈출 수 있다.
 - 데이터 분석은 정리된 파일을 올리고 먼저 데이터 문제를 확인한 뒤 방법을 지정한다. 공부 모드는 `@study` 로 켜고 모든 요금제에서 쓴다(프로젝트·임시 채팅 제외).
 
 ## 용어 정리
@@ -225,6 +251,7 @@ OpenAI 도움말 여러 문서에 "쓰기 전에 확인하라"는 문장이 있�
 | Characteristics | 캐릭터리스틱스 (특성) | 따뜻함·이모지 등 답의 분위기를 더·덜 조절하는 설정 |
 | Writing block | 라이팅 블록 (글쓰기 블록) | 답 속에서 바로 고칠 수 있는 초안 글 상자 |
 | OpenAI Academy | 오픈에이아이 아카데미 | OpenAI가 만든 무료 온라인 AI 강좌 |
+| Add-in | 애드인 (추가 기능) | Word·PowerPoint 같은 프로그램 안에 붙여 쓰는 작은 기능 |
 
 <ChapterDone :chapter="111" />
 
@@ -248,3 +275,9 @@ OpenAI 도움말 여러 문서에 "쓰기 전에 확인하라"는 문장이 있�
 [^blocks]: OpenAI 도움말, 「Working with writing blocks and code blocks in ChatGPT」. https://help.openai.com/en/articles/20001246 (확인일 2026-10-24)
 [^links]: OpenAI 도움말, 「ChatGPT generated links」. https://help.openai.com/en/articles/10984597 (확인일 2026-10-24)
 [^academy]: OpenAI 도움말, 「OpenAI Academy courses」. "These badges and certificates of completion are not certifications" https://help.openai.com/en/articles/20001270 (확인일 2026-10-24)
+[^word]: OpenAI 도움말, 「ChatGPT for Word」. "ChatGPT for Word is available on all ChatGPT plans, including Free." / "Word, Excel, and PowerPoint use the same ChatGPT Microsoft add-in." / "ChatGPT memory and skills do not carry over to the add-in." / "Save a copy of important work before making substantial changes." https://help.openai.com/en/articles/20001526 (확인일 2026-10-24)
+[^ppt]: OpenAI 도움말, 「ChatGPT for PowerPoint」. "Free and Go include limited usage access." / "Ask for a plan first when you are making larger edits." / "For important work, duplicate the file first so you can revert if needed." https://help.openai.com/en/articles/20001242 (확인일 2026-10-24)
+[^gpt-make]: OpenAI 도움말, 「Creating and editing GPTs」. "Prefer positive, concrete instructions (“Do X”) over long lists of prohibitions (“Don’t do Y”) when possible." / "Use knowledge for reference material, not rules or behavior." / "Before adding more tools, tighten instructions and add examples." https://help.openai.com/en/articles/8554397 (확인일 2026-10-24)
+[^slack]: OpenAI 도움말, 「Using Slack in ChatGPT」. "A shared task link does not transfer your Slack connection, credentials, channel access, or message history." https://help.openai.com/en/articles/12525822 (확인일 2026-10-24)
+[^apps-trouble]: OpenAI 도움말, 「Troubleshooting plugins and apps in ChatGPT」. "If approval is required, the task pauses until you review it." / "Before resending an email or message, check the intended account’s sent messages and the destination." https://help.openai.com/en/articles/20001497 (확인일 2026-10-24)
+[^drive]: OpenAI 도움말, 「Google Drive app and setup in ChatGPT」. "Finding a filename or file details does not confirm that ChatGPT retrieved the file’s contents." https://help.openai.com/en/articles/10929079 (확인일 2026-10-24)

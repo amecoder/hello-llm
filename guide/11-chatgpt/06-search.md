@@ -68,6 +68,31 @@ ChatGPT는 인터넷 주소(IP 주소, 인터넷에 연결된 기기마다 붙�
 
 <Quiz id="ch106-location" />
 
+## 쇼핑할 때 — 비교는 맡기고 가격은 직접 확인
+
+물건을 사려고 물으면 답에 **상품 카드**(product card, 사진·가격·판매처가 붙은 상품 목록)가 나올 수 있습니다. 상품을 하나 이상 고르고 「Research」를 누르면 **쇼핑 리서치**(shopping research)가 시작됩니다.
+ChatGPT가 좋아하는 브랜드, 크기, 무엇을 더 중요하게 보는지 되묻고, 몇 분 뒤 고를 때 볼 점·추천 상품·비교 표가 담긴 **구매 가이드**(buyer’s guide)를 줍니다.[^shop-research]
+이 기능이 한국 화면에서도 나오는지는 도움말에 적혀 있지 않고, 이 가이드를 쓸 때 확인하지 못했습니다.
+
+```
+출퇴근용 백팩을 찾고 있어. 예산은 10만 원, 15인치 노트북이 들어가야 하고 비 오는 날에도 쓸 거야.
+세 개만 골라 비교표로 보여 주고, 각 판매처 가격은 내가 직접 확인할 수 있게 링크를 붙여 줘.
+```
+
+알아 둘 점입니다.
+
+| 알아 둘 것 | 도움말 내용 |
+|---|---|
+| 광고인가 | 상품 결과는 ChatGPT가 따로 고른 것이고 **광고가 아니다.** 광고는 따로 표시된다[^shop] |
+| 내 대화가 가게로 가나 | 쇼핑 리서치에서 나눈 대화는 **판매처에 공유되지 않는다**[^shop-research] |
+| 처음 보이는 가격 | 맨 처음 나온 판매처의 가격이라 **가장 싼 값이 아닐 수 있다**[^shop] |
+| 「가성비」 같은 표시, 리뷰 요약 | ChatGPT가 만든 것이라 보증이 아니고, 리뷰도 OpenAI가 검증하지 않는다[^shop] |
+| 「Try on」(입어 보기) | 옷·액세서리를 내 사진에 입혀 본다. 실제 크기·핏을 보장하지 않고, 올린 사진은 다음에 쓰려고 **저장된다**(설정에서 지운다)[^shop] |
+
+**결제하기 전에는 판매처 사이트에서 최종 가격·세금·배송비, 재고와 크기, 반품 규정을 직접 확인합니다.**[^shop-research] 가격과 재고는 자주 바뀌어서 ChatGPT가 보여 준 것과 다를 수 있습니다.
+
+<Quiz id="ch106-shopping" />
+
 ## 심층 리서치 — 보고서를 맡기기
 
 **심층 리서치**(deep research)는 ChatGPT가 여러 자료를 오래 찾아 읽고, 인용이 붙은 **보고서**로 정리해 주는 기능입니다.
@@ -130,6 +155,7 @@ ChatGPT는 인터넷 주소(IP 주소, 인터넷에 연결된 기기마다 붙�
 - 최신 정보는 웹 검색으로 묻는다. ChatGPT가 알아서 검색하기도 하고, + 버튼 → 「웹 검색」으로 직접 켤 수도 있다.
 - 옆 메뉴 「검색」은 내 대화를 찾는 것이고, 인터넷 검색이 아니다.
 - 인용과 출처도 틀릴 수 있다. 링크를 열어 원문과 맞춰 본다.
+- 쇼핑 결과는 광고가 아니지만 첫 가격이 최저가는 아닐 수 있다. 결제 전에 판매처에서 가격·배송비·반품 규정을 확인한다.
 - 큰 질문은 심층 리서치로 맡긴다. 계획을 먼저 보고 고칠 수 있고, 보고서는 Markdown·Word·PDF로 받는다.
 - 심층 리서치 횟수는 요금제마다 다르니 화면에서 확인한다.
 
@@ -142,6 +168,8 @@ ChatGPT는 인터넷 주소(IP 주소, 인터넷에 연결된 기기마다 붙�
 | Source | 소스 (출처) | 답이 참고한 웹 페이지 |
 | IP Address | 아이피 주소 | 인터넷에 연결된 기기마다 붙는 번호. 대략적인 위치를 알 수 있다 |
 | Deep Research | 딥 리서치 (심층 리서치) | 여러 자료를 오래 조사해 인용이 붙은 보고서로 정리하는 기능 |
+| Buyer’s Guide | 바이어스 가이드 (구매 가이드) | 고를 때 볼 점·추천 상품·비교 표를 묶은 정리 글 |
+| Shopping Research | 쇼핑 리서치 | 고른 상품을 되묻고 비교해 구매 가이드로 정리하는 기능 |
 
 <ChapterDone :chapter="106" />
 
@@ -150,4 +178,6 @@ ChatGPT는 인터넷 주소(IP 주소, 인터넷에 연결된 기기마다 붙�
 [^search]: OpenAI 도움말, 「Searching the web with ChatGPT」. https://help.openai.com/en/articles/9237897 (확인일 2026-10-23)
 [^find]: OpenAI 도움말, 「Finding your chats, projects, and files in ChatGPT」. https://help.openai.com/en/articles/10056348 (확인일 2026-10-23)
 [^dr]: OpenAI 도움말, 「Deep research in ChatGPT」. https://help.openai.com/en/articles/10500283 (확인일 2026-10-23)
+[^shop]: OpenAI 도움말, 「Shopping with ChatGPT Search」. "Product results are selected independently by ChatGPT and are not ads" / "may not be the lowest available price" / "They’re not guarantees or verified statements" / "Reviews and ratings are not verified by OpenAI." / "Your reference photos are saved for future try-ons" / "do not guarantee fit or size". https://help.openai.com/en/articles/11128490 (확인일 2026-10-24)
+[^shop-research]: OpenAI 도움말, 「Using shopping research in ChatGPT」. "Select one or more products and choose “Research”" / "After a few minutes, shopping research returns a buyer’s guide." / "Your chats are never shared with retailers." / "Confirm the final price, taxes, fees, and shipping costs on the retailer’s website." https://help.openai.com/en/articles/12911370 (확인일 2026-10-24)
 [^screen]: ChatGPT 웹 화면(Plus 요금제, 한국어)에서 직접 확인. 입력창 + 메뉴, 「데이터 관리」, 「개인 맞춤 설정」 화면 (확인일 2026-10-23)
