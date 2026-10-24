@@ -181,7 +181,7 @@
 
 <ChapterDone :chapter="110" />
 
-다음 장: [AI 지식 레벨 시험](../00-common/level-test.md)
+다음 장: [11장. 전문가처럼 쓰기](11-expert.md)
 
 ---
 

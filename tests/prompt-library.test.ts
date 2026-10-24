@@ -7,10 +7,13 @@ import { slugify } from '../.vitepress/slugify.ts'
 const GUIDE = join(import.meta.dirname, '..', 'guide', '00-common')
 const LIBRARY = readFileSync(join(GUIDE, 'prompt-library.md'), 'utf8')
 
-const chapterFiles = readdirSync(GUIDE).filter((f) => /^\d\d-.+\.md$/.test(f))
-const chapterCode = new Set(
-  chapterFiles.flatMap((f) => codeBlocks(readFileSync(join(GUIDE, f), 'utf8'))),
+// the library may also collect prompts from the 2단계 ChatGPT guide (linked as ../11-chatgpt/NN-x.md)
+const CHATGPT = join(import.meta.dirname, '..', 'guide', '11-chatgpt')
+const chapterPaths = [GUIDE, CHATGPT].flatMap((dir) =>
+  readdirSync(dir).filter((f) => /^\d\d-.+\.md$/.test(f)).map((f) => join(dir, f)),
 )
+const chapterCode = new Set(chapterPaths.flatMap((p) => codeBlocks(readFileSync(p, 'utf8'))))
+const linkRe = /\]\(((?:\.\.\/11-chatgpt\/)?\d\d-[a-z-]+\.md)#([^)]+)\)/
 
 // contents of every fenced code block, in file order
 function codeBlocks(md: string): string[] {
@@ -68,7 +71,7 @@ function sections(md: string, file: string): Section[] {
 test('every prompt sits inside the chapter section its link points to', () => {
   const entries = LIBRARY.split(/^### /m).slice(1)
   for (const entry of entries) {
-    const [, file, hash] = entry.match(/\]\((\d\d-[a-z-]+\.md)#([^)]+)\)/) ?? []
+    const [, file, hash] = entry.match(linkRe) ?? []
     assert.ok(file, `no section link: ${entry.split('\n')[0]}`)
     const section = sections(readFileSync(join(GUIDE, file), 'utf8'), file).find((s) => s.id === hash)
     assert.ok(section, `${file}#${hash} has no matching heading`)
@@ -83,6 +86,6 @@ test('every prompt points back to the chapter that explains it', () => {
   const entries = LIBRARY.split(/^### /m).slice(1)
   assert.ok(entries.length >= 25)
   for (const entry of entries) {
-    assert.match(entry, /\]\(\d\d-[a-z-]+\.md(#[^)]+)?\)/, `no chapter link: ${entry.split('\n')[0]}`)
+    assert.match(entry, /\]\((?:\.\.\/11-chatgpt\/)?\d\d-[a-z-]+\.md(#[^)]+)?\)/, `no chapter link: ${entry.split('\n')[0]}`)
   }
 })

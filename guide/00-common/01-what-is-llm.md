@@ -132,7 +132,7 @@ Claude를 만든 회사 Anthropic이 2025년에 모델 안을 직접 들여다�
 내 의도를 짐작하고, 정리해서 답하는 태도는 이 훈련에서 나옵니다.
 
 요즘은 **추론 모델**(reasoning model)도 많이 씁니다. 답하기 전에 스스로 단계를 밟아 생각하는 모델로,
-생각하는 과정을 글로 길게 써 내려간 뒤에 답합니다. 문제를 나누고, 검산하고, 고칩니다. 5장에서 쓰는 법을 다시 다룹니다.
+생각하는 과정을 글로 길게 써 내려간 뒤에 답합니다. 문제를 나누고, 검산하고, 고칩니다. [5장](05-prompt-patterns.md)에서 쓰는 법을 다시 다룹니다.
 
 ### 사람은 말 잘하는 상대에게 마음이 있다고 느낍니다
 
@@ -273,7 +273,7 @@ LLM이 한 번의 대화에서 기억하고 참고할 수 있는 글의 양을 *
 
 LLM은 내가 누구인지, 어떤 회사에 다니는지, 무엇 때문에 묻는지 모릅니다.
 알려 주지 않으면 "평균적인 누군가"를 위한 평범한 답을 합니다.
-**이 약점을 메우는 기술이 바로 4장에서 배울 프롬프트입니다.**
+**이 약점을 메우는 기술이 바로 [4장](04-prompt-basics.md)에서 배울 프롬프트입니다.**
 
 <Quiz id="ch1-limits" />
 
@@ -297,7 +297,7 @@ LLM은 내가 누구인지, 어떤 회사에 다니는지, 무엇 때문에 묻�
 | 영상 | 채널 | 이런 분께 |
 |---|---|---|
 | [Large Language Models explained briefly](https://www.youtube.com/watch?v=LPZh9BOjkQs) | 3Blue1Brown | 처음 보는 분. 짧고 그림이 많습니다 |
-| [Transformers, the tech behind LLMs](https://www.youtube.com/watch?v=wjZofJX0v4M) | 3Blue1Brown | 2장의 트랜스포머가 궁금한 분 (조금 어려움) |
+| [Transformers, the tech behind LLMs](https://www.youtube.com/watch?v=wjZofJX0v4M) | 3Blue1Brown | [2장](02-why-it-matters.md)의 트랜스포머가 궁금한 분 (조금 어려움) |
 | [[1hr Talk] Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) | Andrej Karpathy | 한 시간 정도 투자해 전체 그림을 보고 싶은 분 |
 | [Deep Dive into LLMs like ChatGPT](https://www.youtube.com/watch?v=7xTGNNLPyMI) | Andrej Karpathy | 학습 과정까지 깊이 알고 싶은 분 (긴 강의) |
 
