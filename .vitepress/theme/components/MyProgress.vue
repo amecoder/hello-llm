@@ -4,6 +4,7 @@ import { computed, nextTick, onMounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 import { CHAPTERS } from '../quiz-bank'
 import { setNickname, summarize } from '../progress.ts'
+import { chaptersOf, STAGES } from '../stages.ts'
 import {
   CHAPTER_NUMBERS,
   clearProgress,
@@ -20,8 +21,14 @@ const editing = ref(false)
 const showForm = computed(() => editing.value || progress.value.nickname === '')
 const nameInput = ref<HTMLInputElement>()
 const changeBtn = ref<HTMLButtonElement>()
-const status = computed(() => summarize(progress.value, CHAPTER_NUMBERS))
-const nextChapter = computed(() => (status.value.next === null ? null : CHAPTERS[status.value.next]))
+// one block per stage that has chapters
+const stages = computed(() =>
+  STAGES.map((stage) => {
+    const chapters = chaptersOf(stage.id, CHAPTER_NUMBERS)
+    const status = summarize(progress.value, chapters)
+    return { stage, chapters, status, next: status.next === null ? null : CHAPTERS[status.next] }
+  }).filter((s) => s.chapters.length > 0),
+)
 
 onMounted(loadProgress)
 
@@ -67,23 +74,24 @@ async function clearAll() {
         <button ref="changeBtn" type="button" class="mp-link" @click="editName">닉네임 바꾸기</button>
       </p>
 
-      <div class="mp-status">
-        <p><strong>{{ status.total }}장 중 {{ status.done }}장</strong>을 다 읽었어요.</p>
-        <div class="mp-bar" role="progressbar" :aria-valuenow="status.done" aria-valuemin="0" :aria-valuemax="status.total" aria-label="읽은 장 수">
-          <span :style="{ width: `${(status.done / status.total) * 100}%` }" />
+      <div v-for="s in stages" :key="s.stage.id" class="mp-status">
+        <p><a :href="withBase(s.stage.link)">{{ s.stage.title }}</a> — <strong>{{ s.status.total }}장 중 {{ s.status.done }}장</strong>을 다 읽었어요.</p>
+        <div class="mp-bar" role="progressbar" :aria-valuenow="s.status.done" aria-valuemin="0" :aria-valuemax="s.status.total" :aria-label="`${s.stage.title} 읽은 장 수`">
+          <span :style="{ width: `${(s.status.done / s.status.total) * 100}%` }" />
         </div>
         <ol class="mp-list">
-          <li v-for="n in CHAPTER_NUMBERS" :key="n" :class="{ read: progress.read.includes(n) }">
+          <li v-for="n in s.chapters" :key="n" :class="{ read: progress.read.includes(n) }">
             <a :href="withBase(CHAPTERS[n].link)">{{ CHAPTERS[n].title }}</a>
             <span v-if="progress.read.includes(n)" class="mp-check">✓ 읽음</span>
           </li>
         </ol>
-        <p v-if="nextChapter">
-          다음에 읽을 장: <a :href="withBase(nextChapter.link)">{{ nextChapter.title }}</a>
+        <p v-if="s.next">
+          다음에 읽을 장: <a :href="withBase(s.next.link)">{{ s.next.title }}</a>
         </p>
-        <p v-else>
+        <p v-else-if="s.stage.id === 'common'">
           모든 장을 읽었어요. <a :href="withBase('/guide/00-common/certificate')">이해도 확인 시험</a>으로 내 AI 이해 레벨을 확인해 보세요.
         </p>
+        <p v-else>모든 장을 읽었어요.</p>
       </div>
 
       <p class="mp-note">

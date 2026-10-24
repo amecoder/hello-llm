@@ -63,19 +63,7 @@ test('the scroll bar fills from 0 to 1 and stays hidden on pages too short to sc
   assert.equal(scrollRatio(0, 900, 1000), null)
 })
 
-test('every chapter ends with one "read" button for its own number, just before the next-chapter line', () => {
-  const dir = join(import.meta.dirname, '..', 'guide', '00-common')
-  const files = readdirSync(dir).filter((f) => /^\d\d-.+\.md$/.test(f))
-  assert.equal(files.length, CH.length)
-  for (const f of files) {
-    const md = readFileSync(join(dir, f), 'utf8')
-    const marks = [...md.matchAll(/^<ChapterDone :chapter="(\d+)" \/>$/gm)]
-    assert.equal(marks.length, 1, `${f}: needs exactly one <ChapterDone>`)
-    assert.equal(Number(marks[0][1]), Number(f.slice(0, 2)), `${f}: wrong chapter number`)
-    const after = md.slice(marks[0].index).split('\n').filter((l) => l.trim() !== '')
-    assert.match(after[1] ?? '', /^다음 장:/, `${f}: <ChapterDone> must sit right before "다음 장:"`)
-  }
-})
+// chapter files and their read buttons are checked per stage in tests/stages.test.ts
 
 test('a broken chapter list does not throw away a good nickname, and control characters are dropped', () => {
   assert.deepEqual(parseProgress('{"nickname":"하늘","read":"x"}', CH), { nickname: '하늘', read: [], passed: [] })

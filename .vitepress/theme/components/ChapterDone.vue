@@ -5,11 +5,14 @@ import { withBase } from 'vitepress'
 import { CHAPTERS } from '../quiz-bank'
 import { summarize, toggleRead } from '../progress.ts'
 import { CHAPTER_NUMBERS, loadProgress, progress, progressLoaded, saveProgress, storageBlocked } from '../progress-store'
+import { chaptersOf, stageOf } from '../stages.ts'
 
 const props = defineProps<{ chapter: number }>()
 
 const isRead = computed(() => progress.value.read.includes(props.chapter))
-const status = computed(() => summarize(progress.value, CHAPTER_NUMBERS))
+// count only the chapters of this chapter's stage (common guide, ChatGPT guide, ...)
+const stage = computed(() => stageOf(props.chapter))
+const status = computed(() => summarize(progress.value, chaptersOf(stage.value.id, CHAPTER_NUMBERS)))
 const nextChapter = computed(() => (status.value.next === null ? null : CHAPTERS[status.value.next]))
 
 onMounted(loadProgress)
@@ -29,7 +32,7 @@ async function toggle() {
   <div class="cd" :class="{ done: isRead }">
     <p class="cd-ask" role="status">
       <template v-if="!isRead">이 장을 다 읽었나요?</template>
-      <template v-else>✓ 다 읽음으로 표시했습니다. {{ status.total }}장 중 {{ status.done }}장을 읽었어요.</template>
+      <template v-else>✓ 다 읽음으로 표시했습니다. {{ stage.title }} {{ status.total }}장 중 {{ status.done }}장을 읽었어요.</template>
     </p>
     <button v-if="!isRead" ref="markBtn" type="button" class="cd-btn" :disabled="!progressLoaded" @click="toggle">다 읽음으로 표시</button>
     <template v-else>

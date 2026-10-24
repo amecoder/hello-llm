@@ -17,3 +17,6 @@ Thumbs.db
 node_modules/
 .vitepress/cache/
 .vitepress/dist/
+
+# raw browser captures (may contain personal data before review)
+.playwright-mcp/

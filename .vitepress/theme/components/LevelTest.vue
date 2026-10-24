@@ -49,6 +49,8 @@ const minSubject = Math.ceil(PASS_SUBJECT * PER_SUBJECT)
 const minTotal = Math.ceil(PASS_TOTAL * PER_SUBJECT * SUBJECT_COUNT)
 
 const statusOf = (l: KnowledgeLevel) => levelStatus(l, progress.value.passed)
+// the level right before this one, e.g. 중급 → 초급
+const previousLabel = (l: KnowledgeLevel) => LEVEL_TESTS[LEVEL_TESTS.findIndex((x) => x.level === l) - 1]?.label ?? ''
 const subjectGroups = computed(() =>
   Array.from({ length: SUBJECT_COUNT }, (_, i) => ({
     subject: i + 1,
@@ -135,7 +137,7 @@ const sourceHref = (url: string) => (url.startsWith('/') ? withBase(url) : url)
             <li v-for="s in l.subjects" :key="s">{{ s }}</li>
           </ol>
           <p v-if="statusOf(l.level) === 'passed'" class="lt-state ok">✓ 합격</p>
-          <p v-else-if="statusOf(l.level) === 'locked'" class="lt-state">🔒 아래 레벨에 합격하면 열립니다</p>
+          <p v-else-if="statusOf(l.level) === 'locked'" class="lt-state">🔒 {{ previousLabel(l.level) }}에 합격하면 볼 수 있습니다</p>
           <button v-if="statusOf(l.level) !== 'locked'" type="button" class="lt-primary" :disabled="!progressLoaded" @click="start(l.level)">
             {{ statusOf(l.level) === 'passed' ? '다시 보기' : '시험 보기' }}
           </button>
