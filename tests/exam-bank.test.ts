@@ -71,7 +71,9 @@ function extremeShare(bank: Choices, sign: 1 | -1): number {
 }
 
 test('the right answer is rarely the longest or the shortest choice, in the exam and in the chapter quizzes', () => {
-  for (const [name, bank] of [['exam', EXAM_QUESTIONS], ['quizzes', QUESTIONS]] as const) {
+  const stage1 = QUESTIONS.filter((q) => q.chapter < 100)
+  const stage2 = QUESTIONS.filter((q) => q.chapter > 100)
+  for (const [name, bank] of [['exam', EXAM_QUESTIONS], ['quizzes stage 1', stage1], ['quizzes stage 2', stage2]] as const) {
     assert.ok(extremeShare(bank, 1) <= 0.4, `${name} longest: ${extremeShare(bank, 1)}`)
     assert.ok(extremeShare(bank, -1) <= 0.4, `${name} shortest: ${extremeShare(bank, -1)}`)
   }

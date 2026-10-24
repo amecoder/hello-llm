@@ -1,18 +1,22 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { readdirSync, readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { CHAPTERS, QUESTIONS } from '../.vitepress/theme/quiz-bank.ts'
+import { STAGES } from '../.vitepress/theme/stages.ts'
 import { EXAM_SIZE, MIN_PER_CHAPTER } from '../.vitepress/theme/quiz.ts'
 
-const GUIDE = join(import.meta.dirname, '..', 'guide', '00-common')
 
 // every <Quiz id="..." /> placed in the chapters, in file order
 function quizIdsInChapters(): string[] {
-  return readdirSync(GUIDE)
-    .filter((f) => /^\d\d-.+\.md$/.test(f))
-    .sort()
-    .flatMap((f) => [...readFileSync(join(GUIDE, f), 'utf8').matchAll(/<Quiz id="([^"]+)" \/>/g)].map((m) => m[1]))
+  return STAGES.flatMap((stage) => {
+    const dir = join(import.meta.dirname, '..', stage.dir)
+    if (!existsSync(dir)) return []
+    return readdirSync(dir)
+      .filter((f) => /^\d\d-.+\.md$/.test(f))
+      .sort()
+      .flatMap((f) => [...readFileSync(join(dir, f), 'utf8').matchAll(/<Quiz id="([^"]+)" \/>/g)].map((m) => m[1]))
+  })
 }
 
 test('question ids are unique', () => {

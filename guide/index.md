@@ -62,6 +62,10 @@ features:
     details: 개념 문제와 실제 장면을 보고 판단하는 문제 20개로 입문·중급·상급 레벨 확인하기
     link: /guide/00-common/certificate
     linkText: 시험 보기
+  - title: 2단계 · ChatGPT 사용 가이드
+    details: 화면 둘러보기, 대화 관리, 파일·이미지, 메모리, 검색, 프로젝트, 개인정보 설정까지 — 실제 화면 캡처와 함께 10장
+    link: /guide/11-chatgpt/
+    linkText: 2단계 시작
   - title: AI 지식 레벨 시험 — 초급부터 전문가까지
     details: 자격증 필기시험처럼 5과목 50문제, 과락 있음. 합격하면 다음 레벨이 열리는 초급·중급·고급·전문가 4단계
     link: /guide/00-common/level-test
@@ -81,6 +85,6 @@ features:
 | 단계 | 가이드 | 내용 |
 |---|---|---|
 | 1 | [공통 가이드](/guide/00-common/) | 어떤 LLM에서든 통하는 공통 원리와 사용법 |
-| 2 | Claude · ChatGPT (준비 중) | 서비스별 기능과 활용법 |
+| 2 | [ChatGPT](/guide/11-chatgpt/) · Claude (준비 중) | 서비스별 기능과 활용법 |
 | 3 | Claude Code · Codex (준비 중) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
 | 4 | AI-SDLC (준비 중) | AI와 함께 기획부터 배포까지 — 소프트웨어 개발 전 과정(SDLC) |
