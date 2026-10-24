@@ -50,6 +50,7 @@ export default defineConfig({
             { text: '8장. 개인정보와 데이터 관리', link: '/guide/11-chatgpt/08-privacy' },
             { text: '9장. 음성으로 대화하기', link: '/guide/11-chatgpt/09-voice' },
             { text: '10장. 실습 과제', link: '/guide/11-chatgpt/10-practice' },
+            { text: '11장. 전문가처럼 쓰기', link: '/guide/11-chatgpt/11-expert' },
             { text: '← 1단계 · 공통 가이드', link: '/guide/00-common/' },
           ],
         },

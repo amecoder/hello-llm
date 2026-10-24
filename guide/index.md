@@ -55,7 +55,7 @@ features:
     link: /guide/00-common/10-practice
     linkText: 해 보기
   - title: 바로 쓰는 프롬프트 모음
-    details: 메일·요약·이력서·회의록·계약 준비 등 1~9장의 프롬프트 32개를 쓰임새별로 — 복사해서 빈칸만 바꾸면 끝
+    details: 메일·요약·이력서·회의록·계약 준비 등 1단계와 ChatGPT 가이드의 프롬프트 35개를 쓰임새별로 — 복사해서 빈칸만 바꾸면 끝
     link: /guide/00-common/prompt-library
     linkText: 모음 보기
   - title: 이해도 확인 시험 — 내 AI 이해 레벨은?
@@ -63,7 +63,7 @@ features:
     link: /guide/00-common/certificate
     linkText: 시험 보기
   - title: 2단계 · ChatGPT 사용 가이드
-    details: 화면 둘러보기, 대화 관리, 파일·이미지, 메모리, 검색, 프로젝트, 개인정보 설정까지 — 실제 화면 캡처와 함께 10장
+    details: 화면 둘러보기, 대화 관리, 파일·이미지, 메모리, 검색, 프로젝트, 개인정보 설정, 전문가처럼 쓰기까지 — 실제 화면 캡처와 함께 11장
     link: /guide/11-chatgpt/
     linkText: 2단계 시작
   - title: AI 지식 레벨 시험 — 초급부터 전문가까지
