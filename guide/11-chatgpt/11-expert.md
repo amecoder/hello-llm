@@ -221,6 +221,24 @@ OpenAI 도움말 여러 문서에 "쓰기 전에 확인하라"는 문장이 있�
 **OpenAI Academy**는 OpenAI가 만든 **무료 온라인 강좌**입니다. ChatGPT 계정이 있으면 누구나 듣고, 내 속도로 진행합니다.[^academy] 강좌는 영어로 되어 있다고 생각하고 시작하세요(한국어 제공 여부는 확인하지 못했습니다).
 일에 쓰는 법을 다루는 강좌로 **AI Foundations**(60–75분, AI 기초·분명한 프롬프트·결과 검토), **Applied AI Foundations**(75–90분, 일을 단계로 나누고 검토 지점이 있는 반복 작업 만들기), **Agents and Workflows**(75–90분, Work에 일을 맡기고 사람이 결과를 점검하기)가 있습니다. 시간은 바뀔 수 있습니다(확인일 2026-10-24). 시험에서 80% 이상 받으면 **배지**를 주지만, 도움말은 이것이 자격증이 아니라고 밝힙니다.[^academy] 이 가이드의 [인증 시험](../00-common/certificate.md)도 같은 성격의 학습 배지입니다.
 
+### 무료로 볼 수 있는 공개 자료
+
+Academy 강좌는 ChatGPT 계정으로 로그인해야 듣지만, 아래 자료는 **무료**이고 소개 페이지를 로그인 없이 열 수 있습니다. 다만 강의를 실제로 들으려면 가입해야 하는 곳도 있습니다(부스트코스는 수강 신청이 필요). 모두 2026-10-25에 공식 페이지를 직접 열어 확인했습니다.
+
+| 자료 | 만든 곳 | 언어·분량 | 이런 분께 |
+|---|---|---|---|
+| [Introduction to Prompt Engineering](https://academy.openai.com/public/videos/introduction-to-prompt-engineering-2025-02-13) (영상) | OpenAI Academy | 영어 | 이 가이드 1단계에서 배운 프롬프트 쓰는 법을 OpenAI가 만든 영상으로 복습하고 싶은 분. 다음 편은 [Advanced Prompt Engineering](https://academy.openai.com/public/videos/advanced-prompt-engineering-2025-02-13)[^academy-public] |
+| [ChatGPT fundamentals](https://academy.openai.com/public/clubs/work-users-ynjqu/resources/chatgpt-basics) (글) | OpenAI Academy | 영어 | ChatGPT 기초를 OpenAI가 직접 정리한 글로 다시 보고 싶은 분[^academy-public] |
+| [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) | DeepLearning.AI. OpenAI 직원(Isa Fulford)과 앤드루 응(Andrew Ng)이 함께 강의 | 영어, 1시간 40분 | 개발자를 위한 프롬프트 강좌가 궁금한 분. **파이썬**(프로그래밍 언어의 하나) 기초가 필요하다. 무료는 "학습 플랫폼 베타(정식 출시 전 시험 운영) 기간 한정"이라고 적혀 있어, 지금도 무료인지 페이지에서 확인하고 듣는다[^dlai] |
+| [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners) (GitHub — 자료를 올려 두는 사이트) | Microsoft | 21강, **한국어 번역 있음**([한국어판](https://github.com/microsoft/generative-ai-for-beginners/tree/main/translations/ko)) | 생성형 AI 앱 만들기에 관심 있는 분. 개념을 설명하는 「Learn」 강의부터 읽는다(「Build」 강의에는 코드 예시가 있다)[^msgenai] |
+| [AI로 배우는 단계별 기획서 작성법](https://www.boostcourse.org/aix210) | 부스트코스 | **한국어**, 강의 3개와 실습 과제 | 한국어 강의로 AI를 일에 쓰는 법을 배우고 싶은 분. AI로 기획서를 쓰는 법을 다루는 강좌이고, 수강 신청(회원 가입)이 필요하다[^boost] |
+
+영어 자료는 크롬 같은 브라우저의 번역 기능(페이지에서 마우스 오른쪽 버튼 → 「한국어로 번역」)으로 읽을 수 있습니다.
+
+ChatGPT가 어떻게 만들어지고 어떻게 쓰는지 설명하는 Andrej Karpathy의 유명한 영상들은 [1단계 1장 「영상으로 더 보기」](../00-common/01-what-is-llm.md#영상으로-더-보기)와 [1단계 3장 「영상으로 더 보기」](../00-common/03-why-learn.md#영상으로-더-보기)에 모아 두었습니다.
+
+> Coursera의 유명 강좌인 「Prompt Engineering for ChatGPT」와 「Generative AI for Everyone」은 강좌 페이지에 "강의 자료와 과제를 보려면 수료증 과정을 구매해야 한다"고 적혀 있어 이 무료 목록에서 뺐습니다(확인일 2026-10-25).[^coursera]
+
 <Quiz id="ch111-academy" />
 
 ## 직접 해 보기
@@ -238,6 +256,7 @@ OpenAI 도움말 여러 문서에 "쓰기 전에 확인하라"는 문장이 있�
 - Word·PowerPoint의 ChatGPT 추가 기능은 무료로도 쓸 수 있다. 크게 고치기 전에 사본을 저장하고 계획부터 받는다.
 - 예약 작업은 대화에서 부탁해 만들고 옆 메뉴 「예약」에서 관리한다. 프로젝트 안 작업은 프로젝트 파일을 못 읽고, 앱으로 바꾸는 작업은 승인을 기다리며 멈출 수 있다.
 - 데이터 분석은 정리된 파일을 올리고 먼저 데이터 문제를 확인한 뒤 방법을 지정한다. 공부 모드는 `@study` 로 켜고 모든 요금제에서 쓴다(프로젝트·임시 채팅 제외).
+- 더 배우려면 OpenAI Academy(로그인 필요)나 무료 공개 자료(OpenAI Academy 공개 영상, DeepLearning.AI, Microsoft, 부스트코스)를 본다.
 
 ## 용어 정리
 
@@ -281,3 +300,8 @@ OpenAI 도움말 여러 문서에 "쓰기 전에 확인하라"는 문장이 있�
 [^slack]: OpenAI 도움말, 「Using Slack in ChatGPT」. "A shared task link does not transfer your Slack connection, credentials, channel access, or message history." https://help.openai.com/en/articles/12525822 (확인일 2026-10-24)
 [^apps-trouble]: OpenAI 도움말, 「Troubleshooting plugins and apps in ChatGPT」. "If approval is required, the task pauses until you review it." / "Before resending an email or message, check the intended account’s sent messages and the destination." https://help.openai.com/en/articles/20001497 (확인일 2026-10-24)
 [^drive]: OpenAI 도움말, 「Google Drive app and setup in ChatGPT」. "Finding a filename or file details does not confirm that ChatGPT retrieved the file’s contents." https://help.openai.com/en/articles/10929079 (확인일 2026-10-24)
+[^academy-public]: OpenAI Academy 공개 페이지. 「Introduction to Prompt Engineering」(Posted Mar 08, 2025), 「Advanced Prompt Engineering」, 「ChatGPT fundamentals」(Last updated on May 30, 2026). 셋 모두 로그인하지 않은 브라우저에서 열림을 확인. https://academy.openai.com/public/videos/introduction-to-prompt-engineering-2025-02-13 · https://academy.openai.com/public/videos/advanced-prompt-engineering-2025-02-13 · https://academy.openai.com/public/clubs/work-users-ynjqu/resources/chatgpt-basics (확인일 2026-10-25)
+[^dlai]: DeepLearning.AI, 「ChatGPT Prompt Engineering for Developers」. 강사 Isa Fulford "Member of Technical Staff, OpenAI"·Andrew Ng, "1h40m", "Beginner", "Only a basic understanding of Python is needed.", "Course access is free for a limited time during the DeepLearning.AI learning platform beta!" https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/ (확인일 2026-10-25)
+[^msgenai]: Microsoft, 「Generative AI for Beginners」 GitHub 저장소 README. "This course has 21 lessons." / "Lessons are labeled either 'Learn' lessons explaining a Generative AI concept or 'Build' lessons that explain a concept and code examples". 한국어 번역은 `translations/ko` 폴더. https://github.com/microsoft/generative-ai-for-beginners (확인일 2026-10-25)
+[^boost]: 부스트코스, 「AI로 배우는 단계별 기획서 작성법」 강좌 소개. 「무료강의」, 난이도 「입문」, 「상시 수강」, 강의계획 #1~#3과 「[과제] 자율 실습 해보기」, 이승필 강사. https://www.boostcourse.org/aix210 (확인일 2026-10-25)
+[^coursera]: Coursera 강좌 페이지 FAQ. "To access course materials, assignments, and earn a Certificate, you'll need to purchase the Certificate experience when you enroll in a course." https://www.coursera.org/learn/prompt-engineering · https://www.coursera.org/learn/generative-ai-for-everyone (확인일 2026-10-25)
