@@ -53,6 +53,7 @@
 - [x] 11장에 무료 공개 강좌 5개(원문 각주·확인일 2026-10-25), Codex 리뷰 [필수] 2건 반영 — PR #32, squash `55267c7`
 - [x] Academy 세 강좌 본문 반영 + Codex·agy 교차 리뷰 보완(2·4·5·7·11장) + 문체 규칙(CLAUDE.md) — PR #33, squash `7b6826a`
 - [x] 1단계 1~10장·ChatGPT 1~10장·11장 남은 절을 Academy 문체로 다듬기(제목·프롬프트·각주·링크 그대로, Codex [필수] 3건 반영) — PR #34, squash `efbd54c`
+- [x] 2단계 Claude 사용 가이드 11장 + 퀴즈 79문제(`quiz-bank-claude.ts`) + 사실 확인 리포트(`docs/reports/2026-10-26_Claude-공식-자료.md`, VERIFIED 878개) — PR #35, squash `7b0fbae`
 
 ## Key Decisions
 - 가이드 폴더는 단계 번호 방식 (`00-common` → `10/11` → `20/21` → `30-ai-sdlc`)
