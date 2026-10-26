@@ -133,6 +133,7 @@ Gmail·Google Drive 같은 앱을 연결하면 ChatGPT가 그 안을 **읽기만
 - 웹·휴대폰의 Work는 **Free·Go를 뺀 유료 요금제**에서 씁니다. Free·Go는 데스크톱 앱에서만 제한적으로 쓸 수 있습니다.[^rn][^pricing]
 - Work는 작업을 한 번, 반복 일정으로, 또는 어떤 조건이 생겼을 때 실행하도록 **예약**할 수 있습니다. 옆 메뉴 「예약」에서 관리합니다.[^work][^screen]
 - 프로젝트 안에서 Work를 쓰려면 + 버튼 → 「프로젝트에서 Work 시작」을 고릅니다.[^screen]
+- **Chat으로 생각하고, Work로 만드세요.** 같은 프로젝트 안에서는 Chat과 Work가 같은 자료를 함께 씁니다. 그래서 Chat에서 질문하며 구성을 다듬고, 만들 준비가 되면 Work로 넘어가도 처음부터 다시 설명하지 않아도 됩니다.[^academy-content]
 - Sites는 2026-07-09 공개 베타로 나왔고 Free·Go에서는 쓸 수 없습니다.[^rn]
 - 컴퓨터 앱(macOS·Windows)에는 **앱 안 브라우저**가 있어 Work·Codex 대화에서 ChatGPT가 웹사이트를 직접 열어 일할 수 있습니다. 로그인이 필요하면 **비밀번호는 그 브라우저 화면에만 넣고, 대화창에는 절대 쓰지 않습니다.** 웹사이트에 적힌 글은 믿을 수 없는 내용으로 다루라는 것이 도움말의 안내입니다.[^browser] 웹사이트에 숨겨진 지시가 ChatGPT에게 내 정보를 넘기라고 해도 그것은 내 허락이 아닙니다.[^sitetools]
 
@@ -225,3 +226,4 @@ Gmail·Google Drive 같은 앱을 연결하면 ChatGPT가 그 안을 **읽기만
 [^gpt-help]: OpenAI 도움말, 「GPTs in ChatGPT」. "New GPT creation and publishing are not available on personal ChatGPT accounts, including Free, Go, Plus, and Pro." / "GPTs do not use saved memory, custom instructions, or previous conversations." / "OpenAI does not audit or control how those services use or store your data." https://help.openai.com/en/articles/8554407 (확인일 2026-10-24)
 [^sora]: OpenAI 도움말, 「What to know about the Sora discontinuation」. "The Sora web and app experiences were discontinued on April 26, 2026." https://help.openai.com/en/articles/20001152 (확인일 2026-10-24)
 [^atlas]: OpenAI 도움말, 「ChatGPT Atlas retirement」. "ChatGPT Atlas has been retired and no longer receives updates." / "To cancel a subscription, follow Canceling your ChatGPT subscription for the platform that billed you." https://help.openai.com/en/articles/20001371 (확인일 2026-10-24)
+[^academy-content]: OpenAI Academy 「Agents and Workflows」 강좌 본문 3.1(로그인·등록 필요). "when you work inside a project, both Chat and ChatGPT Work can share the same context." / "Use Chat when you want to think through the material, ask questions, or shape your ideas. Then, when you are ready to create or update something, you can switch to ChatGPT Work and use the same project context to build the output." (확인일 2026-10-26)

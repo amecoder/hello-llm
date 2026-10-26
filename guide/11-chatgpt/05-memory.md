@@ -96,6 +96,12 @@ ChatGPT에는 이 수고를 덜어 주는 기능이 두 가지 있습니다.
 - 확실하지 않은 내용은 지어내지 말고 모른다고 말해 줘.
 ```
 
+말투만 적을 필요는 없습니다. **도움을 받는 방식**도 적어 둘 수 있습니다. OpenAI Academy 강좌가 예로 드는 지침을 우리말로 옮기면 이렇습니다.[^academy-content]
+```
+- 내가 조언을 구하면 분명한 추천을 하나 하고, 장단점과 네가 가정한 것을 함께 알려 줘.
+- 확실하지 않은 것은 확실하지 않다고 말해 줘. 추측하지 말고, 어떤 정보가 있으면 답이 더 좋아지는지 알려 줘.
+```
+
 지침을 고친 뒤에는 **새 채팅을 열어서** 확인하세요. 이미 진행 중인 대화에도 바로 적용되는지는 도움말 안에서도 설명이 엇갈려서, 새 대화부터 확실히 적용된다고 생각하는 것이 안전합니다.[^ci]
 또 사용자 지정 지침을 쓴 정보도 모델 개선에 쓰일 수 있습니다. 원하지 않으면 학습 설정을 끄면 됩니다([8장](08-privacy.md)).[^ci]
 
@@ -175,3 +181,4 @@ ChatGPT에는 이 수고를 덜어 주는 기능이 두 가지 있습니다.
 [^apps]: OpenAI 도움말, 「Connecting and managing app accounts in ChatGPT」. "Disconnecting an app does not automatically delete existing or archived conversations, saved files, your Memory summary, or other saved memories." https://help.openai.com/en/articles/20001494 (확인일 2026-10-24)
 [^temp]: OpenAI 도움말, 「Temporary chat in ChatGPT」. "Unpersonalized: Does not use memory, custom instructions, or plugins." / "Neither option creates or updates memories while the chat remains temporary. You cannot change personalization after the conversation starts." https://help.openai.com/en/articles/8914046 (확인일 2026-10-24)
 [^screen]: ChatGPT 웹 화면(Plus 요금제, 한국어)에서 직접 확인. 「개인 맞춤 설정」 화면(확인일 2026-10-23)과 「임시 채팅」 화면의 「개인화됨」 메뉴(확인일 2026-10-24)
+[^academy-content]: OpenAI Academy 「AI Foundations」 강좌 본문 4.5(로그인·등록 필요). "When I ask for advice, give a clear recommendation, explain the tradeoffs, and call out any assumptions." / "If something is uncertain, say so clearly. Do not guess, and tell me what information would make the answer stronger." (확인일 2026-10-26)
