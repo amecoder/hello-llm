@@ -4,8 +4,9 @@
 > 매번 같은 방식으로 할 일은 **스킬**로 넣어 둡니다. 이 셋을 업무별로 묶은 꾸러미가 **플러그인**입니다.
 
 화면은 2026년 10월 웹 기준입니다. 채팅과 Cowork를 합친 새 화면이 차례로 배포되고 있어서, 메뉴 위치와 이름은 화면에 따라 다를 수 있습니다.
+이 장의 그림은 무료 요금제 웹 화면입니다. 메뉴 이름은 그림에 보이는 이름을 먼저 쓰고, 도움말에 나오는 다른 이름은 함께 적었습니다.
 
-<!-- 스크린샷 필요: 옆 메뉴의 「프로젝트」와 「사용자 정의」(Customize)가 함께 보이는 첫 화면 -->
+이 장에서 쓰는 곳은 옆 메뉴의 두 곳입니다. 「프로젝트」와 「사용자 지정」(Customize)입니다.[^screen] 아래 그림들에서 각각 ③·④로 표시했습니다.
 
 ## 프로젝트 — 자료와 지침을 한곳에
 
@@ -16,11 +17,23 @@
 
 ### 만들고 채우는 법
 
-1. 옆 메뉴 「프로젝트」(claude.ai/projects)를 엽니다. 오른쪽 위 「+ 새 프로젝트」를 누릅니다.[^projects-how]
+1. 옆 메뉴 ③ 「프로젝트」(claude.ai/projects)를 엽니다. 오른쪽 위 ① 「새 프로젝트」를 누릅니다.[^screen] 도움말에는 「+ 새 프로젝트」로 나옵니다.[^projects-how]
 2. 이름과 설명을 적습니다. 이름과 설명은 **Claude가 읽지 못합니다.** 일하는 데 필요한 내용은 지식이나 지침에 넣으세요.[^projects-how]
 3. 프로젝트 화면 오른쪽 **프로젝트 지식**의 「+」로 파일이나 글을 올립니다. 여기 올린 것은 그 프로젝트의 모든 대화에서 쓰입니다.[^projects-how]
 4. 「프로젝트 지침 설정」에 이 프로젝트에서 지킬 규칙을 적고 「지침 저장」을 누릅니다.[^projects-how]
 5. 이미 있는 대화는 대화 이름 옆 화살표 → 「프로젝트에 추가」로 옮깁니다.[^projects-how]
+
+이번 대화에서만 볼 자료는 프로젝트 지식에 넣지 말고 그 대화에 바로 올리세요. 지식이 어수선해지지 않습니다.[^academy-projects]
+
+![「프로젝트」 화면. ① 오른쪽 위 「새 프로젝트」 버튼, ② 가운데 프로젝트 목록(일부에 「예제 프로젝트」 표시), ③ 옆 메뉴의 「프로젝트」에 빨간 번호가 붙어 있다](assets/shot-10-projects-marked.png)
+
+프로젝트 이름과 대화 제목은 예시로 바꾼 화면입니다(무료 요금제). **빨간 번호는 아래 목록의 번호와 같은 곳입니다.**
+
+- ① 「새 프로젝트」 — 새 프로젝트를 만든다
+- ② 프로젝트 목록 — 만든 프로젝트가 날짜와 함께 보인다
+- ③ 옆 메뉴 「프로젝트」 — 이 화면을 여는 곳
+
+목록에는 「예제 프로젝트」 표시가 붙은 것도 있습니다.[^screen] 내가 만들지 않은 프로젝트가 보여도 놀라지 마세요.
 
 <!-- 스크린샷 필요: 프로젝트 화면. 오른쪽 「프로젝트 지식」 칸과 「+」, 「프로젝트 지침 설정」 버튼 -->
 
@@ -45,6 +58,8 @@
 
 ### 정리할 때
 
+- **한 가지 일부터 시작하세요.** 모든 일을 담는 프로젝트 하나보다 「주간 보고」처럼 좁은 프로젝트로 시작하세요. 자료는 쓰면서 더하면 됩니다.[^academy-projects]
+- **지난 자료는 가끔 바꿔 주세요.** 프로젝트 지식에 낡은 자료가 남아 있으면 답도 낡은 내용으로 나올 수 있습니다. 가끔 지식 목록을 훑어보고 고치세요.[^academy-projects]
 - **별 표시**를 달면 옆 메뉴에서 빨리 찾을 수 있습니다.[^projects-how]
 - 끝난 프로젝트는 **보관**할 수 있습니다. 보관한 프로젝트는 바로 지울 수 없습니다. 「보관 해제」한 뒤에 지우세요.[^projects-how]
 - 프로젝트를 다른 사람과 공유하는 기능은 Team·Enterprise(회사 요금제)에만 있습니다.[^projects]
@@ -75,9 +90,27 @@
 
 ### 연결하는 법
 
-1. 입력창 왼쪽 아래 「+」를 누르거나 `/` 를 입력합니다. 「커넥터」 → 「커넥터 관리」로 갑니다. 옆 메뉴 「사용자 정의」(Customize) → 「커넥터」에서도 됩니다.[^connectors]
+1. 입력창 왼쪽 아래 「+」를 누르고 ③ 「커넥터 추가」를 고릅니다.[^screen] 도움말에는 「커넥터」 → 「커넥터 관리」로 나오고, `/` 를 입력해도 된다고 합니다.[^connectors] 옆 메뉴 「사용자 지정」 → 「커넥터」 탭에서도 됩니다.[^screen]
 2. 쓸 서비스를 고르고 「연결」이나 「설치」를 누릅니다. 그 서비스에 로그인해 권한을 허락합니다.[^connectors]
 3. 대화마다 「+」 → 「커넥터」에서 이번 대화에 쓸 서비스를 켜고 끕니다.[^connectors]
+
+연결했으면 간단한 부탁으로 확인해 보세요.[^academy-connect]
+
+```
+내 Google 캘린더에 접근할 수 있어? 다음 주 월요일 일정만 보여 줘.
+```
+
+일정이 보이면 제대로 연결된 것입니다.
+
+![입력창 「+」를 누르면 열리는 메뉴. ① 「파일 업로드 또는 추가」, ② 「Skills」, ③ 「커넥터 추가」, ④ 「디자인 시스템」, ⑤ 「플러그인 추가」, ⑥ 「메모리」에 빨간 번호가 붙어 있다](assets/shot-02-plus-menu-marked.png)
+
+무료 요금제 화면입니다. 이 장에서 쓰는 것은 아래 세 가지입니다.
+
+- ② 「Skills」 — 스킬 목록을 연다
+- ③ 「커넥터 추가」 — 다른 앱을 연결한다
+- ⑤ 「플러그인 추가」 — 플러그인을 넣는다
+
+⑥ 「메모리」는 [5장](05-memory.md#한-채팅만-메모리-끄기)에서 다룹니다.
 
 <!-- 스크린샷 필요: 입력창 「+」 → 「커넥터」 메뉴와 서비스별 켜기·끄기 스위치 -->
 
@@ -87,7 +120,7 @@
 
 - **믿는 서비스만, 필요한 것만 연결하세요.** 연결하면 Claude가 내 계정 권한 안에서 자료를 읽고, 바꿀 수도 있기 때문입니다.[^connectors] 연결하기 전에 물어보세요. 믿을 수 있는 서비스인가? 이 일에 꼭 필요한가?
 - **원래 못 보던 것은 연결해도 못 봅니다.** 그 서비스에서 내가 열 수 없는 파일은 커넥터로도 열 수 없습니다.[^connectors]
-- **연결 끊기와 권한 보기**는 「사용자 정의」 → 「커넥터」에서 합니다.[^connectors]
+- **연결 끊기와 권한 보기**는 「사용자 지정」 → 「커넥터」에서 합니다.[^connectors]
 - **연결한 앱의 자료로 모델을 학습하지 않습니다.** 연결한 앱은 내 다른 대화를 보지 못합니다.[^suggest] 학습 설정 전체는 [9장](09-privacy.md)에서 다룹니다.
 
 ### 대표 예 — Google·Microsoft 365
@@ -165,8 +198,8 @@
 ### 기본 스킬과 내 스킬
 
 - Anthropic이 넣어 둔 **기본 스킬**(Excel·Word·PowerPoint·PDF 만들기)은 부르지 않아도 알아서 쓰입니다.[^skills-use] [4장](04-files-artifacts.md)에서 파일을 만들 때 쓰이는 것이 이것입니다.
-- 스킬을 켜고 끄는 곳은 「사용자 정의」 → 「스킬」입니다. 꺼 둔 스킬은 Claude가 쓰지 않습니다.[^skills-use]
-- 간단한 스킬은 코딩 없이 글만으로 만들 수 있습니다.[^skills] 만든 스킬 폴더는 ZIP으로 묶어 「+ 스킬 만들기」 → 「스킬 업로드」로 올립니다.[^skills-use]
+- 스킬을 켜고 끄는 곳은 옆 메뉴 「사용자 지정」 → 「Skills」 탭입니다.[^screen] 꺼 둔 스킬은 Claude가 쓰지 않습니다.[^skills-use]
+- 간단한 스킬은 코딩 없이 글만으로 만들 수 있습니다.[^skills] 만든 스킬 폴더는 ZIP으로 묶어 올립니다. 도움말에는 「+ 스킬 만들기」 → 「스킬 업로드」로 나옵니다.[^skills-use] 이 장의 화면에서는 「사용자 지정」 오른쪽 위에 「+ 추가」 버튼이 있습니다.[^screen]
 - 스킬 목록에서 설치한 스킬은 내용을 고칠 수 없습니다.[^directory]
 
 스킬이 안 쓰이는 것 같으면 이름을 짚어서 부탁하세요.[^skills-use]
@@ -174,6 +207,22 @@
 ```
 내 「회사 보고서 양식」 스킬을 써서 이 메모로 발표 자료를 만들어 줘.
 ```
+
+내가 만든 스킬이 자꾸 안 쓰인다면 스킬의 **설명**(description)을 고쳐 보세요. Claude는 이 설명을 보고 언제 그 스킬을 쓸지 정합니다.[^skills-make] 설명에는 언제 쓰는 스킬인지 구체적으로 적으세요.[^skills-make] 내가 평소에 부탁할 때 쓰는 말을 넣어 두는 것도 좋습니다. "회의록 정리", "회의 내용 요약"처럼요(이 가이드의 제안). 설명은 200자까지 쓸 수 있습니다.[^skills-make]
+
+### 내 스킬 만들기 — 말로 부탁하기
+
+어떤 일을 할 때마다 같은 설명을 되풀이하고 있다면, 그 설명이 첫 스킬감입니다.[^academy-layers] 예를 들어 "회의록은 결정·할 일·담당자 순서로"라는 말을 매번 하고 있다면요.
+
+스킬 파일을 혼자 쓰지 않아도 됩니다. 새 대화를 열고 Claude에게 같이 만들자고 해 보세요.[^academy-skills]
+
+```
+회의록을 정리하는 스킬을 만들고 싶어. 무엇이 필요한지 하나씩 물어봐 줘.
+```
+
+Claude가 몇 가지를 물어봅니다. 이 스킬이 무엇을 하는지, 잘된 결과는 어떤 모습인지, 언제 쓰는지 같은 것입니다. 할 수 있는 한 구체적으로 답하세요. 잘된 예나 양식 파일이 있으면 함께 올리세요. 실제 예를 보면 Claude가 내가 원하는 결과를 더 정확히 압니다.[^academy-skills]
+
+만든 스킬을 어떻게 저장하는지는 화면에 따라 다를 수 있습니다. 저장할 방법이 안 보이면 Claude에게 스킬 폴더를 ZIP으로 묶어 달라고 하세요. 그 파일을 위의 「스킬 업로드」로 올리면 됩니다.[^skills-use] 고치고 싶은 곳이 생기면 Claude에게 말로 부탁하세요. 대화 옆에 열린 스킬 파일에서 고칠 글자를 칠하고 「Claude로 편집」(Edit with Claude)을 눌러도 됩니다.[^skills-make]
 
 ### 지침·프로젝트·커넥터와 무엇이 다른가
 
@@ -186,6 +235,8 @@
 
 지침은 모든 대화에 두루 적용되고, 스킬은 관련 있을 때만 불러옵니다.[^skills] 프로젝트는 늘 깔려 있는 배경 지식입니다.[^skills] 커넥터가 도구에 **닿게** 한다면, 스킬은 그 도구를 **잘 쓰는 법**을 가르칩니다.[^skills]
 필요할 때만 불러오니 스킬을 여러 개 넣어 둬도 대화 공간을 덜 차지합니다.[^skills]
+
+한 줄로 줄이면 프로젝트는 **알아야 할 자료**를 쥐고, 스킬은 **일하는 순서**를 쥡니다.[^academy-skills] 둘은 함께 쓸 수 있습니다. 고객 자료는 프로젝트에 두고, 상담 준비 순서는 스킬로 두는 식입니다.
 
 ### 조심할 점
 
@@ -205,11 +256,29 @@
 
 ### 넣고 쓰는 법
 
-1. 옆 메뉴 「사용자 정의」(Customize)를 엽니다. 스킬·커넥터·플러그인을 이곳 한 목록에서 찾을 수 있습니다.[^directory]
-2. 「플러그인」 → 「발견」 탭에서 플러그인을 고르고 「추가」를 누릅니다.[^plugins]
+1. 옆 메뉴 ④ 「사용자 지정」(Customize)을 엽니다.[^screen] 스킬·커넥터·플러그인을 이곳 한 목록에서 찾을 수 있습니다.[^directory]
+2. ① 「플러그인」 탭 → ② 「탐색」에서 플러그인을 고르고 「추가」를 누릅니다.[^screen] 도움말에는 「발견」 탭으로 나옵니다.[^plugins]
 3. 대화나 Cowork에서 `/` 를 입력하거나 「+」를 누르면 플러그인에 든 스킬이 보입니다. 골라서 씁니다.[^plugins]
 
-<!-- 스크린샷 필요: 「사용자 정의」 → 「플러그인」 → 「발견」 탭의 플러그인 목록과 「추가」 버튼 -->
+받은 플러그인은 일반적인 일 처리 방식을 담고 있습니다. 내 일의 양식과 순서는 다를 수 있습니다.[^academy-plugins] 넣은 플러그인을 보는 화면 오른쪽 위의 「커스터마이징」(Customize)을 누르면, 그 플러그인을 고치는 Cowork 작업이 열립니다. 「시작하기」(Let's go)를 누르고 Claude와 함께 고치면 됩니다.[^plugins] 메뉴 이름은 화면에 따라 다를 수 있습니다. 내가 실제로 쓰는 예를 보여 주며 부탁하세요.
+
+```
+우리 팀이 지난달에 보낸 견적서 세 개를 올렸어. 이 플러그인의 견적서 스킬이 이 양식과 말투를 따르게 고쳐 줘.
+```
+
+내 일에 맞게 고칠수록 플러그인이 더 쓸모 있어집니다.[^academy-plugins]
+
+![「사용자 지정」 화면. ① 「Skills」「커넥터」「플러그인」 탭, ② 「내 항목」「탐색」, ③ 오른쪽 위 「+ 추가」, ④ 옆 메뉴의 「사용자 지정」에 빨간 번호가 붙어 있다. 가운데에는 Anthropic이 만든 항목과 「추가」「체험」 버튼이 보인다](assets/shot-10-customize-marked.png)
+
+무료 요금제 화면입니다. **빨간 번호는 아래 목록의 번호와 같은 곳입니다.**
+
+- ① 「Skills」·「커넥터」·「플러그인」 — 무엇을 볼지 고르는 탭
+- ② 「내 항목」·「탐색」 — 이미 넣은 것과 새로 둘러볼 것
+- ③ 「+ 추가」 — 새 항목을 더하는 버튼
+- ④ 옆 메뉴 「사용자 지정」 — 이 화면을 여는 곳
+
+「탐색」에는 Anthropic이 만든 스킬·플러그인이 있고, 「체험」 버튼도 보입니다.[^screen]
+무료 요금제 화면에도 「플러그인」 탭과 「+」 메뉴의 「플러그인 추가」가 보입니다.[^screen] 다만 도움말은 플러그인을 유료 요금제 기능으로 안내합니다.[^plugins]
 
 - 추가한 플러그인은 계정에 저장됩니다. 웹 채팅, 데스크톱 앱의 Chat, Cowork에서 쓸 수 있습니다.[^plugins]
 - 일부 기능(하위 에이전트 등)은 채팅에서는 돌지 않고 회색으로 보입니다. [8장](08-cowork.md)의 Cowork에서 돕니다.[^plugins]
@@ -219,11 +288,11 @@
 
 ## 직접 해 보기
 
-1. 「+ 새 프로젝트」로 「주간 보고」 프로젝트를 만들고, 위의 틀을 프로젝트 지침에 넣는다. 지침 칸이 없으면 틀을 글로 적어 프로젝트 지식에 올린다.
+1. 「새 프로젝트」로 「주간 보고」 프로젝트를 만들고, 위의 틀을 프로젝트 지침에 넣는다. 지침 칸이 없으면 틀을 글로 적어 프로젝트 지식에 올린다.
 2. 프로젝트 안에서 새 대화를 열고, 이번 주에 한 일을 아무렇게나 다섯 줄 적어 보낸다. 표가 지침대로 나오는지 본다.
 3. 프로젝트 안에서 새 대화를 하나 더 열고, 첫 메시지를 보내기 전에 「+」 → 「메모리」(Memory)를 끈다([5장](05-memory.md#한-채팅만-메모리-끄기)). 그다음 "아까 대화에서 뭐라고 했지?"라고 물어본다. 메모리를 끈 대화는 앞 대화의 내용을 모른다는 것을 확인한다.
-4. 「사용자 정의」 → 「커넥터」를 열어 어떤 서비스가 있는지 둘러본다. 하나를 연결했다면, 그 커넥터의 도구 중 쓰지 않을 것을 「검색 및 도구」에서 꺼 본다.
-5. 「사용자 정의」 → 「스킬」에서 기본 스킬이 켜져 있는지 본다.
+4. 「사용자 지정」 → 「커넥터」 탭 → 「탐색」을 열어 어떤 서비스가 있는지 둘러본다. 하나를 연결했다면, 그 커넥터의 도구 중 쓰지 않을 것을 「검색 및 도구」에서 꺼 본다.
+5. 「사용자 지정」 → 「Skills」 탭 → 「내 항목」에서 기본 스킬이 켜져 있는지 본다.
 
 ## 정리
 
@@ -254,6 +323,7 @@
 
 다음 장: [8장. Cowork — 일을 통째로 맡기기](08-cowork.md)
 
+[^screen]: Claude 웹 화면(무료 요금제, 한국어)에서 직접 확인. 옆 메뉴 「프로젝트」·「사용자 지정」 / 「프로젝트」 화면의 「새 프로젝트」와 「예제 프로젝트」 표시 / 「+」 메뉴의 「Skills」·「커넥터 추가」·「플러그인 추가」 / 「사용자 지정」 화면의 「Skills」·「커넥터」·「플러그인」 탭, 「내 항목」·「탐색」, 「+ 추가」, 「체험」 (확인일 2026-10-26)
 [^projects]: Anthropic 도움말, 「What are projects?」. "Projects allow you to create self-contained workspaces with their own chat histories and knowledge bases." / "For users on Team and Enterprise plans, projects can be shared with other members of your organization" / "Nothing is lost or deleted in the move." https://support.claude.com/en/articles/9517075 (확인일 2026-10-26)
 [^projects-how]: Anthropic 도움말, 「How can I create and manage projects?」. "Free users can create a maximum of five projects." / "Click "+ New Project" in the upper right corner." / "Give your project a name and description (note that Claude will not have access to these details)." / "Anything you upload to this space will be used across all of your chats within that project." / "Claude will use these instructions for all the chats within the project." / "Note: Context is not shared across chats within a project unless the information is added into the project knowledge base." / "While working in a project, Claude uses the project's memory alongside your memory from chats outside of projects, but not memory from other projects." / "There is no way to delete archived projects at this time (you must unarchive it first)." https://support.claude.com/en/articles/9519177 (확인일 2026-10-26)
 [^personal]: Anthropic 도움말, 「Understanding Claude's personalization features」. "These instructions only apply to chats within that project." https://support.claude.com/en/articles/10185728 (확인일 2026-10-26)
@@ -268,6 +338,11 @@
 [^research]: Anthropic 도움말, 「Use research on Claude」. "During research, Claude can use tools from your connectors automatically, without asking for approval each time." https://support.claude.com/en/articles/11088861 (확인일 2026-10-26)
 [^skills]: Anthropic 도움말, 「What are skills?」. "Skills are available for users on Free, Pro, Max, Team, and Enterprise plans. This feature requires code execution to be enabled." / "Anyone can create skills by writing instructions in Markdown—no coding required for simple skills" / "Custom instructions apply broadly to all your conversations. Skills are task-specific and only load when relevant" / "Projects provide static background knowledge that's always loaded when you start chats within them." / "MCP connections give Claude access to tools, while skills teach Claude how to use those tools effectively." / "Claude determines which skills are relevant and loads the information it needs to complete that task, helping to prevent context window overload." https://support.claude.com/en/articles/12512176 (확인일 2026-10-26)
 [^skills-use]: Anthropic 도움말, 「Use skills in Claude」. "Navigate to Settings > Capabilities and ensure that Code execution and file creation (called Create and edit files in the updated Settings layout) is enabled." / "You don't need to explicitly invoke them—Claude determines when each skill is needed based on your request." / "Toggle any skill on or off using the switch next to it. Disabled skills won't be available to Claude." / "Upload a ZIP file containing your skill folder." / "Try being more explicit in your request (e.g., "Use my brand guidelines skill to create a presentation")." / "The most significant risks are prompt injection, which allows Claude to be manipulated to execute unintended actions, and data exfiltration" https://support.claude.com/en/articles/12512180 (확인일 2026-10-26)
-[^skills-make]: Anthropic 도움말, 「How to create custom skills」. "Recording a skill is available on Pro, Max, and Team plans, in Cowork in Claude for Mac." / "A recording can run for about 10 minutes." https://support.claude.com/en/articles/12512198 (확인일 2026-10-26)
+[^skills-make]: Anthropic 도움말, 「How to create custom skills」. "Recording a skill is available on Pro, Max, and Team plans, in Cowork in Claude for Mac." / "A recording can run for about 10 minutes." / "This is critical—Claude uses this to determine when to invoke your skill (200 characters maximum)." / "Write clear descriptions: Claude uses descriptions to decide when to invoke your skill. Be specific about when it applies." / "Iterate on the description if Claude isn't using it when expected." / "When you're iterating on a skill with Claude in chat, you can edit the skill files directly where they open beside the conversation. Highlight the text you want changed, click "Edit with Claude," and type your request." https://support.claude.com/en/articles/12512198 (확인일 2026-10-26)
 [^directory]: Anthropic 도움말, 「Browse skills, connectors, and plugins in one directory」. "Our unified directory brings skills, connectors, and plugins together in one place" / "Skills you install from the directory are view-only." https://support.claude.com/en/articles/14328846 (확인일 2026-10-26)
-[^plugins]: Anthropic 도움말, 「Use plugins in Claude」. "Plugins are available to all paid plans (Pro, Max, Team, Enterprise)." / "Each plugin bundles skills, connectors, and sub-agents into a single package" / "Claude includes a growing library of plugins for common knowledge work—including sales, finance, legal, marketing, HR, engineering, design, operations, data analysis, and more." / "Select the plugin you want, then click "Add."" / "Type "/" or click the "+" button to see the available skills from your plugins, in chat and in Cowork." / "You can add and use plugins in chat on the web, the Chat tab in Claude Desktop, and Claude Cowork." / "Hooks and sub-agents run in Cowork and Claude Code, not in chat, so they appear grayed out in chat." / "Only install plugins from sources you trust." https://support.claude.com/en/articles/13837440 (확인일 2026-10-26)
+[^plugins]: Anthropic 도움말, 「Use plugins in Claude」. "Plugins are available to all paid plans (Pro, Max, Team, Enterprise)." / "Each plugin bundles skills, connectors, and sub-agents into a single package" / "Claude includes a growing library of plugins for common knowledge work—including sales, finance, legal, marketing, HR, engineering, design, operations, data analysis, and more." / "Select the plugin you want, then click "Add."" / "Type "/" or click the "+" button to see the available skills from your plugins, in chat and in Cowork." / "You can add and use plugins in chat on the web, the Chat tab in Claude Desktop, and Claude Cowork." / "Hooks and sub-agents run in Cowork and Claude Code, not in chat, so they appear grayed out in chat." / "Only install plugins from sources you trust." / "This opens a new Cowork task with a prompt asking Claude to customize the plugin you chose." / "Click “Let's go” to start working with Claude to adjust the plugin's Skills and connectors to match how you work." 한국어판 도움말은 「커스터마이징」 → 「시작하기」로 적는다. https://support.claude.com/en/articles/13837440 (확인일 2026-10-26)
+[^academy-projects]: Claude Academy 「Claude 101」 강의 「Introduction to projects」. "Simply upload it during the conversation and it stays separate from your project knowledge. It's a perfect way to share context or examples without cluttering the knowledge base." / "Begin with a specific use case rather than trying to create one project for everything. You can always add more content as you go." / "Outdated documents can lead to outdated responses. Review and update your project knowledge periodically." https://academy.claude.com/courses/claude-101/introduction-to-projects (확인일 2026-10-26)
+[^academy-connect]: Claude Academy 「Claude 101」 강의 「Connecting your tools」. "Return to Claude and try a simple request, like "Can you access my [tool name]?"" https://academy.claude.com/courses/claude-101/connecting-your-tools (확인일 2026-10-26)
+[^academy-layers]: Claude Academy 「Introduction to Claude Cowork」 강의 「Get better results faster」. "If you find you're explaining the same workflows to Claude multiple times, those will be the right opportunities for your first skills." https://academy.claude.com/courses/introduction-to-claude-cowork/research-analysis-at-scale (확인일 2026-10-26)
+[^academy-skills]: Claude Academy 「Claude 101」 강의 「Working with skills」. "The easiest way to create a custom Skill is through conversation with Claude itself." / "Claude will interview you about your workflow, asking things like: What should this skill do? What makes good output for this type of work? Can you give examples of when you'd use this skill?" / "Templates, style guides, brand assets, or examples of work you're proud of all help Claude understand exactly what you're looking for." / "projects store knowledge, skills perform tasks" https://academy.claude.com/courses/claude-101/working-with-skills (확인일 2026-10-26)
+[^academy-plugins]: Claude Academy 「Introduction to Claude Cowork」 강의 「Plugins: Encode your team's expertise」. "A plugin from the marketplace is a strong default, not a final answer." / "The more you shape it to your team's actual work, the more leverage it produces." https://academy.claude.com/courses/introduction-to-claude-cowork/plugins-cowork-as-a-specialist (확인일 2026-10-26)

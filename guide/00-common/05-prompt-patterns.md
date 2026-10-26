@@ -93,6 +93,7 @@ AI에게 **누구의 입장에서 답할지** 정해 주면, 그 관점에서 �
 긴 글이나 큰 작업을 한 번에 시키면, 결과가 길게 나온 뒤에야 방향이 틀렸다는 것을 알게 됩니다.
 그래서 **먼저 뼈대를 받고, 확인한 뒤, 본문을 받아 보세요.** 단계가 늘어도 결국 이쪽이 더 빠릅니다.
 앞 단계의 결과를 다음 요청의 재료로 이어 붙이는 방식입니다. 그래서 **프롬프트 체이닝**(Prompt Chaining, 사슬처럼 잇기)이라고 부릅니다.
+단계가 많은 일에서는 앞 단계의 작은 실수가 뒤로 갈수록 쌓일 수 있습니다.[^academy-drift] 중간에 한 번 멈추고 확인하면 일찍 바로잡을 수 있습니다.
 
 ![한 번에 요청하면 긴 글이 나온 뒤 방향이 달라 처음부터 다시 해야 하지만, 단계를 나눠 요청하면 목차를 먼저 받고 내가 확인해 고친 뒤 본문을 받는다](assets/ch5-steps.svg)
 
@@ -289,3 +290,4 @@ AI는 틀린 내용도 자신 있게 말합니다. 그래서 **어디가 불확�
 [^cot]: Wei 외, 「Chain-of-Thought Prompting Elicits Reasoning in Large Language Models」, 2022-01-28 arXiv 공개. https://arxiv.org/abs/2201.11903 (확인일 2026-10-20)
 [^zeroshotcot]: Kojima 외, 「Large Language Models are Zero-Shot Reasoners」, 2022-05-24 arXiv 공개. https://arxiv.org/abs/2205.11916 (확인일 2026-10-20)
 [^inverse]: Gema 외, 「Inverse Scaling in Test-Time Compute」, 2025-07-19 arXiv 공개, TMLR 2025년 12월 게재. "extending the reasoning length of Large Reasoning Models (LRMs) deteriorates performance". https://arxiv.org/abs/2507.14417 (확인일 2026-10-21)
+[^academy-drift]: Claude Academy 「AI capabilities and limitations」 강의 「Steerability」. "reasoning drift (small errors compound)" / "Now try again, but ask the AI to stop and show you the result of step 2 before continuing." https://academy.claude.com/courses/ai-capabilities-and-limitations/steerability (확인일 2026-10-26)

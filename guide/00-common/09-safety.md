@@ -34,6 +34,7 @@ AI는 훈련과 평가에서 **"모르겠다"고 말하는 것보다 찍어서 �
 2. **"모르면 모른다고 해"라고 허락한다.** 찍지 않아도 된다고 미리 말해 주면 지어내는 일이 줄어듭니다.
 3. **확실한 것과 추측을 나누게 한다.** 그러면 어느 부분을 확인해야 할지 보입니다.
 4. **다른 길로 한 번 더 확인한다.** 공식 사이트, 원문, 검색으로 교차 확인합니다. 다른 AI에게 물어보는 것은 도움은 되지만 확인을 대신하지는 못합니다. 둘 다 틀릴 수 있기 때문입니다.
+   같은 질문을 새 대화에서 한 번 더 해 보는 것도 방법입니다.[^academy-resample] 두 답에서 달라진 숫자나 이름이 있다면 그곳부터 확인하세요. 두 답이 같다고 맞는 답이라는 뜻은 아닙니다([1장](01-what-is-llm.md#확률적-은-아무렇게나-가-아닙니다)).
 
 ```
 우리나라 근로기준법에서 연차 유급휴가가 며칠인지 알려 줘.
@@ -127,6 +128,14 @@ A 대리 입장에서 쓰는 경위서 초안을 써 줘. 이름·날짜·금액
 1. AI 결과물을 그대로 내지 말고 직접 고치고 더한다.
 2. 학교 과제나 회사 문서라면 AI를 썼는지 밝혀야 하는지 규정을 확인한다.
 3. 결과물을 팔거나 광고에 쓸 생각이라면 그 AI 서비스의 이용약관에서 상업적 이용 조건을 확인한다.
+
+2번처럼 AI를 쓴 사실을 밝혀야 한다면 길게 쓸 필요는 없습니다. 무엇을 AI에게 맡겼고, 내가 무엇을 확인했는지 한두 문장이면 됩니다.
+어디까지 밝혀야 하는지는 학교·회사마다 다를 수 있으니 2번의 규정을 따르세요.[^academy-diligence]
+
+```
+이 보고서의 초안 작성과 맞춤법 검토에 AI([사용한 AI 서비스])를 썼습니다.
+숫자와 인용은 원래 자료에서 직접 확인했고, 내용의 책임은 제게 있습니다.
+```
 
 <Quiz id="ch9-copyright" />
 
@@ -249,3 +258,5 @@ OWASP도 프롬프트 인젝션을 **확실하게 막는 방법이 있는지는 
 [^usco]: U.S. Copyright Office, 「Copyright and Artificial Intelligence, Part 2: Copyrightability」, 2025년 1월. "Copyright does not extend to purely AI-generated material" / "prompts do not alone provide sufficient control" / 사람의 "creative selection, coordination, or arrangement … or creative modifications"는 보호. https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf (확인일 2026-10-21)
 [^kcc]: 한국저작권위원회 자료실 등록 2025-06-30(첨부 파일명에 문화체육관광부 표기). 「생성형 인공지능 활용 저작물의 저작권 등록 안내서」 https://www.copyright.or.kr/information-materials/publication/research-report/view.do?brdctsno=54253 · 「생성형 인공지능 결과물에 의한 저작권 분쟁 예방 안내서」 https://www.copyright.or.kr/information-materials/publication/research-report/view.do?brdctsno=54252 (제목·날짜 확인일 2026-10-21, 본문 내용은 이 장에 인용하지 않음)
 [^owasp]: OWASP GenAI Security Project, 「LLM01:2025 Prompt Injection」(OWASP Top 10 for LLM Applications 2025, 1위). "Indirect prompt injections occur when an LLM accepts input from external sources, such as websites or files" / "it is unclear if there are fool-proof methods of prevention for prompt injection". https://genai.owasp.org/llmrisk/llm01-prompt-injection/ (확인일 2026-10-21)
+[^academy-resample]: Claude Academy 「AI capabilities and limitations」 강의 「Next Token Prediction」. "Run the exact same specific-facts request in a fresh conversation. Compare the two outputs." https://academy.claude.com/courses/ai-capabilities-and-limitations/next-token-prediction (확인일 2026-10-26)
+[^academy-diligence]: Claude Academy 「AI Fluency: Framework and foundations」 강의 「A closer look at Diligence」. "A diligence statement is a transparent acknowledgment of AI's role in your work, along with your commitment to responsibility for the final output." / "Different contexts (personal, academic, professional) may have different expectations for disclosure and verification" https://academy.claude.com/courses/ai-fluency-framework-foundations/a-closer-look-at-diligence (확인일 2026-10-26)

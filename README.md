@@ -28,7 +28,7 @@ ChatGPT나 Claude에 질문은 해 봤지만 "이게 다인가?" 싶었던 분�
 
 ## 진행 상황
 
-1단계 공통 가이드(1~9장 + 10장 실습 과제)와 2단계 [ChatGPT 사용 가이드](https://amecoder.github.io/hello-llm/guide/11-chatgpt/)(11장)와 [Claude 사용 가이드](https://amecoder.github.io/hello-llm/guide/10-claude/)(11장)를 공개했습니다. 장마다 나온 프롬프트를 쓰임새별로 모은 [바로 쓰는 프롬프트 모음](https://amecoder.github.io/hello-llm/guide/00-common/prompt-library), 각 절 끝의 확인 퀴즈, 내 AI 이해 레벨을 확인하는 [이해도 확인 시험](https://amecoder.github.io/hello-llm/guide/00-common/certificate)도 있습니다.
+1단계 공통 가이드(1~9장 + 10장 실습 과제)와 2단계 [ChatGPT 사용 가이드](https://amecoder.github.io/hello-llm/guide/11-chatgpt/)(11장)와 [Claude 사용 가이드](https://amecoder.github.io/hello-llm/guide/10-claude/)(12장)를 공개했습니다. 장마다 나온 프롬프트를 쓰임새별로 모은 [바로 쓰는 프롬프트 모음](https://amecoder.github.io/hello-llm/guide/00-common/prompt-library), 각 절 끝의 확인 퀴즈, 내 AI 이해 레벨을 확인하는 [이해도 확인 시험](https://amecoder.github.io/hello-llm/guide/00-common/certificate)도 있습니다.
 앞으로는 실제 서비스와 같은 화면에서 안내 말풍선(코치 마크)을 따라 직접 연습해 볼 수 있는 실습 환경도 준비합니다.
 
 ## 저장소 구조

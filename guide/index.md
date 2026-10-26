@@ -55,7 +55,7 @@ features:
     link: /guide/00-common/10-practice
     linkText: 해 보기
   - title: 바로 쓰는 프롬프트 모음
-    details: 메일·요약·이력서·회의록·계약 준비 등 1단계와 ChatGPT 가이드의 프롬프트 43개를 쓰임새별로 — 복사해서 빈칸만 바꾸면 끝
+    details: 메일·요약·이력서·회의록·계약 준비 등 1단계와 ChatGPT·Claude 가이드의 프롬프트 46개를 쓰임새별로 — 복사해서 빈칸만 바꾸면 끝
     link: /guide/00-common/prompt-library
     linkText: 모음 보기
   - title: 이해도 확인 시험 — 내 AI 이해 레벨은?
@@ -67,7 +67,7 @@ features:
     link: /guide/11-chatgpt/
     linkText: 2단계 시작
   - title: 2단계 · Claude 사용 가이드
-    details: 시작하기, 화면, 대화 관리, 파일과 아티팩트, 메모리, 검색과 리서치, 프로젝트·커넥터, Cowork, 개인정보 설정까지 — 공식 도움말 확인 기준 11장
+    details: 시작하기, 화면, 대화 관리, 파일과 아티팩트, 메모리, 검색과 리서치, 프로젝트·커넥터, Cowork, 개인정보 설정, 전문가처럼 쓰기까지 — 공식 도움말 확인 기준 12장
     link: /guide/10-claude/
     linkText: Claude 가이드 시작
   - title: AI 지식 레벨 시험 — 초급부터 전문가까지

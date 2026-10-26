@@ -190,6 +190,19 @@ OpenAI의 가이드도 XML이 잘 동작한다고 적고 있습니다. 긴 문�
 Anthropic의 문서에 따르면 질문을 끝에 두었을 때 테스트에서 답의 품질이 최대 30%까지 좋아졌습니다.
 여러 문서를 함께 넣은 복잡한 경우에 특히 효과가 컸습니다.[^anthropic] 위 견적서 예시가 이 순서로 되어 있습니다.
 
+꼭 지켜야 할 조건이 있다면 맨 앞에 한 번 쓰고, 맨 끝 질문 옆에 한 번 더 써 보세요.
+긴 자료의 한가운데 묻힌 지시는 놓치기 쉽기 때문입니다.[^academy-edges] 자료는 위, 질문은 아래라는 순서는 그대로 둡니다.
+
+```
+조건: 답은 표 한 개로만 줘.
+
+<자료>
+[긴 자료]
+</자료>
+
+위 자료에서 계약 해지 조건만 뽑아 줘. 다시 말하지만 답은 표 한 개로만 줘.
+```
+
 ### 마크다운과 XML, 무엇을 쓸까
 
 - **내 요청을 읽기 좋게 나누고 싶다면** 마크다운 제목을 쓰세요.
@@ -357,3 +370,4 @@ AI가 만든 JSON도 쉼표가 빠지는 등 틀릴 수 있습니다. 오류가 
 
 [^anthropic]: Anthropic, 「Prompting best practices」 중 "Structure prompts with XML tags"와 긴 문서 다루기 항목. https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices (확인일 2026-10-20)
 [^openai]: OpenAI Cookbook, 「GPT-4.1 Prompting Guide」 중 구분자(Delimiters) 항목. 2025년 4월 GPT-4.1 공개 무렵 작성, 현재 보관(archived) 문서. https://developers.openai.com/cookbook/examples/gpt4-1_prompting_guide (확인일 2026-10-20)
+[^academy-edges]: Claude Academy 「AI capabilities and limitations」 강의 「Try It Out: Working Memory」. "put your most important instructions at the beginning and end of the context" / "If a constraint absolutely must be followed, state it early in the system prompt and restate it near the end." https://academy.claude.com/courses/ai-capabilities-and-limitations/try-it-out-q7hdjm9twcbt (확인일 2026-10-26)

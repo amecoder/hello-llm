@@ -1,16 +1,19 @@
-"""Draw numbered red boxes on ChatGPT screenshots so the text can say "①" instead of describing positions.
+"""Draw numbered red boxes on service screenshots so the text can say "①" instead of describing positions.
 
-usage: python3 docs/tools/mark-shots.py   (reads docs/tools/shot-marks.json, writes guide/11-chatgpt/assets/<name>.png)
+usage: python3 docs/tools/mark-shots.py [spec.json]
+  default spec docs/tools/shot-marks.json (ChatGPT); docs/tools/claude-shot-marks.json for Claude.
+  A spec's "_assets" key names the folder (relative to the repo) that holds sources and outputs.
 """
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[2]
-ASSETS = ROOT / "guide/11-chatgpt/assets"
+DEFAULT_ASSETS = "guide/11-chatgpt/assets"
 SPEC = Path(__file__).with_name("shot-marks.json")
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 RED = (229, 57, 53)
@@ -28,8 +31,8 @@ def badge_center(box: tuple[int, int, int, int], size: tuple[int, int], R: int) 
     return min(max(x1 + R + 2, R + 1), w - R - 1), min(max(y1 - R - 2, R + 1), h - R - 1)
 
 
-def mark(name: str, entry: dict) -> Path:
-    im = Image.open(ASSETS / f"{entry['src']}.png").convert("RGB")
+def mark(name: str, entry: dict, assets: Path) -> Path:
+    im = Image.open(assets / f"{entry['src']}.png").convert("RGB")
     dx = dy = 0
     if "crop" in entry:
         dx, dy = entry["crop"][:2]
@@ -45,16 +48,18 @@ def mark(name: str, entry: dict) -> Path:
         cx, cy = (m[4] - dx, m[5] - dy) if len(m) == 6 else badge_center(box, im.size, R)
         draw.ellipse((cx - R, cy - R, cx + R, cy + R), fill=RED, outline=(255, 255, 255), width=round(2 * scale))
         draw.text((cx, cy), str(n), fill=(255, 255, 255), font=font, anchor="mm")
-    out = ASSETS / f"{name}.png"
+    out = assets / f"{name}.png"
     im.save(out, optimize=True)
     return out
 
 
 def main() -> None:
-    spec = json.loads(SPEC.read_text(encoding="utf-8"))
+    path = Path(sys.argv[1]) if len(sys.argv) > 1 else SPEC
+    spec = json.loads(path.read_text(encoding="utf-8"))
+    assets = ROOT / spec.get("_assets", DEFAULT_ASSETS)
     for name, entry in spec.items():
         if not name.startswith("_"):
-            print(mark(name, entry).name)
+            print(mark(name, entry, assets).name)
 
 
 if __name__ == "__main__":

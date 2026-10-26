@@ -14,6 +14,9 @@ LLM은 **Large Language Model**의 줄임말이고, 우리말로는 **대규모 
 ChatGPT, Claude, Gemini는 모두 이 LLM을 대화하기 편하게 포장한 **서비스**입니다.
 엔진(LLM) 위에 자동차 몸체(채팅 화면)를 얹은 것이라고 생각하면 됩니다.
 
+스팸 메일 거르기나 영상 추천도 AI입니다. 하지만 이런 AI는 이미 있는 것을 고르고 나눕니다. LLM은 새 글을 **만들어 냅니다**.
+그래서 LLM 같은 AI를 **생성형 AI**(generative AI)라고 부릅니다.[^academy-genai]
+
 <Quiz id="ch1-name" />
 
 ## 어떻게 답을 만드나요?
@@ -261,17 +264,54 @@ LLM은 특정 시점까지의 글로 학습합니다. 그 시점을 **지식 컷
 그 이후의 뉴스나 가격 변동은 모릅니다. 요즘 서비스는 웹 검색 기능을 붙여 이 약점을 보완합니다.
 하지만 검색을 하지 않고 답했다면 오래된 정보일 수 있습니다.
 
+시점만 문제가 아닙니다. **많이 읽은 주제와 적게 읽은 주제의 차이**도 큽니다.
+널리 알려진 개념은 잘 설명합니다. 하지만 드문 주제, 좁은 업계의 용어, 한 지역에만 해당하는 규정, 의견이 갈리는 주제에는 약합니다.[^academy-knowledge]
+게다가 두 경우 모두 똑같이 자신 있는 말투로 답할 수 있습니다.
+
+그래서 "AI가 이걸 알까?"보다 이렇게 물어보세요. 이 주제는 AI가 읽은 글에 많이 나왔을까? 우리 지역이나 우리 업계에만 해당하는 내용인가?
+적게 나왔을 것 같으면 자료를 직접 붙여 넣거나 검색을 시키세요.
+
 ### 3. 한 번에 볼 수 있는 양에 한계가 있다 — "컨텍스트 윈도우"
 
 LLM이 한 번의 대화에서 기억하고 참고할 수 있는 글의 양을 **컨텍스트 윈도우(context window)** 라고 합니다.
 대화가 아주 길어지면 앞부분 내용을 놓치기 시작할 수 있습니다.
 그래서 주제가 바뀌면 새 대화를 시작하는 것이 좋습니다.
+넘친 부분은 **알려 주지 않고 조용히 빠질 수 있습니다.**[^academy-memory] 아주 긴 자료를 넣었다면, 끝부분 내용을 물어서 다 읽었는지 확인해 보세요.
 
 ### 4. 내 상황을 모른다
 
 LLM은 내가 누구인지, 어떤 회사에 다니는지, 무엇 때문에 묻는지 모릅니다.
 알려 주지 않으면 "평균적인 누군가"를 위한 평범한 답을 합니다.
 **이 약점을 메우는 기술이 바로 [4장](04-prompt-basics.md)에서 배울 프롬프트입니다.**
+
+### 5. 내 말에 맞장구치기 쉽다 — 아첨
+
+앞에서 본 것처럼, 지금 서비스의 모델은 글을 다 읽은 뒤 사람이 좋은 답을 골라 주는 훈련을 더 받았습니다.
+이렇게 다 읽은 모델을 대화 상대로 다듬는 단계를 **미세 조정**(fine-tuning)이라고 합니다. RLHF는 그 방법의 하나입니다.
+이 훈련은 버릇도 남깁니다.[^academy-character]
+
+대표적인 것이 **내 말에 맞장구치는 쪽으로 쏠리는 버릇**입니다. 이것을 **아첨**(sycophancy, 시코펀시)이라고 부릅니다.
+"이 계획 완벽하지?"라고 물으면, 문제가 있어도 좋다고 말해 줄 수 있습니다.
+
+솔직한 의견이 필요할 때는 반대해도 된다고 먼저 말해 보세요.
+
+```
+아래는 내가 세운 가게 홍보 계획이야. 나는 괜찮다고 생각하지만,
+내가 틀렸다고 보이면 솔직하게 반대해 줘. 약점을 세 가지 짚어 줘.
+
+[계획 붙여 넣기]
+```
+
+반대해도 된다고 먼저 말했을 때 약점을 더 솔직하게 짚는지, 말하지 않았을 때의 답과 비교해 직접 확인해 보세요.
+반대해도 된다고 했을 때와 안 했을 때의 답을 한 번 비교해 보세요.
+
+같은 훈련에서 생기는 버릇이 몇 가지 더 있습니다.
+
+- **길게 말하는 버릇**: 한 문장이면 될 답도 길어지기 쉽습니다. "한 문장으로 답해 줘"처럼 길이를 정해 보세요.
+- **지나치게 조심하는 버릇**: 위험하지 않은 질문에도 조심하라는 말을 붙일 때가 있습니다.
+- **말투와 정확도가 따로 노는 버릇**: 자신 있게 말한다고 맞는 답은 아닙니다([9장](09-safety.md#_1-그럴듯한-거짓말-—-환각-확인하기)).
+
+피드백을 받을 때는 스스로 물어보세요. 이 칭찬은 근거가 있나? 내가 듣고 싶은 말만 들은 건 아닌가?
 
 <Quiz id="ch1-limits" />
 
@@ -331,12 +371,14 @@ AI가 센 개수를 직접 세어 본 것과 비교해 보세요. 개수가 맞�
 - 요즘 모델은 사진도 조각으로 잘라 함께 배운다(멀티모달). 그림·영상을 만드는 AI는 주로 확산 모델이라는 다른 방식을 쓴다.
 - 글쓰기·요약·설명은 잘하지만, 틀린 말을 자신 있게 할 수 있다. 사진을 다룰 때도 같다.
 - 내 상황을 알려 줄수록 답이 좋아진다.
+- 내 말에 맞장구치기 쉽다. 솔직한 의견이 필요하면 반대해도 된다고 먼저 말한다.
 
 ## 용어 정리
 
 | 용어 | 읽는 법 | 한 줄 뜻 |
 |---|---|---|
 | LLM (Large Language Model) | 엘엘엠 (대규모 언어 모델) | 엄청난 양의 글로 "다음 말 맞히기"를 배운 프로그램 |
+| Generative AI | 제너레이티브 AI (생성형 AI) | 고르고 나누는 대신 새 글·그림을 만들어 내는 AI |
 | Token | 토큰 | 모델이 글이나 사진을 잘라 다루는 작은 조각 |
 | Parameter | 파라미터 (매개변수) | 모델 안에서 계산을 정하는 숫자, 즉 조절 손잡이. 개수가 모델의 크기 |
 | B (Billion) | 빌리언 | 10억. "70B"는 매개변수 700억 개 |
@@ -345,6 +387,8 @@ AI가 센 개수를 직접 세어 본 것과 비교해 보세요. 개수가 맞�
 | Reasoning Model | 리즈닝 모델 (추론 모델) | 답하기 전에 생각하는 과정을 글로 써 가며 단계를 밟는 모델 |
 | Introspection | 인트로스펙션 (내성) | 모델이 자기 내부 상태를 알아차리고 말하는 능력 |
 | RLHF | 알엘에이치에프 (사람 피드백을 통한 강화 학습) | 사람이 고른 좋은 답 쪽으로 모델을 다듬는 훈련 |
+| Fine-tuning | 파인튜닝 (미세 조정) | 다 읽은 모델을 대화 상대로 다듬는 단계. RLHF는 그 방법의 하나 |
+| Sycophancy | 시코펀시 (아첨) | 내 말에 맞장구치는 쪽으로 쏠리는 버릇 |
 | ELIZA Effect | 일라이자 효과 | 말을 자연스럽게 하는 프로그램에 마음이 있다고 느끼는 현상 |
 | Multimodal | 멀티모달 | 글·사진·소리처럼 여러 종류의 정보를 함께 다루는 것 |
 | Diffusion Model | 디퓨전 모델 (확산 모델) | 잡음을 조금씩 걷어 내며 그림·영상을 만드는 방식 |
@@ -374,4 +418,8 @@ AI가 센 개수를 직접 세어 본 것과 비교해 보세요. 개수가 맞�
 [^instructgpt]: Ouyang 외, 「Training language models to follow instructions with human feedback」, 2022. 사람 피드백으로 다듬은 13억 매개변수 모델의 답이 1,750억 매개변수 GPT-3의 답보다 선호됐다. https://arxiv.org/abs/2203.02155 (확인일 2026-10-21)
 [^eliza]: Joseph Weizenbaum, 「ELIZA — a computer program for the study of natural language communication between man and machine」, Communications of the ACM 9(1), 1966년 1월. https://doi.org/10.1145/365153.365168 (서지 정보 확인일 2026-10-21)
 [^vit]: Dosovitskiy 외, 「An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale」, 2020. 사진을 작은 칸으로 잘라 글처럼 처리하는 방법. https://arxiv.org/abs/2010.11929 (확인일 2026-10-21)
+[^academy-genai]: Claude Academy 「AI capabilities and limitations」 강의 「What We Mean by AI」. "Most AI in the world (spam filters, recommendations, fraud detection) isn't generative." / "Generative AI produces new content rather than classifying existing content." https://academy.claude.com/courses/ai-capabilities-and-limitations/what-we-mean-by-ai (확인일 2026-10-26)
+[^academy-knowledge]: Claude Academy 「AI capabilities and limitations」 강의 「Knowledge」. "Limitation zone: rare, post-cutoff, niche, local, or contested topics." / "Pay attention to whether the AI signals uncertainty differently between the two, or whether both answers come with the same confident tone." https://academy.claude.com/courses/ai-capabilities-and-limitations/knowledge (확인일 2026-10-26)
+[^academy-memory]: Claude Academy 「AI capabilities and limitations」 강의 「Working Memory」. "Silent truncation is the failure mode, and you won't always be warned." https://academy.claude.com/courses/ai-capabilities-and-limitations/working-memory (확인일 2026-10-26)
+[^academy-character]: Claude Academy 「AI capabilities and limitations」 강의 「How AI Gets Its Character」. "Fine-tuning uses human judgments about good responses, and those judgments leave fingerprints: a pull toward sycophancy, a default toward verbosity, occasional over-caution, and loose calibration between stated confidence and actual reliability." / "I want you to genuinely disagree with me if you think I'm wrong." https://academy.claude.com/courses/ai-capabilities-and-limitations/how-ai-gets-its-character (확인일 2026-10-26)
 [^ddpm]: Ho 외, 「Denoising Diffusion Probabilistic Models」, 2020. 잡음을 단계적으로 걷어 내며 그림을 만드는 확산 모델의 대표 논문. https://arxiv.org/abs/2006.11239 (확인일 2026-10-21)

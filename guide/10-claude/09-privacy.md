@@ -1,13 +1,13 @@
 # 9장. 개인정보와 안전 — 내 대화가 어디까지 가는지 알기
 
-> **한 줄 요약**: Claude에 보낸 대화가 AI 학습에 쓰일지는 「AI 모델 개선 지원」 스위치 하나로 정합니다.
+> **한 줄 요약**: Claude에 보낸 대화가 AI 학습에 쓰일지는 「Help improve our AI models」 스위치 하나로 정합니다.
 > 지운 대화는 30일 안에 서버에서도 지워집니다. 내보내기·계정 삭제·신고·위기 지원이 어디 있는지도 이 장에서 함께 봅니다.
 
 화면은 2026년 10월 웹 기준입니다. 설정 화면이 새 화면과 옛 화면 두 가지로 쓰이고 있어서, 메뉴 이름과 위치는 화면에 따라 다를 수 있습니다.
 
 **무엇을 넣지 말아야 하는지**는 어느 AI에나 똑같습니다. [1단계 9장 「넣지 말아야 할 것」](../00-common/09-safety.md#넣지-말아야-할-것)에서 이미 다뤘습니다. 이 장에서는 **이미 넣은 대화를 Claude에서 어떻게 다루는지**만 봅니다.
 
-## 학습에 쓰일지 정하기 — 「AI 모델 개선 지원」
+## 학습에 쓰일지 정하기 — 「Help improve our AI models」
 
 **모델 학습**(model training)은 AI 회사가 사람들의 대화를 모아 다음 AI를 더 좋게 가르치는 일입니다. Claude에서는 내 대화가 학습에 쓰이는 경우가 크게 세 가지입니다.[^training-use]
 
@@ -20,12 +20,21 @@
 ### 스위치 찾는 법
 
 1. 왼쪽 아래 내 이름을 누르고 「설정」을 엽니다.
-2. 「개인정보 보호」(Privacy)를 누릅니다. 문서에 따라 「개인정보」라고도 적혀 있습니다.
-3. 「AI 모델 개선 지원」(Help improve our AI models) 스위치를 켜거나 끕니다.
+2. 왼쪽 메뉴에서 「개인정보보호」를 누릅니다.[^screen]
+3. ② 「Help improve our AI models」 스위치를 켜거나 끕니다. 한국어 화면인데도 이 줄은 영어로 나옵니다.[^screen] 한국어 도움말에서는 「AI 모델 개선 지원」이라고 부릅니다.
 
-휴대폰 앱도 순서가 같습니다. 이름 → 「설정」 → 「개인정보 보호」 → 같은 스위치입니다.[^toggle]
+![「설정」 → 「개인정보보호」 화면. ① 「위치 메타데이터」, ② 「Help improve our AI models」 스위치, ③ 「데이터 내보내기」, ④ 「공유된 채팅」 → 「관리」에 빨간 번호가 붙어 있다](assets/shot-09-settings-privacy-marked.png)
 
-<!-- 스크린샷 필요: 「설정 > 개인정보 보호」 화면에서 「AI 모델 개선 지원」 스위치가 보이는 모습 -->
+무료 요금제 화면입니다. **빨간 번호는 아래 목록의 번호와 같은 곳입니다.**
+
+- ① **「위치 메타데이터」**: 대략적인 위치(도시·지역)를 쓰게 할지 정합니다. 아래 「위치는 어떻게 쓰나」에서 봅니다.[^screen]
+- ② **「Help improve our AI models」**: 내 대화를 학습에 쓰게 할지 정합니다.[^screen]
+- ③ **「데이터 내보내기」**: 내 기록을 파일로 받습니다. 아래 「내 데이터 내려받기」에서 봅니다.[^screen]
+- ④ **「공유된 채팅」 → 「관리」**: 내가 링크로 공유한 대화를 봅니다([3장](03-chats.md)).[^screen]
+
+그 아래에도 「공유된 아티팩트」, 「업로드한 파일」, 「내 피드백」, 「메모리 설정」이 있고, 각각 「관리」 버튼이 있습니다.[^screen]
+
+휴대폰 앱도 순서가 같습니다. 이름 → 「설정」 → 개인정보 보호 → 같은 스위치입니다. 앱의 메뉴 이름은 웹과 조금 다를 수 있습니다.[^toggle]
 
 ### 끄면 무엇이 달라지나
 
@@ -42,7 +51,11 @@
 
 ### 처음부터 남기기 싫은 대화라면
 
-**시크릿 채팅**(Incognito)을 쓰세요. 시크릿 채팅은 스위치를 켜 두었더라도 학습에 쓰이지 않습니다.[^training-use] 다만 기록에는 안 남아도 기본 30일 동안은 보관됩니다.[^incognito] 시작하는 법은 [3장](03-chats.md)에 있습니다.
+**시크릿 채팅**(Incognito)을 쓰세요. 첫 화면 오른쪽 위 유령 모양 버튼으로 엽니다. 시작하는 법은 [3장](03-chats.md)에 있습니다.
+
+![시크릿 모드 화면. ① 위쪽 검은 띠 왼쪽 「시크릿」, ② 점선 입력창, ③ 안내 문구, ④ 오른쪽 위 ✕(나가기)에 빨간 번호가 붙어 있다](assets/shot-06-incognito-marked.png)
+
+무료 요금제 화면입니다. ③ 안내 문구는 "시크릿 세션은 기록, 메모리, 검색에 남지 않으며 Claude 학습에 사용되지 않습니다."입니다.[^screen] 스위치를 켜 두었더라도 시크릿 채팅은 학습에 쓰이지 않습니다.[^training-use] 다만 기록에는 안 남아도 기본 30일 동안은 보관됩니다.[^incognito] 끝내려면 ④ ✕를 누르세요.
 
 **좋아요/싫어요는 가볍게 누르지 마세요.** 피드백을 보내면 그 대화 전체가 최대 5년 동안 저장됩니다. 학습에 쓰일 수도 있습니다.[^feedback] 민감한 이야기를 나눈 대화라면 피드백 대신 다른 방법을 고르는 편이 낫습니다.
 
@@ -77,11 +90,15 @@
 
 ### 위치는 어떻게 쓰나
 
-"근처 맛집"처럼 웹 검색으로 가까운 결과를 찾을 때, Claude는 인터넷 접속 주소(IP 주소)로 도시·지역 정도의 대략적인 위치를 쓸 수 있습니다. 이 용도는 「개인정보 보호 대시보드」에서 끌 수 있습니다. 휴대폰 앱에서는 휴대폰 설정에서 위치 권한을 관리합니다. 다만 보안과 악용을 막기 위해 나라·지역 정도를 짐작하는 것은 끌 수 없습니다.[^location]
+"근처 맛집"처럼 웹 검색으로 가까운 결과를 찾을 때, Claude는 인터넷 접속 주소(IP 주소)로 도시·지역 정도의 대략적인 위치를 쓸 수 있습니다. 이 화면에서는 「개인정보보호」의 ① 「위치 메타데이터」 스위치가 이 일을 정합니다.[^screen] 휴대폰 앱에서는 휴대폰 설정에서 위치 권한을 관리합니다. 다만 보안과 악용을 막기 위해 나라·지역 정도를 짐작하는 것은 끌 수 없습니다.[^location]
 
 ### 모르는 기기가 보이면
 
-「설정」 → 「계정」의 「활성 세션」(새 화면에서는 「로그인된 위치」)에서 내 계정에 로그인한 기기를 볼 수 있습니다. 모르는 기기가 보이면 옆의 「⋮」 → 「종료」로 바로 끊으세요.[^sessions] Claude에는 전용 비밀번호가 없으니([1장](01-getting-started.md)), 로그인에 쓰는 이메일이나 Google 계정의 보안을 점검하세요. 자세한 방법은 [3장](03-chats.md)에 있습니다.
+「설정」 → 「계정」의 「활성 세션」(화면에 따라 「로그인된 위치」)에서 내 계정에 로그인한 기기를 볼 수 있습니다. 표에 기기·위치·생성됨·업데이트됨이 나옵니다.[^screen] 모르는 기기가 보이면 옆의 「⋮」 → 「종료」로 바로 끊으세요.[^sessions]
+
+![「설정」 → 「계정」 화면. ① 「성명」과 「Claude가 어떻게 불러드릴까요?」, ② 「Claude 지침」, ③ 「모든 기기에서 로그아웃」, ④ 「계정 삭제」에 빨간 번호가 붙어 있다](assets/shot-09-settings-account-marked.png)
+
+무료 요금제 화면입니다. 「활성 세션」 표는 그림 아래쪽에 있어 그림에는 나오지 않습니다.[^screen] 어느 기기인지 모르겠다면 ③ **「모든 기기에서 로그아웃」**으로 한꺼번에 끊을 수도 있습니다.[^screen] ① 이름과 ② 지침은 [5장](05-memory.md)에서 봅니다. Claude에는 전용 비밀번호가 없으니([1장](01-getting-started.md)), 로그인에 쓰는 이메일이나 Google 계정의 보안을 점검하세요. 자세한 방법은 [3장](03-chats.md)에 있습니다.
 
 <Quiz id="ch209-access" />
 
@@ -89,8 +106,8 @@
 
 **데이터 내보내기**(export)는 지금까지의 대화 기록과 계정 정보를 파일로 받는 기능입니다. 계정을 지우기 전에 백업용으로 씁니다. Free·Pro·Max 개인 사용자 모두 쓸 수 있습니다.[^export]
 
-1. 웹이나 컴퓨터 앱에서 「설정」 → 「개인정보 보호」를 엽니다.
-2. 「데이터 내보내기」를 누릅니다.
+1. 웹이나 컴퓨터 앱에서 「설정」 → 「개인정보보호」를 엽니다.[^screen]
+2. 위 그림의 ③ 「데이터 내보내기」 버튼을 누릅니다.
 3. 준비가 끝나면 계정 이메일로 내려받기 링크가 옵니다.
 4. 로그인한 상태에서 링크를 눌러 받습니다.
 
@@ -114,11 +131,9 @@
 
 기기별로 지우는 순서는 이렇습니다.[^delete]
 
-- **웹**: 왼쪽 아래 이름 → 「설정」 → 「계정」 → 「계정 삭제」
+- **웹**: 왼쪽 아래 이름 → 「설정」 → 「계정」 → 위 그림의 ④ 「계정 삭제」[^screen]
 - **아이폰**: 「설정」 → 계정 항목의 「프로필」 → 「계정 삭제」 → 「삭제」
 - **안드로이드**: 왼쪽 위 메뉴 → 왼쪽 아래 이니셜 → 「프로필」 → 「계정 작업」의 「계정 삭제」 → 「동의합니다」(I Understand)
-
-<!-- 스크린샷 필요: 웹 「설정 > 계정」 화면에서 「계정 삭제」 버튼 위치(누르지 않은 상태) -->
 
 같은 이메일로 만든 계정이 여러 개라면, 지원팀에 연락할 때 어느 계정을 지울지 정확히 알려야 합니다.[^delete] Claude를 Slack 같은 다른 서비스 안에서 써 왔다면, 그 서비스에 삭제를 요청해야 합니다.[^third-party]
 
@@ -189,11 +204,11 @@ Claude에는 해로운 내용을 걸러 내는 장치가 있습니다. 해로운
 
 **1. 내 학습 설정 확인하기**
 
-「설정」 → 「개인정보 보호」를 열고 「AI 모델 개선 지원」이 켜져 있는지 봅니다. 원하는 쪽으로 바꾼 뒤, 휴대폰 앱이 있다면 앱에서도 같은 값인지 확인합니다.
+「설정」 → 「개인정보보호」를 열고 ② 「Help improve our AI models」가 켜져 있는지 봅니다. 원하는 쪽으로 바꾼 뒤, 휴대폰 앱이 있다면 앱에서도 같은 값인지 확인합니다.
 
 **2. 로그인한 기기 둘러보기**
 
-「설정」 → 「계정」에서 「활성 세션」(또는 「로그인된 위치」)을 열어 봅니다. 모두 내가 아는 기기인가? 모르는 곳이 있다면 바로 종료합니다.
+「설정」 → 「계정」을 아래로 내려 「활성 세션」(또는 「로그인된 위치」)을 봅니다. 모두 내가 아는 기기인가? 모르는 곳이 있다면 바로 종료합니다.
 
 **3. Claude에게 내 점검표 받기**
 
@@ -208,7 +223,7 @@ Claude에는 해로운 내용을 걸러 내는 장치가 있습니다. 해로운
 
 ## 정리
 
-- 학습 사용 여부는 「설정」 → 「개인정보 보호」 → 「AI 모델 개선 지원」에서 정한다. 처음 값은 직접 열어 확인한다.
+- 학습 사용 여부는 「설정」 → 「개인정보보호」 → 「Help improve our AI models」(한국어 도움말 이름 「AI 모델 개선 지원」)에서 정한다. 처음 값은 직접 열어 확인한다.
 - 꺼도 이미 만들어진 모델에는 남고, 안전 장치에 걸린 대화는 쓰일 수 있다.
 - 시크릿 채팅은 학습에 쓰이지 않는다. 좋아요/싫어요를 보내면 그 대화가 최대 5년 남는다.
 - 지운 대화는 30일 안에 서버에서도 지워진다. 학습을 허용한 대화는 최대 5년 남을 수 있다.
@@ -240,6 +255,7 @@ Claude에는 해로운 내용을 걸러 내는 장치가 있습니다. 해로운
 
 ---
 
+[^screen]: Claude 웹 화면(무료 요금제, 한국어)에서 직접 확인. "Help improve our AI models — Allow the use of your chats and coding sessions to train and improve Anthropic AI models." / "시크릿 세션은 기록, 메모리, 검색에 남지 않으며 Claude 학습에 사용되지 않습니다." (확인일 2026-10-26)
 [^training-use]: Anthropic 개인정보 센터, 「Is my data used for model training?」. "You choose to allow us to use your chats and coding sessions to improve Claude, learn more here" / "It does not include raw content from connectors (e.g. Google Drive), including remote and local MCP servers, though data may be included if it’s directly copied into your conversation with Claude." / "Your Incognito chats are not used to improve Claude, even if you have enabled Model Improvement in your Privacy Settings." https://privacy.claude.com/en/articles/10023580 (확인일 2026-10-26)
 [^training-personal]: Anthropic 개인정보 센터, 「How Do You Use Personal Data in Model Training?」. "You’ve explicitly provided materials to us (e.g.via our thumbs up/down feedback button), or" / "we will automatically de-link them from your user ID (e.g. email address) before it’s used by Anthropic." https://privacy.claude.com/en/articles/10023555 (확인일 2026-10-26)
 [^toggle]: Anthropic 개인정보 센터, 「How do I change my model improvement privacy settings?」. "Under Help Improve our AI models, click the button to toggle it off/on" / "we will stop using your previously stored chats and coding sessions in future model training runs." / "Your data will still be included in model training that has already started and in models that have already been trained" / "If our safety classifiers flag your conversations, they may still be used to improve our internal trust and safety models" https://privacy.claude.com/en/articles/12109829 (확인일 2026-10-26)

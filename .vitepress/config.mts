@@ -53,6 +53,7 @@ export default defineConfig({
             { text: '9장. 개인정보와 안전', link: '/guide/10-claude/09-privacy' },
             { text: '10장. 음성과 휴대폰', link: '/guide/10-claude/10-voice-mobile' },
             { text: '11장. 실습 과제', link: '/guide/10-claude/11-practice' },
+            { text: '12장. 전문가처럼 쓰기', link: '/guide/10-claude/12-expert' },
           ],
         },
       ],
