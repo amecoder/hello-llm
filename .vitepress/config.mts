@@ -16,6 +16,7 @@ export default defineConfig({
   rewrites: {
     'guide/00-common/README.md': 'guide/00-common/index.md',
     'guide/11-chatgpt/README.md': 'guide/11-chatgpt/index.md',
+    'guide/10-claude/README.md': 'guide/10-claude/index.md',
   },
   lastUpdated: true,
   markdown: {
@@ -30,11 +31,31 @@ export default defineConfig({
     nav: [
       { text: '1단계 · 공통 가이드', link: '/guide/00-common/' },
       { text: '2단계 · ChatGPT', link: '/guide/11-chatgpt/' },
+      { text: '2단계 · Claude', link: '/guide/10-claude/' },
       { text: 'ChatGPT', link: 'https://chatgpt.com/' },
       { text: 'Claude', link: 'https://claude.ai/new' },
       { text: 'Gemini', link: 'https://gemini.google.com/app' },
     ],
     sidebar: {
+      '/guide/10-claude/': [
+        {
+          text: '2단계 · Claude 가이드',
+          items: [
+            { text: '목차', link: '/guide/10-claude/' },
+            { text: '1장. 시작하기', link: '/guide/10-claude/01-getting-started' },
+            { text: '2장. 화면 둘러보기', link: '/guide/10-claude/02-screen-tour' },
+            { text: '3장. 대화 관리', link: '/guide/10-claude/03-chats' },
+            { text: '4장. 파일과 아티팩트', link: '/guide/10-claude/04-files-artifacts' },
+            { text: '5장. 기억과 맞춤 설정', link: '/guide/10-claude/05-memory' },
+            { text: '6장. 검색과 리서치', link: '/guide/10-claude/06-search' },
+            { text: '7장. 프로젝트·커넥터·스킬', link: '/guide/10-claude/07-projects-tools' },
+            { text: '8장. Cowork — 일을 통째로 맡기기', link: '/guide/10-claude/08-cowork' },
+            { text: '9장. 개인정보와 안전', link: '/guide/10-claude/09-privacy' },
+            { text: '10장. 음성과 휴대폰', link: '/guide/10-claude/10-voice-mobile' },
+            { text: '11장. 실습 과제', link: '/guide/10-claude/11-practice' },
+          ],
+        },
+      ],
       '/guide/11-chatgpt/': [
         {
           text: '2단계 · ChatGPT 가이드',

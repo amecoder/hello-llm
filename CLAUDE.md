@@ -64,8 +64,8 @@ assets/                # README 그림 (.excalidraw 원본 + .svg)
 5. 내용을 설명하는 큰 절(h2)마다 끝에(「직접 해 보기」·「정리」·「용어 정리」·영상 절 제외) `<Quiz id="chN-slug" />` 를 넣고 `theme/quiz-bank.ts` 에 문제를 추가한다(`CHAPTERS` 에도 장 추가). 문제는 본문에 나온 내용만 묻는다. `tests/quiz-bank.test.ts` 가 본문과 문제 은행이 1:1인지 검사한다
 6. 장 끝 「다음 장:」 줄 바로 위에 `<ChapterDone :chapter="N" />`(다 읽음 버튼)을 넣는다 — 진행 현황은 `theme/quiz-bank.ts` 의 `CHAPTERS` 로 장 수를 센다. `tests/progress.test.ts` 가 위치와 번호를 검사한다
 7. 새 장의 프롬프트 예시 중 바로 쓸 만한 것은 `guide/00-common/prompt-library.md` 의 쓰임새별 절에 추가한다(설명한 장으로 가는 링크 포함). 본문 프롬프트를 고치면 모음도 같이 고친다 — `tests/prompt-library.test.ts` 가 모음의 프롬프트가 본문과 글자 그대로 같은지 검사한다
-8. **2단계 이후 장**(예: `guide/11-chatgpt/`)은 장 번호를 `단계 base + N`으로 쓴다(ChatGPT 1장 = 101, `theme/stages.ts`). `CHAPTERS`·`<ChapterDone :chapter="101" />`·퀴즈 id `ch101-…` 모두 이 번호를 쓰고, `tests/stages.test.ts` 가 폴더의 파일과 `CHAPTERS` 가 1:1인지 검사한다
-9. **서비스 화면 캡처**는 사용자가 직접 로그인한 Playwright 브라우저에서 찍는다. 찍기 전에 대화·프로젝트 제목, 이름, 이메일을 화면에서만 예시로 바꾸고(실제 계정은 바꾸지 않음), 설정은 보기만 한다. 원본은 `.playwright-mcp/`(gitignore)에 두고 확인한 것만 장의 `assets/` 로 복사한다. 서비스 사실은 `docs/reports/2026-10-23_ChatGPT-공식-자료.md` 의 VERIFIED 값과 「실제 화면에서 직접 확인」 절만 쓴다
+8. **2단계 이후 장**(예: `guide/11-chatgpt/`)은 장 번호를 `단계 base + N`으로 쓴다(ChatGPT 1장 = 101, Claude 1장 = 201, `theme/stages.ts`). `CHAPTERS`·`<ChapterDone :chapter="101" />`·퀴즈 id `ch101-…` 모두 이 번호를 쓰고, `tests/stages.test.ts` 가 폴더의 파일과 `CHAPTERS` 가 1:1인지 검사한다
+9. **서비스 화면 캡처**는 사용자가 직접 로그인한 Playwright 브라우저에서 찍는다. 찍기 전에 대화·프로젝트 제목, 이름, 이메일을 화면에서만 예시로 바꾸고(실제 계정은 바꾸지 않음), 설정은 보기만 한다. 원본은 `.playwright-mcp/`(gitignore)에 두고 확인한 것만 장의 `assets/` 로 복사한다. 서비스 사실은 `docs/reports/2026-10-23_ChatGPT-공식-자료.md` 의 VERIFIED 값과 「실제 화면에서 직접 확인」 절만 쓴다. Claude 장은 `docs/reports/2026-10-26_Claude-공식-자료.md` 의 VERIFIED 값만 쓰고, Claude 퀴즈는 `theme/quiz-bank-claude.ts` 에 둔다
 10. 본문의 `<태그>` 는 반드시 백틱이나 코드 블록 안에 쓴다 — 그냥 쓰면 VitePress(Vue)가 HTML 로 해석해 사라지거나 빌드가 깨진다
 
 ## 주요 커맨드

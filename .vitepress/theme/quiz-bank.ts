@@ -1,6 +1,7 @@
 // Question bank for the section quizzes (<Quiz id="..." />) and the self-check exam.
 // One question per major section; tests/quiz-bank.test.ts checks every id is placed exactly once.
 import type { Question } from './quiz'
+import { CLAUDE_CHAPTERS, CLAUDE_QUESTIONS } from './quiz-bank-claude.ts'
 
 export const CHAPTERS: Record<number, { title: string; link: string }> = {
   1: { title: '1장. LLM이란 무엇인가', link: '/guide/00-common/01-what-is-llm' },
@@ -25,6 +26,7 @@ export const CHAPTERS: Record<number, { title: string; link: string }> = {
   109: { title: 'ChatGPT 9장. 음성으로 대화하기', link: '/guide/11-chatgpt/09-voice' },
   110: { title: 'ChatGPT 10장. 실습 과제', link: '/guide/11-chatgpt/10-practice' },
   111: { title: 'ChatGPT 11장. 전문가처럼 쓰기', link: '/guide/11-chatgpt/11-expert' },
+  ...CLAUDE_CHAPTERS,
 }
 
 export const QUESTIONS: readonly Question[] = [
@@ -1590,4 +1592,5 @@ export const QUESTIONS: readonly Question[] = [
     answer: 3,
     explain: 'Academy 강좌는 무료이고 ChatGPT 계정만 있으면 누구나 내 속도로 듣습니다. 시험 80% 이상이면 배지를 받지만 자격증은 아닙니다.',
   },
+  ...CLAUDE_QUESTIONS,
 ]
