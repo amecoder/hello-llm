@@ -113,6 +113,12 @@ Work는 웹과 휴대폰에서 **유료 요금제(Free·Go 제외)** 에서만 �
 
 <!-- 스크린샷 필요: Free 요금제 웹 화면에서 「생각하기」를 켜는 위치 -->
 
+**언제 올릴까요?** 계산만이 아닙니다. 짧은 문장 다듬기처럼 단순하거나 부담이 작은 일에는 빠른 수준으로 충분할 수 있습니다. 조건이 여러 개이거나, 선택지를 기준에 맞춰 비교하거나, 내가 쓴 계획에서 빠진 가정을 찾을 때는 수준을 올려 보세요.[^academy-content]
+```
+행사 장소 후보 세 곳을 예산·대중교통·비 올 때 대안, 이 세 기준으로 비교해 줘.
+한 곳을 추천하고, 그곳의 단점을 어떻게 줄일 수 있는지도 알려 줘.
+```
+
 빠른 답과 깊은 답의 차이는 같은 질문을 수준만 바꿔 물어보면 바로 느낄 수 있습니다.
 
 ```
@@ -192,3 +198,4 @@ Work는 웹과 휴대폰에서 **유료 요금제(Free·Go 제외)** 에서만 �
 [^go-think]: OpenAI 도움말, 「What is ChatGPT Go?」. "On mobile, select Think harder from the + menu." https://help.openai.com/en/articles/11989085 (확인일 2026-10-23)
 [^lang]: OpenAI 도움말, 「How to change your language setting in ChatGPT」. "you can only update the ChatGPT language setting if you are logged in." https://help.openai.com/en/articles/8357869 (확인일 2026-10-24)
 [^appearance]: OpenAI 도움말, 「Updating your visual experience」. "changing the appearance on the web doesn't automatically change the appearance in the mobile app." 설정 메뉴 이름은 2026-10-24 웹 설정 화면에서 확인. https://help.openai.com/en/articles/11958281 (확인일 2026-10-24)
+[^academy-content]: OpenAI Academy 「Applied AI Foundations」 강좌 본문(로그인·등록 필요). "Use a faster model when the task is simple and/or low-stakes." / "Use a reasoning model when the task has:" "Several constraints" / "A need to compare options" / "Compare options against criteria instead of giving a generic list of pros and cons" / "Review your draft recommendation for missing assumptions" (확인일 2026-10-26)

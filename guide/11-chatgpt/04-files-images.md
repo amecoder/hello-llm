@@ -36,6 +36,12 @@ PDF를 대화에 직접 올리면 글뿐 아니라 **안의 그림과 도표까�
 확실하지 않은 내용은 "추측"이라고 표시해 줘.
 ```
 
+파일로 할 수 있는 일은 요약뿐이 아닙니다. 예전에 잘 쓴 문서를 **본보기**로 올리고, 내 초안을 같은 구성과 말투로 고쳐 달라고 해 보세요. 원본과 내 요약을 함께 올리면 **서로 다른 사실이나 원본에 없는 내용**도 찾을 수 있습니다.[^academy-content]
+```
+첫 번째 파일은 공식 안내문(원본)이고, 두 번째 파일은 내가 쓴 요약이야.
+내 요약에서 원본과 다른 사실·숫자, 원본에 없는 내용을 모두 찾아 줘.
+```
+
 사진이라면 이렇게 씁니다.
 
 ```
@@ -200,3 +206,4 @@ AI로 만든 그림의 권리와, 남의 사진·작품을 올릴 때의 주의�
 [^space]: OpenAI 도움말, 「ChatGPT Space: sharing, data, and controls」. "It replaces Library, while your Projects stay as they are." / "Pages are editable documents that you can organize inside other pages and work on with other people." https://help.openai.com/en/articles/20001544 (확인일 2026-10-24)
 [^faq]: OpenAI 도움말, 「What is ChatGPT: FAQ」. "ChatGPT images include C2PA provenance metadata." https://help.openai.com/en/articles/12677804 (확인일 2026-10-24)
 [^delete]: OpenAI 도움말, 「Deleting and archiving chats in ChatGPT」. "Deleting a chat does not delete files saved separately in Library." https://help.openai.com/en/articles/8809935 (확인일 2026-10-23)
+[^academy-content]: OpenAI Academy 강좌 본문(로그인·등록 필요). AI Foundations: "Use this template as a model. Rewrite my draft so it follows the same structure and tone." Applied AI Foundations: "Verify" "Check whether a draft is supported by the source" (확인일 2026-10-26)
