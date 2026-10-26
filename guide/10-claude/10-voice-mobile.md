@@ -43,6 +43,21 @@
 
 사람 이름이나 지명은 잘못 받아 적힐 수 있습니다. 보낸 뒤 채팅 창에 적힌 내 질문을 한 번 읽어 보세요.[^dictation]
 
+### 맥 컴퓨터에서 — 빠른 입력
+
+맥에서 Claude 데스크톱 앱을 쓴다면 **Option 키를 두 번** 눌러 보세요. 어느 앱을 쓰고 있든 바로 Claude 입력 칸이 열립니다.[^quick] 하던 일을 멈추지 않고 물어볼 수 있습니다.
+
+- 화면 일부를 끌어 스크린샷으로 붙이거나, 앱 창을 눌러 그 내용을 함께 보낼 수 있습니다.[^quick]
+- 받아쓰기 단축키를 켜 두면 Caps Lock을 눌러 말로 입력할 수 있습니다. 처음에는 꺼져 있습니다.[^quick]
+- 무료를 포함한 모든 요금제에서 되지만, 맥 데스크톱 앱에서만 됩니다. 앱이 뒤에서라도 켜져 있어야 합니다.[^quick]
+- 맥의 화면 기록 같은 권한이 필요합니다. 「시스템 설정 > 개인정보 보호 및 보안」에서 확인합니다.[^quick]
+
+낯선 표나 오류 창을 보면서 바로 물어볼 때 편합니다.
+
+```
+지금 붙인 화면의 숫자들이 각각 무슨 뜻인지 쉽게 설명해 줘. 그중 내가 신경 써야 할 것은 무엇인지도 알려 줘.
+```
+
 <Quiz id="ch210-dictation" />
 
 ## 음성 모드 해 보기
@@ -50,6 +65,12 @@
 음성 모드는 아직 **시험판**입니다. 웹·컴퓨터 앱·휴대폰 앱에서 모두 쓸 수 있지만, 휴대폰에서 가장 잘 되도록 만들어졌습니다.[^voice]
 
 **웹·컴퓨터 앱에서**
+
+먼저 버튼 자리부터 봐 두세요. 입력창 오른쪽 아래 ⑧에 마이크(받아쓰기)와 음파 기호(음성 모드)가 나란히 있습니다.[^screen]
+
+![Claude 웹 첫 화면. 빨간 번호 ①~⑩ 가운데 ⑧이 입력창 오른쪽 아래의 마이크(받아쓰기)와 음파 기호(음성 모드)를 가리킨다](assets/shot-01-home-marked.png)
+
+이름·대화 제목은 예시로 바꾼 화면입니다(무료 요금제). 이 장에서 쓰는 번호는 ⑧ 하나입니다. 나머지 번호는 [2장](02-screen-tour.md)에서 설명합니다.
 
 1. 새 채팅을 엽니다.
 2. 채팅창 오른쪽 아래의 **음파 기호**를 누릅니다.
@@ -62,7 +83,6 @@
 2. 마음에 드는 목소리를 고릅니다.
 3. 말을 시작합니다.[^voice]
 
-<!-- 스크린샷 필요: 웹 입력창 오른쪽 아래의 음파 기호(음성 모드)와 마이크 위치 -->
 <!-- 스크린샷 필요: 음성 모드가 켜진 화면과 오른쪽 아래 「중지」 버튼 -->
 
 ### 듣는 방식 두 가지
@@ -93,12 +113,18 @@ Claude가 엉뚱한 방향으로 가면 그냥 말을 시작하세요. Claude가
 
 Claude의 목소리는 정해진 몇 가지 가운데서만 고릅니다. 누군가의 목소리를 흉내 내거나 베끼지 못하게 하려는 것입니다.[^voice]
 
-- **웹·컴퓨터 앱**: 「설정」 → 「기능」에서 아래로 내려 음성 설정을 찾습니다. 없으면 「설정」 → 「일반」을 보세요. 목소리를 누르면 미리 들어 볼 수 있습니다.
+- **웹·컴퓨터 앱**: 「설정」 → 「일반」의 「음성」에 있습니다. 「언어」 아래에 「스타일」과 「속도」도 있습니다.[^screen] 도움말은 「설정」 → 「기능」이라고 안내하니, 화면에 따라 다를 수 있습니다. 목소리를 누르면 미리 들어 볼 수 있습니다.
 - **휴대폰 앱**: 음성 모드 중에 왼쪽 아래 설정 버튼을 누르고 목소리와 말 빠르기를 고릅니다.[^voice]
 
-**말할 언어는 따로 정해야 합니다.** 앱 화면을 한국어로 바꿔도 음성 언어는 바뀌지 않습니다. 「설정」 → 「기능」 → 음성 → 「음성 언어」에서 고르세요. 영어가 아닌 언어는 시험판입니다. 대화 중에 "한국어로 말해 줘"라고 부탁해도 됩니다.[^voice]
+**말할 언어는 따로 정해야 합니다.** 앱 화면을 한국어로 바꿔도 음성 언어는 바뀌지 않습니다.[^voice] 이 화면에서는 「설정」 → 「일반」 → 「음성」 → ③ 「언어」에서 고릅니다.[^screen] 영어가 아닌 언어는 시험판입니다. 대화 중에 "한국어로 말해 줘"라고 부탁해도 됩니다.[^voice]
 
-<!-- 스크린샷 필요: 「설정 > 기능」(또는 「일반」)의 음성 설정과 「음성 언어」 항목 -->
+![「설정」 → 「일반」 화면. ① 왼쪽 메뉴, ② 「화면 모드」의 「테마」, ③ 「음성」의 「언어」(한국어)에 빨간 번호가 붙어 있다](assets/shot-09-settings-general-marked.png)
+
+무료 요금제 화면입니다. **빨간 번호는 아래 목록의 번호와 같은 곳입니다.**
+
+- ① 왼쪽 메뉴의 「일반」을 고른 상태입니다.
+- ② 「테마」: 화면을 밝게·어둡게 바꿉니다. 음성과는 상관없습니다.
+- ③ 「언어」: 음성으로 말할 언어입니다. 그 아래에 「스타일」·「속도」가 이어집니다.[^screen]
 
 <Quiz id="ch210-settings" />
 
@@ -210,7 +236,7 @@ Claude가 위치나 캘린더를 처음 쓰려 하면 허락을 묻습니다. �
 - 마이크는 **받아쓰기**: 말을 글로 바꿔 보내고, 답은 글로 온다. 이 장은 휴대폰 앱 기준으로 설명했다.
 - 음파 기호는 **음성 모드**: 말로 묻고 말로 듣는다. 시험판이고, 휴대폰에서 가장 잘 된다.
 - 음성 모드는 핸즈프리가 기본이고, 시끄러우면 푸시투톡으로 바꾼다. 사용 한도에 들어간다.
-- 말할 언어는 앱 화면 언어와 따로 「음성 언어」에서 정한다.
+- 말할 언어는 앱 화면 언어와 따로 정한다. 이 화면에서는 「설정」 → 「일반」 → 「음성」 → 「언어」다.
 - 음성 대화는 글 기록으로 남는다. 받아쓰기 녹음은 지워지지만 바뀐 글은 학습 설정을 따른다.
 - 아이폰은 「Claude에 물어보기」·단축어·위젯·잠금 화면, 안드로이드는 위젯으로 빨리 연다.
 - 메시지·메일은 Claude가 초안을 만들고, 보내기는 내가 한다. 권한은 휴대폰 설정에서 바꾼다.
@@ -235,6 +261,7 @@ Claude가 위치나 캘린더를 처음 쓰려 하면 허락을 묻습니다. �
 
 ---
 
+[^screen]: Claude 웹 화면(무료 요금제, 한국어)에서 직접 확인. 「설정」 → 「일반」 → 「음성」에 「언어」·「스타일」·「속도」. (확인일 2026-10-26)
 [^dictation]: Anthropic 도움말, 「Use dictation on Claude Mobile」. "Dictation is available to all Claude users (Free, Pro, Max, Team, and Enterprise plans). Support for languages other than English is in beta." / "Dictation allows you to speak your prompts instead of typing them when using Claude for iOS or Android." / "Tap the microphone icon on the right side of the chat input field." / "Your prompt will automatically appear as text in the chat window." / "We will not retain a copy of your speech input or use it for training our generative models." https://support.claude.com/en/articles/10065434 (확인일 2026-10-26)
 [^voice]: Anthropic 도움말, 「Use voice mode」. "but is built to work best from your phone." / "Tap the sound wave symbol in the lower right corner of the chat window to activate voice mode:" / "Tap the voice mode icon (sound wave symbol next to the microphone icon) in the text input field:" / "Note: Voice conversations count toward your regular usage limits based on your subscription plan." / "In hands-free mode, Claude listens continuously and responds to natural pauses in your speech." / "On the web and desktop: Go to Settings > Capabilities and scroll down to Voice settings." / "When you turn on voice mode, it starts with the model you last used in text chat" / "Note: Claude Fable is not currently available in voice mode." / "Your previous context carries over, so you don't lose anything when you switch." / "On the Free plan you can connect one tool, and paid plans can connect more." / "This prevents voice cloning or impersonation." / "Changing your app's display language doesn't change your voice language, so set it here." / "Textual transcripts of your audio conversations are saved in your chat history just like text conversations." / "In the new Claude experience, voice mode works in any conversation, including ones where Claude is working on a task." / "In Claude Cowork and Claude Code, dictation is available but voice mode isn't." https://support.claude.com/en/articles/11101966 (확인일 2026-10-26)
 [^dictation-privacy]: Anthropic 개인정보 센터, 「What personal data is collected when using dictation on the Claude mobile apps?」. "If you have allowed us to use your chats or coding sessions to improve Claude, the transcribed text may be used in accordance with your privacy settings." https://privacy.claude.com/en/articles/10067979 (확인일 2026-10-26)
@@ -243,3 +270,4 @@ Claude가 위치나 캘린더를 처음 쓰려 하면 허락을 묻습니다. �
 [^android]: Anthropic 도움말, 「Use the Claude widget on Android」. "The Claude Android widget is available on Android 8.0 Oreo and above." / "Note: All interactions started through the widget will count toward your usage limit." https://support.claude.com/en/articles/10534883 (확인일 2026-10-26)
 [^ios-apps]: Anthropic 도움말, 「Use Claude with iOS apps」. "This feature is supported on all Claude plans and works with iOS system apps (Messages, Mail, Calendar, Maps, Reminders, and Location Services), as well as compatible third-party apps." / "Review the pre-filled content and make any changes if needed." / "Messages/Email: Claude does not read existing messages or emails, only creates new content." / "Contacts: Claude does not have direct access to your contacts." / "You’ll be prompted to approve the action with three options: Allow once, Always allow, or Don't allow." / "These permissions can be managed at any time in your device settings by going to Settings > Claude." / "Health features are currently in beta, require a Pro or Max plan, and are available in the US only." https://support.claude.com/en/articles/11869619 (확인일 2026-10-26)
 [^android-apps]: Anthropic 도움말, 「Use Claude with Android apps」. "This feature is supported on all Claude plans and works with your device's native and third-party apps" / "Reminders: These are exclusively available on Claude for iOS, so Claude can’t create and manage reminders on Android." / "These permissions can be managed at any time in your device settings by going to Settings > Apps > Claude > Permissions." https://support.claude.com/en/articles/11869629 (확인일 2026-10-26)
+[^quick]: Anthropic 도움말, 「Use quick entry with Claude Desktop on Mac」. "Quick entry is available to all Claude users (free, Pro, Max, Team, and Enterprise plans) using Claude Desktop on macOS." / "Instant access: Double-tap the Option key to open Claude from any app." / "Visual context: Capture screenshots or click application windows to share what you're working on." / "The voice dictation shortcut is disabled by default because it takes over your Caps Lock key." / "Claude Desktop needs to be running on your Mac, but it can run in the background." / "Screen recording: Required to capture screenshots and share application windows." / "You can review or change these permissions in System Settings > Privacy & Security." https://support.claude.com/en/articles/12626668 (확인일 2026-10-26)

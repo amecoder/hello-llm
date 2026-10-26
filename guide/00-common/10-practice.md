@@ -192,11 +192,34 @@
 
 **다시 볼 곳**: [6장 대화를 이어 가며 다듬기](06-conversation.md) · [8장 메타 프롬프팅](08-meta-prompting.md)
 
+### 쉬어 가기 — AI와 스무고개
+
+부담 없이 연습하고 싶다면 AI와 스무고개를 해 보세요. AI가 하나를 생각하고, 내가 "예/아니오" 질문으로 맞힙니다. 그다음 역할을 바꿉니다.
+
+```
+스무고개를 하자. 네가 물건 하나를 생각해. 나는 "예/아니오"로 답할 수 있는 질문만 할게.
+내가 맞히면 역할을 바꿔서, 내가 생각하고 네가 질문해 줘.
+```
+
+놀이는 규칙이 분명해서 분명하게 말하는 연습이 됩니다.[^academy-games] AI가 엉뚱하게 추리하면 어디서 빗나갔는지 짚어 주세요.
+
 ## 종합 과제 — 내 일 하나를 처음부터 끝까지
 
 **이럴 때**: 기본 과제를 몇 개 해 봤고, 이제 실제 일에 써 보고 싶을 때.
 
 **해 볼 것**: 요즘 해야 하는 일 하나를 골라 AI와 함께 끝까지 마칩니다. 되도록 **글을 붙여 넣고 숫자나 날짜가 나오는 일**(회의록 정리, 견적 비교, 여행 계획 등)을 고르세요. 그래야 아래 항목을 모두 해 볼 수 있습니다. 회사 일이라면 이름·금액·거래처를 가짜 내용으로 바꾼 자료로 합니다.
+
+시작하기 전에 일을 나눠 보세요. 어느 부분을 AI에게 맡기고, 어느 부분을 내가 할지 AI와 함께 정합니다.[^academy-delegation]
+
+```
+[할 일]을 준비하고 있어. 좋은 결과가 어떤 모습인지 먼저 같이 정하고,
+그 일을 작은 단계로 나눠 줘. 단계마다 AI에게 맡기기 좋은지,
+내 판단이나 경험이 꼭 필요한지 표시해 줘. 내 생각을 한 번에 하나씩 물어봐 줘.
+```
+
+미리 나눠 두면 내 판단이 필요한 곳을 AI에게 통째로 넘기지 않게 됩니다. 다 나눈 뒤 스스로 물어보세요. 내가 꼭 봐야 할 곳은 어디인가?
+
+그다음 아래 순서로 진행합니다.
 
 1. 과제 1의 틀로 첫 요청을 씁니다. 자료가 있으면 과제 4처럼 구분선 사이에 넣습니다.
 2. 개인정보는 보내기 전에 과제 7처럼 바꿉니다.
@@ -215,6 +238,31 @@
 
 모두 체크했다면 [이해도 확인 시험](certificate.md)에서 상급 레벨에 도전해 보세요.
 
+## 더 배우려면 — Claude Academy
+
+**Claude Academy**는 Anthropic(Claude를 만든 회사)이 만든 온라인 강좌 모음입니다. 아래 두 강좌는 로그인하지 않아도 강의 본문을 볼 수 있었습니다(2026-10-26 확인). 두 강좌는 특정 서비스의 기능이 아니라, 모든 LLM에 통하는 원리를 다룹니다.
+강좌의 예시는 Claude로 되어 있지만, 다른 AI 서비스로 따라 해도 된다고 강좌가 직접 밝힙니다.[^academy-intro]
+
+| 강좌 | 분량 | 다루는 것 | 준비물 |
+|---|---|---|---|
+| [AI Fluency: Framework and foundations](https://academy.claude.com/courses/ai-fluency-framework-foundations) | 14강 + 퀴즈 | AI와 함께 일하는 네 가지 능력(4D) | AI 서비스 하나. 유료 요금제는 필요 없음 |
+| [AI capabilities and limitations](https://academy.claude.com/courses/ai-capabilities-and-limitations) | 13강 + 퀴즈 | AI가 왜 그렇게 행동하는지 | 기술 지식·AI 경험 필요 없음 |
+
+두 강좌는 어느 쪽을 먼저 들어도 됩니다. 본문은 **영어**입니다. 2026-10-26에는 로그인하지 않아도 강의 본문이 열렸습니다.[^academy-courses]
+AI Fluency 강좌는 마지막 퀴즈에서 80% 이상 받으면 내 계정에 수료 배지(completion badge)를 추가할 수 있습니다. 강좌를 마쳤다는 학습 배지입니다.
+
+AI Fluency 강좌의 네 가지 능력은 이 가이드와 이렇게 이어집니다.
+
+- **Delegation(맡기기)**: 무엇을 내가 하고, 무엇을 AI와 함께 하고, 무엇을 맡길지 정합니다. 이 장 [「종합 과제」](#종합-과제-—-내-일-하나를-처음부터-끝까지)의 첫 단계와 같습니다.
+- **Description(설명하기)**: 원하는 결과와 일하는 방식을 분명히 말합니다. [4장 「좋은 프롬프트의 5요소」](04-prompt-basics.md#좋은-프롬프트의-5요소)와 [5장](05-prompt-patterns.md)입니다.
+- **Discernment(가려보기)**: 받은 답을 따져 봅니다. [9장 「확인하는 네 가지 습관」](09-safety.md#확인하는-네-가지-습관)입니다.
+- **Diligence(책임지기)**: AI를 쓴 사실을 밝히고, 내보낸 결과에 책임집니다. [9장 「3. 저작권」](09-safety.md#_3-저작권-—-만든-것과-넣는-것)의 「지킬 습관」입니다.
+
+영어 페이지는 크롬 같은 브라우저의 번역 기능(페이지에서 마우스 오른쪽 버튼 → 「한국어로 번역」)으로 읽을 수 있습니다.
+Claude Academy의 다른 강좌는 Claude 단계의 [12장](../10-claude/12-expert.md)에 모아 두었습니다.
+
+<Quiz id="ch10-academy" />
+
 ## 정리
 
 - 읽은 내용은 내 일에 한 번 써 봐야 손에 익는다. 과제는 예시보다 **내가 실제로 할 일**로 바꿔서 한다.
@@ -222,8 +270,15 @@
 - 과제를 하면서도 개인정보는 가리고, 답의 숫자·날짜는 원래 자료에서 확인한다.
 - 마음에 든 방식은 틀로 저장해 다음에 다시 쓴다.
 
-이 장에서 새로 나온 용어는 없습니다. 틀·빈칸(자리 표시자)·가리기 같은 말은 [6장](06-conversation.md#용어-정리)·[8장](08-meta-prompting.md#용어-정리)·[9장](09-safety.md#용어-정리)의 「용어 정리」에 있습니다.
+이 장에서 새로 나온 용어는 「더 배우려면」의 강좌 용어(4D)뿐이고, 그 자리에서 풀이했습니다. 틀·빈칸(자리 표시자)·가리기 같은 말은 [6장](06-conversation.md#용어-정리)·[8장](08-meta-prompting.md#용어-정리)·[9장](09-safety.md#용어-정리)의 「용어 정리」에 있습니다.
 
 <ChapterDone :chapter="10" />
 
 다음 장: 1단계를 마쳤습니다. [이해도 확인 시험](certificate.md)으로 내 AI 이해 레벨을 확인해 보세요.
+
+---
+
+[^academy-games]: Claude Academy 「AI Fluency: Framework and foundations」 강의 「Additional activities」. "Since puzzles have specific instructions (unlike open-ended tasks like "draft a thank-you note"), they're excellent for practicing clear communication." / "Twenty Questions:" https://academy.claude.com/courses/ai-fluency-framework-foundations/additional-activities (확인일 2026-10-26)
+[^academy-delegation]: Claude Academy 「AI Fluency: Framework and foundations」 강의 「A closer look at Delegation」. "Delegation is about making thoughtful decisions about what work to do yourself, what to do together with AI, or what to let AI handle independently, and how to distribute those tasks." / "Which of these bits of work require human expertise, creativity, or judgment?" https://academy.claude.com/courses/ai-fluency-framework-foundations/a-closer-look-at-delegation (확인일 2026-10-26)
+[^academy-intro]: Claude Academy 「AI Fluency: Framework and foundations」 강의 「Introduction to AI Fluency」. "While our examples feature Claude (Anthropic's AI assistant), you're welcome to work with any language model you prefer." / "No paid subscriptions required to complete course activities" https://academy.claude.com/courses/ai-fluency-framework-foundations/introduction-to-ai-fluency (확인일 2026-10-26)
+[^academy-courses]: Claude Academy 강좌 첫 페이지. AI Fluency: Framework and foundations "14 lessons · 1 quiz" https://academy.claude.com/courses/ai-fluency-framework-foundations · AI capabilities and limitations "13 lessons · 1 quiz" / "None. This course assumes no technical background and no prior experience with AI tools." / "The two are designed to be taken in either order" https://academy.claude.com/courses/ai-capabilities-and-limitations · AI Fluency 강좌 퀴즈 「Course quiz」 "A score of 80% or higher passes." https://academy.claude.com/courses/ai-fluency-framework-foundations/certificate-of-completion (확인일 2026-10-26)

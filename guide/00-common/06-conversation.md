@@ -59,6 +59,31 @@ AI는 무엇이 별로인지 모릅니다. 그래서 처음과 비슷한 수준�
 | 근거가 궁금하다 | "그렇게 생각한 이유를 세 가지로 알려 줘" |
 | 처음 지시를 잊었다 | "처음에 말한 조건(다섯 문장 이내, 존댓말)을 다시 지켜 줘" |
 
+### 지시는 지켰는데 쓸모가 없을 때 — 목표를 말하기
+
+"더 짧게 해 줘"라고 했더니 정말 짧아졌습니다. 그런데 중요한 내용까지 같이 빠졌습니다.
+AI가 내 말의 글자는 지켰지만 뜻은 놓친 경우입니다.
+
+이럴 때 같은 말을 더 세게 되풀이해도 잘 고쳐지지 않습니다. 대신 **무엇을 위해 그러는지**를 덧붙여 보세요.[^academy-goal]
+
+**아쉬운 예**
+
+```
+더 짧게 해 줘. 진짜 짧게.
+```
+
+**나은 예**
+
+```
+더 짧게 해 줘. 바쁜 팀장님이 끝까지 읽고
+두 번째 문단의 조사 결과를 기억하게 하는 게 목표야.
+```
+
+차이는 마지막 줄입니다. 목표를 알면 AI가 무엇을 남기고 무엇을 뺄지 고를 수 있습니다.
+
+"세 줄로", "표로"는 모양이고, "팀이 이 일정을 믿게 하기"는 목표입니다([4장 「좋은 프롬프트의 5요소」](04-prompt-basics.md#좋은-프롬프트의-5요소)).
+요청을 보내기 전에 스스로 물어보세요. 모양만 말했나, 목표도 말했나?
+
 <Quiz id="ch6-fix" />
 
 ## 다시 생성, 질문 고치기, 이어서 요청 — 언제 무엇을
@@ -73,6 +98,17 @@ AI는 무엇이 별로인지 모릅니다. 그래서 처음과 비슷한 수준�
 
 같은 질문에 다시 생성을 누르면 왜 다른 답이 나올까요? [1장](01-what-is-llm.md)에서 본 것처럼 AI는 "다음에 올 말"을 고를 때
 가장 그럴듯한 후보 중에서 **확률적으로** 고릅니다. 그래서 같은 질문에도 매번 조금씩 다른 답이 나옵니다.
+
+### 다시 누르기 전에 — 무엇이 문제였는지 짚기
+
+답이 이상할 때 다시 생성부터 누르기 쉽습니다. 그 전에 어떤 종류의 실패인지 먼저 짚어 보세요. 실패의 종류를 알면 맞는 고칠 방법으로 바로 갈 수 있습니다.[^academy-diagnose]
+
+- **이름·숫자·출처가 그럴듯한데 의심스럽다** → 원래 자료에서 확인하세요([9장](09-safety.md#확인하는-네-가지-습관)).
+- **긴 대화에서 처음 조건을 잊었다** → 조건을 다시 알려 주거나, 인계 메모를 들고 새 대화로 옮기세요(아래 [「언제 새 대화를 시작하나」](#언제-새-대화를-시작하나)).
+- **계산이 틀렸다** → 계산을 코드로 돌릴 수 있는 서비스라면 그렇게 해 달라고 하세요.
+- **내 생각에 무조건 동의한다** → 반대해도 된다고 말해 주세요([1장](01-what-is-llm.md#_5-내-말에-맞장구치기-쉽다-—-아첨)).
+
+위 표처럼 다시 생성은 질문은 괜찮은데 답이 우연히 별로일 때 쓰는 방법입니다. 원인이 따로 있다면 다시 누르기보다 그 원인부터 고쳐 보세요.
 
 <Quiz id="ch6-regenerate" />
 
@@ -169,3 +205,8 @@ AI는 무엇이 별로인지 모릅니다. 그래서 처음과 비슷한 수준�
 <ChapterDone :chapter="6" />
 
 다음 장: [7장. 구조화 프롬프트 — 마크다운·XML 태그](07-structured-prompts.md)
+
+---
+
+[^academy-goal]: Claude Academy 「AI capabilities and limitations」 강의 「Steerability」. "When an instruction is followed literally but uselessly, restate the goal." / "Repeating the instruction with more force won't close the gap." / "Make this shorter. My goal is to keep the executive's attention through the key finding on page two." https://academy.claude.com/courses/ai-capabilities-and-limitations/steerability (확인일 2026-10-26)
+[^academy-diagnose]: Claude Academy 「AI capabilities and limitations」 강의 「When Properties Collide」. "Naming the properties at play points you straight to the fix: verify specifics, re-supply context, offload to code execution, or invite pushback." https://academy.claude.com/courses/ai-capabilities-and-limitations/when-properties-collide (확인일 2026-10-26)

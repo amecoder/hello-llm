@@ -1,9 +1,9 @@
 # 2장. 화면 둘러보기 — 어디에 무엇이 있나
 
 > **한 줄 요약**: Claude 화면은 **왼쪽 옆 메뉴**(지난 대화), **가운데 입력창**(질문하는 곳과 「+」),
-> **보내기 버튼 옆 모델 메뉴**(모델·노력·생각), **왼쪽 아래 내 이름**(설정) 네 곳만 알면 됩니다. 처음에는 입력창만 써도 충분합니다.
+> **입력창 아래 모델 메뉴**(모델·노력), **왼쪽 아래 내 이름**(설정) 네 곳만 알면 됩니다. 처음에는 입력창만 써도 충분합니다.
 
-화면은 2026년 10월 웹 기준입니다. 지금 Claude는 새 화면을 차례로 배포하고 있어서, 화면에 따라 다를 수 있습니다. 내 화면과 이름이 다르면 비슷한 이름의 버튼을 찾아보세요.
+화면은 2026년 10월 웹 기준이고, 그림은 무료 요금제 한국어 화면입니다. 지금 Claude는 새 화면을 차례로 배포하고 있어서, 화면에 따라 다를 수 있습니다. 내 화면과 이름이 다르면 비슷한 이름의 버튼을 찾아보세요.
 
 ## 새 Claude 화면과 옛 화면
 
@@ -22,7 +22,17 @@ Claude는 지금 **화면을 바꾸는 중**입니다. 예전에는 보통 대�
 
 출처: Anthropic 도움말[^new]
 
-<!-- 스크린샷 필요: 옛 화면 입력창의 「Chat」「Cowork」 선택과, 새 화면 입력창을 나란히 (웹) -->
+이 가이드의 그림을 찍은 계정은 **새 화면**입니다. 아래 첫 화면 그림에서 확인해 보세요.
+
+![로그인 후 첫 화면 전체. 빨간 번호 ①~⑩. 왼쪽 옆 메뉴 위 ① 「새로 만들기」「검색」「프로젝트」「아티팩트」「사용자 지정」, ② 「고정됨」「최근 항목」 대화 목록, 가운데 ③ 입력창 「오늘 어떤 도움을 드릴까요?」, ④ 「+」, 입력창 아래 ⑤ 「프로젝트」, ⑥ 「Sonnet 5.5 중간」, ⑦ 「수동」, 입력창 오른쪽 ⑧ 마이크와 음파 기호, 오른쪽 위 ⑨ 유령 모양, 왼쪽 아래 ⑩ 「김하나 · Free」. 입력창 둘레에 「Chat」「Cowork」 선택과 웹 검색 스위치는 없다](assets/shot-01-home-marked.png)
+
+이름·대화 제목은 예시로 바꾼 화면입니다(무료 요금제). **빨간 번호는 아래 「옆 메뉴」 절 표의 번호와 같은 곳입니다.**
+
+- ③ 입력창 둘레 어디에도 「Chat」「Cowork」 선택이 없습니다.[^screen]
+- 웹 검색을 켜고 끄는 스위치도 없습니다.[^screen]
+- ② 지난 대화는 「최근 항목」(Recents) 한 목록에 있습니다.[^screen]
+
+<!-- 스크린샷 필요: 옛 화면 입력창의 「Chat」「Cowork」 선택 (웹, 옛 화면이 남은 Pro·Max 계정) -->
 
 이 가이드는 두 화면에 모두 있는 기능을 중심으로 설명합니다. 한쪽에만 있는 기능은 그때마다 밝혀 둡니다.
 
@@ -31,18 +41,26 @@ Claude는 지금 **화면을 바꾸는 중**입니다. 예전에는 보통 대�
 ## 옆 메뉴 — 지난 대화로 가는 길
 
 화면 왼쪽에는 **옆 메뉴**(사이드바)가 있습니다. 지난 대화 목록과 여러 메뉴가 여기 모여 있습니다.
+위 첫 화면 그림의 번호를 하나씩 짚어 보면 이렇습니다.[^screen]
 
-<!-- 스크린샷 필요: 로그인 후 첫 화면 전체. 옆 메뉴, 가운데 입력창, 보내기 버튼 옆 모델 메뉴, 왼쪽 아래 내 이름에 빨간 번호 (웹) -->
+| 번호 | 위치 | 이름 | 하는 일 |
+|---|---|---|---|
+| ① | 옆 메뉴 위 | 「새로 만들기」「검색」「프로젝트」「아티팩트」「사용자 지정」 | 새 대화, 대화 찾기, 여러 기능 |
+| ② | 옆 메뉴 | 「고정됨」「최근 항목」 | 지난 대화 목록 ([3장](03-chats.md)) |
+| ③ | 가운데 | 입력창 「오늘 어떤 도움을 드릴까요?」 | 질문을 쓰는 곳 |
+| ④ | 입력창 왼쪽 아래 | 「+」 | 파일·커넥터 등 추가 |
+| ⑤ | 입력창 아래 왼쪽 | 「프로젝트」 | 프로젝트 고르기 ([7장](07-projects-tools.md)) |
+| ⑥ | 입력창 아래 오른쪽 | 「Sonnet 5.5 중간」 | 모델·노력 메뉴 |
+| ⑦ | ⑥ 옆 | 「수동」 | 권한 모드 |
+| ⑧ | 입력창 오른쪽 | 마이크·음파 기호 | 받아쓰기, 음성 모드 ([10장](10-voice-mobile.md)) |
+| ⑨ | 오른쪽 위 | 유령 모양 | 시크릿 모드 ([3장](03-chats.md)) |
+| ⑩ | 왼쪽 아래 | 「김하나 · Free」 | 계정 메뉴(설정·언어·「도움 받기」) |
 
-| 항목 | 하는 일 | 자세히 |
-|---|---|---|
-| 「Recents」 | 최근 대화와 작업 목록 | [3장](03-chats.md) |
-| 「Chats and tasks」(채팅 및 작업) | 지난 대화 전체를 본다 | [3장](03-chats.md) |
-| 왼쪽 아래 내 이름(이름 첫 글자) | 설정, 언어, 「도움말 받기」 | 이 장 아래 |
+맨 위 가운데에는 「무료 플랜 · 업그레이드」가 보입니다. 인사말은 「안녕하세요!」나 「김하나님, 좋은 오후예요」처럼 그때그때 바뀝니다.[^screen]
 
-출처: Anthropic 도움말[^new][^chats][^support]
+도움말은 지난 대화 전체를 「Chats and tasks」(채팅 및 작업)에서 본다고 안내합니다.[^chats] 이 화면에는 그 메뉴가 보이지 않았습니다. 화면에 따라 다를 수 있으니, 지난 대화는 ① 「검색」이나 ② 목록에서 찾아보세요.
 
-새 화면의 한국어 도움말에도 「Recents」처럼 영어 그대로 적힌 메뉴가 있습니다.[^new] 화면에 영어가 보여도 당황하지 않아도 됩니다.
+한국어 화면과 도움말에도 영어 그대로 적힌 메뉴가 있습니다(예: 「Skills」).[^new][^screen] 화면에 영어가 보여도 당황하지 않아도 됩니다.
 
 옆 메뉴는 **완전히 끌 수 없습니다.** 열고 닫기만 됩니다.[^appearance] 화면이 좁게 느껴지면 닫아 두었다가 지난 대화를 찾을 때 여세요.
 
@@ -53,14 +71,26 @@ Claude는 지금 **화면을 바꾸는 중**입니다. 예전에는 보통 대�
 가운데 입력창에 질문을 쓰고 보내기 버튼을 누르면 대화가 시작됩니다.
 입력창 왼쪽 아래 **「+」 버튼**을 누르거나 입력창에 **「/」** 를 치면 더 많은 기능과 명령이 나옵니다.[^start]
 
-<!-- 스크린샷 필요: 입력창 「+」 버튼을 누른 메뉴 (웹, 새 화면과 옛 화면 각각) -->
+![입력창 「+」를 누른 메뉴. ① 「파일 업로드 또는 추가」(Ctrl+U), ② 「Skills」, ③ 「커넥터 추가」, ④ 「디자인 시스템」, ⑤ 「플러그인 추가」, ⑥ 체크 표시가 붙은 「메모리」에 빨간 번호가 붙어 있다](assets/shot-02-plus-menu-marked.png)
 
-처음에 알아 둘 「+」 메뉴는 두 가지입니다.
+무료 요금제 화면입니다. **빨간 번호는 아래 목록의 번호와 같은 곳입니다.**[^screen]
 
-- **「파일 또는 사진 추가」**: 내 컴퓨터의 문서·사진을 올립니다. 파일을 입력창에 끌어다 놓아도 됩니다([4장](04-files-artifacts.md)).[^upload]
-- **「Research」(리서치)**: 오래 조사해 보고서를 받습니다. 새 화면에서는 입력창에 `/deep-research` 를 쳐도 됩니다([6장](06-search.md)).[^new]
+- ① 「파일 업로드 또는 추가」: 내 컴퓨터의 문서·사진을 올립니다. 파일을 입력창에 끌어다 놓아도 됩니다([4장](04-files-artifacts.md)).[^upload]
+- ② 「Skills」·③ 「커넥터 추가」·④ 「디자인 시스템」·⑤ 「플러그인 추가」: Claude에 기능을 더 붙이는 메뉴입니다. 스킬·커넥터·플러그인은 [7장](07-projects-tools.md)에서 다룹니다.
+- ⑥ 「메모리」: 체크 표시가 있으면 켜진 상태입니다([5장](05-memory.md)).
 
-새 화면의 입력창에는 Claude가 얼마나 스스로 일할지 정하는 **권한 설정**도 있습니다. Pro·Max의 기본값은 「Auto」(단계마다 묻지 않고 진행)입니다. 메시지 보내기처럼 결과가 큰 일을 맡길 때는 곁에서 지켜보세요([8장](08-cowork.md)).[^new]
+처음에는 ① 하나만 알아도 충분합니다.
+
+오래 조사해 보고서를 받는 **「Research」(리서치)** 도 「+」 메뉴에 있다고 도움말은 안내합니다. 새 화면에서는 입력창에 `/deep-research` 를 쳐도 됩니다([6장](06-search.md)).[^new] 리서치는 유료 요금제부터라서, 위 무료 계정 메뉴에는 보이지 않았습니다.[^pricing][^screen]
+
+입력창 아래 ⑦ 「수동」은 **권한 모드**입니다. Claude가 얼마나 스스로 일할지 정합니다. 무료 계정에도 보입니다.[^screen]
+
+![⑦ 「수동」을 누른 「권한 모드」 메뉴. ① 「수동」(체크 표시)과 ② 「자동」 두 가지 설명에 빨간 번호가 붙어 있다](assets/shot-04-permission-marked.png)
+
+- ① 「수동」: "Claude는 새 도구를 사용하거나 새 사이트를 열기 전에 확인을 요청합니다." 무료 계정의 기본값입니다.[^screen]
+- ② 「자동」: "Claude가 자체적으로 실행되며 안전하지 않아 보이는 것이 있으면 일시 중지하고 확인합니다."[^screen]
+
+Pro·Max의 기본값은 「Auto」(자동)라고 도움말은 안내합니다.[^new] 처음에는 「수동」으로 두는 편이 마음 편합니다. 새 도구를 쓰거나 새 사이트를 열기 전에 먼저 물어보기 때문입니다. 메시지 보내기처럼 결과가 큰 일을 맡길 때는 곁에서 지켜보세요. 자세한 설명은 [8장](08-cowork.md#확인-방식-고르기-—-권한-모드)에 있습니다.[^new]
 
 메뉴를 다 외울 필요는 없습니다. 무엇을 할 수 있는지 모르겠다면 Claude에게 직접 물어보세요.
 
@@ -72,8 +102,8 @@ Claude는 지금 **화면을 바꾸는 중**입니다. 예전에는 보통 대�
 
 ## 모델 메뉴 — 모델·노력·생각 고르기
 
-웹과 컴퓨터 앱에서는 입력창 **보내기 버튼 옆**에 지금 쓰는 모델 이름이 보입니다. 휴대폰 앱에서는 화면 위쪽에 보입니다.[^start][^model]
-이 이름을 누르면 **모델 메뉴**가 열립니다. 여기서 세 가지를 정합니다.[^model]
+웹과 컴퓨터 앱에서는 **입력창 아래**에 지금 쓰는 모델 이름과 노력이 보입니다(첫 화면 그림의 ⑥ 「Sonnet 5.5 중간」). 휴대폰 앱에서는 화면 위쪽에 보입니다.[^start][^screen]
+도움말은 이 자리를 "보내기 버튼 옆"이라고 부릅니다.[^model] 이 이름을 누르면 **모델 메뉴**가 열립니다. 도움말은 여기서 세 가지를 정한다고 안내합니다.[^model]
 
 | 정하는 것 | 뜻 |
 |---|---|
@@ -81,7 +111,16 @@ Claude는 지금 **화면을 바꾸는 중**입니다. 예전에는 보통 대�
 | **노력**(Effort) | 답 하나에 얼마나 공을 들일지 |
 | **생각**(Thinking) | 답하기 전에 따져 보는 단계를 거칠지 |
 
-<!-- 스크린샷 필요: 보내기 버튼 옆 모델 이름을 누른 메뉴. 모델 목록, 「노력」, 「사고」 토글, 「더 많은 모델」 (웹) -->
+![⑥ 「Sonnet 5.5 중간」을 누른 모델 메뉴. ① 모델 목록(Fable 5.1 「Pro 또는 Max」·「업그레이드」, Opus 5.5 「Pro」·「업그레이드」, 체크 표시된 Sonnet 5.5, Haiku 5.5), ② 「노력」 중간, ③ 「더 많은 모델」, ④ 맨 아래 Fable 5.1 안내 문구에 빨간 번호가 붙어 있다](assets/shot-03-model-menu-marked.png)
+
+무료 요금제 화면입니다. **빨간 번호는 아래 목록의 번호와 같은 곳입니다.**[^screen]
+
+- ① 모델 목록: 무료 계정은 Sonnet 5.5와 Haiku 5.5만 고를 수 있습니다. Fable 5.1과 Opus 5.5 옆에는 「업그레이드」가 붙어 있습니다.
+- ② 「노력」: 답 하나에 얼마나 공을 들일지 정합니다(아래 「노력」).
+- ③ 「더 많은 모델」: 목록에 없는 모델을 봅니다.
+- ④ 안내: "Fable 5.1은 Max 플랜에 포함되어 있거나, Pro에서 사용 크레딧으로 이용할 수 있습니다."
+
+이 무료 계정 메뉴에는 **생각 스위치가 따로 보이지 않았습니다.** ② 「노력」만 있었습니다.[^screen] 생각 스위치는 요금제·모델에 따라 보일 수 있습니다.
 
 대화 중에도 언제든 바꿀 수 있습니다. 바꾼 설정은 **다음 답부터** 적용됩니다.[^model]
 
@@ -114,21 +153,29 @@ Max의 "50%까지"는 한도가 늘어난다는 뜻이 아닙니다. 다른 모�
 
 **노력**(Effort)이 높을수록 답이 꼼꼼해집니다. 대신 시간이 더 걸리고, 사용 한도에 더 빨리 닿습니다.[^model]
 
+![모델 메뉴의 「노력」에 마우스를 올리면 왼쪽에 열리는 단계 목록. ① 맨 위 안내 문구, ② 「낮음」, 「추천」 표시와 체크가 붙은 「중간」, 「높음」, 「엑스트라」, 「5× 이상 사용량」 경고가 붙은 「최대」에 빨간 번호가 붙어 있다](assets/shot-05-effort-marked.png)
+
+무료 요금제 화면입니다(Sonnet 5.5). ① 안내 문구는 이렇습니다. "더 높은 노력은 더 철저한 응답을 의미하지만, 시간이 더 오래 걸리고 한도를 더 빨리 사용합니다."[^screen]
+② 단계는 다섯 가지입니다.
+
 | 노력 | 어울리는 일 |
 |---|---|
 | 「낮음」·「중간」 | 일상적인 일 |
 | 「높음」 | 품질과 속도의 균형 |
-| 「매우 높음」 | 오래 걸리는 코딩, 여러 단계를 스스로 하는 작업(일부 모델만) |
+| 「엑스트라」 | 오래 걸리는 코딩, 여러 단계를 스스로 하는 작업 |
 | 「최대」 | 가장 깊은 분석이 필요한 일 |
 
-출처: Anthropic 도움말[^model]
+출처: Anthropic 도움말[^model], 단계 이름은 화면[^screen]
 
-모델마다 권장하는 노력에는 「기본값」(Default)이라고 표시되어 있습니다.[^model] 대부분은 그대로 두면 됩니다.
+도움말은 「엑스트라」를 「매우 높음」(Extra high)이라고 부르고, 일부 모델에만 있다고 합니다.[^model] 「최대」 옆에는 「5× 이상 사용량」 경고가 붙어 있습니다. 사용량이 다섯 배 넘게 들 수 있다는 표시이니 꼭 필요할 때만 고르세요.[^screen]
+
+모델마다 권장하는 노력에는 표시가 붙어 있습니다. 이 화면에서는 「중간」 옆의 「추천」입니다(도움말에는 「기본값」).[^model][^screen] 대부분은 그대로 두면 됩니다.
 
 ### 생각 — 답하기 전에 따져 볼까
 
 **생각**(Thinking)을 켜면 Claude가 답하기 전에 문제를 나누고, 방법을 계획하고, 여러 길을 따져 봅니다.[^model] 이것을 **확장 사고**(extended thinking)라고도 합니다.[^start]
-켜고 끄는 법은 이렇습니다. 모델 이름을 누르고 「노력」 위에 마우스를 올린 뒤 「사고」(Thinking, 또는 「확장」) 스위치를 켜거나 끕니다.[^model]
+도움말이 안내하는 켜고 끄는 법은 이렇습니다. 모델 이름을 누르고 「노력」 위에 마우스를 올린 뒤 「사고」(Thinking, 또는 「확장」) 스위치를 켜거나 끕니다.[^model]
+이 스위치는 요금제·모델에 따라 보일 수 있습니다. 이 가이드의 무료 계정 메뉴에는 보이지 않았습니다.[^screen] 스위치가 없으면 이 절은 읽어 두기만 하세요.
 생각과 노력은 **따로 정하는 설정**입니다. 어떤 조합이든 쓸 수 있습니다.[^model] 최신 모델 중에는 생각을 끌 수 없는 것도 있습니다.[^model]
 
 생각을 켜면 답하는 동안 시간이 흐르는 「사고」 표시가 보입니다. 답 위의 「사고」 칸을 누르면 Claude가 어떻게 생각했는지 요약을 볼 수 있습니다.[^model]
@@ -160,57 +207,73 @@ Max의 "50%까지"는 한도가 늘어난다는 뜻이 아닙니다. 다른 모�
 - **그 대화가 끝날 때까지 바뀐 모델에 머뭅니다.** 원래 모델로 직접 되돌릴 수는 있습니다. 하지만 문제가 된 내용이 대화에 남아 있으면 또 바뀔 수 있습니다. 앞 메시지를 고친 뒤 다시 보내 보세요.
 - **내가 치지 않은 내용 때문에 바뀔 수도 있습니다.** 검사는 메모리, 연결한 앱, 웹 검색 결과, 올린 파일까지 함께 봅니다.
 
-자동 전환이 싫으면 설정 → 「기능」(Capabilities)에서 「메시지가 플래그되면 모델 전환」(Switch models when a message is flagged)을 끄세요. 끄면 모델이 바뀌는 대신 대화가 멈추고, 내가 직접 고르게 됩니다.[^switch]
+자동 전환이 싫으면 설정 → 「기능」(Capabilities)에서 「메시지가 플래그 지정되면 모델 전환」(Switch models when a message is flagged)을 끄세요.[^screen] 끄면 모델이 바뀌는 대신 대화가 멈추고, 내가 직접 고르게 됩니다.[^switch]
 문제없는 질문인데 잘못 걸렸다고 생각되면 「피드백 보내기」(Send feedback)로 알려 주세요.[^switch]
 
 <Quiz id="ch202-fallback" />
 
 ## 설정 화면 — 언어와 화면 모양
 
-왼쪽 아래 내 이름(이름 첫 글자)을 누르고 「설정」을 고르면 설정 화면이 열립니다.[^signup]
-설정 화면도 새 이름과 옛 이름이 함께 쓰이고 있습니다. 예를 들어 모든 대화에 적용할 지침은 새 설정 화면에서 「Your Claude」, 옛 설정 화면에서 「계정」에 있습니다.[^new]
+왼쪽 아래 내 이름(첫 화면 그림의 ⑩)을 누르면 계정 메뉴가 열립니다.[^signup][^screen]
 
-<!-- 스크린샷 필요: 설정 화면 왼쪽 메뉴 목록 전체에 빨간 번호 (웹) -->
+![왼쪽 아래 「김하나 · Free」를 누른 계정 메뉴. 맨 위 이메일 아래로 ① 「설정」(Ctrl+Shift+,), ② 「언어」, ③ 「도움 받기」, ④ 「플랜 업그레이드」, ⑤ 「앱 및 확장 프로그램 다운로드」에 빨간 번호가 붙어 있고, 그 아래 「더 알아보기」「API 키 받기」「로그아웃」이 있다](assets/shot-07-account-menu-marked.png)
 
-처음에는 아래 몇 개만 알면 됩니다.
+이름·이메일은 예시로 바꾼 화면입니다(무료 요금제). **빨간 번호는 아래 목록의 번호와 같은 곳입니다.**[^screen]
+
+- ① 「설정」: 설정 화면을 엽니다.
+- ② 「언어」: 화면 언어를 바꿉니다.
+- ③ 「도움 받기」: 고객 지원에 묻습니다([1장](01-getting-started.md#안-될-때-먼저-해-볼-것)).[^support]
+- ④ 「플랜 업그레이드」: 유료 요금제로 바꿉니다([1장](01-getting-started.md#유료로-바꾸기-전에-알아-둘-것)).
+- ⑤ 「앱 및 확장 프로그램 다운로드」: 컴퓨터 앱·휴대폰 앱 등을 받습니다.
+
+① 「설정」을 누르면 설정 화면이 열립니다. 왼쪽에 메뉴가 세로로 늘어서 있습니다.
+
+![설정 → 「일반」 화면. ① 왼쪽 메뉴(「일반」「계정」「개인정보보호」「결제」「기능」「메모리」「회고」「시간 및 집중」「Claude Code」), ② 「화면 모드」의 「테마」(시스템·밝게·어둡게 아이콘), ③ 「음성」의 「언어」(한국어)에 빨간 번호가 붙어 있다](assets/shot-09-settings-general-marked.png)
+
+무료 요금제 화면입니다. **빨간 번호는 아래 글의 번호와 같은 곳입니다.**[^screen]
+
+① 왼쪽 메뉴 가운데 처음에는 아래 몇 개만 알면 됩니다.[^screen]
 
 | 설정 메뉴 | 여기서 하는 일 | 자세히 |
 |---|---|---|
-| 「모양」 | 밝은 화면·어두운 화면, 글꼴 | 이 장 |
-| 「청구」 | 요금제 바꾸기, 취소, 영수증 | [1장](01-getting-started.md#유료로-바꾸기-전에-알아-둘-것) |
-| 「사용량」 | 남은 사용 한도 (유료) | [1장](01-getting-started.md#사용-한도-—-5시간·주간·길이) |
-| 「기능」 | 모델 자동 전환, 음성 언어 | 이 장, [10장](10-voice-mobile.md) |
-| 「Your Claude」 | 모든 대화에 적용할 지침(옛 설정 화면은 「계정」) | [5장](05-memory.md) |
-| 「계정」 | 로그인된 기기 확인(「활성 세션」·「로그인된 위치」) | [3장](03-chats.md) |
-| 「개인정보 보호」(Privacy) | 공유한 대화 목록 | [3장](03-chats.md), [9장](09-privacy.md) |
+| 「일반」 | 테마(밝게·어둡게), 글꼴, 음성 언어 | 이 장 |
+| 「계정」 | 내 이름, 「Claude 지침」, 로그인된 기기 | [3장](03-chats.md), [5장](05-memory.md) |
+| 「개인정보보호」 | 공유한 대화, 데이터 내보내기 | [3장](03-chats.md), [9장](09-privacy.md) |
+| 「결제」 | 요금제 바꾸기, 취소, 영수증 | [1장](01-getting-started.md#유료로-바꾸기-전에-알아-둘-것) |
+| 「기능」 | 모델 자동 전환 | 이 장 |
+| 「메모리」 | Claude가 기억하는 내용 | [5장](05-memory.md) |
+| 「시간 및 집중」 | 휴식 알림, 방해 금지 시간 | [5장](05-memory.md#휴식-알림과-방해-금지-시간) |
 
-출처: Anthropic 도움말[^new][^appearance][^cancel][^best][^switch][^lang][^sessions][^share]
+출처: 화면[^screen], Anthropic 도움말[^cancel][^switch][^sessions][^share]
 
-**화면 언어 바꾸기**: 왼쪽 아래 프로필 아이콘을 누르고 「언어」에서 고릅니다.[^lang] 웹과 컴퓨터 앱은 한국어를 포함해 11개 언어로 쓸 수 있습니다.[^lang]
+설정 메뉴 이름은 화면에 따라 다를 수 있습니다. 도움말은 모든 대화에 적용할 지침이 새 설정 화면의 「Your Claude」에 있다고 안내합니다.[^new] 이 계정에는 「Your Claude」가 보이지 않았고, 「계정」 안의 「Claude 지침」이 그 자리였습니다.[^screen]
+유료 요금제에는 남은 한도를 보는 「사용량」(Usage) 화면도 있습니다([1장](01-getting-started.md#사용-한도-—-5시간·주간·길이)).[^best] 이 무료 계정의 설정 메뉴에는 보이지 않았습니다.[^screen]
+
+**화면 언어 바꾸기**: 계정 메뉴의 ② 「언어」에서 고릅니다.[^lang][^screen] 웹과 컴퓨터 앱은 한국어를 포함해 11개 언어로 쓸 수 있습니다.[^lang]
 화면 언어와 상관없이 Claude는 **내가 쓰는 언어로 답합니다.** 화면이 영어여도 한국어로 물으면 한국어로 답합니다.[^lang]
-음성 모드에서 쓰는 언어는 따로 정합니다. 설정 → 「기능」 → 음성 → 「음성 언어」로 갑니다([10장](10-voice-mobile.md)).[^lang]
+음성 모드에서 쓰는 언어는 따로 정합니다. 이 화면에서는 설정 → 「일반」 → 「음성」의 ③ 「언어」입니다([10장](10-voice-mobile.md)).[^screen] 도움말은 설정 → 「기능」 → 음성 → 「음성 언어」라고 안내하니, 화면에 따라 다를 수 있습니다.[^lang]
 
-**어두운 화면 쓰기**: 설정 → 「모양」의 「색상 모드」에서 「라이트」「시스템 일치」「다크」 중에 고릅니다.[^appearance] 「시스템 일치」는 컴퓨터나 휴대폰의 설정을 따라갑니다.
-글자가 읽기 어렵다면 같은 곳의 「채팅 글꼴」을 바꿔 보세요. 「기본값」「시스템 일치」「난독증 친화적」 중에 고를 수 있습니다.[^appearance]
+**어두운 화면 쓰기**: 설정 → 「일반」 → 「화면 모드」의 ② 「테마」에서 시스템·밝게·어둡게 아이콘 중 하나를 누릅니다.[^screen] 시스템을 고르면 컴퓨터나 휴대폰의 설정을 따라갑니다.[^appearance]
+글자가 읽기 어렵다면 같은 곳의 「인터페이스 글꼴」이나 「응답 글꼴」을 바꿔 보세요.[^screen] 도움말은 글꼴로 「난독증 친화적」도 고를 수 있다고 안내합니다. 화면에 따라 다를 수 있습니다.[^appearance]
 
 <Quiz id="ch202-settings" />
 
 ## 직접 해 보기
 
-1. Pro·Max라면 입력창을 보고 「Chat」「Cowork」 선택이 있는지 확인한다. 내가 새 화면인지 옛 화면인지 알아 둔다.
+1. 첫 화면 그림과 내 화면을 비교해 보고, Pro·Max라면 입력창을 보고 「Chat」「Cowork」 선택이 있는지 확인한다. 내가 새 화면인지 옛 화면인지 알아 둔다.
 2. 입력창 「+」 버튼을 눌러 메뉴 항목을 하나씩 읽어 보고(누르지 않아도 됩니다) 닫는다.
-3. 보내기 버튼 옆 모델 이름을 눌러 지금 모델과 노력의 「기본값」이 무엇인지 확인한다.
-4. 위의 저축 계산 질문을 노력 「낮음」으로 한 번, 「높음」으로 한 번 보내고 답을 비교한다. 생각을 켤 수 있다면 「사고」 칸을 눌러 요약도 읽어 본다.
-5. 설정 → 「모양」에서 색상 모드를 「다크」로 바꿔 보고, 마음에 드는 쪽으로 되돌린다.
+3. 입력창 아래 모델 이름을 눌러 지금 모델과, 노력에서 「추천」(또는 「기본값」)이 붙은 단계가 무엇인지 확인한다.
+4. 위의 저축 계산 질문을 노력 「낮음」으로 한 번, 「높음」으로 한 번 보내고 답을 비교한다. 생각 스위치가 보인다면 「사고」 칸을 눌러 요약도 읽어 본다.
+5. 설정 → 「일반」의 「테마」를 어둡게로 바꿔 보고, 마음에 드는 쪽으로 되돌린다.
 
 ## 정리
 
 - Claude는 채팅과 Cowork를 합친 새 화면을 차례로 배포하고 있다. Pro·Max에서 입력창에 「Chat」「Cowork」 선택이 보이면 아직 옛 화면이다.
-- 옆 메뉴에는 지난 대화가, 왼쪽 아래 내 이름에는 설정과 「도움말 받기」가 있다. 옆 메뉴는 끌 수 없고 열고 닫기만 된다.
-- 입력창 「+」나 「/」로 파일 올리기, 리서치 같은 기능을 연다.
-- 보내기 버튼 옆 모델 메뉴에서 모델·노력·생각을 정한다. 일상적인 일은 기본값이면 충분하다.
+- 옆 메뉴에는 지난 대화가, 왼쪽 아래 내 이름에는 설정·언어·「도움 받기」·「플랜 업그레이드」가 있다. 옆 메뉴는 끌 수 없고 열고 닫기만 된다.
+- 입력창 「+」나 「/」로 파일 올리기, 리서치 같은 기능을 연다. 입력창 아래 「수동」·「자동」은 권한 모드다.
+- 입력창 아래 모델 메뉴에서 모델·노력을 정한다(생각 스위치는 요금제·모델에 따라 보인다). 무료는 Sonnet·Haiku만 고를 수 있다. 일상적인 일은 추천 값이면 충분하다.
 - 위험 분야로 판단된 질문은 다른 모델이 대신 답할 수 있다. 알림과 모델 이름표로 알 수 있고, 설정 → 「기능」에서 끌 수 있다.
-- 화면 언어는 「언어」, 어두운 화면과 글꼴은 설정 → 「모양」에서 바꾼다.
+- 화면 언어는 계정 메뉴의 「언어」, 어두운 화면과 글꼴은 설정 → 「일반」에서 바꾼다. 설정 메뉴 이름은 화면에 따라 다를 수 있다.
 
 ## 용어 정리
 
@@ -229,6 +292,7 @@ Max의 "50%까지"는 한도가 늘어난다는 뜻이 아닙니다. 다른 모�
 
 다음 장: [3장. 대화 관리](03-chats.md)
 
+[^screen]: Claude 웹 화면(무료 요금제, 한국어)에서 직접 확인. 입력창 「오늘 어떤 도움을 드릴까요?」 둘레에 「Chat」「Cowork」 선택과 웹 검색 스위치 없음, 옆 메뉴 「고정됨」「최근 항목」, 「+」 메뉴 「파일 업로드 또는 추가」「Skills」「커넥터 추가」「디자인 시스템」「플러그인 추가」「메모리」, 「권한 모드」 「수동」·「자동」, 모델 메뉴(무료는 Sonnet 5.5·Haiku 5.5만 선택, 생각 스위치 없음), 노력 「낮음」「중간」(추천)「높음」「엑스트라」「최대」, 계정 메뉴, 설정 → 「일반」의 「테마」·「음성」 → 「언어」, 설정 → 「계정」의 「Claude 지침」, 설정 → 「기능」의 「메시지가 플래그 지정되면 모델 전환」. (확인일 2026-10-26)
 [^new]: Anthropic 도움말, 「Claude Cowork and chat are one Claude」. "With the new Claude experience, you ask for all of it in the same conversation, with no mode to choose." / "The new Claude experience is rolling out gradually, starting with Pro and Max plans on web, desktop, and mobile." / "If you're on a Pro or Max plan and your message box still shows "Chat" and "Cowork" options, you don't have it yet." / "One conversation list: Your quick questions and longer tasks live together in Recents." / "Web search: There's no web search toggle. Claude searches the web when it helps." / "Research: Type /deep-research, or click the “+” button below the chat input, then choose “Research.”" / "Auto (default on Pro, Max, and Team plans): Claude keeps working without stopping to ask about each step, and automated safety checks run before it takes an action." / "For work with real consequences, like sending messages or changing important files, stay close and review what Claude does." / "Instructions for Claude: Set preferences that apply to every conversation in Settings > Your Claude (or Settings > Account in the older Settings layout)." https://support.claude.com/en/articles/16761823 (확인일 2026-10-26)
 [^chats]: Anthropic 도움말, 「Delete or rename a conversation」. "Find the conversation in the left sidebar, or click "Chats and tasks" to see your full chat history." https://support.claude.com/en/articles/8230524 (확인일 2026-10-26)
 [^support]: Anthropic 도움말, 「How to get support」. "Click your initials or name in the lower left corner and select “Get help” from the menu." https://support.claude.com/en/articles/9015913 (확인일 2026-10-26)
@@ -237,7 +301,7 @@ Max의 "50%까지"는 한도가 늘어난다는 뜻이 아닙니다. 다른 모�
 [^upload]: Anthropic 도움말, 「Upload files to Claude」. "Click the \"+\" button in the lower left corner of the chat box" https://support.claude.com/en/articles/8241126 (확인일 2026-10-26)
 [^model]: Anthropic 도움말, 「Change the model, effort, and thinking settings」. "The model menu next to the send button controls three settings: which Claude model you're chatting with, how much effort it puts into each response, and whether it uses thinking." / "The selected model and effort level appear next to the send button." / "Click "More models" to view additional options." / "You can change the model, effort level, or thinking setting at any point in a conversation. Changes apply starting with Claude's next response." / "Higher effort means more thorough responses, but they take longer and use more tokens, so you'll reach your usage limits faster." / "Each model has a recommended effort level, marked as "Default" in the menu:" / "Extra high (xhigh) is designed for long-running coding and agentic tasks" / "Thinking lets Claude spend more time breaking down problems, planning solutions, and exploring different approaches before responding." / "Thinking and effort are separate settings, and you can use any combination of the two." / "Switch the "Thinking" (or “Extended”) toggle on or off." / "Click the "Thinking" section to view Claude's thought process summary and problem-solving approach." / "Occasionally, you may notice that Claude's thinking stops before it's complete, with a message stating that the rest of Claude's thought process is not available." / "For everyday tasks, the defaults work well." / "Whichever settings you choose, be specific about your problem or question." 생각을 끌 수 없는 모델 목록은 영어판과 한국어판이 조금 다르다. https://support.claude.com/en/articles/8664678 (확인일 2026-10-26)
 [^rn]: Anthropic 도움말, 「Release notes」(2026년 항목). "We just launched Claude Haiku 5.5, the cheapest, fastest, and most capable small model we’ve released" / "Sonnet 5.5 is a faster, lower-cost complement to Claude Opus 5.5." / "It performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5." / "We just launched Claude Fable 5.1 and Claude Mythos 5.1, the world’s most advanced models for coding and knowledge work." https://support.claude.com/en/articles/12138966 (확인일 2026-10-26)
-[^pricing]: Anthropic 요금 페이지. 모델 비교표의 Fable 행 " No Usage credits 50% of weekly limits* 50% of weekly limits* " (열 = Free/Pro/Max 5x/Max 20x), Opus 행은 Free 없음, Sonnet·Haiku 행은 Free 있음. https://claude.com/pricing (확인일 2026-10-26)
+[^pricing]: Anthropic 요금 페이지. 모델 비교표의 Fable 행 " No Usage credits 50% of weekly limits* 50% of weekly limits* " (열 = Free/Pro/Max 5x/Max 20x), Opus 행은 Free 없음, Sonnet·Haiku 행은 Free 있음. Research 행은 Free 없음, Pro부터 있음. https://claude.com/pricing (확인일 2026-10-26)
 [^fable]: Anthropic 도움말, 「Claude Fable models on your plan」. "On Pro plans, standard seats on Team plans, and standard seats on seat-based Enterprise plans, Fable models run on pay-as-you-go usage credits from the start, since they aren’t included in your plan's usage limits." / "No. You can use up to 50% of your weekly limit on Fable models, but your use of other models draws from the same usage limits and you can never use more than your weekly limit." https://support.claude.com/en/articles/15424964 (확인일 2026-10-26)
 [^persona]: Anthropic 도움말, 「Adapt to new model personas after deprecations」. "historically Anthropic has deprecated most models around a year after their initial release." / "you can ask Claude to review some of the conversations you’ve most appreciated and to craft instructions for itself based on those." https://support.claude.com/en/articles/12738598 (확인일 2026-10-26)
 [^switch]: Anthropic 도움말, 대화 중 모델이 바뀐 이유를 설명하는 문서(문서 제목에 현재 모델 이름이 들어 있어 이 가이드에는 적지 않음). "Offensive cybersecurity techniques, such as building exploits, malware, or attack tooling." / "so a block can be triggered by content you didn't type." / "You’ll see a notice explaining that the model switched, and the response will be labeled with the model that answered." / "Editing your previous message before retrying often helps." / "With automatic model switching off, a blocked request pauses the conversation instead of switching models." / "Use "Send feedback" to report it." https://support.claude.com/en/articles/15363606 (확인일 2026-10-26)

@@ -706,6 +706,19 @@ export const QUESTIONS: readonly Question[] = [
     answer: 2,
     explain: '빈칸을 내 컴퓨터에서 채우면 실제 이름·금액을 AI에 보내지 않고도 문서를 완성할 수 있습니다.',
   },
+  {
+    id: 'ch10-academy',
+    chapter: 10,
+    prompt: 'Anthropic이 만든 무료 강좌 「AI Fluency」의 연습 활동에 대한 설명으로 맞는 것은?',
+    choices: [
+      '예시는 Claude로 되어 있지만, 다른 AI 서비스로 따라 해도 된다',
+      'Claude 유료 요금제에 가입해야만 연습을 할 수 있다',
+      '강좌가 정해 준 AI 서비스 하나로만 연습해야 한다',
+      '연습 활동 없이 영상만 보고 끝나는 강좌다',
+    ],
+    answer: 0,
+    explain: '강좌는 예시에 Claude를 쓰지만 원하는 AI 서비스로 따라 해도 된다고 밝히고, 유료 요금제도 필요 없다고 합니다.',
+  },
   // 2단계 ChatGPT guide (chapters 101-110)
   {
     id: 'ch101-logged-out',

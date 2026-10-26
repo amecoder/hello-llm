@@ -100,6 +100,14 @@ https://www.example.com/news/12345
 - 2026년 자료를 우선하고, 날짜를 모르는 자료는 따로 표시해 줘
 ```
 
+리서치는 몇 분씩 걸릴 수 있습니다.[^academy-research] 그래서 보내기 전에 질문을 다듬는 시간이 아깝지 않습니다. 무엇을 물어야 할지 막막하면, 리서치를 켜기 전에 먼저 일반 대화에서 이렇게 물어보세요.[^academy-research]
+
+```
+우리 동네에 작은 반찬가게를 열까 고민 중이야. 이걸 리서치로 조사하려는데, 어떤 질문으로 맡기면 좋을지 같이 다듬어 줘. 예산·지역·기간처럼 내가 정해 줘야 할 조건도 물어봐 줘.
+```
+
+예산, 지역, 기간 같은 조건을 넣어 보세요.[^academy-research] 조건이 있으면 리서치가 내 상황에 맞는 자료를 찾기 쉬워집니다.
+
 ### 알아 둘 점
 
 - **사용량이 빨리 닳을 수 있습니다.** 한도는 일반 대화와 같습니다. 다만 여러 출처를 모아 긴 답을 만들어서 더 빨리 쓰게 됩니다.[^research]
@@ -170,3 +178,4 @@ https://www.example.com/news/12345
 [^new]: Anthropic 도움말, 「Claude Cowork and chat are one Claude」. "Web search: There's no web search toggle. Claude searches the web when it helps." / "Research: Type /deep-research, or click the “+” button below the chat input, then choose “Research.”" https://support.claude.com/en/articles/16761823 (확인일 2026-10-26)
 [^research]: Anthropic 도움말, 「Use research on Claude」. "It runs multiple searches that build on each other and decides what to look into next based on what it finds." / "Research is available for users with paid Claude plans (Pro, Max, Team, or Enterprise) using Claude on the web, Claude Desktop, or Claude Mobile." / "Important: You must have web search turned on for research to function." / "Click the “+” button on the bottom left of your chat interface, then "Research." A blue indicator will appear on the bottom of the chat window." / "However, research sessions can use up your limits faster due to Claude retrieving multiple sources and providing comprehensive responses." / "In this case, you can steer and prompt Claude to use Research by saying “Claude, please use the research tool to…”" / "During research, Claude can use tools from your connectors automatically, without asking for approval each time." / "When you start research in Claude Mobile, Claude only searches the web and doesn’t use your connectors." / "Research runs on Claude Opus 5.5 and falls back to Claude Opus 4.8 when needed." https://support.claude.com/en/articles/11088861 (확인일 2026-10-26)
 [^when]: Anthropic 도움말, 「When should I use web search, extended thinking, and research?」. "Web search is best for straightforward, factual queries that can be answered with one or two tool calls" / "Extended thinking shines when tackling complex reasoning tasks that don't require recent info from the web" / "Research is optimal for comprehensive information gathering requiring five or more tool calls over 1-3 minutes" / "Combining extended thinking with research allows Claude to both plan its approach thoughtfully and execute comprehensive information gathering" / "The research feature can synthesize information across multiple sources with proper citations and produces a longer final report." https://support.claude.com/en/articles/11095361 (확인일 2026-10-26)
+[^academy-research]: Claude Academy 「Claude 101」 강의 「Research for deep dives」. "Include relevant constraints." / "a few minutes or more, depending on the question." / "If you're not sure how to frame your research question, you can even ask Claude to help you write a better Research prompt before enabling the feature." https://academy.claude.com/courses/claude-101/research-mode-for-deep-dives (확인일 2026-10-26)

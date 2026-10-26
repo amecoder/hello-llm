@@ -25,6 +25,28 @@ Cowork는 개발자용 도구인 Claude Code의 방식을 코딩 밖 일반 업�
 - 작업과 파일은 계정에 저장됩니다. 다른 기기에서 같은 작업을 열어 이어 볼 수 있습니다.[^devices]
 - 작업 자체는 남과 공유할 수 없습니다. 작업 중에 만든 아티팩트는 공유할 수 있습니다([4장](04-files-artifacts.md)).[^cowork]
 
+### 대화로 할 일, 맡길 일
+
+Claude와 일하는 모양은 세 가지입니다. 이 장에서는 그중 두 가지를 봅니다.[^academy-desktop]
+하나는 **주고받으며 생각하는 일**입니다. 답을 보고 다음 질문이 떠오르는 일, 문장을 함께 다듬는 일이 여기에 들어갑니다.
+다른 하나는 **통째로 맡기는 일**입니다. 결과를 말해 두면 Claude가 계획을 세우고, 해내고, 결과를 가지고 돌아옵니다.
+
+맡길 일인지 헷갈리면 스스로 물어보세요.[^academy-desktop]
+
+- 평소에 여러 단계를 차례로 밟는 일인가?
+- 결과가 내 폴더에 저장될 파일이어야 하나?
+- 여러 앱의 자료를 모아야 하나?
+- 정해진 때마다 되풀이되는 일인가?
+
+하나라도 "그렇다"면 맡길 일입니다. 이때는 첫 질문 대신 **받고 싶은 결과**를 적어 보세요.[^academy-desktop] 질문을 하나씩 던지면 단계를 내가 이어 붙여야 합니다. 결과를 말하면 그 단계를 Claude가 밟습니다.
+
+- 아쉬운 예: "지난 분기 매출 숫자 좀 알려 줘." 그다음에 비교를 묻고, 요약을 묻고, 서식을 또 묻게 됩니다.
+- 나은 예: "「3분기 매출」 폴더의 표를 비교해서, 한 쪽짜리 요약 문서로 같은 폴더에 저장해 줘."
+
+차이는 하나입니다. 나은 예는 끝에 무엇을 받을지 말합니다.
+
+새 화면에는 「Chat」·「Cowork」 선택이 없습니다(아래 「Cowork 시작하기」). 그러니 "맡긴다"는 버튼이 아니라 **부탁하는 방식**이라고 생각하세요. 개발자가 코드를 만드는 일은 세 번째 모양입니다. Claude Code라는 도구로 하고, 이 가이드의 3단계에서 다룹니다.[^academy-shapes]
+
 <Quiz id="ch208-what" />
 
 ## Cowork 시작하기
@@ -36,7 +58,7 @@ Cowork는 개발자용 도구인 Claude Code의 방식을 코딩 밖 일반 업�
 
 <!-- 스크린샷 필요: 입력창 아래 「Chat」/「Cowork」 선택과, Cowork 작업이 계획을 보여 주는 화면 -->
 
-**입력창에 「Chat」·「Cowork」 선택이 없나요?** 그러면 이미 새 화면입니다. 새 화면에서는 모든 대화가 Cowork 일을 맡을 수 있습니다. 2번은 건너뛰세요.[^cowork] 새 화면이 한 번 오면 옛 화면으로 되돌릴 수 없습니다.[^one]
+**입력창에 「Chat」·「Cowork」 선택이 없나요?** 그러면 이미 새 화면입니다. 새 화면에서는 모든 대화가 Cowork 일을 맡을 수 있습니다. 2번은 건너뛰세요.[^cowork] 이 가이드에서 확인한 화면(무료 요금제)에도 이 선택은 없었습니다.[^screen] 새 화면이 한 번 오면 옛 화면으로 되돌릴 수 없습니다.[^one]
 
 ### 맡기는 요령
 
@@ -56,6 +78,18 @@ Cowork는 개발자용 도구인 Claude Code의 방식을 코딩 밖 일반 업�
 
 두 번째는 자료·모양·확인할 것이 다 들어 있어서, 끝난 뒤 다시 묻지 않아도 됩니다.
 
+맡길 때는 세 가지를 말해 보세요.[^academy-loop]
+
+1. **받을 결과물** — "한 쪽짜리 요약", "네 칸짜리 엑셀 표"처럼 모양과 길이까지.
+2. **쓸 자료** — 어느 폴더, 어느 앱, 어느 기간인지.
+3. **나만 아는 사정** — 자료만 봐서는 Claude가 모를 내용.
+
+세 번째는 이런 한 줄입니다. "작년 3분기에 새로 연 매장 세 곳도 따로 계산해 줘." 이 한 줄이 있으면 다 끝난 뒤에 "아, 그것도 넣어 줘"라고 다시 시키지 않아도 됩니다.
+
+처음에는 대화보다 손이 더 가는 것처럼 느껴집니다. 실제로 그렇습니다. 대신 주고받을 일을 맨 앞에서 끝내는 셈입니다.[^academy-loop]
+
+Claude가 시작하기 전에 몇 가지를 되물을 수 있습니다. 대부분은 보기 두어 개 중에 고르면 됩니다. 맞는 보기가 없으면 내 말로 답하세요.[^academy-loop] 되묻는 질문은 방해가 아닙니다. 일을 시작하기 전에 빈 곳을 메우는 과정입니다.
+
 ### 알아 둘 것
 
 - **진행 중에도 끼어들 수 있습니다.** 방향이 틀렸으면 중간에 바로잡아 주세요.[^cowork]
@@ -65,29 +99,54 @@ Cowork는 개발자용 도구인 Claude Code의 방식을 코딩 밖 일반 업�
 - **늘 지킬 지침**은 설정 → 「Cowork」 → 전역 지침 「편집」에 적습니다. 새 화면에서는 [5장](05-memory.md)의 지침이 이 역할을 합니다.[^cowork]
 - **작업 지우기**: 작업 옆 「⋮」 → 「Delete」를 누르면 목록에서 바로 사라지고, 30일 안에 서버에서도 지워집니다.[^cowork]
 
+### 받은 결과 검토하기
+
+다 되면 결과를 열어 읽어 보세요. 믿지만 아직 잘 모르는 사람이 낸 초안이라고 생각하면 됩니다. 처음 몇 번은 특히 꼼꼼히 봅니다.[^academy-loop]
+
+스스로 물어보세요.[^academy-loop]
+
+- 내가 원한 바로 그 결과인가? 비슷하지만 조금 다른 것을 만들지 않았나?
+- 숫자와 사실이 맞나?
+- 지어낸 것 같은 데는 없나? 내가 준 자료 어디에도 없는 날짜·이름·인용이 있나?
+
+숫자를 확인할 때는 먼저 이렇게 물어보세요.
+
+```
+이 보고서를 만들 때 어느 파일을 참고했는지 목록으로 알려 줘. 숫자마다 어느 파일에서 가져왔는지도 붙여 줘.
+```
+
+그다음 그 파일을 직접 열어 맞춰 보세요.
+
+고칠 때는 두 경우로 나눠 보세요.[^academy-loop]
+
+- **대체로 맞으면** 바꿀 곳만 말하세요. Claude는 앞의 대화를 기억하고 있어서, 처음부터 다시 만들기보다 고치는 쪽이 빠릅니다.
+- **뼈대부터 틀렸으면** 처음 부탁에 중요한 자료나 사정이 빠졌던 것입니다. 빠진 것을 알려 주고 고쳐 달라고 하세요.
+
 <Quiz id="ch208-start" />
 
 ## 확인 방식 고르기 — 권한 모드
 
-Cowork에는 Claude가 언제 허락을 물을지 정하는 **권한 모드**가 세 가지 있습니다. 입력창의 모드 선택에서 언제든 바꿀 수 있습니다.[^cowork]
+Claude가 언제 허락을 물을지 정하는 것을 **권한 모드**라고 합니다. 입력창 아래 오른쪽 버튼(처음에는 「수동」)을 누르면 고를 수 있습니다. 언제든 바꿀 수 있습니다.[^screen][^cowork]
 
-| 모드 | 하는 방식 |
-|---|---|
-| 「수동 승인」 | 동작마다 멈추고 묻는다 |
-| 「자동 승인」 | 묻지 않고 하되, 동작마다 안전 검사를 한다 |
-| 「모든 승인 건너뛰기」 | 묻지도, 검사하지도 않는다 |
+![입력창 아래 「수동」 버튼을 누르면 열리는 「권한 모드」 메뉴. ① 「수동」(체크 표시), ② 「자동」에 빨간 번호가 붙어 있다](assets/shot-04-permission-marked.png)
 
-- **「자동 승인」**은 동작마다 자료를 빼돌리려는지, 숨은 지시에 속았는지 검사합니다. 위험하다고 판단한 것은 막습니다.[^cowork]
-- **「모든 승인 건너뛰기」**는 아무 검사도 없습니다. 작업에 쓰이는 모든 동작·커넥터·파일·앱을 완전히 믿을 때만 쓰세요.[^cowork]
-- 새 화면에는 「자동」과 「수동」 두 가지만 있습니다. Pro·Max·Team은 「자동」이, Enterprise는 「수동」이 처음 값입니다.[^cowork]
+무료 요금제 화면입니다. **빨간 번호는 아래 목록의 번호와 같은 곳입니다.**
+
+- ① **「수동」**: 새 도구를 쓰거나 새 사이트를 열기 전에 먼저 묻습니다.[^screen]
+- ② **「자동」**: 스스로 진행하다가, 안전하지 않아 보이는 것이 있으면 멈추고 묻습니다.[^screen]
+
+이 화면(무료 요금제)은 「수동」이 처음 값이었습니다.[^screen] 도움말은 Pro·Max·Team은 「자동」이, Enterprise는 「수동」이 처음 값이라고 합니다.[^cowork] 화면이 다르면 내 화면을 기준으로 하세요.
+
+- **「자동」**은 동작마다 자료를 빼돌리려는지, 숨은 지시에 속았는지 검사합니다. 위험하다고 판단한 것은 막습니다.[^cowork]
+- 요금제·화면에 따라 선택지가 더 있을 수 있습니다. 예를 들어 도움말은 묻지도 검사하지도 않는 「모든 승인 건너뛰기」를 소개합니다. 작업에 쓰이는 모든 동작·커넥터·파일·앱을 완전히 믿을 때만 쓰세요.[^cowork]
 - 어느 모드든 **파일을 영구히 지우기 전에는 꼭 묻습니다.**[^safe]
 
-**언제 「수동 승인」으로 바꿀까요?** 스스로 물어보세요.[^safe][^cowork]
+**언제 「수동」으로 바꿀까요?** 스스로 물어보세요.[^safe][^cowork]
 - 처음 쓰는 도구·플러그인·사이트인가?
 - 돈이 오가거나, 내 이름으로 메시지가 나가거나, 중요한 파일이 걸린 일인가?
 - 되돌리기 어려운 일인가?
 
-하나라도 "그렇다"면 「수동 승인」으로 두고 가까이서 지켜보세요. 어떤 모드도 내 판단을 대신하지는 못합니다.
+하나라도 "그렇다"면 「수동」으로 두고 가까이서 지켜보세요. 어떤 모드도 내 판단을 대신하지는 못합니다.
 
 <Quiz id="ch208-modes" />
 
@@ -125,6 +184,8 @@ Cowork에는 Claude가 언제 허락을 물을지 정하는 **권한 모드**가
 예약 작업은 원격으로 돌기 때문에, 컴퓨터가 잠들어 있거나 데스크톱 앱이 꺼져 있어도 주기대로 돕니다.[^scheduled] 다만 10월 6일 전에 내 컴퓨터에서 돌던 예약 작업과, 내 파일·앱이 필요한 예약 작업은 예외일 수 있습니다(아래 참고).[^scheduled]
 
 ### 만드는 법
+
+처음부터 예약으로 만들지 않아도 됩니다. 먼저 한 번 맡겨서 결과가 마음에 드는지 보세요. 마음에 들면 같은 일을 예약 작업으로 만드세요.[^academy-schedule] 한 번 확인한 그 방식 그대로 되풀이하게 됩니다.
 
 **새 화면**에서는 대화에서 그냥 부탁하면 됩니다.[^scheduled]
 1. 무엇을 얼마나 자주 할지 말합니다.
@@ -185,7 +246,7 @@ Claude는 보통 가장 빠른 방법부터 씁니다. 커넥터가 있으면 �
 - 구글 크롬에서만 됩니다. 다른 브라우저나 휴대폰에서는 안 됩니다.[^chrome]
 - 크롬 웹 스토어에서 「Chrome에 추가」로 설치하고 로그인합니다.[^chrome]
 - 도구 모음의 Claude 아이콘을 누르면 옆 패널이 열립니다. 열린 탭을 요약하거나 비교하게 할 수 있습니다.[^chrome]
-- 옆 패널은 「자동 승인」 모드로 시작합니다.[^chrome] 처음에는 「수동 승인」으로 바꿔 동작을 하나씩 보세요.
+- 옆 패널은 「자동 승인」 모드로 시작합니다.[^chrome] 처음에는 「수동 승인」으로 바꿔 동작을 하나씩 보세요. 크롬 확장 프로그램의 메뉴 이름은 Claude 웹 화면과 다를 수 있습니다.
 - 브라우저 작업은 일반 대화보다 한도를 더 씁니다.[^chrome-trouble]
 
 <!-- 스크린샷 필요: 크롬 옆 패널이 열린 화면과 입력창의 권한 모드 선택 -->
@@ -227,6 +288,23 @@ Claude in Chrome은 어떤 모드에서도 메일이나 웹 글 속 지시를 �
 - **간단한 일부터 시작하세요.** 조사나 정리처럼 위험이 낮은 일로 익힌 뒤 넓혀 가세요.[^computer]
 - **예약 작업에는 되돌리기 어려운 일을 넣지 마세요.** 메시지 보내기·구매는 예약하지 않습니다.[^safe]
 
+### 부탁하는 말로 실수를 막기
+
+어떤 폴더를 열어 주느냐만큼, 어떻게 부탁하느냐도 중요합니다.[^academy-safe]
+
+**지우거나 바꾸는 말은 뜻을 하나로 좁히세요.** "그 부분 빼 줘"는 화면에서 숨기라는 뜻일 수도, 파일에서 지우라는 뜻일 수도 있습니다. 잘못 알아들으면 되돌릴 수 없는 일이라면 무엇을 뜻하는지 적으세요.[^academy-safe]
+
+- 아쉬운 예: "그 절 빼 줘."
+- 나은 예: "초안에서 그 절을 지워 줘. 파일은 지우지 마."
+- 아쉬운 예: "파일 업데이트해 줘."
+- 나은 예: "맨 뒤에 부록을 새로 붙여 줘. 앞의 내용은 다시 쓰지 마."
+
+**범위를 문장에 넣으세요.** "이 폴더에서 가장 최근에 고친 파일 3개만", "아무에게도 보내지 말고 초안만" 같은 식입니다. 범위가 정해져 있으면 Claude가 그 밖으로 나갔을 때 바로 알아챌 수 있습니다.[^academy-safe]
+
+**새로 짠 작업은 복사본으로 먼저 돌려 보세요.** 매주 돌릴 예약 작업이라면 첫 실행은 자료를 복사한 폴더에서 합니다. 제대로 도는 것을 본 뒤에 진짜 폴더로 바꾸면 됩니다.[^academy-safe]
+
+**예약 작업은 처음에 초안까지만 맡기세요.** 예약 작업은 내가 지켜보지 않을 때 돕니다. 믿을 만해질 때까지는 보내지 말고 초안을 만들어 두라고 적어 두세요.[^academy-safe]
+
 ### 작업 중에 지켜볼 것
 
 명령 하나하나를 다 볼 필요는 없습니다. 대신 이런 것을 지켜보세요.[^safe]
@@ -236,10 +314,14 @@ Claude in Chrome은 어떤 모드에서도 메일이나 웹 글 속 지시를 �
 
 이상하다 싶으면 **바로 작업을 멈추세요.** 그리고 앱의 피드백 버튼으로 알려 주세요.[^safe]
 
+**확인 창은 읽고 누르세요.** 실수는 대개 안전 장치가 고장 나서 생기지 않습니다. 원한 것과 조금 다른 확인 창을 그냥 눌러서 생깁니다. 확인 창이 떴다는 것은 그 동작이 중요하다는 뜻입니다.[^academy-safe]
+
 ### 책임은 나에게
 
 Claude가 내 대신 한 일의 책임은 **나에게** 있습니다. 보낸 메시지, 산 물건, 예약 작업의 결과가 모두 그렇습니다.[^safe]
 그러니 처음부터 완벽하게 맡기려 하지 않아도 됩니다. 작게 맡기고, 결과를 보고, 조금씩 넓혀 가세요.
+
+똑똑하고 빠른 동료라도 혼자 두고 맡기지 않을 일이 있습니다. 상대 회사에 계약서를 보내는 일, 여러 사람이 볼 공지를 올리는 일 같은 것입니다. 이런 일은 Claude에게 준비까지만 맡기고, 보내는 것은 직접 하세요.[^academy-safe] 마지막 버튼을 내가 누르면, 무엇이 나가는지 한 번 더 볼 수 있습니다.
 
 <Quiz id="ch208-safety" />
 
@@ -247,17 +329,23 @@ Claude가 내 대신 한 일의 책임은 **나에게** 있습니다. 보낸 메
 
 유료 요금제라면 해 보세요. 무료 요금제라면 위 점검표를 읽고 9장으로 넘어가도 됩니다.
 
-1. Claude 전용 연습 폴더를 하나 만들고, 아무 파일이나 열 개쯤 넣는다.
-2. Cowork(또는 새 화면의 대화)를 「수동 승인」(새 화면은 「수동」)으로 두고 "이 폴더의 파일을 종류별로 하위 폴더에 나눠 줘"라고 맡긴다.
-3. 허락을 물을 때마다 무엇을 하려는지 읽고 누른다. 지우려는 파일이 있는지 본다.
-4. 끝나면 결과를 확인한다. 그다음 위의 「구청 공지사항」 예시처럼 웹에서 찾아 요약만 하는 일을 예약 작업으로 만들어 본다.
-5. 「Scheduled」 화면에서 방금 만든 작업을 일시 중지해 본다.
+1. Claude 전용 연습 폴더를 하나 만들고, 아무 파일이나 열 개쯤 넣는다. 중요한 파일이나 민감한 정보가 든 파일은 넣지 않는다.
+2. 정리를 맡기기 전에 먼저 폴더를 읽게 한다. 아래처럼 맡기고, 받은 보고를 내가 넣은 파일과 맞춰 본다. 내가 놓친 것을 Claude가 찾았나? Claude가 놓치거나 틀린 것은 무엇인가?[^academy-setup]
+
+   ```
+   이 폴더에 있는 것을 모두 살펴보고 짧게 보고해 줘. 어떤 파일이 있는지, 파일끼리 어떻게 이어지는지, 눈에 띄는 점이 있는지 알려 줘.
+   ```
+
+3. 권한 모드를 「수동」으로 두고 "이 폴더의 파일을 종류별로 하위 폴더에 나눠 줘"라고 맡긴다.
+4. 허락을 물을 때마다 무엇을 하려는지 읽고 누른다. 지우려는 파일이 있는지 본다.
+5. 끝나면 결과를 확인한다. 그다음 위의 「구청 공지사항」 예시처럼 웹에서 찾아 요약만 하는 일을 예약 작업으로 만들어 본다.
+6. 「Scheduled」 화면에서 방금 만든 작업을 일시 중지해 본다.
 
 ## 정리
 
 - Cowork는 결과를 말해 두면 여러 단계를 스스로 해 완성품을 돌려주는 기능이다. 유료 요금제 전용이다.
 - 입력창에서 「Cowork」를 고른다. 「Chat」·「Cowork」 선택이 없으면 새 화면이고, 모든 대화가 Cowork 일을 맡는다.
-- 권한 모드는 「수동 승인」·「자동 승인」·「모든 승인 건너뛰기」. 처음 쓰는 도구, 돈·메시지·중요 파일, 되돌리기 어려운 일은 「수동 승인」으로 한다.
+- 권한 모드는 화면에 「수동」·「자동」이 있다(요금제·화면에 따라 더 있을 수 있다). 처음 쓰는 도구, 돈·메시지·중요 파일, 되돌리기 어려운 일은 「수동」으로 한다.
 - 2026년 10월 6일부터 Pro·Max의 새 Cowork 작업은 클라우드에서 돈다. 내 파일·브라우저·컴퓨터 사용은 데스크톱 앱이 켜져 있어야 한다.
 - 새 예약 작업은 대부분 컴퓨터가 잠들어 있어도 돈다(내 파일이 필요한 작업은 예외일 수 있다). 요약처럼 위험이 낮은 일부터 맡기고, 보내기·구매는 예약하지 않는다.
 - 내장 브라우저는 내 탭과 따로, Claude in Chrome은 지금 보는 크롬 페이지에서, 컴퓨터 사용(베타)은 맞는 도구가 없을 때 쓴다.
@@ -293,4 +381,11 @@ Claude가 내 대신 한 일의 책임은 **나에게** 있습니다. 보낸 메
 [^chrome-safe]: Anthropic 도움말, 「Use Claude in Chrome safely」. "The biggest risk facing browser-using AI tools is prompt injection attacks where malicious instructions hidden in web content (websites, emails, documents) could trick Claude into taking unintended actions." / "Our current configuration reduces attack success rates to less than 0.08% against our internal testing that combines known effective attack techniques." / "Claude can’t filter sensitive content out of what it sees, so we recommend that you don’t use Claude in Chrome on sensitive sites" / "We strongly advise against using Claude in Chrome to manage or take actions on sensitive information" https://support.claude.com/en/articles/12902428 (확인일 2026-10-26)
 [^chrome-perm]: Anthropic 도움말, 「Claude in Chrome permissions guide」. "Completing instructions from emails or web content" https://support.claude.com/en/articles/12902446 (확인일 2026-10-26)
 [^chrome-trouble]: Anthropic 도움말, 「Claude in Chrome troubleshooting」. "Browser interactions are more compute-intensive than regular chats with Claude, so you can expect the extension to use more of your limit." https://support.claude.com/en/articles/12902405 (확인일 2026-10-26)
+[^screen]: Claude 웹 화면(무료 요금제, 한국어)에서 직접 확인. "수동: Claude는 새 도구를 사용하거나 새 사이트를 열기 전에 확인을 요청합니다." / "자동: Claude가 자체적으로 실행되며 안전하지 않아 보이는 것이 있으면 일시 중지하고 확인합니다." (확인일 2026-10-26)
 [^memory]: Anthropic 도움말, 「Use Claude’s chat search and memory to build on previous context」. "Memory is shared between Chat and Claude Cowork when Cowork runs in the cloud; Cowork sessions that run locally on your computer don't use memory." https://support.claude.com/en/articles/11817273 (확인일 2026-10-26)
+[^academy-shapes]: Claude Academy 「Introduction to Claude Cowork」 강의 「What is Claude Cowork」. "Chat is for thinking with Claude. Cowork is for delegating to Claude. Code is for building software with Claude." https://academy.claude.com/courses/introduction-to-claude-cowork/what-is-cowork (확인일 2026-10-26)
+[^academy-desktop]: Claude Academy 「Claude 101」 강의 「How you'll work with Claude on your desktop」. "You describe an outcome — a finished brief, a formatted deliverable, a task that runs every Monday — and Claude plans it, does it, and comes back with the result." / "The task has several steps you'd normally do in sequence." / "The output is finished files, where you need them." / "The work spans your tools." / "It should happen on a schedule, or while you're doing something else." / "If yes to any, it's a hand-off — write down the outcome you'd describe to Claude, not the first question you'd ask." https://academy.claude.com/courses/claude-101/claude-desktop-app-chat-cowork-code (확인일 2026-10-26)
+[^academy-loop]: Claude Academy 「Introduction to Claude Cowork」 강의 「Hand Claude Cowork your first task」. "That sentence directs Claude on the type of output you're looking for, and provides key insights from your expertise that Claude might not see." / "If you're used to prompting a chatbot, this will feel like more upfront work — it is." / "Most are easy: Claude presents a couple of options and you click the one that fits. If none of the options fit, you can answer in your own words." / "Review it the way you'd read a draft from someone you trust but don't yet fully know" / "Start by asking Claude to identify the docs it pulled from, then check them yourself." / "A specific date, name, or quote that you can't trace to an input is a flag, not a feature." / "If the draft is mostly right, tell Claude what to change rather than starting over. Claude remembers the conversation and edits faster than it regenerates." https://academy.claude.com/courses/introduction-to-claude-cowork/the-task-loop (확인일 2026-10-26)
+[^academy-schedule]: Claude Academy 「Introduction to Claude Cowork」 강의 「What Claude Cowork can do for you」. "do the task once in Cowork, confirm the output looks right" https://academy.claude.com/courses/introduction-to-claude-cowork/scheduled-tasks (확인일 2026-10-26)
+[^academy-safe]: Claude Academy 「Introduction to Claude Cowork」 강의 「Best practices for working safely」. "How you ask matters as much as what folder you point at." / "If the wrong reading would be irrecoverable, name what you mean" / "This narrows what Cowork is doing and gives you a clear line for spotting drift." / "Once you've seen it behave, point it at the live folder." / "Until you're confident that the task runs the way you need it to, prompt it to draft for your review rather than send on your behalf." / "Most mistakes don't happen because the safeguards failed; they happen because someone clicked through a confirmation that wasn't quite the action they intended." / "Claude can prepare; you ship." https://academy.claude.com/courses/introduction-to-claude-cowork/permissions-usage-choosing-your-model (확인일 2026-10-26)
+[^academy-setup]: Claude Academy 「Introduction to Claude Cowork」 강의 「Setting up Claude Cowork」. "Read the brief and check it against your own knowledge." / "What did Claude catch that you might have missed? What did it miss or get wrong?" https://academy.claude.com/courses/introduction-to-claude-cowork/getting-set-up (확인일 2026-10-26)
