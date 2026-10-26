@@ -6,6 +6,7 @@
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
 
 ## Pending Tasks
+- [ ] (대기) PR 자동 처리는 dev-standards `autopilot` 개발이 끝난 뒤 붙인다(2026-10-26 사용자 결정). 그때 `/plugin install autopilot --marketplace amecoder/dev-standards` → `/autopilot:init` → 시크릿 `engine_key`·변수 `AUTOPILOT_MODE` 는 사용자가 설정. hello-llm 은 공개 저장소라 브랜치 보호(Q0) 조건은 무료로 충족. HANDOFF·CHANGELOG 갱신·배포 확인은 autopilot 범위 밖
 - [ ] 실습 UI 구현 — VitePress 안 Vue 컴포넌트, 동일 UI + 코치 마크, API 호출 없는 시뮬레이션 (첫 부품 `PromptBuilder` 완료)
 - [ ] (제안) 실제 독자(중학생·일반인 각 1~2명) 읽기 테스트로 1·5·7장 이해도 실측 — 추정 리뷰: `docs/reports/2026-10-21_초보자-이해도-리뷰.md`
 - [ ] (제안) 컴포넌트 E2E 테스트 영구화 — 지금은 scratchpad 의 Playwright 스크립트로 수동 검증만 함
@@ -51,6 +52,7 @@
 - [x] ChatGPT 캡처 21장에 빨간 번호 상자 + 본문·표 같은 번호, 관련 부분만 잘라 크게 — PR #31, squash `cbe1b33`
 - [x] 11장에 무료 공개 강좌 5개(원문 각주·확인일 2026-10-25), Codex 리뷰 [필수] 2건 반영 — PR #32, squash `55267c7`
 - [x] Academy 세 강좌 본문 반영 + Codex·agy 교차 리뷰 보완(2·4·5·7·11장) + 문체 규칙(CLAUDE.md) — PR #33, squash `7b6826a`
+- [x] 1단계 1~10장·ChatGPT 1~10장·11장 남은 절을 Academy 문체로 다듬기(제목·프롬프트·각주·링크 그대로, Codex [필수] 3건 반영) — PR #34, squash `efbd54c`
 
 ## Key Decisions
 - 가이드 폴더는 단계 번호 방식 (`00-common` → `10/11` → `20/21` → `30-ai-sdlc`)
@@ -68,7 +70,7 @@
 - 임시 채팅은 2026-10-24부터 「개인화됨/개인화되지 않음」을 고른다(옛 「메모리 끄기」 안내 창은 사라짐). 「Space」가 라이브러리를 대신한다는 도움말이 있으나 이 계정 화면은 아직 「라이브러리」 — 바뀌면 2·3·4·5·7·8장 라이브러리 서술을 함께 고친다
 - 도움말 원문 저장본은 세션 scratchpad `openai-all/`(140개)에만 있다. 각주 인용 대조 스크립트 `quote-check.py` 도 scratchpad — 다음 세션에서 쓰려면 다시 받아야 한다
 - 11장 무료 강좌 중 DeepLearning.AI는 "베타 기간 한정 무료" — 요금 재확인 때 함께 본다. 검색 도구 `agy` 가 없는 부스트코스 강좌(ai110)를 지어낸 적이 있다 — 강좌·URL은 반드시 원문을 열어 확인
-- 문체: 가이드 본문은 CLAUDE.md 「문체 — OpenAI Academy 강좌처럼」 규칙을 따른다(사용자가 기존 문체를 기계적이라 평가). 1~10장과 1단계는 아직 옛 문체 — 고칠 때 함께 바꾼다
+- 문체: 가이드 본문은 CLAUDE.md 「문체 — OpenAI Academy 강좌처럼」 규칙을 따른다(사용자가 기존 문체를 기계적이라 평가). 가이드 본문 전체가 새 문체다(PR #34). 문체만 고칠 때는 제목(앵커)·코드 블록(프롬프트 모음 테스트)·각주 정의를 건드리지 말고, 말이 출처보다 세지지 않았는지 Codex로 대조한다
 - `codex exec` 는 `< /dev/null` 없이 백그라운드로 돌리면 stdin 을 기다리다 빈 결과로 끝난다
 - 한국 위기 상담 전화번호는 공식 출처 미확인이라 8장에 넣지 않았다. OpenAI Academy 강좌 본문은 2026-10-26 로그인·등록 후 확인(원문 저장본 `.playwright-mcp/academy-*.final.txt`, gitignore)
 - 본문에 장을 언급할 때는 `[3장](03-chats.md)`처럼 링크로 쓴다(PR #29에서 글로만 적힌 88곳을 일괄 변환). 2단계 문서 안의 맨 「N장」은 ChatGPT N장, 1단계를 가리킬 때는 「1단계 N장」+ `../00-common/` 링크
