@@ -54,6 +54,7 @@
 - [x] Academy 세 강좌 본문 반영 + Codex·agy 교차 리뷰 보완(2·4·5·7·11장) + 문체 규칙(CLAUDE.md) — PR #33, squash `7b6826a`
 - [x] 1단계 1~10장·ChatGPT 1~10장·11장 남은 절을 Academy 문체로 다듬기(제목·프롬프트·각주·링크 그대로, Codex [필수] 3건 반영) — PR #34, squash `efbd54c`
 - [x] 2단계 Claude 사용 가이드 11장 + 퀴즈 79문제(`quiz-bank-claude.ts`) + 사실 확인 리포트(`docs/reports/2026-10-26_Claude-공식-자료.md`, VERIFIED 878개) — PR #35, squash `7b0fbae`
+- [x] Claude 화면 캡처 18장(무료 계정) + 화면 기준 메뉴 이름 + Claude 12장 「전문가처럼 쓰기」 + Claude Academy 강좌 5개 비교 보완(1단계·Claude 장) — PR #36, squash `022737b`
 
 ## Key Decisions
 - 가이드 폴더는 단계 번호 방식 (`00-common` → `10/11` → `20/21` → `30-ai-sdlc`)
@@ -72,6 +73,10 @@
 - 도움말 원문 저장본은 세션 scratchpad `openai-all/`(140개)에만 있다. 각주 인용 대조 스크립트 `quote-check.py` 도 scratchpad — 다음 세션에서 쓰려면 다시 받아야 한다
 - 11장 무료 강좌 중 DeepLearning.AI는 "베타 기간 한정 무료" — 요금 재확인 때 함께 본다. 검색 도구 `agy` 가 없는 부스트코스 강좌(ai110)를 지어낸 적이 있다 — 강좌·URL은 반드시 원문을 열어 확인
 - 문체: 가이드 본문은 CLAUDE.md 「문체 — OpenAI Academy 강좌처럼」 규칙을 따른다(사용자가 기존 문체를 기계적이라 평가). 가이드 본문 전체가 새 문체다(PR #34). 문체만 고칠 때는 제목(앵커)·코드 블록(프롬프트 모음 테스트)·각주 정의를 건드리지 말고, 말이 출처보다 세지지 않았는지 Codex로 대조한다
+- Claude 가이드(`guide/10-claude/`, 장 번호 201~212) 캡처는 **무료 계정** 화면이다(2026-10-26). 남은 `<!-- 스크린샷 필요 -->` 약 20곳은 유료 기능(Cowork·리서치·예약)·실제 대화(공유 창 등)가 필요하다. 새 Claude 화면(채팅+Cowork 통합)이 배포 중이라 도움말과 화면 이름이 다르면 화면 이름을 쓴다(예: 「Your Claude」 대신 「설정 → 계정 → Claude 지침」)
+- Claude 캡처를 다시 찍을 때: 화면 가리기 스크립트(`.playwright-mcp/claude-mask.js`, gitignore)를 `page.context().addInitScript` 로 넣고, 찍기 직전 이름·이메일이 화면 글자에 남았는지 검사한다. 계정 메뉴에 다른 이메일이 보인 적 있고, 설정 → 메모리·결제·계정·아티팩트 화면에는 실제 메모리·청구서·로그인 위치·내 아티팩트가 그대로 나온다. 번호 그림은 `python3 docs/tools/mark-shots.py docs/tools/claude-shot-marks.json`
+- Claude Academy 강좌는 academy.claude.com 으로 옮겨 가 로그인 없이 본문이 열린다(Skilljar 등록 불필요). 강좌의 제품 사실은 도움말과 자주 어긋나므로 일하는 방법만 근거로 쓴다. Codex 는 사용 한도로 2026-11-20까지 못 씀 — 검토는 별도 code-reviewer 에이전트로 했다
+- 셸 명령은 `rtk` 가 자동으로 감싸서 `git diff > 파일` 출력이 요약된다. 전체가 필요하면 `rtk proxy git diff`
 - `codex exec` 는 `< /dev/null` 없이 백그라운드로 돌리면 stdin 을 기다리다 빈 결과로 끝난다
 - 한국 위기 상담 전화번호는 공식 출처 미확인이라 8장에 넣지 않았다. OpenAI Academy 강좌 본문은 2026-10-26 로그인·등록 후 확인(원문 저장본 `.playwright-mcp/academy-*.final.txt`, gitignore)
 - 본문에 장을 언급할 때는 `[3장](03-chats.md)`처럼 링크로 쓴다(PR #29에서 글로만 적힌 88곳을 일괄 변환). 2단계 문서 안의 맨 「N장」은 ChatGPT N장, 1단계를 가리킬 때는 「1단계 N장」+ `../00-common/` 링크
