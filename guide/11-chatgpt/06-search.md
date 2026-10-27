@@ -118,7 +118,39 @@ ChatGPT가 좋아하는 브랜드, 크기, 무엇을 더 중요하게 보는지 
 
 > **임시 채팅에서는 심층 리서치를 쓸 수 없습니다.** 2026년 10월 웹 화면에서 임시 채팅의 + 메뉴에는 「심층 리서치」가 없었습니다. 「이미지 생성」도 흐리게 꺼져 있었습니다. 심층 리서치는 일반 채팅에서 시작하세요.
 
-<!-- 스크린샷 필요: 심층 리서치를 시작한 뒤 조사 계획이 나오고 「수정」할 수 있는 화면 -->
+아래는 이 절 뒤쪽에 나오는 배달 앱 수수료 예시를 실제로 보냈을 때의 화면입니다. **빨간 번호는 그림 아래 목록의 번호와 같은 곳입니다.**
+
+![심층 리서치를 보낸 직후 나온 조사 계획 카드. ① 조사할 다섯 단계, ② 「편집」 버튼, ③ 「취소」와 숫자가 줄어드는 「시작」 버튼](assets/shot-20-dr-plan-marked.png)
+
+- ① 무엇을 어떤 순서로 조사할지 보여 주는 계획입니다.
+- ② 계획을 고치고 싶으면 「편집」을 누릅니다.
+- ③ 「시작」 옆 숫자는 자동으로 시작될 때까지 줄어드는 숫자입니다. 2026년 10월 27일 화면에서는 아무것도 누르지 않았더니 숫자가 다 줄어든 뒤 조사가 시작됐습니다. 그만두려면 「취소」를 누르세요.[^screen-dr]
+
+계획이 마음에 들지 않으면 시작되기 전에 「편집」을 누르세요. 조사가 엉뚱한 방향으로 가기 전에 바로잡을 수 있습니다.
+
+![조사가 진행 중인 카드. ① 「업데이트」 버튼, ② 끝난 단계는 체크 표시, ③ 지금까지 한 검색 수 「검색 70건」, ④ 진행 막대와 멈춤 버튼](assets/shot-21-dr-progress-marked.png)
+
+- ① 조사 중에 방향을 바꾸거나 더할 내용이 있으면 「업데이트」를 누릅니다.
+- ② 끝난 단계에는 체크 표시가 붙습니다.
+- ③ 지금까지 검색한 횟수입니다.
+- ④ 진행 막대입니다. 오른쪽 ■ 버튼으로 멈출 수 있습니다.[^screen-dr]
+
+조사는 그대로 두고 다른 일을 해도 됩니다. 이 예시는 끝날 때까지 6분쯤 걸렸습니다.[^screen-dr]
+
+![완성된 보고서. ① 「리서치 완료까지 6m · 인용 19개 · 검색 295건」, ② 보고서 제목, ③ 내려받기 버튼, ④ 크게 보기 버튼, ⑤ 문장 끝의 인용 번호](assets/shot-22-dr-report-marked.png)
+
+- ① 걸린 시간, 인용한 출처 수, 검색 수가 나옵니다.
+- ② 보고서 제목입니다. 보고서는 대화 안의 문서 카드로 옵니다.
+- ③ 내려받기, ④ 크게 보기 버튼입니다.
+- ⑤ 문장 끝의 작은 숫자가 인용입니다. 숫자를 따라가 출처를 열어 보세요.[^screen-dr]
+
+보고서 첫 문단에 `**배달의민족·쿠팡이츠가…**`처럼 별표가 그대로 보이는 곳이 있습니다. 굵은 글씨 기호가 드러난 것입니다([1단계 7장](../00-common/07-structured-prompts.md)).
+
+아래 그림의 ① 내려받기 버튼(위 그림의 ③)을 누르면, ② 메뉴에 「내용 복사」, 「마크다운으로 내보내기」, 「Word로 내보내기」, 「PDF로 내보내기」가 나옵니다.[^screen-dr]
+
+![① 내려받기 버튼을 누르자 열린 ② 메뉴. 「내용 복사」, 「마크다운으로 내보내기」, 「Word로 내보내기」, 「PDF로 내보내기」](assets/shot-22-dr-download-marked.png)
+
+일반 채팅에서 한 조사라서 이 대화는 채팅 목록에 남습니다. 남기고 싶지 않으면 다 본 뒤 [3장](03-chats.md)의 방법으로 지우세요.
 
 특정 사이트만 조사하게 하거나 먼저 보게 할 수도 있습니다. 입력창의 Sites → Manage sites에서 정합니다. 다만 이 이름은 도움말에 나온 것이고, 한국어 화면 이름은 아직 확인하지 못했습니다.[^dr]
 
@@ -180,3 +212,4 @@ ChatGPT가 좋아하는 브랜드, 크기, 무엇을 더 중요하게 보는지 
 [^shop]: OpenAI 도움말, 「Shopping with ChatGPT Search」. "Product results are selected independently by ChatGPT and are not ads" / "may not be the lowest available price" / "They’re not guarantees or verified statements" / "Reviews and ratings are not verified by OpenAI." / "Your reference photos are saved for future try-ons" / "do not guarantee fit or size". https://help.openai.com/en/articles/11128490 (확인일 2026-10-24)
 [^shop-research]: OpenAI 도움말, 「Using shopping research in ChatGPT」. "Select one or more products and choose “Research”" / "After a few minutes, shopping research returns a buyer’s guide." / "Your chats are never shared with retailers." / "Confirm the final price, taxes, fees, and shipping costs on the retailer’s website." https://help.openai.com/en/articles/12911370 (확인일 2026-10-24)
 [^screen]: ChatGPT 웹 화면(Plus 요금제, 한국어)에서 직접 확인. 입력창 + 메뉴, 「데이터 관리」, 「개인 맞춤 설정」 화면 (확인일 2026-10-23)
+[^screen-dr]: ChatGPT 웹 화면(Plus 요금제, 한국어)에서 직접 확인. 일반 채팅에서 + 메뉴 「심층 리서치」로 이 장의 배달 앱 수수료 예시를 보냈을 때의 조사 계획 카드(「편집」·「취소」·「시작」), 진행 카드(「업데이트」·「검색 70건」·멈춤), 완성 보고서(「리서치 완료까지 6m · 인용 19개 · 검색 295건」)와 내려받기 메뉴. 다 본 뒤 대화는 지웠다. (확인일 2026-10-27)

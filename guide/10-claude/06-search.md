@@ -15,7 +15,7 @@ AI는 배운 시점까지의 내용만 알고 있습니다([1단계 1장](../00-
 켜는 방법은 화면에 따라 다릅니다.
 
 - **옛 화면** — 입력창 왼쪽 아래 「+」를 누르고 「웹 검색」을 고릅니다. 켜지면 옆에 체크 표시가 생깁니다. 다시 누르면 꺼집니다.[^search]
-- **새 Claude 화면** — 웹 검색 스위치가 없습니다. 도움이 될 때 Claude가 알아서 검색합니다.[^search][^new]
+- **새 Claude 화면** — 웹 검색 스위치가 없습니다. 도움이 될 때 Claude가 알아서 검색합니다.[^search][^new] 무료 계정의 「+」 메뉴에도 「웹 검색」은 없었습니다.[^screen]
 
 <!-- 스크린샷 필요: 옛 화면 입력창 「+」 메뉴에서 「웹 검색」에 체크 표시가 된 모습 -->
 
@@ -53,7 +53,26 @@ https://www.example.com/news/12345
 웹 검색으로 받은 답에는 **인용**(citation, 어디서 가져왔는지 붙인 표시)이 붙습니다.
 모든 검색 답에 인용이 있어서, 출처를 내가 직접 확인할 수 있습니다.[^search]
 
-<!-- 스크린샷 필요: 웹 검색 답의 문장 끝에 붙은 인용 표시와 출처 링크 -->
+![시크릿 모드에서 「웹에서 검색해 줘. 국립중앙박물관 관람 시간 알려 줘.」라고 물은 화면. ① 답 위의 「웹 검색함」, ② 문장 끝의 출처 표시 「museum」, ③ 입력창 아래 「기록, 메모리, Claude 학습에 사용되지 않습니다.」 안내](assets/shot-13-web-search-marked.png)
+
+시크릿 모드에서 찍은 화면입니다(무료 요금제). **빨간 번호는 아래 목록의 번호와 같은 곳입니다.**
+
+- ① **「웹 검색함」** — Claude가 인터넷을 찾아봤다는 표시입니다. 누르면 무엇을 찾았는지 펼쳐집니다.
+- ② **출처 표시** — 문장 끝의 작은 이름표(「museum」, 「segye」 등)가 그 문장을 가져온 사이트입니다.
+- ③ 시크릿 모드라서 이 대화가 기록·메모리·학습에 쓰이지 않는다는 안내입니다.[^screen]
+
+①을 누르고 한 번 더 펼치면, Claude가 쓴 검색어와 검색 결과로 나온 사이트 목록이 보입니다.
+
+![「웹 검색함」을 펼친 화면. ① Claude가 쓴 검색어 「국립중앙박물관 관람시간」, ② 검색 결과로 본 사이트 9곳의 목록](assets/shot-13-web-search-sites-marked.png)
+
+- ① Claude가 실제로 쓴 검색어입니다. 내 질문을 짧게 줄여 검색했습니다.
+- ② 검색 결과로 나온 사이트 9곳의 목록입니다. 정부 사이트(mcst.go.kr, museum.go.kr)와 뉴스 기사, 개인 사이트가 섞여 있습니다.[^screen]
+
+답을 읽기 전에 이 목록을 훑어보세요. 공식 사이트가 들어 있는지 먼저 가늠할 수 있습니다.
+
+② 출처 표시에 마우스를 올리면 화살표가 붙고, ① 사이트 주소가 적힌 작은 창이 뜹니다. 표시를 누르면 원래 페이지가 새 탭으로 열립니다.[^screen]
+
+![출처 표시 「museum」에 마우스를 올린 화면. ① 사이트 주소 www.museum.go.kr이 뜬 작은 창, ② 화살표가 붙은 출처 표시](assets/shot-13-citation-hover-marked.png)
 
 그런데 링크가 붙어 있다는 것만으로 맞는 답이 되지는 않습니다.
 [1단계 9장](../00-common/09-safety.md#확인하는-네-가지-습관)에서 배운 대로, 숫자·날짜·이름은 링크를 열어 원문과 맞춰 보세요.
@@ -87,6 +106,11 @@ https://www.example.com/news/12345
 - **새 Claude 화면** — 입력창에 `/deep-research` 라고 치거나, 입력창 아래 「+」 → 「Research」를 고릅니다.[^new]
 
 한국어 화면에서도 「Research」가 영어 그대로 보일 수 있습니다.
+
+![입력창에 ① 「/deep」까지 치자 ② 「deep-research」가 목록에 뜨고, ③ 옆에 영어 설명이 나온 화면](assets/shot-12-deep-research-marked.png)
+
+무료 요금제 화면입니다. ① 입력창에 `/deep` 까지만 쳐도 ② 「deep-research」가 목록에 뜹니다. ③ 옆에는 언제 쓰는 기능인지 영어 설명이 나옵니다.[^screen]
+무료 계정의 「+」 메뉴에는 「Research」가 없었습니다. 목록에 이름은 보였지만, 도움말은 리서치를 유료 요금제 기능이라고 합니다.[^research] 이 가이드는 무료 계정에서 리서치를 보내 보지 않았습니다.
 
 <!-- 스크린샷 필요: 「+」 → 「Research」를 켠 뒤 입력창 아래에 생긴 파란 표시 -->
 
@@ -176,6 +200,7 @@ https://www.example.com/news/12345
 [^fetch]: Anthropic 도움말, 「Enable and use web search」. "When “Web search” is toggled on, Claude can also retrieve content directly from web pages when provided with specific URLs." / "This can consume a significant portion of your usage limit, especially for lengthy content." / "As a free user, you have usage limits that reset every five hours." https://support.claude.com/en/articles/10684626 (확인일 2026-10-26)
 [^pricing]: Anthropic 요금 페이지, Free 요금제 설명. "Search the web, create files, and run code" https://claude.com/pricing (확인일 2026-10-26)
 [^new]: Anthropic 도움말, 「Claude Cowork and chat are one Claude」. "Web search: There's no web search toggle. Claude searches the web when it helps." / "Research: Type /deep-research, or click the “+” button below the chat input, then choose “Research.”" https://support.claude.com/en/articles/16761823 (확인일 2026-10-26)
+[^screen]: Claude 웹 화면(무료 요금제, 한국어)에서 직접 확인. 입력창 「+」 메뉴(「웹 검색」·「Research」 없음), 시크릿 모드에서 물은 답의 "웹 검색함" 표시와 출처 표시, 출처를 눌렀을 때 새 탭으로 열린 www.museum.go.kr, 입력창의 `/deep` 목록에 뜬 "deep-research". (확인일 2026-10-27)
 [^research]: Anthropic 도움말, 「Use research on Claude」. "It runs multiple searches that build on each other and decides what to look into next based on what it finds." / "Research is available for users with paid Claude plans (Pro, Max, Team, or Enterprise) using Claude on the web, Claude Desktop, or Claude Mobile." / "Important: You must have web search turned on for research to function." / "Click the “+” button on the bottom left of your chat interface, then "Research." A blue indicator will appear on the bottom of the chat window." / "However, research sessions can use up your limits faster due to Claude retrieving multiple sources and providing comprehensive responses." / "In this case, you can steer and prompt Claude to use Research by saying “Claude, please use the research tool to…”" / "During research, Claude can use tools from your connectors automatically, without asking for approval each time." / "When you start research in Claude Mobile, Claude only searches the web and doesn’t use your connectors." / "Research runs on Claude Opus 5.5 and falls back to Claude Opus 4.8 when needed." https://support.claude.com/en/articles/11088861 (확인일 2026-10-26)
 [^when]: Anthropic 도움말, 「When should I use web search, extended thinking, and research?」. "Web search is best for straightforward, factual queries that can be answered with one or two tool calls" / "Extended thinking shines when tackling complex reasoning tasks that don't require recent info from the web" / "Research is optimal for comprehensive information gathering requiring five or more tool calls over 1-3 minutes" / "Combining extended thinking with research allows Claude to both plan its approach thoughtfully and execute comprehensive information gathering" / "The research feature can synthesize information across multiple sources with proper citations and produces a longer final report." https://support.claude.com/en/articles/11095361 (확인일 2026-10-26)
 [^academy-research]: Claude Academy 「Claude 101」 강의 「Research for deep dives」. "Include relevant constraints." / "a few minutes or more, depending on the question." / "If you're not sure how to frame your research question, you can even ask Claude to help you write a better Research prompt before enabling the feature." https://academy.claude.com/courses/claude-101/research-mode-for-deep-dives (확인일 2026-10-26)
