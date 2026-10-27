@@ -286,6 +286,19 @@ Claude가 몇 가지를 물어봅니다. 이 스킬이 무엇을 하는지, 잘�
 
 <Quiz id="ch207-plugins" />
 
+## 영상으로 더 보기
+
+회사가 직접 만든 소개 영상입니다. 화면과 기능 이름은 이 장의 설명과 다를 수 있습니다.
+
+> 아래 영상은 모두 **영어**입니다. YouTube 영상의 설정(톱니바퀴) → 자막 → **자동 번역 → 한국어**를 고르면 한국어 자막으로 볼 수 있습니다. 링크는 YouTube로 이동합니다.
+
+| 영상 | 채널 | 이런 분께 |
+|---|---|---|
+| [Projects are now a conversation with Claude](https://www.youtube.com/watch?v=5qt_aGyAsKk) | Claude | 프로젝트가 바뀐 모습을 보고 싶은 분 (2026년 9월, 1분) |
+| [Creating custom Skills with Claude](https://www.youtube.com/watch?v=kS1MJFZWMq4) | Anthropic | Claude가 질문을 하며 스킬을 만들어 주는 예를 보고 싶은 분 (2025년 10월, 1분) |
+
+첫 영상은 프로젝트를 "대화 하나"로 소개합니다. 내 화면이 영상과 다르면 이 장의 설명을 따르세요.
+
 ## 직접 해 보기
 
 1. 「새 프로젝트」로 「주간 보고」 프로젝트를 만들고, 위의 틀을 프로젝트 지침에 넣는다. 지침 칸이 없으면 틀을 글로 적어 프로젝트 지식에 올린다.
