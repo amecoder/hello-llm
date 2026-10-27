@@ -6,6 +6,7 @@
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
 
 ## Pending Tasks
+- [ ] (진행 중, 2026-10-27 사용자 결정) 품질 리뷰 개선안을 1 → 2 → 3 → 4 순서로: ① Claude 퀴즈 암기형(약 38문항)을 상황 판단형으로 ② 옛/새 화면·도움말 충돌 서술을 접기 상자·각주로, "도움말은 ~" 주어 문장 줄이기 ③ 장마다 공식 영상 링크 하나(oEmbed 확인·자막 안내) ④ "받는 답은 대략 이렇게" 결과 예시. ⑤ 이어지는 과제는 그 뒤 검토
 - [ ] (대기) PR 자동 처리는 dev-standards `autopilot` 개발이 끝난 뒤 붙인다(2026-10-26 사용자 결정). 그때 `/plugin install autopilot --marketplace amecoder/dev-standards` → `/autopilot:init` → 시크릿 `engine_key`·변수 `AUTOPILOT_MODE` 는 사용자가 설정. hello-llm 은 공개 저장소라 브랜치 보호(Q0) 조건은 무료로 충족. HANDOFF·CHANGELOG 갱신·배포 확인은 autopilot 범위 밖
 - [ ] 실습 UI 구현 — VitePress 안 Vue 컴포넌트, 동일 UI + 코치 마크, API 호출 없는 시뮬레이션 (첫 부품 `PromptBuilder` 완료)
 - [ ] (제안) 실제 독자(중학생·일반인 각 1~2명) 읽기 테스트로 1·5·7장 이해도 실측 — 추정 리뷰: `docs/reports/2026-10-21_초보자-이해도-리뷰.md`
@@ -55,6 +56,7 @@
 - [x] 1단계 1~10장·ChatGPT 1~10장·11장 남은 절을 Academy 문체로 다듬기(제목·프롬프트·각주·링크 그대로, Codex [필수] 3건 반영) — PR #34, squash `efbd54c`
 - [x] 2단계 Claude 사용 가이드 11장 + 퀴즈 79문제(`quiz-bank-claude.ts`) + 사실 확인 리포트(`docs/reports/2026-10-26_Claude-공식-자료.md`, VERIFIED 878개) — PR #35, squash `7b0fbae`
 - [x] Claude 화면 캡처 18장(무료 계정) + 화면 기준 메뉴 이름 + Claude 12장 「전문가처럼 쓰기」 + Claude Academy 강좌 5개 비교 보완(1단계·Claude 장) — PR #36, squash `022737b`
+- [x] 검색·리서치 캡처 8장(Claude 6장 웹 검색 답·결과 목록·출처·`/deep`, ChatGPT 6장 심층 리서치 계획·진행·보고서·내려받기) + 공식 강좌 대비 품질 리뷰(`docs/reports/2026-10-27_공식-강좌-대비-품질-리뷰.md`, 우리 25·27점 vs 강좌 29·31점), Gemini 검토 [필수] 3건 반영 — PR #37, squash `578dc67`
 
 ## Key Decisions
 - 가이드 폴더는 단계 번호 방식 (`00-common` → `10/11` → `20/21` → `30-ai-sdlc`)
