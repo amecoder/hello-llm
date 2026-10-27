@@ -28,7 +28,9 @@
 
 같은 메뉴에는 「고정 해제」(또는 고정)와 「아래로 이동」도 있습니다.[^screen] 고정한 대화는 옆 메뉴 「고정됨」 목록에 모입니다.
 
+::: details 여러 대화를 한꺼번에 지우려면 (눌러서 펼치기)
 여러 대화를 한꺼번에 지우는 방법도 도움말에 있습니다. 전체 대화 목록(「채팅 및 작업」, Chats and tasks)에서 「⋮」 → 「선택」을 누르고, 지울 대화에 체크하거나 맨 위 「모두 선택」을 누르는 방식입니다.[^delete] 화면에 따라 메뉴 이름이 다를 수 있습니다.
+:::
 
 휴대폰에서는 방법이 조금 다릅니다.[^delete]
 
@@ -46,7 +48,7 @@
 
 지난 대화를 찾는 길은 두 가지입니다.
 
-**첫째, 목록에서 찾기.** 옆 메뉴의 「최근 항목」 목록을 훑어보세요. 옆 메뉴 위쪽에는 「검색」 버튼도 있습니다.[^screen] 새 Claude 화면에서는 짧은 질문과 긴 작업이 「최근 항목」(Recents) 한 목록에 모입니다.[^new] 제목을 내 말로 바꿔 두면 이때 훨씬 빨리 찾습니다.
+**첫째, 목록에서 찾기.** 옆 메뉴의 「최근 항목」 목록을 훑어보세요. 옆 메뉴 위쪽에는 「검색」 버튼도 있습니다.[^screen] 짧은 질문과 긴 작업이 「최근 항목」(Recents) 한 목록에 모입니다.[^new] 제목을 내 말로 바꿔 두면 이때 훨씬 빨리 찾습니다.
 
 **둘째, Claude에게 찾아 달라고 하기.** 유료 요금제(Pro·Max·Team·Enterprise)라면 새 대화에서 그냥 물어보면 됩니다. 웹·데스크톱·휴대폰 앱 모두 됩니다.[^search]
 
@@ -60,15 +62,19 @@ Claude가 지난 대화를 뒤지면 대화 중에 **도구 호출**(Claude가 �
 
 - 프로젝트 밖에서 물으면 **프로젝트 밖 대화 전체**에서 찾습니다.
 - 프로젝트 안에서 물으면 **그 프로젝트 안 대화**에서만 찾습니다. 프로젝트는 [7장](07-projects-tools.md)에서 다룹니다.
-- 새 Claude 화면의 검색은 예전 Cowork 작업은 찾지 않습니다. 그런 작업은 「최근 항목」에서 이름으로 찾으세요.[^new]
+- 이 검색은 예전 Cowork 작업은 찾지 않습니다. 그런 작업은 「최근 항목」에서 이름으로 찾으세요.[^new]
 
-Claude가 지난 대화를 뒤지지 않게 하려면 설정에서 「채팅 검색 및 참조」(Search and reference chats)를 끄세요. 도움말은 이 스위치가 「설정 > Your Claude」나 「설정 > 메모리」(Memory)에 있다고 적습니다.[^search] 이 장의 그림을 찍은 무료 계정에서는 이 스위치를 볼 수 없었습니다. 지난 대화 검색이 유료 요금제 기능이기 때문입니다.[^screen] 화면에 따라 다를 수 있습니다.
+Claude가 지난 대화를 뒤지지 않게 하려면 「설정 > 메모리」(또는 「설정 > Your Claude」)에서 「채팅 검색 및 참조」(Search and reference chats)를 끄세요.[^search]
+
+::: details 스위치가 보이지 않으면 (눌러서 펼치기)
+도움말은 이 스위치가 「설정 > Your Claude」나 「설정 > 메모리」(Memory)에 있다고 적습니다.[^search] 이 장의 그림을 찍은 무료 계정에서는 이 스위치를 볼 수 없었습니다. 지난 대화 검색이 유료 요금제 기능이기 때문입니다.[^screen] 화면에 따라 다를 수 있습니다.
+:::
 
 <Quiz id="ch203-search" />
 
 ## 대화 보여 주기 — 특정 사람에게
 
-대화를 다른 사람에게 보여 주는 방법은 두 가지입니다. 정한 사람만 보게 하는 **특정 사람 초대**와, 링크를 가진 누구나 보게 하는 **공개 링크**입니다. 새 도움말은 특정 사람 초대를 기본 방식으로 소개합니다.[^share-people] 먼저 이쪽부터 보겠습니다.
+대화를 다른 사람에게 보여 주는 방법은 두 가지입니다. 정한 사람만 보게 하는 **특정 사람 초대**와, 링크를 가진 누구나 보게 하는 **공개 링크**입니다. 특정 사람 초대가 기본 방식입니다.[^share-people] 먼저 이쪽부터 보겠습니다.
 
 1. 대화 화면 오른쪽 위 「공유」를 누릅니다.
 2. 「액세스 권한이 있는 사람」(People with access) 아래에 받을 사람의 이메일을 씁니다.
@@ -100,7 +106,11 @@ Claude가 지난 대화를 뒤지지 않게 하려면 설정에서 「채팅 검
 공개 링크는 링크를 가진 사람이면 **누구나** 열 수 있습니다. Claude 계정이 없어도 됩니다. 보기만 할 수 있는 것은 초대와 같습니다.[^public]
 개인 요금제(Free·Pro·Max)에서만 됩니다. 회사 요금제(Team·Enterprise)는 조직 안에서만 공유할 수 있습니다.[^public]
 
-공개 링크를 만드는 순서는 문서마다 다르게 적혀 있습니다. 옛 도움말은 「공유」를 누르고 나온 창에서 「공유」를 한 번 더 누르면 링크가 생긴다고 설명합니다.[^share-old] 화면에 따라 다를 수 있으니 공유 창에 보이는 항목을 따르세요.
+공개 링크도 대화 화면의 「공유」에서 만듭니다. 공유 창에 보이는 항목을 따르세요.
+
+::: details 도움말마다 만드는 순서가 다르게 적혀 있어요 (눌러서 펼치기)
+공개 링크를 만드는 순서는 문서마다 다르게 적혀 있습니다. 옛 도움말은 「공유」를 누르고 나온 창에서 「공유」를 한 번 더 누르면 링크가 생긴다고 설명합니다.[^share-old] 화면에 따라 다를 수 있습니다.
+:::
 
 공개 링크를 쓰기 전에 한 가지 원칙만 기억하세요. 도움말의 표현 그대로 **"공개 링크는 공개로 취급하라"**입니다.[^public] 인터넷에 올리지 않을 내용이라면 공개 링크로도 만들지 마세요.
 
@@ -125,7 +135,7 @@ Claude가 만든 파일(4장)이 들어 있는 대화는 개인 요금제에서 
 
 1. 프로젝트 밖에서 새 대화를 엽니다.[^incognito]
 2. 화면 오른쪽 위 **유령 아이콘**(「시크릿 모드 사용」)을 누릅니다.[^screen]
-3. 화면 둘레가 검게 바뀌고 왼쪽 위에 「시크릿」 표시가 뜨면 시작된 것입니다.[^screen]
+3. 화면 둘레가 검게 바뀌고 왼쪽 위에 「시크릿」 표시가 뜨면 시작된 것입니다.[^screen][^incognito-name]
 
 ![시크릿 모드를 켠 화면. ① 왼쪽 위 「시크릿」 표시, ② 점선으로 둘린 입력창과 그 위 제목 「시크릿 모드입니다」, ③ 입력창 아래 안내 문구, ④ 오른쪽 위 ✕ 버튼에 빨간 번호가 붙어 있다](assets/shot-06-incognito-marked.png)
 
@@ -138,7 +148,7 @@ Claude가 만든 파일(4장)이 들어 있는 대화는 개인 요금제에서 
 | ③ | 입력창 아래 | 안내 문구 | 기록에 남지 않는다는 설명 |
 | ④ | 오른쪽 위 | ✕ | 시크릿 대화에서 나간다 |
 
-③ 안내 문구는 이렇습니다. "시크릿 세션은 기록, 메모리, 검색에 남지 않으며 Claude 학습에 사용되지 않습니다."[^screen] 도움말은 검은 테두리와 「Incognito chat」 표시라고 적습니다.[^incognito] 화면에 따라 표시 이름이 다를 수 있습니다.
+③ 안내 문구는 이렇습니다. "시크릿 세션은 기록, 메모리, 검색에 남지 않으며 Claude 학습에 사용되지 않습니다."[^screen]
 
 시크릿 채팅의 특징입니다.[^incognito]
 
@@ -149,7 +159,11 @@ Claude가 만든 파일(4장)이 들어 있는 대화는 개인 요금제에서 
 
 "아무 데도 안 남는다"는 뜻은 아닙니다. **기록에는 안 남지만 기본 30일 동안 보관됩니다.**[^incognito] 비밀번호 같은 정보는 시크릿 채팅에도 넣지 마세요.
 
-새 Claude 화면을 쓰고 있다면 시크릿 채팅은 **옛 화면으로 열립니다.** 그래서 시크릿 채팅에서는 Claude가 파일을 만들거나 코드를 실행할 수 없습니다.[^incognito] 파일 만들기는 4장에서 다룹니다.
+새 화면에서는 시크릿 채팅에서 **Claude가 파일을 만들거나 코드를 실행할 수 없습니다.**[^incognito] 파일 만들기는 4장에서 다룹니다.
+
+::: details 왜 시크릿 채팅에서는 파일을 못 만드나요? (눌러서 펼치기)
+새 Claude 화면을 쓰고 있어도 시크릿 채팅은 옛 화면 방식으로 열리기 때문입니다.[^incognito] 옛 화면 이야기는 [2장](02-screen-tour.md#새-claude-화면과-옛-화면)에 있습니다.
+:::
 
 ### 대화는 남기고 메모리만 끄기
 
@@ -192,7 +206,7 @@ PC방 컴퓨터나 남의 휴대폰에서 Claude에 로그인한 적이 있나�
 
 **모든 기기에서 한 번에 로그아웃하기**[^logout]
 
-같은 「설정 > 계정」에서 「모든 기기에서 로그아웃」을 누르고 확인하세요.[^screen] 도움말에는 「로그아웃」(Log Out) 버튼이라고 적혀 있습니다.[^logout] 웹·휴대폰·데스크톱 앱 등 로그인했던 모든 곳에서 바로 로그아웃됩니다.
+같은 「설정 > 계정」에서 「모든 기기에서 로그아웃」을 누르고 확인하세요.[^screen][^logout-name] 웹·휴대폰·데스크톱 앱 등 로그인했던 모든 곳에서 바로 로그아웃됩니다.[^logout]
 이 기능은 웹에서만 됩니다. 휴대폰 앱에는 아직 없습니다.
 
 <Quiz id="ch203-sessions" />
@@ -243,3 +257,5 @@ PC방 컴퓨터나 남의 휴대폰에서 Claude에 로그인한 적이 있나�
 [^memory-off]: Anthropic 도움말, 「Use Claude’s chat search and memory to build on previous context」. "Unlike an incognito chat, the chat stays in your chat history and Claude can still find it when searching past chats from your other conversations." / "You need to turn memory off before you send the first message." https://support.claude.com/en/articles/11817273 (확인일 2026-10-26)
 [^sessions]: Anthropic 도움말, 「Managing your active sessions」. "Scroll to the Active sessions section (called Where you're logged in in the updated Settings layout)." / "Click the three-dot menu (⋮) next to that session." / "terminate it right away and consider changing your password." https://support.claude.com/en/articles/13124001 (확인일 2026-10-26)
 [^logout]: Anthropic 도움말, 「How do I log out of all active sessions?」. "When you log in via claude.ai, this creates a session with a duration of 28 days." / "This option is not currently available in the Claude mobile apps for iOS or Android." / "This action will immediately sign you out of your account across all devices where you were previously logged in, including:" https://support.claude.com/en/articles/10310342 (확인일 2026-10-26)
+[^incognito-name]: 도움말은 검은 테두리와 「Incognito chat」 표시라고 적습니다. 화면에 따라 표시 이름이 다를 수 있습니다.
+[^logout-name]: 도움말에는 「로그아웃」(Log Out) 버튼이라고 적혀 있습니다.

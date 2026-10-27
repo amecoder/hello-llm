@@ -154,9 +154,7 @@ Work는 웹과 휴대폰에서는 **유료 요금제(Free·Go 제외)** 에서�
 | ⑧ | 「개인 맞춤 설정」 | 메모리, 사용자 지정 지침, 말투 | [5장](05-memory.md) |
 | ⑨ | 「사용량」 | 남은 사용 한도, 크레딧 | [1장](01-getting-started.md#유료로-바꾸기-전에-알아-둘-것) |
 | — | 「플러그인」(그림 아래쪽 「통합」 묶음) | 연결한 앱과 기본 권한 | [7장](07-projects-plugins.md#연결한-앱의-권한-정하기) |
-| ⑩ | 「데이터 관리」 | 학습 허용, 공유 링크, 데이터 내보내기 | [8장](08-privacy.md) |
-
-> 도움말 문서에는 「데이터 제어」라고 적힌 곳이 있지만, 실제 화면 이름은 **「데이터 관리」** 입니다.
+| ⑩ | 「데이터 관리」[^data-name] | 학습 허용, 공유 링크, 데이터 내보내기 | [8장](08-privacy.md) |
 
 화면이 영어로 나오면 「Settings」 → 「General」 → 「Language」에서 한국어를 고르면 됩니다. 언어는 **로그인한 상태에서만** 바꿀 수 있습니다.[^lang]
 「모양」에서 고른 어두운 화면은 **기기마다 따로** 정합니다. 웹에서 바꿔도 휴대폰 앱은 그대로입니다. 앱에서도 한 번 더 고르세요.[^appearance]
@@ -199,3 +197,4 @@ Work는 웹과 휴대폰에서는 **유료 요금제(Free·Go 제외)** 에서�
 [^lang]: OpenAI 도움말, 「How to change your language setting in ChatGPT」. "you can only update the ChatGPT language setting if you are logged in." https://help.openai.com/en/articles/8357869 (확인일 2026-10-24)
 [^appearance]: OpenAI 도움말, 「Updating your visual experience」. "changing the appearance on the web doesn't automatically change the appearance in the mobile app." 설정 메뉴 이름은 2026-10-24 웹 설정 화면에서 확인. https://help.openai.com/en/articles/11958281 (확인일 2026-10-24)
 [^academy-content]: OpenAI Academy 「Applied AI Foundations」 강좌 본문(로그인·등록 필요). "Use a faster model when the task is simple and/or low-stakes." / "Use a reasoning model when the task has:" "Several constraints" / "A need to compare options" / "Compare options against criteria instead of giving a generic list of pros and cons" / "Review your draft recommendation for missing assumptions" (확인일 2026-10-26)
+[^data-name]: 도움말 문서에는 「데이터 제어」라고 적힌 곳이 있지만, 실제 화면 이름은 「데이터 관리」입니다.

@@ -163,7 +163,7 @@ Word·Excel·PowerPoint는 **ChatGPT 추가 기능**(add-in, 프로그램 안에
 매주 월요일 아침 8시에, 이번 주 서울 날씨 예보를 요일별 한 줄로 정리해서 알려 줘.
 ```
 
-만든 작업은 옆 메뉴 「예약」에서 보고, 고치고, 일시 중지하고, 지울 수 있습니다. 도움말은 이 메뉴를 「예약됨」이라고 부르지만 실제 화면 이름은 「예약」입니다.[^tasks] 설정 → 「알림」 → 「작업 관리」로도 열 수 있고, 대화의 •••(더보기) → 「예약 작업 보기」로도 열 수 있습니다.[^tasks]
+만든 작업은 옆 메뉴 「예약」에서 보고, 고치고, 일시 중지하고, 지울 수 있습니다.[^tasks][^scheduled-name] 설정 → 「알림」 → 「작업 관리」로도 열 수 있고, 대화의 •••(더보기) → 「예약 작업 보기」로도 열 수 있습니다.[^tasks]
 
 알림을 어떻게 받을지는 설정 → 「알림」에서 푸시나 이메일로 고르세요. 휴대폰 푸시를 받으려면 휴대폰 앱에서 작업을 만들면 됩니다.[^tasks]
 
@@ -264,7 +264,7 @@ Word·Excel·PowerPoint는 **ChatGPT 추가 기능**(add-in, 프로그램 안에
 
 ## 믿기 전에 확인하기
 
-결과를 쓰기 전에 확인하는 습관은 [1단계 9장 「확인하는 네 가지 습관」](../00-common/09-safety.md#확인하는-네-가지-습관)에서 배웠습니다. OpenAI 도움말도 여러 곳에서 같은 말을 합니다. 여기서는 얼마나 꼼꼼히 볼지, 어느 단계에서 볼지, 결과물마다 무엇을 볼지 살펴봅니다.
+결과를 쓰기 전에 확인하는 습관은 [1단계 9장 「확인하는 네 가지 습관」](../00-common/09-safety.md#확인하는-네-가지-습관)에서 배웠습니다. 여기서는 얼마나 꼼꼼히 볼지, 어느 단계에서 볼지, 결과물마다 무엇을 볼지 살펴봅니다.
 
 **모든 답을 똑같이 꼼꼼하게 볼 필요는 없습니다.** 일의 무게에 맞춰 확인하세요.[^academy-content]
 
@@ -417,3 +417,4 @@ ChatGPT가 어떻게 만들어지고 어떻게 쓰는지 설명하는 Andrej Kar
 [^msgenai]: Microsoft, 「Generative AI for Beginners」 GitHub 저장소 README. "This course has 21 lessons." / "Lessons are labeled either 'Learn' lessons explaining a Generative AI concept or 'Build' lessons that explain a concept and code examples". 한국어 번역은 `translations/ko` 폴더. https://github.com/microsoft/generative-ai-for-beginners (확인일 2026-10-25)
 [^boost]: 부스트코스, 「AI로 배우는 단계별 기획서 작성법」 강좌 소개. 「무료강의」, 난이도 「입문」, 「상시 수강」, 강의계획 #1~#3과 「[과제] 자율 실습 해보기」, 이승필 강사. https://www.boostcourse.org/aix210 (확인일 2026-10-25)
 [^coursera]: Coursera 강좌 페이지 FAQ. "To access course materials, assignments, and earn a Certificate, you'll need to purchase the Certificate experience when you enroll in a course." https://www.coursera.org/learn/prompt-engineering · https://www.coursera.org/learn/generative-ai-for-everyone (확인일 2026-10-25)
+[^scheduled-name]: 도움말은 이 메뉴를 「예약됨」이라고 부르지만 실제 화면 이름은 「예약」입니다.

@@ -21,7 +21,7 @@
 
 1. 왼쪽 아래 내 이름을 누르고 「설정」을 엽니다.
 2. 왼쪽 메뉴에서 「개인정보보호」를 누릅니다.[^screen]
-3. ② 「Help improve our AI models」 스위치를 켜거나 끕니다. 한국어 화면인데도 이 줄은 영어로 나옵니다.[^screen] 한국어 도움말에서는 「AI 모델 개선 지원」이라고 부릅니다.
+3. ② 「Help improve our AI models」 스위치를 켜거나 끕니다. 한국어 화면인데도 이 줄은 영어로 나옵니다.[^screen][^improve-name]
 
 ![「설정」 → 「개인정보보호」 화면. ① 「위치 메타데이터」, ② 「Help improve our AI models」 스위치, ③ 「데이터 내보내기」, ④ 「공유된 채팅」 → 「관리」에 빨간 번호가 붙어 있다](assets/shot-09-settings-privacy-marked.png)
 
@@ -86,7 +86,7 @@
 
 기본적으로 **Anthropic 직원은 내 대화를 볼 수 없습니다.** 예외는 두 가지입니다. 내가 피드백으로 대화를 보냈을 때, 그리고 이용 규칙을 지키는지 검토해야 할 때입니다. 검토할 때도 지정된 안전팀 일부만 필요한 만큼 봅니다. 데이터는 오가는 중에도, 저장된 뒤에도 자동으로 암호화(남이 읽지 못하게 바꿔 두는 것)됩니다.[^protect]
 
-학습을 허용한 대화도 학습 일을 맡은 소수만 볼 수 있습니다. 도움말은 주민등록번호·카드 번호·건강 기록·비밀번호 같은 아주 민감한 정보는 신중하게 넣으라고 권합니다.[^sensitive]
+학습을 허용한 대화도 학습 일을 맡은 소수만 볼 수 있습니다. 그래도 주민등록번호·카드 번호·건강 기록·비밀번호 같은 아주 민감한 정보는 신중하게 넣으세요.[^sensitive]
 
 ### 위치는 어떻게 쓰나
 
@@ -141,7 +141,7 @@
 
 ## AI가 틀릴 때 — 틀린 답과 가짜 "보냈어요"
 
-Claude도 그럴듯하지만 틀린 답을 할 수 있습니다. 이것을 **환각**(hallucination)이라고 부릅니다. 확인하는 습관은 [1단계 9장](../00-common/09-safety.md#_1-그럴듯한-거짓말-—-환각-확인하기)에서 배웠습니다. Claude 도움말이 따로 강조하는 점은 세 가지입니다.[^wrong]
+Claude도 그럴듯하지만 틀린 답을 할 수 있습니다. 이것을 **환각**(hallucination)이라고 부릅니다. 확인하는 습관은 [1단계 9장](../00-common/09-safety.md#_1-그럴듯한-거짓말-—-환각-확인하기)에서 배웠습니다. Claude에서 특히 알아 둘 점은 세 가지입니다.[^wrong]
 
 - 권위 있어 보이는 인용문도 **근거 없이 지어낸 것**일 수 있습니다.
 - Claude를 **하나뿐인 정답 출처로 믿지 마세요.** 중요한 조언일수록 꼼꼼히 확인합니다.
@@ -223,7 +223,7 @@ Claude에는 해로운 내용을 걸러 내는 장치가 있습니다. 해로운
 
 ## 정리
 
-- 학습 사용 여부는 「설정」 → 「개인정보보호」 → 「Help improve our AI models」(한국어 도움말 이름 「AI 모델 개선 지원」)에서 정한다. 처음 값은 직접 열어 확인한다.
+- 학습 사용 여부는 「설정」 → 「개인정보보호」 → 「Help improve our AI models」에서 정한다. 처음 값은 직접 열어 확인한다.
 - 꺼도 이미 만들어진 모델에는 남고, 안전 장치에 걸린 대화는 쓰일 수 있다.
 - 시크릿 채팅은 학습에 쓰이지 않는다. 좋아요/싫어요를 보내면 그 대화가 최대 5년 남는다.
 - 지운 대화는 30일 안에 서버에서도 지워진다. 학습을 허용한 대화는 최대 5년 남을 수 있다.
@@ -277,3 +277,4 @@ Claude에는 해로운 내용을 걸러 내는 장치가 있습니다. 해로운
 [^appeal]: Anthropic 도움말, 「Safeguards warnings and appeals」. "we warn users if we believe their prompts are violating our Usage Policy." / "Account creation from an unsupported location" / "If you feel your account has been wrongly suspended or terminated, please go to claude.ai, log in with your banned account, and fill out the appeal form linked below." / "Important: You must be logged in to access the appeal form." / "you can still log in at claude.ai to export your data or delete your account." https://support.claude.com/en/articles/8241253 (확인일 2026-10-26)
 [^report]: Anthropic 도움말, 「Report, block, and remove content from Claude」. "Use the “report” button on the shared content." / "If you believe content violates Anthropic’s usage policies or local laws and should be removed or restricted, you can report it through this form." / "We will provide a warning before suspension." https://support.claude.com/en/articles/10684638 (확인일 2026-10-26)
 [^crisis]: Anthropic 도움말, 「Crisis Helpline Support in Claude」. "please contact emergency services (such as 911 in the US and Canada, or 112 in much of Europe) or go to your nearest emergency room." / "This banner is surfaced by a separate detection system, not from Claude directly." / "there are no consequences for your account based on your decision to access resources." / "After you see the banner, it won’t appear again for about two hours" / "The resources shown are selected based on your location to provide relevant, local support options." / "Anthropic doesn’t send your conversations to helplines or to Koko." / "It takes about five minutes. You’re guided one step at a time, and you decide what goes in it." https://support.claude.com/en/articles/13171706 (확인일 2026-10-26)
+[^improve-name]: 한국어 도움말에서는 「AI 모델 개선 지원」이라고 부릅니다.

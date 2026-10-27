@@ -4,7 +4,7 @@
 > 매번 같은 방식으로 할 일은 **스킬**로 넣어 둡니다. 이 셋을 업무별로 묶은 꾸러미가 **플러그인**입니다.
 
 화면은 2026년 10월 웹 기준입니다. 채팅과 Cowork를 합친 새 화면이 차례로 배포되고 있어서, 메뉴 위치와 이름은 화면에 따라 다를 수 있습니다.
-이 장의 그림은 무료 요금제 웹 화면입니다. 메뉴 이름은 그림에 보이는 이름을 먼저 쓰고, 도움말에 나오는 다른 이름은 함께 적었습니다.
+이 장의 그림은 무료 요금제 웹 화면입니다. 메뉴 이름은 그림에 보이는 이름으로 씁니다. 도움말에 나오는 다른 이름은 각주에 모았습니다.
 
 이 장에서 쓰는 곳은 옆 메뉴의 두 곳입니다. 「프로젝트」와 「사용자 지정」(Customize)입니다.[^screen] 아래 그림들에서 각각 ③·④로 표시했습니다.
 
@@ -13,11 +13,11 @@
 **프로젝트**(project)는 한 가지 일을 위한 작업 공간입니다. 프로젝트마다 대화 기록과 **지식**(knowledge, 참고 자료를 넣어 두는 곳)이 따로 있습니다.[^projects]
 예를 들어 「회사 주간 보고」 프로젝트에 보고 양식 파일을 넣어 두세요. 그 안에서 여는 대화는 매번 그 양식을 알고 시작합니다.
 
-프로젝트는 무료 요금제에서도 만들 수 있습니다. 무료는 5개까지입니다.[^projects-how] 요금 페이지 설명과는 다를 수 있으니 내 화면에서 확인하세요.
+프로젝트는 무료 요금제에서도 만들 수 있습니다. 무료는 5개까지입니다.[^projects-how][^projects-limit]
 
 ### 만들고 채우는 법
 
-1. 옆 메뉴 ③ 「프로젝트」(claude.ai/projects)를 엽니다. 오른쪽 위 ① 「새 프로젝트」를 누릅니다.[^screen] 도움말에는 「+ 새 프로젝트」로 나옵니다.[^projects-how]
+1. 옆 메뉴 ③ 「프로젝트」(claude.ai/projects)를 엽니다. 오른쪽 위 ① 「새 프로젝트」를 누릅니다.[^screen][^projects-how][^new-project-name]
 2. 이름과 설명을 적습니다. 이름과 설명은 **Claude가 읽지 못합니다.** 일하는 데 필요한 내용은 지식이나 지침에 넣으세요.[^projects-how]
 3. 프로젝트 화면 오른쪽 **프로젝트 지식**의 「+」로 파일이나 글을 올립니다. 여기 올린 것은 그 프로젝트의 모든 대화에서 쓰입니다.[^projects-how]
 4. 「프로젝트 지침 설정」에 이 프로젝트에서 지킬 규칙을 적고 「지침 저장」을 누릅니다.[^projects-how]
@@ -37,7 +37,7 @@
 
 <!-- 스크린샷 필요: 프로젝트 화면. 오른쪽 「프로젝트 지식」 칸과 「+」, 「프로젝트 지침 설정」 버튼 -->
 
-[5장](05-memory.md)의 지침은 모든 대화에 적용됩니다. 프로젝트 지침은 **그 프로젝트 안의 대화에만** 적용됩니다.[^personal] 무료 요금제에서 프로젝트 지침을 쓸 수 있는지는 문서마다 다르게 적혀 있습니다.
+[5장](05-memory.md)의 지침은 모든 대화에 적용됩니다. 프로젝트 지침은 **그 프로젝트 안의 대화에만** 적용됩니다.[^personal][^project-instr-free]
 
 ### 같은 프로젝트라도 대화 내용을 그대로 나누지는 않는다
 
@@ -90,7 +90,7 @@
 
 ### 연결하는 법
 
-1. 입력창 왼쪽 아래 「+」를 누르고 ③ 「커넥터 추가」를 고릅니다.[^screen] 도움말에는 「커넥터」 → 「커넥터 관리」로 나오고, `/` 를 입력해도 된다고 합니다.[^connectors] 옆 메뉴 「사용자 지정」 → 「커넥터」 탭에서도 됩니다.[^screen]
+1. 입력창 왼쪽 아래 「+」를 누르고 ③ 「커넥터 추가」를 고릅니다.[^screen][^connector-name] 옆 메뉴 「사용자 지정」 → 「커넥터」 탭에서도 됩니다.[^screen]
 2. 쓸 서비스를 고르고 「연결」이나 「설치」를 누릅니다. 그 서비스에 로그인해 권한을 허락합니다.[^connectors]
 3. 대화마다 「+」 → 「커넥터」에서 이번 대화에 쓸 서비스를 켜고 끕니다.[^connectors]
 
@@ -193,7 +193,7 @@
 **스킬**(skill)은 특정 일을 매번 같은 방식으로 하게 해 주는 지침과 자료의 묶음입니다.[^skills]
 예를 들어 "회사 보고서는 이 순서와 이 글꼴로"라는 규칙을 스킬로 넣어 두면, 보고서를 만들 때마다 그 방식대로 합니다.
 
-스킬은 Free·Pro·Max·Team·Enterprise 모두 씁니다. 단, **파일 만들기 기능이 켜져 있어야** 합니다. 설정 → 「기능」에서 「코드 실행 및 파일 생성」(새 설정 화면은 「파일 생성 및 편집」)을 켜세요.[^skills][^skills-use]
+스킬은 Free·Pro·Max·Team·Enterprise 모두 씁니다. 단, **파일 만들기 기능이 켜져 있어야** 합니다. 설정 → 「기능」에서 「코드 실행 및 파일 생성」을 켜세요.[^create-name][^skills][^skills-use]
 
 ### 기본 스킬과 내 스킬
 
@@ -257,7 +257,7 @@ Claude가 몇 가지를 물어봅니다. 이 스킬이 무엇을 하는지, 잘�
 ### 넣고 쓰는 법
 
 1. 옆 메뉴 ④ 「사용자 지정」(Customize)을 엽니다.[^screen] 스킬·커넥터·플러그인을 이곳 한 목록에서 찾을 수 있습니다.[^directory]
-2. ① 「플러그인」 탭 → ② 「탐색」에서 플러그인을 고르고 「추가」를 누릅니다.[^screen] 도움말에는 「발견」 탭으로 나옵니다.[^plugins]
+2. ① 「플러그인」 탭 → ② 「탐색」에서 플러그인을 고르고 「추가」를 누릅니다.[^screen][^discover-name]
 3. 대화나 Cowork에서 `/` 를 입력하거나 「+」를 누르면 플러그인에 든 스킬이 보입니다. 골라서 씁니다.[^plugins]
 
 받은 플러그인은 일반적인 일 처리 방식을 담고 있습니다. 내 일의 양식과 순서는 다를 수 있습니다.[^academy-plugins] 넣은 플러그인을 보는 화면 오른쪽 위의 「커스터마이징」(Customize)을 누르면, 그 플러그인을 고치는 Cowork 작업이 열립니다. 「시작하기」(Let's go)를 누르고 Claude와 함께 고치면 됩니다.[^plugins] 메뉴 이름은 화면에 따라 다를 수 있습니다. 내가 실제로 쓰는 예를 보여 주며 부탁하세요.
@@ -346,3 +346,9 @@ Claude가 몇 가지를 물어봅니다. 이 스킬이 무엇을 하는지, 잘�
 [^academy-layers]: Claude Academy 「Introduction to Claude Cowork」 강의 「Get better results faster」. "If you find you're explaining the same workflows to Claude multiple times, those will be the right opportunities for your first skills." https://academy.claude.com/courses/introduction-to-claude-cowork/research-analysis-at-scale (확인일 2026-10-26)
 [^academy-skills]: Claude Academy 「Claude 101」 강의 「Working with skills」. "The easiest way to create a custom Skill is through conversation with Claude itself." / "Claude will interview you about your workflow, asking things like: What should this skill do? What makes good output for this type of work? Can you give examples of when you'd use this skill?" / "Templates, style guides, brand assets, or examples of work you're proud of all help Claude understand exactly what you're looking for." / "projects store knowledge, skills perform tasks" https://academy.claude.com/courses/claude-101/working-with-skills (확인일 2026-10-26)
 [^academy-plugins]: Claude Academy 「Introduction to Claude Cowork」 강의 「Plugins: Encode your team's expertise」. "A plugin from the marketplace is a strong default, not a final answer." / "The more you shape it to your team's actual work, the more leverage it produces." https://academy.claude.com/courses/introduction-to-claude-cowork/plugins-cowork-as-a-specialist (확인일 2026-10-26)
+[^projects-limit]: 요금 페이지 설명과는 다를 수 있으니 내 화면에서 확인하세요.
+[^new-project-name]: 도움말에는 「+ 새 프로젝트」로 나옵니다.
+[^project-instr-free]: 무료 요금제에서 프로젝트 지침을 쓸 수 있는지는 문서마다 다르게 적혀 있습니다.
+[^connector-name]: 도움말에는 「커넥터」 → 「커넥터 관리」로 나오고, `/` 를 입력해도 된다고 합니다.
+[^create-name]: 새 설정 화면에서는 이름이 「파일 생성 및 편집」입니다.
+[^discover-name]: 도움말에는 「발견」 탭으로 나옵니다.
