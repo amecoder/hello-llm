@@ -52,13 +52,17 @@ Claude와 일하는 모양은 세 가지입니다. 이 장에서는 그중 두 �
 ## Cowork 시작하기
 
 1. 웹(claude.ai), 데스크톱 앱, 휴대폰 앱 중 하나를 엽니다.
-2. 입력창에서 「Cowork」를 고릅니다. 일반 대화로 돌아가려면 「Chat」을 고릅니다.[^cowork]
+2. 새 화면에서는 따로 고를 것이 없습니다. 모든 대화가 Cowork 일을 맡을 수 있습니다.[^cowork]
 3. 할 일을 설명합니다.
 4. Claude가 내놓은 계획을 보고, 괜찮으면 진행시킵니다.[^cowork]
 
-<!-- 스크린샷 필요: 입력창 아래 「Chat」/「Cowork」 선택과, Cowork 작업이 계획을 보여 주는 화면 -->
+이 가이드에서 확인한 화면(무료 요금제)에도 「Chat」·「Cowork」 선택은 없었습니다.[^screen]
 
-**입력창에 「Chat」·「Cowork」 선택이 없나요?** 그러면 이미 새 화면입니다. 새 화면에서는 모든 대화가 Cowork 일을 맡을 수 있습니다. 2번은 건너뛰세요.[^cowork] 이 가이드에서 확인한 화면(무료 요금제)에도 이 선택은 없었습니다.[^screen] 새 화면이 한 번 오면 옛 화면으로 되돌릴 수 없습니다.[^one]
+::: details 옛 화면을 쓰고 있다면 (눌러서 펼치기)
+입력창에 「Chat」·「Cowork」 선택이 보이면 아직 옛 화면입니다. 2번에서 입력창의 「Cowork」를 고르세요. 일반 대화로 돌아가려면 「Chat」을 고릅니다.[^cowork] 새 화면이 한 번 오면 옛 화면으로 되돌릴 수 없습니다.[^one]
+
+<!-- 스크린샷 필요: 입력창 아래 「Chat」/「Cowork」 선택과, Cowork 작업이 계획을 보여 주는 화면 -->
+:::
 
 ### 맡기는 요령
 
@@ -96,7 +100,7 @@ Claude가 시작하기 전에 몇 가지를 되물을 수 있습니다. 대부�
 - **파일을 영구히 지우기 전에는 반드시 묻습니다.** 「허용」을 눌러야 지웁니다.[^cowork]
 - **사용량을 많이 씁니다.** 코드를 돌리고 파일을 만들고 앱을 쓰는 여러 단계 작업은 짧은 질문보다 한도를 더 씁니다. 관련된 일은 한 작업으로 묶으세요. 남은 양은 설정 → 「사용량」에서 봅니다.[^cowork]
 - **메모리**: 클라우드에서 도는 Cowork 작업은 채팅과 메모리를 함께 씁니다. 내 컴퓨터에서 도는 작업은 메모리를 쓰지 않습니다.[^memory] 이번 작업만 메모리 없이 하려면 첫 메시지를 보내기 **전에** 「+」에서 「메모리」(Memory)를 끄세요. 시작한 뒤에는 바꿀 수 없습니다.[^cowork]
-- **늘 지킬 지침**은 설정 → 「Cowork」 → 전역 지침 「편집」에 적습니다. 새 화면에서는 [5장](05-memory.md)의 지침이 이 역할을 합니다.[^cowork]
+- **늘 지킬 지침**은 [5장](05-memory.md)의 지침에 적습니다. 새 화면에서는 이 지침이 Cowork에도 쓰입니다.[^cowork][^cowork-instr-old]
 - **작업 지우기**: 작업 옆 「⋮」 → 「Delete」를 누르면 목록에서 바로 사라지고, 30일 안에 서버에서도 지워집니다.[^cowork]
 
 ### 받은 결과 검토하기
@@ -158,7 +162,7 @@ Claude가 언제 허락을 물을지 정하는 것을 **권한 모드**라고 �
 그 전에 내 컴퓨터에서 시작한 작업은 그대로 남아 끝낼 수 있습니다.[^devices]
 
 그래도 내 폴더는 내 컴퓨터에 그대로 있습니다. Claude는 내가 연결한 폴더에만, 데스크톱 앱이 켜져 있을 때만 닿습니다. 작업에 필요한 파일만 복사해 가고, 작업을 지우면 그 복사본도 지워집니다.[^devices]
-꼭 내 컴퓨터 안에서만 돌려야 하는 일이라면, 도움말은 데스크톱 앱의 Claude Code를 쓰라고 안내합니다.[^devices]
+꼭 내 컴퓨터 안에서만 돌려야 하는 일이라면 데스크톱 앱의 Claude Code를 쓰세요.[^devices]
 
 ### 기기별 차이
 
@@ -196,13 +200,15 @@ Claude가 언제 허락을 물을지 정하는 것을 **권한 모드**라고 �
 매주 월요일 아침 9시에, 지난주 우리 팀 Slack 채널의 메시지를 요약해 줘.
 ```
 
-**옛 화면의 Cowork**에서는 옆 메뉴 「Scheduled」 → 오른쪽 위 「New task」를 누릅니다. 「Create with Claude」를 고르면 대화로 만들고, 「Set up manually」를 고르면 직접 채웁니다.[^scheduled] 직접 채울 때 주기는 매시간·매일·매주·평일·수동 중에서 고릅니다.[^scheduled]
+::: details 옛 화면의 Cowork를 쓰고 있다면 (눌러서 펼치기)
+옛 화면의 Cowork에서는 옆 메뉴 「Scheduled」 → 오른쪽 위 「New task」를 누릅니다. 「Create with Claude」를 고르면 대화로 만들고, 「Set up manually」를 고르면 직접 채웁니다.[^scheduled] 직접 채울 때 주기는 매시간·매일·매주·평일·수동 중에서 고릅니다.[^scheduled]
+:::
 
-「Scheduled」 화면에서 작업을 일시 중지하고, 다시 켜고, 지우고, 지금 바로 한 번 돌릴 수 있습니다.[^scheduled]
+「Scheduled」(예약 작업) 화면에서 작업을 일시 중지하고, 다시 켜고, 지우고, 지금 바로 한 번 돌릴 수 있습니다.[^scheduled]
 
 <!-- 스크린샷 필요: 옆 메뉴 「Scheduled」 화면의 작업 목록과 일시 중지·지금 실행 버튼 -->
 
-> 내 컴퓨터의 파일이나 앱이 필요한 예약 작업이 어디서 도는지는 문서마다 다르게 적혀 있습니다. 내 파일이 필요한 예약 작업을 만들었다면, 첫 실행 결과가 제대로 왔는지 꼭 확인하세요.
+> 내 파일이 필요한 예약 작업을 만들었다면, 첫 실행 결과가 제대로 왔는지 꼭 확인하세요.[^scheduled-where]
 
 ### 무엇을 예약할까
 
@@ -344,7 +350,7 @@ Claude가 내 대신 한 일의 책임은 **나에게** 있습니다. 보낸 메
 ## 정리
 
 - Cowork는 결과를 말해 두면 여러 단계를 스스로 해 완성품을 돌려주는 기능이다. 유료 요금제 전용이다.
-- 입력창에서 「Cowork」를 고른다. 「Chat」·「Cowork」 선택이 없으면 새 화면이고, 모든 대화가 Cowork 일을 맡는다.
+- 새 화면에서는 모든 대화가 Cowork 일을 맡는다. 옛 화면이면 입력창에서 「Cowork」를 고른다.
 - 권한 모드는 화면에 「수동」·「자동」이 있다(요금제·화면에 따라 더 있을 수 있다). 처음 쓰는 도구, 돈·메시지·중요 파일, 되돌리기 어려운 일은 「수동」으로 한다.
 - 2026년 10월 6일부터 Pro·Max의 새 Cowork 작업은 클라우드에서 돈다. 내 파일·브라우저·컴퓨터 사용은 데스크톱 앱이 켜져 있어야 한다.
 - 새 예약 작업은 대부분 컴퓨터가 잠들어 있어도 돈다(내 파일이 필요한 작업은 예외일 수 있다). 요약처럼 위험이 낮은 일부터 맡기고, 보내기·구매는 예약하지 않는다.
@@ -389,3 +395,5 @@ Claude가 내 대신 한 일의 책임은 **나에게** 있습니다. 보낸 메
 [^academy-schedule]: Claude Academy 「Introduction to Claude Cowork」 강의 「What Claude Cowork can do for you」. "do the task once in Cowork, confirm the output looks right" https://academy.claude.com/courses/introduction-to-claude-cowork/scheduled-tasks (확인일 2026-10-26)
 [^academy-safe]: Claude Academy 「Introduction to Claude Cowork」 강의 「Best practices for working safely」. "How you ask matters as much as what folder you point at." / "If the wrong reading would be irrecoverable, name what you mean" / "This narrows what Cowork is doing and gives you a clear line for spotting drift." / "Once you've seen it behave, point it at the live folder." / "Until you're confident that the task runs the way you need it to, prompt it to draft for your review rather than send on your behalf." / "Most mistakes don't happen because the safeguards failed; they happen because someone clicked through a confirmation that wasn't quite the action they intended." / "Claude can prepare; you ship." https://academy.claude.com/courses/introduction-to-claude-cowork/permissions-usage-choosing-your-model (확인일 2026-10-26)
 [^academy-setup]: Claude Academy 「Introduction to Claude Cowork」 강의 「Setting up Claude Cowork」. "Read the brief and check it against your own knowledge." / "What did Claude catch that you might have missed? What did it miss or get wrong?" https://academy.claude.com/courses/introduction-to-claude-cowork/getting-set-up (확인일 2026-10-26)
+[^cowork-instr-old]: 옛 화면에서는 설정 → 「Cowork」 → 전역 지침 「편집」에 적습니다.
+[^scheduled-where]: 내 컴퓨터의 파일이나 앱이 필요한 예약 작업이 어디서 도는지는 문서마다 다르게 적혀 있습니다.

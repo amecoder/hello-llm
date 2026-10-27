@@ -4,7 +4,7 @@
 > 무엇이 기억되는지 보고, 고치고, 끄는 법까지 익힙니다. 오래 쓸 때 쉬어 가게 해 주는 휴식 알림도 함께 봅니다.
 
 화면은 2026년 10월 웹 기준입니다. 지금은 새 Claude 화면과 새 설정 화면이 차례로 배포되고 있어서, 메뉴 이름과 위치가 화면에 따라 다를 수 있습니다.
-이 장의 그림은 무료 요금제 웹 화면입니다. 메뉴 이름은 그림에 보이는 이름을 먼저 쓰고, 도움말에 나오는 다른 이름은 함께 적었습니다.
+이 장의 그림은 무료 요금제 웹 화면입니다. 메뉴 이름은 그림에 보이는 이름으로 씁니다. 도움말에 나오는 다른 이름은 각주와 접기 상자에 모았습니다.
 
 ## 나를 알려 주는 세 가지 방법
 
@@ -45,7 +45,9 @@ Claude에는 이 수고를 덜어 주는 기능이 세 가지 있습니다.
 
 ② 칸 위에는 이 지침을 채팅과 Cowork 전반에 걸쳐 염두에 둔다는 안내가 있습니다.[^screen] 빈칸에는 「예시: 설명을 간단명료하게 유지」라고 흐리게 적혀 있습니다.[^screen]
 
+::: details 설정에 「계정」 대신 「Your Claude」가 보이면 (눌러서 펼치기)
 도움말에는 이 칸이 「설정」 → 「Your Claude」의 「지침」으로 나옵니다.[^personal] 새 설정 화면을 받은 계정은 그렇게 보일 수 있습니다. 화면에 보이는 이름을 따르세요.
+:::
 
 무엇을 적을지 막막하면, [1단계 4장](../00-common/04-prompt-basics.md#좋은-프롬프트의-5요소)의 다섯 요소 가운데 **매번 같은 것**만 골라 넣어 보세요.
 
@@ -102,7 +104,7 @@ Claude가 알아서 저장하기도 합니다. 꼭 남기고 싶은 것은 직�
 ### 기억하지 않는 것
 
 건강·인종·종교·정치·성 정체성 같은 **민감한 주제**는 기본적으로 저장하지 않습니다.[^sensitive]
-매번 다시 설명하기 싫다면 「설정」 → 「메모리」에서 「민감한 주제를 메모리에 포함」을 켤 수 있습니다.[^screen] 처음에는 꺼져 있습니다.[^screen] 도움말에는 「설정」 → 「Your Claude」로 나옵니다.[^sensitive]
+매번 다시 설명하기 싫다면 「설정」 → 「메모리」에서 「민감한 주제를 메모리에 포함」을 켤 수 있습니다.[^screen][^sensitive][^your-claude] 처음에는 꺼져 있습니다.[^screen]
 
 신분증 번호·범죄 기록·금융 계좌 번호·체류 신분은 **부탁해도 저장하지 않습니다.**[^sensitive]
 그렇다고 이런 정보를 채팅에 적어도 된다는 뜻은 아닙니다. 넣기 전에 [1단계 9장](../00-common/09-safety.md#넣지-말아야-할-것)을 한 번 떠올려 보세요.
@@ -125,8 +127,7 @@ Claude가 나에 대해 무엇을 기억하는지 직접 볼 수 있습니다.
 - ③ 「다른 AI 제공업체에서 메모리 가져오기」 — 다른 AI의 기억을 옮겨 온다
 - ④ 「메모리 내보내기」 — 기억을 파일로 내려받는다
 
-이 화면 아래쪽에 저장된 메모리 목록이 있습니다.[^screen] 주제를 눌러 읽고, 연필 모양으로 고치거나 「삭제」로 지우면 됩니다.[^manage]
-도움말에는 「설정」 → 「Your Claude」의 「Your memory」 옆 「관리」로 나옵니다.[^manage] 화면에 따라 다를 수 있습니다.
+이 화면 아래쪽에 저장된 메모리 목록이 있습니다.[^screen] 주제를 눌러 읽고, 연필 모양으로 고치거나 「삭제」로 지우면 됩니다.[^manage][^your-claude]
 
 <!-- 스크린샷 필요: 저장된 메모리가 있는 계정에서 주제 목록과 편집·「삭제」 버튼 -->
 
@@ -150,7 +151,7 @@ Claude가 나에 대해 무엇을 기억하는지 직접 볼 수 있습니다.
 
 ## 메모리 끄기 — 일시 중지와 재설정
 
-메모리 스위치는 「설정」 → 「메모리」의 ① 「채팅에서 메모리 생성」(Memory from chats)입니다.[^screen] 도움말에는 「설정」 → 「Your Claude」에 있다고 나옵니다.[^off]
+메모리 스위치는 「설정」 → 「메모리」의 ① 「채팅에서 메모리 생성」(Memory from chats)입니다.[^screen][^off][^your-claude]
 스위치를 끄려고 누르면 두 가지 중 하나를 고르게 됩니다.[^off]
 
 - **「메모리 일시 중지」**(Pause memory) — 기억은 그대로 둡니다. 다만 쓰지도, 새로 만들지도 않습니다.
@@ -199,7 +200,7 @@ Claude가 지난 대화를 찾으면, 지금 채팅에 **도구를 쓴 표시**�
 알아 둘 점입니다.
 
 - **프로젝트 안의 대화**는 그 프로젝트 안에서만 찾습니다.[^past]
-- **끄고 싶다면** 「설정」 → 「Your Claude」에서 「채팅 검색 및 참조」를 끄세요. 옛 화면에서는 「설정」 → 「메모리」입니다.[^past] 유료 요금제 기능이라 이 장의 무료 요금제 화면에서는 이 스위치를 볼 수 없었습니다.[^screen]
+- **끄고 싶다면** 「설정」 → 「메모리」에서 「채팅 검색 및 참조」를 끄세요.[^past][^past-where] 유료 요금제 기능이라 이 장의 무료 요금제 화면에서는 이 스위치를 볼 수 없었습니다.[^screen]
 - 옆 메뉴에서 내가 직접 지난 대화를 찾는 방법은 [3장](03-chats.md)에서 다룹니다.
 
 <Quiz id="ch205-past-chats" />
@@ -210,7 +211,7 @@ Claude가 지난 대화를 찾으면, 지금 채팅에 **도구를 쓴 표시**�
 **모든 요금제**에서 웹과 데스크톱 앱으로 할 수 있습니다.[^import]
 
 1. **원래 쓰던 AI에서 기억을 뽑습니다.** 도움말에 추천 프롬프트가 있습니다. "I'm moving to another service and need to export my data."로 시작하는 영어 프롬프트입니다. 각주의 도움말 링크에서 전문을 복사해 쓰세요.[^import]
-2. **Claude에서 가져오기를 엽니다.** 「설정」 → 「메모리」의 ③ 「다른 AI 제공업체에서 메모리 가져오기」 옆 「가져오기 시작」을 누릅니다.[^screen] 도움말에는 「설정」 → 「Your Claude」로 나옵니다.[^import]
+2. **Claude에서 가져오기를 엽니다.** 「설정」 → 「메모리」의 ③ 「다른 AI 제공업체에서 메모리 가져오기」 옆 「가져오기 시작」을 누릅니다.[^screen][^your-claude]
 3. **붙여 넣습니다.** 뽑아 온 글을 칸에 붙여 넣고 「메모리에 추가」를 누릅니다.[^import]
 4. **확인합니다.** 끝나면 「Claude가 나에 대해 학습한 내용 보기」를 눌러 무엇이 들어갔는지 봅니다.[^import]
 
@@ -237,14 +238,14 @@ Claude가 지난 대화를 찾으면, 지금 채팅에 **도구를 쓴 표시**�
 AI와 이야기하다 보면 시간 가는 줄 모를 때가 있습니다. 이럴 때 쓸 수 있는 기능이 두 가지 있습니다.
 Free·Pro·Max 요금제에서 **베타**(정식 출시 전 시험 기능)로 제공됩니다.[^wellbeing]
 
-여는 곳은 「설정」 → 「시간 및 집중」(Time and focus)입니다.[^screen] 도움말에는 새 설정 화면 이름인 「Wellbeing」으로도 나옵니다.[^wellbeing] 화면에 따라 다를 수 있습니다.
+여는 곳은 「설정」 → 「시간 및 집중」(Time and focus)입니다.[^screen][^wellbeing-name]
 
 ![설정의 「시간 및 집중」 화면. ① 「휴식 알림」과 시간·분을 고르는 칸 두 개, ② 「방해 금지 시간」과 일~토 요일 버튼에 빨간 번호가 붙어 있다](assets/shot-09-settings-time-marked.png)
 
 무료 요금제 화면입니다. **빨간 번호는 아래 목록의 번호와 같은 곳입니다.**
 
 - ① **휴식 알림** — 시간과 분을 골라 둡니다.[^screen] 그만큼 쓰면 알림이 뜹니다. 멈추거나, 나중에 다시 알리게 하거나, 닫고 계속할 수 있습니다.[^wellbeing]
-- ② **방해 금지 시간**(quiet hours, 도움말 번역은 「조용한 시간」) — 다른 일을 하려고 비워 둘 요일을 고릅니다.[^screen]
+- ② **방해 금지 시간**(quiet hours)[^quiet-name] — 다른 일을 하려고 비워 둘 요일을 고릅니다.[^screen]
 
 웹이나 데스크톱에서 한 번 정하면 휴대폰 앱에도 적용됩니다.[^wellbeing]
 
@@ -299,3 +300,7 @@ Free·Pro·Max 요금제에서 **베타**(정식 출시 전 시험 기능)로 �
 [^wellbeing]: Anthropic 도움말, 「Set break reminders and quiet hours」. "Break reminders and quiet hours are in beta on Free, Pro, and Max plans." / "Go to Settings > Wellbeing (or Settings > Time and focus in the older Settings layout)." / "When you reach the amount you set, Claude shows a reminder. You can stop, snooze it, or dismiss it and keep going." / "Neither is a hard lock, so you can always continue past them." / "They’re separate from your plan’s usage limits." https://support.claude.com/en/articles/15672868 (확인일 2026-10-26)
 [^academy-context]: Claude Academy 「Introduction to Claude Cowork」 강의 「Standing context: Global instructions and projects」. "Your global instructions don't need to be complete on day one." / "those are global-instruction candidates." https://academy.claude.com/courses/introduction-to-claude-cowork/giving-cowork-context (확인일 2026-10-26)
 [^academy-memory]: Claude Academy 「AI capabilities and limitations」 강의 「Working Memory」. "Then open a brand-new conversation and ask a question that assumes it remembers what you taught it. Watch it start from zero." https://academy.claude.com/courses/ai-capabilities-and-limitations/working-memory (확인일 2026-10-26)
+[^your-claude]: 도움말에는 이 메뉴가 새 설정 화면 이름인 「설정」 → 「Your Claude」 아래에 나옵니다(예: 메모리 목록은 「Your memory」 옆 「관리」). 새 설정 화면을 받은 계정은 그렇게 보일 수 있습니다. 화면에 보이는 이름을 따르세요.
+[^past-where]: 도움말은 이 스위치가 「설정」 → 「Your Claude」에 있고, 옛 화면에서는 「설정」 → 「메모리」에 있다고 안내합니다.
+[^wellbeing-name]: 도움말에는 새 설정 화면 이름인 「Wellbeing」으로도 나옵니다. 화면에 따라 다를 수 있습니다.
+[^quiet-name]: 도움말 번역은 「조용한 시간」입니다.

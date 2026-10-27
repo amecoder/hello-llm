@@ -11,7 +11,7 @@
 
 ![입력창의 「+」 메뉴를 펼친 화면. ① 「파일 업로드 또는 추가」, ② 「Skills」, ③ 「커넥터 추가」, ④ 「디자인 시스템」, ⑤ 「플러그인 추가」, ⑥ 「메모리」에 빨간 번호가 붙어 있다](assets/shot-02-plus-menu-marked.png)
 
-무료 요금제 화면입니다. **파일을 올릴 때는 ①만 쓰면 됩니다.**[^screen] ⑥ 「메모리」는 [3장](03-chats.md)과 [5장](05-memory.md)에서 봅니다. 도움말에는 메뉴 이름이 「파일 또는 사진 추가」(Add files or photos)로 적혀 있습니다. 화면에 따라 다를 수 있습니다.
+무료 요금제 화면입니다. **파일을 올릴 때는 ①만 쓰면 됩니다.**[^screen][^upload-name] ⑥ 「메모리」는 [3장](03-chats.md)과 [5장](05-memory.md)에서 봅니다.
 
 올릴 수 있는 것은 이렇습니다.[^upload]
 
@@ -40,7 +40,11 @@ Excel 파일(XLSX)은 설정에서 「코드 실행 및 파일 생성」이 켜�
 - **사진은 가로세로 1,000픽셀 이상이 좋습니다.**
 - **PDF 쪽수는 화면의 쪽 번호로 말하세요.** 문서에 인쇄된 번호가 아니라, PDF 보기 프로그램에 나오는 번호입니다.
 
-파일 하나의 크기 한도는 문서마다 다르게 적혀 있습니다. 파일 올리기 도움말은 파일당 500MB라고 적습니다.[^upload] 파일 만들기 기능 도움말은 올리기·내려받기 모두 파일당 30MB라고 적습니다.[^create] 큰 파일이 안 올라가면 나눠서 올려 보세요.
+큰 파일이 안 올라가면 나눠서 올려 보세요.
+
+::: details 파일 하나는 얼마까지 올라가나요? (눌러서 펼치기)
+파일 하나의 크기 한도는 문서마다 다르게 적혀 있습니다. 파일 올리기 도움말은 파일당 500MB라고 적습니다.[^upload] 파일 만들기 기능 도움말은 올리기·내려받기 모두 파일당 30MB라고 적습니다.[^create]
+:::
 
 > 신분증, 계약서, 진료 기록처럼 개인정보가 담긴 파일은 올리기 전에 가리거나 빼세요. 원칙은 [1단계 9장](../00-common/09-safety.md#_2-개인정보와-비밀-—-넣기-전에-한-번-생각하기)에서 다뤘습니다.
 
@@ -58,9 +62,9 @@ Claude는 답을 글로만 주지 않고 **파일로 만들어** 줄 수도 있�
 | PDF | 인쇄용 문서 |
 | PNG 그림 | 숫자로 그린 차트 |
 
-무료 요금제를 포함해 모든 요금제에서 됩니다. 웹·데스크톱·휴대폰 앱 모두 됩니다.[^create] 새 Claude 화면에서는 수식이 살아 있는 Excel 표와 PowerPoint로 여는 발표 자료를 만들 수 있다고 소개합니다.[^new]
+무료 요금제를 포함해 모든 요금제에서 됩니다. 웹·데스크톱·휴대폰 앱 모두 됩니다.[^create] 수식이 살아 있는 표 파일(스프레드시트)과 PowerPoint로 여는 발표 자료도 만들 수 있습니다.[^new]
 
-**먼저 설정이 켜져 있는지 보세요.** 개인 요금제(Free·Pro·Max)는 처음부터 켜져 있습니다.[^create] 꺼져 있다면 「설정 > 기능」(Capabilities)에서 ④ 「코드 실행 및 파일 생성」을 켜세요. 도움말은 새 설정 화면에서는 이름이 「파일 생성 및 편집」(Create and edit files)이라고 적습니다.[^create] 화면에 따라 다를 수 있습니다.
+**먼저 설정이 켜져 있는지 보세요.** 개인 요금제(Free·Pro·Max)는 처음부터 켜져 있습니다.[^create] 꺼져 있다면 「설정 > 기능」(Capabilities)에서 ④ 「코드 실행 및 파일 생성」을 켜세요.[^create][^create-name]
 
 ![「설정 > 기능」 화면. ① 「메시지가 플래그 지정되면 모델 전환」, ② 「아티팩트」, ③ 「채팅 내 시각화」, ④ 「코드 실행 및 파일 생성」 스위치에 빨간 번호가 붙어 있다](assets/shot-09-settings-capabilities-marked.png)
 
@@ -92,8 +96,8 @@ Claude는 답을 글로만 주지 않고 **파일로 만들어** 줄 수도 있�
 알아 둘 점입니다.
 
 - **파일 만들기는 보통 대화보다 사용량을 더 씁니다.**[^create] 사용 한도는 [1장](01-getting-started.md)에서 봤습니다. 짧은 질문은 글로 받고, 꼭 파일이 필요할 때 파일로 받으세요.
-- **받은 숫자는 확인하세요.** Claude는 계산을 하지만, 복잡하거나 중요한 계산은 다른 계산 프로그램이나 손으로 다시 확인하라고 도움말이 권합니다.[^math] 합계 몇 개만이라도 직접 더해 보세요.
-- **올린 파일이나 웹사이트에 숨은 지시가 있을 수 있습니다.** 도움말은 이 기능을 쓰는 동안 Claude를 지켜보다가, 엉뚱한 자료를 쓰면 멈추라고 권합니다.[^create] 숨은 지시는 [1단계 9장](../00-common/09-safety.md#_4-숨은-지시-—-프롬프트-인젝션)에서 다뤘습니다.
+- **받은 숫자는 확인하세요.** Claude는 계산을 하지만, 복잡하거나 중요한 계산은 다른 계산 프로그램이나 손으로 다시 확인하세요.[^math] 합계 몇 개만이라도 직접 더해 보세요.
+- **올린 파일이나 웹사이트에 숨은 지시가 있을 수 있습니다.** 이 기능을 쓰는 동안 Claude를 지켜보다가, 엉뚱한 자료를 쓰면 멈추세요.[^create] 숨은 지시는 [1단계 9장](../00-common/09-safety.md#_4-숨은-지시-—-프롬프트-인젝션)에서 다뤘습니다.
 
 <Quiz id="ch204-create" />
 
@@ -184,9 +188,11 @@ Claude 안에서 계속 고치거나 링크로 나눌 결과물이면 아티팩�
 
 - **여는 사람도 Claude 계정이 있어야 합니다.** 계정이 없으면 링크가 있어도 못 엽니다. 대화 공개 링크(3장)와 다른 점입니다.
 - **그만 보여 주려면** 「공유」에서 「본인만」으로 바꾸세요(Pro·Max).
-- **남이 보낸 아티팩트는 모르는 사람이 보낸 파일처럼 다루세요.** 도움말이 직접 하는 당부입니다.
+- **남이 보낸 아티팩트는 모르는 사람이 보낸 파일처럼 다루세요.**
 
+::: details 무료 요금제라면 (눌러서 펼치기)
 무료 요금제에서 「링크가 있는 누구나」로 공유할 수 있는지는 문서마다 다르게 적혀 있습니다. 내 화면의 「공유」 창에 보이는 선택지를 따르세요.
+:::
 
 <Quiz id="ch204-share" />
 
@@ -194,7 +200,7 @@ Claude 안에서 계속 고치거나 링크로 나눌 결과물이면 아티팩�
 
 Claude는 질문에 따라 답을 글 대신 **눈으로 보는 모양**으로 주기도 합니다. 따로 켤 것은 없습니다. Claude가 알아서 판단하니, 평소처럼 물어보면 됩니다.[^visual]
 
-**날씨·요리 카드.** 날씨나 요리법을 물으면 카드 모양으로 답할 수 있습니다. 웹 검색이 켜져 있어야 합니다.[^visual] 옛 화면이라면 웹 검색 스위치를 켜 두세요([6장](06-search.md)). 새 화면에는 스위치가 없고, Claude가 필요할 때 알아서 검색합니다.[^new] 요리 카드에서는 몇 인분인지와 단위를 바꿀 수 있습니다.[^visual] 날씨 카드는 웹·데스크톱에서만 보이고, 휴대폰에서는 글로 나옵니다.[^visual]
+**날씨·요리 카드.** 날씨나 요리법을 물으면 카드 모양으로 답할 수 있습니다. 웹 검색이 켜져 있어야 합니다.[^visual] 새 화면에는 웹 검색 스위치가 없고, Claude가 필요할 때 알아서 검색합니다.[^new][^old-search] 요리 카드에서는 몇 인분인지와 단위를 바꿀 수 있습니다.[^visual] 날씨 카드는 웹·데스크톱에서만 보이고, 휴대폰에서는 글로 나옵니다.[^visual]
 
 **골라서 답하기.** Claude가 되물을 때 객관식, 여러 개 고르기, 순위 매기기 같은 선택지를 띄울 수 있습니다. 눌러서 답해도 되고, 그냥 글로 답해도 됩니다.[^visual]
 
@@ -218,7 +224,7 @@ Claude는 질문에 따라 답을 글 대신 **눈으로 보는 모양**으로 �
 
 ## 사진·일러스트는 만들지 않는다
 
-Claude는 그림 그리는 AI(이미지 생성 도구)처럼 **사진이나 일러스트를 만들지 않습니다.**[^images] "바닷가에서 웃는 강아지 그림"을 부탁해도 그런 그림은 나오지 않습니다.
+Claude는 그림 그리는 AI(이미지 생성 도구)가 하는 방식으로 **사진이나 일러스트를 만들지는 않습니다.**[^images] "바닷가에서 웃는 강아지 그림"을 부탁해도, 그림 그리는 AI가 만든 것 같은 그림은 기대하기 어렵습니다.
 
 대신 할 수 있는 일이 있습니다.
 
@@ -230,7 +236,7 @@ Claude는 그림 그리는 AI(이미지 생성 도구)처럼 **사진이나 일�
 - **아쉬운 예**: "우리 가게 홍보용 귀여운 고양이 그림 그려 줘."
 - **나은 예**: "우리 가게 지난 6개월 매출을 막대그래프로 그려 줘."
 
-차이는 하나입니다. 앞의 것은 일러스트라 만들 수 없고, 뒤의 것은 차트라 만들 수 있습니다. 사진이나 일러스트가 꼭 필요하면 그림을 만드는 다른 서비스를 쓰세요. 예를 들어 ChatGPT는 그림을 만듭니다([ChatGPT 4장](../11-chatgpt/04-files-images.md)).
+차이는 하나입니다. 앞의 것은 그림 그리는 AI가 맡을 일러스트이고, 뒤의 것은 Claude가 만들 수 있는 차트입니다. 사진이나 일러스트가 꼭 필요하면 그림을 만드는 다른 서비스를 쓰세요. 예를 들어 ChatGPT는 그림을 만듭니다([ChatGPT 4장](../11-chatgpt/04-files-images.md)).
 
 <Quiz id="ch204-images" />
 
@@ -257,7 +263,7 @@ Claude는 그림 그리는 AI(이미지 생성 도구)처럼 **사진이나 일�
 다룰 내용: 2박 3일 일정, 숙소 후보 두 곳, 예상 경비, 각자 준비할 것.
 ```
 
-차이는 셋입니다. 나은 예에는 무엇에 쓸지, 누가 읽을지, 무엇을 넣을지가 들어 있습니다. 도움말이 좋은 요청으로 꼽는 세 가지입니다.
+차이는 셋입니다. 나은 예에는 무엇에 쓸지, 누가 읽을지, 무엇을 넣을지가 들어 있습니다. 좋은 요청에 들어가는 세 가지입니다.[^docs]
 
 알아 둘 점입니다.[^docs]
 
@@ -343,3 +349,6 @@ Claude는 그림 그리는 AI(이미지 생성 도구)처럼 **사진이나 일�
 [^docs]: Anthropic 도움말, 「Get started with Claude Docs」. "Claude drafts it in front of you, asks clarifying questions up front, and leaves comments explaining its choices." / "Claude Docs is available on Free, Pro, Max, Team, and Enterprise plans, and it's on by default." / "You can also start your request with /docs, or by selecting “Output” then “Docs” from the message box." / "A good request says what the doc is for, who will read it, and what it should cover." / "To ask Claude for an edit, mention @Claude in a comment." / "To export a doc, click "Export" and choose a format:" / "Charts and diagrams don't update on their own" / "Deleting a doc is permanent. There's no trash" https://support.claude.com/en/articles/16923645 (확인일 2026-10-26)
 [^gws]: Anthropic 도움말, 「Use Claude in Google Docs, Sheets, and Slides」. "Claude for Google Workspace is available in beta for Pro, Max, Team, and Enterprise plans." / "One install covers Docs, Sheets, and Slides." / "Open a Google Docs, Sheets, or Slides file and go to Extensions > Claude > “Open Claude"" / "Claude reads the file you have open, and only that file" / "Ask before edits (default)" / "Google records them under your name, so they appear in File, Version history like any edit you make yourself." / "Claude cannot share the file, give anyone access, or change who owns it." / "Google doesn’t support extensions in Word, Excel, or PowerPoint files" / "Keep the sidebar open while Claude is working. Closing it stops the current task." / "A single long operation can run for up to six minutes before Google stops it." / "Use Chrome, Edge, or Safari. Firefox is not supported in this beta" https://support.claude.com/en/articles/16951679 (확인일 2026-10-26)
 [^academy-artifacts]: Claude Academy 「Claude 101」 강의 「Creating with artifacts」. "The practical difference: an artifact opens and updates right in Claude and is shared by link, while file creation hands you a file to download and open in other apps." / "If you want to ensure Claude creates an artifact, just say so: "Create this as an artifact."" / "Ask for the deliverable, not just the content." / "Describe the end user." / "The best artifacts come at the end of a conversation, when Claude already understands the problem." https://academy.claude.com/courses/claude-101/creating-with-artifacts (확인일 2026-10-26)
+[^upload-name]: 도움말에는 ① 메뉴 이름이 「파일 또는 사진 추가」(Add files or photos)로 적혀 있습니다. 화면에 따라 다를 수 있습니다.
+[^create-name]: 도움말은 새 설정 화면에서는 이름이 「파일 생성 및 편집」(Create and edit files)이라고 적습니다. 화면에 따라 다를 수 있습니다.
+[^old-search]: 옛 화면이라면 웹 검색 스위치를 켜 두세요([6장](06-search.md)).

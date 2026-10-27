@@ -9,8 +9,7 @@
 
 ## 데이터 관리 화면 둘러보기
 
-왼쪽 아래 계정 이름을 누르고 「설정」을 연 뒤, 설정 화면 왼쪽 목록 맨 아래쪽의 「데이터 관리」를 누릅니다.
-공식 도움말에는 이 메뉴가 「데이터 제어」(Data controls)라고 적혀 있습니다. 실제 화면 이름은 「데이터 관리」입니다.
+왼쪽 아래 계정 이름을 누르고 「설정」을 연 뒤, 설정 화면 왼쪽 목록 맨 아래쪽의 「데이터 관리」를 누릅니다.[^data-name]
 
 ![설정 화면에서 「데이터 관리」를 연 모습. 오른쪽 목록 위에서부터 「공유 링크」, 「모델 개선을 위한 데이터 학습 허용」 스위치, 「위치」, 「Work 네트워크 액세스」, 「ChatGPT Work 재설정」, 「앱과 공유되는 정보」, 「보관된 채팅」, 「모든 채팅 보관하기」, 「모든 채팅 삭제」, 「데이터 내보내기」, 「쿠키 설정」이 차례로 있다](assets/shot-07-data-controls-marked.png)
 
@@ -280,3 +279,4 @@ ChatGPT를 더는 쓰지 않을 때는 계정을 지울 수 있습니다.[^accou
 [^migrate]: OpenAI 도움말, 「Migrating your personal workspace to ChatGPT Business or Enterprise」. "Migration does not provide an undo option" / "If you leave, are removed, or lose access to the destination workspace, you may also lose access to that content." / "Self-service data export is not available in ChatGPT Business or Enterprise workspaces." https://help.openai.com/en/articles/8801890 (확인일 2026-10-24)
 [^bizmemory]: OpenAI 도움말, 「Memory FAQ (Business Version)」. "If a workspace owner turns off Memory for the workspace, existing saved memories for members in that workspace are deleted." https://help.openai.com/en/articles/9295112 (확인일 2026-10-24)
 [^pro]: OpenAI 도움말, 「About ChatGPT Pro tiers」. "Uninstalling the ChatGPT app does not cancel your subscription." https://help.openai.com/en/articles/9793128 (확인일 2026-10-23)
+[^data-name]: 공식 도움말에는 이 메뉴가 「데이터 제어」(Data controls)라고 적혀 있습니다. 실제 화면 이름은 「데이터 관리」입니다.
