@@ -331,6 +331,18 @@ Claude가 내 대신 한 일의 책임은 **나에게** 있습니다. 보낸 메
 
 <Quiz id="ch208-safety" />
 
+## 영상으로 더 보기
+
+회사가 직접 만든 소개 영상입니다. 화면과 기능 이름은 이 장의 설명과 다를 수 있습니다.
+
+> 아래 영상은 모두 **영어**입니다. YouTube 영상의 설정(톱니바퀴) → 자막 → **자동 번역 → 한국어**를 고르면 한국어 자막으로 볼 수 있습니다. 링크는 YouTube로 이동합니다.
+
+| 영상 | 채널 | 이런 분께 |
+|---|---|---|
+| [Getting started with Claude Cowork](https://www.youtube.com/watch?v=l9sZFo3TfRo) | Claude | Cowork로 내 파일을 고치는 첫걸음을 보고 싶은 분 (2026년 5월, 4분) |
+| [Scheduled Tasks in Cowork: Set it once, Claude handles the rest](https://www.youtube.com/watch?v=b-ntWZqHF78) | Claude | 예약 작업이 어떻게 도는지 짧게 보고 싶은 분 (2026년 3월, 30초) |
+| [Claude for Chrome brings AI where you’re already working](https://www.youtube.com/watch?v=IypXvHej9eY) | Anthropic | Claude가 브라우저에서 버튼을 누르고 입력하며 웹을 다니는 모습을 보고 싶은 분 (2025년 9월, 1분) |
+
 ## 직접 해 보기
 
 유료 요금제라면 해 보세요. 무료 요금제라면 위 점검표를 읽고 9장으로 넘어가도 됩니다.
