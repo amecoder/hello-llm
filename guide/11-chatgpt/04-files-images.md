@@ -130,7 +130,9 @@ PDF를 대화에 직접 올리면 글뿐 아니라 **안의 그림과 도표까�
 
 ChatGPT는 글뿐 아니라 그림도 만듭니다. + 버튼 → 「이미지 생성」을 누르거나, 첫 화면 추천 「이미지나 스티커 만들어줘」를 누르세요. 그다음 원하는 그림을 설명하면 됩니다. 임시 채팅에서는 「이미지 생성」이 꺼져 있으니 일반 채팅에서 하세요([3장](03-chats.md)).
 
-<!-- 스크린샷 필요: 「이미지 생성」으로 그림을 만든 결과 화면 (웹) -->
+![「이미지 생성」으로 반찬가게 그림을 만든 화면. 오른쪽 위에 보낸 요청이, 아래에 수채화 그림과 그림 위 「편집」 버튼이 보인다](assets/shot-25-image-gen.png)
+
+*아래 예시 프롬프트에서 마지막 「글자」 줄만 빼고 보낸 화면입니다. 글자를 정해 주지 않았더니 간판에 「우리동네 반찬가게」라고 스스로 적었습니다. 대화와 그림은 찍은 뒤 지웠습니다.*[^screen-image]
 
 그림을 부탁할 때도 1단계에서 배운 프롬프트 원칙이 그대로 통합니다([1단계 4장](../00-common/04-prompt-basics.md)). 아래 네 가지를 넣어 보세요. 그만큼 원하는 그림에 가까워집니다.
 
@@ -172,7 +174,9 @@ AI로 만든 그림의 권리와, 남의 사진·작품을 올릴 때의 주의�
 
 + 버튼 → 「스케치」는 화면에 **직접 그림을 그려 이미지로 붙이는** 기능입니다. 화면 설명은 "그림을 그려 이미지로 첨부하세요"입니다.
 
-<!-- 스크린샷 필요: + 메뉴 「스케치」를 눌러 연 그리기 화면 (웹) -->
+![「스케치 편집기」 화면. 위쪽에 선택·펜·글자·도형·지우개 도구, 아래쪽에 색깔 고르기와 파란 확인 버튼이 있고, 펜으로 네모 세 개를 그려 두었다](assets/shot-26-sketch.png)
+
+*그린 그림은 붙이지 않고 닫았습니다. 닫을 때 「변경 사항을 삭제할까요?」라고 한 번 더 묻습니다.*[^screen-sketch]
 
 잘 그릴 필요는 없습니다. 말로 설명하기 어려운 **배치나 모양**을 대충 그려 보여 주면 됩니다.
 예를 들어 전단지 배치를 네모와 화살표로 그려 붙이고, 이렇게 요청해 보세요.
@@ -238,3 +242,5 @@ AI로 만든 그림의 권리와, 남의 사진·작품을 올릴 때의 주의�
 [^faq]: OpenAI 도움말, 「What is ChatGPT: FAQ」. "ChatGPT images include C2PA provenance metadata." https://help.openai.com/en/articles/12677804 (확인일 2026-10-24)
 [^delete]: OpenAI 도움말, 「Deleting and archiving chats in ChatGPT」. "Deleting a chat does not delete files saved separately in Library." https://help.openai.com/en/articles/8809935 (확인일 2026-10-23)
 [^academy-content]: OpenAI Academy 강좌 본문(로그인·등록 필요). AI Foundations: "Use this template as a model. Rewrite my draft so it follows the same structure and tone." Applied AI Foundations: "Verify" "Check whether a draft is supported by the source" (확인일 2026-10-26)
+[^screen-sketch]: + 메뉴 → 「스케치」로 연 「스케치 편집기」와 닫을 때의 확인 창(「계속 편집하기」「변경 사항 삭제」)을 직접 확인 (확인일 2026-10-28, Plus 계정 웹 화면)
+[^screen-image]: + 메뉴 → 「이미지 생성」으로 이 절의 예시 프롬프트(「글자」 줄 제외)를 보내 직접 확인. 그림 위에 「편집」 버튼과 공유 버튼이 있었다. 대화를 지운 뒤에도 그림은 라이브러리 「이미지」에 남아 있어 따로 지웠다 (확인일 2026-10-28, Plus 계정 웹 화면)

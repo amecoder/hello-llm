@@ -58,9 +58,11 @@ ChatGPT에서도 그대로 통합니다. 긴 대화를 옮길 때는 이렇게 �
 
 옆 메뉴 대화 옆의 **더보기 메뉴**(•••, 점 세 개 버튼)에서 대화를 정리합니다.[^delete]
 
-<!-- 스크린샷 필요: 옆 메뉴 대화 하나의 더보기(•••) 메뉴를 펼친 화면 (웹) -->
+![옆 메뉴 대화 하나의 더보기(•••) 메뉴를 펼친 화면. 「이름 변경」「고정」「공유」「보관」「삭제」「프로젝트로 이동」이 있다](assets/shot-24-chat-menu.png)
 
-자주 여는 대화는 옆 메뉴 위쪽 「고정된 스레드」에 붙여 둘 수 있습니다. 대화 이름 바꾸기와 고정하는 방법은 공식 도움말에서 확인하지 못했습니다. 더보기 메뉴에 해당 항목이 있는지 직접 살펴보세요.
+*대화 제목과 이름은 예시로 바꾼 화면입니다.*
+
+메뉴에는 「이름 변경」「고정」「공유」「보관」「삭제」「프로젝트로 이동」이 있습니다.[^screen-menu] 대화 이름은 「이름 변경」으로 바꿉니다. 자주 여는 대화는 「고정」을 누르면 옆 메뉴 위쪽 「고정된 스레드」에 붙습니다.
 
 ### 보관과 삭제는 다르다
 
@@ -78,6 +80,10 @@ ChatGPT에서도 그대로 통합니다. 긴 대화를 옮길 때는 이렇게 �
 보관한 대화는 설정 → 「보관된 채팅」에서 다시 꺼낼 수 있습니다.
 
 옆 메뉴에서 대화가 안 보인다고 해서 지워진 것은 아닙니다.[^mobile] 먼저 같은 계정으로 들어왔는지 보고([1장](01-getting-started.md#가입하고-로그인하기)), 채팅 검색으로 찾아보세요. 보관한 대화도 검색에 나옵니다.
+
+「삭제」를 누르면 "이 작업은 (대화 제목)을(를) 영구적으로 삭제합니다. 되돌릴 수 없습니다."라는 확인 창이 뜹니다. 「채팅 삭제」를 눌러야 지워집니다.[^screen-menu]
+
+![「채팅을 삭제할까요?」 확인 창. 「취소」와 빨간 「채팅 삭제」 버튼이 있다](assets/shot-24-chat-delete-confirm.png)
 
 한꺼번에 정리하려면 설정 → 「데이터 관리」의 「모든 채팅 보관하기」나 「모든 채팅 삭제」를 쓰면 됩니다. **「모든 채팅 삭제」는 되돌릴 수 없습니다.**[^delete]
 
@@ -200,3 +206,4 @@ ChatGPT에서도 그대로 통합니다. 긴 대화를 옮길 때는 이렇게 �
 [^mobile]: OpenAI 도움말, 「Troubleshooting the ChatGPT mobile app」. "A chat missing from the sidebar hasn't necessarily been deleted." https://help.openai.com/en/articles/7910461 (확인일 2026-10-24)
 [^rn-lock]: OpenAI 도움말, 「ChatGPT release notes」 2026-10-20 항목. "Open them with your 4-digit account PIN". https://help.openai.com/en/articles/6825453 (확인일 2026-10-23)
 [^lock]: OpenAI 도움말, 「Using locked chats in ChatGPT」. "You can find your locked chats under Projects > Locked chats." / "It does not: create end-to-end encryption or a separate encrypted vault" / "Resetting your account PIN permanently deletes all locked chats" / "Access ends automatically after 1 minute away" / "The Lock chat option is unavailable for some conversation types". https://help.openai.com/en/articles/20001411 (확인일 2026-10-23)
+[^screen-menu]: 옆 메뉴 대화의 「채팅 액션」(•••) 메뉴와 「삭제」 확인 창을 직접 확인. 캡처에 쓴 대화는 찍은 뒤 지웠다 (확인일 2026-10-28, Plus 계정 웹 화면)
