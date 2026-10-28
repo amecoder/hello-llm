@@ -6,7 +6,8 @@
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
 
 ## Pending Tasks
-- [ ] (①~④ 완료 2026-10-27, ⑤ 남음) 품질 리뷰 개선안을 1 → 2 → 3 → 4 순서로: ① Claude 퀴즈 판단형(완료 PR #38) ② (완료 PR #39) ③ (완료 PR #40 — 영상이 없는 장은 비워 둠) 옛/새 화면·도움말 충돌 서술을 접기 상자·각주로, "도움말은 ~" 주어 문장 줄이기 ③ 장마다 공식 영상 링크 하나(oEmbed 확인·자막 안내) ④ "받는 답은 대략 이렇게" 결과 예시. ⑤ 이어지는 과제는 그 뒤 검토
+- [x] 품질 리뷰 개선안 ①~⑤ 완료(PR #38~#42). ⑤ = 1단계 11장 「전문가처럼 쓰기」 신설 + 이어지는 과제 「독서 모임 준비하기」(PR #42, squash `752e131`, 2026-10-28)
+- [ ] 남은 그림 자리 36곳 캡처 — 흔적 없는 곳 먼저, 흔적 남는 곳은 "만들고 찍은 뒤 삭제"(2026-10-28 사용자 승인). 휴대폰 앱·구글 시트·크롬 확장·Claude 유료 기능·옛 화면 약 12곳은 못 찍음
 - [ ] (대기) PR 자동 처리는 dev-standards `autopilot` 개발이 끝난 뒤 붙인다(2026-10-26 사용자 결정). 그때 `/plugin install autopilot --marketplace amecoder/dev-standards` → `/autopilot:init` → 시크릿 `engine_key`·변수 `AUTOPILOT_MODE` 는 사용자가 설정. hello-llm 은 공개 저장소라 브랜치 보호(Q0) 조건은 무료로 충족. HANDOFF·CHANGELOG 갱신·배포 확인은 autopilot 범위 밖
 - [ ] 실습 UI 구현 — VitePress 안 Vue 컴포넌트, 동일 UI + 코치 마크, API 호출 없는 시뮬레이션 (첫 부품 `PromptBuilder` 완료)
 - [ ] (제안) 실제 독자(중학생·일반인 각 1~2명) 읽기 테스트로 1·5·7장 이해도 실측 — 추정 리뷰: `docs/reports/2026-10-21_초보자-이해도-리뷰.md`
@@ -73,6 +74,9 @@
 - README.md 생성
 
 ## 주의
+- 1단계에 11장(`guide/00-common/11-expert.md`, 장 번호 11)이 생겼다(PR #42). 어느 AI에나 통하는 "전문가처럼" 원리는 여기, 메뉴·요금제·서비스 기능은 Claude 12장·ChatGPT 11장. 둘에 같은 설명을 다시 쓰지 말고 링크로 잇는다
+- 이어지는 과제의 예시 파일은 `public/practice/`(사이트 주소 `/hello-llm/practice/…`). 날짜·회원 수·회비 합계가 서로 맞물려 있다(수입 210,000원, 지출 중복 제외 114,300원, 회비 낸 회원 16명) — 파일 하나를 고치면 회의록·메모·장부·`practice-kit.md` 점검표를 함께 맞춘다. CSV는 엑셀용 UTF-8 BOM
+- 2단계 장의 「직접 해 보기」 끝 **이어지는 과제** 문단은 그 장이 가르친 기능만 쓴다(PR #42 리뷰에서 개인정보 장이 설정 화면을 안 쓰던 것을 고침)
 - Claude 장 본문은 이 가이드의 캡처 기준(새 Claude 화면) 한 가지 길로 쓴다. 옛 화면 방법·도움말과 화면 이름이 다른 사정은 `::: details` 접기 상자나 각주로 보낸다(PR #39). "도움말은 ~" 주어 문장은 화면에서 확인 못 한 기능·회사 정책·도움말끼리 충돌처럼 출처가 판단 근거일 때만
 - ChatGPT 캡처는 원본(`shot-NN-*.png`)과 번호 그림(`*-marked.png`, `shot-01-home-{layout,sidebar,projects,voice}.png`)이 따로 있다. 본문은 번호 그림만 쓴다. 캡처를 새로 찍거나 번호를 옮길 때는 `docs/tools/shot-marks.json` 좌표를 고치고 `python3 docs/tools/mark-shots.py` 로 다시 만든다. 본문의 ①②와 표 「번호」 칸도 함께 맞춘다
 - `vitepress preview` 는 시작할 때의 파일 목록만 알아서, 다시 빌드한 뒤에는 서버를 재시작해야 새 그림이 보인다

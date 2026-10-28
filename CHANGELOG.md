@@ -1,5 +1,14 @@
 # Changelog
 
+## [2026-10-28]
+
+### Added
+- 1단계 11장 「전문가처럼 쓰기」 — Claude 12장·ChatGPT 11장의 공통 절(4D, 처음 연습할 일, 답을 아는 일로 시험, 일의 모양, 쌓는 순서, 숫자 맞춰 보기, 배우기, 일의 무게만큼 확인)을 모음. 퀴즈 ch11-* 8문제 (PR #42, `752e131`)
+- 이어지는 과제 「독서 모임 준비하기」(`guide/00-common/practice-kit.md`)와 가짜 예시 파일 6개(`public/practice/`), 2단계 20개 장에 과제 한 단계씩 (PR #42)
+
+### Changed
+- Claude 12장·ChatGPT 11장은 서비스별 내용만 남기고 1단계 11장으로 링크. ch212-difference·eval·learn은 ch11로 옮기고 ch212-data·ch111-difference 교체 (PR #42)
+
 ## [2026-10-27]
 
 ### Added
