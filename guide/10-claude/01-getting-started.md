@@ -1,6 +1,6 @@
 # 1장. 시작하기 — 쓰는 곳, 가입, 요금제와 사용 한도
 
-> **한 줄 요약**: Claude는 웹·컴퓨터 앱·휴대폰 앱에서 같은 계정으로 씁니다. 가입에는 이메일(또는 Google 계정)과
+> **한 줄 요약**: Claude는 웹·컴퓨터 앱·휴대폰 앱에서 같은 계정으로 씁니다. 가입에는 이메일(또는 Google·Apple 계정)과
 > 휴대폰 문자 인증이 필요합니다. 무료로 시작해서 한도가 자주 부족할 때만 유료 요금제를 생각하면 됩니다.
 
 화면은 2026년 10월 웹 기준이고, 그림은 무료 요금제 화면입니다. 휴대폰 앱이나 컴퓨터 앱은 메뉴 위치가 조금 다를 수 있습니다.
@@ -261,7 +261,7 @@ Claude에는 **"하루 몇 번"처럼 정해진 메시지 수가 없습니다.**
 ## 정리
 
 - Claude는 웹(claude.ai)·컴퓨터 앱·휴대폰 앱에서 같은 계정으로 쓴다. 만 18세 이상, 지원 지역(한국 포함)에서 쓸 수 있다.
-- 가입과 로그인은 이메일 또는 Google 계정으로 한다. 비밀번호 대신 로그인 링크가 담긴 메일을 받는다.
+- 가입과 로그인은 이메일이나 Google·Apple 계정으로 한다. 비밀번호 대신 로그인 링크가 담긴 메일을 받는다.
 - 처음 가입할 때 휴대폰 문자 인증을 거친다. 한 번 인증한 번호는 바꿀 수 없다.
 - 요금제는 Free·Pro·Max가 개인용이다. 가격은 미국 달러·세금 별도이니 요금 페이지에서 확인한다.
 - 한도는 5시간 세션 한도, (유료) 주간 한도, 대화 하나의 길이 한도 세 가지다. 정해진 메시지 수는 없다.
@@ -309,4 +309,4 @@ Claude에는 **"하루 몇 번"처럼 정해진 메시지 수가 없습니다.**
 [^cancel]: Anthropic 도움말, 「Cancel your Pro or Max subscription」. "Your cancellation will take effect at the end of your current billing period" / "cancel your subscription at least 24 hours before your next billing date." / "Navigate to Settings > Billing and click the “Cancel” button." / "Select “Manage subscription” and follow the prompts for cancellation." https://support.claude.com/en/articles/8325617 (확인일 2026-10-26)
 [^billing]: Anthropic 도움말, 「Paid plan billing FAQs」. "For subscriptions purchased on the web, we only accept credit or debit cards." / "search by the subject line "Your receipt from Anthropic."" / "there isn't a direct way to change your subscription billing date." / "You've logged in with a different email." https://support.claude.com/en/articles/8325618 (확인일 2026-10-26)
 [^support]: Anthropic 도움말, 「How to get support」. "Support is provided in writing through the support messenger and email. We don't offer phone support." / "Click your initials or name in the lower left corner and select “Get help” from the menu." / "Chatting with Fin will not impact Claude usage or spend limits." / "Further assistance from our Product Support team" / "Select "I can't login."" / "Opening a second request for the same problem creates a duplicate that has to be re-triaged" / "Replies are delivered to the messenger and to your account email, so you won't miss one." https://support.claude.com/en/articles/9015913 (확인일 2026-10-26)
-[^screen-login]: 로그인하지 않은 새 브라우저 창에서 claude.ai/login 을 직접 확인. 버튼은 「Google로 계속하기」「Apple로 계속하기」「이메일로 계속하기」. 도움말에는 로그인 방법이 이메일과 Google 두 가지뿐이라는 문장이 있지만, 이 화면에는 Apple 버튼도 있었다 (확인일 2026-10-28, 웹, 무료(Free) 요금제)
+[^screen-login]: 로그인하지 않은 새 브라우저 창에서 claude.ai/login 을 직접 확인. 버튼은 「Google로 계속하기」「Apple로 계속하기」「이메일로 계속하기」. 도움말에는 로그인 방법이 이메일과 Google 두 가지뿐이라는 문장이 있지만, 이 화면에는 Apple 버튼도 있었다 (확인일 2026-10-28, 웹 로그인 전 화면)

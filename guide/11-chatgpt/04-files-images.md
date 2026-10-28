@@ -132,7 +132,7 @@ ChatGPT는 글뿐 아니라 그림도 만듭니다. + 버튼 → 「이미지 �
 
 ![「이미지 생성」으로 반찬가게 그림을 만든 화면. 오른쪽 위에 보낸 요청이, 아래에 수채화 그림과 그림 위 「편집」 버튼이 보인다](assets/shot-25-image-gen.png)
 
-*아래 표의 예시 프롬프트로 만든 그림입니다. 대화와 그림은 찍은 뒤 지웠습니다.*
+*아래 예시 프롬프트에서 마지막 「글자」 줄만 빼고 보낸 화면입니다. 글자를 정해 주지 않았더니 간판에 「우리동네 반찬가게」라고 스스로 적었습니다. 대화와 그림은 찍은 뒤 지웠습니다.*[^screen-image]
 
 그림을 부탁할 때도 1단계에서 배운 프롬프트 원칙이 그대로 통합니다([1단계 4장](../00-common/04-prompt-basics.md)). 아래 네 가지를 넣어 보세요. 그만큼 원하는 그림에 가까워집니다.
 
@@ -243,3 +243,4 @@ AI로 만든 그림의 권리와, 남의 사진·작품을 올릴 때의 주의�
 [^delete]: OpenAI 도움말, 「Deleting and archiving chats in ChatGPT」. "Deleting a chat does not delete files saved separately in Library." https://help.openai.com/en/articles/8809935 (확인일 2026-10-23)
 [^academy-content]: OpenAI Academy 강좌 본문(로그인·등록 필요). AI Foundations: "Use this template as a model. Rewrite my draft so it follows the same structure and tone." Applied AI Foundations: "Verify" "Check whether a draft is supported by the source" (확인일 2026-10-26)
 [^screen-sketch]: + 메뉴 → 「스케치」로 연 「스케치 편집기」와 닫을 때의 확인 창(「계속 편집하기」「변경 사항 삭제」)을 직접 확인 (확인일 2026-10-28, Plus 계정 웹 화면)
+[^screen-image]: + 메뉴 → 「이미지 생성」으로 이 절의 예시 프롬프트(「글자」 줄 제외)를 보내 직접 확인. 그림 위에 「편집」 버튼과 공유 버튼이 있었다. 대화를 지운 뒤에도 그림은 라이브러리 「이미지」에 남아 있어 따로 지웠다 (확인일 2026-10-28, Plus 계정 웹 화면)

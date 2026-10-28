@@ -229,4 +229,4 @@ ChatGPT는 웹 브라우저 말고도 휴대폰 앱과 컴퓨터 앱으로 쓸 �
 [^network]: OpenAI 도움말, 「Network recommendations for ChatGPT errors on web and apps」. "Company WiFi network vs Cellular hotspot". https://help.openai.com/en/articles/9247338 (확인일 2026-10-24)
 [^feature]: OpenAI 도움말, 「Troubleshooting model feature access」. "If it says you reached a limit or shows a reset time, wait until that time and try again, or choose another available option." https://help.openai.com/en/articles/10258669 (확인일 2026-10-24)
 [^mobile]: OpenAI 도움말, 「Troubleshooting the ChatGPT mobile app」. "Reinstalling doesn't reset usage limits, change workspace permissions, or remove account restrictions." https://help.openai.com/en/articles/7910461 (확인일 2026-10-24)
-[^screen-signup]: 로그인하지 않은 새 브라우저 창에서 직접 확인. 버튼은 「Google 계정으로 계속하기」「Apple 계정으로 계속하기」「휴대 전화 번호로 계속하기」, 그 아래 「이메일 주소」 칸과 「계속」 (확인일 2026-10-28, Plus 계정 웹 화면)
+[^screen-signup]: 로그인하지 않은 새 브라우저 창에서 직접 확인. 버튼은 「Google 계정으로 계속하기」「Apple 계정으로 계속하기」「휴대 전화 번호로 계속하기」, 그 아래 「이메일 주소」 칸과 「계속」 (확인일 2026-10-28, 웹 로그인 전 화면)
