@@ -7,6 +7,7 @@
 - 이어지는 과제 「독서 모임 준비하기」(`guide/00-common/practice-kit.md`)와 가짜 예시 파일 6개(`public/practice/`), 2단계 20개 장에 과제 한 단계씩 (PR #42)
 
 ### Changed
+- 빈 그림 자리 15곳 캡처(ChatGPT 12장·Claude 6장)와 화면 기준 문구 수정: 「공부하기」, Claude Apple 로그인·세션 공유, 계정 삭제 10분 로그인 조건, 대화형 차트 버튼·맞춤 시각화 메뉴 미확인. Claude 4장 예시 날짜를 11월 14일 토요일로 (PR #43, `6cfba22`)
 - Claude 12장·ChatGPT 11장은 서비스별 내용만 남기고 1단계 11장으로 링크. ch212-difference·eval·learn은 ch11로 옮기고 ch212-data·ch111-difference 교체 (PR #42)
 
 ## [2026-10-27]

@@ -7,7 +7,8 @@
 
 ## Pending Tasks
 - [x] 품질 리뷰 개선안 ①~⑤ 완료(PR #38~#42). ⑤ = 1단계 11장 「전문가처럼 쓰기」 신설 + 이어지는 과제 「독서 모임 준비하기」(PR #42, squash `752e131`, 2026-10-28)
-- [ ] 남은 그림 자리 36곳 캡처 — 흔적 없는 곳 먼저, 흔적 남는 곳은 "만들고 찍은 뒤 삭제"(2026-10-28 사용자 승인). 휴대폰 앱·구글 시트·크롬 확장·Claude 유료 기능·옛 화면 약 12곳은 못 찍음
+- [ ] 남은 그림 자리 21곳(PR #43, squash `6cfba22`에서 36 → 21). 남은 곳: 휴대폰 앱·아이폰 단축어·구글 시트·크롬 확장, Claude 유료 기능(Cowork·예약·리서치)·옛 화면, ChatGPT 공유 창(이 브라우저에서 안 열림)·잠긴 대화 PIN·맞춤형 GPT·프로젝트 소스·음성·Free 생각하기, 라이브러리·Claude 메모리 목록(개인 정보가 많아 안 찍음)
+- [ ] (제안) 2026-10-28 화면 변화 반영 검토: ChatGPT 설정이 별도 페이지(`/settings/…`)로 바뀜 — 2·5·8장의 설정 경로·그림 점검. Claude는 대화를 「세션」, 문서 결과물을 「Claude Design」으로 부름 — 3·4장 용어 점검. ChatGPT Plus + 메뉴에 「Template Creator — personal skills」가 보임 — 11장 "스킬은 회사·학교 요금제" 문장 재확인
 - [ ] (대기) PR 자동 처리는 dev-standards `autopilot` 개발이 끝난 뒤 붙인다(2026-10-26 사용자 결정). 그때 `/plugin install autopilot --marketplace amecoder/dev-standards` → `/autopilot:init` → 시크릿 `engine_key`·변수 `AUTOPILOT_MODE` 는 사용자가 설정. hello-llm 은 공개 저장소라 브랜치 보호(Q0) 조건은 무료로 충족. HANDOFF·CHANGELOG 갱신·배포 확인은 autopilot 범위 밖
 - [ ] 실습 UI 구현 — VitePress 안 Vue 컴포넌트, 동일 UI + 코치 마크, API 호출 없는 시뮬레이션 (첫 부품 `PromptBuilder` 완료)
 - [ ] (제안) 실제 독자(중학생·일반인 각 1~2명) 읽기 테스트로 1·5·7장 이해도 실측 — 추정 리뷰: `docs/reports/2026-10-21_초보자-이해도-리뷰.md`
@@ -74,6 +75,8 @@
 - README.md 생성
 
 ## 주의
+- 캡처 가리기 스크립트: ChatGPT는 `.playwright-mcp/gpt-mask.js`, Claude는 `claude-mask.js`(둘 다 gitignore). 두 스크립트를 한 브라우저에 함께 넣으면 예전에는 타이머 이름이 겹쳐 가리기가 빠졌다(2026-10-28, 지금은 `__gmt`·`__cmt`로 분리). 페이지를 옮긴 뒤에는 `apply-gpt-mask.js` 로 다시 적용하고, 찍기 직전마다 실제 이름이 남았는지 글자 검사를 한다. ChatGPT 프로필 그림(auth0 이니셜 이미지)과 사용자명 `@amecoder` 도 가린다
+- ChatGPT에서 대화를 지워도 올린 파일·만든 그림은 라이브러리에 남는다 — 캡처 뒤 라이브러리에서도 지운다(휴지통 30일)
 - 1단계에 11장(`guide/00-common/11-expert.md`, 장 번호 11)이 생겼다(PR #42). 어느 AI에나 통하는 "전문가처럼" 원리는 여기, 메뉴·요금제·서비스 기능은 Claude 12장·ChatGPT 11장. 둘에 같은 설명을 다시 쓰지 말고 링크로 잇는다
 - 이어지는 과제의 예시 파일은 `public/practice/`(사이트 주소 `/hello-llm/practice/…`). 날짜·회원 수·회비 합계가 서로 맞물려 있다(수입 210,000원, 지출 중복 제외 114,300원, 회비 낸 회원 16명) — 파일 하나를 고치면 회의록·메모·장부·`practice-kit.md` 점검표를 함께 맞춘다. CSV는 엑셀용 UTF-8 BOM
 - 2단계 장의 「직접 해 보기」 끝 **이어지는 과제** 문단은 그 장이 가르친 기능만 쓴다(PR #42 리뷰에서 개인정보 장이 설정 화면을 안 쓰던 것을 고침)
