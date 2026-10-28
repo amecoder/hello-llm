@@ -274,7 +274,7 @@ Claude Academy의 다른 강좌는 Claude 단계의 [12장](../10-claude/12-expe
 
 <ChapterDone :chapter="10" />
 
-다음 장: 1단계를 마쳤습니다. [이해도 확인 시험](certificate.md)으로 내 AI 이해 레벨을 확인해 보세요.
+다음 장: [11장. 전문가처럼 쓰기 — 판단하고, 시험하고, 쌓아 가기](11-expert.md)
 
 ---
 
