@@ -9,7 +9,7 @@
 
 [1단계 3장 「같은 도구, 다른 결과」](../00-common/03-why-learn.md#같은-도구-다른-결과)에서 같은 AI도 쓰는 법에 따라 결과가 달라진다고 배웠습니다. OpenAI가 회사에서 ChatGPT를 쓰는 모습을 조사한 보고서에서도 비슷한 점이 보입니다. 효과가 클 만한 곳에서도 추론·심층 리서치·프로젝트·맞춤 지침 같은 **고급 기능은 덜 쓰입니다**.[^adopt]
 
-다른 조사에서는 사람들이 **자기 분야가 아닌 일**을 맡길 때 예시와 배경을 더 많이 주고, 결과를 확인해 달라는 부탁도 더 자주 했습니다.[^ways] 낯선 일일수록 자료를 함께 주고 확인을 부탁하세요. 이것이 이 장의 출발점입니다. 이 장에서 다루는 것을 먼저 한눈에 보세요.
+무엇을 맡길지 판단하는 법, 맡기기 전에 시험해 보는 법, 일의 무게만큼 확인하는 법처럼 **어느 AI에나 통하는 방법**은 [1단계 11장 「전문가처럼 쓰기」](../00-common/11-expert.md)에 있습니다. 이 장은 그 방법을 ChatGPT 기능으로 옮겨 봅니다. 이 장에서 다루는 것을 먼저 한눈에 보세요.
 
 | 요소 | 한 줄 설명 | 자세히 보기 |
 |---|---|---|
@@ -135,12 +135,7 @@ Word·Excel·PowerPoint는 **ChatGPT 추가 기능**(add-in, 프로그램 안에
 
 ## 반복하는 일은 틀로 — 지침·템플릿·스킬
 
-**처음 연습할 일은 작게 고르세요.** 가장 크고 중요한 일부터 시작할 필요는 없습니다. 자주 하고, 결과가 분명하고, 내가 확인하기 쉽고, 틀려도 피해가 작은 일이 좋습니다. 너무 넓은 일, 가끔만 하는 일, 틀리면 큰일 나는 일, 맞는지 확인하기 어려운 일은 나중으로 미룹니다.[^academy-content]
-
-| 아직 이른 일 | 먼저 해 보기 좋은 일 |
-|---|---|
-| 가게 매출 올리기 | 매주 월요일, 지난주 판매 기록으로 요약표 만들기 |
-| 모임 운영 잘하기 | 모임이 끝날 때마다 정한 것과 할 일을 안내 문자로 쓰기 |
+어떤 일부터 틀로 만들지는 [1단계 11장 「처음 연습할 일 고르기」](../00-common/11-expert.md#처음-연습할-일-고르기)를 보세요.
 
 같은 일을 자주 한다면 틀을 만들어 두세요. 첫 단계는 [1단계 8장 「4. 다시 쓸 틀로 만들기」](../00-common/08-meta-prompting.md#_4-다시-쓸-틀로-만들기)의 틀을 [7장처럼 프로젝트 지침에 넣는 것](07-projects-plugins.md#다시-쓸-틀을-프로젝트에-넣기)입니다. 그다음이 템플릿과 스킬입니다.[^docs][^skills]
 
@@ -173,7 +168,7 @@ Word·Excel·PowerPoint는 **ChatGPT 추가 기능**(add-in, 프로그램 안에
 
 남이 만든 스킬 파일을 올릴 때는 만든 곳을 믿을 수 있는지 먼저 보세요. 자동 검사가 있어도 내 확인을 대신하지는 않습니다.[^skills]
 
-**스킬은 언제 만들까요?** 같은 부탁을 같은 기준으로 되풀이하고 있다면 만들어 볼 만합니다. 일이 매주 바뀌거나, 결과의 모양이 아직 정해지지 않았거나, 사람이 판단해야 하는 일이라면 아직 이릅니다. 그럴 때는 대화에서 몇 번 더 해 보며 다듬으세요.[^academy-content]
+**스킬은 언제 만들까요?** 같은 부탁을 같은 기준으로 되풀이하고 있다면 만들어 볼 만합니다. 아직 이른 경우는 [1단계 11장 「반복하는 일은 쌓아 두기」](../00-common/11-expert.md#반복하는-일은-쌓아-두기)에 있습니다.[^academy-content]
 
 <Quiz id="ch111-templates" />
 
@@ -285,28 +280,9 @@ Word·Excel·PowerPoint는 **ChatGPT 추가 기능**(add-in, 프로그램 안에
 
 ## 믿기 전에 확인하기
 
-결과를 쓰기 전에 확인하는 습관은 [1단계 9장 「확인하는 네 가지 습관」](../00-common/09-safety.md#확인하는-네-가지-습관)에서 배웠습니다. 여기서는 얼마나 꼼꼼히 볼지, 어느 단계에서 볼지, 결과물마다 무엇을 볼지 살펴봅니다.
+얼마나 꼼꼼히 볼지, 어느 단계에서 볼지는 [1단계 11장 「일의 무게만큼 확인하기」](../00-common/11-expert.md#일의-무게만큼-확인하기)에서 배웁니다. 여기서는 ChatGPT의 결과물마다 무엇을 볼지 살펴봅니다.
 
-**모든 답을 똑같이 꼼꼼하게 볼 필요는 없습니다.** 일의 무게에 맞춰 확인하세요.[^academy-content]
-
-| 이런 일이라면 | 이만큼 확인한다 |
-|---|---|
-| 모임 아이디어 떠올리기 | 가볍게 읽고 고른다 |
-| 공지·안내문 초안 | 사실·말투·빠진 것이 없는지 본다 |
-| 기사·자료 요약 | 원문과 맞는지 대조한다 |
-| 건강·돈·일자리·법적 권리에 영향을 주는 일 | 전문가가 꼼꼼히 검토하거나 정해진 절차를 거친다 |
-
-**마지막에 한 번이 아니라 단계마다 보세요.** 여러 단계로 진행하는 일이라면 다음 단계로 넘어가기 전에 잠깐 멈춥니다. 다음 세 가지를 스스로 물어보세요.[^academy-content]
-- **사실**: 숫자·이름·날짜·출처가 맞나?
-- **논리**: "~이므로 ~하다"는 연결이 말이 되나?
-- **말투**: 읽을 사람에게 맞나?
-
-논리가 이상하면 그 부분을 짚어서 설명해 달라고 하세요.
-```
-두 번째 문단의 결론이 왜 나왔는지 이해가 안 돼. 어떤 근거와 가정으로 이어졌는지 설명해 주고, 약한 곳이 있으면 고쳐 줘.
-```
-
-결과물마다 볼 곳도 다릅니다.
+결과물마다 볼 곳이 다릅니다.
 
 | 결과물 | 확인할 곳 |
 |---|---|
@@ -343,7 +319,7 @@ Word·Excel·PowerPoint는 **ChatGPT 추가 기능**(add-in, 프로그램 안에
 세 강좌에는 이 가이드와 같은 내용이 다른 이름으로 나옵니다. 아래 연결을 알아 두면 강좌에서 새 용어를 만났을 때 뜻을 짐작하기 쉽습니다. 강좌에서 쓰는 이름은 영어 원문 그대로 적었습니다.[^academy-content]
 
 - **Task·Context·Expectation** (AI Foundations): 할 일, 배경(누구를 위한 일인지, 왜 필요한지), 답의 모양(형식·길이·말투)을 정해서 부탁합니다. [1단계 4장 「좋은 프롬프트의 5요소」](../00-common/04-prompt-basics.md#좋은-프롬프트의-5요소)와 같은 생각입니다.
-- **CLEAR** (AI Foundations): 답을 받으면 스스로 묻습니다. 다 답했나(Complete)? 앞뒤가 맞나(Logical)? 근거가 있나(Evidence)? 읽을 사람에게 맞나(Audience)? 주제에서 벗어나지 않았나(Relevant)? [1단계 9장 「확인하는 네 가지 습관」](../00-common/09-safety.md#확인하는-네-가지-습관)과 이 장의 [「믿기 전에 확인하기」](#믿기-전에-확인하기)를 함께 보세요.
+- **CLEAR** (AI Foundations): 답을 받으면 스스로 묻습니다. 다 답했나(Complete)? 앞뒤가 맞나(Logical)? 근거가 있나(Evidence)? 읽을 사람에게 맞나(Audience)? 주제에서 벗어나지 않았나(Relevant)? [1단계 9장 「확인하는 네 가지 습관」](../00-common/09-safety.md#확인하는-네-가지-습관)과 [1단계 11장 「일의 무게만큼 확인하기」](../00-common/11-expert.md#일의-무게만큼-확인하기)를 함께 보세요.
 - **"Use ChatGPT as the workspace, not the source of truth."** (AI Foundations): ChatGPT를 작업하는 곳으로 쓰고, ChatGPT의 답만으로 사실을 판단하지 말라는 뜻입니다. 최신 사실·정책·가격·날짜가 필요하면 믿을 만한 자료나 검색으로 먼저 가져오고, ChatGPT에는 그 자료를 정리하게 하세요. [6장 「웹 검색」](06-search.md#웹-검색-—-chatgpt가-인터넷을-찾아보게-하기)으로 이어집니다.
 - **워크플로의 다섯 부분** (Applied AI Foundations): 목표·맥락·단계·검토 지점·결과물을 정합니다. 한 번에 전부 시키지 말고 단계마다 확인하며 나아갑니다. 이 장의 [「일을 맡기는 다섯 줄」](#일을-맡기는-다섯-줄-—-결과·자료·남길-것·검토-기준·모양)과 [1단계 5장 「3. 단계 나누기」](../00-common/05-prompt-patterns.md#_3-단계-나누기-—-프롬프트-체이닝)를 보세요.
 - **워크플로 노트** (Applied AI Foundations): 긴 작업을 하다 보면 ChatGPT가 처음 목표나 조건을 놓칠 수 있습니다. 그래서 목표, 결정한 내용, 지킬 조건, 확인할 지점을 짧은 메모 하나에 적어 둡니다. 다음 단계에서 이 메모를 다시 보여 주면 앞서 정한 내용을 이어 갈 수 있습니다. 이 메모를 [7장 「프로젝트」](07-projects-plugins.md#프로젝트-—-대화·파일·지침을-한-폴더에)의 파일로 두고 고칠 때마다 바꿔 두는 것은 이 가이드의 제안입니다.
@@ -379,6 +355,8 @@ ChatGPT가 어떻게 만들어지고 어떻게 쓰는지 설명하는 Andrej Kar
 3. 예약 작업을 하나 만들어 본다("내일 아침에 물 마시라고 알려 줘"). 옆 메뉴 「예약」에서 보이는지 확인하고, 다 봤으면 지운다.
 4. `@study` 로 공부 모드를 켜고, 요즘 궁금했던 주제 하나를 20분 복습 프롬프트로 배워 본다.
 
+**이어지는 과제** ([독서 모임 준비하기](../00-common/practice-kit.md)): 예시 파일 fees.csv를 올려 1번처럼 "흔한 문제가 있는지 먼저 확인해 줘"라고 보낸다. 두 번 적힌 다과와 금액이 빈 줄을 찾아내는지 본다. 그다음 "수입·지출 합계와 남은 돈을 표로, 항목별 지출을 막대 차트로 보여 줘"라고 보내고, 표의 숫자를 직접 더한 값과 맞춰 본다. 마지막으로 [과제 점검표](../00-common/practice-kit.md#마지막에-남는-것)를 하나씩 체크한다.
+
 ## 정리
 
 - 전문가는 일을 맡기듯 말한다. 결과·자료·남길 것·검토 기준·모양 다섯 줄을 적고, 결과물마다 정해 둔 곳을 확인한 뒤에 쓴다.
@@ -408,7 +386,6 @@ ChatGPT가 어떻게 만들어지고 어떻게 쓰는지 설명하는 Andrej Kar
 다음 장: 2단계를 마쳤습니다. [AI 지식 레벨 시험](../00-common/level-test.md)으로 실력을 확인해 보세요.
 
 [^adopt]: OpenAI, 「ChatGPT Usage and Adoption Patterns at Work」. "Advanced features remain underused, even where they could deliver broad impact." https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work (확인일 2026-10-24)
-[^ways]: OpenAI, 「How workers are unlocking new ways of working」. 자기 직업 밖의 일에서 예시·배경을 더 붙이고 확인을 더 부탁한다는 분석. https://openai.com/index/unlocking-new-ways-of-working (확인일 2026-10-24)
 [^work]: OpenAI 도움말, 「ChatGPT Work and Codex」 "Describe the outcome you want. Add any files, constraints, and review criteria ChatGPT should use." https://help.openai.com/en/articles/20001275 · 「Using cloud browser in ChatGPT」 "Check the result and its sources before relying on it." https://help.openai.com/en/articles/20001280 (확인일 2026-10-24)
 [^docs]: OpenAI 도움말, 「Creating and editing documents, spreadsheets, and presentations with ChatGPT Work」. 템플릿·`@Template-Creator`, "Say what must stay unchanged…" https://help.openai.com/en/articles/20001278 (확인일 2026-10-24)
 [^prompt]: OpenAI 도움말, 「How do I create a good prompt for an AI model?」. https://help.openai.com/en/articles/4936848 (확인일 2026-10-24)
