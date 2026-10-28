@@ -43,10 +43,9 @@ Claude(클로드)는 Anthropic(앤트로픽)이라는 회사가 만든 **LLM**(�
 
 ## 가입하고 로그인하기
 
-claude.ai에 들어가 이메일 주소를 입력하세요. 그다음 「이메일로 계속」을 누르면 됩니다. Google 계정이 있으면 「Google로 계속」을 눌러도 됩니다.[^signup]
-로그인할 때도 이 두 가지 방법만 있습니다.[^login]
+claude.ai에 들어가 이메일 주소를 입력하세요. 그다음 「이메일로 계속하기」를 누르면 됩니다. Google이나 Apple 계정이 있으면 「Google로 계속하기」「Apple로 계속하기」를 눌러도 됩니다.[^signup][^screen-login]
 
-<!-- 스크린샷 필요: claude.ai 로그인 전 첫 화면의 이메일 입력칸과 「이메일로 계속」「Google로 계속」 버튼 (웹) -->
+![claude.ai 로그인 전 첫 화면. 「Google로 계속하기」「Apple로 계속하기」 버튼, 「또는」 아래 이메일 칸과 「이메일로 계속하기」, 맨 아래 「데스크톱 앱 다운로드」가 있다](assets/shot-14-login.png)
 
 **Claude에는 비밀번호가 없습니다.** Claude 계정 전용 비밀번호는 만들 수 없습니다.[^login]
 이메일로 들어가면 「Claude.ai에 로그인하기 위한 보안 링크」(Secure link to log in to Claude.ai)라는 제목의 메일이 옵니다. 그 메일 속 링크를 누르면 로그인됩니다.[^login]
@@ -310,3 +309,4 @@ Claude에는 **"하루 몇 번"처럼 정해진 메시지 수가 없습니다.**
 [^cancel]: Anthropic 도움말, 「Cancel your Pro or Max subscription」. "Your cancellation will take effect at the end of your current billing period" / "cancel your subscription at least 24 hours before your next billing date." / "Navigate to Settings > Billing and click the “Cancel” button." / "Select “Manage subscription” and follow the prompts for cancellation." https://support.claude.com/en/articles/8325617 (확인일 2026-10-26)
 [^billing]: Anthropic 도움말, 「Paid plan billing FAQs」. "For subscriptions purchased on the web, we only accept credit or debit cards." / "search by the subject line "Your receipt from Anthropic."" / "there isn't a direct way to change your subscription billing date." / "You've logged in with a different email." https://support.claude.com/en/articles/8325618 (확인일 2026-10-26)
 [^support]: Anthropic 도움말, 「How to get support」. "Support is provided in writing through the support messenger and email. We don't offer phone support." / "Click your initials or name in the lower left corner and select “Get help” from the menu." / "Chatting with Fin will not impact Claude usage or spend limits." / "Further assistance from our Product Support team" / "Select "I can't login."" / "Opening a second request for the same problem creates a duplicate that has to be re-triaged" / "Replies are delivered to the messenger and to your account email, so you won't miss one." https://support.claude.com/en/articles/9015913 (확인일 2026-10-26)
+[^screen-login]: 로그인하지 않은 새 브라우저 창에서 claude.ai/login 을 직접 확인. 버튼은 「Google로 계속하기」「Apple로 계속하기」「이메일로 계속하기」. 도움말에는 로그인 방법이 이메일과 Google 두 가지뿐이라는 문장이 있지만, 이 화면에는 Apple 버튼도 있었다 (확인일 2026-10-28, 웹, 무료(Free) 요금제)

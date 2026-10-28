@@ -54,7 +54,9 @@ ChatGPT 주소(chatgpt.com)에 들어가 보세요. 가입하지 않아도 가�
 | 이메일과 비밀번호 | 내 이메일 주소로 계정을 만든다 |
 | **소셜 로그인**(다른 회사 계정으로 대신 로그인) | Google·Microsoft·Apple 계정으로 들어간다 |
 
-<!-- 스크린샷 필요: 「무료로 회원가입」을 누른 뒤 나오는 가입 방법 선택 화면 (웹) -->
+![로그인하지 않은 화면에서 「무료로 회원가입」을 누르면 뜨는 「로그인 또는 회원가입」 창. Google 계정, Apple 계정, 휴대 전화 번호로 계속하기 버튼과 이메일 주소 칸이 있다](assets/shot-23-signup.png)
+
+*2026-10-28 웹 화면입니다. 이 창에는 Microsoft 버튼 대신 「휴대 전화 번호로 계속하기」가 보였습니다.*[^screen-signup]
 
 알아 둘 점이 네 가지 있습니다.
 
@@ -227,3 +229,4 @@ ChatGPT는 웹 브라우저 말고도 휴대폰 앱과 컴퓨터 앱으로 쓸 �
 [^network]: OpenAI 도움말, 「Network recommendations for ChatGPT errors on web and apps」. "Company WiFi network vs Cellular hotspot". https://help.openai.com/en/articles/9247338 (확인일 2026-10-24)
 [^feature]: OpenAI 도움말, 「Troubleshooting model feature access」. "If it says you reached a limit or shows a reset time, wait until that time and try again, or choose another available option." https://help.openai.com/en/articles/10258669 (확인일 2026-10-24)
 [^mobile]: OpenAI 도움말, 「Troubleshooting the ChatGPT mobile app」. "Reinstalling doesn't reset usage limits, change workspace permissions, or remove account restrictions." https://help.openai.com/en/articles/7910461 (확인일 2026-10-24)
+[^screen-signup]: 로그인하지 않은 새 브라우저 창에서 직접 확인. 버튼은 「Google 계정으로 계속하기」「Apple 계정으로 계속하기」「휴대 전화 번호로 계속하기」, 그 아래 「이메일 주소」 칸과 「계속」 (확인일 2026-10-28, Plus 계정 웹 화면)
