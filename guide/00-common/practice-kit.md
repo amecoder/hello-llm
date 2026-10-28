@@ -46,9 +46,9 @@ CSV 파일은 엑셀에서 열리는 표 파일입니다. 회원 명단에는 �
 | 5 | 회의록 올려 정한 것·할 일 표 | [4장](../11-chatgpt/04-files-images.md#직접-해-보기) | [4장](../10-claude/04-files-artifacts.md#직접-해-보기) |
 | 6 | 안내문 말투를 지침 한 줄로 | [5장](../11-chatgpt/05-memory.md#직접-해-보기) | [5장](../10-claude/05-memory.md#직접-해-보기) |
 | 7 | 모임 장소를 검색하고 출처 확인 | [6장](../11-chatgpt/06-search.md#직접-해-보기) | [6장](../10-claude/06-search.md#직접-해-보기) |
-| 8 | 「독서 모임」 프로젝트에 파일 모으기 | [7장](../11-chatgpt/07-projects-plugins.md#직접-해-보기) | [7장](../10-claude/07-projects-tools.md#직접-해-보기) |
+| 8 | 명단 점검 후 「독서 모임」 프로젝트에 파일 모으기 | [7장](../11-chatgpt/07-projects-plugins.md#직접-해-보기) | [7장](../10-claude/07-projects-tools.md#직접-해-보기) |
 | 9 | 폴더째 맡겨 안내문 패키지(유료) | — | [8장](../10-claude/08-cowork.md#직접-해-보기) |
-| 10 | 명단에 개인정보가 없는지 점검 | [8장](../11-chatgpt/08-privacy.md#직접-해-보기) | [9장](../10-claude/09-privacy.md#직접-해-보기) |
+| 10 | 실제 자료를 올리기 전 학습 설정 확인 | [8장](../11-chatgpt/08-privacy.md#직접-해-보기) | [9장](../10-claude/09-privacy.md#직접-해-보기) |
 | 11 | 모임 첫인사를 음성으로 연습 | [9장](../11-chatgpt/09-voice.md#직접-해-보기) | [10장](../10-claude/10-voice-mobile.md#직접-해-보기) |
 | 12 | 회비 장부 정리와 차트, 마무리 | [11장](../11-chatgpt/11-expert.md#직접-해-보기) | [12장](../10-claude/12-expert.md#직접-해-보기) |
 

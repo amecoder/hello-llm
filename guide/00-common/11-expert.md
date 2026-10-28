@@ -3,7 +3,7 @@
 > **한 줄 요약**: 잘 쓰는 데 필요한 것은 버튼을 더 많이 아는 것만이 아닙니다. **무엇을 맡길지 판단하고, 맡기기 전에 시험해 보고, 되풀이하는 것은 쌓아 두는** 힘입니다.
 > 이 장은 어느 AI 서비스에서나 통하는 일하는 방법을 모았습니다. 메뉴 위치와 서비스별 기능은 2단계 [ChatGPT 11장](../11-chatgpt/11-expert.md)과 [Claude 12장](../10-claude/12-expert.md)에서 다룹니다.
 
-이 장은 새 기능을 다루지 않습니다. 1~10장에서 익힌 것을 언제, 어떻게 꺼내 쓸지가 주제입니다. 2단계를 읽기 전에 봐도 되고, 2단계를 마친 뒤에 다시 봐도 됩니다.
+이 장은 1~10장에서 익힌 것을 언제, 어떻게 꺼내 쓸지가 주제입니다. 2단계에서 배울 기능(프로젝트·스킬 등)은 이름만 나오고, 자세한 사용법은 각 서비스 장에 있습니다. 2단계를 읽기 전에 봐도 되고, 2단계를 마친 뒤에 다시 봐도 됩니다.
 
 ## 전문가는 무엇이 다른가
 
@@ -26,7 +26,7 @@ OpenAI가 사람들이 일에 ChatGPT를 쓰는 모습을 분석한 글에도 �
 
 ## 처음 연습할 일 고르기
 
-가장 크고 중요한 일부터 시작할 필요는 없습니다. 처음에는 이런 일을 고르세요.[^academy-openai]
+가장 크고 중요한 일부터 시작할 필요는 없습니다. 처음에는 이런 일을 고르세요. OpenAI 강좌가 피하라고 한 일(너무 넓은 일, 가끔만 하는 일, 위험이 큰 일, 확인하기 어려운 일)을 이 가이드가 뒤집어 적은 것입니다.[^academy-openai]
 
 - 자주 한다
 - 결과가 분명하다
@@ -98,8 +98,8 @@ OpenAI가 사람들이 일에 ChatGPT를 쓰는 모습을 분석한 글에도 �
 
 1. **모든 대화에 같은 부탁을 한다** → 지침에 적습니다. ChatGPT는 [「사용자 지정 지침」](../11-chatgpt/05-memory.md#사용자-지정-지침-—-늘-지켜-줬으면-하는-것), Claude는 [「지침」](../10-claude/05-memory.md#지침-—-모든-대화에-적용할-규칙)입니다.
 2. **한 가지 일을 계속 이어 간다** → 그 일을 프로젝트로 묶습니다.
-3. **같은 순서를 매번 설명한다** → 그 순서를 다시 쓸 틀로 남깁니다. [8장 「4. 다시 쓸 틀로 만들기」](08-meta-prompting.md#_4-다시-쓸-틀로-만들기)의 틀을 프로젝트 지침에 넣는 데서 시작하세요. 서비스에 따라 스킬로 만들 수도 있습니다.
-4. **잘 다듬은 틀을 남과 나누고 싶다** → 서비스가 주는 꾸러미(플러그인 등)로 묶습니다.
+3. **같은 순서를 매번 설명한다** → 그 순서를 다시 쓸 틀로 남깁니다. [8장 「4. 다시 쓸 틀로 만들기」](08-meta-prompting.md#_4-다시-쓸-틀로-만들기)의 틀을 프로젝트 지침에 넣는 데서 시작하세요. 서비스와 요금제가 지원하면 스킬로 만들 수도 있습니다.
+4. **잘 다듬은 틀을 남과 나누고 싶다** → 틀을 문서로 나누거나, 서비스가 주는 공유 기능(플러그인 등)으로 묶습니다. 이런 기능은 서비스와 요금제에 따라 없을 수 있습니다.
 
 순서대로 가면 매번 새로 설명할 일이 조금씩 줄어듭니다.
 
@@ -178,7 +178,7 @@ AI가 나에게 질문을 던지게 하는 방법은 [5장 「4. 되묻게 하�
 
 결과를 쓰기 전에 확인하는 습관은 [9장 「확인하는 네 가지 습관」](09-safety.md#확인하는-네-가지-습관)에서 배웠습니다. 여기서는 얼마나 꼼꼼히 볼지, 어느 단계에서 볼지 살펴봅니다.
 
-**모든 답을 똑같이 꼼꼼하게 볼 필요는 없습니다.** 일의 무게에 맞춰 확인하세요.[^academy-openai]
+**모든 답을 똑같이 꼼꼼하게 볼 필요는 없습니다.** 일의 무게에 맞춰 확인하세요.[^academy-openai] 표의 마지막 줄은 강좌의 기준이고, 앞의 세 줄은 이 가이드가 고른 일상 예시입니다.
 
 | 이런 일이라면 | 이만큼 확인한다 |
 |---|---|
@@ -187,7 +187,7 @@ AI가 나에게 질문을 던지게 하는 방법은 [5장 「4. 되묻게 하�
 | 기사·자료 요약 | 원문과 맞는지 대조한다 |
 | 건강·돈·일자리·법적 권리에 영향을 주는 일 | 전문가가 꼼꼼히 검토하거나 정해진 절차를 거친다 |
 
-**마지막에 한 번이 아니라 단계마다 보세요.** 여러 단계로 진행하는 일이라면 다음 단계로 넘어가기 전에 잠깐 멈춥니다. 다음 세 가지를 스스로 물어보세요.[^academy-openai]
+**마지막에 한 번이 아니라 단계마다 보세요.** 여러 단계로 진행하는 일이라면 다음 단계로 넘어가기 전에 잠깐 멈춥니다.[^academy-openai] 그리고 다음 세 가지를 스스로 물어보세요. 강좌의 점검 틀 CLEAR에서 이 가이드가 셋을 골랐습니다.[^academy-openai]
 
 - **사실**: 숫자·이름·날짜·출처가 맞나?
 - **논리**: "~이므로 ~하다"는 연결이 말이 되나?
@@ -249,4 +249,4 @@ AI가 나에게 질문을 던지게 하는 방법은 [5장 「4. 되묻게 하�
 [^academy-layers]: Claude Academy 「Introduction to Claude Cowork」 강의 「Get better results faster」. "You're not going to start with all four of these on Day 1." / "you'll realize what global instructions make sense to apply to every conversation." / "You'll start to see your recurring workstreams and what makes sense to have as a project." / "If you find you're explaining the same workflows to Claude multiple times, those will be the right opportunities for your first skills." / "plugins will come in as you have something worth sharing." https://academy.claude.com/courses/introduction-to-claude-cowork/research-analysis-at-scale (확인일 2026-10-26)
 [^academy-skilltest]: Claude Academy 「Introduction to Claude Cowork」 강의 「Validating skills for plugins」. "When you use a skill you built, you know how to work around any issues or failures." / "They might phrase the request a little differently, hand it slightly different inputs, or hit an edge case" / "Is the skill version the one I'd use?" / ""The tone is too formal" or "it skipped the executive summary" gives Claude something to act on; "this isn't quite right" doesn't." / "Change one thing at a time." / "Most skills are ready after one or two rounds." 강의는 스킬을 쓴 답과 쓰지 않은 답을 비교하는 방법을 설명한다. 이 장은 같은 방법을 프로젝트 지침 같은 틀에도 쓰도록 넓혀 적었다(이 가이드의 해석). https://academy.claude.com/courses/introduction-to-claude-cowork/validating-skills-for-plugins (확인일 2026-10-26)
 [^academy-data]: Claude Academy 「Claude 101」 강의 「Getting better results」의 영상(원래 「AI Fluency for nonprofits」 강좌의 영상이라고 강의가 밝힘). "Meet Rio, the program director at Valley Veterans Services." / "AI correctly identified the correlation between program attendance and job placement, but it missed a critical insight around the combined housing assistance and job placement program." / "This time AI catches its mistake." / "they can help with things like writing Excel formulas, reformatting messy data, and more." / "just keep asking for clarifications and explanations so that you can follow the process and understand the final output." / "You're still accountable for checking that these results make sense and being transparent about AI's role in your analysis process." https://academy.claude.com/courses/claude-101/getting-better-results (확인일 2026-10-26)
-[^academy-openai]: OpenAI Academy 강좌 본문(로그인·등록 필요). Applied AI Foundations: "It's the one that is useful, realistic for you, low-risk while you are learning, and easy to practice and iterate on as you go." / "Avoid workflows that are:" "Too broad" / "Too infrequent" / "Too high stakes" / "Difficult to review or verify" / "If ChatGPT misunderstands something, you can catch it early instead of fixing the whole output later." / "It should happen throughout the workflow, not only at the end." / "Do the “because” and “therefore” statements make sense? If the reasoning does not hold, ask ChatGPT to explain its logic". AI Foundations: "Review intensity depends on the task" / "Drafting something that affects a person’s rights, job, health, finances, or access to services" → "Strong human review or approved process". Agents and Workflows: "Often, a clear prompt is enough." / "Start manually. Run the workflow yourself a few times, refine the prompt, confirm the sources, and only then schedule it." / "A skill probably isn't the right fit yet if: The workflow changes every week. ... The output format is still being negotiated. The task requires judgment that should stay with a person" (확인일 2026-10-26)
+[^academy-openai]: OpenAI Academy 강좌 본문(로그인·등록 필요). Applied AI Foundations: "It's the one that is useful, realistic for you, low-risk while you are learning, and easy to practice and iterate on as you go." / "Avoid workflows that are:" "Too broad" / "Too infrequent" / "Too high stakes" / "Difficult to review or verify" / "If ChatGPT misunderstands something, you can catch it early instead of fixing the whole output later." / "It should happen throughout the workflow, not only at the end." / "Do the “because” and “therefore” statements make sense? If the reasoning does not hold, ask ChatGPT to explain its logic". AI Foundations: "Reviewing outputs with the CLEAR structure (Complete, Logical, Evidence, Audience, Relevant)" / "Review intensity depends on the task" / "Drafting something that affects a person’s rights, job, health, finances, or access to services" → "Strong human review or approved process". Agents and Workflows: "Often, a clear prompt is enough." / "Start manually. Run the workflow yourself a few times, refine the prompt, confirm the sources, and only then schedule it." / "A skill probably isn't the right fit yet if: The workflow changes every week. ... The output format is still being negotiated. The task requires judgment that should stay with a person" (확인일 2026-10-26)
