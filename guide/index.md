@@ -58,6 +58,10 @@ features:
     details: 무엇을 맡길지 판단하고, 답을 아는 일로 시험하고, 되풀이하는 일은 쌓아 두기 — 어느 AI에나 통하는 일하는 방법
     link: /guide/00-common/11-expert
     linkText: 읽기
+  - title: 이어지는 과제 — 독서 모임 준비
+    details: 과제 하나를 1단계 11장부터 2단계 끝까지 이어서 — 가짜 예시 파일 6개를 내려받아 안내문 패키지를 완성하기
+    link: /guide/00-common/practice-kit
+    linkText: 과제 보기
   - title: 바로 쓰는 프롬프트 모음
     details: 메일·요약·이력서·회의록·계약 준비 등 1단계와 ChatGPT·Claude 가이드의 프롬프트 46개를 쓰임새별로 — 복사해서 빈칸만 바꾸면 끝
     link: /guide/00-common/prompt-library
