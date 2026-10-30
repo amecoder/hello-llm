@@ -14,7 +14,14 @@
 - [ ] **(진행 중, 2026-10-30~) 2단계 Gemini 가이드** — 사용자 결정: ChatGPT·Claude와 같은 구성(11~12장), 캡처는 **유료 계정(Google AI Pro 등)**, 사용자가 Playwright 브라우저에 직접 로그인. 순서: Google 공식 도움말 리포트(`docs/reports/YYYY-MM-DD_Gemini-공식-자료.md`, VERIFIED) → 목차 → 장별 작성·캡처·퀴즈. 폴더 `guide/12-gemini/`, 장 번호 base 300(`theme/stages.ts`), 상단 「목차」 메뉴에 「2단계 · Gemini」 추가(테스트가 강제). 유료 전용 기능은 본문에 "유료" 표시
   - 진행(2026-10-30, **PR #46 머지, squash `aa869d5`**): 리포트 `docs/reports/2026-10-30_Gemini-공식-자료.md` 완료(도움말 130개, 1,082행, 인용 대조 불일치 0, 12장 목차안, 「실제 화면에서 직접 확인」 절). 원문은 scratchpad에 받았으므로 **다음 세션에는 다시 받아야 한다**(429 요청 제한 주의 — 동시 4개도 막혔다, 간격을 두고 받는다). 미수집 2개: 17216260·18755601
   - 다음: 12장 목차안(리포트 「가이드 목차 제안」)으로 진행 추천, 사용자 확인 대기 · 가이드 본문은 새 브랜치에서 → `theme/stages.ts`(gemini, base 300)·사이드바·상단 「목차」 메뉴·`guide/12-gemini/README.md` → 1장부터 작성. 캡처 전 사이드바 대화 제목·계정 이름·이메일 가리기(`.playwright-mcp/` 가리기 스크립트를 Gemini용으로 새로 만든다). **화면을 읽을 때 사이드바를 범위에서 빼고 읽는다**(2026-10-30 실수: 스크롤 추출로 사용자 대화 제목 약 100개를 읽었다 — 문서에는 안 옮김)
-  - Playwright 브라우저에 사용자 Gemini 계정(Google AI Pro)이 로그인되어 있다
+  - 리눅스 머신의 Playwright 브라우저에는 사용자 Gemini 계정(Google AI Pro)이 로그인되어 있었다 — **Mac에서는 다시 로그인해야 한다**
+  - **Mac에서 이어 하기 (2026-10-31 리눅스에서 넘김)**
+    1. `git fetch && git checkout docs/gemini-guide-body && npm ci` — 이 브랜치에서 가이드 본문을 이어 쓴다(아직 main 대비 도구 스크립트 2개 + 이 HANDOFF 갱신뿐, PR 전)
+    2. 도움말 원문을 다시 받는다: 빈 작업 폴더(예: scratchpad 아래 `gemini/`)에 `raw/` 를 만들고 그 폴더에서 `python3 <저장소>/docs/tools/gemini-fetch.py` (동시 1개로 고쳐 두었다 — 429 방지). 인용 대조는 리포트 부록 표를 `parts/*.md` 로 나눠 두고 `python3 docs/tools/gemini-verify.py <작업 폴더>` (2026-10-31 리눅스 재실행: 1,082행 문제 0)
+    3. 가리기 스크립트(`.playwright-mcp/*.js`)는 gitignore라 Mac에 없다 — ChatGPT·Claude용도 Mac에서 새로 만들거나 리눅스에서 따로 옮겨야 한다. Gemini용은 어차피 새로 만든다
+    4. Mac은 웹 조작 1순위가 `ego-browser`(전역 `rules/workflow.md`)지만, 캡처는 지금까지 사용자가 로그인한 Playwright 브라우저로 찍었다(CLAUDE.md 9번). 미리보기 포트는 Mac에서는 기본 5173이 비어 있으면 그대로 쓴다
+    5. 사용자 확인 대기 중: 12장 목차 그대로 진행 · 1~2장을 먼저 보여 주기 · 가이드 PR을 두 번(1~6장 / 7~12장)으로 나누기 — 셋 다 추천했고 답을 받기 전이다
+  - 원격 브랜치 `docs/gemini-guide`(PR #46 머지됨)·`docs/nav-dropdown`(PR #45 머지됨)은 삭제 권한 규칙 때문에 남아 있다 — 정리는 사용자가 한다
 - [ ] (그다음) 3단계 Claude Code 가이드(`guide/20-claude-code/`)
 - 정리 완료(2026-10-29): Playwright 브라우저의 claude.ai·ChatGPT·Skilljar 로그아웃(사용자), 로컬 브랜치 `docs/expert-common-chapter`·`docs/practice-thread`·`docs/fill-screenshots` 삭제(사용자). 로컬은 `main`만 남음
 - [x] 품질 리뷰 개선안 ①~⑤ 완료(PR #38~#42). ⑤ = 1단계 11장 「전문가처럼 쓰기」 신설 + 이어지는 과제 「독서 모임 준비하기」(PR #42, squash `752e131`, 2026-10-28)
