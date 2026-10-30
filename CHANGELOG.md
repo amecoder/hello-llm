@@ -7,6 +7,7 @@
 - 영상 임베드 컴포넌트 `<YouTube>`(`youtube-nocookie.com`)와 검사 `tests/youtube-embeds.test.ts`. 2장 「영상으로 더 보기」 신설(우리말 3개) (PR #44)
 
 ### Changed
+- 상단 메뉴 6개를 「목차 ▾」(전체 목차·1단계·2단계 ChatGPT·Claude)와 「서비스 바로가기 ▾」(ChatGPT·Claude·Gemini) 드롭다운 두 개로. 새 단계를 메뉴에 빠뜨리면 `tests/site-pages.test.ts` 가 실패 (PR #45, `0d8891a`)
 - 1장 「어떻게 답을 만드나요?」에 확률의 재료(학습한 패턴 + 컨텍스트), 질문을 읽는 4단계(토큰·임베딩·어텐션), 시스템 프롬프트. 멀티모달 절에 문서·소리·영상 (PR #44)
 - 모든 영상을 링크에서 페이지 안 재생으로(20개). 1장 영어 3Blue1Brown 영상을 공식 한국어판으로. 첫 화면 개인정보 문구에 YouTube 예외, CLAUDE.md 「외부 영상」 규칙 갱신 (PR #44)
 - 스크롤 진행 막대를 파란색 반투명에서 YouTube 빨강으로 (PR #44)
