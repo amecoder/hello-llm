@@ -3,6 +3,7 @@
 ## [2026-10-30]
 
 ### Added
+- Gemini 앱 공식 자료 사실 확인 리포트 `docs/reports/2026-10-30_Gemini-공식-자료.md` — 도움말 130개·1,082행(VERIFIED 1,064, 인용 대조 불일치 0), 12장 목차안, 한국 Google AI Pro 실제 화면 확인 절 (PR #46, `aa869d5`)
 - 1장 「학습했다는 건 무슨 뜻일까?」(빈칸 문제로 숫자를 고치는 사전 학습, 대부분은 패턴이고 자주 본 글은 그대로 외움, 대화 중에는 배우지 않음·메모리 기능)과 「검색하고 도구를 쓰는 AI」(모델은 요청만 쓰고 서비스가 실행, 검색해도 틀리는 경우) 신설. 그림 `ch1-training-loop`·`ch1-tool-calling`, 퀴즈 ch1-training·ch1-tools (PR #44, `2e71606`)
 - 영상 임베드 컴포넌트 `<YouTube>`(`youtube-nocookie.com`)와 검사 `tests/youtube-embeds.test.ts`. 2장 「영상으로 더 보기」 신설(우리말 3개) (PR #44)
 
