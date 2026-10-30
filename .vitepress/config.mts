@@ -29,12 +29,24 @@ export default defineConfig({
   themeConfig: {
     // shortcuts so readers can try prompts right away; external links open in a new tab
     nav: [
-      { text: '1단계 · 공통 가이드', link: '/guide/00-common/' },
-      { text: '2단계 · ChatGPT', link: '/guide/11-chatgpt/' },
-      { text: '2단계 · Claude', link: '/guide/10-claude/' },
-      { text: 'ChatGPT', link: 'https://chatgpt.com/' },
-      { text: 'Claude', link: 'https://claude.ai/new' },
-      { text: 'Gemini', link: 'https://gemini.google.com/app' },
+      {
+        text: '목차',
+        activeMatch: '^/guide/',
+        items: [
+          { text: '전체 목차', link: '/guide/' },
+          { text: '1단계 · 공통 가이드', link: '/guide/00-common/' },
+          { text: '2단계 · ChatGPT', link: '/guide/11-chatgpt/' },
+          { text: '2단계 · Claude', link: '/guide/10-claude/' },
+        ],
+      },
+      {
+        text: '서비스 바로가기',
+        items: [
+          { text: 'ChatGPT', link: 'https://chatgpt.com/' },
+          { text: 'Claude', link: 'https://claude.ai/new' },
+          { text: 'Gemini', link: 'https://gemini.google.com/app' },
+        ],
+      },
     ],
     sidebar: {
       '/guide/10-claude/': [
