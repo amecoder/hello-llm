@@ -9,6 +9,7 @@ import ChapterDone from './components/ChapterDone.vue'
 import MyProgress from './components/MyProgress.vue'
 import ScrollProgress from './components/ScrollProgress.vue'
 import LevelTest from './components/LevelTest.vue'
+import YouTube from './components/YouTube.vue'
 import './custom.css'
 
 export default {
@@ -22,5 +23,5 @@ export default {
     app.component('ChapterDone', ChapterDone)
     app.component('MyProgress', MyProgress)
     app.component('LevelTest', LevelTest)
-  },
+    app.component('YouTube', YouTube)  },
 } satisfies Theme

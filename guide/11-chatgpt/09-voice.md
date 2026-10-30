@@ -152,12 +152,15 @@
 
 회사가 직접 만든 소개 영상입니다. 화면과 기능 이름은 이 장의 설명과 다를 수 있습니다.
 
-> 아래 영상은 모두 **영어**입니다. YouTube 영상의 설정(톱니바퀴) → 자막 → **자동 번역 → 한국어**를 고르면 한국어 자막으로 볼 수 있습니다. 링크는 YouTube로 이동합니다.
+> 아래 영상은 모두 **영어**입니다. YouTube 영상의 설정(톱니바퀴) → 자막 → **자동 번역 → 한국어**를 고르면 한국어 자막으로 볼 수 있습니다. 영상은 이 페이지 안에서 바로 재생됩니다.
 
-| 영상 | 채널 | 이런 분께 |
-|---|---|---|
-| [This is the new ChatGPT Voice, powered by GPT-Live](https://www.youtube.com/watch?v=EAN5Cj347PY) | OpenAI | 새 음성 대화를 소리로 직접 들어 보고 싶은 분 (2026년 7월, 4분) |
-| [Get Stuff Done with ChatGPT Voice](https://www.youtube.com/watch?v=96ogPwN9ykM) | OpenAI | 음성 대화에서 메일·캘린더·Slack 같은 플러그인을 쓰는 예를 보고 싶은 분 (2026년 9월, 2분) |
+**[This is the new ChatGPT Voice, powered by GPT-Live](https://www.youtube.com/watch?v=EAN5Cj347PY)** · OpenAI · 새 음성 대화를 소리로 직접 들어 보고 싶은 분 (2026년 7월, 4분)
+
+<YouTube id="EAN5Cj347PY" title="This is the new ChatGPT Voice, powered by GPT-Live" />
+
+**[Get Stuff Done with ChatGPT Voice](https://www.youtube.com/watch?v=96ogPwN9ykM)** · OpenAI · 음성 대화에서 메일·캘린더·Slack 같은 플러그인을 쓰는 예를 보고 싶은 분 (2026년 9월, 2분)
+
+<YouTube id="96ogPwN9ykM" title="Get Stuff Done with ChatGPT Voice" />
 
 둘째 영상은 음성 대화에서 플러그인을 쓰는 모습을 보여 줍니다. 내 화면에서 안 되면 이 장의 설명대로 같은 부탁을 글로 입력해 보세요.
 

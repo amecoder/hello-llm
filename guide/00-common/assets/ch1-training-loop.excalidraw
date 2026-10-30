@@ -1,0 +1,12 @@
+{"skeleton": [
+  {"type": "text", "x": 0, "y": 0, "text": "학습 한 바퀴 — 다음 말 맞히기", "fontSize": 22},
+  {"type": "rectangle", "id": "s1", "x": 0, "y": 60, "width": 200, "height": 110, "backgroundColor": "#a5d8ff", "label": {"text": "① 문제 내기\n뒷부분을 가린다\n\"돼지고기를 ___\"", "fontSize": 18}},
+  {"type": "rectangle", "id": "s2", "x": 280, "y": 60, "width": 200, "height": 110, "backgroundColor": "#a5d8ff", "label": {"text": "② 맞혀 보기\n씻어요 40%\n볶아요 30%", "fontSize": 18}},
+  {"type": "rectangle", "id": "s3", "x": 560, "y": 60, "width": 200, "height": 110, "backgroundColor": "#ffec99", "label": {"text": "③ 채점하기\n원래 글의 말은\n\"볶아요\"", "fontSize": 18}},
+  {"type": "rectangle", "id": "s4", "x": 840, "y": 60, "width": 200, "height": 110, "backgroundColor": "#b2f2bb", "label": {"text": "④ 숫자 고치기\n\"볶아요\" 확률이\n조금 높아지게", "fontSize": 18}},
+  {"type": "arrow", "x": 202, "y": 115, "points": [[0, 0], [76, 0]], "width": 76, "height": 0, "start": {"id": "s1"}, "end": {"id": "s2"}},
+  {"type": "arrow", "x": 482, "y": 115, "points": [[0, 0], [76, 0]], "width": 76, "height": 0, "start": {"id": "s2"}, "end": {"id": "s3"}},
+  {"type": "arrow", "x": 762, "y": 115, "points": [[0, 0], [76, 0]], "width": 76, "height": 0, "start": {"id": "s3"}, "end": {"id": "s4"}},
+  {"type": "arrow", "x": 940, "y": 172, "points": [[0, 0], [0, 50], [-840, 50], [-840, 0]], "width": 840, "height": 50},
+  {"type": "rectangle", "x": 0, "y": 232, "width": 1040, "height": 60, "strokeColor": "transparent", "backgroundColor": "transparent", "label": {"text": "이 바퀴를 수조 번 되풀이합니다\n정답은 원래 글 안에 있어서 사람이 답을 달아 줄 필요가 없습니다", "fontSize": 18, "strokeColor": "#1e1e1e"}}
+]}
