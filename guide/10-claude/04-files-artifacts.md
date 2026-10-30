@@ -322,11 +322,11 @@ Claude는 그림 그리는 AI(이미지 생성 도구)가 하는 방식으로 **
 
 회사가 직접 만든 소개 영상입니다. 화면과 기능 이름은 이 장의 설명과 다를 수 있습니다.
 
-> 아래 영상은 **영어**입니다. YouTube 영상의 설정(톱니바퀴) → 자막 → **자동 번역 → 한국어**를 고르면 한국어 자막으로 볼 수 있습니다. 링크는 YouTube로 이동합니다.
+> 아래 영상은 **영어**입니다. YouTube 영상의 설정(톱니바퀴) → 자막 → **자동 번역 → 한국어**를 고르면 한국어 자막으로 볼 수 있습니다. 영상은 이 페이지 안에서 바로 재생됩니다.
 
-| 영상 | 채널 | 이런 분께 |
-|---|---|---|
-| [Meet Claude Slides, Claude Design and Claude Docs](https://www.youtube.com/watch?v=To5nrYqvR44) | Claude | 발표 자료·홍보용 이미지·한 쪽짜리 문서를 대화 안에서 만드는 모습을 보고 싶은 분 (2026년 9월, 2분) |
+**[Meet Claude Slides, Claude Design and Claude Docs](https://www.youtube.com/watch?v=To5nrYqvR44)** · Claude · 발표 자료·홍보용 이미지·한 쪽짜리 문서를 대화 안에서 만드는 모습을 보고 싶은 분 (2026년 9월, 2분)
+
+<YouTube id="To5nrYqvR44" title="Meet Claude Slides, Claude Design and Claude Docs" />
 
 ## 직접 해 보기
 

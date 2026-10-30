@@ -1,0 +1,16 @@
+{"skeleton": [
+  {"type": "rectangle", "x": -20, "y": 40, "width": 1040, "height": 170, "backgroundColor": "#e9ecef", "strokeColor": "transparent"},
+  {"type": "rectangle", "x": -20, "y": 250, "width": 1040, "height": 150, "backgroundColor": "#e9ecef", "strokeColor": "transparent"},
+  {"type": "text", "x": 0, "y": 0, "text": "질문: \"오늘 서울 날씨 어때?\"", "fontSize": 22},
+  {"type": "text", "x": 0, "y": 48, "text": "모델 — 요청 글만 씁니다", "fontSize": 16},
+  {"type": "text", "x": 0, "y": 300, "text": "서비스 —\n실제로 실행합니다", "fontSize": 18},
+  {"type": "rectangle", "id": "t1", "x": 0, "y": 80, "width": 200, "height": 100, "backgroundColor": "#a5d8ff", "label": {"text": "① 쓸지 정하기\n학습한 내용에는\n오늘 날씨가 없다", "fontSize": 18}},
+  {"type": "rectangle", "id": "t2", "x": 280, "y": 80, "width": 200, "height": 100, "backgroundColor": "#a5d8ff", "label": {"text": "② 요청 쓰기\n웹 검색:\n서울 오늘 날씨", "fontSize": 18}},
+  {"type": "rectangle", "id": "t3", "x": 400, "y": 280, "width": 200, "height": 100, "backgroundColor": "#b2f2bb", "label": {"text": "③ 실행하기\n실제로 검색한다", "fontSize": 18}},
+  {"type": "rectangle", "id": "t4", "x": 690, "y": 280, "width": 200, "height": 100, "backgroundColor": "#b2f2bb", "label": {"text": "④ 결과 붙이기\n검색 결과를\n대화에 붙인다", "fontSize": 18}},
+  {"type": "rectangle", "id": "t5", "x": 800, "y": 80, "width": 200, "height": 100, "backgroundColor": "#ffec99", "label": {"text": "⑤ 답하기\n\"오늘 서울은\n맑고 18도예요\"", "fontSize": 18}},
+  {"type": "arrow", "x": 202, "y": 130, "points": [[0, 0], [76, 0]], "width": 76, "height": 0, "start": {"id": "t1"}, "end": {"id": "t2"}},
+  {"type": "arrow", "x": 380, "y": 182, "points": [[0, 0], [120, 96]], "width": 120, "height": 96, "start": {"id": "t2"}, "end": {"id": "t3"}},
+  {"type": "arrow", "x": 602, "y": 330, "points": [[0, 0], [86, 0]], "width": 86, "height": 0, "start": {"id": "t3"}, "end": {"id": "t4"}},
+  {"type": "arrow", "x": 790, "y": 278, "points": [[0, 0], [110, -96]], "width": 110, "height": 96, "start": {"id": "t4"}, "end": {"id": "t5"}}
+]}

@@ -49,5 +49,5 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .sp { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 100; pointer-events: none; }
-.sp span { display: block; height: 100%; background: var(--vp-c-brand-1); opacity: 0.45; transform-origin: left; }
+.sp span { display: block; height: 100%; background: #ff0000; transform-origin: left; } /* YouTube-style red */
 </style>

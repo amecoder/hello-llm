@@ -192,11 +192,11 @@ AI로 만든 그림의 권리와, 남의 사진·작품을 올릴 때의 주의�
 
 회사가 직접 만든 소개 영상입니다. 화면과 기능 이름은 이 장의 설명과 다를 수 있습니다.
 
-> 아래 영상은 **영어**입니다. YouTube 영상의 설정(톱니바퀴) → 자막 → **자동 번역 → 한국어**를 고르면 한국어 자막으로 볼 수 있습니다. 링크는 YouTube로 이동합니다.
+> 아래 영상은 **영어**입니다. YouTube 영상의 설정(톱니바퀴) → 자막 → **자동 번역 → 한국어**를 고르면 한국어 자막으로 볼 수 있습니다. 영상은 이 페이지 안에서 바로 재생됩니다.
 
-| 영상 | 채널 | 이런 분께 |
-|---|---|---|
-| [Introducing ChatGPT Images 2.5](https://www.youtube.com/watch?v=6l7ble9P74o) | OpenAI | 더 빠르고 선명해진 그림 만들기를 짧게 보고 싶은 분 (2026년 9월, 1분) |
+**[Introducing ChatGPT Images 2.5](https://www.youtube.com/watch?v=6l7ble9P74o)** · OpenAI · 더 빠르고 선명해진 그림 만들기를 짧게 보고 싶은 분 (2026년 9월, 1분)
+
+<YouTube id="6l7ble9P74o" title="Introducing ChatGPT Images 2.5" />
 
 ## 직접 해 보기
 

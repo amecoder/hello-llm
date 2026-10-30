@@ -74,11 +74,11 @@ B 씨는 바로 쓸 수 있는 문장을 받습니다. 그리고 마음에 안 �
 
 ## 영상으로 더 보기
 
-> 아래 영상은 모두 **영어**입니다. YouTube 영상의 설정(톱니바퀴) → 자막 → **자동 번역 → 한국어**를 고르면 한국어 자막으로 볼 수 있습니다. 링크는 YouTube로 이동합니다.
+> 아래 영상은 모두 **영어**입니다. YouTube 영상의 설정(톱니바퀴) → 자막 → **자동 번역 → 한국어**를 고르면 한국어 자막으로 볼 수 있습니다. 영상은 이 페이지 안에서 바로 재생됩니다.
 
-| 영상 | 채널 | 이런 분께 |
-|---|---|---|
-| [How I use LLMs](https://www.youtube.com/watch?v=EWvNQjAaOHw) | Andrej Karpathy | 전문가가 실제로 ChatGPT 같은 AI를 일상과 일에 어떻게 쓰는지 보고 싶은 분 (긴 영상) |
+**[How I use LLMs](https://www.youtube.com/watch?v=EWvNQjAaOHw)** · Andrej Karpathy · 전문가가 실제로 ChatGPT 같은 AI를 일상과 일에 어떻게 쓰는지 보고 싶은 분 (긴 영상)
+
+<YouTube id="EWvNQjAaOHw" title="How I use LLMs" />
 
 ## 직접 해 보기
 

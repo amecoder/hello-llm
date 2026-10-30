@@ -209,11 +209,11 @@ OWASP도 프롬프트 인젝션을 **확실하게 막는 방법이 있는지는 
 
 Claude를 만든 회사(Anthropic)가 직접 만든 설명 영상입니다.
 
-> 아래 영상은 **영어**입니다. YouTube 영상의 설정(톱니바퀴) → 자막 → **자동 번역 → 한국어**를 고르면 한국어 자막으로 볼 수 있습니다. 링크는 YouTube로 이동합니다.
+> 아래 영상은 **영어**입니다. YouTube 영상의 설정(톱니바퀴) → 자막 → **자동 번역 → 한국어**를 고르면 한국어 자막으로 볼 수 있습니다. 영상은 이 페이지 안에서 바로 재생됩니다.
 
-| 영상 | 채널 | 이런 분께 |
-|---|---|---|
-| [Why do AI models hallucinate?](https://www.youtube.com/watch?v=005JLRt3gXI) | Claude | AI가 왜 그럴듯한 거짓말을 하는지, 어떻게 알아챌지 영상으로 보고 싶은 분 (2026년 4월, 5분) |
+**[Why do AI models hallucinate?](https://www.youtube.com/watch?v=005JLRt3gXI)** · Claude · AI가 왜 그럴듯한 거짓말을 하는지, 어떻게 알아챌지 영상으로 보고 싶은 분 (2026년 4월, 5분)
+
+<YouTube id="005JLRt3gXI" title="Why do AI models hallucinate?" />
 
 ## 직접 해 보기
 
