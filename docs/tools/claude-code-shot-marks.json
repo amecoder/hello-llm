@@ -666,5 +666,92 @@
     456
    ]
   ]
+ },
+ "shot-25-skill-prompt-marked": {
+  "src": "shot-25-skill-prompt",
+  "marks": [
+   [
+    25,
+    14,
+    825,
+    112
+   ]
+  ]
+ },
+ "shot-26-permission-marked": {
+  "src": "shot-26-permission",
+  "marks": [
+   [
+    406,
+    262,
+    898,
+    300
+   ],
+   [
+    418,
+    466,
+    886,
+    780
+   ],
+   [
+    650,
+    794,
+    698,
+    826,
+    674,
+    858
+   ],
+   [
+    710,
+    794,
+    886,
+    828,
+    798,
+    858
+   ]
+  ]
+ },
+ "shot-27-allow-once-marked": {
+  "src": "shot-27-allow-once",
+  "marks": [
+   [
+    170,
+    78,
+    326,
+    112,
+    140,
+    95
+   ]
+  ]
+ },
+ "shot-28-skill-menu-marked": {
+  "src": "shot-28-skill-menu",
+  "marks": [
+   [
+    58,
+    156,
+    300,
+    192
+   ],
+   [
+    304,
+    30,
+    556,
+    190,
+    580,
+    110
+   ]
+  ]
+ },
+ "shot-29-skill-run-marked": {
+  "src": "shot-29-skill-run",
+  "marks": [
+   [
+    25,
+    70,
+    825,
+    120
+   ]
+  ]
  }
 }

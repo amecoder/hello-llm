@@ -132,7 +132,7 @@ inbox의 회고 메모 3개로 이번 주 주간 회고를 써 줘.
 
 <ChapterDone :chapter="406" />
 
-다음 장: 7장 「스킬·플러그인·외부 도구」는 준비 중입니다. 그동안 [3단계 목차](./)에서 앞으로 배울 내용을 볼 수 있습니다.
+다음 장: [7장. 스킬·플러그인·외부 도구](07-skills-plugins.md)
 
 [^fresh]: Claude Code 공식 문서, 「How Claude remembers your project」. "Each Claude Code session begins with a fresh context window." / "Claude reads them at the start of every session." https://code.claude.com/docs/en/memory (확인일 2026-10-31)
 [^two]: Claude Code 공식 문서, 「How Claude remembers your project」. "Two mechanisms carry knowledge across sessions" / "Auto memory: notes Claude writes itself based on your corrections and preferences" / "Both are loaded at the start of every conversation." https://code.claude.com/docs/en/memory (확인일 2026-10-31)

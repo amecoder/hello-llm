@@ -9,6 +9,7 @@ export const CLAUDE_CODE_CHAPTERS: Record<number, { title: string; link: string 
   404: { title: 'Claude Code 4장. 허락과 되돌리기', link: '/guide/20-claude-code/04-permissions-undo' },
   405: { title: 'Claude Code 5장. 잘 맡기는 법', link: '/guide/20-claude-code/05-delegate-well' },
   406: { title: 'Claude Code 6장. 프로젝트 기억', link: '/guide/20-claude-code/06-claude-md' },
+  407: { title: 'Claude Code 7장. 스킬·플러그인·외부 도구', link: '/guide/20-claude-code/07-skills-plugins' },
 }
 
 export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
@@ -394,5 +395,58 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     ],
     answer: 1,
     explain: "Claude는 CLAUDE.md를 강제 설정이 아닌 맥락으로 다룹니다. 꼭 막아야 하는 것은 권한 모드와 Git 기록 같은 다른 장치와 함께 지킵니다.",
+  },
+  // chapter 407
+  {
+    id: 'ch407-what',
+    chapter: 407,
+    prompt: "CLAUDE.md와 비교했을 때 스킬의 특징으로 맞는 것은 무엇일까요?",
+    choices: [
+      "세션마다 항상 통째로 읽힌다",
+      "스킬 본문은 쓸 때만 읽혀서, 길게 써도 평소 부담이 적다",
+      "스킬은 한 번 쓰면 사라진다",
+      "스킬은 터미널에서만 쓸 수 있다",
+    ],
+    answer: 1,
+    explain: "CLAUDE.md는 세션마다 읽히지만, 스킬 본문은 쓸 때만 읽힙니다. 그래서 여러 단계 절차나 긴 점검표를 담기에 알맞습니다.",
+  },
+  {
+    id: 'ch407-make',
+    chapter: 407,
+    prompt: "Claude가 .claude 폴더에 스킬 파일을 쓰려 하자 「수동」이 아니어도 허락 창이 떴습니다. 왜 그럴까요?",
+    choices: [
+      "앱에 오류가 생겼기 때문이다",
+      "유료 요금제가 끝났기 때문이다",
+      "스킬 파일이 너무 길기 때문이다",
+      ".claude는 보호된 경로라 쓰기 전에 늘 허락을 묻기 때문이다",
+    ],
+    answer: 3,
+    explain: "보호된 경로에 쓰는 일은 편집 자동 수락 모드에서도 계속 묻습니다. 미리보기를 읽고, 처음에는 「한 번만 허용」을 고르는 편이 안전합니다.",
+  },
+  {
+    id: 'ch407-run',
+    chapter: 407,
+    prompt: "study-notes 스킬을 만들었습니다. 공부 필기 하나를 정리시키는 가장 짧은 방법은 무엇일까요?",
+    choices: [
+      "입력창에 /study-notes 와 정리할 파일 경로를 적어 보낸다",
+      "SKILL.md 파일을 열어 내용을 복사해 붙여 넣는다",
+      "새 폴더를 만들고 거기서 다시 스킬을 만든다",
+      "앱을 껐다 켜야 스킬이 실행된다",
+    ],
+    answer: 0,
+    explain: "스킬은 /이름 으로 바로 부릅니다. 입력창에 / 를 치면 목록이 나오고, 이름 일부를 쳐서 고를 수 있습니다.",
+  },
+  {
+    id: 'ch407-plugins',
+    chapter: 407,
+    prompt: "인터넷에서 처음 보는 플러그인을 발견했습니다. 공식 문서에 맞는 태도는 무엇일까요?",
+    choices: [
+      "권한 모드가 있으니 무엇을 설치해도 안전하다",
+      "플러그인은 글자만 바꾸므로 확인할 필요가 없다",
+      "내 권한으로 코드를 실행할 수 있으니, 믿을 만한지 확인한 뒤 필요할 때만 설치한다",
+      "설치한 뒤 문제가 생기면 그때 생각한다",
+    ],
+    answer: 2,
+    explain: "플러그인은 내 컴퓨터에서 내 권한으로 코드를 실행할 수 있고, 권한 규칙은 플러그인이 스스로 돌리는 코드에는 적용되지 않습니다. 설치 전에 확인합니다.",
   },
 ]
