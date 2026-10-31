@@ -60,6 +60,7 @@ export default defineConfig({
             { text: '2장. 화면 둘러보기', link: '/guide/12-gemini/02-screen-tour' },
             { text: '3장. 대화 관리', link: '/guide/12-gemini/03-chats' },
             { text: '4장. 파일과 만들기', link: '/guide/12-gemini/04-files-create' },
+            { text: '5장. 기억과 맞춤 설정', link: '/guide/12-gemini/05-memory' },
             { text: '← 1단계 · 공통 가이드', link: '/guide/00-common/' },
           ],
         },

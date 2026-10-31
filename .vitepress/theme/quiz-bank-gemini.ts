@@ -7,6 +7,7 @@ export const GEMINI_CHAPTERS: Record<number, { title: string; link: string }> = 
   302: { title: 'Gemini 2장. 화면 둘러보기', link: '/guide/12-gemini/02-screen-tour' },
   303: { title: 'Gemini 3장. 대화 관리', link: '/guide/12-gemini/03-chats' },
   304: { title: 'Gemini 4장. 파일과 만들기', link: '/guide/12-gemini/04-files-create' },
+  305: { title: 'Gemini 5장. 기억과 맞춤 설정', link: '/guide/12-gemini/05-memory' },
 }
 
 export const GEMINI_QUESTIONS: readonly Question[] = [
@@ -325,5 +326,58 @@ export const GEMINI_QUESTIONS: readonly Question[] = [
     ],
     answer: 2,
     explain: 'Gemini는 Google AI로 만든 것만 알아봅니다. 표시가 없으면 Google AI로 만들거나 고치지 않았다는 뜻이고, 다른 AI로 만들었을 수는 있습니다.',
+  },
+  // chapter 305
+  {
+    id: 'ch305-overview',
+    chapter: 305,
+    prompt: '회사에서 받은 Google 계정(회사 계정)으로 Gemini를 쓰는 사람이 메모리·지침 같은 맞춤 기능을 찾고 있습니다. 맞는 설명은 무엇일까요?',
+    choices: [
+      '이 맞춤 기능들은 개인 Google 계정에서만 되고, 회사 계정에서는 안 된다',
+      '회사 계정에서만 맞춤 기능이 열린다',
+      '유료 요금제에 가입하면 회사 계정에서도 반드시 된다',
+      '맞춤 기능은 휴대폰 앱에서만 켤 수 있다',
+    ],
+    answer: 0,
+    explain: '메모리·연결된 앱·지침 같은 맞춤 기능은 개인 Google 계정으로 로그인해야 씁니다. 회사·학교 계정이나 보호자가 관리하는 계정에서는 안 됩니다.',
+  },
+  {
+    id: 'ch305-memory',
+    chapter: 305,
+    prompt: 'Gemini가 지난 대화에서 들은 내 옛 주소를 계속 기억해서 답에 씁니다. 이 기억을 지우려면 어떻게 해야 할까요?',
+    choices: [
+      '"옛 주소는 잊어 줘"라고 한 번 말하면 확실히 지워진다',
+      '임시 채팅을 한 번 켰다 끄면 지워진다',
+      '그 주소가 담긴 대화를 「Gemini 앱 활동」에서 모두 지운다',
+      '모델을 Flash로 바꾸면 기억이 사라진다',
+    ],
+    answer: 2,
+    explain: 'Gemini가 기억한 내용을 지우려면 그 정보가 담긴 대화를 모두 지워야 합니다. "잊어 줘" 같은 지침은 늘 지켜지지 않습니다.',
+  },
+  {
+    id: 'ch305-instructions',
+    chapter: 305,
+    prompt: '한국에서 Gemini를 쓰는 사람이 "모든 답을 짧은 요약으로 시작해 줘"를 매번 말하기 귀찮아합니다. 어떻게 하면 될까요?',
+    choices: [
+      '한국에서는 이런 설정이 전혀 없으니 매번 말한다',
+      '메모리 요약 화면에서 영어로 적는다',
+      '대화마다 「다시 실행」을 누른다',
+      '「Gemini 요청 사항」에 그 문장을 지침으로 추가한다',
+    ],
+    answer: 3,
+    explain: '지침(「Gemini 요청 사항」)은 모든 사용자가 추가할 수 있고, 새 대화에서도 따로 말하지 않아도 적용됩니다. 대화로 기억시키기와 메모리 요약은 미국 전용입니다.',
+  },
+  {
+    id: 'ch305-import',
+    chapter: 305,
+    prompt: 'ChatGPT에서 내보낸 대화 ZIP 파일을 Gemini로 가져오려고 합니다. 가져오기 전에 알아 둘 점은 무엇일까요?',
+    choices: [
+      '가져온 대화는 아무 데도 저장되지 않고 바로 사라진다',
+      '가져와 이어 간 대화는 활동에 저장되고, AI 모델 학습을 비롯한 Google 서비스 개선에 쓰인다',
+      '하루에 몇 개든 제한 없이 올릴 수 있다',
+      '회사·학교 계정에서만 가져올 수 있다',
+    ],
+    answer: 1,
+    explain: '가져와 이어 간 대화는 내 활동에 저장되고, 생성형 AI 모델 학습을 비롯한 서비스 개선에 쓰입니다. ZIP 은 하루 5개, 5GB까지이고 개인 계정만 됩니다.',
   },
 ]
