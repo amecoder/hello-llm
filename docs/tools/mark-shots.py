@@ -1,7 +1,8 @@
 """Draw numbered red boxes on service screenshots so the text can say "①" instead of describing positions.
 
 usage: python3 docs/tools/mark-shots.py [spec.json]
-  default spec docs/tools/shot-marks.json (ChatGPT); docs/tools/claude-shot-marks.json for Claude.
+  default spec docs/tools/shot-marks.json (ChatGPT); docs/tools/claude-shot-marks.json for Claude,
+  docs/tools/gemini-shot-marks.json for Gemini.
   A spec's "_assets" key names the folder (relative to the repo) that holds sources and outputs.
 """
 from __future__ import annotations
@@ -15,7 +16,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_ASSETS = "guide/11-chatgpt/assets"
 SPEC = Path(__file__).with_name("shot-marks.json")
-FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+FONT = next(f for f in ("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", "/System/Library/Fonts/Supplemental/Arial Bold.ttf") if Path(f).exists())
 RED = (229, 57, 53)
 COLUMN = 650  # px the guide column shows an image at; wider images are shrunk to it
 

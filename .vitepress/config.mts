@@ -17,6 +17,7 @@ export default defineConfig({
     'guide/00-common/README.md': 'guide/00-common/index.md',
     'guide/11-chatgpt/README.md': 'guide/11-chatgpt/index.md',
     'guide/10-claude/README.md': 'guide/10-claude/index.md',
+    'guide/12-gemini/README.md': 'guide/12-gemini/index.md',
   },
   lastUpdated: true,
   markdown: {
@@ -37,6 +38,7 @@ export default defineConfig({
           { text: '1단계 · 공통 가이드', link: '/guide/00-common/' },
           { text: '2단계 · ChatGPT', link: '/guide/11-chatgpt/' },
           { text: '2단계 · Claude', link: '/guide/10-claude/' },
+          { text: '2단계 · Gemini', link: '/guide/12-gemini/' },
         ],
       },
       {
@@ -49,6 +51,17 @@ export default defineConfig({
       },
     ],
     sidebar: {
+      '/guide/12-gemini/': [
+        {
+          text: '2단계 · Gemini 가이드',
+          items: [
+            { text: '목차', link: '/guide/12-gemini/' },
+            { text: '1장. 시작하기', link: '/guide/12-gemini/01-getting-started' },
+            { text: '2장. 화면 둘러보기', link: '/guide/12-gemini/02-screen-tour' },
+            { text: '← 1단계 · 공통 가이드', link: '/guide/00-common/' },
+          ],
+        },
+      ],
       '/guide/10-claude/': [
         {
           text: '2단계 · Claude 가이드',

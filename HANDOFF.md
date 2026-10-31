@@ -20,7 +20,13 @@
     2. 도움말 원문을 다시 받는다: 빈 작업 폴더(예: scratchpad 아래 `gemini/`)에 `raw/` 를 만들고 그 폴더에서 `python3 <저장소>/docs/tools/gemini-fetch.py` (동시 1개로 고쳐 두었다 — 429 방지). 인용 대조는 리포트 부록 표를 `parts/*.md` 로 나눠 두고 `python3 docs/tools/gemini-verify.py <작업 폴더>` (2026-10-31 리눅스 재실행: 1,082행 문제 0)
     3. 가리기 스크립트(`.playwright-mcp/*.js`)는 gitignore라 Mac에 없다 — ChatGPT·Claude용도 Mac에서 새로 만들거나 리눅스에서 따로 옮겨야 한다. Gemini용은 어차피 새로 만든다
     4. Mac은 웹 조작 1순위가 `ego-browser`(전역 `rules/workflow.md`)지만, 캡처는 지금까지 사용자가 로그인한 Playwright 브라우저로 찍었다(CLAUDE.md 9번). 미리보기 포트는 Mac에서는 기본 5173이 비어 있으면 그대로 쓴다
-    5. 사용자 확인 대기 중: 12장 목차 그대로 진행 · 1~2장을 먼저 보여 주기 · 가이드 PR을 두 번(1~6장 / 7~12장)으로 나누기 — 셋 다 추천했고 답을 받기 전이다
+    5. 사용자 결정(2026-10-31): 12장 목차 그대로 · 1~2장을 먼저 보여 주기 · 가이드 PR을 두 번(1~6장 / 7~12장)으로 나누기 — 셋 다 승인
+  - 진행(2026-10-31, Mac, 커밋 전): 뼈대(`stages.ts` gemini base 300 · 사이드바 · 상단 「목차」 · `guide/index.md` 카드 · README) + `guide/12-gemini/README.md` + 1장·2장 본문 + 퀴즈 12문제(`theme/quiz-bank-gemini.ts`). 테스트 89 통과, 빌드 통과. 원문 132개는 scratchpad `gemini/raw/` 에 다시 받음(샌드박스가 support.google.com 을 막아 샌드박스 밖에서 실행)
+    - 각주 영어 인용은 오늘 받은 원문과 대조해 불일치 0. **13275745 의 「다른 답안(drafts)」 문장은 10-30 이후 원문에서 사라져** 2장에서 뺐다 — 리포트 A28 은 이제 낡은 값
+    - 캡처 8곳 완료(2026-10-31, Mac Playwright, 사용자 로그인): 원본 `shot-0N-*.png` + 번호 그림 `*-marked.png`, 좌표 `docs/tools/gemini-shot-marks.json`. `mark-shots.py` 는 Mac 글꼴(Arial Bold) 대체 경로를 넣었다
+    - **10-31 화면 변화**: + 메뉴에서 Canvas·Deep Research·가이드 학습·개인 인텔리전스가 「도구 더보기 ›」 아래로 들어갔다. 임시 채팅 안내 "안전을 위해 72시간 동안 저장됩니다". 「사용량 한도」 화면(/usage)에 「자동 모델 선택」 스위치가 보이지 않는다(도움말 A55와 다름). 로그아웃 화면은 모델이 「Flash-Lite」 고정
+    - 가리기 스크립트 `.playwright-mcp/gemini-mask.js`(gitignore): 대화(`.chat-history a.gem-nav-list-item`)·노트북(`a[href^="/notebook/"]`) 제목, `span.mavatar-user-name`, 아바타, `aria-label` 에 `@` 가 든 계정 링크를 바꾼다. `__gemLeak()` 가 미가림 제목 수·표시 이름·계정 이름·이메일을 검사 — 0이 아니면 찍지 않는다. **함정 3개**: ① 노트북 목록은 대화 목록과 구조가 달라 처음에 빠졌다(실제 노트북 제목 3개·표시 이름이 찍혀 그림을 바로 지움) ② 표시 이름은 Google 계정 이름과 달라 따로 잡아야 한다 ③ 페이지가 Trusted Types 라 `addScriptTag` 불가 — `context().addInitScript({ path })` 후 새로고침. 한 번 등록한 init 스크립트는 못 지우므로 새 판은 interval 이름을 바꾸고 옛 것을 `clearInterval`
+    - 다음: 사용자에게 1~2장 보여 주기 → 3~6장 → 첫 PR
   - 원격 브랜치 `docs/gemini-guide`(PR #46 머지됨)·`docs/nav-dropdown`(PR #45 머지됨)은 삭제 권한 규칙 때문에 남아 있다 — 정리는 사용자가 한다
 - [ ] (그다음) 3단계 Claude Code 가이드(`guide/20-claude-code/`)
 - 정리 완료(2026-10-29): Playwright 브라우저의 claude.ai·ChatGPT·Skilljar 로그아웃(사용자), 로컬 브랜치 `docs/expert-common-chapter`·`docs/practice-thread`·`docs/fill-screenshots` 삭제(사용자). 로컬은 `main`만 남음

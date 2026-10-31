@@ -1,0 +1,208 @@
+{
+ "_comment": "Gemini screenshots (1280x800, web, Korean, Google AI Pro, names masked): output name -> source, optional crop [x1,y1,x2,y2], numbered boxes [x1,y1,x2,y2] (optional 5th/6th value pins the badge centre). Run: python3 docs/tools/mark-shots.py docs/tools/gemini-shot-marks.json",
+ "_assets": "guide/12-gemini/assets",
+ "shot-02-home-marked": {
+  "src": "shot-02-home",
+  "marks": [
+   [
+    6,
+    60,
+    282,
+    745,
+    296,
+    72
+   ],
+   [
+    454,
+    368,
+    1114,
+    432
+   ],
+   [
+    924,
+    380,
+    1052,
+    420,
+    988,
+    447
+   ],
+   [
+    1232,
+    14,
+    1268,
+    50,
+    1250,
+    68
+   ],
+   [
+    248,
+    754,
+    276,
+    782
+   ]
+  ]
+ },
+ "shot-03-plus-marked": {
+  "src": "shot-03-plus",
+  "crop": [
+   440,
+   350,
+   980,
+   725
+  ],
+  "marks": [
+   [
+    478,
+    436,
+    702,
+    542
+   ],
+   [
+    478,
+    562,
+    702,
+    670
+   ],
+   [
+    478,
+    672,
+    702,
+    706
+   ],
+   [
+    708,
+    543,
+    936,
+    712,
+    953,
+    627
+   ]
+  ]
+ },
+ "shot-04-model-marked": {
+  "src": "shot-04-model",
+  "crop": [
+   790,
+   365,
+   1240,
+   740
+  ],
+  "marks": [
+   [
+    922,
+    380,
+    1054,
+    420
+   ],
+   [
+    844,
+    436,
+    1046,
+    662
+   ],
+   [
+    844,
+    682,
+    1046,
+    716
+   ],
+   [
+    1056,
+    536,
+    1206,
+    712,
+    1131,
+    520
+   ]
+  ]
+ },
+ "shot-05-temp-marked": {
+  "src": "shot-05-temp",
+  "crop": [
+   300,
+   0,
+   1280,
+   450
+  ],
+  "marks": [
+   [
+    1232,
+    14,
+    1268,
+    50,
+    1250,
+    68
+   ],
+   [
+    488,
+    156,
+    1080,
+    306
+   ]
+  ]
+ },
+ "shot-06-settings-marked": {
+  "src": "shot-06-settings",
+  "crop": [
+   0,
+   150,
+   500,
+   800
+  ],
+  "marks": [
+   [
+    252,
+    170,
+    476,
+    308
+   ],
+   [
+    252,
+    316,
+    476,
+    488
+   ],
+   [
+    252,
+    498,
+    476,
+    742
+   ],
+   [
+    248,
+    754,
+    276,
+    782
+   ]
+  ]
+ },
+ "shot-07-usage-marked": {
+  "src": "shot-07-usage",
+  "crop": [
+   340,
+   15,
+   1200,
+   460
+  ],
+  "marks": [
+   [
+    384,
+    176,
+    1184,
+    280
+   ],
+   [
+    384,
+    284,
+    1184,
+    352
+   ],
+   [
+    384,
+    377,
+    1184,
+    451
+   ]
+  ]
+ }
+}

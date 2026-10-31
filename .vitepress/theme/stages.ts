@@ -1,7 +1,7 @@
 // Learning stages and how chapter numbers map to them: 1-99 are the common guide,
-// 101-199 the ChatGPT guide (101 = its chapter 1), 201-299 the Claude guide,
+// 101-199 the ChatGPT guide (101 = its chapter 1), 201-299 the Claude guide, 301-399 the Gemini guide,
 // so one number names a chapter site-wide. Keep STAGES sorted by base: stageOf relies on it.
-export type StageId = 'common' | 'chatgpt' | 'claude'
+export type StageId = 'common' | 'chatgpt' | 'claude' | 'gemini'
 
 export type Stage = { id: StageId; title: string; dir: string; base: number; link: string }
 
@@ -9,6 +9,7 @@ export const STAGES: readonly Stage[] = [
   { id: 'common', title: '1단계 · 공통 가이드', dir: 'guide/00-common', base: 0, link: '/guide/00-common/' },
   { id: 'chatgpt', title: '2단계 · ChatGPT', dir: 'guide/11-chatgpt', base: 100, link: '/guide/11-chatgpt/' },
   { id: 'claude', title: '2단계 · Claude', dir: 'guide/10-claude', base: 200, link: '/guide/10-claude/' },
+  { id: 'gemini', title: '2단계 · Gemini', dir: 'guide/12-gemini', base: 300, link: '/guide/12-gemini/' },
 ]
 
 export function stageOf(chapter: number): Stage {
