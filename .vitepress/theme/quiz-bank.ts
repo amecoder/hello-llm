@@ -3,6 +3,7 @@
 import type { Question } from './quiz'
 import { CLAUDE_CHAPTERS, CLAUDE_QUESTIONS } from './quiz-bank-claude.ts'
 import { GEMINI_CHAPTERS, GEMINI_QUESTIONS } from './quiz-bank-gemini.ts'
+import { CLAUDE_CODE_CHAPTERS, CLAUDE_CODE_QUESTIONS } from './quiz-bank-claude-code.ts'
 
 export const CHAPTERS: Record<number, { title: string; link: string }> = {
   1: { title: '1장. LLM이란 무엇인가', link: '/guide/00-common/01-what-is-llm' },
@@ -30,6 +31,7 @@ export const CHAPTERS: Record<number, { title: string; link: string }> = {
   111: { title: 'ChatGPT 11장. 전문가처럼 쓰기', link: '/guide/11-chatgpt/11-expert' },
   ...CLAUDE_CHAPTERS,
   ...GEMINI_CHAPTERS,
+  ...CLAUDE_CODE_CHAPTERS,
 }
 
 export const QUESTIONS: readonly Question[] = [
@@ -1741,4 +1743,5 @@ export const QUESTIONS: readonly Question[] = [
   },
   ...CLAUDE_QUESTIONS,
   ...GEMINI_QUESTIONS,
+  ...CLAUDE_CODE_QUESTIONS,
 ]

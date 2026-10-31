@@ -19,7 +19,7 @@ ChatGPT나 Claude에 질문은 해 봤지만 "이게 다인가?" 싶었던 분�
 |---|---|---|
 | 1 | [공통 가이드](guide/00-common/README.md) | 어떤 LLM에서든 통하는 공통 원리와 사용법 |
 | 2 | [ChatGPT](https://amecoder.github.io/hello-llm/guide/11-chatgpt/) · [Claude](https://amecoder.github.io/hello-llm/guide/10-claude/) · [Gemini](https://amecoder.github.io/hello-llm/guide/12-gemini/) | 서비스별 기능과 활용법 |
-| 3 | Claude Code · Codex (준비 중) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
+| 3 | [Claude Code](https://amecoder.github.io/hello-llm/guide/20-claude-code/) (작성 중) · Codex · Antigravity (준비 중) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
 | 4 | AI-SDLC (준비 중) | AI와 함께 기획부터 배포까지 — 소프트웨어 개발 전 과정(SDLC) |
 
 웹사이트로 읽기: **https://amecoder.github.io/hello-llm/**
