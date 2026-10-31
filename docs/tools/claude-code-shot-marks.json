@@ -494,5 +494,287 @@
     372
    ]
   ]
+ },
+ "shot-17-plan-prompt-marked": {
+  "src": "shot-17-plan-prompt",
+  "marks": [
+   [
+    25,
+    140,
+    830,
+    232
+   ],
+   [
+    740,
+    244,
+    802,
+    272,
+    720,
+    258
+   ]
+  ]
+ },
+ "shot-18-plan-marked": {
+  "src": "shot-18-plan",
+  "marks": [
+   [
+    30,
+    392,
+    534,
+    512
+   ],
+   [
+    1046,
+    48,
+    1566,
+    975,
+    1540,
+    120
+   ],
+   [
+    1052,
+    546,
+    1562,
+    868,
+    1540,
+    600
+   ]
+  ]
+ },
+ "shot-19-plan-edit-marked": {
+  "src": "shot-19-plan-edit",
+  "marks": [
+   [
+    30,
+    90,
+    496,
+    172
+   ],
+   [
+    448,
+    182,
+    498,
+    216
+   ]
+  ]
+ },
+ "shot-20-plan-revised-marked": {
+  "src": "shot-20-plan-revised",
+  "marks": [
+   [
+    460,
+    343,
+    574,
+    372,
+    598,
+    357
+   ],
+   [
+    30,
+    456,
+    372,
+    486,
+    396,
+    471
+   ],
+   [
+    30,
+    594,
+    534,
+    722,
+    560,
+    660
+   ],
+   [
+    230,
+    674,
+    290,
+    706
+   ]
+  ]
+ },
+ "shot-21-plan-run-marked": {
+  "src": "shot-21-plan-run",
+  "marks": [
+   [
+    30,
+    594,
+    716,
+    792
+   ],
+   [
+    748,
+    385,
+    1038,
+    570
+   ],
+   [
+    748,
+    588,
+    1038,
+    652
+   ],
+   [
+    636,
+    944,
+    676,
+    972
+   ]
+  ]
+ },
+ "shot-22-claudemd-prompt-marked": {
+  "src": "shot-22-claudemd-prompt",
+  "marks": [
+   [
+    25,
+    24,
+    825,
+    122
+   ]
+  ]
+ },
+ "shot-23-claudemd-test-marked": {
+  "src": "shot-23-claudemd-test",
+  "marks": [
+   [
+    25,
+    26,
+    825,
+    82
+   ]
+  ]
+ },
+ "shot-24-claudemd-result-marked": {
+  "src": "shot-24-claudemd-result",
+  "marks": [
+   [
+    400,
+    92,
+    1110,
+    290
+   ],
+   [
+    400,
+    315,
+    1110,
+    604
+   ],
+   [
+    1274,
+    390,
+    1560,
+    456
+   ]
+  ]
+ },
+ "shot-25-skill-prompt-marked": {
+  "src": "shot-25-skill-prompt",
+  "marks": [
+   [
+    25,
+    14,
+    825,
+    112
+   ]
+  ]
+ },
+ "shot-26-permission-marked": {
+  "src": "shot-26-permission",
+  "marks": [
+   [
+    406,
+    262,
+    898,
+    300
+   ],
+   [
+    418,
+    466,
+    886,
+    780
+   ],
+   [
+    650,
+    794,
+    698,
+    826,
+    674,
+    858
+   ],
+   [
+    710,
+    794,
+    886,
+    828,
+    798,
+    858
+   ]
+  ]
+ },
+ "shot-27-allow-once-marked": {
+  "src": "shot-27-allow-once",
+  "marks": [
+   [
+    170,
+    78,
+    326,
+    112,
+    140,
+    95
+   ]
+  ]
+ },
+ "shot-28-skill-menu-marked": {
+  "src": "shot-28-skill-menu",
+  "marks": [
+   [
+    58,
+    156,
+    300,
+    192
+   ],
+   [
+    304,
+    30,
+    556,
+    190,
+    580,
+    110
+   ]
+  ]
+ },
+ "shot-29-skill-run-marked": {
+  "src": "shot-29-skill-run",
+  "marks": [
+   [
+    25,
+    70,
+    825,
+    120
+   ]
+  ]
+ },
+ "shot-30-injection-marked": {
+  "src": "shot-30-injection",
+  "marks": [
+   [
+    398,
+    122,
+    982,
+    154
+   ],
+   [
+    398,
+    528,
+    1112,
+    724
+   ],
+   [
+    1274,
+    390,
+    1560,
+    456
+   ]
+  ]
  }
 }

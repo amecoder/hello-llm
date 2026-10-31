@@ -60,7 +60,7 @@ features:
 |---|---|
 | 1. 공통 가이드 (공개) | 어떤 AI에서든 통하는 원리와 잘 묻는 법 |
 | 2. [ChatGPT](/guide/11-chatgpt/) · [Claude](/guide/10-claude/) (공개) | 서비스별 기능과 설정 |
-| 3. Claude Code (작성 중) · Codex · Antigravity (준비 중) | 내 컴퓨터에서 직접 파일을 읽고 고치는 AI 도구로 일 맡기기 |
+| 3. Claude Code · Codex · Antigravity (준비 중) | 내 컴퓨터에서 직접 파일을 읽고 고치는 AI 도구로 일 맡기기 |
 | 4. AI-SDLC (준비 중) | AI와 함께 기획부터 배포까지 소프트웨어 만들기 — SDLC는 소프트웨어 개발 전 과정(Software Development Life Cycle) |
 
 장별 내용은 [전체 목차](/guide/)에서 볼 수 있습니다.

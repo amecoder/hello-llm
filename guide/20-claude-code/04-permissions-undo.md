@@ -163,7 +163,7 @@ inbox의 공부 필기를 공부 노트로 정리해 줘. 핵심 내용 / 모르
 
 <ChapterDone :chapter="404" />
 
-다음 장: 5장 「잘 맡기는 법」은 준비 중입니다. 그동안 [3단계 목차](./)에서 앞으로 배울 내용을 볼 수 있습니다.
+다음 장: [5장. 잘 맡기는 법](05-delegate-well.md)
 
 [^keys]: Claude Code 공식 문서, 「Desktop application」 단축키 표. "Open permission mode menu" https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
 [^modes]: Claude Code 공식 문서, 「Desktop application」. "Claude asks before editing files or running commands. You see a diff and can accept or reject each change." / "Claude auto-accepts file edits and common filesystem commands like mkdir, touch, and mv, but still asks before running other terminal commands." / "Claude reads files and runs commands to explore, then proposes a plan without editing your source code." / "Claude runs without routine prompts; before actions such as shell commands and network requests run, a background classifier checks that they align with your request." / "On Pro, Max, and Ultra plans, enable "Allow bypass permissions mode" in Settings > Code or Settings > Claude Code." / "Only use this in sandboxed containers or VMs." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
