@@ -63,6 +63,7 @@ export default defineConfig({
             { text: '3장. 화면 둘러보기', link: '/guide/20-claude-code/03-screen-tour' },
             { text: '4장. 허락과 되돌리기', link: '/guide/20-claude-code/04-permissions-undo' },
             { text: '5장. 잘 맡기는 법', link: '/guide/20-claude-code/05-delegate-well' },
+            { text: '6장. 프로젝트 기억', link: '/guide/20-claude-code/06-claude-md' },
             { text: '← 1단계 · 공통 가이드', link: '/guide/00-common/' },
           ],
         },

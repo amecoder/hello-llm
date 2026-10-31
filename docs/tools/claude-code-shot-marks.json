@@ -621,5 +621,50 @@
     972
    ]
   ]
+ },
+ "shot-22-claudemd-prompt-marked": {
+  "src": "shot-22-claudemd-prompt",
+  "marks": [
+   [
+    25,
+    24,
+    825,
+    122
+   ]
+  ]
+ },
+ "shot-23-claudemd-test-marked": {
+  "src": "shot-23-claudemd-test",
+  "marks": [
+   [
+    25,
+    26,
+    825,
+    82
+   ]
+  ]
+ },
+ "shot-24-claudemd-result-marked": {
+  "src": "shot-24-claudemd-result",
+  "marks": [
+   [
+    400,
+    92,
+    1110,
+    290
+   ],
+   [
+    400,
+    315,
+    1110,
+    604
+   ],
+   [
+    1274,
+    390,
+    1560,
+    456
+   ]
+  ]
  }
 }

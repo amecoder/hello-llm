@@ -156,7 +156,7 @@ Claude는 일이 **끝나 보이면** 멈춥니다. 맞는지 스스로 확인�
 
 <ChapterDone :chapter="405" />
 
-다음 장: 6장 「프로젝트 기억」은 준비 중입니다. 그동안 [3단계 목차](./)에서 앞으로 배울 내용을 볼 수 있습니다.
+다음 장: [6장. 프로젝트 기억](06-claude-md.md)
 
 [^cant-see]: Claude Code 공식 문서, 「Best practices for Claude Code」. "Claude built something different from what you had in mind, or it has to rediscover the same fact at the start of every session. It's missing information it can't get from reading the repo." https://code.claude.com/docs/en/best-practices (확인일 2026-10-31)
 [^specific]: Claude Code 공식 문서, 「Best practices for Claude Code」. "If you name the file, describe the symptom, and say what "fixed" looks like up front, you usually save yourself a round of corrections later." https://code.claude.com/docs/en/best-practices (확인일 2026-10-31)

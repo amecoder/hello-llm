@@ -8,6 +8,7 @@ export const CLAUDE_CODE_CHAPTERS: Record<number, { title: string; link: string 
   403: { title: 'Claude Code 3장. 화면 둘러보기', link: '/guide/20-claude-code/03-screen-tour' },
   404: { title: 'Claude Code 4장. 허락과 되돌리기', link: '/guide/20-claude-code/04-permissions-undo' },
   405: { title: 'Claude Code 5장. 잘 맡기는 법', link: '/guide/20-claude-code/05-delegate-well' },
+  406: { title: 'Claude Code 6장. 프로젝트 기억', link: '/guide/20-claude-code/06-claude-md' },
 }
 
 export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
@@ -327,5 +328,71 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     ],
     answer: 1,
     explain: "실패한 시도가 대화에 쌓이면 Claude가 그걸 계속 다시 읽습니다. 배운 점을 담은 새 요청 하나가 거의 항상 낫습니다.",
+  },
+  // chapter 406
+  {
+    id: 'ch406-fresh',
+    chapter: 406,
+    prompt: "어제 세션에서 \"날짜는 10/27(월)처럼 써 줘\"라고 했습니다. 오늘 새 세션에서 Claude가 그 말을 기억할까요?",
+    choices: [
+      "항상 기억한다. 한 번 말한 것은 계속 지킨다",
+      "새 세션은 빈 상태로 시작하므로, 계속 쓰려면 CLAUDE.md 같은 곳에 적어 둬야 한다",
+      "앱을 다시 켜지 않았다면 기억한다",
+      "유료 요금제에서만 기억한다",
+    ],
+    answer: 1,
+    explain: "세션은 매번 빈 상태로 시작합니다. 세션을 넘어 이어 가려면 CLAUDE.md에 적거나, Claude가 쓰는 자동 메모리에 남아 있어야 합니다.",
+  },
+  {
+    id: 'ch406-what',
+    chapter: 406,
+    prompt: "CLAUDE.md에 적을 규칙으로 가장 알맞은 것은 무엇일까요?",
+    choices: [
+      "정리를 잘 해 줘",
+      "날짜는 10/27(월)처럼 쓴다",
+      "항상 최선을 다해 줘",
+      "보기 좋게 만들어 줘",
+    ],
+    answer: 1,
+    explain: "규칙은 결과를 보고 지켰는지 따질 수 있을 만큼 구체적이어야 합니다. 구체적이고 짧을수록 더 일관되게 지킵니다.",
+  },
+  {
+    id: 'ch406-make',
+    chapter: 406,
+    prompt: "정리도구 폴더 맨 위에 만든 CLAUDE.md는 어디에 적용될까요?",
+    choices: [
+      "내 컴퓨터의 모든 폴더 세션",
+      "Claude 채팅(Chat) 대화 전체",
+      "정리도구 폴더에서 여는 세션",
+      "오늘 하루 동안의 세션만",
+    ],
+    answer: 2,
+    explain: "폴더 맨 위의 CLAUDE.md는 프로젝트 지시로, 그 폴더의 세션에 적용됩니다. 모든 폴더에 적용하려면 사용자 폴더의 ~/.claude/CLAUDE.md에 적습니다.",
+  },
+  {
+    id: 'ch406-test',
+    chapter: 406,
+    prompt: "CLAUDE.md에 적은 규칙을 Claude가 지키는지 시험하려 합니다. 가장 좋은 방법은 무엇일까요?",
+    choices: [
+      "CLAUDE.md를 만든 세션에서 규칙을 다시 한 번 말해 준다",
+      "새 세션을 열고, 형식은 말하지 않은 짧은 요청을 보낸다",
+      "CLAUDE.md 파일 이름을 바꿔 본다",
+      "규칙을 더 길게 늘려 쓴다",
+    ],
+    answer: 1,
+    explain: "CLAUDE.md는 세션을 시작할 때 읽힙니다. 새 세션에서 규칙을 말하지 않고 요청해야 파일만으로 지키는지 볼 수 있습니다.",
+  },
+  {
+    id: 'ch406-not-enforced',
+    chapter: 406,
+    prompt: "CLAUDE.md에 \"inbox 원본은 절대 고치지 않는다\"고 적었습니다. 공식 문서 기준으로 맞는 설명은 무엇일까요?",
+    choices: [
+      "적어 두면 어떤 경우에도 절대 고치지 않도록 앱이 막아 준다",
+      "참고 맥락이라 강제 장치는 아니므로, 권한 모드·Git 기록과 함께 지킨다",
+      "CLAUDE.md는 첫 세션에서만 읽히고 그 뒤로는 무시된다",
+      "규칙이 길수록 더 잘 지키므로 길게 쓸수록 좋다",
+    ],
+    answer: 1,
+    explain: "Claude는 CLAUDE.md를 강제 설정이 아닌 맥락으로 다룹니다. 꼭 막아야 하는 것은 권한 모드와 Git 기록 같은 다른 장치와 함께 지킵니다.",
   },
 ]
