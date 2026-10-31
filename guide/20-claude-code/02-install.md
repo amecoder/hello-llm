@@ -7,16 +7,16 @@
 
 ## 설치하고 로그인하기
 
-Claude Code는 **Claude 데스크톱 앱 안에 들어 있습니다.** 앱만 설치하면 되고, 다른 프로그램(Node.js나 터미널용 Claude Code)은 따로 설치하지 않아도 됩니다.[^quickstart]
+Claude Code는 **Claude 데스크톱 앱 안에 들어 있습니다.** 앱만 설치하면 되고, 다른 프로그램(개발용 실행 도구인 Node.js나 터미널용 Claude Code)은 따로 설치하지 않아도 됩니다.[^quickstart]
 
 1. 공식 문서의 설치 페이지에서 내 컴퓨터에 맞는 파일을 받습니다.[^quickstart]
    - **macOS**: 하나의 파일로 인텔·애플 실리콘 맥 모두에 설치됩니다.
    - **Windows**: 보통의 PC(x64)용 설치 파일이 있고, ARM64 PC용은 따로 있습니다.
-   - **Linux**: 베타(시험판)이며 Ubuntu·Debian에서 apt로 설치합니다.
+   - **Linux**: 베타(시험판)이며 Ubuntu·Debian에서 apt(리눅스의 프로그램 설치 도구)로 설치합니다.
 2. 받은 파일을 실행해 설치합니다.
-3. 앱을 열고 **Anthropic 계정**으로 로그인합니다.[^quickstart] claude.ai에서 쓰던 계정 그대로입니다.
+3. 앱을 열고 **Anthropic 계정**으로 로그인합니다.[^quickstart] 개인 구독(Pro·Max·Ultra)이라면 claude.ai에서 쓰던 계정으로 로그인합니다.[^auth]
 
-2단계에서 Claude 앱을 이미 설치했다면 이 단계는 건너뛰어도 됩니다. 앱이 오래됐다면 메뉴 막대의 **Claude → 업데이트 확인…** 으로 최신판을 받아 두세요.
+2단계에서 Claude 앱을 이미 설치했다면 이 단계는 건너뛰어도 됩니다. 앱이 오래됐다면 최신판을 받아 두세요. macOS는 메뉴 막대의 **Claude → 업데이트 확인…**, Windows는 **Help → Check for Updates…** 입니다.[^update]
 
 <Quiz id="ch402-install" />
 
@@ -28,7 +28,7 @@ Code를 눌렀을 때 안내가 뜨면 이렇게 합니다.[^quickstart]
 
 - **유료 요금제로 바꾸라는 안내**: Claude Code는 유료 구독이 있어야 씁니다([1장](01-what-is.md#무엇이-필요한가-—-요금제)). 구독한 뒤 다시 엽니다.
 - **온라인으로 로그인하라는 안내**: 로그인을 마치고 앱을 다시 시작합니다.
-- **403 오류**: 공식 문서의 인증 문제 해결 안내를 봅니다.
+- **403 오류**(접근이 거부됐다는 오류): 공식 문서의 인증 문제 해결 안내를 봅니다.
 
 Code 탭에서 새 세션을 열면 이런 화면이 나옵니다.
 
@@ -38,6 +38,8 @@ Code 탭에서 새 세션을 열면 이런 화면이 나옵니다.
 
 | 번호 | 화면 이름 | 하는 일 |
 |---|---|---|
+| ① | 시작 안내 카드 | 새 세션에서만 보임. 지금은 쓰지 않아도 됨 |
+| ② | 입력창 | 할 일을 적어 보내는 곳 |
 | ③ | 이 컴퓨터 | 어디서 일할지(환경). 내 컴퓨터에서 하려면 그대로 둠 |
 | ④ | 선택… | 어느 폴더에서 일할지 |
 | ⑤ | Opus 5.5 · 중간 | 어떤 모델이, 얼마나 깊이 생각할지 |
@@ -67,11 +69,13 @@ Claude Code는 **내가 고른 폴더 안에서** 일합니다. 그래서 처음
 | [공부-2026-10-28-프롬프트-강의.txt](/practice/notes/inbox/공부-2026-10-28-프롬프트-강의.txt) | 강의 들으며 적은 필기 |
 | [회고-2026-10-29.txt](/practice/notes/inbox/회고-2026-10-29.txt) · [10-30](/practice/notes/inbox/회고-2026-10-30.txt) · [10-31](/practice/notes/inbox/회고-2026-10-31.txt) | 하루 회고 3일치 |
 
+메모의 날짜와 요일은 이야기를 위해 지어낸 것이라 **실제 2026년 달력과 맞지 않습니다.** 결과를 확인할 때는 **메모에 적힌** 날짜·요일과 맞는지 보세요.
+
 1. 내 컴퓨터에 새 폴더 **정리도구** 를 만들고, 그 안에 **inbox** 폴더를 만듭니다.
 2. 위 파일 5개를 내려받아 **inbox** 에 넣습니다.
 3. Code 탭 입력창 아래 줄의 **선택…**(④)을 누릅니다.
 
-![폴더 메뉴. ① 폴더 「선택…」, ② 「폴더 검색…」 칸(그림은 처음 여는 폴더 이름을 넣어 「일치하는 항목 없음」이 나온 모습), ③ 「폴더 열기…」에 빨간 번호가 붙어 있다](assets/shot-02-folder-menu-marked.png)
+![폴더 메뉴. ① 폴더 「선택…」, ② 「폴더 검색…」 칸(그림은 아직 연 적 없는 다른 연습 폴더 이름을 넣어 「일치하는 항목 없음」이 나온 모습), ③ 「폴더 열기…」에 빨간 번호가 붙어 있다](assets/shot-02-folder-menu-marked.png)
 
 4. 메뉴가 열리면 맨 아래 **폴더 열기…**(③)를 누릅니다. 공식 문서의 「Open folder…」가 이 항목입니다.[^quickstart]
 5. 파일 고르는 창에서 **정리도구** 폴더를 고르고 **열기**를 누릅니다.
@@ -183,3 +187,5 @@ inbox 폴더의 회의 메모를 읽고 회의록으로 정리해 줘. 결정한
 [^desktop-start]: Claude Code 공식 문서, 「Desktop application」. "Before you send your first message, choose the environment, project folder, permission mode, and model in the row under the prompt box" / "Type what you want Claude to do and press Enter to send. Claude reads your project files, makes changes, and runs commands based on your permission mode." / "click the stop button to interrupt immediately, or type a correction and press Enter to send it without stopping the running action." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
 [^desktop-layout]: Claude Code 공식 문서, 「Desktop application」. "In the earlier layout, choose the environment and any project folder or repository above the prompt box, and the permission mode and model in the row under it." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
 [^desktop-modes]: Claude Code 공식 문서, 「Desktop application」. "Claude asks before editing files or running commands. You see a diff and can accept or reject each change." / "The desktop app reads the same settings files as the CLI." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
+[^auth]: Claude Code 공식 문서, 「Authentication」. "Claude Pro, Max, or Ultra subscription: log in with your claude.ai account." https://code.claude.com/docs/en/authentication (확인일 2026-10-31)
+[^update]: Claude Code 공식 문서, 「Desktop application」. "Open Claude > Check for Updates… on macOS or Help > Check for Updates… on Windows to update." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)

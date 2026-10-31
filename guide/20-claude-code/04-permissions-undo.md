@@ -7,21 +7,21 @@
 
 ## 권한 모드 고르기
 
-입력창 아래 줄 오른쪽의 모드 이름(처음엔 「수동」)을 누르면 권한 모드 메뉴가 열립니다. 단축키는 **Cmd+Shift+M** 입니다.[^keys]
+입력창 아래 줄 오른쪽의 모드 이름(이 가이드 화면에서는 「수동」)을 누르면 권한 모드 메뉴가 열립니다. 단축키는 **Cmd+Shift+M** 입니다.[^keys]
 
 ![권한 모드 메뉴. ① 자동, ② 수동(체크 표시), ③ 편집 자동 수락, ④ 계획, ⑤ 권한 무시(흐리게 「Claude Code 설정에서 활성화」), ⑥ 입력창 아래 줄의 모드 버튼에 빨간 번호가 붙어 있다](assets/shot-12-modes-marked.png)
 
 | 번호 | 화면 이름 | 공식 문서 이름 | Claude가 묻지 않고 하는 일 |
 |---|---|---|---|
-| ② | 수동 | Manual | 없음. 파일을 고치거나 명령을 실행하기 전에 매번 묻는다 |
+| ② | 수동 | Manual | 없음(고치거나 실행하기 전에 매번 물음) |
 | ③ | 편집 자동 수락 | Accept edits | 폴더 안 파일 만들기·고치기와 기본 파일 명령 |
-| ④ | 계획 | Plan | 읽고 살펴보기만. 파일은 고치지 않고 계획을 내놓는다 |
-| ① | 자동 | Auto | 대부분. 뒤에서 검사기가 위험한 일을 걸러 낸다 |
-| ⑤ | 권한 무시 | Bypass permissions | 거의 전부. 설정에서 켜야 나타난다 |
+| ④ | 계획 | Plan | 읽고 살펴보기만(파일은 고치지 않고 계획을 내놓음) |
+| ① | 자동 | Auto | 대부분(요청과 맞는지 검사기가 뒤에서 확인) |
+| ⑤ | 권한 무시 | Bypass permissions | 거의 전부(설정에서 켜야 나타남) |
 
 출처: 화면 이름은 이 가이드의 화면 확인(2026-10-31), 동작은 공식 문서[^modes]
 
-모드마다 **편리함과 내가 지켜보는 정도를 맞바꿉니다.**[^tradeoff] 위로 갈수록 내가 더 많이 보고, 아래로 갈수록 Claude가 더 많이 혼자 합니다.
+모드마다 **편리함과 내가 지켜보는 정도를 맞바꿉니다.**[^tradeoff]
 
 **처음에는 「수동」으로 시작하세요.** Claude가 무엇을 하려는지 하나씩 보면서 익숙해지는 편이 안심됩니다. 하는 일이 믿음직해지면 「편집 자동 수락」으로 넘어가도 됩니다. 일이 크면 「계획」으로 먼저 방법을 받아 보는 것이 좋습니다(5장).[^plan-tip]
 
@@ -32,7 +32,7 @@
 
 ## 「편집 자동 수락」「자동」「권한 무시」를 조심할 이유
 
-**편집 자동 수락**은 파일 고치기만이 아니라 **파일을 지우는 명령**(`rm`)까지 묻지 않고 실행합니다. 대신 작업 폴더 안에서만 그렇습니다.[^accept] 2장에서 "작은 연습 폴더를 고르라"고 한 이유가 여기 있습니다. 폴더가 작으면 실수가 퍼질 범위도 작습니다.
+**편집 자동 수락**은 파일 고치기만이 아니라 **파일을 지우는 명령**(`rm`)까지 묻지 않고 실행합니다. 대신 작업 폴더 안에서만 그렇습니다.[^accept] 2장에서 "작은 연습 폴더를 고르라"고 한 이유가 여기 있습니다. 폴더가 작으면 실수가 퍼질 범위도 작습니다. 다만 위험한 경로를 통째로 지우는 명령(예: `rm -rf ~`, 홈 폴더 전체 삭제)은 어느 모드에서도 자동으로 허락되지 않습니다.[^critical]
 
 **자동**은 묻는 일을 크게 줄여 주지만, 공식 문서는 이렇게 못 박습니다. 자동 모드는 허락 창을 줄여 줄 뿐 **안전을 보장하지 않습니다.**[^auto] 큰 방향을 믿을 수 있는 일에 쓰고, 민감한 일에서 검토를 대신하는 용도로 쓰지 마세요.[^auto]
 
@@ -95,8 +95,8 @@ inbox의 공부 필기를 공부 노트로 정리해 줘. 핵심 내용 / 모르
 
 되감기는 만능이 아닙니다. 확인 창의 ③ 문장이 그 한계를 알려 줍니다.
 
-- **명령(셸)으로 바꾼 파일**: Claude가 파일 편집 도구가 아니라 명령을 실행해서 바꾼 파일은 추적하지 않습니다.[^limits-bash]
-- **내가 직접 고친 파일, 다른 세션이 고친 파일**: 지금 세션에서 고친 파일만 추적합니다.[^limits-external]
+- **명령(셸)으로 바꾼 파일**: Claude가 파일 편집 도구가 아니라 명령을 실행해서만 바꾼 파일은 추적하지 않습니다.[^limits-bash]
+- **내가 직접 고친 파일, 다른 세션이 고친 파일**: 보통 추적하지 않습니다. 지금 세션에서 고친 파일만 추적합니다.[^limits-external]
 - **커밋**: Git 기록은 그대로 남습니다(확인 창 문구).
 - **오래된 체크포인트**: 체크포인트는 세션당 최근 100개까지 남고, 기본으로 약 30일 뒤 정리됩니다.[^retention]
 
@@ -125,8 +125,8 @@ inbox의 공부 필기를 공부 노트로 정리해 줘. 핵심 내용 / 모르
 | | 되감기(체크포인트) | Git 기록(커밋) |
 |---|---|---|
 | 언제 저장되나 | 요청을 보낼 때마다 자동 | 내가(또는 Claude가) 남길 때 |
-| 무엇을 되돌리나 | 이 세션에서 Claude가 편집한 파일과 대화 | 기록한 시점의 폴더 전체 |
-| 얼마나 남나 | 최근 100개, 약 30일 | 지울 때까지 |
+| 무엇을 되돌리나 | 이 세션에서 Claude가 편집한 파일과 대화 | 커밋해 둔 파일들 |
+| 얼마나 남나 | 최근 100개, 약 30일 | 기록을 지우기 전까지 |
 
 출처: 공식 문서[^checkpoint][^retention], Git 열은 이 가이드의 정리
 
@@ -135,7 +135,7 @@ inbox의 공부 필기를 공부 노트로 정리해 줘. 핵심 내용 / 모르
 ## 직접 해 보기
 
 1. 입력창 아래 줄의 모드 버튼을 눌러 권한 모드 메뉴를 열고, 다섯 모드의 설명을 읽어 본다. 지금은 「수동」으로 둔다.
-2. 공부 필기 정리 요청을 보내고, 만들어진 노트를 원본 필기와 맞춰 본다(요령 5가지, 모르는 말, 질문 1개, 해 볼 것 1개).
+2. 공부 필기 정리 요청을 보내고, 만들어진 노트를 원본 필기와 맞춰 본다(요령 5가지, 모르는 말, 질문 1개, 해 볼 것 1개). 이 가이드에서는 Claude가 회고 메모까지 읽고 "해 볼 것: 해 봄(10/30)"을 채웠습니다. 요청하지 않은 파일을 근거로 쓴 부분은 그 근거가 맞는지 따로 확인한다.
 3. `/rewind` 로 그 요청 전으로 되감는다. 확인 창의 `+0 −N` 숫자를 먼저 확인한다.
 4. 입력창에 돌아온 요청에서 형식 하나를 바꿔(예: "모르는 말 풀이는 표로") 다시 보낸다.
 5. 마음에 드는 결과가 나오면 「변경 사항 커밋」으로 기록을 남긴다.
@@ -147,7 +147,7 @@ inbox의 공부 필기를 공부 노트로 정리해 줘. 핵심 내용 / 모르
 - 권한 모드는 수동 · 편집 자동 수락 · 계획 · 자동 · 권한 무시가 있다. 처음엔 수동으로 시작한다.
 - 편집 자동 수락은 폴더 안 파일 삭제 명령까지 묻지 않는다. 자동은 안전을 보장하지 않는다. 권한 무시는 격리된 환경에서만 쓴다.
 - 요청마다 체크포인트가 저장된다. `/rewind` 로 코드와 대화·대화만·코드만 골라 되감는다.
-- 되감기는 명령으로 바꾼 파일, 내가 직접 고친 파일, 커밋은 되돌리지 않는다.
+- 되감기는 명령으로만 바꾼 파일, 내가 직접 고친 파일, 커밋은 보통 되돌리지 않는다.
 - 좋은 상태는 커밋으로 남겨 두 번째 안전망을 만든다. 되돌리기 전에 무엇이 사라지는지 먼저 확인한다.
 
 ## 용어 정리
@@ -180,3 +180,4 @@ inbox의 공부 필기를 공부 노트로 정리해 줘. 핵심 내용 / 모르
 [^limits-bash]: Claude Code 공식 문서, 「Checkpointing」. "A file that only Bash commands changed isn't tracked and stays as it is. To revert it, use version control, such as Git." https://code.claude.com/docs/en/checkpointing (확인일 2026-10-31)
 [^limits-external]: Claude Code 공식 문서, 「Checkpointing」. "Checkpointing only tracks files that have been edited within the current session. Manual changes you make to files outside of Claude Code and edits from other concurrent sessions are normally not captured" https://code.claude.com/docs/en/checkpointing (확인일 2026-10-31)
 [^retention]: Claude Code 공식 문서, 「Checkpointing」. "Claude Code keeps file snapshots for the 100 most recent checkpoints in a session." / "by default about 30 days after the session last saved one" https://code.claude.com/docs/en/checkpointing (확인일 2026-10-31)
+[^critical]: Claude Code 공식 문서, 「Choose a permission mode」. "Claude Code doesn't auto-approve the following in any mode, including bypassPermissions" / "Recognized rm and rmdir critical-path removals, which no allow rule or PreToolUse hook "allow" approves" https://code.claude.com/docs/en/permission-modes (확인일 2026-10-31)
