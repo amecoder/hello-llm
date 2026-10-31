@@ -1,6 +1,6 @@
 # HANDOFF.md
 
-## Current State: 3단계 Claude Code 1~12장 완성(PR #54 `fd5df4e` · PR #55 `593f1bd`, 2026-11-01) — 다음은 3단계 Codex 또는 Antigravity, 로드맵 그림(`assets/roadmap.svg`)에 Antigravity 추가 · 2단계 Gemini 가이드 1~12장 완성(PR #47~#52) · 1단계 공통 가이드 완성(1~9장 + 10장 실습 과제) + 2단계 ChatGPT 가이드 11장(11장 전문가처럼 쓰기, 도움말 197개 전수 확인 반영 2026-10-24) + 확인 퀴즈 51개·이해도 확인 시험(입문·중급·상급, 36문제)·AI 지식 레벨 시험(초급~전문가, 240문제)·바로 쓰는 프롬프트 모음 32개 · 모음은 마크다운 형식 · 첫 화면은 소개 페이지, 장별 카드는 /guide/ · 읽은 장 진행 현황·닉네임 (2026-10-23) — 다음은 2단계 Claude 가이드 또는 남은 ChatGPT 캡처(`docs/plans/2026-10-23_공통가이드-이후-로드맵-검토.md`)
+## Current State: 3단계 Claude Code 1~12장 완성(PR #54 `fd5df4e` · PR #55 `593f1bd`, 2026-10-31) — 다음은 3단계 Codex 또는 Antigravity, 로드맵 그림(`assets/roadmap.svg`)에 Antigravity 추가 · 2단계 Gemini 가이드 1~12장 완성(PR #47~#52) · 1단계 공통 가이드 완성(1~9장 + 10장 실습 과제) + 2단계 ChatGPT 가이드 11장(11장 전문가처럼 쓰기, 도움말 197개 전수 확인 반영 2026-10-24) + 확인 퀴즈 51개·이해도 확인 시험(입문·중급·상급, 36문제)·AI 지식 레벨 시험(초급~전문가, 240문제)·바로 쓰는 프롬프트 모음 32개 · 모음은 마크다운 형식 · 첫 화면은 소개 페이지, 장별 카드는 /guide/ · 읽은 장 진행 현황·닉네임 (2026-10-23) — 다음은 2단계 Claude 가이드 또는 남은 ChatGPT 캡처(`docs/plans/2026-10-23_공통가이드-이후-로드맵-검토.md`)
 
 - 저장소: https://github.com/amecoder/hello-llm (public, 기본 브랜치 `main`)
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
