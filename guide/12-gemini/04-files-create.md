@@ -22,7 +22,7 @@
 
 출처: Google 도움말[^files]
 
-Drive 파일을 가져오려면 「활동 기록 보관」이 켜져 있고 Google Workspace(Gmail·Drive 같은 Google 앱 묶음)가 Gemini에 연결돼 있어야 합니다([3장](03-chats.md#지난-대화-찾기)).[^files] 연결은 7장에서 다룹니다.
+Drive 파일을 가져오려면 「활동 기록 보관」이 켜져 있고 Google Workspace(Gmail·Drive 같은 Google 앱 묶음)가 Gemini에 연결돼 있어야 합니다([3장](03-chats.md#지난-대화-찾기)).[^files] 연결은 [7장](07-skills-apps.md#연결된-앱-—-gmail·drive·캘린더를-gemini에서)에서 다룹니다.
 
 **표 파일을 올리면 차트도 만들 수 있습니다.** 웹에서 표 파일을 올린 뒤 차트를 만들어 달라고 해 보세요. 만든 차트는 확대해 보고 원하는 모양으로 고칠 수 있습니다.[^files]
 
