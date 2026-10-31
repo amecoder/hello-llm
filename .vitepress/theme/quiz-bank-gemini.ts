@@ -365,7 +365,7 @@ export const GEMINI_QUESTIONS: readonly Question[] = [
       '「Gemini 요청 사항」에 그 문장을 지침으로 추가한다',
     ],
     answer: 3,
-    explain: '지침(「Gemini 요청 사항」)은 모든 사용자가 추가할 수 있고, 새 대화에서도 따로 말하지 않아도 지켜집니다. 대화로 기억시키기와 메모리 요약은 미국 전용입니다.',
+    explain: '지침(「Gemini 요청 사항」)은 모든 사용자가 추가할 수 있고, 새 대화에서도 따로 말하지 않아도 적용됩니다. 대화로 기억시키기와 메모리 요약은 미국 전용입니다.',
   },
   {
     id: 'ch305-import',
@@ -378,6 +378,6 @@ export const GEMINI_QUESTIONS: readonly Question[] = [
       '회사·학교 계정에서만 가져올 수 있다',
     ],
     answer: 1,
-    explain: '가져오거나 이어 간 대화는 내 활동에 저장되고, 생성형 AI 모델 학습을 비롯한 서비스 개선에 쓰입니다. ZIP 은 하루 5개, 5GB까지이고 개인 계정만 됩니다.',
+    explain: '가져와 이어 간 대화는 내 활동에 저장되고, 생성형 AI 모델 학습을 비롯한 서비스 개선에 쓰입니다. ZIP 은 하루 5개, 5GB까지이고 개인 계정만 됩니다.',
   },
 ]
