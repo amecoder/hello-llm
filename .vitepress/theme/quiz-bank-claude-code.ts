@@ -6,6 +6,7 @@ export const CLAUDE_CODE_CHAPTERS: Record<number, { title: string; link: string 
   401: { title: 'Claude Code 1장. 무엇이고 어디서 쓰나', link: '/guide/20-claude-code/01-what-is' },
   402: { title: 'Claude Code 2장. 데스크톱 앱 설치와 첫 세션', link: '/guide/20-claude-code/02-install' },
   403: { title: 'Claude Code 3장. 화면 둘러보기', link: '/guide/20-claude-code/03-screen-tour' },
+  404: { title: 'Claude Code 4장. 허락과 되돌리기', link: '/guide/20-claude-code/04-permissions-undo' },
 }
 
 export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
@@ -193,5 +194,71 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     ],
     answer: 1,
     explain: '제목 줄의 파일 버튼으로 파일 칸을 열거나, 대화에 나온 파일 경로를 누르면 그 파일이 열립니다. 이 컴퓨터에서 하는 세션이면 직접 고칠 수도 있습니다.',
+  },
+  // chapter 404
+  {
+    id: 'ch404-modes',
+    chapter: 404,
+    prompt: 'Claude Code를 처음 써 봅니다. Claude가 무엇을 하려는지 하나씩 보면서 익히고 싶다면 어떤 권한 모드가 알맞을까요?',
+    choices: [
+      '자동',
+      '수동',
+      '권한 무시',
+      '편집 자동 수락',
+    ],
+    answer: 1,
+    explain: '수동(Manual)은 파일을 고치거나 명령을 실행하기 전에 매번 묻습니다. 처음에는 수동으로 시작하고, 믿음이 생기면 편집 자동 수락으로 넘어가도 됩니다.',
+  },
+  {
+    id: 'ch404-auto',
+    chapter: 404,
+    prompt: '「자동」 모드에 대한 설명으로 공식 문서와 맞는 것은 무엇일까요?',
+    choices: [
+      '검사기가 있으니 어떤 일에도 안심하고 맡겨도 된다',
+      '파일을 하나도 고치지 않는다',
+      '허락 창은 줄여 주지만 안전을 보장하지는 않는다',
+      '무료 플랜에서만 쓸 수 있다',
+    ],
+    answer: 2,
+    explain: '자동 모드는 허락 창을 줄여 주지만 안전을 보장하지 않습니다. 큰 방향을 믿을 수 있는 일에 쓰고, 민감한 일의 검토를 대신하게 하지 않습니다.',
+  },
+  {
+    id: 'ch404-rewind',
+    chapter: 404,
+    prompt: 'Claude가 만든 공부 노트의 형식이 마음에 안 듭니다. 노트도 없애고 요청을 고쳐서 다시 보내고 싶다면 되감기에서 무엇을 고를까요?',
+    choices: [
+      '코드와 대화',
+      '대화만',
+      '코드만',
+      '되감기로는 할 수 없다',
+    ],
+    answer: 0,
+    explain: '「코드와 대화」는 파일과 대화를 모두 그 시점으로 돌립니다. 되감은 요청은 입력창에 다시 들어가서 고쳐 보낼 수 있습니다.',
+  },
+  {
+    id: 'ch404-limits',
+    chapter: 404,
+    prompt: '되감기(체크포인트)로 되돌릴 수 없는 것은 무엇일까요?',
+    choices: [
+      '이 세션에서 Claude가 편집 도구로 만든 파일',
+      '이 세션에서 Claude가 고친 파일의 내용',
+      '바로 앞 요청 뒤에 이어진 대화',
+      '내가 앱 밖에서 직접 고친 파일',
+    ],
+    answer: 3,
+    explain: '체크포인트는 지금 세션에서 Claude가 편집한 파일만 추적합니다. 내가 직접 고친 파일, 명령으로 바뀐 파일, 커밋은 되돌리지 않으므로 Git 기록을 두 번째 안전망으로 씁니다.',
+  },
+  {
+    id: 'ch404-git',
+    chapter: 404,
+    prompt: 'Git 기록(커밋)으로 예전 상태로 되돌리려고 합니다. 되돌리기 전에 Claude에게 먼저 부탁하면 좋은 것은 무엇일까요?',
+    choices: [
+      '폴더를 통째로 지워 달라고 한다',
+      '마지막 커밋 뒤로 바뀐 파일이 무엇인지 먼저 보여 달라고 한다',
+      '권한 모드를 권한 무시로 바꿔 달라고 한다',
+      '아무것도 묻지 말고 바로 되돌려 달라고 한다',
+    ],
+    answer: 1,
+    explain: '커밋 뒤에 한 일은 되돌리면 사라질 수 있습니다. 무엇이 사라지는지 먼저 보고 확인한 뒤 되돌리면 실수로 지울 일이 줄어듭니다.',
   },
 ]

@@ -105,7 +105,7 @@ Git은 기록마다 **이 컴퓨터의 Git 설정에 적힌 이름과 이메일*
 
 **컨텍스트**(Context)는 1단계에서 배운 "AI가 한 번에 볼 수 있는 양"입니다([1단계 1장](../00-common/01-what-is-llm.md#_3-한-번에-볼-수-있는-양에-한계가-있다-—-컨텍스트-윈도우)). 다 차면 Claude가 그동안의 대화를 **자동으로 요약하고 이어서 일합니다.**[^context] 오래 이어 온 세션이 앞의 지시를 잊은 것 같으면 이 숫자를 보세요. 새 일은 새 세션에서 시작하는 편이 깔끔합니다.
 
-④의 「변경 사항 커밋」은 바뀐 내용을 Git에 새 기록으로 남기는 버튼입니다. 기록과 되돌리기는 4장에서 다룹니다.
+④의 「변경 사항 커밋」은 바뀐 내용을 Git에 새 기록으로 남기는 버튼입니다. 기록과 되돌리기는 [4장](04-permissions-undo.md)에서 다룹니다.
 
 <Quiz id="ch403-rail" />
 
@@ -173,7 +173,7 @@ Claude가 만든 파일은 **Finder나 탐색기 없이 앱 안에서 바로 확
 
 <ChapterDone :chapter="403" />
 
-다음 장: 4장 「허락과 되돌리기」는 준비 중입니다. 그동안 [3단계 목차](./)에서 앞으로 배울 내용을 볼 수 있습니다.
+다음 장: [4장. 허락과 되돌리기](04-permissions-undo.md)
 
 [^arrange]: Claude Code 공식 문서, 「Desktop application」. "The Code tab is built around panes you can arrange in any layout: chat, diff, browser, terminal, file, plan, tasks, and subagent" / "Drag a pane by its header to reposition it, or drag a pane edge to resize it." / "To open another pane, click its icon button in the session's title bar. Hover to see each button's name, such as Terminal, Changes for the diff view, Browser, and Files." / "When the window is narrow: buttons that don't fit move into the menu" https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
 [^sessions]: Claude Code 공식 문서, 「Desktop application」. "Each session is an independent conversation with its own context and changes." / "To rename a session, open it and click the session title in the title bar." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
