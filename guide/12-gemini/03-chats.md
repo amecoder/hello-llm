@@ -48,7 +48,7 @@
 **지우기 전에 알아 둘 점이 두 가지 있습니다.**[^recent]
 
 - **대화를 지우면 「Gemini 앱 활동」에서도 함께 지워집니다.** 내 대화 기록에서도 사라집니다.
-- **그 대화에서 만든 것도 함께 지워집니다.** Canvas로 만든 문서나 앱 같은 결과물이 같이 사라집니다(Canvas는 4장).
+- **그 대화에서 만든 것도 함께 지워집니다.** Canvas로 만든 문서나 앱 같은 결과물이 같이 사라집니다(Canvas는 [4장](04-files-create.md)).
 
 그러니 그 대화에서 만든 문서를 계속 쓸 거라면, 지우기 전에 [내보내기](#다른-앱으로-내보내기)로 옮겨 두세요.
 
@@ -202,7 +202,7 @@ Google도 Gemini가 틀릴 수 있다고 분명히 말합니다.[^accuracy]
 
 <ChapterDone :chapter="303" />
 
-다음 장: 4장. 파일과 만들기 (준비 중)
+다음 장: [4장. 파일과 만들기](04-files-create.md)
 
 [^screen]: Gemini 웹 화면(Google AI Pro, 한국어)에서 연습용 대화로 직접 확인. 옆 메뉴 「채팅 검색」(검색 칸이 화면 위쪽에 열림), 「설정」 메뉴의 「내 공개 링크」. 옆 메뉴 대화의 점 세 개 메뉴 「대화 공유」「고정」「이름 변경」「노트북에 추가」「삭제」. 대화 화면 오른쪽 위 「대화 작업 메뉴 열기」 메뉴 「대화 공유」「고정」「이름 변경」「PDF 다운로드」「Docs로 내보내기」「노트북에 추가」「삭제」. 답 아래 도구 줄 「대답이 마음에 들어요」「대답이 마음에 들지 않아요」「다시 실행」「복사」「옵션 더보기」, 「옵션 더보기」 메뉴 「새 채팅에서 브랜치 생성」「듣기」「Docs로 내보내기」「Gmail 초안 작성」「법적 문제 신고」「사고 단계 표시」. 표 아래 「옵션 더보기」 메뉴 「Sheets로 내보내기」「복사」. 도움말의 「새 채팅에서 분기」「재생성」「공유 및 내보내기」, 답 아래 「공유」는 이 화면에서 보지 못했고 위 이름으로 바뀌어 있었다. "표로 만들어 줘"만 보냈을 때는 「Connecting to Google Sheets」 표시에서 답이 멈췄다. (확인일 2026-10-31)
 [^recent]: Google 도움말, 「Find & manage your recent chats in Gemini Apps」(한국어판 「Gemini 앱에서 최근 채팅 확인 및 관리하기」). "You can pin, rename, and delete your chats so the important ones are easy to find." / "If you're using Gemini Apps with a personal account, the features below are only available if you have Keep Activity turned on." / "If you’re using Gemini Apps with a work or school account, your Gemini Apps Activity is controlled by your Google Workspace administrator and you can’t delete chats." / "In the text box, enter what you want to search." / "Click Pin. You can find your pinned chat at the top of the “Recent” section." / "On the side panel, hover over the chat you want to rename." / "You can create a new chat that branches off from a specific point in a conversation, then return to the main conversation to continue it." / "Tip: Deleting a branched chat doesn’t delete the original chat. Deleting the original chat doesn’t delete a branched chat." / "Important: When you delete a chat from your pinned and recent chats, it's also deleted from Gemini Apps Activity." / "If you delete a chat in pinned and recent chats, it also deletes any content created in that chat (like Canvas docs and apps) and the related activity from Gemini Apps Activity." 한국어 화면 이름 「더보기」「고정」「고정 해제」「이름 변경」「삭제」「새 채팅에서 분기」. https://support.google.com/gemini/answer/13666746 (확인일 2026-10-31)
