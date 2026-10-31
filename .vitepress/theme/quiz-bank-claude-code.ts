@@ -12,6 +12,7 @@ export const CLAUDE_CODE_CHAPTERS: Record<number, { title: string; link: string 
   407: { title: 'Claude Code 7장. 스킬·플러그인·외부 도구', link: '/guide/20-claude-code/07-skills-plugins' },
   408: { title: 'Claude Code 8장. 여러 일 동시에·클라우드·예약', link: '/guide/20-claude-code/08-parallel-cloud-schedule' },
   409: { title: 'Claude Code 9장. 비용·데이터·안전', link: '/guide/20-claude-code/09-cost-data-safety' },
+  410: { title: 'Claude Code 10장. 터미널에서 쓰기', link: '/guide/20-claude-code/10-terminal' },
 }
 
 export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
@@ -556,5 +557,71 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     ],
     answer: 3,
     explain: "공식 문서도 여러 방어 장치와 함께, 믿을 수 없는 자료를 다룰 때 사람이 지킬 수칙을 둡니다. 한 번의 결과를 보장으로 여기지 않습니다.",
+  },
+  // chapter 410
+  {
+    id: 'ch410-why',
+    chapter: 410,
+    prompt: "데스크톱 앱이 있는데도 터미널용 Claude Code를 쓰는 이유로 맞는 것은 무엇일까요?",
+    choices: [
+      "터미널에서만 CLAUDE.md를 읽기 때문이다",
+      "다른 프로그램이나 스크립트에서 불러 자동화할 수 있기 때문이다",
+      "터미널은 사용량이 들지 않기 때문이다",
+      "데스크톱 앱에서는 폴더를 고를 수 없기 때문이다",
+    ],
+    answer: 1,
+    explain: "스크립트·자동화는 터미널(CLI)에서 할 수 있고 데스크톱 앱에는 이 기능이 없습니다. 사용량은 두 곳이 함께 씁니다.",
+  },
+  {
+    id: 'ch410-install',
+    chapter: 410,
+    prompt: "인터넷 글에서 Claude Code 설치 명령을 봤습니다. 실행하기 전에 할 일은 무엇일까요?",
+    choices: [
+      "바로 붙여 넣는다. 설치 명령은 다 같다",
+      "명령을 여러 번 실행해 보고 되는 것을 고른다",
+      "공식 문서(code.claude.com)에 적힌 명령과 같은지 확인한다",
+      "관리자 권한으로만 실행하면 안전하다",
+    ],
+    answer: 2,
+    explain: "설치 명령은 인터넷에서 받은 스크립트를 바로 실행합니다. 공식 문서에 적힌 그대로인지 확인하고 실행합니다.",
+  },
+  {
+    id: 'ch410-commands',
+    chapter: 410,
+    prompt: "질문 하나를 던지고 답만 받은 뒤 바로 끝내고 싶습니다. 어떤 명령이 알맞을까요?",
+    choices: [
+      "claude -p \"질문\"",
+      "claude -c",
+      "claude -r",
+      "cd \"질문\"",
+    ],
+    answer: 0,
+    explain: "claude -p 는 한 번 묻고 답을 출력한 뒤 끝냅니다. -c 는 최근 대화 이어 가기, -r 은 지난 대화 골라 이어 가기입니다.",
+  },
+  {
+    id: 'ch410-practice',
+    chapter: 410,
+    prompt: "앱에서 만든 CLAUDE.md와 스킬이 있는 폴더에서 터미널로 claude 를 실행했습니다. 어떻게 될까요?",
+    choices: [
+      "터미널은 앱에서 만든 설정을 전혀 모른다",
+      "CLAUDE.md는 읽지만 스킬은 터미널에서 다시 만들어야 한다",
+      "같은 엔진이라 같은 폴더의 CLAUDE.md·스킬·설정을 그대로 쓴다",
+      "터미널에서 쓰려면 폴더를 새로 만들어야 한다",
+    ],
+    answer: 2,
+    explain: "데스크톱 앱과 터미널은 같은 엔진이고 설정과 CLAUDE.md를 함께 씁니다. 같은 폴더의 스킬도 /이름 으로 부를 수 있습니다.",
+  },
+  {
+    id: 'ch410-switch',
+    chapter: 410,
+    prompt: "터미널에서 하던 대화를 데스크톱 앱에서 이어 보고 싶습니다. 공식 문서가 안내하는 방법은 무엇일까요?",
+    choices: [
+      "터미널에서 /desktop 을 친다",
+      "대화를 모두 복사해 앱에 붙여 넣는다",
+      "앱을 지우고 다시 설치한다",
+      "같은 질문을 앱에서 처음부터 다시 한다",
+    ],
+    answer: 0,
+    explain: "터미널에서 /desktop 을 치면 세션을 저장하고 데스크톱 앱에서 엽니다(macOS·Windows x64, 구독 로그인). 앱의 'CLI 세션 가져오기'로도 가져올 수 있습니다.",
   },
 ]

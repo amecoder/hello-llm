@@ -109,7 +109,7 @@ Team·Enterprise 같은 업무용 계정은 따로 고르지 않는 한 학습�
 
 <ChapterDone :chapter="409" />
 
-다음 장: 10장 「터미널에서 쓰기」는 준비 중입니다. 그동안 [3단계 목차](./)에서 앞으로 배울 내용을 볼 수 있습니다.
+다음 장: [10장. 터미널에서 쓰기](10-terminal.md)
 
 [^included]: Claude Code 공식 문서, 「Manage costs effectively」. "Claude Pro, Max, and Ultra subscribers have usage included in their subscription, so the session cost figure isn't relevant for billing purposes." https://code.claude.com/docs/en/costs (확인일 2026-10-31)
 [^shared]: Claude Code 공식 문서, 「Desktop application」. "Click it to see your plan usage, which is shared across all your Claude Code surfaces." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)

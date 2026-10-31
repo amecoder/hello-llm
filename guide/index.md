@@ -83,7 +83,7 @@ features:
     link: /guide/12-gemini/
     linkText: Gemini 가이드 시작
   - title: 3단계 · Claude Code 사용 가이드 (작성 중)
-    details: 내 컴퓨터의 폴더에서 직접 파일을 읽고 고치는 Claude — 터미널 없이 데스크톱 앱부터. 지금은 1~9장
+    details: 내 컴퓨터의 폴더에서 직접 파일을 읽고 고치는 Claude — 터미널 없이 데스크톱 앱부터. 지금은 1~10장
     link: /guide/20-claude-code/
     linkText: Claude Code 가이드 시작
   - title: AI 지식 레벨 시험 — 초급부터 전문가까지
