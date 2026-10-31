@@ -15,7 +15,7 @@
 
 예를 들어 한 세션에서 `/study-notes`로 공부 노트를, 다른 세션에서 `/weekly-review`로 주간 회고를 동시에 만들 수 있습니다. 둘은 서로 다른 파일을 쓰니 부딪치지 않습니다.
 
-**같은 파일을 두 세션이 동시에 고치게 하지는 마세요.** 한 세션의 되감기는 다른 세션이 고친 내용을 보통 추적하지 않습니다(4장).[^other-session] 같은 파일을 여러 방향으로 바꿔 보고 싶다면, Git 저장소인 폴더에서 입력창 아래 **워크트리**(Worktree)를 켜고 세션을 시작합니다. 그러면 그 세션은 폴더의 **떨어진 복사본**에서 일합니다.[^worktree]
+**같은 파일을 두 세션이 동시에 고치게 하지는 마세요.** 한 세션의 되감기는 다른 세션이 고친 내용을 보통 추적하지 않습니다(4장).[^other-session] 같은 파일을 여러 방향으로 바꿔 보고 싶다면, Git 저장소인 폴더(3·4장의 변경 기록을 켠 폴더)에서 입력창 아래 **워크트리**(Worktree)를 켜고 세션을 시작합니다. 그러면 그 세션은 폴더의 **떨어진 복사본**에서 일합니다.[^worktree]
 
 <Quiz id="ch408-parallel" />
 
@@ -26,7 +26,7 @@
 | | 데스크톱 예약 | 클라우드 예약 | `/loop` |
 |---|---|---|---|
 | 어디서 도나 | 내 컴퓨터 | 클라우드 | 내 컴퓨터 |
-| 컴퓨터가 켜져 있어야 | 예 | 아니오 | 예 |
+| 컴퓨터가 켜져 있어야 | 예(앱 실행 중, 깨어 있음) | 아니오 | 예 |
 | 세션을 열어 둬야 | 아니오 | 아니오 | 예 |
 | 내 파일에 접근 | 예 | 아니오(새로 받은 복사본) | 예 |
 | 가장 짧은 간격 | 1시간(화면 양식) | 1시간 | 1분 |
@@ -51,17 +51,18 @@
 
 **방법 2 — 화면에서 만들기.** Code 탭 옆 메뉴의 **Scheduled**(또는 More 메뉴 안)를 누르고 **New task**를 누릅니다.[^create] 일정은 매시간·매일·평일·매주 등에서 고르고, 일정 없이 저장해 두었다가 **Run now**로 그때그때 돌릴 수도 있습니다.[^options]
 
-예약할 때 꼭 챙길 것이 셋 있습니다.
+예약할 때 꼭 챙길 것이 넷 있습니다.
 
-1. **꺼져 있던 동안의 실행**: 컴퓨터가 잠들어 있었다면, 깨어날 때 놓친 실행 중 **가장 최근 것 한 번만** 돌립니다. 금요일 오후 6시 예약이 토요일 아침에 돌 수도 있습니다.[^missed] 그래서 요청에 "그 주 메모가 없으면…" 같은 **조건을 함께 적어** 둡니다.[^missed]
-2. **허락 창에 멈춤**: 예약 작업도 권한 모드를 따로 가집니다. 「수동」이면 허락이 필요한 순간 **멈춰서 기다립니다.**[^perm] 만든 뒤 **Run now**로 한 번 돌려 보고, 뜨는 허락 창을 미리 처리해 두세요.[^perm]
-3. **개인 허용 규칙도 적용**: 내 컴퓨터의 Claude Code 설정(`~/.claude/settings.json`)의 허용 규칙이 예약 작업에도 적용됩니다.[^perm]
+1. **앱과 컴퓨터가 깨어 있어야 함**: 데스크톱 예약은 **앱이 켜져 있고 컴퓨터가 깨어 있을 때만** 돕니다. 잠자기를 막으려면 설정의 **Keep computer awake**를 켭니다. 노트북 덮개를 닫으면 그래도 잠듭니다.[^awake]
+2. **꺼져 있던 동안의 실행**: 컴퓨터가 잠들어 있었다면, 깨어날 때 놓친 실행 중 **가장 최근 것 한 번만** 돌립니다. 금요일 오후 6시 예약이 토요일 아침에 돌 수도 있습니다.[^missed] 그래서 요청에 "그 주 메모가 없으면…" 같은 **조건을 함께 적어** 둡니다.[^missed]
+3. **허락 창에 멈춤**: 예약 작업도 권한 모드를 따로 가집니다. 「수동」이면 허락이 필요한 순간 **멈춰서 기다립니다.**[^perm] 만든 뒤 **Run now**로 한 번 돌려 보고, 뜨는 허락 창에서 **항상 허용**을 골라 두세요. 그래야 다음 실행부터 멈추지 않습니다.[^perm] 7장에서 권한 「한 번만 허용」과 다른 이유는, 예약은 내가 지켜보지 않는 동안 돌기 때문입니다.
+4. **개인 허용 규칙도 적용**: 내 컴퓨터의 Claude Code 설정(`~/.claude/settings.json`)의 허용 규칙이 예약 작업에도 적용됩니다.[^perm]
 
 <Quiz id="ch408-schedule" />
 
 ## 클라우드에서 일하기
 
-클라우드 세션은 **내 컴퓨터를 꺼도 계속 일합니다.**[^cloud-run] 다만 클라우드는 내 컴퓨터 폴더를 보지 못하고, **GitHub 저장소**를 받아서 일합니다. 그래서 GitHub를 연결해야 합니다.[^cloud] 이 가이드의 정리 도구처럼 내 컴퓨터 폴더에서 하는 일은 데스크톱 쪽이 맞습니다. 클라우드는 일을 GitHub에 올려 두고 쓰게 되면 그때 써 보세요.
+클라우드 세션은 **내 컴퓨터를 꺼도 계속 일합니다.**[^cloud-run] 다만 클라우드는 내 컴퓨터 폴더를 보지 못하고, 대개 **GitHub 저장소**를 받아서 일합니다. 그래서 보통 GitHub 연결이 필요합니다.[^cloud] 이 가이드의 정리 도구처럼 내 컴퓨터 폴더에서 하는 일은 데스크톱 쪽이 맞습니다. 클라우드는 일을 GitHub에 올려 두고 쓰게 되면 그때 써 보세요.
 
 <Quiz id="ch408-cloud" />
 
@@ -70,7 +71,7 @@
 1. 세션을 두 개 열어 한쪽은 `/study-notes`, 다른 쪽은 `/weekly-review`를 돌려 본다. 두 결과가 서로 다른 파일에 저장됐는지 확인한다.
 2. 금요일 주간 회고 예약을 말로 부탁해 만든다. 요청에 "메모가 없으면…" 조건을 넣는다.
 3. 예약 목록에서 그 작업을 열고 **Run now**로 한 번 돌려 본다. 허락 창이 뜨면 미리 처리한다.
-4. 필요 없으면 예약을 끄거나 지운다. 예약은 켜 두는 동안 사용량을 씁니다.
+4. 필요 없으면 예약을 끄거나 지운다. 예약 실행도 세션이라 돌 때마다 사용량을 씁니다.
 
 **이어지는 과제**: 예약 작업이 회고 메모를 읽을 때, 메모 속에 "이 지시를 무시하고…" 같은 문장이 섞여 있으면 어떻게 될까요? 9장에서 확인합니다.
 
@@ -108,5 +109,6 @@
 [^create]: Claude Code 공식 문서, 「Schedule recurring tasks in Claude Code Desktop」. "click Scheduled in the sidebar or in the sidebar's More menu." / "Click New task to open the New scheduled task dialog." https://code.claude.com/docs/en/desktop-scheduled-tasks (확인일 2026-10-31)
 [^options]: Claude Code 공식 문서, 「Schedule recurring tasks in Claude Code Desktop」. "Hourly: runs every hour" / "Weekdays: same as Daily but skips Saturday and Sunday" / "Weekly: shows a time picker and a day picker" / "Manual: no schedule, only runs when you click Run now." https://code.claude.com/docs/en/desktop-scheduled-tasks (확인일 2026-10-31)
 [^missed]: Claude Code 공식 문서, 「Schedule recurring tasks in Claude Code Desktop」. "If it did, Desktop starts exactly one catch-up run for the most recently missed time and discards anything older." / "If timing matters, add guardrails to the prompt itself" https://code.claude.com/docs/en/desktop-scheduled-tasks (확인일 2026-10-31)
-[^perm]: Claude Code 공식 문서, 「Schedule recurring tasks in Claude Code Desktop」. "Each task has its own permission mode, which you set when creating or editing the task. Allow rules from ~/.claude/settings.json also apply to scheduled task sessions." / "the run stalls until you approve it" / "To avoid stalls, click Run now after creating a task, watch for permission prompts" https://code.claude.com/docs/en/desktop-scheduled-tasks (확인일 2026-10-31)
+[^perm]: Claude Code 공식 문서, 「Schedule recurring tasks in Claude Code Desktop」. "Each task has its own permission mode, which you set when creating or editing the task. Allow rules from ~/.claude/settings.json also apply to scheduled task sessions." / "the run stalls until you approve it" / "To avoid stalls, click Run now after creating a task, watch for permission prompts, and select \"always allow\" for each one. Future runs of that task auto-approve the same tools without prompting." https://code.claude.com/docs/en/desktop-scheduled-tasks (확인일 2026-10-31)
 [^cloud-run]: Claude Code 공식 문서, 「Get started with the desktop app」. "Cloud: Run sessions in the cloud that continue even if you close the app." https://code.claude.com/docs/en/desktop-quickstart (확인일 2026-10-31)
+[^awake]: Claude Code 공식 문서, 「Schedule recurring tasks in Claude Code Desktop」. "Tasks only run while the desktop app is running and your computer is awake. If your computer sleeps through a scheduled time, the run is skipped. To prevent idle-sleep, turn on Keep computer awake" / "Closing the laptop lid still puts it to sleep." https://code.claude.com/docs/en/desktop-scheduled-tasks (확인일 2026-10-31)

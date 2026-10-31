@@ -418,7 +418,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
   {
     id: 'ch407-make',
     chapter: 407,
-    prompt: "Claude가 .claude 폴더에 스킬 파일을 쓰려 하자 「수동」이 아니어도 허락 창이 떴습니다. 왜 그럴까요?",
+    prompt: "Claude가 .claude 폴더에 스킬 파일을 쓰려 할 때는 「편집 자동 수락」 모드에서도 허락 창이 뜹니다. 왜 그럴까요?",
     choices: [
       "앱에 오류가 생겼기 때문이다",
       "유료 요금제가 끝났기 때문이다",
@@ -505,7 +505,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
       "내 컴퓨터가 켜져 있을 때만 돌아간다",
     ],
     answer: 1,
-    explain: "클라우드 세션은 GitHub 저장소를 받아서 일하므로 GitHub 연결이 필요하고, 앱을 닫거나 컴퓨터를 꺼도 계속 진행됩니다.",
+    explain: "클라우드 세션은 대개 GitHub 저장소를 받아서 일하므로 보통 GitHub 연결이 필요하고, 앱을 닫거나 컴퓨터를 꺼도 계속 진행됩니다.",
   },
   // chapter 409
   {
@@ -519,7 +519,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
       "쓸 때마다 카드로 따로 결제된다",
     ],
     answer: 1,
-    explain: "구독의 Claude Code 사용량은 구독 안에 포함되고, 데스크톱·터미널 등 Claude Code를 쓰는 모든 곳이 함께 씁니다. /usage로 확인합니다.",
+    explain: "구독의 Claude Code 사용량은 기본적으로 구독 안에 포함되고, 데스크톱·터미널 등 Claude Code를 쓰는 모든 곳이 함께 씁니다. /usage로 확인합니다.",
   },
   {
     id: 'ch409-data',
@@ -532,7 +532,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
       "보관하지 않는다",
     ],
     answer: 0,
-    explain: "개인 계정은 학습 사용을 허락하면 5년, 허락하지 않으면 30일 보관됩니다. 내 컴퓨터에도 세션 기록이 기본 30일 남습니다.",
+    explain: "개인 계정은 학습 사용을 허락하면 5년, 허락하지 않으면 30일 보관됩니다. 내 컴퓨터에도 세션 기록이 남습니다(데스크톱 앱 세션은 30일 기한에서 기본 제외).",
   },
   {
     id: 'ch409-injection',
@@ -624,7 +624,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
       "같은 질문을 앱에서 처음부터 다시 한다",
     ],
     answer: 0,
-    explain: "터미널에서 /desktop 을 치면 세션을 저장하고 데스크톱 앱에서 엽니다(macOS·Windows x64, 구독 로그인). 앱의 'CLI 세션 가져오기'로도 가져올 수 있습니다.",
+    explain: "터미널에서 /desktop 을 치면 대화를 데스크톱 앱으로 넘깁니다(macOS·Windows x64, 구독 로그인). 앱의 'CLI 세션 가져오기'로도 가져올 수 있습니다.",
   },
   // chapter 411
   {
