@@ -41,7 +41,7 @@ Gemini의 답은 틀릴 수 있습니다. Google도 **늘 답을 따져 보고, 
 
 - ① 「Deep Research」가 켜졌다는 표시입니다. 입력창 안내가 "무엇을 조사하고 싶으신가요?"로 바뀝니다.
 - ② 「소스」를 누르면 ③ 어디서 찾을지 고를 수 있습니다. 「Google 검색」이 처음부터 체크돼 있습니다.
-- ③ 「채팅」은 내 지난 Gemini 대화를 출처로 넣는 항목으로 보입니다(도움말에는 설명이 없습니다). Gmail·Drive를 출처로 쓰려면 Google Workspace가 Gemini에 연결돼 있어야 합니다(7장).[^deep] 「Google 검색」 체크를 빼면 **고른 출처에서만** 찾습니다.[^deep]
+- ③ 「채팅」은 내 지난 Gemini 대화를 출처로 넣는 항목으로 보입니다(도움말에는 설명이 없습니다). Gmail·Drive를 출처로 쓰려면 Google Workspace가 Gemini에 연결돼 있어야 합니다([7장](07-skills-apps.md#연결된-앱-—-gmail·drive·캘린더를-gemini에서)).[^deep] 「Google 검색」 체크를 빼면 **고른 출처에서만** 찾습니다.[^deep]
 - ④ 「파일」로 내 파일을 함께 넣을 수 있습니다.[^deep]
 
 조사할 주제를 적어 보내면 Gemini가 먼저 **조사 계획**을 보여 줍니다.[^deep]
@@ -165,7 +165,7 @@ Gemini의 답은 틀릴 수 있습니다. Google도 **늘 답을 따져 보고, 
 
 <ChapterDone :chapter="306" />
 
-다음 장: 7장. 스킬과 연결된 앱 (준비 중)
+다음 장: [7장. 스킬과 연결된 앱](07-skills-apps.md)
 
 [^screen]: Gemini 웹 화면(Google AI Pro, 한국어)에서 연습용 대화로 직접 확인(대화는 찍은 뒤 삭제). 「Deep Research」를 켜면 입력창 안내 "무엇을 조사하고 싶으신가요?", 「소스」(Google 검색 선택됨)와 「파일」 버튼. 「소스」 메뉴 "하나 이상의 소스를 선택하세요" — 「Google 검색」「Gmail」「Drive」「채팅」「연결된 앱 사용 설정」. 계획 아래 버튼 「계획 수정」「연구 시작」(도움말 한국어판은 「계획서 수정」「조사 시작」). 조사 시작 후 답 "착수할게요. 연구가 완료되면 알려 드릴게요. 그러는 동안 이 대화에서 나가셔도 됩니다.", 진행 카드 "웹사이트 16개 조사 중...", 오른쪽 패널 「생각하는 과정 표시」. 멈춤 버튼을 누르면 「조사를 취소하시겠어요?」 — 「아니요」「예, 취소합니다」. 이 가이드는 「연구 시작」을 누르는 동작 없이 계획을 기다리던 중 조사가 시작되어, 진행 화면을 찍은 뒤 취소했다. 「도구 더보기」의 「가이드 학습」, 옆 메뉴 「노트북」의 「새 노트북」「모든 노트북」, 대화 메뉴의 「노트북에 추가」. (확인일 2026-10-31)
 [^learn]: Google 도움말, 「Learn in creative ways with generative AI」(한국어판 「생성형 AI를 활용해 창의적으로 학습하기」). "Important: Make sure to check and follow your school’s policy on using Generative AI." / "Use its suggestions as a starting point, then add your own unique voice and ideas to create something truly original." / "Always evaluate responses: While generative AI is a powerful tool, it can make mistakes." / "It’s important to always fact-check information using built-in tools or by double-checking with Google Search." / "Be specific: The more specific your questions, the more helpful the AI's answers will be." https://support.google.com/gemini/answer/15216790 (확인일 2026-10-31)
