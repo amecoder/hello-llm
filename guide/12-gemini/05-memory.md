@@ -159,7 +159,7 @@ ChatGPT나 Claude를 쓰다가 Gemini로 옮긴다면, **기억과 대화를 가
 
 <ChapterDone :chapter="305" />
 
-다음 장: 6장. 검색과 Deep Research (준비 중)
+다음 장: [6장. 검색과 Deep Research](06-search.md)
 
 [^screen]: Gemini 웹 화면(Google AI Pro, 한국어)에서 직접 확인. 「설정」 → 「개인 인텔리전스」(주소 /personalization-settings) 화면 "나에 대해 알고 있는 정보를 바탕으로 더 유용한 대답과 추천을 받아 보세요.", 카드 「메모리」("Gemini가 이전 대화 내용을 통해 사용자에 대해 더 잘 파악하게 됩니다. 언제든지 이전 채팅을 관리 및 삭제할 수 있습니다.")와 스위치, 「연결된 앱」, 「Gemini 요청 사항」. 「설정」 → 「Gemini로 메모리 가져오기」(주소 /import) 화면 "1 다른 AI 제공업체와의 채팅에 이 프롬프트 복사하기" 「복사」, "2 여기에 대답 붙여넣기" 「여기에 정보를 붙여넣으세요...」 「메모리 추가」, 「채팅 가져오기」 "지원되는 AI 제공업체에서 데이터를 내보낸 후 ZIP 파일(5 GB 이하)로 Gemini에 직접 업로드하세요." 「추가」, "Gemini로 가져와 계속 이어 간 채팅은 활동에 저장됩니다. 이 데이터는 생성형 AI 모델 학습을 비롯한 Google 서비스를 개선하고 Google, Google 사용자, 일반 대중을 보호하는 데 사용됩니다." 「Gemini 요청 사항」 카드 설명 "Gemini의 대답을 맞춤설정합니다(예: '긴 단락에 글머리 기호를 사용해 줘')". 「Gemini로 메모리 가져오기」는 「설정」 메뉴의 「데이터 및 개인 정보 보호」 묶음에 있다. 「Gemini 요청 사항」 안의 화면은 사용자 지침이 보여 열지 않았다. Google AI Pro 화면만 확인했고, 무료·미성년 계정에서 이 카드가 보이는지는 확인하지 못했다. (확인일 2026-10-31)
 [^personal]: Google 도움말, 「Get personalization in Gemini Apps」(한국어판 「Gemini 앱에서 개인화 기능 사용하기」). "You can get a personalized experience in Gemini Apps based on:" / "These features are not available to everyone at this time. You can find details about each feature in the articles linked below." / "To use these features, you must sign in to Gemini Apps with a personal Google Account. These features are not available while signed in to a work, school, or supervised account." https://support.google.com/gemini/answer/16598623 (확인일 2026-10-31)
