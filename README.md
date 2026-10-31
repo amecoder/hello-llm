@@ -19,7 +19,7 @@ ChatGPT나 Claude에 질문은 해 봤지만 "이게 다인가?" 싶었던 분�
 |---|---|---|
 | 1 | [공통 가이드](guide/00-common/README.md) | 어떤 LLM에서든 통하는 공통 원리와 사용법 |
 | 2 | [ChatGPT](https://amecoder.github.io/hello-llm/guide/11-chatgpt/) · [Claude](https://amecoder.github.io/hello-llm/guide/10-claude/) · [Gemini](https://amecoder.github.io/hello-llm/guide/12-gemini/) | 서비스별 기능과 활용법 |
-| 3 | [Claude Code](https://amecoder.github.io/hello-llm/guide/20-claude-code/) (작성 중) · Codex · Antigravity (준비 중) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
+| 3 | [Claude Code](https://amecoder.github.io/hello-llm/guide/20-claude-code/) · Codex · Antigravity (준비 중) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
 | 4 | AI-SDLC (준비 중) | AI와 함께 기획부터 배포까지 — 소프트웨어 개발 전 과정(SDLC) |
 
 웹사이트로 읽기: **https://amecoder.github.io/hello-llm/**
@@ -28,8 +28,20 @@ ChatGPT나 Claude에 질문은 해 봤지만 "이게 다인가?" 싶었던 분�
 
 ## 진행 상황
 
-1단계 공통 가이드(1~9장 + 10장 실습 과제 + 11장 전문가처럼 쓰기)와 2단계 [ChatGPT 사용 가이드](https://amecoder.github.io/hello-llm/guide/11-chatgpt/)(11장)와 [Claude 사용 가이드](https://amecoder.github.io/hello-llm/guide/10-claude/)(12장), [Gemini 사용 가이드](https://amecoder.github.io/hello-llm/guide/12-gemini/)(12장)를 공개했습니다. 장마다 나온 프롬프트를 쓰임새별로 모은 [바로 쓰는 프롬프트 모음](https://amecoder.github.io/hello-llm/guide/00-common/prompt-library), 각 절 끝의 확인 퀴즈, 내 AI 이해 레벨을 확인하는 [이해도 확인 시험](https://amecoder.github.io/hello-llm/guide/00-common/certificate)도 있습니다.
+1단계 공통 가이드(1~9장 + 10장 실습 과제 + 11장 전문가처럼 쓰기)와 2단계 [ChatGPT 사용 가이드](https://amecoder.github.io/hello-llm/guide/11-chatgpt/)(11장)와 [Claude 사용 가이드](https://amecoder.github.io/hello-llm/guide/10-claude/)(12장), [Gemini 사용 가이드](https://amecoder.github.io/hello-llm/guide/12-gemini/)(12장), 3단계 [Claude Code 사용 가이드](https://amecoder.github.io/hello-llm/guide/20-claude-code/)(12장)를 공개했습니다. 장마다 나온 프롬프트를 쓰임새별로 모은 [바로 쓰는 프롬프트 모음](https://amecoder.github.io/hello-llm/guide/00-common/prompt-library), 각 절 끝의 확인 퀴즈, 내 AI 이해 레벨을 확인하는 [이해도 확인 시험](https://amecoder.github.io/hello-llm/guide/00-common/certificate)도 있습니다.
 앞으로는 실제 서비스와 같은 화면에서 안내 말풍선(코치 마크)을 따라 직접 연습해 볼 수 있는 실습 환경도 준비합니다.
+
+## 연습용 샘플 자료
+
+가이드의 실습에 쓰는 예시 파일입니다. **모두 지어낸 내용**이라 마음껏 내려받아 연습해도 됩니다. 사이트 링크는 바로 열리고, GitHub 경로는 저장소 안의 위치입니다.
+
+| 단계 | 자료 | 쓰는 곳 | 파일 |
+|---|---|---|---|
+| 1 | 독서 모임 준비(회의록·메모·명단·회비 장부) | [1단계 10장 실습 과제](https://amecoder.github.io/hello-llm/guide/00-common/10-practice) · [과제 안내](https://amecoder.github.io/hello-llm/guide/00-common/practice-kit) | [minutes-last-meeting.txt](https://amecoder.github.io/hello-llm/practice/minutes-last-meeting.txt) · [memo-next-month.txt](https://amecoder.github.io/hello-llm/practice/memo-next-month.txt) · [memo-last-month.txt](https://amecoder.github.io/hello-llm/practice/memo-last-month.txt) · [members.csv](https://amecoder.github.io/hello-llm/practice/members.csv) · [fees.csv](https://amecoder.github.io/hello-llm/practice/fees.csv) · [last-notice.txt](https://amecoder.github.io/hello-llm/practice/last-notice.txt) — GitHub: [`public/practice/`](https://github.com/amecoder/hello-llm/tree/main/public/practice) |
+| 3 | 모퉁이 카페 직원의 한 주(회의 메모·강의 필기·하루 회고) | [3단계 Claude Code 2~11장](https://amecoder.github.io/hello-llm/guide/20-claude-code/) | [회의-2026-10-27-주간회의.txt](https://amecoder.github.io/hello-llm/practice/notes/inbox/회의-2026-10-27-주간회의.txt) · [공부-2026-10-28-프롬프트-강의.txt](https://amecoder.github.io/hello-llm/practice/notes/inbox/공부-2026-10-28-프롬프트-강의.txt) · [회고-2026-10-29.txt](https://amecoder.github.io/hello-llm/practice/notes/inbox/회고-2026-10-29.txt) · [회고-2026-10-30.txt](https://amecoder.github.io/hello-llm/practice/notes/inbox/회고-2026-10-30.txt) · [회고-2026-10-31.txt](https://amecoder.github.io/hello-llm/practice/notes/inbox/회고-2026-10-31.txt) · [회의-2026-10-29-임시회의.txt](https://amecoder.github.io/hello-llm/practice/notes/inbox/회의-2026-10-29-임시회의.txt) — GitHub: [`public/practice/notes/inbox/`](https://github.com/amecoder/hello-llm/tree/main/public/practice/notes/inbox) |
+| 3 | 실제 Claude Code 앱에서 나온 결과(회의록·양식·CLAUDE.md·스킬 등) | 3단계 각 장의 「결과 확인」 | GitHub: [`public/practice/notes/results/`](https://github.com/amecoder/hello-llm/tree/main/public/practice/notes/results) |
+
+결과 파일은 모델이 실제로 만든 것이라, 같은 요청이어도 내 결과와 모양이 조금 다를 수 있습니다. 3단계 메모의 날짜·요일은 이야기를 위해 지어낸 것이라 실제 2026년 달력과 맞지 않습니다.
 
 ## 저장소 구조
 

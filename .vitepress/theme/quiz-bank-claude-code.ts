@@ -14,6 +14,7 @@ export const CLAUDE_CODE_CHAPTERS: Record<number, { title: string; link: string 
   409: { title: 'Claude Code 9장. 비용·데이터·안전', link: '/guide/20-claude-code/09-cost-data-safety' },
   410: { title: 'Claude Code 10장. 터미널에서 쓰기', link: '/guide/20-claude-code/10-terminal' },
   411: { title: 'Claude Code 11장. 실습 과제', link: '/guide/20-claude-code/11-practice' },
+  412: { title: 'Claude Code 12장. 전문가처럼 쓰기', link: '/guide/20-claude-code/12-expert' },
 }
 
 export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
@@ -287,7 +288,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     chapter: 405,
     prompt: "주간 회고 양식을 만들고 싶은데 어떤 칸이 필요한지 아직 모르겠습니다. 어떻게 시작하면 좋을까요?",
     choices: [
-      "다 정할 때까지 Claude Code를 쓰지 않는다",
+      "어떤 칸이 필요한지 다 정할 때까지 Claude Code를 쓰지 않고 혼자 고민만 한다",
       "아무 양식이나 먼저 만들게 하고 그대로 쓴다",
       "Claude에게 질문을 하나씩 해 달라고 하고, 정해지면 초안으로 정리하게 한다",
       "다른 사람의 양식을 그대로 복사해 붙인다",
@@ -314,7 +315,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     prompt: "Claude가 \"회고를 다 썼습니다\"라고만 했습니다. 공식 문서가 권하는 다음 행동은 무엇일까요?",
     choices: [
       "그 말을 믿고 바로 팀에 보낸다",
-      "같은 요청을 처음부터 다시 보낸다",
+      "같은 요청을 처음부터 다시 보내고, 두 답 중 더 길어 보이는 쪽을 고른다",
       "점검표를 주고 항목마다 통과/실패와 근거를 보여 달라고 한다",
       "회고 파일의 이름만 바꿔 둔다",
     ],
@@ -326,7 +327,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     chapter: 405,
     prompt: "같은 부분을 두 번 고쳐 달라고 했는데도 여전히 틀립니다. 공식 문서가 권하는 방법은 무엇일까요?",
     choices: [
-      "세 번째, 네 번째로 계속 고쳐 달라고 한다",
+      "같은 대화에서 세 번째, 네 번째로 더 자세히 계속 고쳐 달라고 한다",
       "배운 점을 담아 새로 시작하고, 더 나은 요청을 한 번 보낸다",
       "권한 모드를 「권한 무시」로 바꾼다",
       "컴퓨터를 다시 켠 뒤 같은 말을 반복한다",
@@ -356,7 +357,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
       "정리를 잘 해 줘",
       "날짜는 10/27(월)처럼 쓴다",
       "항상 최선을 다해 줘",
-      "보기 좋게 만들어 줘",
+      "정리를 항상 보기 좋고 깔끔하게 해 줘",
     ],
     answer: 1,
     explain: "규칙은 결과를 보고 지켰는지 따질 수 있을 만큼 구체적이어야 합니다. 구체적이고 짧을수록 더 일관되게 지킵니다.",
@@ -392,7 +393,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     chapter: 406,
     prompt: "CLAUDE.md에 \"inbox 원본은 절대 고치지 않는다\"고 적었습니다. 공식 문서 기준으로 맞는 설명은 무엇일까요?",
     choices: [
-      "적어 두면 어떤 경우에도 절대 고치지 않도록 앱이 막아 준다",
+      "적어 두기만 하면 어떤 경우에도 절대 고치지 않도록 앱이 알아서 끝까지 막아 준다",
       "참고 맥락이라 강제 장치는 아니므로, 권한 모드·Git 기록과 함께 지킨다",
       "CLAUDE.md는 첫 세션에서만 읽히고 그 뒤로는 무시된다",
       "규칙이 길수록 더 잘 지키므로 길게 쓸수록 좋다",
@@ -406,7 +407,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     chapter: 407,
     prompt: "CLAUDE.md와 비교했을 때 스킬의 특징으로 맞는 것은 무엇일까요?",
     choices: [
-      "세션마다 항상 통째로 읽힌다",
+      "세션을 시작할 때마다 모든 스킬 파일이 항상 통째로 먼저 읽힌다",
       "스킬 본문은 쓸 때만 읽혀서, 길게 써도 평소 부담이 적다",
       "스킬은 한 번 쓰면 사라진다",
       "스킬은 터미널에서만 쓸 수 있다",
@@ -421,7 +422,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     choices: [
       "앱에 오류가 생겼기 때문이다",
       "유료 요금제가 끝났기 때문이다",
-      "스킬 파일이 너무 길기 때문이다",
+      "스킬 파일이 너무 길어서 앱이 다시 한 번 확인하려고 묻기 때문이다",
       ".claude는 보호된 경로라 쓰기 전에 늘 허락을 묻기 때문이다",
     ],
     answer: 3,
@@ -498,7 +499,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     chapter: 408,
     prompt: "클라우드 세션에 대한 설명으로 맞는 것은 무엇일까요?",
     choices: [
-      "내 컴퓨터의 모든 폴더를 그대로 읽는다",
+      "내 컴퓨터의 모든 폴더를 그대로 읽고, 컴퓨터를 꺼도 계속 고친다",
       "GitHub 저장소를 받아 일하고, 내 컴퓨터를 꺼도 계속한다",
       "무료 계정에서만 쓸 수 있다",
       "내 컴퓨터가 켜져 있을 때만 돌아간다",
@@ -512,7 +513,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     chapter: 409,
     prompt: "Pro 구독으로 데스크톱 앱과 터미널에서 Claude Code를 둘 다 씁니다. 사용량은 어떻게 셀까요?",
     choices: [
-      "데스크톱과 터미널이 따로따로 한도를 가진다",
+      "데스크톱과 터미널이 각각 따로따로 사용 한도를 가져서 서로 상관없다",
       "Claude Code를 쓰는 곳 모두가 같은 사용량을 함께 쓴다",
       "터미널은 사용량에 전혀 들어가지 않는다",
       "쓸 때마다 카드로 따로 결제된다",
@@ -568,7 +569,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
       "터미널에서만 CLAUDE.md를 읽기 때문이다",
       "다른 프로그램이나 스크립트에서 불러 자동화할 수 있기 때문이다",
       "터미널은 사용량이 들지 않기 때문이다",
-      "데스크톱 앱에서는 폴더를 고를 수 없기 때문이다",
+      "데스크톱 앱에서는 작업할 폴더를 고를 수 없기 때문에 터미널이 필요하다",
     ],
     answer: 1,
     explain: "스크립트·자동화는 터미널(CLI)에서 할 수 있고 데스크톱 앱에는 이 기능이 없습니다. 사용량은 두 곳이 함께 씁니다.",
@@ -579,7 +580,7 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     prompt: "인터넷 글에서 Claude Code 설치 명령을 봤습니다. 실행하기 전에 할 일은 무엇일까요?",
     choices: [
       "바로 붙여 넣는다. 설치 명령은 다 같다",
-      "명령을 여러 번 실행해 보고 되는 것을 고른다",
+      "여러 가지 명령을 차례로 실행해 보고, 오류 없이 끝나는 것을 골라서 계속 쓴다",
       "공식 문서(code.claude.com)에 적힌 명령과 같은지 확인한다",
       "관리자 권한으로만 실행하면 안전하다",
     ],
@@ -651,5 +652,58 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     ],
     answer: 1,
     explain: "점검표는 Claude의 말이 아니라 내가 확인한 사실을 체크합니다. 결과 모양이 이 가이드와 달라도 점검표를 다 체크하면 잘된 것입니다.",
+  },
+  // chapter 412
+  {
+    id: 'ch412-choose',
+    chapter: 412,
+    prompt: "매주 금요일마다 같은 순서로 회고 메모를 정리합니다. 어떤 기능이 가장 잘 맞을까요?",
+    choices: [
+      "매주 금요일마다 처음부터 긴 요청을 새로 써서 보낸다",
+      "스킬로 저장하고, 필요하면 예약 작업으로 돌린다",
+      "채팅에 메모를 복사해 붙여 넣는다",
+      "권한 모드를 권한 무시로 바꾼다",
+    ],
+    answer: 1,
+    explain: "같은 절차를 자주 하는 일은 스킬로, 정해진 때 저절로 할 일은 예약 작업으로 맡깁니다.",
+  },
+  {
+    id: 'ch412-build',
+    chapter: 412,
+    prompt: "공식 문서가 권하는 기능 설정 방식으로 맞는 것은 무엇일까요?",
+    choices: [
+      "처음 시작할 때 모든 기능을 한꺼번에 설정한다",
+      "같은 불편이 반복될 때 그에 맞는 기능을 하나씩 더한다",
+      "기능은 많을수록 좋으니 플러그인을 최대한 설치한다",
+      "한 번 만든 CLAUDE.md는 고치지 않는다",
+    ],
+    answer: 1,
+    explain: "기능마다 더할 때를 알려 주는 신호가 있습니다. 같은 실수를 두 번 하면 CLAUDE.md, 같은 요청을 자꾸 쓰면 스킬처럼 필요해질 때 더하고, 같은 신호로 고칩니다.",
+  },
+  {
+    id: 'ch412-stop',
+    chapter: 412,
+    prompt: "CLAUDE.md의 규칙을 Claude가 가끔 놓칩니다. 지금 모델에 맞는 대응은 무엇일까요?",
+    choices: [
+      "규칙 앞에 \"중요!\"를 여러 개 붙이고, 놓치지 않게 모두 대문자로 크게 쓴다",
+      "\"절대 멈추지 마\"라고 다그치는 문장을 넣는다",
+      "평범한 한 줄로 짧게 쓰고, 꼭 지킬 규칙은 권한·Git 같은 장치로 지킨다",
+      "폴더 구조를 CLAUDE.md에 자세히 적어 둔다",
+    ],
+    answer: 2,
+    explain: "지금 모델은 평범한 한 줄도 따르고, 강조를 쌓으면 규칙을 지나치게 적용합니다. 굽힐 수 없는 규칙은 장치로 바꿉니다.",
+  },
+  {
+    id: 'ch412-routine',
+    chapter: 412,
+    prompt: "정리 도구를 매주 굴리다가 같은 지적을 두 번 하게 됐습니다. 이 가이드의 루틴에서 다음 할 일은 무엇일까요?",
+    choices: [
+      "CLAUDE.md나 스킬을 고쳐서 다음부터 같은 지적이 없게 한다",
+      "채팅에서 세 번째로 다시 지적하고, 다음 주에도 똑같이 또 지적한다",
+      "정리 도구를 지우고 처음부터 다시 만든다",
+      "결과 확인 단계를 빼고 넘어간다",
+    ],
+    answer: 0,
+    explain: "반복되는 지적은 채팅에서 한 번 고치고 끝내지 말고 CLAUDE.md나 스킬을 고칩니다. 그래야 도구가 점점 나에게 맞춰집니다.",
   },
 ]

@@ -69,6 +69,7 @@ export default defineConfig({
             { text: '9장. 비용·데이터·안전', link: '/guide/20-claude-code/09-cost-data-safety' },
             { text: '10장. 터미널에서 쓰기', link: '/guide/20-claude-code/10-terminal' },
             { text: '11장. 실습 과제', link: '/guide/20-claude-code/11-practice' },
+            { text: '12장. 전문가처럼 쓰기', link: '/guide/20-claude-code/12-expert' },
             { text: '← 1단계 · 공통 가이드', link: '/guide/00-common/' },
           ],
         },
