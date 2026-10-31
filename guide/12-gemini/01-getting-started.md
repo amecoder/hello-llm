@@ -10,7 +10,7 @@
 Gemini(제미나이)는 Google이 만든 AI 서비스입니다. 1단계에서 배운 **LLM**(대규모 언어 모델, [1단계 1장](../00-common/01-what-is-llm.md))으로 움직입니다.
 1단계에서 배운 잘 묻는 법은 Gemini에도 그대로 통합니다. 이 장에서는 Gemini라는 서비스에 들어가는 법만 다룹니다.
 
-쓰는 곳은 네 가지입니다. 어디서 쓰든 같은 Google 계정으로 들어갑니다.
+쓰는 곳은 웹, 휴대폰 앱, 컴퓨터 앱입니다. 어디서 쓰든 같은 Google 계정으로 들어갑니다.
 
 | 쓰는 곳 | 여는 법 | 필요한 것 |
 |---|---|---|
@@ -27,10 +27,10 @@ Gemini(제미나이)는 Google이 만든 AI 서비스입니다. 1단계에서 �
 쓰려면 두 가지 조건이 있습니다.
 
 - **지원하는 나라**에 있어야 합니다. 한국은 웹 앱과 휴대폰 앱의 지원 국가 목록에 들어 있고, 한국어도 지원합니다.[^where][^mobile]
-- **만 13세 이상**이어야 합니다(개인 계정 기준). 회사 계정은 만 18세 이상입니다.[^signin]
+- **만 13세 이상**이어야 합니다(개인 계정 기준, 나라마다 기준 나이가 다를 수 있음). 회사 계정은 만 18세 이상입니다.[^signin]
 
 다만 유료 요금제와 일부 기능(맞춤설정, 다른 AI에서 가져오기 등)은 **만 18세 이상**만 쓸 수 있습니다.[^plans][^customize]
-자녀 계정처럼 Family Link(가족 관리 기능)로 관리되는 계정은 웹에서 Gemini를 쓸 수 없습니다.[^signin]
+자녀 계정처럼 Family Link(가족 관리 기능)로 관리되는 계정은 웹에서 Gemini를 쓸 수 없습니다. 휴대폰 앱은 부모가 Family Link 설정에서 자녀의 사용을 끌 수 있습니다.[^signin]
 
 처음 들어가면 이렇게 물어보세요.
 
@@ -63,7 +63,7 @@ gemini.google.com 에 들어가 오른쪽 위 「로그인」을 누르세요.[^
 대화를 남겨 두고 다시 보려면 로그인하세요. 안드로이드 휴대폰 앱은 처음부터 로그인해야 쓸 수 있습니다.[^start]
 
 로그아웃하려면 왼쪽 메뉴에서 프로필 사진(또는 이름 첫 글자)을 누르고 「로그아웃」을 고릅니다.[^signin]
-여러 사람이 같이 쓰는 컴퓨터라면 다 쓴 뒤 꼭 로그아웃하세요. 그래야 다음 사람이 내 대화를 못 봅니다.
+여러 사람이 같이 쓰는 컴퓨터라면 다 쓴 뒤 꼭 로그아웃하세요. 로그인한 채로 두면 다음 사람이 옆 메뉴에서 내 대화를 열어 볼 수 있습니다.
 
 <Quiz id="ch301-login" />
 
@@ -81,7 +81,7 @@ Gemini에도 무료부터 여러 **요금제**(돈을 내는 정도에 따라 �
 
 출처: Google 요금제 페이지(대한민국)와 도움말[^plans-screen][^limits]
 
-ChatGPT·Claude와 다른 점이 하나 있습니다. Google AI 요금제에는 **Google 저장공간**이 함께 들어 있습니다. 이 공간은 Drive·Gmail·Google 포토가 함께 씁니다.[^upgrade]
+눈여겨볼 점이 하나 있습니다. Google AI 요금제에는 **Google 저장공간**이 함께 들어 있습니다. 이 공간은 Drive·Gmail·Google 포토가 함께 씁니다.[^upgrade]
 그래서 사진이나 메일 때문에 저장공간을 이미 사서 쓰고 있다면, 요금제를 고를 때 함께 따져 보세요.
 
 Ultra는 두 가지입니다. 「Ultra 5배」(월 ₩119,000, 20TB)와 「Ultra 20배」(월 ₩300,000, 30TB)입니다.[^plans-screen]
@@ -101,13 +101,13 @@ Ultra는 두 가지입니다. 「Ultra 5배」(월 ₩119,000, 20TB)와 「Ultra
 **한 번에 읽는 양**은 1단계에서 배운 [컨텍스트 윈도우](../00-common/01-what-is-llm.md#_3-한-번에-볼-수-있는-양에-한계가-있다-—-컨텍스트-윈도우)입니다. 토큰은 AI가 글을 세는 단위입니다.
 100만 토큰이면 글로 약 1,500쪽을 한 번에 읽을 수 있습니다.[^limits] 긴 보고서나 책 한 권을 통째로 올려 묻고 싶을 때 차이가 납니다.
 
-Pro 요금제는 가족 요금제로 최대 5명이 함께 쓸 수 있고, 가족 구성원은 추가 비용 없이 AI 기능을 씁니다.[^plans]
+Pro 요금제를 가족 요금제로 쓰면, 가족 구성원도 추가 비용 없이 AI 기능을 씁니다.[^plans]
 
 <Quiz id="ch301-plans" />
 
 ## 사용 한도 — 5시간·주간·읽는 양
 
-Gemini에는 **"하루 몇 번"처럼 정해진 횟수가 없습니다.** 질문이 얼마나 복잡한지, 어떤 모델과 기능을 쓰는지, 대화가 얼마나 긴지를 함께 셉니다.[^limits]
+Gemini의 한도는 **"하루 몇 번" 같은 횟수가 아니라 쓴 양으로 셉니다.** 질문이 얼마나 복잡한지, 어떤 모델과 기능을 쓰는지, 대화가 얼마나 긴지를 함께 셉니다.[^limits]
 쓴 양은 **5시간마다** 다시 채워지고, 따로 **주간 한도**가 있습니다.[^limits]
 
 어떤 일이 사용량을 많이 쓰는지 알아 두면 아낄 수 있습니다.[^limits]
@@ -138,7 +138,7 @@ Gemini에는 **"하루 몇 번"처럼 정해진 횟수가 없습니다.** 질문
 - ② 「주간 한도」: 일주일 단위 사용량입니다. 다시 채워지는 날짜와 시각이 따로 나옵니다.
 - ③ 더 높은 요금제로 올리는 안내입니다.
 
-예를 들어 질문을 따로 세 번 보내지 말고 이렇게 묶어 보세요. 한 번에 보내면 앞 대화를 다시 읽는 횟수가 줄어듭니다.
+예를 들어 질문을 따로 세 번 보내지 말고 이렇게 묶어 보세요. 한 번에 보내면 앞 대화를 다시 읽는 횟수가 줄어 사용량을 아낄 수 있습니다.
 
 ```
 다음 세 가지를 한 번에 답해 줘.
@@ -157,7 +157,7 @@ Gemini에는 **"하루 몇 번"처럼 정해진 횟수가 없습니다.** 질문
 유료로 바꾸는 길은 이렇습니다.[^upgrade]
 
 1. gemini.google.com 왼쪽 아래 「설정」을 누릅니다.
-2. 요금제 보기(도움말 이름 「구독 보기」)를 누르고 원하는 Google AI 요금제를 고릅니다.
+2. 「구독 보기」(요금제가 없는 계정에서 보이는 이름)를 누르고 원하는 Google AI 요금제를 고릅니다.
 3. 결제 수단을 고르거나 새로 넣고 구독합니다.
 
 결제는 Google One에서 처리됩니다. 그래서 요금제를 바꾸거나 취소하는 곳도 Google One입니다.[^upgrade]
@@ -170,8 +170,8 @@ Gemini에는 **"하루 몇 번"처럼 정해진 횟수가 없습니다.** 질문
 
 - **취소는 언제든지 할 수 있습니다.**[^plans] 「설정」 → 「구독 관리」로 들어가 Google One 설정에서 「멤버십 취소」를 누릅니다.[^upgrade][^screen]
 - **요금제를 바꿀 때도 Google One에서 합니다.** 「멤버십 관리」 → 「멤버십 요금제 변경」에서 올리거나 내립니다.[^upgrade]
-- **취소하면 저장공간도 함께 줄어듭니다.** 늘어난 Drive·Gmail·포토 저장공간과 Gmail·Docs 속 Gemini 같은 혜택이 함께 사라집니다.[^upgrade] 저장공간을 많이 쓰고 있었다면 취소 전에 확인하세요.
-- **유료가 끝나면 Pro로 만든 대화를 Pro로 이어 갈 수 없습니다.** 대화가 사라지는 것은 아니고, 쓸 수 있는 모델이 줄어듭니다.[^upgrade]
+- **요금제가 끝나면 저장공간도 함께 줄어듭니다.** 도움말은 Pro를 예로 들어, 늘어난 Drive·Gmail·포토 저장공간과 Gmail·Docs 속 Gemini 같은 혜택을 더 쓸 수 없다고 안내합니다.[^upgrade] 저장공간을 많이 쓰고 있었다면 취소 전에 확인하세요.
+- **유료가 끝나면 Pro로 새 대화를 시작하거나, Pro로 만든 대화를 이어 갈 수 없습니다.**[^upgrade]
 - **회사·학교 계정은 이 요금제에 가입할 수 없습니다.** 개인 Google 계정만 가입합니다.[^plans]
 
 어느 요금제가 맞는지 모르겠다면 Gemini에게 내 사용 습관을 알려 주고 물어보세요. 단, 요금과 조건은 AI의 답이 아니라 요금제 페이지에서 확인하세요([1단계 9장](../00-common/09-safety.md)).
@@ -257,6 +257,6 @@ Gemini에는 **"하루 몇 번"처럼 정해진 횟수가 없습니다.** 질문
 [^plans]: Google One 요금제 페이지(한국어). "Google AI 요금제에 포함된 Gemini 앱과 Gmail, Docs 등의 Gemini는 만 18세 이상만 이용할 수 있습니다." / "개인 Google 계정만 Google AI 요금제에 가입할 수 있습니다." / "복잡한 워크플로에서 최첨단 성능을 발휘하는 Gemini 4 Argon에 대한 액세스" / "Google AI Pro 요금제를 사용하는 가족 요금제 구성원은 추가 비용 없이 AI 혜택과 기능을 이용할 수 있습니다." / "언제든지 취소할 수 있습니다." 도움말(16275805)은 요금제 나이를 대부분 국가에서 만 13세로 적어 서로 다르다 — 이 가이드는 더 엄격한 쪽(18세)을 적었다. https://one.google.com/about/google-ai-plans/ (확인일 2026-10-30)
 [^limits]: Google 도움말, 「Gemini Apps limits & feature availability」. "These limits factor in the complexity of your prompt, the models and features you use, and the length of your chat." / "Your limit refreshes every 5 hours until you reach your weekly limit." / "4x higher than standard limits" / "5x or 20x higher than AI Pro limits depending on your subscription" / "32k tokens" / "128k tokens" / "1 million tokens" / "For example, with a 1M token context window, Gemini can understand up to 1,500 pages of text or 30,000 lines of code." / "These require Gemini to re-read the previous conversation history to maintain context. As the chat gets longer, this requires more thinking power." / "Video generally requires the most usage." / "Start a new chat when you move to a new topic. This will help save usage because Gemini won’t have to re-read a long conversation history before creating a response." / "If you have a Google AI subscription and reach your limit, you can continue your conversation with Flash-Lite." / "For users without a Google AI plan, some features that require more compute resources, like Deep Research, may be unavailable during periods of high demand." / "Gemini Apps will notify you when you're close to your limit based on your plan's level." / "To view your usage limits:" https://support.google.com/gemini/answer/16275805 (확인일 2026-10-30)
 [^models]: Google 도움말, 「About Gemini models」. "If you have a Google AI plan you can manually switch models in both Chat Mode and Task Mode." https://support.google.com/gemini/answer/18648722 (확인일 2026-10-30)
-[^upgrade]: Google 도움말, 「Manage your Google AI plan from Gemini Apps」. "You can subscribe to a Google AI plan through Google One." / "Select the Google AI plan you want." / "When you subscribe to the plan, you’ll need to select or provide a form of payment." / "To upgrade: Select a plan under "Upgrade options."" / "You can cancel your plan in Google One settings." / "When your AI Pro plan ends, you’ll no longer have access to:" / "Expanded storage across Drive, Gmail, and Photos" https://support.google.com/gemini/answer/14517446 (확인일 2026-10-30)
+[^upgrade]: Google 도움말, 「Manage your Google AI plan from Gemini Apps」. "You can subscribe to a Google AI plan through Google One." / "Select the Google AI plan you want." / "When you subscribe to the plan, you’ll need to select or provide a form of payment." / "To upgrade: Select a plan under "Upgrade options."" / "You can cancel your plan in Google One settings." / 한국어판 단계 "하단에서 설정 및 도움말 구독 보기를 클릭합니다."(현재 요금제 미구독) / "When your AI Pro plan ends, you’ll no longer have access to:" / 한국어판 「Pro로 새 채팅 시작하기」「Pro로 생성된 채팅 이어서 하기」 / "Expanded storage across Drive, Gmail, and Photos" https://support.google.com/gemini/answer/14517446 (확인일 2026-10-30)
 [^errors]: Google 도움말, 「Troubleshoot error codes in Gemini Apps」. "Gemini Apps may not be available in your country or region." / "Wait a few minutes: If Gemini Apps are experiencing high traffic, wait 5 minutes and try your prompt again." / "High demand or usage limits: If you get "Too many requests in a short time period," Gemini Apps may be experiencing high traffic, or you may have reached a temporary usage limit." / "Connected Apps aren't turned on: If you get "I cannot fulfill this request" or "This feature only works with content that Gemini can access," the required connected app (such as Google Workspace) might not be connected." https://support.google.com/gemini/answer/18647528 (확인일 2026-10-30)
 [^feedback]: Google 도움말, 「Send feedback or report a problem with Gemini Apps」. "Enter your feedback. You can choose to add a screenshot to help us better understand the issue." / "When you submit feedback, the associated conversation, like your prompts and the Gemini app’s responses, is added as part of your feedback." https://support.google.com/gemini/answer/13275746 (확인일 2026-10-30)

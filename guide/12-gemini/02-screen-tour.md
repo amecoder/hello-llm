@@ -80,7 +80,7 @@
 ### 보낸 질문 고치기
 
 보낸 질문을 고치고 싶으면 내 질문 옆의 「텍스트 수정」(연필)을 누르세요. 고친 뒤 「업데이트」를 누르면 Gemini가 답을 새로 만듭니다.[^start]
-질문에 빠진 조건을 나중에 알았을 때 쓰면 좋습니다. 새로 묻는 것보다 대화가 깔끔하게 남습니다.
+질문에 빠진 조건을 나중에 알았을 때 쓰면 좋습니다. 같은 질문을 처음부터 다시 쓰지 않아도 됩니다.
 
 예를 들어 아래처럼 보냈다가 "회사 동료에게"라는 조건을 빠뜨렸다면, 질문을 고쳐 다시 받아 보세요.
 
@@ -105,8 +105,8 @@ Google AI Pro 화면입니다. ① 모델 버튼을 누르면 ② 모델 목록�
 |---|---|---|
 | Flash-Lite | 가장 빠른 답변 제공 | 짧고 쉬운 질문 |
 | Flash | 무엇이든 도움을 받으세요 | 평소 대부분의 일 |
-| Pro | 고급 추론 | 복잡한 질문, 어려운 계산 |
-| Argon | 복잡한 작업 | 아주 어렵고 긴 일(Pro·Ultra) |
+| Pro | 고급 추론 | 복잡한 질문, 어려운 코딩 |
+| Argon | 복잡한 작업 | 아주 어렵고 복잡한 일 |
 
 출처: Gemini 웹 화면과 Google 도움말[^screen][^models]
 
@@ -132,7 +132,7 @@ Google AI Pro 화면입니다. ① 모델 버튼을 누르면 ② 모델 목록�
 ### 언제 올릴까
 
 **좋은 모델과 높은 사고 수준일수록 사용량을 더 씁니다.**[^models] 그러니 늘 가장 높게 둘 필요는 없습니다.
-평소에는 그대로 두고, 답이 얕거나 틀렸을 때만 한 단계 올려 보세요. 오래 생각하게 한다고 늘 나아지는 것도 아닙니다([1단계 5장](../00-common/05-prompt-patterns.md)).
+평소에는 기본값(「낮음」)이나 가벼운 설정으로 쓰고, 답이 얕거나 틀렸을 때만 한 단계 올려 보세요. 그림의 「Argon 높음」은 이 가이드가 화면을 보여 주려고 골라 둔 설정입니다. Argon은 Pro·Ultra 요금제에서만 보입니다([1장](01-getting-started.md)). 오래 생각하게 한다고 늘 나아지는 것도 아닙니다([1단계 5장](../00-common/05-prompt-patterns.md)).
 
 알아 둘 점이 두 가지 있습니다.[^models]
 
@@ -239,7 +239,7 @@ Google AI Pro 화면입니다. ① 모델 버튼을 누르면 ② 모델 목록�
 
 다음 장: 3장. 대화 관리 (준비 중)
 
-[^screen]: Gemini 웹 화면(Google AI Pro, 한국어)에서 직접 확인. 첫 화면 「무엇을 도와드릴까요?」, 입력창 「Gemini에게 물어보기」, 「업로드 및 도구」(+), 모델 버튼과 「음성기록」, 오른쪽 위 「앱 설치」와 「임시 채팅」 아이콘, 입력창 아래 「채팅」「작업」 전환. 임시 채팅 안내 "임시 채팅은 최근 채팅에 표시되지 않으며, Google AI를 개선하는 데 사용되지 않습니다. 안전을 위해 72시간 동안 저장됩니다." 옆 메뉴 「채팅 검색」「사이드바 닫기」「새 채팅」「라이브러리」「이미지」「예약됨」「맞춤설정」「노트북」「전체」, 맨 아래 계정 이름·요금제 표시와 「설정」. + 메뉴 「파일 업로드」「Drive에서 파일 추가」「업로드 더보기」「이미지 만들기」「동영상 만들기」「음악 만들기」「도구 더보기」, 「도구 더보기」 아래 「Canvas」「Deep Research」「가이드 학습」「개인 인텔리전스(Labs)」(2026-10-30에는 이 도구들이 + 메뉴 첫 단에 있었다). 모델 메뉴 「3.5 Flash-Lite — 가장 빠른 답변 제공」「3.8 Flash — 무엇이든 도움을 받으세요」「3.1 Pro — 고급 추론」「4 Argon — 복잡한 작업」, 사고 수준 「낮음 — 빠르고 효율적」「보통 — 균형 잡힌 깊이」「높음 — 매우 철저함」. 설정 메뉴 「계정」(「사용량 한도」「구독 관리」), 「환경설정」(「개인 인텔리전스」「스킬」「테마」「작업 설정」), 「데이터 및 개인 정보 보호」(「Gemini로 메모리 가져오기」「내 공개 링크」「의견 보내기」「도움말」「위치」「활동」). 「활동」은 새 탭 「Gemini 앱 활동」으로 열린다. (확인일 2026-10-30, 그림과 + 메뉴·임시 채팅은 2026-10-31)
+[^screen]: Gemini 웹 화면(Google AI Pro, 한국어)에서 직접 확인. 첫 화면 「무엇을 도와드릴까요?」, 입력창 「Gemini에게 물어보기」, 「업로드 및 도구」(+), 모델 버튼과 「음성기록」, 오른쪽 위 「앱 설치」와 「임시 채팅」 아이콘, 입력창 아래 「채팅」「작업」 전환. 임시 채팅 안내 "임시 채팅은 최근 채팅에 표시되지 않으며, Google AI를 개선하는 데 사용되지 않습니다. 안전을 위해 72시간 동안 저장됩니다." 옆 메뉴 「채팅 검색」「사이드바 닫기」「새 채팅」「라이브러리」「이미지」「예약됨」「맞춤설정」「노트북」「전체」, 맨 아래 계정 이름·요금제 표시와 「설정」. + 메뉴 「파일 업로드」「Drive에서 파일 추가」「업로드 더보기」「이미지 만들기」「동영상 만들기」「음악 만들기」「도구 더보기」, 「도구 더보기」 아래 「Canvas」「Deep Research」「가이드 학습」「개인 인텔리전스(Labs)」(2026-10-30에는 이 도구들이 + 메뉴 첫 단에 있었다). 모델 메뉴 「3.5 Flash-Lite — 가장 빠른 답변 제공」「3.8 Flash — 무엇이든 도움을 받으세요」「3.1 Pro — 고급 추론」「4 Argon — 복잡한 작업」, 사고 수준 「낮음 — 빠르고 효율적」「보통 — 균형 잡힌 깊이」「높음 — 매우 철저함」. 설정 메뉴 「계정」(「사용량 한도」「구독 관리」), 「환경설정」(「개인 인텔리전스」「스킬」「테마」「작업 설정」), 「데이터 및 개인 정보 보호」(「Gemini로 메모리 가져오기」「내 공개 링크」「의견 보내기」「도움말」「위치」「활동」). 「활동」은 새 탭 「Gemini 앱 활동」으로 열린다. 도움말 한국어판의 화면 이름: 「텍스트 수정」「업데이트」(13275745), 「응답 세부정보 보기」(18648722). (확인일 2026-10-30, 그림과 + 메뉴·임시 채팅은 2026-10-31)
 [^start]: Google 도움말, 「Use Gemini Apps」. "In the text box at the bottom, enter your question or prompt." / "To start a new chat, at the top left, click New chat" / "You can start a temporary chat that won’t appear in your Gemini Apps Activity or your recent chats." / "A personal Google Account. This feature is not available for users signed in to a work or school Google Account." / "When you leave the temporary chat, you’ll no longer have access to that chat, and it won’t appear in your recent chats." / "Use Connected Apps and other integrated services that require the Keep Activity setting to be turned on." / "Get personalized responses." / "If you want to revise your prompt, you can edit it, and Gemini will regenerate the response." https://support.google.com/gemini/answer/13275745 (확인일 2026-10-30)
 [^files]: Google 도움말, 「Upload & analyze files in Gemini Apps」. "Up to 10 files (subject to availability) can be uploaded in the same prompt. When uploading a folder, each file inside will count towards this limit." / "Each video can be up to 2 GB. All other supported file types can be up to 100 MB." https://support.google.com/gemini/answer/14903178 (확인일 2026-10-30)
 [^models]: Google 도움말, 「About Gemini models」. "Gemini Flash-Lite: A fast, cost-efficient model built for quick answers to everyday questions and lightweight tasks." / "Gemini Pro: An advanced reasoning model designed for complex prompts, sophisticated coding, and in-depth problem-solving." / "Gemini Argon: Top-tier intelligence, dynamic deep reasoning, and the highest performance for complex workflows." / "Auto or Flash-Lite*" / "If you have a Google AI plan you can manually switch models in both Chat Mode and Task Mode." / "Higher-tier models marked with a lock icon require an eligible plan upgrade" / "Low: Provides fast, concise answers for straightforward queries." / "High: Allows the model to carefully process and reason through complex, multistep prompts." / "If you don’t select a thinking level, it will default to Low." / "More advanced models and higher thinking levels require more of your usage." / "If you have a Google AI plan and reach your usage limit, your chat will continue with Flash-Lite." / "Gemini will continue to use that model and thinking level during the current conversation including if you later return to that same conversation." / "From the menu, select See response details ." / "Access to specific Gemini models, thinking levels, and task features varies depending on your plan and your remaining available usage." 도움말에는 기본이 자동 모델 선택이라고 되어 있지만, 이 가이드가 확인한 Pro 계정의 모델 메뉴에는 「자동」 항목이 없었다. https://support.google.com/gemini/answer/18648722 (확인일 2026-10-30)
