@@ -14,7 +14,7 @@
 
 말로 물을 때도 1단계에서 배운 요령은 같습니다. 무엇을, 누구에게, 어떤 모양으로 원하는지 말해 주세요([1단계 4장](../00-common/04-prompt-basics.md)).
 
-**한국어로 말해도 됩니다.** 한국어는 휴대폰 앱이 지원하는 언어이고, 한국도 지원 국가입니다.[^mobile]
+한국어는 휴대폰 앱이 지원하는 언어이고, 한국도 지원 국가입니다.[^mobile] 다만 목소리 바꾸기처럼 일부 언어에서는 안 되는 음성 기능도 있습니다.[^voice]
 
 <Quiz id="ch310-voice" />
 
@@ -34,16 +34,16 @@
 ### 쓰는 곳과 조건
 
 도움말은 **Android 휴대폰·태블릿의 Gemini 앱**에서 쓴다고 안내합니다. **웹에서는 아직 Live를 쓸 수 없습니다.**[^live] 만 13세 이상(나라마다 다름)이고 로그인해야 합니다.[^live]
-iPhone에서는 Gemini 위젯으로 Live를 바로 열 수 있습니다(iOS 17 이상).[^widget]
+iPhone용 Gemini 위젯(iOS 17 이상)에도 Live 바로가기가 있습니다.[^widget] 다만 Live 도움말은 Android 기준이라, iPhone에서 어디까지 되는지는 이 가이드가 확인하지 못했습니다.
 
-지금은 **Gem을 Live에서 쓸 수 없습니다.**[^live] 메모리(지난 대화 기억)도 Live에서는 쓰이지 않습니다([5장](05-memory.md#메모리-—-지난-대화를-기억하기)).
+지금은 **Gem을 Live에서 쓸 수 없습니다.**[^live] 지난 대화의 기억(메모리)을 Live에서 쓰는 맞춤 기능은 **미국의 영어**에서만 된다고 합니다.[^live]
 
 ### 시작하고 멈추기
 
 - **시작**: Gemini 앱 아래쪽 「Live」를 누르거나 왼쪽으로 쓸어 넘깁니다. "Hey Google, let’s talk Live"라고 말해도 됩니다.[^live]
 - **잠깐 멈춤**: 「대기」를 누르면 마이크가 꺼집니다. 다시 「Live」를 누르면 이어집니다.[^live]
 - **음소거**: 내 마이크만 끄고 Gemini는 계속 말하게 둡니다.[^live]
-- **글로 이어 가기**: 「종료」를 누르면 같은 대화가 글자 대화로 이어집니다. 새 채팅을 만들 필요가 없습니다.[^live]
+- **글로 이어 가기**: 「종료」를 누르면 같은 대화가 글자 대화로 이어집니다. 새 채팅을 만들 필요가 없습니다. 그 대화에서 다시 「Live」를 누르면 음성으로 돌아옵니다.[^live]
 - **다른 앱 쓰기**: 화면 아래에서 위로 쓸어 올리면 Live를 켠 채 다른 앱으로 갈 수 있습니다.[^live]
 
 말로 끼어들기를 꺼 둬도 화면을 탭하면 멈출 수 있습니다. 자막을 켜면 그 뒤의 Live 대화에 모두 자막이 붙습니다.[^live]
@@ -82,7 +82,7 @@ Android에서는 Gemini를 **기본 어시스턴트**(휴대폰 버튼이나 목
 
 ### 잠금 화면에서 쓰기
 
-잠금을 풀지 않고도 Gemini에게 일부 일을 시킬 수 있습니다. 설정에서 「잠금 해제하지 않고 Gemini 사용하기」를 켜고 끕니다.[^lock] 허락해 두어도 **개인 정보가 필요한 일은 잠금을 풀라고 합니다.**[^lock]
+Android 휴대폰·태블릿에서는 잠금을 풀지 않고도 Gemini에게 일부 일을 시킬 수 있습니다. 설정에서 「잠금 해제하지 않고 Gemini 사용하기」를 켜고 끕니다.[^lock] 허락해 두어도 **개인 정보가 필요한 일은 잠금을 풀라고 합니다.**[^lock]
 
 휴대폰을 남과 함께 쓰거나 자주 두고 다닌다면 이 설정은 꺼 두는 편이 안전합니다.
 
@@ -90,7 +90,7 @@ Android에서는 Gemini를 **기본 어시스턴트**(휴대폰 버튼이나 목
 
 ## 컴퓨터 앱 — 단축키로 바로 부르기
 
-Mac·Windows 앱을 설치하는 법은 [1장](01-getting-started.md#gemini는-무엇이고-어디서-쓰나)에 있습니다. 설치한 뒤에는 **단축키**로 바로 부릅니다.
+Mac·Windows 앱을 설치하는 법은 [1장](01-getting-started.md#gemini는-무엇이고-어디서-쓰나)에 있습니다. 설치하고 앱을 켜 둔 상태라면 **단축키**로 바로 부릅니다.
 
 | 컴퓨터 | 단축키 | 그 밖에 |
 |---|---|---|
@@ -119,7 +119,7 @@ Mac 앱에서는 이런 것도 됩니다.[^mac]
 
 ## 정리
 
-- 마이크를 누르면 말로 물을 수 있다. 휴대폰 앱의 마이크는 최대 5분 듣는다. 한국어도 된다.
+- 마이크를 누르면 말로 물을 수 있다. 휴대폰 앱의 마이크는 최대 5분 듣는다. 한국어는 앱의 지원 언어다.
 - Gemini Live는 말로 주고받는 대화다. 도움말 기준 Android 앱에서 쓰고, 웹에서는 아직 안 된다. 「대기」·「종료」로 멈추고, 「종료」하면 글자 대화로 이어진다.
 - Live 중 카메라와 화면을 보여 줄 수 있다. 화면 공유는 휴대폰 화면 전체가 보인다.
 - 목소리는 휴대폰 앱 설정에서 바꾸고, 소리로 답하는 모든 기능에 쓰인다.
@@ -144,9 +144,9 @@ Mac 앱에서는 이런 것도 됩니다.[^mac]
 [^mobile]: Google 도움말, 「Gemini mobile app availability」(한국어판 「Gemini 모바일 앱 사용 가능 여부」). "To use your Gemini mobile app, you must be 13 (or the applicable age in your country) or over." / "Where you can download the Gemini app from the Google Play Store" (지원 언어 목록에 "Korean", 국가 목록에 "South Korea") https://support.google.com/gemini/answer/14579026 (확인일 2026-10-31)
 [^mobilestart]: Google 도움말, 「Get started with the Gemini mobile app」(한국어판 「Gemini 모바일 앱 시작하기」). "The microphone stays open for up to 5 minutes to listen to your prompt." / "On Android, if you set the Google app  as the default assist app on your device, you can choose Gemini as your mobile assistant." / "Activate by touch, which differs by device." / "“Hey Google” is not available in all languages, but you can still chat with Gemini with your voice when you tap Microphone ." / "Make sure your screen context setting is turned on." https://support.google.com/gemini/answer/14554984 (확인일 2026-10-31)
 [^mobileuse]: Google 도움말, 「What you can do with your Gemini mobile app」(한국어판 「Gemini 모바일 앱으로 할 수 있는 작업」). "Ask questions about your surroundings. In the Gemini app, tap Camera , take a photo, and ask questions about it." / "Summarize and find quick info from Gmail or Google Drive" https://support.google.com/gemini/answer/14579631 (확인일 2026-10-31)
-[^live]: Google 도움말, 「Talk naturally with Gemini Live」(한국어판 「Gemini Live로 자연스럽게 대화하기」). "With Gemini Live, you can have a natural, free-flowing conversation with Gemini. You can even interrupt it like when you want to add more details or change the topic of the conversation." / "Brainstorm ideas out loud: Ask for a gift idea, to plan an event, or to make a business plan." / "Practice aloud: Rehearse for important moments in a more natural and conversational way." / "An Android phone or tablet." / "For now, Gemini Live isn’t available in the Gemini web app or Gemini in Google messages." / "Be over 13 (or the applicable age in your country)." / "To use this feature, you must be signed in to Gemini Apps." / "For now, Gems can't be used with Gemini Live." / "Respect others’ privacy and ask permission before recording or including them in a Live chat." / "At the bottom, tap Live  or swipe left." / "You can also go Live by saying “Hey Google, let’s talk Live” or “Hey Google, let’s talk.”" / "To put the Live chat on hold, tap Hold . This turns off the mic." / "To resume the Live chat, tap Live ." / "Mute a Live chat to turn off your microphone but allow Gemini to keep speaking." / "You can seamlessly switch an ongoing conversation between Live (voice) and non-Live (text) modes without needing to start a new chat." / "To put Live in the background: from the bottom edge of your screen, swipe up." / "Tip: If you turn off interrupt Live responses, you can still interrupt Gemini by tapping the screen." / "If you turn on captions, all of your Gemini Live conversations will have captions until you turn the setting off." / "In your Live chat, you can turn on your camera to show Gemini what you see and talk about it." / "You leave the Gemini mobile app. The camera doesn’t automatically turn back on when you return to the app." / "You can share and get help with what’s on your device’s screen. When you share your screen, your full screen is shared with Gemini." / "From the top edge of your screen, swipe down, then on the “Screen Sharing” card, tap Stop sharing." / "Screen sharing doesn’t automatically resume when you continue your Live chat or unlock your screen." 한국어판 화면 이름 「대기」「종료」「음소거」「공유 중지」. https://support.google.com/gemini/answer/15274899 (확인일 2026-10-31)
+[^live]: Google 도움말, 「Talk naturally with Gemini Live」(한국어판 「Gemini Live로 자연스럽게 대화하기」). "With Gemini Live, you can have a natural, free-flowing conversation with Gemini. You can even interrupt it like when you want to add more details or change the topic of the conversation." / "Brainstorm ideas out loud: Ask for a gift idea, to plan an event, or to make a business plan." / "Practice aloud: Rehearse for important moments in a more natural and conversational way." / "An Android phone or tablet." / "For now, Gemini Live isn’t available in the Gemini web app or Gemini in Google messages." / "Be over 13 (or the applicable age in your country)." / "To use this feature, you must be signed in to Gemini Apps." / "For now, Gems can't be used with Gemini Live." / "Respect others’ privacy and ask permission before recording or including them in a Live chat." / "At the bottom, tap Live  or swipe left." / "You can also go Live by saying “Hey Google, let’s talk Live” or “Hey Google, let’s talk.”" / "To put the Live chat on hold, tap Hold . This turns off the mic." / "To resume the Live chat, tap Live ." / "Mute a Live chat to turn off your microphone but allow Gemini to keep speaking." / "You can seamlessly switch an ongoing conversation between Live (voice) and non-Live (text) modes without needing to start a new chat." / "Important: This feature is only available in English in the US." / "To get more helpful, tailored responses, Gemini can use memories of your past chats and info from some Connected Apps." / "To switch back to Live (voice) mode: In a non-Live chat, tap Live ." / "To put Live in the background: from the bottom edge of your screen, swipe up." / "Tip: If you turn off interrupt Live responses, you can still interrupt Gemini by tapping the screen." / "If you turn on captions, all of your Gemini Live conversations will have captions until you turn the setting off." / "In your Live chat, you can turn on your camera to show Gemini what you see and talk about it." / "You leave the Gemini mobile app. The camera doesn’t automatically turn back on when you return to the app." / "You can share and get help with what’s on your device’s screen. When you share your screen, your full screen is shared with Gemini." / "From the top edge of your screen, swipe down, then on the “Screen Sharing” card, tap Stop sharing." / "Screen sharing doesn’t automatically resume when you continue your Live chat or unlock your screen." 한국어판 화면 이름 「대기」「종료」「음소거」「공유 중지」. https://support.google.com/gemini/answer/15274899 (확인일 2026-10-31)
 [^widget]: Google 도움말, 「Add & customize your Gemini widget」(한국어판 「Gemini 위젯 추가 및 맞춤설정하기」). "Open directly to Gemini live with" / "Your device has iOS 17 or up." https://support.google.com/gemini/answer/16179553 (확인일 2026-10-31)
-[^voice]: Google 도움말, 「Change Gemini’s voice」(한국어판 「Gemini의 음성 변경」). "For now, you can only access Gemini’s voice setting in the Gemini mobile app." / "This voice setting applies to all Gemini Apps features." 한국어판 화면 이름 「Gemini의 음성」「듣기」「확인」. https://support.google.com/gemini/answer/15277943 (확인일 2026-10-31)
-[^lock]: Google 도움말, 「How your Gemini mobile app can help when your phone is locked」(한국어판 「휴대전화가 잠겨 있을 때 Gemini 모바일 앱의 도움을 받는 방법」). "When you give Gemini permission to respond while your phone is locked, you may still need to unlock your phone for certain tasks." / "Turn Use Gemini without unlocking on or off." 한국어판 화면 이름 「잠금 해제하지 않고 Gemini 사용하기」. https://support.google.com/gemini/answer/14576209 (확인일 2026-10-31)
+[^voice]: Google 도움말, 「Change Gemini’s voice」(한국어판 「Gemini의 음성 변경」). "For now, you can only access Gemini’s voice setting in the Gemini mobile app." / "The option to change Gemini’s voice isn’t available in some languages." / "This voice setting applies to all Gemini Apps features." 한국어판 화면 이름 「Gemini의 음성」「듣기」「확인」. https://support.google.com/gemini/answer/15277943 (확인일 2026-10-31)
+[^lock]: Google 도움말, 「How your Gemini mobile app can help when your phone is locked」(한국어판 「휴대전화가 잠겨 있을 때 Gemini 모바일 앱의 도움을 받는 방법」). "On Android phones and tablets, you can get help from your Gemini mobile app by touch" / "When you give Gemini permission to respond while your phone is locked, you may still need to unlock your phone for certain tasks." / "Turn Use Gemini without unlocking on or off." 한국어판 화면 이름 「잠금 해제하지 않고 Gemini 사용하기」. https://support.google.com/gemini/answer/14576209 (확인일 2026-10-31)
 [^mac]: Google 도움말, 「Use the Gemini app on Mac」(한국어판 「Mac에서 Gemini 앱 사용하기」). "For quick access, you can also use the keyboard shortcut Option + Space to bring up the Gemini chat window after the app is installed and running." / "Tip: To get more personalized responses, you can share your window with Gemini. In Gemini, click Add files and tools  Share window ." / "To use Speak to Window, press and hold the fn key." / "Important: Speak to Window is rolling out over time, so it may not be available to you yet." 한국어판 화면 이름 「파일 및 도구 추가」「창 공유」「현재 창에서 바로 말하기」. https://support.google.com/gemini/answer/17011627 (확인일 2026-10-31)
 [^windows]: Google 도움말, 「Use the Gemini app for Windows」(한국어판 「Windows용 Gemini 앱 사용하기」). "For quick access to Gemini, you can use the keyboard shortcut Alt + Space." https://support.google.com/gemini/answer/18263854 (확인일 2026-10-31)
