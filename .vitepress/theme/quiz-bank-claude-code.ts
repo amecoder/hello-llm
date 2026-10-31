@@ -7,6 +7,7 @@ export const CLAUDE_CODE_CHAPTERS: Record<number, { title: string; link: string 
   402: { title: 'Claude Code 2장. 데스크톱 앱 설치와 첫 세션', link: '/guide/20-claude-code/02-install' },
   403: { title: 'Claude Code 3장. 화면 둘러보기', link: '/guide/20-claude-code/03-screen-tour' },
   404: { title: 'Claude Code 4장. 허락과 되돌리기', link: '/guide/20-claude-code/04-permissions-undo' },
+  405: { title: 'Claude Code 5장. 잘 맡기는 법', link: '/guide/20-claude-code/05-delegate-well' },
 }
 
 export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
@@ -260,5 +261,71 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     ],
     answer: 1,
     explain: '커밋 뒤에 한 일은 되돌리면 사라질 수 있습니다. 무엇이 사라지는지 먼저 보고 확인한 뒤 되돌리면 실수로 지울 일이 줄어듭니다.',
+  },
+  // chapter 405
+  {
+    id: 'ch405-specific',
+    chapter: 405,
+    prompt: "회의 메모를 정리시키려 합니다. 고칠 일을 가장 줄여 주는 요청은 어느 쪽일까요?",
+    choices: [
+      "회의 메모 좀 보기 좋게 정리해 줘",
+      "inbox의 회의 메모를 결정·할 일(담당·기한)·다음 논의로 나눠 notes에 저장해 줘",
+      "회의 메모를 최대한 짧게 아무렇게나 요약해 줘",
+      "메모를 읽고 생각나는 대로 자유롭게 정리해 줘",
+    ],
+    answer: 1,
+    explain: "무엇을 보고, 어떤 모양으로, 어디에 둘지 적으면 Claude가 폴더만 읽어서는 알 수 없는 정보를 채울 수 있어서 고칠 일이 줄어듭니다.",
+  },
+  {
+    id: 'ch405-interview',
+    chapter: 405,
+    prompt: "주간 회고 양식을 만들고 싶은데 어떤 칸이 필요한지 아직 모르겠습니다. 어떻게 시작하면 좋을까요?",
+    choices: [
+      "다 정할 때까지 Claude Code를 쓰지 않는다",
+      "아무 양식이나 먼저 만들게 하고 그대로 쓴다",
+      "Claude에게 질문을 하나씩 해 달라고 하고, 정해지면 초안으로 정리하게 한다",
+      "다른 사람의 양식을 그대로 복사해 붙인다",
+    ],
+    answer: 2,
+    explain: "정하지 못했으면 Claude에게 인터뷰를 부탁할 수 있습니다. 정하지 않은 부분을 보기 있는 질문으로 묻고, 답이 모이면 스펙으로 정리합니다.",
+  },
+  {
+    id: 'ch405-plan',
+    chapter: 405,
+    prompt: "「계획」 모드로 받은 계획에 마음에 안 드는 부분이 있습니다. 승인하기 전에 무엇을 하면 될까요?",
+    choices: [
+      "「수정…」을 눌러 바꿀 점을 적는다",
+      "일단 「수락」하고 나중에 파일을 지운다",
+      "앱을 닫았다가 다시 연다",
+      "계획은 바꿀 수 없으니 그대로 둔다",
+    ],
+    answer: 0,
+    explain: "계획 카드의 「수정…」에 바꿀 점을 적으면 Claude가 계획을 고쳐 다시 승인을 요청합니다. 승인 전이 가장 싸게 고칠 수 있는 때입니다.",
+  },
+  {
+    id: 'ch405-check',
+    chapter: 405,
+    prompt: "Claude가 \"회고를 다 썼습니다\"라고만 했습니다. 공식 문서가 권하는 다음 행동은 무엇일까요?",
+    choices: [
+      "그 말을 믿고 바로 팀에 보낸다",
+      "같은 요청을 처음부터 다시 보낸다",
+      "점검표를 주고 항목마다 통과/실패와 근거를 보여 달라고 한다",
+      "회고 파일의 이름만 바꿔 둔다",
+    ],
+    answer: 2,
+    explain: "맞는지 답이 나오는 기준을 주고 근거를 달라고 하면, '끝나 보인다' 대신 실제로 확인한 내용을 읽을 수 있습니다.",
+  },
+  {
+    id: 'ch405-steer',
+    chapter: 405,
+    prompt: "같은 부분을 두 번 고쳐 달라고 했는데도 여전히 틀립니다. 공식 문서가 권하는 방법은 무엇일까요?",
+    choices: [
+      "세 번째, 네 번째로 계속 고쳐 달라고 한다",
+      "배운 점을 담아 새로 시작하고, 더 나은 요청을 한 번 보낸다",
+      "권한 모드를 「권한 무시」로 바꾼다",
+      "컴퓨터를 다시 켠 뒤 같은 말을 반복한다",
+    ],
+    answer: 1,
+    explain: "실패한 시도가 대화에 쌓이면 Claude가 그걸 계속 다시 읽습니다. 배운 점을 담은 새 요청 하나가 거의 항상 낫습니다.",
   },
 ]

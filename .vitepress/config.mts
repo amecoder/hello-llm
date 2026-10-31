@@ -62,6 +62,7 @@ export default defineConfig({
             { text: '2장. 데스크톱 앱 설치와 첫 세션', link: '/guide/20-claude-code/02-install' },
             { text: '3장. 화면 둘러보기', link: '/guide/20-claude-code/03-screen-tour' },
             { text: '4장. 허락과 되돌리기', link: '/guide/20-claude-code/04-permissions-undo' },
+            { text: '5장. 잘 맡기는 법', link: '/guide/20-claude-code/05-delegate-well' },
             { text: '← 1단계 · 공통 가이드', link: '/guide/00-common/' },
           ],
         },
