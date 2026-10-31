@@ -60,6 +60,7 @@ export default defineConfig({
             { text: '목차', link: '/guide/20-claude-code/' },
             { text: '1장. Claude Code는 무엇이고 어디서 쓰나', link: '/guide/20-claude-code/01-what-is' },
             { text: '2장. 데스크톱 앱 설치와 첫 세션', link: '/guide/20-claude-code/02-install' },
+            { text: '3장. 화면 둘러보기', link: '/guide/20-claude-code/03-screen-tour' },
             { text: '← 1단계 · 공통 가이드', link: '/guide/00-common/' },
           ],
         },

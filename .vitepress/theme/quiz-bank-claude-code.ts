@@ -5,6 +5,7 @@ import type { Question } from './quiz'
 export const CLAUDE_CODE_CHAPTERS: Record<number, { title: string; link: string }> = {
   401: { title: 'Claude Code 1장. 무엇이고 어디서 쓰나', link: '/guide/20-claude-code/01-what-is' },
   402: { title: 'Claude Code 2장. 데스크톱 앱 설치와 첫 세션', link: '/guide/20-claude-code/02-install' },
+  403: { title: 'Claude Code 3장. 화면 둘러보기', link: '/guide/20-claude-code/03-screen-tour' },
 }
 
 export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
@@ -126,5 +127,71 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     ],
     answer: 2,
     explain: '"다 했다"는 말을 그대로 믿지 않고 원본과 맞춰 봅니다. 담당·기한·숫자가 맞는지, 메모에 없는 내용을 지어내지 않았는지 확인합니다.',
+  },
+  // chapter 403
+  {
+    id: 'ch403-layout',
+    chapter: 403,
+    prompt: 'Code 탭에서 대화를 보면서 Claude가 고친 파일도 옆에 띄워 두고 싶습니다. 어떻게 할 수 있을까요?',
+    choices: [
+      '대화 칸 옆에 파일·바뀐 내용 같은 칸을 열어 원하는 대로 배치한다',
+      '앱을 하나 더 실행해 두 창을 나란히 둔다',
+      '대화를 복사해 메모장에 붙여 넣는다',
+      '한 번에 한 칸만 볼 수 있어서 방법이 없다',
+    ],
+    answer: 0,
+    explain: 'Code 탭은 대화·바뀐 내용·파일·터미널·브라우저 같은 칸을 열어 원하는 배치로 쓰는 화면입니다. 칸 머리를 끌어 옮기고 가장자리를 끌어 크기를 바꿉니다.',
+  },
+  {
+    id: 'ch403-titlebar',
+    chapter: 403,
+    prompt: '세션 제목 줄의 버튼이 아이콘뿐이라 무슨 버튼인지 모르겠습니다. 가장 쉬운 방법은 무엇일까요?',
+    choices: [
+      '하나씩 눌러 보고 앱을 다시 시작한다',
+      '마우스를 버튼 위에 올려 이름을 확인한다',
+      '설정에서 버튼을 모두 끈다',
+      '세션을 지우고 새로 만든다',
+    ],
+    answer: 1,
+    explain: '제목 줄 버튼은 마우스를 올리면 이름(터미널·변경 사항·브라우저·파일 등)이 보입니다. 창이 좁으면 일부 버튼은 ⋯ 메뉴 안으로 들어갑니다.',
+  },
+  {
+    id: 'ch403-changes',
+    chapter: 403,
+    prompt: '변경 사항 칸을 열었더니 「변경 사항을 보려면 Git 저장소가 필요합니다」라는 안내가 나옵니다. 무엇을 하면 될까요?',
+    choices: [
+      '앱을 지우고 다시 설치한다',
+      '파일을 모두 새 폴더로 옮긴다',
+      '유료 요금제를 한 단계 올린다',
+      'Claude에게 이 폴더에 변경 기록(Git)을 켜 달라고 한다',
+    ],
+    answer: 3,
+    explain: '변경 사항 칸은 Git 기록과 지금 파일을 비교해 보여 줍니다. 기록이 없는 폴더라면 Claude에게 Git을 켜고 첫 기록을 남겨 달라고 하면 됩니다.',
+  },
+  {
+    id: 'ch403-rail',
+    chapter: 403,
+    prompt: '오래 이어 온 세션에서 Claude가 앞에서 한 지시를 잊은 것 같습니다. 세션 정보 칸에서 무엇을 보면 좋을까요?',
+    choices: [
+      '환경 카드의 폴더 이름',
+      '결과물 카드의 파일 이름',
+      '컨텍스트 카드의 사용량',
+      '변경 사항 카드의 커밋 버튼',
+    ],
+    answer: 2,
+    explain: '컨텍스트는 한 세션에서 Claude가 한 번에 기억할 수 있는 양입니다. 다 차면 대화를 자동으로 요약하고 이어 가므로, 앞의 세부 지시가 흐려질 수 있습니다.',
+  },
+  {
+    id: 'ch403-files',
+    chapter: 403,
+    prompt: 'Claude가 만든 회의록을 앱 안에서 바로 열어 보고 싶습니다. 맞는 방법은 무엇일까요?',
+    choices: [
+      'Claude에게 파일 내용을 대화에 전부 붙여 달라고만 할 수 있다',
+      '파일 칸을 열거나 대화에 나온 파일 경로를 누른다',
+      '터미널 칸에서만 열 수 있다',
+      '앱 밖의 Finder로만 열 수 있다',
+    ],
+    answer: 1,
+    explain: '제목 줄의 파일 버튼으로 파일 칸을 열거나, 대화에 나온 파일 경로를 누르면 그 파일이 열립니다. 이 컴퓨터에서 하는 세션이면 직접 고칠 수도 있습니다.',
   },
 ]

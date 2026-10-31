@@ -144,7 +144,7 @@ inbox 폴더의 회의 메모를 읽고 회의록으로 정리해 줘. 결정한
 
 **같은 요청이어도 결과는 매번 조금씩 다릅니다.** 표 모양이나 말투가 이 가이드와 달라도 괜찮습니다. 위의 확인 질문에 모두 "예"라고 답할 수 있으면 잘된 것입니다.
 
-만들어진 파일은 내 컴퓨터의 **정리도구/notes** 폴더에 있습니다. Finder나 파일 탐색기로 열어 보세요. 앱 안에서 파일과 바뀐 내용을 보는 방법은 3장에서 다룹니다.
+만들어진 파일은 내 컴퓨터의 **정리도구/notes** 폴더에 있습니다. Finder나 파일 탐색기로 열어 보세요. 앱 안에서 파일과 바뀐 내용을 보는 방법은 [3장](03-screen-tour.md)에서 다룹니다.
 
 <Quiz id="ch402-check" />
 
@@ -155,7 +155,7 @@ inbox 폴더의 회의 메모를 읽고 회의록으로 정리해 줘. 결정한
 3. 위의 "나은 요청"을 그대로 보내고, 만들어진 회의록을 확인 질문 4개로 점검한다.
 4. 마음에 안 드는 점이 있으면 한 줄로 고쳐 달라고 해 본다(예: "할 일 표에 '상태' 칸을 넣어 줘").
 
-**이어지는 과제**: 내가 실제로 쓴 회의 메모나 수업 필기가 있다면 개인 정보를 지운 뒤 **inbox** 에 하나 넣고 같은 요청을 보내 본다. 형식(결정·할 일·다음 논의)은 내 일에 맞게 바꿔도 된다. 3장부터는 이 폴더를 계속 씁니다.
+**이어지는 과제**: 내가 실제로 쓴 회의 메모나 수업 필기가 있다면 개인 정보를 지운 뒤 **inbox** 에 하나 넣고 같은 요청을 보내 본다. 형식(결정·할 일·다음 논의)은 내 일에 맞게 바꿔도 된다. [3장](03-screen-tour.md)부터는 이 폴더를 계속 씁니다.
 
 ## 정리
 
@@ -177,7 +177,7 @@ inbox 폴더의 회의 메모를 읽고 회의록으로 정리해 줘. 결정한
 
 <ChapterDone :chapter="402" />
 
-다음 장: 3장 「화면 둘러보기」는 준비 중입니다. 그동안 [3단계 목차](./)에서 앞으로 배울 내용을 볼 수 있습니다.
+다음 장: [3장. 화면 둘러보기](03-screen-tour.md)
 
 [^quickstart]: Claude Code 공식 문서, 「Get started with the desktop app」. "Universal build for Intel and Apple Silicon" / "apt or .deb for Ubuntu and Debian" / "For Windows ARM64, download the ARM64 installer. On Linux, install with apt" / "sign in with your Anthropic account." / "Click the Code tab at the top of the sidebar. If the tabs show only icons, hover over one to see its name." / "Prompt to upgrade: you need to subscribe to a paid plan first" / "Prompt to sign in online: complete the sign-in and restart the app" / "The desktop app includes Claude Code, so you don't need to install Node.js or the CLI to use the Code tab." / "click the first control, the environment selector, and select the top entry in the Local group. Then click the project folder control beside the environment selector, select Open folder…, and choose your project's directory." / "If a new session shows no environment under your prompt box, you have the earlier layout." / "Start with a small project you know well." / "You can change the model later from the model picker." https://code.claude.com/docs/en/desktop-quickstart (확인일 2026-10-31)
 [^desktop-start]: Claude Code 공식 문서, 「Desktop application」. "Before you send your first message, choose the environment, project folder, permission mode, and model in the row under the prompt box" / "Type what you want Claude to do and press Enter to send. Claude reads your project files, makes changes, and runs commands based on your permission mode." / "click the stop button to interrupt immediately, or type a correction and press Enter to send it without stopping the running action." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
