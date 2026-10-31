@@ -264,7 +264,7 @@ export const GEMINI_QUESTIONS: readonly Question[] = [
   {
     id: 'ch304-canvas',
     chapter: 304,
-    prompt: 'Canvas로 만든 안내문에서 둘째 문단만 더 짧게 하고 싶습니다. 알맞은 방법은 무엇일까요?',
+    prompt: 'Canvas로 만든 안내문에서 다른 곳은 그대로 두고 둘째 문단만 더 짧게 하고 싶습니다. 가장 알맞은 방법은 무엇일까요?',
     choices: [
       '안내문 전체를 처음부터 다시 만들어 달라고 한다',
       'Canvas를 닫고 새 대화에서 같은 안내문을 다시 요청한다',
