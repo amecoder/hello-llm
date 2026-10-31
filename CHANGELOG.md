@@ -1,5 +1,14 @@
 # Changelog
 
+## [2026-10-31]
+
+### Added
+- 2단계 Gemini 사용 가이드 시작 — 단계 등록(장 번호 301~, 사이드바·상단 「목차」·전체 목차 카드·README), 1장 「시작하기」(쓰는 곳·Google 계정 로그인·요금제 원화·사용 한도·취소·오류), 2장 「화면 둘러보기」(화면 다섯 곳·+ 메뉴·모델과 사고 수준·임시 채팅·설정), 확인 퀴즈 12문제 `theme/quiz-bank-gemini.ts`, 화면 캡처 7장(Google AI Pro, 이름·제목 가림)과 번호 그림 좌표 `docs/tools/gemini-shot-marks.json` (PR #47, `0bac6c3`)
+
+### Changed
+- `docs/tools/mark-shots.py` 가 리눅스 글꼴이 없으면 Mac 글꼴(Arial Bold)을 쓴다 (PR #47)
+- 10-31 화면 기준: Gemini + 메뉴의 Canvas·Deep Research·가이드 학습은 「도구 더보기」 아래. 도움말 13275745 의 「다른 답안(drafts)」 문장이 사라져 가이드에 쓰지 않음 (PR #47)
+
 ## [2026-10-30]
 
 ### Added
