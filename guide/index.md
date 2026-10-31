@@ -79,7 +79,7 @@ features:
     link: /guide/10-claude/
     linkText: Claude 가이드 시작
   - title: 2단계 · Gemini 사용 가이드 (작성 중)
-    details: Google 계정으로 시작하기, 요금제와 사용 한도, 화면 둘러보기 — 공식 도움말과 실제 화면 확인 기준. 지금은 1~4장
+    details: Google 계정으로 시작하기, 요금제와 사용 한도, 화면 둘러보기 — 공식 도움말과 실제 화면 확인 기준. 지금은 1~5장
     link: /guide/12-gemini/
     linkText: Gemini 가이드 시작
   - title: AI 지식 레벨 시험 — 초급부터 전문가까지
