@@ -10,6 +10,7 @@ export const CLAUDE_CODE_CHAPTERS: Record<number, { title: string; link: string 
   405: { title: 'Claude Code 5장. 잘 맡기는 법', link: '/guide/20-claude-code/05-delegate-well' },
   406: { title: 'Claude Code 6장. 프로젝트 기억', link: '/guide/20-claude-code/06-claude-md' },
   407: { title: 'Claude Code 7장. 스킬·플러그인·외부 도구', link: '/guide/20-claude-code/07-skills-plugins' },
+  408: { title: 'Claude Code 8장. 여러 일 동시에·클라우드·예약', link: '/guide/20-claude-code/08-parallel-cloud-schedule' },
 }
 
 export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
@@ -448,5 +449,58 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     ],
     answer: 2,
     explain: "플러그인은 내 컴퓨터에서 내 권한으로 코드를 실행할 수 있고, 권한 규칙은 플러그인이 스스로 돌리는 코드에는 적용되지 않습니다. 설치 전에 확인합니다.",
+  },
+  // chapter 408
+  {
+    id: 'ch408-parallel',
+    chapter: 408,
+    prompt: "세션 두 개에 일을 나란히 맡기려 합니다. 가장 피해야 하는 것은 무엇일까요?",
+    choices: [
+      "한쪽은 공부 노트, 다른 쪽은 주간 회고처럼 서로 다른 파일을 맡기기",
+      "Cmd+N으로 새 세션을 하나 더 열기",
+      "두 세션이 같은 파일을 동시에 고치게 하기",
+      "Ctrl+Tab으로 두 세션 사이를 오가며 보기",
+    ],
+    answer: 2,
+    explain: "세션은 서로 독립이라, 한 세션의 되감기는 다른 세션이 고친 내용을 보통 추적하지 않습니다. 같은 파일을 여러 방향으로 바꿔 보려면 워크트리를 씁니다.",
+  },
+  {
+    id: 'ch408-kinds',
+    chapter: 408,
+    prompt: "내 컴퓨터의 inbox 메모를 읽어 매주 회고를 만드는 예약을 하려 합니다. 어떤 예약이 알맞을까요?",
+    choices: [
+      "데스크톱 예약 — 내 컴퓨터에서 돌고 내 파일에 접근한다",
+      "클라우드 예약 — 컴퓨터를 꺼도 내 폴더를 그대로 읽는다",
+      "/loop — 세션을 닫아도 몇 달씩 계속 돈다",
+      "예약 없이 매주 다른 사람에게 부탁한다",
+    ],
+    answer: 0,
+    explain: "데스크톱 예약은 내 컴퓨터에서 돌아 내 파일에 접근합니다. 클라우드 예약은 GitHub 저장소 복사본으로 일하고, /loop는 열어 둔 세션 안에서 돌며 7일 뒤 끝납니다.",
+  },
+  {
+    id: 'ch408-schedule',
+    chapter: 408,
+    prompt: "금요일 오후 6시 예약인데 그 시간에 노트북이 잠들어 있었습니다. 데스크톱 예약은 어떻게 될까요?",
+    choices: [
+      "그 주의 실행은 아예 사라지고 알림도 없다",
+      "놓친 실행을 전부 한꺼번에 몰아서 돌린다",
+      "깨어날 때 가장 최근에 놓친 실행을 한 번만 돌린다",
+      "다음 주 금요일까지 기다렸다가 두 번 돈다",
+    ],
+    answer: 2,
+    explain: "앱이 켜지거나 컴퓨터가 깨어나면, 놓친 실행 중 가장 최근 것 한 번만 돌립니다. 그래서 요청에 시점 조건을 함께 적어 두는 편이 좋습니다.",
+  },
+  {
+    id: 'ch408-cloud',
+    chapter: 408,
+    prompt: "클라우드 세션에 대한 설명으로 맞는 것은 무엇일까요?",
+    choices: [
+      "내 컴퓨터의 모든 폴더를 그대로 읽는다",
+      "GitHub 저장소를 받아 일하고, 내 컴퓨터를 꺼도 계속한다",
+      "무료 계정에서만 쓸 수 있다",
+      "내 컴퓨터가 켜져 있을 때만 돌아간다",
+    ],
+    answer: 1,
+    explain: "클라우드 세션은 GitHub 저장소를 받아서 일하므로 GitHub 연결이 필요하고, 앱을 닫거나 컴퓨터를 꺼도 계속 진행됩니다.",
   },
 ]

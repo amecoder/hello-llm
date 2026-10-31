@@ -136,7 +136,7 @@ templates 양식과 CLAUDE.md 규칙을 쓰는 스킬 3개를 이 폴더의 .cla
 
 <ChapterDone :chapter="407" />
 
-다음 장: 8장 「여러 일 동시에·클라우드·예약」은 준비 중입니다. 그동안 [3단계 목차](./)에서 앞으로 배울 내용을 볼 수 있습니다.
+다음 장: [8장. 여러 일 동시에·클라우드·예약](08-parallel-cloud-schedule.md)
 
 [^what]: Claude Code 공식 문서, 「Extend Claude with skills」. "Create a SKILL.md file with instructions, and Claude adds it to its toolkit. Claude uses skills when relevant, or you can invoke one directly with /skill-name." https://code.claude.com/docs/en/skills (확인일 2026-10-31)
 [^when]: Claude Code 공식 문서, 「Extend Claude with skills」. "Create a skill when you keep pasting the same instructions, checklist, or multi-step procedure into chat, or when a section of CLAUDE.md has grown into a procedure rather than a fact. Unlike CLAUDE.md content, a skill's body loads only when it's used, so long reference material costs almost nothing until you need it." https://code.claude.com/docs/en/skills (확인일 2026-10-31)

@@ -65,6 +65,7 @@ export default defineConfig({
             { text: '5장. 잘 맡기는 법', link: '/guide/20-claude-code/05-delegate-well' },
             { text: '6장. 프로젝트 기억', link: '/guide/20-claude-code/06-claude-md' },
             { text: '7장. 스킬·플러그인·외부 도구', link: '/guide/20-claude-code/07-skills-plugins' },
+            { text: '8장. 여러 일 동시에·클라우드·예약', link: '/guide/20-claude-code/08-parallel-cloud-schedule' },
             { text: '← 1단계 · 공통 가이드', link: '/guide/00-common/' },
           ],
         },
