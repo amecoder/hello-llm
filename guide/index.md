@@ -82,6 +82,10 @@ features:
     details: 시작하기, 화면, 대화 관리, 파일과 만들기, 메모리, Deep Research, 스킬·연결된 앱, 작업, 개인정보 설정, 음성, 전문가처럼 쓰기까지 — 공식 도움말과 실제 화면 확인 기준 12장
     link: /guide/12-gemini/
     linkText: Gemini 가이드 시작
+  - title: 3단계 · Claude Code 사용 가이드 (작성 중)
+    details: 내 컴퓨터의 폴더에서 직접 파일을 읽고 고치는 Claude — 터미널 없이 데스크톱 앱부터. 지금은 1~2장
+    link: /guide/20-claude-code/
+    linkText: Claude Code 가이드 시작
   - title: AI 지식 레벨 시험 — 초급부터 전문가까지
     details: 자격증 필기시험처럼 5과목 50문제, 과락 있음. 합격하면 다음 레벨이 열리는 초급·중급·고급·전문가 4단계
     link: /guide/00-common/level-test
@@ -102,5 +106,5 @@ features:
 |---|---|---|
 | 1 | [공통 가이드](/guide/00-common/) | 어떤 LLM에서든 통하는 공통 원리와 사용법 |
 | 2 | [ChatGPT](/guide/11-chatgpt/) · [Claude](/guide/10-claude/) · [Gemini](/guide/12-gemini/) | 서비스별 기능과 활용법 |
-| 3 | Claude Code · Codex (준비 중) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
+| 3 | [Claude Code](/guide/20-claude-code/) (작성 중) · Codex · Antigravity (준비 중) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
 | 4 | AI-SDLC (준비 중) | AI와 함께 기획부터 배포까지 — 소프트웨어 개발 전 과정(SDLC) |

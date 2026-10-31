@@ -1,0 +1,155 @@
+{
+ "_comment": "Claude Code desktop app screenshots (1568x979, macOS, Korean UI, paid account; session list hidden, local CLI-session count removed). output name -> source, optional crop [x1,y1,x2,y2], numbered boxes [x1,y1,x2,y2] in source pixels. Run: python3 docs/tools/mark-shots.py docs/tools/claude-code-shot-marks.json",
+ "_assets": "guide/20-claude-code/assets",
+ "shot-01-new-session-marked": {
+  "src": "shot-01-new-session",
+  "crop": [
+   360,
+   380,
+   1200,
+   979
+  ],
+  "marks": [
+   [
+    610,
+    418,
+    956,
+    592
+   ],
+   [
+    385,
+    888,
+    1185,
+    940
+   ],
+   [
+    396,
+    944,
+    480,
+    972,
+    378,
+    958
+   ],
+   [
+    484,
+    944,
+    552,
+    972,
+    570,
+    958
+   ],
+   [
+    1002,
+    944,
+    1100,
+    972,
+    984,
+    958
+   ],
+   [
+    1106,
+    944,
+    1142,
+    972,
+    1180,
+    958
+   ]
+  ]
+ },
+ "shot-02-folder-menu-marked": {
+  "src": "shot-02-folder-menu",
+  "crop": [
+   360,
+   600,
+   1200,
+   979
+  ],
+  "marks": [
+   [
+    484,
+    944,
+    552,
+    972
+   ],
+   [
+    486,
+    826,
+    680,
+    860
+   ],
+   [
+    486,
+    902,
+    680,
+    934
+   ]
+  ]
+ },
+ "shot-03-folder-picked-marked": {
+  "src": "shot-03-folder-picked",
+  "crop": [
+   360,
+   380,
+   1200,
+   979
+  ],
+  "marks": [
+   [
+    484,
+    944,
+    566,
+    972,
+    584,
+    958
+   ]
+  ]
+ },
+ "shot-04-prompt-marked": {
+  "src": "shot-04-prompt",
+  "crop": [
+   360,
+   380,
+   1200,
+   979
+  ],
+  "marks": [
+   [
+    385,
+    868,
+    1185,
+    940
+   ],
+   [
+    1106,
+    944,
+    1142,
+    972,
+    1180,
+    958
+   ]
+  ]
+ },
+ "shot-05-result-marked": {
+  "src": "shot-05-result",
+  "crop": [
+   380,
+   160,
+   1180,
+   790
+  ],
+  "marks": [
+   [
+    400,
+    212,
+    1168,
+    420
+   ],
+   [
+    400,
+    580,
+    1168,
+    666
+   ]
+  ]
+ }
+}

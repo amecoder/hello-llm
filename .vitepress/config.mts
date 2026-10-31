@@ -18,6 +18,7 @@ export default defineConfig({
     'guide/11-chatgpt/README.md': 'guide/11-chatgpt/index.md',
     'guide/10-claude/README.md': 'guide/10-claude/index.md',
     'guide/12-gemini/README.md': 'guide/12-gemini/index.md',
+    'guide/20-claude-code/README.md': 'guide/20-claude-code/index.md',
   },
   lastUpdated: true,
   markdown: {
@@ -39,6 +40,7 @@ export default defineConfig({
           { text: '2단계 · ChatGPT', link: '/guide/11-chatgpt/' },
           { text: '2단계 · Claude', link: '/guide/10-claude/' },
           { text: '2단계 · Gemini', link: '/guide/12-gemini/' },
+          { text: '3단계 · Claude Code', link: '/guide/20-claude-code/' },
         ],
       },
       {
@@ -51,6 +53,17 @@ export default defineConfig({
       },
     ],
     sidebar: {
+      '/guide/20-claude-code/': [
+        {
+          text: '3단계 · Claude Code 가이드',
+          items: [
+            { text: '목차', link: '/guide/20-claude-code/' },
+            { text: '1장. Claude Code는 무엇이고 어디서 쓰나', link: '/guide/20-claude-code/01-what-is' },
+            { text: '2장. 데스크톱 앱 설치와 첫 세션', link: '/guide/20-claude-code/02-install' },
+            { text: '← 1단계 · 공통 가이드', link: '/guide/00-common/' },
+          ],
+        },
+      ],
       '/guide/12-gemini/': [
         {
           text: '2단계 · Gemini 가이드',
