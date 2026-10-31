@@ -124,7 +124,7 @@ claude -p "/weekly-review"
 
 <ChapterDone :chapter="410" />
 
-다음 장: 11장 「실습 과제」는 준비 중입니다. 그동안 [3단계 목차](./)에서 앞으로 배울 내용을 볼 수 있습니다.
+다음 장: [11장. 실습 과제](11-practice.md)
 
 [^install]: Claude Code 공식 문서, 「Quickstart」. "To install Claude Code, open a terminal and run the command for your system. If you haven't used a terminal before, the terminal guide shows how to open one and paste the command." / "curl -fsSL https://claude.ai/install.sh | bash" / "irm https://claude.ai/install.ps1 | iex" https://code.claude.com/docs/en/quickstart (확인일 2026-10-31)
 [^start]: Claude Code 공식 문서, 「Quickstart」. "Open your terminal in any project directory and start Claude Code" / "Claude Code prompts you to log in on first use. For Claude subscription or Console accounts, follow the prompts to complete authentication in your browser." / "Type /help for available commands or /resume to continue a previous conversation." https://code.claude.com/docs/en/quickstart (확인일 2026-10-31)

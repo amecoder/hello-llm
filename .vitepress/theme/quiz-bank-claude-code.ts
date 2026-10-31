@@ -13,6 +13,7 @@ export const CLAUDE_CODE_CHAPTERS: Record<number, { title: string; link: string 
   408: { title: 'Claude Code 8장. 여러 일 동시에·클라우드·예약', link: '/guide/20-claude-code/08-parallel-cloud-schedule' },
   409: { title: 'Claude Code 9장. 비용·데이터·안전', link: '/guide/20-claude-code/09-cost-data-safety' },
   410: { title: 'Claude Code 10장. 터미널에서 쓰기', link: '/guide/20-claude-code/10-terminal' },
+  411: { title: 'Claude Code 11장. 실습 과제', link: '/guide/20-claude-code/11-practice' },
 }
 
 export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
@@ -623,5 +624,32 @@ export const CLAUDE_CODE_QUESTIONS: readonly Question[] = [
     ],
     answer: 0,
     explain: "터미널에서 /desktop 을 치면 세션을 저장하고 데스크톱 앱에서 엽니다(macOS·Windows x64, 구독 로그인). 앱의 'CLI 세션 가져오기'로도 가져올 수 있습니다.",
+  },
+  // chapter 411
+  {
+    id: 'ch411-how',
+    chapter: 411,
+    prompt: "실습 과제를 시작하려 합니다. 이 장이 권하는 준비로 맞는 것은 무엇일까요?",
+    choices: [
+      "내 문서 전체가 든 폴더를 골라 바로 시작한다",
+      "권한 모드를 「권한 무시」로 바꿔 빠르게 진행한다",
+      "새 연습 폴더를 만들고, 권한 모드는 「수동」으로 둔다",
+      "과제 9부터 거꾸로 한다",
+    ],
+    answer: 2,
+    explain: "연습 폴더에서만 하고, 수동 모드로 무엇을 하려는지 하나씩 보며 익힙니다. 과제 1~6은 앞 결과를 뒤에서 쓰므로 차례로 합니다.",
+  },
+  {
+    id: 'ch411-check',
+    chapter: 411,
+    prompt: "과제의 「잘 됐는지 확인」 점검표는 무엇을 체크하는 것일까요?",
+    choices: [
+      "Claude가 \"다 했다\"고 말했는지",
+      "내가 결과를 원본과 맞춰 직접 확인했는지",
+      "답이 얼마나 길었는지",
+      "세션이 몇 개 열렸는지",
+    ],
+    answer: 1,
+    explain: "점검표는 Claude의 말이 아니라 내가 확인한 사실을 체크합니다. 결과 모양이 이 가이드와 달라도 점검표를 다 체크하면 잘된 것입니다.",
   },
 ]
