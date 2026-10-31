@@ -8,6 +8,7 @@ export const GEMINI_CHAPTERS: Record<number, { title: string; link: string }> = 
   303: { title: 'Gemini 3장. 대화 관리', link: '/guide/12-gemini/03-chats' },
   304: { title: 'Gemini 4장. 파일과 만들기', link: '/guide/12-gemini/04-files-create' },
   305: { title: 'Gemini 5장. 기억과 맞춤 설정', link: '/guide/12-gemini/05-memory' },
+  306: { title: 'Gemini 6장. 검색과 Deep Research', link: '/guide/12-gemini/06-search' },
 }
 
 export const GEMINI_QUESTIONS: readonly Question[] = [
@@ -379,5 +380,58 @@ export const GEMINI_QUESTIONS: readonly Question[] = [
     ],
     answer: 1,
     explain: '가져와 이어 간 대화는 내 활동에 저장되고, 생성형 AI 모델 학습을 비롯한 서비스 개선에 쓰입니다. ZIP 은 하루 5개, 5GB까지이고 개인 계정만 됩니다.',
+  },
+  // chapter 306
+  {
+    id: 'ch306-check',
+    chapter: 306,
+    prompt: 'Gemini가 "한국 성인 독서율이 작년보다 크게 올랐다"고 답했습니다. 이 내용을 회의 자료에 쓰기 전에 할 일은 무엇일까요?',
+    choices: [
+      'Gemini가 자신 있게 말했으니 그대로 쓴다',
+      '「출처」를 열거나 Google 검색으로 숫자를 원문과 다시 확인한다',
+      '같은 질문을 한 번 더 해서 같은 답이 나오면 그대로 쓴다',
+      '답 끝에 "AI가 쓴 내용"이라고만 붙인다',
+    ],
+    answer: 1,
+    explain: 'Google은 늘 답을 따져 보고 내장 도구나 Google 검색으로 사실을 다시 확인하라고 안내합니다. 숫자와 날짜는 원문과 같은지 직접 보세요.',
+  },
+  {
+    id: 'ch306-deep',
+    chapter: 306,
+    prompt: 'Deep Research로 조사를 맡기면서 "공식 통계만 써 줘"라는 조건을 더하고 싶습니다. 언제 어떻게 하면 될까요?',
+    choices: [
+      '보고서가 다 만들어진 뒤에만 고칠 수 있다',
+      'Deep Research에서는 조건을 바꿀 수 없다',
+      '조사 계획이 나오면 바로 「계획 수정」을 눌러 조건을 더한다',
+      '「연구 시작」을 여러 번 누르면 조건이 반영된다',
+    ],
+    answer: 2,
+    explain: 'Deep Research는 조사 전에 계획을 먼저 보여 줍니다. 계획이 나오면 바로 「계획 수정」으로 고친 뒤 「연구 시작」을 누르세요.',
+  },
+  {
+    id: 'ch306-notebook',
+    chapter: 306,
+    prompt: '"독서 모임" 노트북에 회의록과 일정표를 자료로 넣어 두었습니다. 이 노트북을 지우면 어떻게 될까요?',
+    choices: [
+      '노트북 안에 넣은 자료와 대화도 함께 지워진다',
+      '노트북만 지워지고 자료와 대화는 그대로 남는다',
+      '자료는 남고 대화만 지워진다',
+      '노트북은 지울 수 없다',
+    ],
+    answer: 0,
+    explain: '노트북을 지우면 그 안에 넣은 자료와 대화도 함께 지워집니다. 계속 쓸 자료는 원본을 따로 보관해 두세요.',
+  },
+  {
+    id: 'ch306-study',
+    chapter: 306,
+    prompt: '시험 공부용으로 Gemini에게 퀴즈를 만들어 달라고 하려 합니다. 도움말이 권하는 요청 방식은 무엇일까요?',
+    choices: [
+      '주제 없이 "공부 좀 도와줘"라고만 한다',
+      '교재 사진만 올리고 아무 말도 하지 않는다',
+      '"정답만 알려 줘"라고 먼저 말한다',
+      '"퀴즈를 만들어 줘"처럼 만들 것을 먼저 말하고, 그다음 공부할 주제나 자료를 적는다',
+    ],
+    answer: 3,
+    explain: '도움말은 무엇을 만들지 먼저 말하고 그다음 공부할 자료나 주제를 적으라고 안내합니다. 다 풀면 강점과 더 공부할 부분도 알려 줍니다.',
   },
 ]
