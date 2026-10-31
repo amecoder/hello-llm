@@ -66,6 +66,7 @@ export default defineConfig({
             { text: '6장. 프로젝트 기억', link: '/guide/20-claude-code/06-claude-md' },
             { text: '7장. 스킬·플러그인·외부 도구', link: '/guide/20-claude-code/07-skills-plugins' },
             { text: '8장. 여러 일 동시에·클라우드·예약', link: '/guide/20-claude-code/08-parallel-cloud-schedule' },
+            { text: '9장. 비용·데이터·안전', link: '/guide/20-claude-code/09-cost-data-safety' },
             { text: '← 1단계 · 공통 가이드', link: '/guide/00-common/' },
           ],
         },

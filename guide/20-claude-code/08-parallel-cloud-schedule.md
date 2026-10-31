@@ -93,7 +93,7 @@
 
 <ChapterDone :chapter="408" />
 
-다음 장: 9장 「비용·데이터·안전」은 준비 중입니다. 그동안 [3단계 목차](./)에서 앞으로 배울 내용을 볼 수 있습니다.
+다음 장: [9장. 비용·데이터·안전](09-cost-data-safety.md)
 
 [^session]: Claude Code 공식 문서, 「Desktop application」. "Each session is an independent conversation with its own context and changes." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
 [^parallel]: Claude Code 공식 문서, 「Desktop application」. "Click + New in the sidebar, or press Cmd+N on macOS or Ctrl+N on Windows, to work on multiple tasks in parallel. Press Ctrl+Tab and Ctrl+Shift+Tab to switch between sessions." / "Side by side: hold Option on macOS or Alt on Windows and click a session in the sidebar" https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
