@@ -1,7 +1,7 @@
 # 第11章 専門家のように使う — 判断し、試し、積み重ねる
 
 > **一言まとめ**: 上手に使うために必要なのは、ボタンをたくさん知ることだけではありません。**何を任せるか判断し、任せる前に試し、繰り返すことは積み重ねておく**力です。
-> この章では、どのAIサービスでも通用する仕事のやり方をまとめました。メニューの位置やサービスごとの機能は、ステップ2の[ChatGPT 第11章](/guide/11-chatgpt/11-expert.md)と[Claude 第12章](/guide/10-claude/12-expert.md)で扱います。
+> この章では、どのAIサービスでも通用する仕事のやり方をまとめました。メニューの位置やサービスごとの機能は、ステップ2の[ChatGPT 第11章](/ja/guide/11-chatgpt/11-expert.md)と[Claude 第12章](/ja/guide/10-claude/12-expert.md)で扱います。
 
 この章のテーマは、第1〜10章で身につけたことを、いつ、どうやって引き出して使うかです。ステップ2で学ぶ機能（プロジェクトやスキルなど）は名前だけが登場し、詳しい使い方は各サービスの章にあります。ステップ2を読む前に見てもよいですし、ステップ2を終えたあとで見直してもかまいません。
 
@@ -78,11 +78,11 @@ OpenAIが、仕事でChatGPTを使う人たちの様子を分析した記事に�
 | こんな仕事なら | ChatGPT | Claude |
 |---|---|---|
 | 尋ねて、整えて、一緒に考える | 通常の会話 | 通常の会話 |
-| 簡単な事実、今日起きたこと | [ウェブ検索](/guide/11-chatgpt/06-search.md#웹-검색-—-chatgpt가-인터넷을-찾아보게-하기) | [ウェブ検索](/guide/10-claude/06-search.md#언제-무엇을-쓸까) |
-| 資料をたくさん集めて報告書にする | [Deep Research](/guide/11-chatgpt/06-search.md#심층-리서치-—-보고서를-맡기기) | [リサーチ](/guide/10-claude/06-search.md#언제-무엇을-쓸까)（有料） |
-| 1つの仕事をずっと続けていく | [プロジェクト](/guide/11-chatgpt/07-projects-plugins.md#프로젝트-—-대화·파일·지침을-한-폴더에) | [プロジェクト](/guide/10-claude/07-projects-tools.md#프로젝트-—-자료와-지침을-한곳에) |
-| いくつかの段階を経て完成ファイルを受け取る | [Work](/guide/11-chatgpt/07-projects-plugins.md#chat과-work의-차이)（有料） | [Cowork](/guide/10-claude/08-cowork.md#cowork란-—-대화가-아니라-일을-맡긴다)（有料） |
-| 決まった時間ごとに繰り返す | [スケジュールされたタスク](/guide/11-chatgpt/11-expert.md#정해진-때에-알아서-—-예약-작업) | [スケジュールされたタスク](/guide/10-claude/08-cowork.md#정해진-때에-알아서-—-예약-작업)（有料） |
+| 簡単な事実、今日起きたこと | [ウェブ検索](/ja/guide/11-chatgpt/06-search.md#ウェブ検索-—-chatgptにインターネットを調べさせる) | [ウェブ検索](/ja/guide/10-claude/06-search.md#いつ何を使うか) |
+| 資料をたくさん集めて報告書にする | [Deep Research](/ja/guide/11-chatgpt/06-search.md#ディープリサーチ-—-レポートを任せる) | [リサーチ](/ja/guide/10-claude/06-search.md#いつ何を使うか)（有料） |
+| 1つの仕事をずっと続けていく | [プロジェクト](/ja/guide/11-chatgpt/07-projects-plugins.md#プロジェクト-—-会話・ファイル・指示を1つのフォルダーに) | [プロジェクト](/ja/guide/10-claude/07-projects-tools.md#プロジェクト-—-資料と指示をひとつに) |
+| いくつかの段階を経て完成ファイルを受け取る | [Work](/ja/guide/11-chatgpt/07-projects-plugins.md#chatとworkの違い)（有料） | [Cowork](/ja/guide/10-claude/08-cowork.md#coworkとは-—-会話ではなく仕事を任せる)（有料） |
+| 決まった時間ごとに繰り返す | [スケジュールされたタスク](/ja/guide/11-chatgpt/11-expert.md#決まった時間に自動で-—-予約タスク) | [スケジュールされたタスク](/ja/guide/10-claude/08-cowork.md#決まった時間に自動で-—-予約タスク)（有料） |
 
 表の機能名と料金プランは、各サービスの章で確認したものです。変わることがあるので、使う前にその章を見てください。
 
@@ -96,7 +96,7 @@ OpenAIが、仕事でChatGPTを使う人たちの様子を分析した記事に�
 
 しまっておく場所は4つあります。最初から全部使う必要はありません。下の順番で、必要になったときに1つずつ足していきましょう。[^academy-layers]
 
-1. **すべての会話で同じお願いをする** → 指示（カスタム指示）に書きます。ChatGPTは[「カスタム指示（사용자 지정 지침）」](/guide/11-chatgpt/05-memory.md#사용자-지정-지침-—-늘-지켜-줬으면-하는-것)、Claudeは[「指示（지침）」](/guide/10-claude/05-memory.md#지침-—-모든-대화에-적용할-규칙)です。
+1. **すべての会話で同じお願いをする** → 指示（カスタム指示）に書きます。ChatGPTは[「カスタム指示（사용자 지정 지침）」](/ja/guide/11-chatgpt/05-memory.md#カスタム指示-—-いつも守ってほしいこと)、Claudeは[「指示（지침）」](/ja/guide/10-claude/05-memory.md#指示-—-すべての会話に適用するルール)です。
 2. **1つの仕事をずっと続けていく** → その仕事をプロジェクトにまとめます。
 3. **同じ手順を毎回説明する** → その手順を使い回せる型として残します。[第8章「4. 使い回すひな形にする」](08-meta-prompting.md#_4-使い回すひな形にする)の型をプロジェクトの指示に入れるところから始めましょう。サービスと料金プランが対応していれば、スキルとして作ることもできます。
 4. **よく整えた型を他の人と共有したい** → 型を文書として配るか、サービスが提供する共有機能（プラグインなど）にまとめます。こうした機能はサービスや料金プランによっては使えないことがあります。
@@ -145,7 +145,7 @@ Anthropicの講座に出てくる例は次のようなものです。[^academy-d
 
 答え合わせのテストに合格しても、責任はそのまま残ります。結果が常識に合っているか見てください。AIの手助けを受けたことも隠さないでください。[^academy-data] 大事な計算は電卓やExcelでもう一度確認しましょう。
 
-ファイルをアップロードする方法やグラフを受け取る方法はサービスごとに異なります。[ChatGPT 第11章「表と数字を任せる」](/guide/11-chatgpt/11-expert.md#표와-숫자-맡기기-—-데이터-분석)と[Claude 第12章「表と数字を任せる」](/guide/10-claude/12-expert.md#표와-숫자-맡기기)を見てください。
+ファイルをアップロードする方法やグラフを受け取る方法はサービスごとに異なります。[ChatGPT 第11章「表と数字を任せる」](/ja/guide/11-chatgpt/11-expert.md#表と数字を任せる-—-データ分析)と[Claude 第12章「表と数字を任せる」](/ja/guide/10-claude/12-expert.md#表と数字を任せる)を見てください。
 
 <Quiz id="ch11-data" />
 
@@ -170,7 +170,7 @@ ExcelのVLOOKUPを学びたい。答えをすぐ教えるのではなくて、�
 
 :::
 
-AIから自分に質問を投げかけさせる方法は、[第5章「4. 質問してもらう」](05-prompt-patterns.md#_4-質問してもらう-—-flipped-interaction)と同じ仕組みです。自分のレベルに合わせた説明を受け取るプロンプトは、[プロンプト集「勉強・説明を聞く」](prompt-library.md#勉強・説明を聞く)にあります。ChatGPTには、このように教えるやり方を別途オンにする学習モードもあります（[ChatGPT 第11章](/guide/11-chatgpt/11-expert.md#배우는-데-쓰기-—-공부-모드)）。
+AIから自分に質問を投げかけさせる方法は、[第5章「4. 質問してもらう」](05-prompt-patterns.md#_4-質問してもらう-—-flipped-interaction)と同じ仕組みです。自分のレベルに合わせた説明を受け取るプロンプトは、[プロンプト集「勉強・説明を聞く」](prompt-library.md#勉強・説明を聞く)にあります。ChatGPTには、このように教えるやり方を別途オンにする学習モードもあります（[ChatGPT 第11章](/ja/guide/11-chatgpt/11-expert.md#学ぶために使う-—-勉強モード)）。
 
 <Quiz id="ch11-learn" />
 
@@ -201,7 +201,7 @@ AIから自分に質問を投げかけさせる方法は、[第5章「4. 質問�
 2つ目の段落の結論がなぜ出てきたのか理解できないよ。どんな根拠と仮定でつながったのか説明して、弱いところがあれば直して。
 ```
 
-成果物の種類ごとに特に見るべきポイント（データ分析の計算方法、リサーチ報告書の出典など）は、[ChatGPT 第11章「信じる前に確認する」](/guide/11-chatgpt/11-expert.md#믿기-전에-확인하기)に表でまとめました。
+成果物の種類ごとに特に見るべきポイント（データ分析の計算方法、リサーチ報告書の出典など）は、[ChatGPT 第11章「信じる前に確認する」](/ja/guide/11-chatgpt/11-expert.md#信じる前に確認する)に表でまとめました。
 
 <Quiz id="ch11-verify" />
 
@@ -240,7 +240,7 @@ AIから自分に質問を投げかけさせる方法は、[第5章「4. 質問�
 
 <ChapterDone :chapter="11" />
 
-次の章: ステップ1を終えました。[理解度確認テスト](certificate.md)で自分のAI理解レベルを確認するか、ステップ2の[ChatGPT](/guide/11-chatgpt/01-getting-started.md)・[Claude](/guide/10-claude/01-getting-started.md)ガイドへ進んでみましょう。
+次の章: ステップ1を終えました。[理解度確認テスト](certificate.md)で自分のAI理解レベルを確認するか、ステップ2の[ChatGPT](/ja/guide/11-chatgpt/01-getting-started.md)・[Claude](/ja/guide/10-claude/01-getting-started.md)ガイドへ進んでみましょう。
 
 [^academy-4d]: Claude Academy「Claude 101」講義「Getting better results」。"AI Fluency is the ability to collaborate effectively with AI tools—not just knowing which buttons to click, but developing the judgment to use AI well across different situations." / "Deciding on what work should be done by humans, what work should be done by AI, and how to distribute tasks between them." / "Effectively communicating with AI systems." / "Thoughtfully and critically evaluating AI outputs, processes, behaviors and interactions." / "Using AI responsibly and ethically." / "maintaining transparency, and taking accountability for AI-assisted work." https://academy.claude.com/courses/claude-101/getting-better-results （確認日 2026-10-26）
 [^ways]: OpenAI、「How workers are unlocking new ways of working」。自分の職種以外の仕事で例や背景をより多く添え、確認をより多く頼むという分析。https://openai.com/index/unlocking-new-ways-of-working （確認日 2026-10-24）

@@ -40,17 +40,17 @@ CSVファイルはExcelで開ける表ファイルです。メンバー名簿に
 | 順番 | やること | ChatGPT | Claude |
 |---|---|---|---|
 | 1 | 先月のメモから案内文を書かせて正解と比べる | ステップ1 [第11章](11-expert.md#自分でやってみる) | ステップ1 [第11章](11-expert.md#自分でやってみる) |
-| 2 | 最初の質問 — 幹事が確認することリスト | [第1章](/guide/11-chatgpt/01-getting-started.md#직접-해-보기) | [第1章](/guide/10-claude/01-getting-started.md#직접-해-보기) |
-| 3 | メモから案内メッセージの下書きを作る | [第2章](/guide/11-chatgpt/02-screen-tour.md#직접-해-보기) | — |
-| 4 | 会話を探す・名前をつける | [第3章](/guide/11-chatgpt/03-chats.md#직접-해-보기) | [第3章](/guide/10-claude/03-chats.md#직접-해-보기) |
-| 5 | 議事録をアップロードして決まったこと・やることの表を作る | [第4章](/guide/11-chatgpt/04-files-images.md#직접-해-보기) | [第4章](/guide/10-claude/04-files-artifacts.md#직접-해-보기) |
-| 6 | 案内文の話し方を一行ルールにする | [第5章](/guide/11-chatgpt/05-memory.md#직접-해-보기) | [第5章](/guide/10-claude/05-memory.md#직접-해-보기) |
-| 7 | 集まる場所を検索して出典を確認する | [第6章](/guide/11-chatgpt/06-search.md#직접-해-보기) | [第6章](/guide/10-claude/06-search.md#직접-해-보기) |
-| 8 | 名簿を点検したあと「読書会」プロジェクトにファイルを集める | [第7章](/guide/11-chatgpt/07-projects-plugins.md#직접-해-보기) | [第7章](/guide/10-claude/07-projects-tools.md#직접-해-보기) |
-| 9 | フォルダごと任せて案内文パッケージを作る（有料） | — | [第8章](/guide/10-claude/08-cowork.md#직접-해-보기) |
-| 10 | 実際の資料をアップロードする前に学習設定を確認する | [第8章](/guide/11-chatgpt/08-privacy.md#직접-해-보기) | [第9章](/guide/10-claude/09-privacy.md#직접-해-보기) |
-| 11 | 集まりの最初の挨拶を音声で練習する | [第9章](/guide/11-chatgpt/09-voice.md#직접-해-보기) | [第10章](/guide/10-claude/10-voice-mobile.md#직접-해-보기) |
-| 12 | 会費帳簿の整理とグラフ作成、仕上げ | [第11章](/guide/11-chatgpt/11-expert.md#직접-해-보기) | [第12章](/guide/10-claude/12-expert.md#직접-해-보기) |
+| 2 | 最初の質問 — 幹事が確認することリスト | [第1章](/ja/guide/11-chatgpt/01-getting-started.md#実際にやってみよう) | [第1章](/ja/guide/10-claude/01-getting-started.md#自分でやってみる) |
+| 3 | メモから案内メッセージの下書きを作る | [第2章](/ja/guide/11-chatgpt/02-screen-tour.md#実際にやってみる) | — |
+| 4 | 会話を探す・名前をつける | [第3章](/ja/guide/11-chatgpt/03-chats.md#実際にやってみよう) | [第3章](/ja/guide/10-claude/03-chats.md#やってみよう) |
+| 5 | 議事録をアップロードして決まったこと・やることの表を作る | [第4章](/ja/guide/11-chatgpt/04-files-images.md#実際にやってみよう) | [第4章](/ja/guide/10-claude/04-files-artifacts.md#実際にやってみよう) |
+| 6 | 案内文の話し方を一行ルールにする | [第5章](/ja/guide/11-chatgpt/05-memory.md#実際にやってみよう) | [第5章](/ja/guide/10-claude/05-memory.md#実際にやってみる) |
+| 7 | 集まる場所を検索して出典を確認する | [第6章](/ja/guide/11-chatgpt/06-search.md#実際にやってみよう) | [第6章](/ja/guide/10-claude/06-search.md#実際にやってみよう) |
+| 8 | 名簿を点検したあと「読書会」プロジェクトにファイルを集める | [第7章](/ja/guide/11-chatgpt/07-projects-plugins.md#実際にやってみよう) | [第7章](/ja/guide/10-claude/07-projects-tools.md#やってみよう) |
+| 9 | フォルダごと任せて案内文パッケージを作る（有料） | — | [第8章](/ja/guide/10-claude/08-cowork.md#実際にやってみる) |
+| 10 | 実際の資料をアップロードする前に学習設定を確認する | [第8章](/ja/guide/11-chatgpt/08-privacy.md#実際にやってみよう) | [第9章](/ja/guide/10-claude/09-privacy.md#実際にやってみよう) |
+| 11 | 集まりの最初の挨拶を音声で練習する | [第9章](/ja/guide/11-chatgpt/09-voice.md#実際にやってみよう) | [第10章](/ja/guide/10-claude/10-voice-mobile.md#実際にやってみよう) |
+| 12 | 会費帳簿の整理とグラフ作成、仕上げ | [第11章](/ja/guide/11-chatgpt/11-expert.md#実際にやってみよう) | [第12章](/ja/guide/10-claude/12-expert.md#実際にやってみよう) |
 
 順番どおりに進めなくても大丈夫です。飛ばした章があっても、次の章の課題は進められます。
 
