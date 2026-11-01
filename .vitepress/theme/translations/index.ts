@@ -6,11 +6,12 @@ import type { LevelQuestion } from '../level-test.ts'
 import type { Question } from '../quiz.ts'
 import { CHAPTERS } from '../quiz-bank.ts'
 import { en } from './en.ts'
+import { zh_hant } from './zh-hant/index.ts'
 import { zh_hans } from './zh-hans/index.ts'
 import { ja } from './ja/index.ts'
 import type { Translation } from './types.ts'
 
-export const TRANSLATIONS: Partial<Record<Lang, Translation>> = { en, ja, 'zh-hans': zh_hans }
+export const TRANSLATIONS: Partial<Record<Lang, Translation>> = { en, ja, 'zh-hans': zh_hans, 'zh-hant': zh_hant }
 
 export function chapterTitleOf(n: number, lang: Lang): string {
   return TRANSLATIONS[lang]?.chapters[n] ?? CHAPTERS[n].title

@@ -7,6 +7,8 @@
 import json, re, sys
 root, spec = sys.argv[1], json.load(open(sys.argv[2], encoding='utf-8'))
 c = spec['code']; q = lambda s: json.dumps(s, ensure_ascii=False)
+after = spec.get('after', 'ja')  # language whose block the new one follows
+ak = after if re.fullmatch(r'\w+', after) else f"'{after}'"
 DIRS = ['00-common', '11-chatgpt', '10-claude', '12-gemini', '20-claude-code', '21-codex', '22-antigravity', '30-ai-sdlc']
 
 p = f'{root}/.vitepress/config.mts'; s = open(p, encoding='utf-8').read()
@@ -53,8 +55,8 @@ block = f"""    '{c}': {{
       }},
     }},
 """
-m = re.search(r"\n    ja: \{\n.*?\n    \},\n", s, re.S)
-assert m, "ja locale block not found"
+m = re.search(r"\n    " + re.escape(ak) + r": \{\n.*?\n    \},\n", s, re.S)
+assert m, f"{after} locale block not found"
 s = s[:m.end()] + block + s[m.end():]
 # search labels, after the ja search entry
 sr = spec['search']
@@ -69,15 +71,15 @@ search = f"""          '{c}': {{
             }},
           }},
 """
-m = re.search(r"\n          ja: \{\n            translations: \{\n.*?\n          \},\n", s, re.S)
-assert m, "ja search block not found"
+m = re.search(r"\n          " + re.escape(ak) + r": \{\n            translations: \{\n.*?\n          \},\n", s, re.S)
+assert m, f"{after} search block not found"
 s = s[:m.end()] + search + s[m.end():]
 open(p, 'w', encoding='utf-8').write(s)
 
 # locales/index.ts
 p = f'{root}/.vitepress/theme/locales/index.ts'; s = open(p, encoding='utf-8').read()
 v = spec['var']
-s = s.replace("import { ja, jaContent } from './ja.ts'\n", f"import {{ ja, jaContent }} from './ja.ts'\nimport {{ {v}, {v}Content }} from './{c}.ts'\n")
+s = re.sub(r"(import \{ ko, type Ui \} from './ko.ts'\n)", lambda m: f"import {{ {v}, {v}Content }} from './{c}.ts'\n" + m.group(1), s)
 s = re.sub(r"export const UI_TEXT = \{ ([^}]*) \}", lambda m: f"export const UI_TEXT = {{ {m.group(1)}, '{c}': {v} }}", s)
 s = re.sub(r"export const CONTENT = \{ ([^}]*) \}", lambda m: f"export const CONTENT = {{ {m.group(1)}, '{c}': {v}Content }}", s)
 open(p, 'w', encoding='utf-8').write(s)
