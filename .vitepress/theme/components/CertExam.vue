@@ -26,6 +26,7 @@ import { loadProgress, progress } from '../progress-store'
 
 type Stage = 'intro' | 'exam' | 'result'
 
+// some strings carry <strong> and are rendered with v-html: pass only numbers and constants, never the reader's name
 const UI = {
   ko: {
     intro: (size: number, concept: number, situation: number) =>
