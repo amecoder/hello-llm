@@ -5,6 +5,10 @@ import { EXAM } from './exam.ts'
 import { CHATGPT } from './chatgpt.ts'
 import { CLAUDE } from './claude.ts'
 import { GEMINI } from './gemini.ts'
+import { CLAUDE_CODE } from './claude-code.ts'
+import { CODEX } from './codex.ts'
+import { ANTIGRAVITY } from './antigravity.ts'
+import { AI_SDLC } from './ai-sdlc.ts'
 import { LEVEL_BASIC } from './level-basic.ts'
 import { LEVEL_INTERMEDIATE } from './level-intermediate.ts'
 import { LEVEL_ADVANCED } from './level-advanced.ts'
@@ -57,10 +61,47 @@ const chapters: Record<number, string> = {
   310: "第10章 音声とスマホ",
   311: "第11章 実習課題",
   312: "第12章 プロのように使う",
+  401: "1章. Claude Codeとは何か、どこで使うか",
+  402: "2章. デスクトップアプリのインストールと最初のセッション",
+  403: "第3章 画面を見て回る",
+  404: "第4章 許可と取り消し",
+  405: "第5章 上手な任せ方",
+  406: "第6章 プロジェクトの記憶",
+  407: "第7章 スキル・プラグイン・外部ツール",
+  408: "第8章 複数の作業を同時に・クラウド・予約",
+  409: "9章. 費用・データ・安全",
+  410: "10章. ターミナルで使う",
+  411: "第11章 実習課題",
+  412: "第12章 専門家のように使う",
+  501: "第1章 Codexとは何か、Claude Codeと何が違うのか",
+  502: "第2章 ChatGPTアプリでCodexを始める",
+  503: "第3章 ルールファイルAGENTS.md",
+  504: "4章. 権限と元に戻す方法",
+  505: "5章. スキルを移す",
+  506: "第6章 予約・クラウド・スマートフォン",
+  507: "第7章 ターミナルで使う",
+  508: "第8章 コスト・データ・安全、そしてツールの選び方",
+  601: "第1章 Antigravityとは何か、前の2つのツールと何が違うのか",
+  602: "2章. アプリのインストールと最初の整理",
+  603: "3章. ルールとスキル",
+  604: "第4章 権限と元に戻す",
+  605: "第5章 プラン・予約・ブラウザ・ゴール",
+  606: "第6章 ターミナルで使う",
+  607: "第7章 費用・データ・安全、そして3つのツールの選び方",
+  701: "第1章 AIといっしょに作るということ",
+  702: "第2章 GitHubリポジトリを作る",
+  703: "第3章 企画と仕様",
+  704: "第4章 作る",
+  705: "第5章 確認とテスト",
+  706: "第6章 PRとレビュー",
+  707: "第7章 デプロイ",
+  708: "8章. 運用と改善",
+  709: "第9章 安全と責任",
+  710: "10章. 実習の課題",
 }
 
 export const ja: Translation = {
   chapters,
-  questions: { ...QUIZ1, ...EXAM, ...CHATGPT, ...CLAUDE, ...GEMINI },
+  questions: { ...QUIZ1, ...EXAM, ...CHATGPT, ...CLAUDE, ...GEMINI, ...CLAUDE_CODE, ...CODEX, ...ANTIGRAVITY, ...AI_SDLC },
   level: { ...LEVEL_BASIC, ...LEVEL_INTERMEDIATE, ...LEVEL_ADVANCED, ...LEVEL_EXPERT },
 }

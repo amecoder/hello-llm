@@ -84,20 +84,20 @@ features:
     linkText: Geminiガイドを始める
   - title: ステップ3 · Claude Code 使い方ガイド
     details: パソコンのフォルダ内で直接ファイルを読み書きするClaude — ターミナル不要のデスクトップアプリから、自分流に整理してくれるツールを作りながら学ぶ全12章
-    link: /guide/20-claude-code/
-    linkText: Claude Codeガイドを始める（韓国語）
+    link: /ja/guide/20-claude-code/
+    linkText: Claude Codeガイドを始める
   - title: ステップ3 · Codex 使い方ガイド
     details: ChatGPTアプリの中のCodex — Claude Codeで作った整理ツールを移行しながら違いだけを学ぶ全8章
-    link: /guide/21-codex/
-    linkText: Codexガイドを始める（韓国語）
+    link: /ja/guide/21-codex/
+    linkText: Codexガイドを始める
   - title: ステップ3 · Antigravity 使い方ガイド
     details: GoogleのAntigravity — 同じ整理ツールのフォルダを移さずそのまま開いて試す全7章、無料アカウントでも実習可能
-    link: /guide/22-antigravity/
-    linkText: Antigravityガイドを始める（韓国語）
+    link: /ja/guide/22-antigravity/
+    linkText: Antigravityガイドを始める
   - title: ステップ4 · AI-SDLC ガイド
     details: AIと一緒に小さなWebページを企画から公開・改善まで — GitHubリポジトリ、SPEC.md、確認の仕組み、PR・レビュー、GitHub Pages、安全対策まで全10章
-    link: /guide/30-ai-sdlc/
-    linkText: AI-SDLCガイドを始める（韓国語）
+    link: /ja/guide/30-ai-sdlc/
+    linkText: AI-SDLCガイドを始める
   - title: AI知識レベル試験 — 初級からエキスパートまで
     details: 資格の筆記試験のように5科目50問、足切りあり。合格すると次のレベルが開く初級・中級・上級・エキスパートの4段階
     link: /ja/guide/00-common/level-test
@@ -118,5 +118,5 @@ features:
 |---|---|---|
 | 1 | [共通ガイド](/ja/guide/00-common/) | どのLLMでも通じる共通の仕組みと使い方 |
 | 2 | [ChatGPT](/ja/guide/11-chatgpt/) · [Claude](/ja/guide/10-claude/) · [Gemini](/ja/guide/12-gemini/) | サービス別の機能と活用法 |
-| 3 | [Claude Code](/guide/20-claude-code/) · [Codex](/guide/21-codex/) · [Antigravity](/guide/22-antigravity/) | 自分のパソコンで動くコーディングAIツール |
-| 4 | [AI-SDLC](/guide/30-ai-sdlc/) | AIと一緒に企画から公開まで — ソフトウェア開発の全工程（SDLC） |
+| 3 | [Claude Code](/ja/guide/20-claude-code/) · [Codex](/ja/guide/21-codex/) · [Antigravity](/ja/guide/22-antigravity/) | 自分のパソコンで動くコーディングAIツール |
+| 4 | [AI-SDLC](/ja/guide/30-ai-sdlc/) | AIと一緒に企画から公開まで — ソフトウェア開発の全工程（SDLC） |
