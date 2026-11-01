@@ -3,7 +3,7 @@
 > **한 줄 요약**: `agy`는 Antigravity의 터미널 프로그램이고, `agy -p "할 일"`은 한 번 실행하고 끝납니다.
 > `-p`에서는 허락이 필요한 일이 **조용히 거절**됩니다. 그런데도 **종료 코드는 0(성공)**이라, 빈 결과를 성공으로 착각하기 쉽습니다.
 
-이 장은 2026년 11월 1일에 확인한 Antigravity 공식 문서와, macOS에서 `agy` 1.4.12를 실행한 결과를 바탕으로 썼습니다. **터미널이 처음이라면 이 장은 건너뛰어도 됩니다.** 터미널이 무엇인지는 [Claude Code 10장](../20-claude-code/10-terminal.md)에서 설명했습니다.
+이 장은 2026년 11월 1일에 확인한 Antigravity 공식 문서와, macOS에서 `agy` 1.4.12를 실행한 결과를 바탕으로 썼습니다. 이 가이드는 실습용 다른 AI 도구 안에서 `agy`를 불러 실행했습니다. 공식 FAQ는 이런 사용을 개인 요금제에서 지원하지 않으므로([7장](07-safety-choose.md)), 따라 할 때는 **터미널에서 `agy`를 직접** 실행하세요. **터미널이 처음이라면 이 장은 건너뛰어도 됩니다.** 터미널이 무엇인지는 [Claude Code 10장](../20-claude-code/10-terminal.md)에서 설명했습니다.
 
 ## 설치하고 시작하기
 
@@ -13,7 +13,7 @@ macOS·Linux의 설치 명령은 이렇습니다.[^install]
 curl -fsSL https://antigravity.google/cli/install.sh | bash
 ```
 
-**설치 명령은 공식 문서(antigravity.google/docs)에 적힌 그대로인지 확인하고 실행하세요.** Windows용 명령도 공식 문서에 있습니다.
+이 명령은 인터넷에서 받은 설치 프로그램을 바로 실행합니다. 그래서 **공식 문서(antigravity.google/docs)에 적힌 그대로인지 확인하고 실행하세요.** Windows용 명령도 공식 문서에 있습니다.
 
 정리도구 폴더로 이동해 `agy`를 치면 대화 화면이 열립니다.[^tui] 앱에서 이미 로그인했다면 브라우저 없이 바로 로그인됩니다.[^keyring] 처음 실행할 때는 **이 폴더를 믿는지** 확인합니다(Workspace trust).[^trust]
 
@@ -52,9 +52,9 @@ agy
 정리도구 폴더에서 `agy -p`를 여러 번 돌리며 실제로 겪은 일입니다.
 
 1. **빈 결과인데 성공.** 에이전트가 폴더 목록을 보려고 셸 명령(`ls`)을 쓰려다 거절당하자, **아무것도 만들지 않고 끝났습니다.** 종료 코드는 0이었습니다. 이런 일이 세 번 있었습니다. 결과 파일이 실제로 생겼는지 꼭 확인하세요.
-2. **믿지 않은 폴더에서는 읽기·쓰기도 거절.** 공식 문서는 작업 폴더 안 파일을 자동 허락한다고 하지만, 이 가이드의 연습 폴더에서는 쓰기와 읽기도 거절됐습니다. 이 폴더를 아직 "믿는 폴더"로 등록하지 않았던 것이 원인으로 보입니다(이 가이드의 추정). 대화형 `agy`를 한 번 열어 폴더를 믿는다고 답하면 등록됩니다.[^trust]
+2. **믿지 않은 폴더에서는 읽기·쓰기도 거절.** 공식 문서는 작업 폴더 안 파일을 자동 허락한다고 하지만, 이 가이드의 연습 폴더에서는 쓰기와 읽기도 거절됐습니다. 이 폴더를 아직 "믿는 폴더"로 등록하지 않았던 것이 원인으로 보입니다(이 가이드의 추정). 대화형 `agy`를 한 번 열어 폴더를 믿는다고 답하면 등록됩니다.[^trusted]
 3. **해결: 모드 하나 + 한 문장.** `--mode accept-edits`를 붙이고 요청 끝에 "셸 명령은 쓰지 말고 파일 읽기·쓰기만 해 줘"를 더하자 모두 성공했습니다. 모든 것을 허락하는 `--dangerously-skip-permissions`는 쓰지 않았습니다. 공식 문서도 범위를 좁힌 허용 규칙을 권합니다.[^skip]
-4. **답이 빠뜨린 파일.** 읽기 전용으로 notes 폴더의 파일 목록을 표로 달라고 했더니, 파일 3개 중 **2개만** 표에 나왔습니다. 확인 범위를 스스로 세어 보세요.
+4. **답이 빠뜨린 파일.** 읽기 전용으로 notes 폴더의 파일 목록을 표로 달라고 했습니다. 정리한 파일은 3개(주간회의 회의록·임시회의 회의록·주간 회고)였는데, 표에는 **임시회의 회의록이 빠지고** 대신 빈 파일 `.gitkeep`이 들어갔습니다. 확인 범위를 스스로 세어 보세요.
 
 실제로 쓴 명령은 이렇습니다.
 
@@ -77,7 +77,7 @@ agy -p "notes 폴더의 파일 목록을 보여 주고, 각 파일이 어떤 양
 
 ## 이어 가기와 사용량
 
-터미널의 대화 기록은 **실행한 폴더별로** 나뉩니다.[^per-folder] `agy -c`로 그 폴더의 마지막 대화를 바로 잇거나, `/resume`으로 골라 이어 갑니다.[^resume] 망쳐 놓은 일은 `/rewind`(또는 `/undo`)로 앞 상태로 되돌립니다([4장](04-permissions-undo.md)).
+터미널의 대화 기록은 **실행한 폴더별로** 나뉩니다.[^per-folder] `agy -c`로 그 폴더의 마지막 대화를 바로 잇거나, `/resume`으로 골라 이어 갑니다.[^resume] `/rewind`(또는 `/undo`)는 대화를 앞의 메시지로 되돌립니다([4장](04-permissions-undo.md)). 파일까지 돌아오는지는 공식 문서에 나오지 않으니, 파일은 Git 기록을 믿으세요.
 
 사용량은 `/usage`로 봅니다.[^usage]
 
@@ -126,3 +126,4 @@ agy -p "notes 폴더의 파일 목록을 보여 주고, 각 파일이 어떤 양
 [^per-folder]: Antigravity 공식 문서, 「Managing conversations」. "When you launch `agy` from a specific directory, the agent only displays and resumes sessions associated with that specific local repository or subdirectory." https://antigravity.google/docs/cli/conversations (확인일 2026-11-01)
 [^resume]: Antigravity 공식 문서, 「Managing conversations」. "Antigravity CLI supports both an interactive **Session Picker** TUI overlay and direct command-line flags (`agy -c` / `agy --continue`) to resume threads instantly based on your active workspace." https://antigravity.google/docs/cli/conversations (확인일 2026-11-01)
 [^usage]: Antigravity 공식 문서, 「Model quotas (/usage)」. "Antigravity CLI provides the `/usage` command (alias `/quota`) to help you monitor your resource consumption." https://antigravity.google/docs/cli/commands/usage (확인일 2026-11-01)
+[^trusted]: Antigravity 공식 문서, 「CLI commands」. "| **`trustedWorkspaces`** | string\[\] | `[]` | Folders you chose to trust when the CLI asked. The CLI adds entries for you. |" https://antigravity.google/docs/cli/reference (확인일 2026-11-01)

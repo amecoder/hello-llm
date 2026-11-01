@@ -18,9 +18,10 @@
 
 **Turbo**는 울타리 없이 컴퓨터 전체를 읽고 쓸 수 있습니다.[^turbo] 메모 정리에는 필요 없습니다.
 
-바꾸는 곳은 두 군데입니다.[^where]
+바꾸는 곳은 세 군데입니다.[^where]
 
 - 모든 프로젝트: **Settings → General → Global Permissions → Permission Preset**
+- 프로젝트 하나: **Settings → Projects**
 - 지금 대화: 입력창의 권한 선택기
 
 프로젝트는 기본으로 전체 설정을 따르고(**Inherit Global**), 프로젝트마다 따로 정할 수도 있습니다.[^inherit] 믿는 프로젝트는 느슨하게, 믿지 못하는 폴더는 엄격하게 둘 수 있다는 뜻입니다.[^per-project] 개인 계정이 처음에 어떤 프리셋으로 시작하는지는 공식 문서에 나오지 않습니다. 앱을 열면 먼저 확인하세요.
@@ -29,7 +30,7 @@
 
 ## 울타리와 기본 규칙
 
-앱에는 **터미널 울타리**(샌드박스)가 있고, **기본으로 켜져 있습니다.**[^sandbox] 울타리 안의 명령은 작업 폴더와 임시 폴더만 쓰고, **인터넷에 나가지 못합니다.**[^no-net] `~/.ssh`나 `.env`처럼 민감한 파일도 막힙니다.[^sensitive]
+앱에는 **터미널 울타리**(샌드박스)가 있고, 공식 문서는 **기본으로 켜져 있다**고 설명합니다.[^sandbox] 다만 프리셋마다 다릅니다. Default·Auto에서는 켜지고, Request Review·Turbo에서는 꺼집니다.[^by-preset] 울타리 안의 명령은 작업 폴더와 임시 폴더만 쓰고, **인터넷에 나가지 못합니다.**[^no-net] `~/.ssh`나 `.env`처럼 민감한 파일도 막힙니다.[^sensitive]
 
 프리셋과 상관없이 기본 규칙도 있습니다.
 
@@ -39,7 +40,7 @@
 
 대화 중에 허락한 것은 남을 수 있어서, 에이전트가 믿을 만한 동작을 점점 배웁니다.[^persist] 편하지만, 무엇을 허락했는지 기억해 두세요.
 
-**터미널(`agy`)의 기본값은 다릅니다.** 터미널은 파일 쓰기·명령·웹 도구 전에 묻고[^cli-ask], 울타리는 **기본으로 꺼져 있습니다.**[^cli-sandbox] 앱과 반대입니다. 6장에서 다룹니다.
+**터미널(`agy`)의 기본값은 다릅니다.** 터미널은 파일 쓰기·명령·웹 도구 전에 묻고[^cli-ask], 울타리는 **기본으로 꺼져 있습니다.**[^cli-sandbox] 6장에서 다룹니다.
 
 <Quiz id="ch604-sandbox" />
 
@@ -47,7 +48,7 @@
 
 **Review 창의 버리기는 조심하세요.** 「Discard unstaged changes」는 **확인 없이 바로** 적용되고, 기록되지 않은 새 파일까지 지웁니다.[^discard] 기본 보기에는 내가 고친 것도 들어 있으니([2장](02-first-task.md)), 버리기 전에 무엇이 들어 있는지 꼭 보세요.
 
-터미널에는 대화를 앞의 안정된 상태로 되돌리는 `/rewind`(또는 `/undo`)가 있습니다.[^rewind] Claude Code의 되감기와 비슷한 기능입니다.
+터미널에는 대화를 앞의 안정된 상태로 되돌리는 `/rewind`(또는 `/undo`)가 있습니다.[^rewind] 이름은 Claude Code의 되감기와 비슷하지만, 공식 문서는 "대화"를 되돌린다고만 설명합니다. 파일까지 되돌리는지는 나오지 않습니다.
 
 앱에도 되돌리기가 있는 것으로 보입니다. 공식 변경 기록에 "Confirm Undo" 확인 창이 대화만 되돌리는 선택지를 갖게 됐다는 내용이 있습니다.[^undo] 다만 **쓰는 법을 설명한 문서는 찾지 못했고**, 이 가이드도 앱에서 확인하지 못했습니다.
 
@@ -72,7 +73,7 @@
 ## 정리
 
 - 앱 권한은 프리셋 넷. 처음에는 Request Review나 Default, Turbo는 쓰지 않는다.
-- 앱의 울타리는 기본으로 켜져 있고 인터넷이 막혀 있다. 터미널은 반대로 기본 꺼짐.
+- 앱의 울타리는 Default·Auto 프리셋에서 켜지고 인터넷이 막힌다. 터미널은 기본 꺼짐.
 - 프로젝트 폴더 안 파일은 묻지 않고, 밖과 웹은 묻는다.
 - Review 창 버리기는 확인 없이 바로 지운다. 맡기기 전에 Git으로 기록해 둔다.
 
@@ -92,7 +93,7 @@
 [^business]: Antigravity 공식 문서, 「Agent settings」. "Business and enterprise accounts use the following settings instead of the permission presets above." https://antigravity.google/docs/agent-settings (확인일 2026-11-01)
 [^presets]: Antigravity 공식 문서, 「Agent settings」. "**Request Review** (_“Every command requires approval.”_): The sandbox is off and every terminal command requires approval." / "**Default** (_“Ask before sensitive operations.”_): Commands run without prompting inside the [Terminal sandbox](https://antigravity.google/docs/sandbox); running outside the sandbox requires approval." / "When a command needs to run outside the sandbox, Antigravity automatically evaluates it so safe, reversible commands proceed without prompting while risky or irreversible actions still pause for your approval." https://antigravity.google/docs/agent-settings (확인일 2026-11-01)
 [^turbo]: Antigravity 공식 문서, 「Agent settings」. "**Turbo** (_“Run all commands without restrictions.”_): All commands run without prompting with no isolation or restrictions, and the agent has full read and write access to your filesystem." https://antigravity.google/docs/agent-settings (확인일 2026-11-01)
-[^where]: Antigravity 공식 문서, 「Agent settings」. "**For all projects**: Open **Settings** > **General** > **Global Permissions** > **Permission Preset**." / "**From the message box** (`v2.23.0+`): Choose a preset from the permissions picker." https://antigravity.google/docs/agent-settings (확인일 2026-11-01)
+[^where]: Antigravity 공식 문서, 「Agent settings」. "**For all projects**: Open **Settings** > **General** > **Global Permissions** > **Permission Preset**." / "**From the message box** (`v2.23.0+`): Choose a preset from the permissions picker." / "**For a single project**: Override the global preset under **Settings** > **Projects**. Projects default to **Inherit Global**, which follows your global preset." https://antigravity.google/docs/agent-settings (확인일 2026-11-01)
 [^inherit]: Antigravity 공식 문서, 「Agent settings」. "Projects default to **Inherit Global**, which follows your global preset." https://antigravity.google/docs/agent-settings (확인일 2026-11-01)
 [^per-project]: Antigravity 공식 문서, 「Antigravity features」. "This means you can have a more permissive setting for a trusted project and a more restrictive security setting for an untrusted folder." https://antigravity.google/docs/features (확인일 2026-11-01)
 [^sandbox]: Antigravity 공식 문서, 「Terminal sandbox」. "Antigravity includes a **terminal sandbox**, enabled by default, that isolates shell commands executed by agents." https://antigravity.google/docs/sandbox (확인일 2026-11-01)
@@ -107,3 +108,4 @@
 [^discard]: Antigravity 공식 문서, 「Review changes」. "**Discard unstaged changes** takes effect immediately, without asking you to confirm. It also deletes untracked files from disk." https://antigravity.google/docs/review-changes (확인일 2026-11-01)
 [^rewind]: Antigravity 공식 문서, 「CLI best practices」. "Type `/rewind` (or `/undo`) to roll back your conversation thread to a previous stable checkout." https://antigravity.google/docs/cli/best-practices (확인일 2026-11-01)
 [^undo]: Antigravity 공식 문서, 「Changelog」. "The Confirm Undo dialog now offers an option to revert only the conversation." https://antigravity.google/docs/changelog (확인일 2026-11-01)
+[^by-preset]: Antigravity 공식 문서, 「Terminal sandbox」. "| **Default** | On | Allowed in sandbox; ask outside |" / "| **Turbo** | Off | Allowed without prompting, unrestricted |" https://antigravity.google/docs/sandbox (확인일 2026-11-01)

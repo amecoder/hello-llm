@@ -36,9 +36,9 @@ Antigravity는 **모든 요금제에 모든 기능**을 줍니다. 예약 작업
 
 사용량은 질문 개수가 아니라 **에이전트가 한 일의 양**에 따라 줄어듭니다. 쉬운 일이면 더 많이 물을 수 있습니다.[^work]
 
-개인 Google 계정(예: @gmail.com)이면 무료로도 쓸 수 있습니다.[^personal] 다만 **만 18세 이상**이어야 합니다.[^age] 회사·학교에서 관리하는 계정은 개인 계정이 아니어서, 관리자가 허용해야 합니다.[^workspace]
+개인 Google 계정(예: @gmail.com)이면 무료로도 쓸 수 있습니다.[^personal] 다만 **만 18세 이상**이어야 하고, 이용 가능한 국가여야 합니다(대한민국은 목록에 있음).[^age][^country] 회사·학교에서 관리하는 계정은 개인 계정이 아니어서, 관리자가 허용해야 합니다.[^workspace]
 
-**세 도구 중 무료 계정으로 따라 할 수 있는 것은 Antigravity뿐입니다.** Claude Code와 Codex 장은 유료 요금제를 기준으로 했습니다. 아직 유료 요금제가 없다면 이 단계부터 실습해도 됩니다.
+**세 도구 중 무료 계정으로 모든 기능을 쓸 수 있는 것은 Antigravity뿐입니다.** Claude Code는 유료 구독이 필요하고, Codex 장은 Plus 이상을 기준으로 했습니다. 아직 유료 요금제가 없다면 이 단계부터 실습해도 됩니다.
 
 <Quiz id="ch601-plans" />
 
@@ -54,7 +54,7 @@ Antigravity에서는 Gemini 말고 다른 회사 모델도 고를 수 있고, �
 
 출처: Antigravity 공식 문서(일부만 옮김, Pro의 Claude는 체험판 제외)[^model-table]
 
-무료로 고를 수 있던 Claude 4.6 계열은 **2026년 11월 2일에 빠진다**고 적혀 있습니다.[^removed] 그래서 무료 계정이라면 Gemini 3.8 Flash로 실습한다고 생각하면 됩니다.
+무료로 고를 수 있던 Claude 4.6 계열은 **2026년 11월 2일에 빠질 예정**이라고 적혀 있습니다(2026-11-01 확인 기준).[^removed] 그래서 무료 계정이라면 Gemini 3.8 Flash로 실습한다고 생각하면 됩니다.
 
 <Quiz id="ch601-models" />
 
@@ -120,3 +120,4 @@ Codex 5장까지 마친 정리도구 폴더를 **그대로** Antigravity로 엽�
 [^model-table]: Antigravity 공식 문서, 「Choose a model」. 모델 표의 Gemini 3.8 Flash·Gemini 4 Argon·Claude Sonnet 5.5 행과 "\*\* Available on Google AI Pro for non-trial subscriptions only." https://antigravity.google/docs/models (확인일 2026-11-01)
 [^removed]: Antigravity 공식 문서, 「Choose a model」. "\* Will be removed on November 2, 2026." https://antigravity.google/docs/models (확인일 2026-11-01)
 [^discovery]: Antigravity 공식 문서, 「Customization discovery」. "**Workspace**: the `.agents/` folder in your project, plus `AGENTS.md` and `GEMINI.md` files." https://antigravity.google/docs/customization-discovery (확인일 2026-11-01)
+[^country]: Antigravity 공식 문서, 「FAQ」. "Google Antigravity is available in the following countries and territories." / "South Korea" https://antigravity.google/docs/faq (확인일 2026-11-01)

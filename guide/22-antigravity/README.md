@@ -3,7 +3,7 @@
 Antigravity는 Google이 만든, **내 컴퓨터의 폴더에서 직접 일하는** AI 도구입니다. 데스크톱 앱과 터미널 프로그램 `agy`가 있습니다.
 이 가이드는 [Codex 가이드](../21-codex/)까지 만든 「내 방식대로 정리해 주는 도구」 폴더를 **옮기지 않고 그대로 열어**, 세 번째 도구에서도 도는지 확인하며 다른 점만 배웁니다.
 
-> **이 가이드는 2026년 11월 1일에 확인한 Antigravity 공식 문서(antigravity.google/docs)와 실제 실행 결과를 바탕으로 썼습니다.** 기능과 메뉴 이름은 자주 바뀝니다.
+> **이 가이드는 2026년 11월 1일에 확인한 Antigravity 공식 문서(antigravity.google/docs)와 터미널 `agy`로 실행한 결과를 바탕으로 썼습니다. 앱 화면으로는 아직 실습하지 못했습니다.** 기능과 메뉴 이름은 자주 바뀝니다.
 > 세 도구 중 유일하게 **무료 Google 계정**(만 18세 이상)으로도 모든 기능을 쓸 수 있습니다. 요금제에 따라 사용량과 모델만 다릅니다.
 
 | 장 | 제목 | 이런 걸 알게 됩니다 |
@@ -25,7 +25,7 @@ Antigravity는 Google이 만든, **내 컴퓨터의 폴더에서 직접 일하�
 | `inbox/` | [회의-2026-10-27-주간회의.txt](/practice/notes/inbox/회의-2026-10-27-주간회의.txt) · [공부-2026-10-28-프롬프트-강의.txt](/practice/notes/inbox/공부-2026-10-28-프롬프트-강의.txt) · [회고-2026-10-29.txt](/practice/notes/inbox/회고-2026-10-29.txt) · [회고-2026-10-30.txt](/practice/notes/inbox/회고-2026-10-30.txt) · [회고-2026-10-31.txt](/practice/notes/inbox/회고-2026-10-31.txt) · [회의-2026-10-29-임시회의.txt](/practice/notes/inbox/회의-2026-10-29-임시회의.txt) |
 | `templates/` | [회의록.md](/practice/notes/results/5장-양식-회의록.txt) · [공부노트.md](/practice/notes/results/5장-양식-공부노트.txt) · [주간회고.md](/practice/notes/results/5장-양식-주간회고.txt) · [README.md](/practice/notes/results/5장-양식-README.txt) |
 | 맨 위 | [AGENTS.md](/practice/notes/results/codex/3장-AGENTS.md.txt) · [CLAUDE.md](/practice/notes/results/6장-CLAUDE.md.txt) |
-| `.agents/skills/이름/SKILL.md` | [meeting-notes](/practice/notes/results/7장-스킬-meeting-notes.txt) · [study-notes](/practice/notes/results/7장-스킬-study-notes.txt) · [weekly-review](/practice/notes/results/7장-스킬-weekly-review.txt) |
+| `.agents/skills/이름/SKILL.md` (Claude Code도 쓰려면 `.claude/skills/`에도 같은 파일) | [meeting-notes](/practice/notes/results/7장-스킬-meeting-notes.txt) · [study-notes](/practice/notes/results/7장-스킬-study-notes.txt) · [weekly-review](/practice/notes/results/7장-스킬-weekly-review.txt) |
 
 받은 파일은 확장자를 표의 이름대로 바꿔 저장합니다(예: `3장-AGENTS.md.txt` → `AGENTS.md`). `notes/` 폴더는 비워 둡니다.
 

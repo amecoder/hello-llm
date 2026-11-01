@@ -63,7 +63,7 @@ Antigravity 앱의 에이전트는 **프로젝트**(Projects) 안에서 일합�
 inbox/회의-2026-10-27-주간회의.txt 메모를 회의록으로 정리해서 notes/ 폴더에 새 파일로 저장해 줘.
 ```
 
-파일을 짚어 주고 싶으면 `@`를 쳐서 고를 수도 있습니다. 파일을 짚어도 내용이 붙여 넣어지는 것이 아니라, 에이전트가 필요할 때 그 파일을 읽습니다.[^mention]
+파일을 짚어 주고 싶으면 `@`를 쳐서 고를 수도 있습니다. 파일을 짚어도 내용이 붙여 넣어지는 것이 아니라, 에이전트에게는 파일 경로가 전달되고 필요할 때 그 파일을 읽습니다.[^mention]
 
 같은 요청을 이 가이드가 터미널(`agy`)로 실행한 결과는 [3장](03-rules-skills.md)에 있습니다. 앱과 터미널은 같은 에이전트를 씁니다([1장](01-what-is.md)).
 
@@ -120,6 +120,6 @@ Review 창이 Git 저장소의 변경을 보여 주므로, 정리도구 폴더�
 [^review-mode]: Antigravity 공식 문서, 「Artifact review」. "You can customize the review workflow in the **Agent** tab of the **Settings** pane." / "The agent always halts and requests your explicit approval before proceeding with proposed changes:" https://antigravity.google/docs/artifact-review (확인일 2026-11-01)
 [^always]: Antigravity 공식 문서, 「Artifact review」. "The agent never halts for manual review and immediately proceeds with executing its plans:" https://antigravity.google/docs/artifact-review (확인일 2026-11-01)
 [^walkthrough]: Antigravity 공식 문서, 「Walkthrough」. "The agent creates walkthrough artifacts when it completes task implementation. This type of artifact includes a concise summary of the changes made to remind you of what happened in the active conversation." https://antigravity.google/docs/walkthrough (확인일 2026-11-01)
-[^mention]: Antigravity 공식 문서, 「Mentions and quoting」. "Mentioning a file or folder doesn’t paste its contents into your prompt." https://antigravity.google/docs/at-mentions (확인일 2026-11-01)
+[^mention]: Antigravity 공식 문서, 「Mentions and quoting」. "Mentioning a file or folder doesn’t paste its contents into your prompt." / "| A file or folder | Its full path. The agent reads it when it needs to. |" https://antigravity.google/docs/at-mentions (확인일 2026-11-01)
 [^review]: Antigravity 공식 문서, 「Review changes」. "In the Antigravity App, the **Review** pane shows the changes in your project’s Git repository, including the agent’s edits." https://antigravity.google/docs/review-changes (확인일 2026-11-01)
 [^views]: Antigravity 공식 문서, 「Review changes」. "| **Agent Edits** | The files the agent modified in this conversation, whether or not they’re committed. |" / "| **Uncommitted** | Staged and unstaged changes in your working tree, grouped under **Staged Changes** and **Changes**. This is the default. |" https://antigravity.google/docs/review-changes (확인일 2026-11-01)
