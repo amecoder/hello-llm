@@ -22,8 +22,72 @@ export default defineConfig({
     'guide/21-codex/README.md': 'guide/21-codex/index.md',
     'guide/22-antigravity/README.md': 'guide/22-antigravity/index.md',
     'guide/30-ai-sdlc/README.md': 'guide/30-ai-sdlc/index.md',
+    'en/guide/00-common/README.md': 'en/guide/00-common/index.md',
   },
   lastUpdated: true,
+  // Korean is the source at the site root; translations live under /<lang>/ (see theme/i18n.ts)
+  locales: {
+    root: { label: '한국어', lang: 'ko-KR' },
+    en: {
+      label: 'English',
+      lang: 'en-US',
+      link: '/en/',
+      description: 'A step-by-step guide that takes you from asking an AI chatbot simple questions to using it like a pro',
+      themeConfig: {
+        nav: [
+          {
+            text: 'Contents',
+            activeMatch: '^/en/guide/',
+            items: [
+              { text: 'Full table of contents', link: '/en/guide/' },
+              { text: 'Stage 1 · Common Guide', link: '/en/guide/00-common/' },
+              { text: 'Stages 2–4 (Korean only for now)', link: '/guide/' },
+            ],
+          },
+          {
+            text: 'Go to the services',
+            items: [
+              { text: 'ChatGPT', link: 'https://chatgpt.com/' },
+              { text: 'Claude', link: 'https://claude.ai/new' },
+              { text: 'Gemini', link: 'https://gemini.google.com/app' },
+            ],
+          },
+        ],
+        sidebar: {
+          '/en/guide/00-common/': [
+            {
+              text: 'Stage 1 · Common Guide',
+              items: [
+                { text: 'Contents', link: '/en/guide/00-common/' },
+                { text: 'Chapter 1. What Is an LLM?', link: '/en/guide/00-common/01-what-is-llm' },
+                { text: 'Chapter 2. Why Is Everyone Talking About It?', link: '/en/guide/00-common/02-why-it-matters' },
+                { text: 'Chapter 3. Why Learn This?', link: '/en/guide/00-common/03-why-learn' },
+                { text: 'Chapter 4. Prompt Basics', link: '/en/guide/00-common/04-prompt-basics' },
+                { text: 'Chapter 5. Prompt Patterns', link: '/en/guide/00-common/05-prompt-patterns' },
+                { text: 'Chapter 6. Refining Through Follow-up Conversation', link: '/en/guide/00-common/06-conversation' },
+                { text: 'Chapter 7. Structured Prompts', link: '/en/guide/00-common/07-structured-prompts' },
+                { text: 'Chapter 8. Meta Prompting', link: '/en/guide/00-common/08-meta-prompting' },
+                { text: 'Chapter 9. Using AI Safely', link: '/en/guide/00-common/09-safety' },
+                { text: 'Chapter 10. Practice Exercises', link: '/en/guide/00-common/10-practice' },
+                { text: 'Chapter 11. Using AI Like a Pro', link: '/en/guide/00-common/11-expert' },
+                { text: 'Ongoing Project — Book Club Prep', link: '/en/guide/00-common/practice-kit' },
+                { text: 'Ready-to-Use Prompts', link: '/en/guide/00-common/prompt-library' },
+                { text: 'Understanding Check', link: '/en/guide/00-common/certificate' },
+                { text: 'AI Knowledge Level Test', link: '/en/guide/00-common/level-test' },
+              ],
+            },
+          ],
+        },
+        outline: { label: 'On this page' },
+        docFooter: { prev: 'Previous', next: 'Next' },
+        lastUpdated: { text: 'Last updated' },
+        darkModeSwitchLabel: 'Appearance',
+        sidebarMenuLabel: 'Menu',
+        returnToTopLabel: 'Back to top',
+        langMenuLabel: 'Change language',
+      },
+    },
+  },
   markdown: {
     anchor: { slugify },
     config: (md) => {
@@ -221,12 +285,17 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
-        translations: {
-          button: { buttonText: '검색', buttonAriaLabel: '검색' },
-          modal: {
-            noResultsText: '검색 결과가 없습니다',
-            resetButtonTitle: '지우기',
-            footer: { selectText: '선택', navigateText: '이동', closeText: '닫기' },
+        // English pages use the built-in English labels
+        locales: {
+          root: {
+            translations: {
+              button: { buttonText: '검색', buttonAriaLabel: '검색' },
+              modal: {
+                noResultsText: '검색 결과가 없습니다',
+                resetButtonTitle: '지우기',
+                footer: { selectText: '선택', navigateText: '이동', closeText: '닫기' },
+              },
+            },
           },
         },
       },
@@ -237,5 +306,6 @@ export default defineConfig({
     darkModeSwitchLabel: '화면 모드',
     sidebarMenuLabel: '목차',
     returnToTopLabel: '맨 위로',
+    langMenuLabel: '언어 바꾸기',
   },
 })

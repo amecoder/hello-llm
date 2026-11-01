@@ -1,7 +1,9 @@
 <script setup lang="ts">
 // "I've read this chapter" button at the end of each chapter.
 import { computed, nextTick, onMounted, ref } from 'vue'
-import { withBase } from 'vitepress'
+import { useData, withBase } from 'vitepress'
+import { DONE_TEXT, STAGE_TITLE_EN, TRANSLATED_STAGES, langOf, localePrefix } from '../i18n.ts'
+import { CHAPTER_TITLE_EN } from '../quiz-bank-en.ts'
 import { CHAPTERS } from '../quiz-bank'
 import { summarize, toggleRead } from '../progress.ts'
 import { CHAPTER_NUMBERS, loadProgress, progress, progressLoaded, saveProgress, storageBlocked } from '../progress-store'
@@ -13,7 +15,19 @@ const isRead = computed(() => progress.value.read.includes(props.chapter))
 // count only the chapters of this chapter's stage (common guide, ChatGPT guide, ...)
 const stage = computed(() => stageOf(props.chapter))
 const status = computed(() => summarize(progress.value, chaptersOf(stage.value.id, CHAPTER_NUMBERS)))
-const nextChapter = computed(() => (status.value.next === null ? null : CHAPTERS[status.value.next]))
+const { lang } = useData()
+const lg = computed(() => langOf(lang.value))
+const t = computed(() => DONE_TEXT[lg.value])
+const stageTitle = computed(() => (lg.value === 'en' ? STAGE_TITLE_EN[stage.value.id] : stage.value.title))
+// links and titles follow the page language; untranslated chapters keep the Korean title
+const nextChapter = computed(() => {
+  if (status.value.next === null) return null
+  const c = CHAPTERS[status.value.next]
+  if (lg.value === 'ko') return c
+  // a stage without an English version links to the Korean page
+  const translated = TRANSLATED_STAGES[lg.value].includes(stage.value.id)
+  return { title: CHAPTER_TITLE_EN[status.value.next] ?? c.title, link: (translated ? localePrefix(lg.value) : '') + c.link }
+})
 
 onMounted(loadProgress)
 
@@ -31,19 +45,19 @@ async function toggle() {
 <template>
   <div class="cd" :class="{ done: isRead }">
     <p class="cd-ask" role="status">
-      <template v-if="!isRead">이 장을 다 읽었나요?</template>
-      <template v-else>✓ 다 읽음으로 표시했습니다. {{ stage.title }} {{ status.total }}장 중 {{ status.done }}장을 읽었어요.</template>
+      <template v-if="!isRead">{{ t.ask }}</template>
+      <template v-else>{{ t.marked(stageTitle, status.total, status.done) }}</template>
     </p>
-    <button v-if="!isRead" ref="markBtn" type="button" class="cd-btn" :disabled="!progressLoaded" @click="toggle">다 읽음으로 표시</button>
+    <button v-if="!isRead" ref="markBtn" type="button" class="cd-btn" :disabled="!progressLoaded" @click="toggle">{{ t.mark }}</button>
     <template v-else>
       <p v-if="nextChapter && status.next !== chapter + 1" class="cd-next">
-        아직 안 읽은 장: <a :href="withBase(nextChapter.link)">{{ nextChapter.title }}</a>
+        {{ t.unread }} <a :href="withBase(nextChapter.link)">{{ nextChapter.title }}</a>
       </p>
-      <button ref="undoBtn" type="button" class="cd-undo" @click="toggle">표시 취소</button>
+      <button ref="undoBtn" type="button" class="cd-undo" @click="toggle">{{ t.undo }}</button>
     </template>
     <p class="cd-note">
-      기록은 이 브라우저에만 저장됩니다. 진행 현황은 <a :href="withBase('/guide/')">전체 목차</a>에서 볼 수 있어요.
-      <span v-if="storageBlocked"> 지금은 브라우저가 저장을 막고 있어 페이지를 닫으면 사라집니다.</span>
+      {{ t.note }} <a :href="withBase(localePrefix(lg) + '/guide/')">{{ t.toc }}</a>{{ t.tocAfter }}
+      <span v-if="storageBlocked">{{ t.blocked }}</span>
     </p>
   </div>
 </template>

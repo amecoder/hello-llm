@@ -1,11 +1,20 @@
 <script setup lang="ts">
 // One-question check at the end of a section. Answers stay in the page; nothing is saved or sent.
 import { computed, nextTick, ref } from 'vue'
+import { useData } from 'vitepress'
 import { QUESTIONS } from '../quiz-bank'
+import { localizeQuestion } from '../quiz-bank-en.ts'
+import { QUIZ_TEXT, langOf } from '../i18n.ts'
 
 const props = defineProps<{ id: string }>()
 
-const question = computed(() => QUESTIONS.find((q) => q.id === props.id))
+const { lang } = useData()
+const t = computed(() => QUIZ_TEXT[langOf(lang.value)])
+// English pages show the translated text; answer index is shared with the Korean source
+const question = computed(() => {
+  const q = QUESTIONS.find((item) => item.id === props.id)
+  return q && localizeQuestion(q, langOf(lang.value))
+})
 const picked = ref<number | null>(null)
 const correct = computed(() => question.value !== undefined && picked.value === question.value.answer)
 const retryButton = ref<HTMLButtonElement | null>(null)
@@ -27,7 +36,7 @@ async function retry() {
 
 <template>
   <div v-if="question" class="qz">
-    <p class="qz-label">확인 퀴즈</p>
+    <p class="qz-label">{{ t.label }}</p>
     <p :id="`qz-${id}`" class="qz-prompt">{{ question.prompt }}</p>
     <div class="qz-choices" role="group" :aria-labelledby="`qz-${id}`">
       <button
@@ -44,22 +53,22 @@ async function retry() {
         @click="pick(i)"
       >
         {{ choice }}
-        <span v-if="picked !== null && i === question.answer" class="qz-mark">✓ 정답</span>
-        <span v-else-if="picked === i" class="qz-mark">✗ 내 선택</span>
+        <span v-if="picked !== null && i === question.answer" class="qz-mark">{{ t.right }}</span>
+        <span v-else-if="picked === i" class="qz-mark">{{ t.mine }}</span>
       </button>
     </div>
     <!-- live region stays mounted so screen readers announce the result when it fills in -->
     <div class="qz-result" aria-live="polite">
       <template v-if="picked !== null">
         <p :class="correct ? 'ok' : 'no'">
-          {{ correct ? '정답입니다!' : `아쉬워요. 정답은 "${question.choices[question.answer]}"입니다.` }}
+          {{ correct ? t.correct : t.wrong(question.choices[question.answer]) }}
         </p>
         <p class="qz-explain">{{ question.explain }}</p>
-        <button ref="retryButton" type="button" class="qz-retry" @click="retry">다시 풀기</button>
+        <button ref="retryButton" type="button" class="qz-retry" @click="retry">{{ t.retry }}</button>
       </template>
     </div>
   </div>
-  <p v-else class="qz-missing">퀴즈를 찾을 수 없습니다: {{ id }}</p>
+  <p v-else class="qz-missing">{{ t.missing }} {{ id }}</p>
 </template>
 
 <style scoped>
