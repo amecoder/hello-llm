@@ -100,9 +100,8 @@ codex exec --sandbox workspace-write '$weekly-review'
 - `codex exec`は一度実行して終わり、初期設定は読み取り専用。書き換えるなら`--sandbox workspace-write`。
 - `codex exec`は、許可の方式をあらかじめ決めて動く。許可が必要な仕事は、アプリや対話型で。
 
-## 用語の整理
-
-| 用語 | 読み方 | ひとこと説明 |
+## 用語まとめ
+| 用語 | 読み方 | 一言でいうと |
 |---|---|---|
 | Codex CLI | コーデックス・シーエルアイ | ターミナルで使うCodex |
 | `codex exec` | コーデックス・エグゼック | 一度実行して終わらせる方式 |

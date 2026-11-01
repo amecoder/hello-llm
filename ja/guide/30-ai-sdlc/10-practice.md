@@ -74,7 +74,7 @@
 
 ## ほかのツールでやってみる
 
-3段階で使ったCodexやAntigravityにも対応する機能があるので、同じ流れをたどれます。
+ステップ3で使ったCodexやAntigravityにも対応する機能があるので、同じ流れをたどれます。
 
 | やること | Codex | Antigravity |
 |---|---|---|
@@ -82,9 +82,9 @@
 | 変更内容を見る | レビューウィンドウ | Reviewウィンドウ |
 | ルールファイル | `AGENTS.md` | `AGENTS.md`・`GEMINI.md` |
 
-出典: [Codex 4章](../21-codex/04-permissions-undo.md)・[Antigravity 2・3章](../22-antigravity/02-first-task.md)
+出典: [Codex 第4章](../21-codex/04-permissions-undo.md)・[Antigravity 2・第3章](../22-antigravity/02-first-task.md)
 
-同じSPEC.mdを2つのツールに渡して、結果を比べてみるのもよい練習です。3段階で見たように、同じ指示でも、ツールによって抜け落ちるものが違うことがあります。
+同じSPEC.mdを2つのツールに渡して、結果を比べてみるのもよい練習です。ステップ3で見たように、同じ指示でも、ツールによって抜け落ちるものが違うことがあります。
 
 ## まとめ
 
@@ -94,4 +94,4 @@
 
 <ChapterDone :chapter="710" />
 
-次の章: 4段階 AI-SDLCガイドは終わりました。これでhello-aiの1〜4段階をすべて終えました。[4段階 · AI-SDLC 目次](./)から、もう一度見たい章を選ぶか、[AI知識レベル試験](../00-common/level-test.md)で、ここまで学んだことを確認してみてください。
+次の章: ステップ4 AI-SDLCガイドは終わりました。これでhello-aiのステップ1〜4をすべて終えました。[ステップ4 · AI-SDLC 目次](./)から、もう一度見たい章を選ぶか、[AI知識レベル試験](../00-common/level-test.md)で、ここまで学んだことを確認してみてください。
