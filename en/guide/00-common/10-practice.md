@@ -259,7 +259,7 @@ The four competencies in the AI Fluency course connect to this guide like this:
 - **Diligence**: Being transparent about using AI and taking responsibility for the results you put out. This covers "Habits to Keep" under [Chapter 9: "3. Copyright"](09-safety.md#_3-copyright-—-what-you-make-and-what-you-put-in).
 
 You can read English pages using the built-in translation feature in browsers like Chrome (right-click on the page → "Translate to Korean (한국어로 번역)").
-Other courses from Claude Academy are gathered in [Chapter 12](/guide/10-claude/12-expert.md) of the Claude track.
+Other courses from Claude Academy are gathered in [Chapter 12](/en/guide/10-claude/12-expert.md) of the Claude track.
 
 <Quiz id="ch10-academy" />
 

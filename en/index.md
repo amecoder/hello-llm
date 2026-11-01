@@ -54,12 +54,12 @@ Every technical term is explained in plain words the first time it appears. Ther
 
 ## Where Does This Guide Go?
 
-Right now, Stage 1 (**Common Guide**), Stage 2 (**ChatGPT, Claude, and Gemini Guides**), Stage 3 (**Claude Code, Codex, and Antigravity Guides**), and Stage 4 (**AI-SDLC Guide**) are live. Stages 2–4 are in Korean only for now. We keep building them so each stage serves as the foundation for the next.
+Right now, Stage 1 (**Common Guide**), Stage 2 (**ChatGPT, Claude, and Gemini Guides**), Stage 3 (**Claude Code, Codex, and Antigravity Guides**), and Stage 4 (**AI-SDLC Guide**) are live. Stages 3–4 are in Korean only for now. We keep building them so each stage serves as the foundation for the next.
 
 | Stage | What You Learn |
 |---|---|
 | 1. [Common Guide](/en/guide/00-common/) (Live) | Core principles and prompting skills that work on any AI |
-| 2. [ChatGPT](/guide/11-chatgpt/) · [Claude](/guide/10-claude/) · [Gemini](/guide/12-gemini/) (Korean) | Features and settings for each service |
+| 2. [ChatGPT](/en/guide/11-chatgpt/) · [Claude](/en/guide/10-claude/) · [Gemini](/en/guide/12-gemini/) (Live) | Features and settings for each service |
 | 3. [Claude Code](/guide/20-claude-code/) · [Codex](/guide/21-codex/) · [Antigravity](/guide/22-antigravity/) (Korean) | Delegating work to AI tools that read and edit files directly on your computer |
 | 4. [AI-SDLC](/guide/30-ai-sdlc/) (Korean) | Building software with AI from planning to deployment — SDLC stands for Software Development Life Cycle |
 

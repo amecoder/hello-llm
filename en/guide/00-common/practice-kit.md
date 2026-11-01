@@ -40,17 +40,17 @@ At the end of each chapter, the "Try It Yourself" section includes an **Ongoing 
 | Step | Task | ChatGPT | Claude |
 |---|---|---|---|
 | 1 | Have AI write a notice from last month's notes and compare it with the answer key | Stage 1 [Chapter 11](11-expert.md#try-it-yourself) | Stage 1 [Chapter 11](11-expert.md#try-it-yourself) |
-| 2 | First question — checklist for a club coordinator | [Chapter 1](/guide/11-chatgpt/01-getting-started.md#직접-해-보기) | [Chapter 1](/guide/10-claude/01-getting-started.md#직접-해-보기) |
-| 3 | Draft a notice text message from notes | [Chapter 2](/guide/11-chatgpt/02-screen-tour.md#직접-해-보기) | — |
-| 4 | Find and rename a chat | [Chapter 3](/guide/11-chatgpt/03-chats.md#직접-해-보기) | [Chapter 3](/guide/10-claude/03-chats.md#직접-해-보기) |
-| 5 | Upload minutes and make a table of decisions and action items | [Chapter 4](/guide/11-chatgpt/04-files-images.md#직접-해-보기) | [Chapter 4](/guide/10-claude/04-files-artifacts.md#직접-해-보기) |
-| 6 | Turn your notice tone into a one-line instruction | [Chapter 5](/guide/11-chatgpt/05-memory.md#직접-해-보기) | [Chapter 5](/guide/10-claude/05-memory.md#직접-해-보기) |
-| 7 | Search for a meeting venue and check sources | [Chapter 6](/guide/11-chatgpt/06-search.md#직접-해-보기) | [Chapter 6](/guide/10-claude/06-search.md#직접-해-보기) |
-| 8 | Check the member list and gather files into a "Book Club" project | [Chapter 7](/guide/11-chatgpt/07-projects-plugins.md#직접-해-보기) | [Chapter 7](/guide/10-claude/07-projects-tools.md#직접-해-보기) |
-| 9 | Hand over the whole folder to create a notice package (paid) | — | [Chapter 8](/guide/10-claude/08-cowork.md#직접-해-보기) |
-| 10 | Check training settings before uploading real files | [Chapter 8](/guide/11-chatgpt/08-privacy.md#직접-해-보기) | [Chapter 9](/guide/10-claude/09-privacy.md#직접-해-보기) |
-| 11 | Practice your opening greeting out loud with voice mode | [Chapter 9](/guide/11-chatgpt/09-voice.md#직접-해-보기) | [Chapter 10](/guide/10-claude/10-voice-mobile.md#직접-해-보기) |
-| 12 | Clean up the dues ledger, make a chart, and wrap up | [Chapter 11](/guide/11-chatgpt/11-expert.md#직접-해-보기) | [Chapter 12](/guide/10-claude/12-expert.md#직접-해-보기) |
+| 2 | First question — checklist for a club coordinator | [Chapter 1](/en/guide/11-chatgpt/01-getting-started.md#try-it-yourself) | [Chapter 1](/en/guide/10-claude/01-getting-started.md#try-it-yourself) |
+| 3 | Draft a notice text message from notes | [Chapter 2](/en/guide/11-chatgpt/02-screen-tour.md#try-it-yourself) | — |
+| 4 | Find and rename a chat | [Chapter 3](/en/guide/11-chatgpt/03-chats.md#try-it-yourself) | [Chapter 3](/en/guide/10-claude/03-chats.md#try-it-yourself) |
+| 5 | Upload minutes and make a table of decisions and action items | [Chapter 4](/en/guide/11-chatgpt/04-files-images.md#try-it-yourself) | [Chapter 4](/en/guide/10-claude/04-files-artifacts.md#try-it-yourself) |
+| 6 | Turn your notice tone into a one-line instruction | [Chapter 5](/en/guide/11-chatgpt/05-memory.md#try-it-yourself) | [Chapter 5](/en/guide/10-claude/05-memory.md#try-it-yourself) |
+| 7 | Search for a meeting venue and check sources | [Chapter 6](/en/guide/11-chatgpt/06-search.md#try-it-yourself) | [Chapter 6](/en/guide/10-claude/06-search.md#try-it-yourself) |
+| 8 | Check the member list and gather files into a "Book Club" project | [Chapter 7](/en/guide/11-chatgpt/07-projects-plugins.md#try-it-yourself) | [Chapter 7](/en/guide/10-claude/07-projects-tools.md#try-it-yourself) |
+| 9 | Hand over the whole folder to create a notice package (paid) | — | [Chapter 8](/en/guide/10-claude/08-cowork.md#try-it-yourself) |
+| 10 | Check training settings before uploading real files | [Chapter 8](/en/guide/11-chatgpt/08-privacy.md#try-it-yourself) | [Chapter 9](/en/guide/10-claude/09-privacy.md#try-it-yourself) |
+| 11 | Practice your opening greeting out loud with voice mode | [Chapter 9](/en/guide/11-chatgpt/09-voice.md#try-it-yourself) | [Chapter 10](/en/guide/10-claude/10-voice-mobile.md#try-it-yourself) |
+| 12 | Clean up the dues ledger, make a chart, and wrap up | [Chapter 11](/en/guide/11-chatgpt/11-expert.md#try-it-yourself) | [Chapter 12](/en/guide/10-claude/12-expert.md#try-it-yourself) |
 
 You do not have to go in order. Even if you skip a chapter, you can still do the task in the next chapter.
 

@@ -4,10 +4,16 @@
 import type { Lang } from './i18n.ts'
 import type { Question } from './quiz.ts'
 import { EXAM_TEXT_EN } from './exam-bank-en.ts'
+import { GEMINI_CHAPTER_TITLE_EN, GEMINI_QUESTION_TEXT_EN } from './quiz-bank-en-gemini.ts'
+import { CLAUDE_CHAPTER_TITLE_EN, CLAUDE_QUESTION_TEXT_EN } from './quiz-bank-en-claude.ts'
+import { CHATGPT_CHAPTER_TITLE_EN, CHATGPT_QUESTION_TEXT_EN } from './quiz-bank-en-chatgpt.ts'
 
 type QuestionText = { prompt: string; choices: readonly string[]; explain: string }
 
 export const CHAPTER_TITLE_EN: Record<number, string> = {
+  ...GEMINI_CHAPTER_TITLE_EN,
+  ...CLAUDE_CHAPTER_TITLE_EN,
+  ...CHATGPT_CHAPTER_TITLE_EN,
   1: "Chapter 1. What Is an LLM?",
   2: "Chapter 2. Why Is Everyone Talking About It?",
   3: "Chapter 3. Why Learn This?",
@@ -22,6 +28,9 @@ export const CHAPTER_TITLE_EN: Record<number, string> = {
 }
 
 export const QUESTION_TEXT_EN: Record<string, QuestionText> = {
+  ...GEMINI_QUESTION_TEXT_EN,
+  ...CLAUDE_QUESTION_TEXT_EN,
+  ...CHATGPT_QUESTION_TEXT_EN,
   "ch1-name": {
     prompt: "How are ChatGPT, Claude, and Gemini related to LLMs (Large Language Models, AI programs that generate text)?",
     choices: [

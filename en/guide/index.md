@@ -72,16 +72,16 @@ features:
     linkText: Take the Test
   - title: Stage 2 · ChatGPT User Guide
     details: From touring the screen, managing chats, files and images, memory, search, projects, and privacy settings to working like an expert — 11 chapters with real screenshots
-    link: /guide/11-chatgpt/
-    linkText: Start Stage 2 (Korean)
+    link: /en/guide/11-chatgpt/
+    linkText: Start Stage 2
   - title: Stage 2 · Claude User Guide
     details: Getting started, the screen, managing chats, files and Artifacts, memory, search and Research, Projects and connectors, Cowork, privacy settings, and working like an expert — 12 chapters verified against official help docs
-    link: /guide/10-claude/
-    linkText: Start Claude Guide (Korean)
+    link: /en/guide/10-claude/
+    linkText: Start Claude Guide
   - title: Stage 2 · Gemini User Guide
     details: Getting started, the screen, managing chats, files and Canvas, memory, Deep Research, Gems and connected apps, Scheduled actions, privacy settings, voice, and working like an expert — 12 chapters verified against official help docs and real screens
-    link: /guide/12-gemini/
-    linkText: Start Gemini Guide (Korean)
+    link: /en/guide/12-gemini/
+    linkText: Start Gemini Guide
   - title: Stage 3 · Claude Code User Guide
     details: Claude reading and editing files directly in a folder on your computer — 12 chapters starting from the desktop app without a terminal, learning by building a custom file-organizing tool
     link: /guide/20-claude-code/
@@ -117,6 +117,6 @@ Each stage builds on the one before it, so we recommend reading in numbered orde
 | Stage | Guide | What It Covers |
 |---|---|---|
 | 1 | [Common Guide](/en/guide/00-common/) | Core principles and skills that work with any LLM |
-| 2 | [ChatGPT](/guide/11-chatgpt/) · [Claude](/guide/10-claude/) · [Gemini](/guide/12-gemini/) | Features and practical tips for each service |
+| 2 | [ChatGPT](/en/guide/11-chatgpt/) · [Claude](/en/guide/10-claude/) · [Gemini](/en/guide/12-gemini/) | Features and practical tips for each service |
 | 3 | [Claude Code](/guide/20-claude-code/) · [Codex](/guide/21-codex/) · [Antigravity](/guide/22-antigravity/) | Coding AI tools that work right on your computer |
 | 4 | [AI-SDLC](/guide/30-ai-sdlc/) | From planning to deployment with AI — the full software development lifecycle (SDLC) |

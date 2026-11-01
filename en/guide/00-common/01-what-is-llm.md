@@ -177,7 +177,7 @@ Searching does not retrain the model. **It just pastes reference material into t
 - **Creating files**: It can build files like Excel spreadsheets, Word documents, and PowerPoint slides.
 - **Connecting apps**: If you connect your email, calendar, or cloud drive, it can look inside them for you.
 
-Which tools you can use depends on the service and your plan. We cover how to use each service in Stage 2: the [ChatGPT Guide](/guide/11-chatgpt/README.md) and the [Claude Guide](/guide/10-claude/README.md).
+Which tools you can use depends on the service and your plan. We cover how to use each service in Stage 2: the [ChatGPT Guide](/en/guide/11-chatgpt/README.md) and the [Claude Guide](/en/guide/10-claude/README.md).
 
 ### Just Because It Searched Does Not Mean Everything Is Right
 

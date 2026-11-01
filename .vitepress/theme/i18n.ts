@@ -85,5 +85,5 @@ export const STAGE_TITLE_EN: Record<StageId, string> = {
 
 // stages whose pages exist under /<lang>/; the rest link to the Korean pages
 export const TRANSLATED_STAGES: Record<Exclude<Lang, 'ko'>, readonly StageId[]> = {
-  en: ['common'],
+  en: ['common', 'chatgpt', 'claude', 'gemini'],
 }

@@ -23,6 +23,9 @@ export default defineConfig({
     'guide/22-antigravity/README.md': 'guide/22-antigravity/index.md',
     'guide/30-ai-sdlc/README.md': 'guide/30-ai-sdlc/index.md',
     'en/guide/00-common/README.md': 'en/guide/00-common/index.md',
+    'en/guide/11-chatgpt/README.md': 'en/guide/11-chatgpt/index.md',
+    'en/guide/10-claude/README.md': 'en/guide/10-claude/index.md',
+    'en/guide/12-gemini/README.md': 'en/guide/12-gemini/index.md',
   },
   lastUpdated: true,
   // Korean is the source at the site root; translations live under /<lang>/ (see theme/i18n.ts)
@@ -41,7 +44,10 @@ export default defineConfig({
             items: [
               { text: 'Full table of contents', link: '/en/guide/' },
               { text: 'Stage 1 · Common Guide', link: '/en/guide/00-common/' },
-              { text: 'Stages 2–4 (Korean only for now)', link: '/guide/' },
+              { text: 'Stage 2 · ChatGPT', link: '/en/guide/11-chatgpt/' },
+              { text: 'Stage 2 · Claude', link: '/en/guide/10-claude/' },
+              { text: 'Stage 2 · Gemini', link: '/en/guide/12-gemini/' },
+              { text: 'Stages 3–4 (Korean only for now)', link: '/guide/' },
             ],
           },
           {
@@ -54,6 +60,67 @@ export default defineConfig({
           },
         ],
         sidebar: {
+          '/en/guide/11-chatgpt/': [
+            {
+              text: 'Stage 2 · ChatGPT Guide',
+              items: [
+                { text: 'Contents', link: '/en/guide/11-chatgpt/' },
+                { text: 'Chapter 1. Getting Started', link: '/en/guide/11-chatgpt/01-getting-started' },
+                { text: 'Chapter 2. A Tour of the Screen', link: '/en/guide/11-chatgpt/02-screen-tour' },
+                { text: 'Chapter 3. Managing Conversations', link: '/en/guide/11-chatgpt/03-chats' },
+                { text: 'Chapter 4. Files, Photos, and Creating Images', link: '/en/guide/11-chatgpt/04-files-images' },
+                { text: 'Chapter 5. Memory and Personalization', link: '/en/guide/11-chatgpt/05-memory' },
+                { text: 'Chapter 6. Search and Deep Research', link: '/en/guide/11-chatgpt/06-search' },
+                { text: 'Chapter 7. Projects, Plugins, and Work', link: '/en/guide/11-chatgpt/07-projects-plugins' },
+                { text: 'Chapter 8. Privacy and Data Controls', link: '/en/guide/11-chatgpt/08-privacy' },
+                { text: 'Chapter 9. Talking by Voice', link: '/en/guide/11-chatgpt/09-voice' },
+                { text: 'Chapter 10. Hands-On Practice', link: '/en/guide/11-chatgpt/10-practice' },
+                { text: 'Chapter 11. Using It Like an Expert', link: '/en/guide/11-chatgpt/11-expert' },
+                { text: '← Stage 1 · Common', link: '/en/guide/00-common/' },
+              ],
+            },
+          ],
+          '/en/guide/10-claude/': [
+            {
+              text: 'Stage 2 · Claude Guide',
+              items: [
+                { text: 'Contents', link: '/en/guide/10-claude/' },
+                { text: 'Chapter 1. Getting Started', link: '/en/guide/10-claude/01-getting-started' },
+                { text: 'Chapter 2. Exploring the Screen', link: '/en/guide/10-claude/02-screen-tour' },
+                { text: 'Chapter 3. Managing Chats', link: '/en/guide/10-claude/03-chats' },
+                { text: 'Chapter 4. Files and Artifacts', link: '/en/guide/10-claude/04-files-artifacts' },
+                { text: 'Chapter 5. Memory and Personalization', link: '/en/guide/10-claude/05-memory' },
+                { text: 'Chapter 6. Search and Research', link: '/en/guide/10-claude/06-search' },
+                { text: 'Chapter 7. Projects, Connectors, and Skills', link: '/en/guide/10-claude/07-projects-tools' },
+                { text: 'Chapter 8. Cowork', link: '/en/guide/10-claude/08-cowork' },
+                { text: 'Chapter 9. Privacy and Safety', link: '/en/guide/10-claude/09-privacy' },
+                { text: 'Chapter 10. Voice and Phone', link: '/en/guide/10-claude/10-voice-mobile' },
+                { text: 'Chapter 11. Hands-on Exercises', link: '/en/guide/10-claude/11-practice' },
+                { text: 'Chapter 12. Working Like an Expert', link: '/en/guide/10-claude/12-expert' },
+              ],
+            },
+          ],
+          '/en/guide/12-gemini/': [
+            {
+              text: 'Stage 2 · Gemini Guide',
+              items: [
+                { text: 'Contents', link: '/en/guide/12-gemini/' },
+                { text: 'Chapter 1. Getting Started', link: '/en/guide/12-gemini/01-getting-started' },
+                { text: 'Chapter 2. Tour the Screen', link: '/en/guide/12-gemini/02-screen-tour' },
+                { text: 'Chapter 3. Managing Chats', link: '/en/guide/12-gemini/03-chats' },
+                { text: 'Chapter 4. Files and Creating', link: '/en/guide/12-gemini/04-files-create' },
+                { text: 'Chapter 5. Memory and Personalization', link: '/en/guide/12-gemini/05-memory' },
+                { text: 'Chapter 6. Search and Deep Research', link: '/en/guide/12-gemini/06-search' },
+                { text: 'Chapter 7. Skills and Connected Apps', link: '/en/guide/12-gemini/07-skills-apps' },
+                { text: 'Chapter 8. Handing Off Work', link: '/en/guide/12-gemini/08-tasks' },
+                { text: 'Chapter 9. Privacy and Safety', link: '/en/guide/12-gemini/09-privacy' },
+                { text: 'Chapter 10. Voice and Phone', link: '/en/guide/12-gemini/10-voice-mobile' },
+                { text: 'Chapter 11. Hands-On Exercises', link: '/en/guide/12-gemini/11-practice' },
+                { text: 'Chapter 12. Using It Like a Pro', link: '/en/guide/12-gemini/12-expert' },
+                { text: '← Stage 1 · Common', link: '/en/guide/00-common/' },
+              ],
+            },
+          ],
           '/en/guide/00-common/': [
             {
               text: 'Stage 1 · Common Guide',
