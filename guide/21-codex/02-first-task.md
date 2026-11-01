@@ -16,7 +16,7 @@
 
 ## Codex를 고르고 폴더 열기
 
-앱 **왼쪽 위의 이름표**를 누르면 ChatGPT와 Codex 중에서 고를 수 있습니다. 공식 문서도 개발 도구가 필요한 일은 이 메뉴에서 **Codex**를 고르라고 합니다.[^select] Codex를 고르면 가운데에 "What should we build?"(무엇을 만들까요?)가 보입니다.
+앱 **왼쪽 위의 이름표**를 누르면 ChatGPT와 Codex 중에서 고를 수 있습니다. Chat과 Work는 ChatGPT를 고른 뒤 입력창 위의 스위치로 바꿉니다.[^toggle] 공식 문서도 개발 도구가 필요한 일은 이 메뉴에서 **Codex**를 고르라고 합니다.[^select] Codex를 고르면 가운데에 "What should we build?"(무엇을 만들까요?)가 보입니다.
 
 입력창 바로 위에는 두 가지 선택이 있습니다.
 
@@ -27,15 +27,11 @@
 
 출처: 이 가이드의 화면 확인(2026-11-01)
 
-**Choose project**를 눌러 `정리도구` 폴더를 고릅니다. Codex는 고른 폴더의 파일을 읽고 고칠 수 있습니다.[^folder] 메뉴 막대의 「File → Open Folder…」로 열어도 됩니다.
+**Choose project**를 눌러 `정리도구` 폴더(Claude Code 가이드를 따라 했다면 `~/hello-ai-연습/정리도구`)를 고릅니다. Codex는 고른 폴더의 파일을 읽고 고칠 수 있습니다.[^folder] 메뉴 막대의 「File → Open Folder…」로 열어도 됩니다.
 
 일하는 곳은 **This computer**(내 컴퓨터) 그대로 둡니다. Cloud는 GitHub 저장소를 연결한 사람을 위한 것이고, 내 컴퓨터의 파일은 클라우드로 넘어가지 않습니다.[^cloud-files]
 
-폴더가 **Git 저장소**(바뀐 기록을 남기는 장치)인지도 확인하세요. Codex에서 바뀐 내용을 보는 창은 Git 저장소에서만 열립니다. Git이 아니면 앱이 하나 만들자고 묻습니다.[^review-git] Claude Code 3장을 따라 했다면 이미 Git 저장소입니다. 연습 자료로 새로 시작했다면 이렇게 부탁해 Git을 먼저 켜 두세요.
-
-```
-이 폴더를 Git 저장소로 만들고, 지금 있는 파일을 첫 기록으로 남겨 줘.
-```
+폴더가 **Git 저장소**(바뀐 기록을 남기는 장치)인지도 확인하세요. Codex에서 바뀐 내용을 보는 창은 Git 저장소에서만 열립니다. Git이 아니면 앱이 하나 만들자고 묻습니다.[^review-git] Claude Code 3장을 따라 했다면 이미 Git 저장소입니다. 연습 자료로 새로 시작했다면 **앱이 저장소를 만들자고 물을 때** 따르면 됩니다.[^review-git] Codex에게 대화로 부탁할 수도 있지만, Git 기록을 담는 `.git` 폴더는 보호 폴더라([4장](04-permissions-undo.md)) 허락을 묻거나 막힐 수 있습니다.
 
 <Quiz id="ch502-open" />
 
@@ -105,3 +101,4 @@ inbox/회의-2026-10-27-주간회의.txt 메모를 회의록으로 정리해서 
 [^review-git]: Codex 공식 문서, 「Code review」. "The review pane requires a project inside a Git repository. If your project isn't a Git repository yet, the app prompts you to create one." https://learn.chatgpt.com/docs/code-review (확인일 2026-11-01)
 [^review]: Codex 공식 문서, 「Use ChatGPT」. "A polished response can still be incomplete or wrong, so review the details that matter before you use or share it." https://learn.chatgpt.com/docs/use-chatgpt (확인일 2026-11-01)
 [^discovery]: Codex 공식 문서, 「Projects and chats」. "New chats start in the primary folder. Codex also uses that folder as the default for Git operations and automatic discovery of `AGENTS.md`, skills, and `config.toml`." https://learn.chatgpt.com/docs/projects (확인일 2026-11-01)
+[^toggle]: Codex 공식 문서, 「ChatGPT desktop app」. "Choose ChatGPT or Codex. In ChatGPT, use the toggle above the composer to select Chat or Work. In Codex, start with New chat." https://learn.chatgpt.com/docs/app (확인일 2026-11-01)

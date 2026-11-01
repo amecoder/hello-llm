@@ -36,7 +36,7 @@
 
 기본 상태에서 Codex는 **인터넷이 꺼진 채** 일하고, 울타리는 보통 작업 폴더까지입니다.[^default] 폴더 밖 파일을 고치거나 인터넷에 접속하려면 허락이 필요합니다.[^auto]
 
-**폴더 안이어도 보호되는 곳**이 있습니다. 작업 폴더 안의 `.git`·`.agents`·`.codex` 폴더는 기본 상태에서 읽기만 됩니다.[^protected] 5장에서 스킬을 넣을 `.agents` 폴더도 여기에 속합니다.
+**폴더 안이어도 보호되는 곳**이 있습니다. 작업 폴더 안의 `.git`·`.agents`·`.codex` 폴더는 기본 상태에서 읽기만 됩니다.[^protected] `.git`은 Git 기록이 담기는 곳이라, Codex에게 대화로 "기록해 줘"라고 하면 허락을 묻거나 막힐 수 있습니다. 5장에서 스킬을 넣을 `.agents` 폴더도 여기에 속합니다.
 
 이 가이드에서 실제로 막혔습니다. 터미널에서 스킬을 `.agents/skills`로 복사해 달라고 하자, Codex는 "`.agents` 경로가 읽기 전용이라 복사가 차단됐다"고 답하고, 직접 칠 명령 두 줄을 알려 줬습니다. 막힌 이유와 대안을 함께 알려 주니, 무엇을 허락할지 내가 판단할 수 있었습니다.
 
@@ -72,10 +72,12 @@ Claude Code에는 대화를 앞으로 되감는 기능이 있었습니다([Claud
 
 그래서 이 단계에서는 이런 순서를 습관으로 만듭니다.
 
-1. 맡기기 전: "지금 상태를 기록해 줘"로 커밋한다.
+1. 맡기기 전: 앱의 Git 기능(커밋)으로 지금 상태를 기록한다.[^commit]
 2. 맡긴다.
 3. 리뷰 창에서 Last turn으로 바뀐 것만 본다.
 4. 좋으면 다시 기록하고, 아니면 되돌린다.
+
+대화로 "기록해 줘"라고 부탁해도 되지만, 위에서 본 것처럼 `.git`이 보호 폴더라 허락을 물을 수 있습니다. 물으면 "Git 기록만 남기는 일"인지 확인하고 허락하세요.
 
 큰 일은 고치기 전에 계획부터 받으세요. 입력창에 `/plan`을 쓰면 Codex가 먼저 조사하고 방법을 제안합니다.[^plan] Claude Code 5장의 「계획」 모드와 같은 역할입니다.
 
@@ -84,7 +86,7 @@ Claude Code에는 대화를 앞으로 되감는 기능이 있었습니다([Claud
 ## 직접 해 보기
 
 1. 입력창 아래 권한 메뉴를 열어 무엇이 골라져 있는지 본다. Ask for approval이 아니면 바꾼다.
-2. "지금 상태를 기록해 줘"로 커밋한다.
+2. 앱의 Git 기능(또는 대화로 부탁한 뒤 허락)으로 지금 상태를 기록한다.
 3. 2장의 회의록에 "맨 위에 '작성일: 오늘 날짜' 한 줄을 추가해 줘"라고 부탁한다.
 4. 리뷰 창을 Last turn으로 보고 바뀐 줄을 확인한다.
 5. 그 파일만 되돌려 본다.
@@ -123,7 +125,7 @@ Claude Code에는 대화를 앞으로 되감는 기능이 있었습니다([Claud
 [^two]: Codex 공식 문서, 「Permissions」. "The **sandbox** defines which files and network resources ChatGPT can access." / "**Approvals** determine when ChatGPT pauses before an action or sends the request to automatic review." https://learn.chatgpt.com/docs/permission-modes (확인일 2026-11-01)
 [^default]: Codex 공식 문서, 「Agent approvals & security」. "By default, the agent runs with network access turned off." https://learn.chatgpt.com/docs/agent-approvals-security (확인일 2026-11-01)
 [^auto]: Codex 공식 문서, 「Agent approvals & security」. "Codex asks for approval to edit files outside the workspace or to run commands that require network access." https://learn.chatgpt.com/docs/agent-approvals-security (확인일 2026-11-01)
-[^protected]: Codex 공식 문서, 「Agent approvals & security」. "`<writable_root>/.agents` is protected as read-only when it exists as a directory." / "Protection is recursive, so everything under those paths is read-only." https://learn.chatgpt.com/docs/agent-approvals-security (확인일 2026-11-01)
+[^protected]: Codex 공식 문서, 「Agent approvals & security」. "`<writable_root>/.git` is protected as read-only whether it appears as a directory or file." / "`<writable_root>/.agents` is protected as read-only when it exists as a directory." / "`<writable_root>/.codex` is protected as read-only when it exists as a directory." / "Protection is recursive, so everything under those paths is read-only." https://learn.chatgpt.com/docs/agent-approvals-security (확인일 2026-11-01)
 [^review-git]: Codex 공식 문서, 「Code review」. "The review pane requires a project inside a Git repository." https://learn.chatgpt.com/docs/code-review (확인일 2026-11-01)
 [^includes]: Codex 공식 문서, 「Code review」. "It includes changes made by Codex, changes you made yourself, and any other uncommitted changes in the repository." https://learn.chatgpt.com/docs/code-review (확인일 2026-11-01)
 [^views]: Codex 공식 문서, 「Code review」. "By default, the review pane shows **Unstaged** changes." / "**Last turn** for the most recent assistant turn" https://learn.chatgpt.com/docs/code-review (확인일 2026-11-01)
@@ -132,3 +134,4 @@ Claude Code에는 대화를 앞으로 되감는 기능이 있었습니다([Claud
 [^checkpoint]: Codex 공식 문서, 「Codex CLI」. "Create Git checkpoints before and after a task so you can revert changes." https://learn.chatgpt.com/docs/codex/cli (확인일 2026-11-01)
 [^often]: Codex 공식 문서, 「Agent approvals & security」. "Commit frequently so you can roll back in small increments." https://learn.chatgpt.com/docs/agent-approvals-security (확인일 2026-11-01)
 [^plan]: Codex 공식 문서, 「Prompting」. "For a multi-step task, enter `/plan` in the app composer when you want Codex to investigate and propose an approach before editing." https://learn.chatgpt.com/docs/prompting (확인일 2026-11-01)
+[^commit]: Codex 공식 문서, 「Local environments」. "You can stage or revert individual chunks, stage or revert entire files, commit changes, push a branch, and create a pull request without leaving the app." https://learn.chatgpt.com/docs/environments/local-environment (확인일 2026-11-01)

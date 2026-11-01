@@ -18,7 +18,7 @@
 
 출처: Codex 공식 문서(일부만 옮김)[^depends][^window][^extra][^shared]
 
-남은 양은 사용량 화면에서 봅니다.[^dashboard] 앱 입력창에서는 `/usage`, 터미널에서는 `/status`로 열 수 있습니다.[^usage] 한도에 닿으면 Plus·Pro는 요금제를 올리지 않고 크레딧을 사서 이어 갈 수도 있습니다.[^credits]
+남은 양은 사용량 화면에서 봅니다.[^dashboard] 앱 입력창의 `/usage`는 사용량·결제 설정을 열고[^usage], 터미널의 `/status`는 대화 안에서 남은 한도를 보여 줍니다.[^status] 한도에 닿으면 Plus·Pro는 요금제를 올리지 않고 크레딧을 사서 이어 갈 수도 있습니다.[^credits]
 
 메모 정리는 작은 일입니다. **스킬 한 번에 메모 3~4개**처럼 일을 작게 나누면 사용량도, 확인할 양도 줄어듭니다.
 
@@ -59,9 +59,9 @@ Claude Code와 같은 결과였지만 **한 번 해 본 결과**입니다. 매�
 - 권한은 Ask for approval로 두고, 인터넷 접근은 필요할 때만 허락한다(4장).
 - 결과에 "다 했다", "완료"처럼 **확인 안 된 단정**이 있으면 원본과 맞춰 본다.
 
-웹 검색은 내 컴퓨터의 대화에서 기본으로 켜져 있고, 미리 모아 둔 색인에서 결과를 가져옵니다.[^search-on] 이 방식은 위험을 줄이지만 없애지는 못합니다.[^websearch] 공식 문서도 웹 검색 결과를 믿지 말고 다루라고 합니다.[^untrusted]
+명령 실행의 인터넷 접속(4장, 기본 꺼짐)과는 **별개로**, Codex의 웹 검색은 내 컴퓨터의 대화에서 기본으로 켜져 있고 미리 모아 둔 색인에서 결과를 가져옵니다.[^search-on] 이 방식은 위험을 줄이지만 없애지는 못합니다.[^websearch] 공식 문서도 웹 검색 결과를 믿지 말고 다루라고 합니다.[^untrusted]
 
-일부 모델에는 **안전 감시**가 들어 있어, 위험해 보이는 행동을 감지하면 작업을 멈출 수 있습니다.[^monitor] 멈췄다면 안내를 읽고, 안전한지 확인한 뒤에만 이어 가세요.[^resume]
+일부 모델에는 **안전 감시**가 들어 있어, 위험해 보이는 행동을 감지하면 작업을 멈출 수 있습니다.[^monitor] 멈췄다면 안내를 읽고, 안전한지 확인한 뒤에만 이어 가세요.[^resume] 다만 터미널과 휴대폰에서는 멈추면 이어 가기 없이 작업이 끝납니다.[^ends]
 
 <Quiz id="ch508-injection" />
 
@@ -77,7 +77,7 @@ Claude Code와 같은 결과였지만 **한 번 해 본 결과**입니다. 매�
 
 출처: 이 가이드의 정리
 
-이렇게 두면 이미 내고 있는 요금제나 그날 남은 사용량에 맞춰 도구를 골라 쓸 수 있습니다. 대신 **규칙과 스킬을 고칠 때는 두 쪽을 함께** 고쳐야 합니다. 스킬 폴더는 바로가기(심볼릭 링크)로 이어 둘 수도 있습니다. Codex는 링크된 스킬 폴더도 따라가 읽습니다.[^symlink]
+이렇게 두면 이미 내고 있는 요금제나 그날 남은 사용량에 맞춰 도구를 골라 쓸 수 있습니다. 대신 **규칙과 스킬을 고칠 때는 두 쪽을 함께** 고쳐야 합니다. 스킬 폴더는 심볼릭 링크(터미널 명령 `ln -s`로 만드는 바로가기)로 이어 둘 수도 있습니다. Codex는 링크된 스킬 폴더도 따라가 읽습니다.[^symlink] 마우스로 만드는 macOS 가상본이나 Windows 바로 가기와는 다른 것입니다. 낯설다면 두 폴더에 복사해 두고 함께 고치는 편이 안전합니다.
 
 도구보다 중요한 것은 **일하는 습관**입니다. 공식 문서도 큰일에는 목표·조건·"다 됐다"의 기준을 주라고 하고[^done], 못 한 부분은 솔직히 말해 달라고 부탁하라고 합니다. 드러난 빈칸이 자신 있는 추측보다 고치기 쉽기 때문입니다.[^gap] Claude Code 5장에서 배운 "확인 기준과 근거"가 Codex에서도 그대로 통합니다.
 
@@ -87,11 +87,11 @@ Claude Code와 같은 결과였지만 **한 번 해 본 결과**입니다. 매�
 
 Codex 단계를 마무리하는 과제입니다. 위에서부터 하나씩 해 보세요.
 
-1. 앱에서 Codex를 열고 정리도구 폴더를 고른다. 권한이 Ask for approval인지 확인한다(2·4장).
+1. 앱에서 Codex를 열고 정리도구 폴더를 고른다. 폴더가 Git 저장소인지, 권한이 Ask for approval인지 확인하고 시작 상태를 기록한다(2·4장).
 2. `CLAUDE.md`를 `AGENTS.md`로 옮기고, 내 규칙 하나를 새로 더한다(3장).
 3. 새 대화에서 규칙을 말하지 않고 메모 하나를 정리시켜, 새 규칙이 지켜졌는지 본다(3장).
 4. 스킬 3개를 `.agents/skills`로 옮기고 `$weekly-review`를 돌린다. 틀린 것과 빠진 것을 따로 센다(5장).
-5. 리뷰 창의 Last turn으로 바뀐 것을 보고, 마음에 안 드는 파일 하나를 되돌린다(4장).
+5. 회의록에 시험 삼아 한 줄을 추가하게 한 뒤, 리뷰 창의 Last turn으로 확인하고 그 파일을 되돌린다(4장).
 6. 숨은 지시 메모를 `$meeting-notes`로 정리시키고, 지시를 따르지 않았는지 확인한다(이 장).
 7. 마지막으로 **내 메모**(개인 정보를 지운 것)로 1~6을 반복한다.
 
@@ -134,3 +134,5 @@ Codex 단계를 마무리하는 과제입니다. 위에서부터 하나씩 해 �
 [^symlink]: Codex 공식 문서, 「Build skills」. "Codex supports symlinked skill folders and follows the symlink target when scanning these locations." https://learn.chatgpt.com/docs/build-skills (확인일 2026-11-01)
 [^done]: Codex 공식 문서, 「Long-running work」. "For work that may take many steps, give ChatGPT a clear outcome, constraints, and definition of done." https://learn.chatgpt.com/docs/long-running-work (확인일 2026-11-01)
 [^gap]: Codex 공식 문서, 「Use ChatGPT」. "If ChatGPT couldn't access a source or complete part of the task, ask it to say so plainly." / "An explicit gap is easier to address than a confident guess." https://learn.chatgpt.com/docs/use-chatgpt (확인일 2026-11-01)
+[^ends]: Codex 공식 문서, 「Agent approvals & security」. "| Codex CLI and mobile | Full findings and resume aren't available. The task ends. |" https://learn.chatgpt.com/docs/agent-approvals-security (확인일 2026-11-01)
+[^status]: Codex 공식 문서, 「Pricing」. "If you want to see your remaining limits during an active Codex CLI session, you can use `/status`." https://learn.chatgpt.com/docs/pricing (확인일 2026-11-01)
