@@ -11,27 +11,31 @@ export type PromptFields = {
 
 export type PromptMode = 'xml' | 'markdown'
 
-type Section = { key: keyof PromptFields; tag: string; heading: string }
+type Section = { key: keyof PromptFields; tag: string; heading: string; headingEn: string }
 
 export const SECTIONS: readonly Section[] = [
-  { key: 'context', tag: 'context', heading: '상황' },
-  { key: 'document', tag: 'document', heading: '자료' },
-  { key: 'example', tag: 'example', heading: '예시' },
-  { key: 'instructions', tag: 'instructions', heading: '할 일' },
-  { key: 'format', tag: 'format', heading: '답의 모양' },
+  { key: 'context', tag: 'context', heading: '상황', headingEn: 'Context' },
+  { key: 'document', tag: 'document', heading: '자료', headingEn: 'Material' },
+  { key: 'example', tag: 'example', heading: '예시', headingEn: 'Example' },
+  { key: 'instructions', tag: 'instructions', heading: '할 일', headingEn: 'Task' },
+  { key: 'format', tag: 'format', heading: '답의 모양', headingEn: 'Answer format' },
 ]
 
-function renderSection(section: Section, value: string, mode: PromptMode): string {
+export function headingOf(section: Section, lang: 'ko' | 'en'): string {
+  return lang === 'en' ? section.headingEn : section.heading
+}
+
+function renderSection(section: Section, value: string, mode: PromptMode, lang: 'ko' | 'en'): string {
   if (mode === 'xml') return `<${section.tag}>\n${value}\n</${section.tag}>`
   // pasted material may contain its own markdown headings, so fence it.
   // known limit: a '---' line inside the material blends with the fence (XML mode avoids this)
   const body = section.key === 'document' ? `---\n${value}\n---` : value
-  return `## ${section.heading}\n${body}`
+  return `## ${headingOf(section, lang)}\n${body}`
 }
 
-export function buildPrompt(fields: PromptFields, mode: PromptMode): string {
+export function buildPrompt(fields: PromptFields, mode: PromptMode, lang: 'ko' | 'en' = 'ko'): string {
   return SECTIONS.map((section) => ({ section, value: fields[section.key].trim() }))
     .filter(({ value }) => value !== '')
-    .map(({ section, value }) => renderSection(section, value, mode))
+    .map(({ section, value }) => renderSection(section, value, mode, lang))
     .join('\n\n')
 }

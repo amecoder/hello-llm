@@ -56,3 +56,9 @@ test('both modes keep the same section order', () => {
   const heads = [...buildPrompt(fields, 'markdown').matchAll(/^## (.+)$/gm)].map((m) => m[1])
   assert.deepEqual(heads, ['상황', '자료', '예시', '할 일', '답의 모양'])
 })
+
+test('markdown: English pages get English headings, Korean stays the default', () => {
+  const fields = { ...empty, context: 'I am a student.', instructions: 'Summarize it.' }
+  assert.equal(buildPrompt(fields, 'markdown', 'en'), '## Context\nI am a student.\n\n## Task\nSummarize it.')
+  assert.equal(buildPrompt(fields, 'markdown'), '## 상황\nI am a student.\n\n## 할 일\nSummarize it.')
+})
