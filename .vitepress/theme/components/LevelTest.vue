@@ -5,7 +5,7 @@
 import { computed, nextTick, onMounted, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { LEVEL_QUESTIONS } from '../level-bank'
-import { localizeLevelQuestion } from '../level-bank-en'
+import { localizeLevelQuestion } from '../translations/index.ts'
 import { langOf, uiOf } from '../i18n.ts'
 import {
   buildLevelBadgeSvg,

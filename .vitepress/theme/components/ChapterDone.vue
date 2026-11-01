@@ -3,7 +3,7 @@
 import { computed, nextTick, onMounted, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { DONE_TEXT, TRANSLATED_STAGES, langOf, localePrefix, stageTitle } from '../i18n.ts'
-import { CHAPTER_TITLE_EN } from '../quiz-bank-en.ts'
+import { chapterTitleOf } from '../translations/index.ts'
 import { CHAPTERS } from '../quiz-bank'
 import { summarize, toggleRead } from '../progress.ts'
 import { CHAPTER_NUMBERS, loadProgress, progress, progressLoaded, saveProgress, storageBlocked } from '../progress-store'
@@ -26,7 +26,7 @@ const nextChapter = computed(() => {
   if (lg.value === 'ko') return c
   // a stage without an English version links to the Korean page
   const translated = TRANSLATED_STAGES[lg.value].includes(stage.value.id)
-  return { title: CHAPTER_TITLE_EN[status.value.next] ?? c.title, link: (translated ? localePrefix(lg.value) : '') + c.link }
+  return { title: chapterTitleOf(status.value.next, lg.value), link: (translated ? localePrefix(lg.value) : '') + c.link }
 })
 
 onMounted(loadProgress)

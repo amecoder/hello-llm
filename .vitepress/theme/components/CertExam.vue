@@ -6,7 +6,7 @@ import { computed, nextTick, onMounted, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { CHAPTERS } from '../quiz-bank'
 import { EXAM_QUESTIONS } from '../exam-bank'
-import { CHAPTER_TITLE_EN, localizeQuestion } from '../quiz-bank-en.ts'
+import { chapterTitleOf, localizeQuestion } from '../translations/index.ts'
 import { langOf, localePrefix, uiOf } from '../i18n.ts'
 import {
   buildBadgeSvg,
@@ -36,7 +36,7 @@ const ui = computed(() => UI[lang.value])
 const levelLabel = (l: (typeof LEVELS)[number]) => certLevelLabel(l.level, lang.value)
 const practiceTask = computed(() => practiceTaskOf(lang.value))
 const practiceChecks = computed(() => practiceChecksOf(lang.value))
-const chapterTitle = (n: number) => (lang.value === 'en' ? (CHAPTER_TITLE_EN[n] ?? CHAPTERS[n].title) : CHAPTERS[n].title)
+const chapterTitle = (n: number) => chapterTitleOf(n, lang.value)
 
 const stage = ref<Stage>('intro')
 const items = ref<ExamItem[]>([])

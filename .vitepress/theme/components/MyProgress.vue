@@ -3,7 +3,7 @@
 import { computed, nextTick, onMounted, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { TRANSLATED_STAGES, langOf, localePrefix, stageTitle, uiOf } from '../i18n.ts'
-import { CHAPTER_TITLE_EN } from '../quiz-bank-en.ts'
+import { chapterTitleOf } from '../translations/index.ts'
 import { CHAPTERS } from '../quiz-bank'
 import { setNickname, summarize } from '../progress.ts'
 import { chaptersOf, STAGES } from '../stages.ts'
@@ -25,7 +25,7 @@ const ui = computed(() => UI[lang.value])
 const prefix = computed(() => localePrefix(lang.value))
 // chapter titles follow the page language; untranslated chapters keep the Korean title
 function chapterTitle(n: number): string {
-  return lang.value === 'en' ? (CHAPTER_TITLE_EN[n] ?? CHAPTERS[n].title) : CHAPTERS[n].title
+  return chapterTitleOf(n, lang.value)
 }
 
 const draft = ref('')
