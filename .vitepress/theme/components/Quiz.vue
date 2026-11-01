@@ -3,7 +3,7 @@
 import { computed, nextTick, ref } from 'vue'
 import { useData } from 'vitepress'
 import { QUESTIONS } from '../quiz-bank'
-import { localizeQuestion } from '../quiz-bank-en.ts'
+import { localizeQuestion } from '../translations/index.ts'
 import { QUIZ_TEXT, langOf } from '../i18n.ts'
 
 const props = defineProps<{ id: string }>()

@@ -1,9 +1,5 @@
 // English text for the reader-facing quiz and chapter titles.
 // Only the text is translated: ids, chapters and answer indexes come from the Korean banks.
-// A question without an English entry falls back to Korean.
-import type { Lang } from './i18n.ts'
-import type { Question } from './quiz.ts'
-import { EXAM_TEXT_EN } from './exam-bank-en.ts'
 import { AI_SDLC_CHAPTER_TITLE_EN, AI_SDLC_QUESTION_TEXT_EN } from './quiz-bank-en-ai-sdlc.ts'
 import { ANTIGRAVITY_CHAPTER_TITLE_EN, ANTIGRAVITY_QUESTION_TEXT_EN } from './quiz-bank-en-antigravity.ts'
 import { CODEX_CHAPTER_TITLE_EN, CODEX_QUESTION_TEXT_EN } from './quiz-bank-en-codex.ts'
@@ -663,9 +659,4 @@ export const QUESTION_TEXT_EN: Record<string, QuestionText> = {
     ],
     explain: "Match your checking to the weight of the task. For brainstorming hangout spots, a light read is plenty; for things that affect health, money, jobs, or legal rights, use expert review or formal procedures.",
   },
-}
-
-export function localizeQuestion<T extends Question>(q: T, lang: Lang): T {
-  const text = lang === 'en' ? (QUESTION_TEXT_EN[q.id] ?? EXAM_TEXT_EN[q.id]) : undefined
-  return text === undefined ? q : { ...q, ...text }
 }
