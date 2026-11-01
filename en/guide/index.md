@@ -84,20 +84,20 @@ features:
     linkText: Start Gemini Guide
   - title: Stage 3 · Claude Code User Guide
     details: Claude reading and editing files directly in a folder on your computer — 12 chapters starting from the desktop app without a terminal, learning by building a custom file-organizing tool
-    link: /guide/20-claude-code/
-    linkText: Start Claude Code Guide (Korean)
+    link: /en/guide/20-claude-code/
+    linkText: Start Claude Code Guide
   - title: Stage 3 · Codex User Guide
     details: Codex inside the ChatGPT app — 8 chapters learning only what is different by moving over the organizing tool you built with Claude Code
-    link: /guide/21-codex/
-    linkText: Start Codex Guide (Korean)
+    link: /en/guide/21-codex/
+    linkText: Start Codex Guide
   - title: Stage 3 · Antigravity User Guide
     details: Google's Antigravity — 7 chapters opening the same organizing tool folder directly without moving it, with hands-on practice even on a free account
-    link: /guide/22-antigravity/
-    linkText: Start Antigravity Guide (Korean)
+    link: /en/guide/22-antigravity/
+    linkText: Start Antigravity Guide
   - title: Stage 4 · AI-SDLC Guide
     details: Planning, deploying, and improving a small web page with AI — 10 chapters covering GitHub repositories, SPEC.md, verification checks, PRs and reviews, GitHub Pages, and safety
-    link: /guide/30-ai-sdlc/
-    linkText: Start AI-SDLC Guide (Korean)
+    link: /en/guide/30-ai-sdlc/
+    linkText: Start AI-SDLC Guide
   - title: AI Knowledge Level Exam — From Beginner to Expert
     details: "Like a written certification exam with 5 subjects, 50 questions, and minimum subject scores. Pass to unlock the next level across 4 tiers: Beginner, Intermediate, Advanced, and Expert"
     link: /en/guide/00-common/level-test
@@ -118,5 +118,5 @@ Each stage builds on the one before it, so we recommend reading in numbered orde
 |---|---|---|
 | 1 | [Common Guide](/en/guide/00-common/) | Core principles and skills that work with any LLM |
 | 2 | [ChatGPT](/en/guide/11-chatgpt/) · [Claude](/en/guide/10-claude/) · [Gemini](/en/guide/12-gemini/) | Features and practical tips for each service |
-| 3 | [Claude Code](/guide/20-claude-code/) · [Codex](/guide/21-codex/) · [Antigravity](/guide/22-antigravity/) | Coding AI tools that work right on your computer |
-| 4 | [AI-SDLC](/guide/30-ai-sdlc/) | From planning to deployment with AI — the full software development lifecycle (SDLC) |
+| 3 | [Claude Code](/en/guide/20-claude-code/) · [Codex](/en/guide/21-codex/) · [Antigravity](/en/guide/22-antigravity/) | Coding AI tools that work right on your computer |
+| 4 | [AI-SDLC](/en/guide/30-ai-sdlc/) | From planning to deployment with AI — the full software development lifecycle (SDLC) |
