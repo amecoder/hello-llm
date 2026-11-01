@@ -3,7 +3,7 @@
 > **En una línea**: de la pantalla de Gemini solo tienes que conocer cuatro zonas: el **menú lateral izquierdo** (conversaciones anteriores), el **cuadro de entrada del centro** (donde preguntas, y el «+»),
 > el **botón de modelo a la derecha del cuadro de entrada** (modelo y nivel de razonamiento) y los **«Ajustes» (설정) de abajo a la izquierda**. Al principio basta con usar el cuadro de entrada.
 
-Las pantallas corresponden a la versión web de 2026-10 y las imágenes son de un plan de pago (Google AI Pro) en coreano. En una cuenta gratuita, algunos menús pueden no verse o tener un candado. Si el nombre de tu pantalla es distinto, busca un botón con un nombre parecido.
+Las pantallas corresponden a la versión web de octubre de 2026 y las imágenes son de un plan de pago (Google AI Pro) en coreano. En una cuenta gratuita, algunos menús pueden no verse o tener un candado. Si el nombre de tu pantalla es distinto, busca un botón con un nombre parecido.
 
 ## La pantalla inicial de un vistazo
 

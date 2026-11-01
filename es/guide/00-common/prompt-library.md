@@ -526,11 +526,11 @@ Es la forma de pedir ayuda sin nombres, contactos ni importes exactos. Copia y u
 
 ```
 [Antes de ocultar]
-El ayudante Kim Cheolsu (010-1234-5678) causó una pérdida de 48,2 millones de wones (4,820만 원) a Hanbit Corp. en la entrega del 15 de marzo. Escribe un informe de los hechos.
+Kim Cheolsu, empleado de nivel intermedio (대리), (010-1234-5678) causó una pérdida de 48,2 millones de wones (4,820만 원) a Hanbit Corp. en la entrega del 15 de marzo. Escribe un informe de los hechos.
 
 [Después de ocultar]
-El ayudante A de mi equipo causó el mes pasado, en una entrega, una pérdida de unos 50 millones de wones a la empresa cliente B.
-Escribe un borrador del informe de los hechos desde el punto de vista del ayudante A. Deja el nombre, la fecha y el importe en blanco, entre [ ], y yo los rellenaré.
+El compañero A de mi equipo causó el mes pasado, en una entrega, una pérdida de unos 50 millones de wones a la empresa cliente B.
+Escribe un borrador del informe de los hechos desde el punto de vista del compañero A. Deja el nombre, la fecha y el importe en blanco, entre [ ], y yo los rellenaré.
 ```
 
 → Explicación: [capítulo 9, «Cómo tapar los datos»](09-safety.md#como-ocultar-datos-y-seguir-usandola)

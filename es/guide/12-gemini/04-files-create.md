@@ -3,7 +3,7 @@
 > **En una línea**: con el «+» del cuadro de entrada puedes **subir archivos** para recibir resúmenes y análisis, editar juntos documentos y aplicaciones en **Canvas**
 > y crear **imágenes, vídeos y música**. Los contenidos creados con Gemini llevan una marca que indica que los hizo una IA. No introduzcas contraseñas en una aplicación que te haya compartido otra persona.
 
-Las pantallas corresponden a la versión web de 2026-10 y las imágenes son de un plan de pago (Google AI Pro) en coreano. Las funciones de este capítulo que **exigen un plan de pago**, como crear vídeos, llevan la indicación «de pago» (유료).
+Las pantallas corresponden a la versión web de octubre de 2026 y las imágenes son de un plan de pago (Google AI Pro) en coreano. Las funciones de este capítulo que **exigen un plan de pago**, como crear vídeos, llevan la indicación «de pago» (유료).
 
 ## Subir archivos
 

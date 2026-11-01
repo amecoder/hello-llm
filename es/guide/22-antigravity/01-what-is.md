@@ -3,7 +3,7 @@
 > **En una línea**: Antigravity es una herramienta de IA creada por Google que **trabaja directamente en una carpeta de tu ordenador**. Tiene una aplicación de escritorio y un programa de terminal, `agy`.
 > Se diferencia de las dos herramientas anteriores en dos cosas. Puedes usar **todas las funciones incluso con una cuenta de Google gratuita**, y **lee tal cual el `AGENTS.md` y el `.agents/skills`** que creaste en la etapa de Codex.
 
-Este capítulo se escribió a partir de la documentación oficial de Antigravity (antigravity.google/docs) consultada el 2026-11-1. Las funciones y los nombres de los menús cambian con frecuencia.
+Este capítulo se escribió a partir de la documentación oficial de Antigravity (antigravity.google/docs) consultada el 1 de noviembre de 2026. Las funciones y los nombres de los menús cambian con frecuencia.
 
 ## Cuatro formas
 
@@ -54,7 +54,7 @@ En Antigravity puedes elegir, además de Gemini, modelos de otras empresas, y ta
 
 Fuente: documentación oficial de Antigravity (solo una parte; el Claude de Pro excluye la versión de prueba)[^model-table]
 
-Indica que la serie Claude 4.6, que se podía elegir gratis, **se retirará el 2026-11-2** (según lo consultado el 2026-11-01).[^removed] Por eso, con una cuenta gratuita, piensa que practicas con Gemini 3.8 Flash.
+Indica que la serie Claude 4.6, que se podía elegir gratis, **se retirará el 2 de noviembre de 2026** (según lo consultado el 2026-11-01).[^removed] Por eso, con una cuenta gratuita, piensa que practicas con Gemini 3.8 Flash.
 
 <Quiz id="ch601-models" />
 

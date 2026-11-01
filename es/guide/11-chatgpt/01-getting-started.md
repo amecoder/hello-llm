@@ -3,7 +3,7 @@
 > **En una línea**: puedes probar ChatGPT sin registrarte. Si quieres conservar las conversaciones y subir archivos, regístrate gratis,
 > y piensa en un plan de pago solo cuando lo gratuito se te quede corto.
 
-Las pantallas corresponden a la versión web de 2026-10 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
+Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
 
 ## Probar primero sin iniciar sesión
 
@@ -97,7 +97,7 @@ Es más fácil elegir si te fijas en **"qué cambia"** y no en las cifras.
 El "sin límite de veces" del plan gratuito solo vale para las conversaciones de texto cotidianas. Existen mecanismos para evitar abusos. Funciones como archivos, imágenes y voz tienen límites aparte.[^free]
 
 Si te preocupan los anuncios, consulta la información oficial.[^ads] Según esta, los anuncios **no influyen en el contenido de las respuestas de ChatGPT**. Los anunciantes no pueden ver tus conversaciones.
-En el **chat temporal** (una conversación que no queda en el historial, [capítulo 3](03-chats.md)) no aparecen anuncios. Los anuncios empezaron a probarse en Estados Unidos en 2026-2 y se están extendiendo a algunos países.
+En el **chat temporal** (una conversación que no queda en el historial, [capítulo 3](03-chats.md)) no aparecen anuncios. Los anuncios empezaron a probarse en Estados Unidos en febrero de 2026 y se están extendiendo a algunos países.
 En la información oficial no pude comprobar si también aparecen en Corea.
 
 <Quiz id="ch101-plans" />
@@ -135,7 +135,7 @@ Además del navegador web, puedes usar ChatGPT con la aplicación del móvil y l
 - **Aplicación del ordenador**: usas Chat, Work y Codex juntos en una sola aplicación nueva. La aplicación anterior puede seguir existiendo con el nombre «ChatGPT Classic».[^desktop] La aplicación para Mac necesita macOS 14 o posterior.[^macos]
 - **KakaoTalk**: en Corea también puedes usar ChatGPT dentro de KakaoTalk (explicación más abajo).[^kakao]
 
-En 2026-3, el menú lateral de la aplicación del móvil se simplificó. Funciones como las imágenes pasaron a una barra horizontal encima de la lista de chats.
+En marzo de 2026, el menú lateral de la aplicación del móvil se simplificó. Funciones como las imágenes pasaron a una barra horizontal encima de la lista de chats.
 Es posible que haya vuelto a cambiar después. Si la ubicación no coincide con la pantalla web de esta guía, busca un botón con un nombre parecido.[^rn]
 
 Al descargar la aplicación, busca "ChatGPT" en la tienda de aplicaciones y comprueba el **nombre del desarrollador**. En iPhone (App Store) debe aparecer «OpenAI OpCo, LLC» y en Android (Google Play), «OpenAI». Hay muchas otras aplicaciones con nombres parecidos.[^appfaq]

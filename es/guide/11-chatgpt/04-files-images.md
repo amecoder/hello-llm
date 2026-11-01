@@ -3,7 +3,7 @@
 > **En una línea**: lo que cuesta explicar con palabras, **súbelo como foto o archivo** para mostrarlo, y las imágenes que necesites **pídelas**.
 > Los archivos que subes se reúnen en la «Biblioteca» (라이브러리) y puedes volver a usarlos. El plan gratuito permite subir pocos archivos al día.
 
-Las pantallas corresponden a la versión web de 2026-10 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
+Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
 
 ## Subir fotos y archivos
 
@@ -194,7 +194,7 @@ Es un vídeo de presentación hecho por la propia empresa. Los nombres de las pa
 
 > El siguiente vídeo está en **inglés**. Si en el vídeo de YouTube eliges Ajustes (la rueda dentada) → Subtítulos → **Traducción automática → español**, puedes verlo con subtítulos en español. El vídeo se reproduce directamente dentro de esta página.
 
-**[Introducing ChatGPT Images 2.5](https://www.youtube.com/watch?v=6l7ble9P74o)** · OpenAI · Para quien quiera ver un resumen breve de la creación de imágenes, ahora más rápida y nítida (2026-9, 1 minuto)
+**[Introducing ChatGPT Images 2.5](https://www.youtube.com/watch?v=6l7ble9P74o)** · OpenAI · Para quien quiera ver un resumen breve de la creación de imágenes, ahora más rápida y nítida (septiembre de 2026, 1 minuto)
 
 <YouTube id="6l7ble9P74o" title="Introducing ChatGPT Images 2.5" />
 

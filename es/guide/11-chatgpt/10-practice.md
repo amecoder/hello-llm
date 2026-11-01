@@ -3,7 +3,7 @@
 > **En una línea**: del capítulo 1 al 9 viste las pantallas y las funciones de ChatGPT. Aquí tienes 8 tareas para **pulsar tú mismo cada botón** una vez.
 > Cada tarea tiene una lista de «Comprueba si salió bien» (잘 됐는지 확인), así que puedes verificarlo por tu cuenta sin que nadie lo corrija.
 
-Las pantallas corresponden a la versión web de 2026-10 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
+Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
 
 ## Cómo hacer las tareas de práctica
 

@@ -72,7 +72,7 @@ El resultado fue este (resultado: [9장-회의록-숨은지시-메모.txt](/prac
 Las normas que recomienda la documentación oficial, adaptadas a la herramienta de organización, son estas.[^practices]
 
 1. **Lee antes de permitir.** Pulsa después de leer la vista previa de la ventana de permiso ([capítulo 7](07-skills-plugins.md)) y el comando.
-2. **No pases directamente de golpe material en el que no confías.** Las notas y correos que te manda otra persona, échales un vistazo antes de encargar la organización.
+2. **No le pases directamente material en el que no confías sin revisarlo.** Las notas y correos que te manda otra persona, échales un vistazo antes de encargar la organización.
 3. **Comprueba los cambios en los archivos importantes.** Mira el panel de cambios (capítulo 3) y el historial de Git (capítulo 4).
 
 A esto esta guía añade dos hábitos.
@@ -86,7 +86,7 @@ A esto esta guía añade dos hábitos.
 
 1. Escribe `/usage` en el cuadro de escritura y mira el uso de esta semana.
 2. En los ajustes de privacidad de claude.ai, comprueba cómo está el ajuste "usar datos para mejorar el modelo".
-3. Pon en inbox la nota del experimento de arriba y hazla organizar con `/meeting-notes`. Comprueba si al final del acta está "todas las tareas completadas" y si Claude avisó del aviso.
+3. Pon en inbox la nota del experimento de arriba y hazla organizar con `/meeting-notes`. Comprueba si al final del acta está "todas las tareas completadas" y si Claude te avisó de la frase añadida.
 4. Antes de hacer organizar tus notas reales, échales un vistazo para ver si tienen datos personales de otras personas (teléfonos, direcciones).
 
 **Proyecto continuo**: hasta ahora solo lo has usado en la app de escritorio. En el capítulo 10 haremos funcionar la misma herramienta de organización con **una línea de comando en el terminal**.

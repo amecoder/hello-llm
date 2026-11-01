@@ -3,7 +3,7 @@
 > **En una línea**: Codex es una herramienta de IA creada por OpenAI que **trabaja directamente en una carpeta de tu ordenador**. Ahora se usa **eligiendo «Codex» dentro de la aplicación de escritorio de ChatGPT**.
 > Hace casi lo mismo que Claude Code. En esta etapa llevarás a Codex la «Herramienta de orden» (정리 도구) que creaste en los capítulos de Claude Code y aprenderás **solo lo que es distinto**.
 
-Este capítulo se escribió a partir de la documentación oficial de Codex (learn.chatgpt.com) consultada el 2026-11-1. Las funciones y los nombres de los menús cambian con frecuencia.
+Este capítulo se escribió a partir de la documentación oficial de Codex (learn.chatgpt.com) consultada el 1 de noviembre de 2026. Las funciones y los nombres de los menús cambian con frecuencia.
 
 ## Tres modos dentro de la aplicación de ChatGPT
 

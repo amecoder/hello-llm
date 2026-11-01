@@ -3,7 +3,7 @@
 > **En una línea**: en el **menú de permisos** de debajo del cuadro de entrada decides qué hace Codex por su cuenta y qué te pregunta. Al principio empieza con **Ask for approval**.
 > Deshacer se hace con **Git**. No encontré en la documentación oficial una función como el retroceso de Claude Code. Por eso es aún más importante el hábito de dejar un registro (commit) antes y después de encargar un trabajo.
 
-Este capítulo se escribió a partir de la documentación oficial de Codex consultada el 2026-11-1 y de las prácticas de esta guía. Por qué hacen falta los permisos se explicó en el [capítulo 4 de Claude Code](../20-claude-code/04-permissions-undo.md).
+Este capítulo se escribió a partir de la documentación oficial de Codex consultada el 1 de noviembre de 2026 y de las prácticas de esta guía. Por qué hacen falta los permisos se explicó en el [capítulo 4 de Claude Code](../20-claude-code/04-permissions-undo.md).
 
 ## Tres opciones del menú de permisos
 

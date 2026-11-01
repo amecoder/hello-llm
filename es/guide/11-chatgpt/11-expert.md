@@ -3,7 +3,7 @@
 > **En una línea**: un experto no es quien conoce más funciones nuevas, sino quien **encarga el trabajo hablando como se hace con una persona, elige la herramienta adecuada para cada tarea, convierte lo que se repite en una plantilla y comprueba el resultado antes de usarlo**.
 > Este capítulo explica cómo **combinar** las funciones de los capítulos 1~10 y presenta las tareas programadas, el análisis de datos y el modo de estudio, que aún no hemos tratado.
 
-Las pantallas corresponden a la versión web de 2026-10 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
+Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
 
 ## Qué hace diferente a un experto
 

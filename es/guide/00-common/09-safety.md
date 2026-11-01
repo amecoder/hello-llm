@@ -44,7 +44,7 @@ Cuando respondas, sigue estas reglas:
 3. No te inventes lo que no sepas; di «no lo sé».
 ```
 
-Cuando recibas la respuesta, busca tú mismo el número del artículo en una página oficial, como el Centro de Información Legislativa Nacional. ¿Ese artículo dice realmente eso? Solo cuando lo miras has terminado de comprobar.
+Cuando recibas la respuesta, busca tú mismo el número del artículo en una página oficial, como el Centro de Información Legislativa Nacional (국가법령정보센터). ¿Ese artículo dice realmente eso? Solo cuando lo miras has terminado de comprobar.
 
 > **El «proceso de pensamiento» que muestra la IA también hay que comprobarlo.** Como viste en el [capítulo 1](01-what-is-llm.md), el texto de razonamiento que aparece en pantalla no muestra todo el cálculo real.
 > Aunque el proceso parezca razonable, comprueba la conclusión por separado ([capítulo 1](01-what-is-llm.md)).
@@ -63,7 +63,7 @@ Lo que escribes en la ventana de chat de la IA no se queda solo en tu móvil o t
 
 Cada servicio tiene menús de ajustes y valores por defecto distintos, y cambian a menudo. Los ajustes de cada servicio se tratan en la etapa 2 (guías por servicio).
 Aquí quédate con un principio que vale para cualquier servicio: preguntarte antes de escribir.
-**«¿Pasaría algo si otra persona viera esto?»** Si la respuesta es que sí, no lo escribas o ocúltalo.
+**«¿Estaría bien que otra persona viera esto?»** Si la respuesta es que no, no lo escribas o ocúltalo.
 
 ### Lo que no debes escribir
 
@@ -83,11 +83,11 @@ A veces, si quitas toda la información, es difícil recibir ayuda. En ese caso,
 
 ```
 [Antes de ocultar]
-El ayudante Kim Cheolsu (010-1234-5678) causó una pérdida de 48,2 millones de wones (4,820만 원) a Hanbit Corp. en la entrega del 15 de marzo. Escribe un informe de los hechos.
+Kim Cheolsu, empleado de nivel intermedio (대리), (010-1234-5678) causó una pérdida de 48,2 millones de wones (4,820만 원) a Hanbit Corp. en la entrega del 15 de marzo. Escribe un informe de los hechos.
 
 [Después de ocultar]
-El ayudante A de mi equipo causó el mes pasado, en una entrega, una pérdida de unos 50 millones de wones a la empresa cliente B.
-Escribe un borrador del informe de los hechos desde el punto de vista del ayudante A. Deja el nombre, la fecha y el importe en blanco, entre [ ], y yo los rellenaré.
+El compañero A de mi equipo causó el mes pasado, en una entrega, una pérdida de unos 50 millones de wones a la empresa cliente B.
+Escribe un borrador del informe de los hechos desde el punto de vista del compañero A. Deja el nombre, la fecha y el importe en blanco, entre [ ], y yo los rellenaré.
 ```
 
 La petición después de ocultar no tiene nombre, teléfono, fecha exacta ni importe exacto. Aun así, se conserva la descripción de la situación necesaria para pedir el borrador del informe.

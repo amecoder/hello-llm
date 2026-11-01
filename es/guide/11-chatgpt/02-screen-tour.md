@@ -3,7 +3,7 @@
 > **En una línea**: de la pantalla de ChatGPT solo tienes que conocer cuatro zonas: el **menú lateral izquierdo** (conversaciones anteriores y funciones), el **cuadro de entrada del centro** (donde preguntas),
 > el **selector Chat/Work de arriba** y el **menú de cuenta de abajo a la izquierda** (ajustes). Al principio basta con el cuadro de entrada y «Nuevo chat» (새 채팅).
 
-Las pantallas corresponden a la versión web de 2026-10 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
+Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
 
 ## La pantalla inicial de un vistazo
 
@@ -62,7 +62,7 @@ Un **hilo** (thread) es otra forma de llamar a una conversación. «Hilos fijado
 
 ## Chat y Work: ¿conversar o encargar un trabajo?
 
-El selector «Chat»/«Work» de arriba en el centro es un botón de cambio que apareció en 2026-7.[^rn-work]
+El selector «Chat»/«Work» de arriba en el centro es un botón de cambio que apareció en julio de 2026.[^rn-work]
 
 - **Chat**: es el ChatGPT de siempre. Preguntas y respondes conversando. La mayor parte de esta guía se basa en Chat.
 - **Work**: es el modo en el que encargas una tarea larga de varios pasos y recibes un **resultado terminado**, como un documento, una tabla, una presentación o un informe.
