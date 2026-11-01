@@ -108,7 +108,7 @@ features:
 
 앞 단계가 다음 단계의 바탕이 되므로 번호 순서대로 읽는 것을 권합니다. 지금은 1단계를 채우는 중입니다.
 
-![학습 로드맵: 1단계 공통 가이드(잘 묻는 법) → 2단계 Claude·ChatGPT(서비스별 기능) → 3단계 Claude Code·Codex(AI에게 일 맡기기) → 4단계 AI-SDLC(AI와 함께 만들기)](../assets/roadmap.svg)
+![학습 로드맵: 1단계 공통 가이드(잘 묻는 법) → 2단계 ChatGPT·Claude·Gemini(서비스별 기능) → 3단계 Claude Code·Codex·Antigravity(AI에게 일 맡기기) → 4단계 AI-SDLC(AI와 함께 만들기)](../assets/roadmap.svg)
 
 | 단계 | 가이드 | 내용 |
 |---|---|---|
