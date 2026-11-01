@@ -337,7 +337,7 @@ Help me plan a family day trip for this week.
 3. Create a full-day itinerary for the place I pick.
 ```
 
-→ Explanation: [ChatGPT Chapter 11 "Five Lines for Delegating Work"](/guide/11-chatgpt/11-expert.md#일을-맡기는-다섯-줄-—-결과·자료·남길-것·검토-기준·모양)
+→ Explanation: [ChatGPT Chapter 11 "Five Lines for Delegating Work"](/en/guide/11-chatgpt/11-expert.md#five-lines-for-handing-off-work-—-outcome-sources-keep-unchanged-review-criteria-shape)
 
 ### Comparing by Your Own Criteria and Picking One
 
@@ -348,7 +348,7 @@ Compare three event venue candidates using these three criteria: budget, public 
 Recommend one venue, and tell me how to minimize its downsides.
 ```
 
-→ Explanation: [ChatGPT Chapter 2 "Reasoning Levels and Thinking"](/guide/11-chatgpt/02-screen-tour.md#추론-수준과-생각하기-—-얼마나-깊이-생각할까)
+→ Explanation: [ChatGPT Chapter 2 "Reasoning Levels and Thinking"](/en/guide/11-chatgpt/02-screen-tour.md#reasoning-effort-and-thinking-—-how-deeply-should-it-think)
 
 ## Refining Through Follow-Up Messages
 
@@ -558,7 +558,7 @@ The first file is the official notice (original), and the second file is the sum
 Find any facts or numbers in my summary that differ from the original, and anything that isn't in the original.
 ```
 
-→ Explanation: [ChatGPT Chapter 4 "Uploading Photos and Files"](/guide/11-chatgpt/04-files-images.md#사진·파일-올리기)
+→ Explanation: [ChatGPT Chapter 4 "Uploading Photos and Files"](/en/guide/11-chatgpt/04-files-images.md#uploading-photos-and-files)
 
 ### Asking for the Reasoning Behind a Confusing Conclusion
 
@@ -572,7 +572,7 @@ I don't understand how you reached the conclusion in the second paragraph. Expla
 
 ## Delegating Work in ChatGPT
 
-These prompts come from Stage 2 [ChatGPT Chapter 11 "Using It Like an Expert"](/guide/11-chatgpt/11-expert.md) for handing off whole tasks. Items that use ChatGPT features (scheduled tasks, study mode, shopping) may not work the same way in other AI tools.
+These prompts come from Stage 2 [ChatGPT Chapter 11 "Using It Like an Expert"](/en/guide/11-chatgpt/11-expert.md) for handing off whole tasks. Items that use ChatGPT features (scheduled tasks, study mode, shopping) may not work the same way in other AI tools.
 
 ### Delegating a Task in Five Lines
 
@@ -586,7 +586,7 @@ Review criteria: At the end, check whether the total matches the original file a
 Format: One table by item and a three-line summary.
 ```
 
-→ Explanation: [Chapter 11 "Five Lines for Delegating Work"](/guide/11-chatgpt/11-expert.md#일을-맡기는-다섯-줄-—-결과·자료·남길-것·검토-기준·모양)
+→ Explanation: [Chapter 11 "Five Lines for Delegating Work"](/en/guide/11-chatgpt/11-expert.md#five-lines-for-handing-off-work-—-outcome-sources-keep-unchanged-review-criteria-shape)
 
 ### Getting a Summary First When Uploading Multiple Files
 
@@ -596,7 +596,7 @@ Before asking for a draft, check that the AI has read your uploaded files proper
 Don't write a draft yet. First, read the attached files and briefly summarize what is decided, what is not decided yet, and anything that is missing or unclear.
 ```
 
-→ Explanation: [Chapter 11 "Five Lines for Delegating Work"](/guide/11-chatgpt/11-expert.md#일을-맡기는-다섯-줄-—-결과·자료·남길-것·검토-기준·모양)
+→ Explanation: [Chapter 11 "Five Lines for Delegating Work"](/en/guide/11-chatgpt/11-expert.md#five-lines-for-handing-off-work-—-outcome-sources-keep-unchanged-review-criteria-shape)
 
 ### Getting Updates on a Schedule (Scheduled Tasks)
 
@@ -606,7 +606,7 @@ Once you set this up, ChatGPT runs it automatically at the time you choose. Just
 Every Monday morning at 8 AM, give me this week's Seoul weather forecast organized into one line per day.
 ```
 
-→ Explanation: [Chapter 11 "Automatic Updates on a Schedule"](/guide/11-chatgpt/11-expert.md#정해진-때에-알아서-—-예약-작업)
+→ Explanation: [Chapter 11 "Automatic Updates on a Schedule"](/en/guide/11-chatgpt/11-expert.md#on-its-own-at-a-set-time-—-scheduled-tasks)
 
 ### Weekly Search and Summary Only (Scheduled Tasks)
 
@@ -617,7 +617,7 @@ Every Friday at 5 PM, check the announcements on our district office website and
 If a date isn't clear, don't make it up—write "Needs verification" and attach the source link. Do not submit applications or post anything.
 ```
 
-→ Explanation: [Chapter 11 "Automatic Updates on a Schedule"](/guide/11-chatgpt/11-expert.md#정해진-때에-알아서-—-예약-작업)
+→ Explanation: [Chapter 11 "Automatic Updates on a Schedule"](/en/guide/11-chatgpt/11-expert.md#on-its-own-at-a-set-time-—-scheduled-tasks)
 
 ### Learning Step by Step Instead of Getting the Answer (Study Mode)
 
@@ -629,7 +629,7 @@ I've heard of Ohm's law, but I mix up series and parallel circuits. I have a mul
 Briefly explain the most important concepts first, then quiz me one question at a time and check my answers.
 ```
 
-→ Explanation: [Chapter 11 "Using It to Learn"](/guide/11-chatgpt/11-expert.md#배우는-데-쓰기-—-공부-모드)
+→ Explanation: [Chapter 11 "Using It to Learn"](/en/guide/11-chatgpt/11-expert.md#using-it-to-learn-—-study-mode)
 
 ### Comparing Products to Buy and Checking Prices Yourself
 
@@ -640,7 +640,7 @@ I'm looking for a commuter backpack. My budget is 100,000 won, it needs to fit a
 Pick just three options to show in a comparison table, and include links to each store so I can check the prices myself.
 ```
 
-→ Explanation: [Chapter 6 "When Shopping"](/guide/11-chatgpt/06-search.md#쇼핑할-때-—-비교는-맡기고-가격은-직접-확인)
+→ Explanation: [Chapter 6 "When Shopping"](/en/guide/11-chatgpt/06-search.md#when-shopping-—-let-it-compare-check-prices-yourself)
 
 ### Getting a Plan Before Making Big Edits to a File
 
@@ -651,7 +651,7 @@ I want to condense slides 3 to 5 of this presentation into a single slide. Don't
 Keep the numbers and tables as they are, and keep the slide title under 15 characters.
 ```
 
-→ Explanation: [Chapter 11 "Using It Inside Word and PowerPoint"](/guide/11-chatgpt/11-expert.md#word·powerpoint-안에서-쓰기)
+→ Explanation: [Chapter 11 "Using It Inside Word and PowerPoint"](/en/guide/11-chatgpt/11-expert.md#using-it-inside-word-and-powerpoint)
 
 ## Using AI Like an Expert
 

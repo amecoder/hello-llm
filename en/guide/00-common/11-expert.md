@@ -1,7 +1,7 @@
 # Chapter 11. Using AI Like a Pro — Judge, Test, and Build Up
 
 > **One-line summary**: Using AI well takes more than knowing extra buttons. It takes the ability to **judge what to hand off, test before you hand it off, and save what you repeat**.
-> This chapter collects ways of working that apply to any AI service. Menu locations and service-specific features are covered in Stage 2: [ChatGPT Chapter 11](/guide/11-chatgpt/11-expert.md) and [Claude Chapter 12](/guide/10-claude/12-expert.md).
+> This chapter collects ways of working that apply to any AI service. Menu locations and service-specific features are covered in Stage 2: [ChatGPT Chapter 11](/en/guide/11-chatgpt/11-expert.md) and [Claude Chapter 12](/en/guide/10-claude/12-expert.md).
 
 This chapter is about when and how to pull out what you learned in Chapters 1–10. Features you will learn in Stage 2 (such as Projects and Skills) are only mentioned by name here, with detailed instructions in each service's chapters. You can read this chapter before Stage 2, or come back to it after finishing Stage 2.
 
@@ -78,11 +78,11 @@ Even if feature names differ from service to service, the features that fit each
 | If the work looks like this | ChatGPT | Claude |
 |---|---|---|
 | Ask, refine, and think together | Regular chat | Regular chat |
-| Quick facts, things that happened today | [Web search](/guide/11-chatgpt/06-search.md#웹-검색-—-chatgpt가-인터넷을-찾아보게-하기) | [Web search](/guide/10-claude/06-search.md#언제-무엇을-쓸까) |
-| Gather lots of sources into a report | [Deep research](/guide/11-chatgpt/06-search.md#심층-리서치-—-보고서를-맡기기) | [Research](/guide/10-claude/06-search.md#언제-무엇을-쓸까) (paid) |
-| Keep working on the same ongoing topic | [Projects](/guide/11-chatgpt/07-projects-plugins.md#프로젝트-—-대화·파일·지침을-한-폴더에) | [Projects](/guide/10-claude/07-projects-tools.md#프로젝트-—-자료와-지침을-한곳에) |
-| Get a finished file after multiple steps | [Work](/guide/11-chatgpt/07-projects-plugins.md#chat과-work의-차이) (paid) | [Cowork](/guide/10-claude/08-cowork.md#cowork란-—-대화가-아니라-일을-맡긴다) (paid) |
-| Repeat on a set schedule | [Scheduled tasks](/guide/11-chatgpt/11-expert.md#정해진-때에-알아서-—-예약-작업) | [Scheduled tasks](/guide/10-claude/08-cowork.md#정해진-때에-알아서-—-예약-작업) (paid) |
+| Quick facts, things that happened today | [Web search](/en/guide/11-chatgpt/06-search.md#web-search-—-having-chatgpt-search-the-internet) | [Web search](/en/guide/10-claude/06-search.md#when-to-use-what) |
+| Gather lots of sources into a report | [Deep research](/en/guide/11-chatgpt/06-search.md#deep-research-—-handing-off-a-report) | [Research](/en/guide/10-claude/06-search.md#when-to-use-what) (paid) |
+| Keep working on the same ongoing topic | [Projects](/en/guide/11-chatgpt/07-projects-plugins.md#projects-—-conversations-files-and-instructions-in-one-folder) | [Projects](/en/guide/10-claude/07-projects-tools.md#projects-—-materials-and-instructions-in-one-place) |
+| Get a finished file after multiple steps | [Work](/en/guide/11-chatgpt/07-projects-plugins.md#the-difference-between-chat-and-work) (paid) | [Cowork](/en/guide/10-claude/08-cowork.md#what-is-cowork-—-delegating-work-not-just-chatting) (paid) |
+| Repeat on a set schedule | [Scheduled tasks](/en/guide/11-chatgpt/11-expert.md#on-its-own-at-a-set-time-—-scheduled-tasks) | [Scheduled tasks](/en/guide/10-claude/08-cowork.md#running-automatically-on-time-—-scheduled-tasks) (paid) |
 
 The feature names and plans in the table were checked in each service's chapters. Since they can change, check the relevant chapter before using them.
 
@@ -96,7 +96,7 @@ As you use AI, you will find yourself saying the same things over and over. If y
 
 There are four places to store it. You do not need to use all four from day one. Add them one by one in the order below as you need them.[^academy-layers]
 
-1. **You make the same request in every chat** → Put it in your instructions. In ChatGPT, this is [Custom Instructions (사용자 지정 지침)](/guide/11-chatgpt/05-memory.md#사용자-지정-지침-—-늘-지켜-줬으면-하는-것); in Claude, it is [Instructions (지침)](/guide/10-claude/05-memory.md#지침-—-모든-대화에-적용할-규칙).
+1. **You make the same request in every chat** → Put it in your instructions. In ChatGPT, this is [Custom Instructions (사용자 지정 지침)](/en/guide/11-chatgpt/05-memory.md#custom-instructions-—-rules-you-want-always-followed); in Claude, it is [Instructions (지침)](/en/guide/10-claude/05-memory.md#instructions-—-rules-for-all-conversations).
 2. **You keep working on the same ongoing job** → Group that work into a Project.
 3. **You explain the same step-by-step process every time** → Save that sequence as a reusable template. Start by putting the template from [Chapter 8, "4. Turn It into a Reusable Template"](08-meta-prompting.md#_4-turn-it-into-a-reusable-template) into your Project instructions. If your service and plan support it, you can also turn it into a Skill.
 4. **You want to share a well-polished template with others** → Share the template as a document, or bundle it using a sharing feature provided by the service (such as a plugin). Depending on your service and plan, this feature may not be available.
@@ -145,7 +145,7 @@ It is okay if you are not comfortable with numbers. Ask the AI to write Excel fo
 
 Even if the AI passes your comparison test, the responsibility is still yours. Check whether the numbers make common sense. Also, do not hide the fact that AI helped with the analysis.[^academy-data] Double-check important math with a calculator or Excel.
 
-How you upload files and get charts differs by service. See [ChatGPT Chapter 11, "Handing Off Tables and Numbers"](/guide/11-chatgpt/11-expert.md#표와-숫자-맡기기-—-데이터-분석) and [Claude Chapter 12, "Handing Off Tables and Numbers"](/guide/10-claude/12-expert.md#표와-숫자-맡기기).
+How you upload files and get charts differs by service. See [ChatGPT Chapter 11, "Handing Off Tables and Numbers"](/en/guide/11-chatgpt/11-expert.md#handing-off-tables-and-numbers-—-data-analysis) and [Claude Chapter 12, "Handing Off Tables and Numbers"](/en/guide/10-claude/12-expert.md#handing-off-tables-and-numbers).
 
 <Quiz id="ch11-data" />
 
@@ -170,7 +170,7 @@ If you answer, "I would look at the ID and find it in the first table to write i
 
 :::
 
-Having the AI ask you questions works on the same principle as [Chapter 5, "4. Have It Ask You Back"](05-prompt-patterns.md#_4-have-it-ask-you-first-—-flipped-interaction). Prompts for getting explanations tailored to your level are in the [Prompt Library, "Studying and Getting Explanations"](prompt-library.md#studying-and-learning). ChatGPT also has a dedicated Study Mode that turns on this style of teaching ([ChatGPT Chapter 11](/guide/11-chatgpt/11-expert.md#배우는-데-쓰기-—-공부-모드)).
+Having the AI ask you questions works on the same principle as [Chapter 5, "4. Have It Ask You Back"](05-prompt-patterns.md#_4-have-it-ask-you-first-—-flipped-interaction). Prompts for getting explanations tailored to your level are in the [Prompt Library, "Studying and Getting Explanations"](prompt-library.md#studying-and-learning). ChatGPT also has a dedicated Study Mode that turns on this style of teaching ([ChatGPT Chapter 11](/en/guide/11-chatgpt/11-expert.md#using-it-to-learn-—-study-mode)).
 
 <Quiz id="ch11-learn" />
 
@@ -201,7 +201,7 @@ If the logic feels shaky, point to that part and ask the AI to explain it.
 I don't understand how you reached the conclusion in the second paragraph. Explain what evidence and assumptions led to it, and fix any weak spots.
 ```
 
-What to look out for by output type (such as calculation methods in data analysis or sources in research reports) is collected in a table in [ChatGPT Chapter 11, "Check Before You Trust"](/guide/11-chatgpt/11-expert.md#믿기-전에-확인하기).
+What to look out for by output type (such as calculation methods in data analysis or sources in research reports) is collected in a table in [ChatGPT Chapter 11, "Check Before You Trust"](/en/guide/11-chatgpt/11-expert.md#checking-before-trusting).
 
 <Quiz id="ch11-verify" />
 
@@ -240,7 +240,7 @@ Just like in [Chapter 10](10-practice.md), use made-up information instead of re
 
 <ChapterDone :chapter="11" />
 
-Next chapter: You have completed Stage 1. Check your AI understanding level with the [Understanding Check Quiz](certificate.md), or move on to the Stage 2 guides for [ChatGPT](/guide/11-chatgpt/01-getting-started.md) and [Claude](/guide/10-claude/01-getting-started.md).
+Next chapter: You have completed Stage 1. Check your AI understanding level with the [Understanding Check Quiz](certificate.md), or move on to the Stage 2 guides for [ChatGPT](/en/guide/11-chatgpt/01-getting-started.md) and [Claude](/en/guide/10-claude/01-getting-started.md).
 
 [^academy-4d]: Claude Academy course "Claude 101", lesson "Getting better results". "AI Fluency is the ability to collaborate effectively with AI tools—not just knowing which buttons to click, but developing the judgment to use AI well across different situations." / "Deciding on what work should be done by humans, what work should be done by AI, and how to distribute tasks between them." / "Effectively communicating with AI systems." / "Thoughtfully and critically evaluating AI outputs, processes, behaviors and interactions." / "Using AI responsibly and ethically." / "maintaining transparency, and taking accountability for AI-assisted work." https://academy.claude.com/courses/claude-101/getting-better-results (checked on 2026-10-26)
 [^ways]: OpenAI, "How workers are unlocking new ways of working". Analysis showing that people include more examples and background and ask for verification more often when doing tasks outside their own occupation. https://openai.com/index/unlocking-new-ways-of-working (checked on 2026-10-24)
