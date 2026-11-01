@@ -144,7 +144,7 @@ export function buildLevelBadgeSvg({ name, level, correct, total, date, lang = '
 <rect x="8" y="8" width="784" height="464" rx="28" fill="#ffffff" stroke="${info.color}" stroke-width="8"/>
 <circle cx="190" cy="240" r="120" fill="${info.color}"/>
 <circle cx="190" cy="240" r="98" fill="none" stroke="#ffffff" stroke-width="4" stroke-dasharray="6 8"/>
-<text x="190" y="225" ${font} font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">${en ? 'AI Knowledge' : 'AI 지식'}</text>
+<text x="190" y="225" ${font} font-size="${en ? 22 : 26}" font-weight="700" fill="#ffffff" text-anchor="middle">${en ? 'AI Knowledge' : 'AI 지식'}</text>
 <text x="190" y="280" ${font} font-size="${labelSize}" font-weight="800" fill="#ffffff" text-anchor="middle">${label}</text>
 <text x="350" y="110" ${font} font-size="22" fill="#6b7280">${en ? 'hello-ai · AI Knowledge Level Test' : 'hello-ai · AI 지식 레벨 시험'}</text>
 <text x="350" y="160" ${font} font-size="34" font-weight="800" fill="#111827">${en ? `${label} Passed` : `${label} 합격`}</text>

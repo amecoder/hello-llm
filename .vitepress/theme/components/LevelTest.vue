@@ -277,7 +277,7 @@ const sourceHref = (url: string) => (url.startsWith('/') ? withBase(url) : url)
         <thead><tr><th>{{ ui.colSubject }}</th><th>{{ ui.colRight }}</th><th>{{ ui.colResult }}</th></tr></thead>
         <tbody>
           <tr v-for="s in result.subjects" :key="s.subject">
-            <td>{{ s.subject }}. {{ info.subjects[s.subject - 1] }}</td>
+            <td>{{ s.subject }}. {{ subjectsOf(info)[s.subject - 1] }}</td>
             <td>{{ s.correct }} / {{ s.total }}</td>
             <td :class="result.failedSubjects.includes(s.subject) ? 'no' : 'ok'">{{ result.failedSubjects.includes(s.subject) ? ui.subjectFail : ui.subjectPass }}</td>
           </tr>
