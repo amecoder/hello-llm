@@ -132,7 +132,7 @@ export const CODEX_QUESTIONS: readonly Question[] = [
       "AGENTS.md에만 있는 새 규칙을 넣고 새 대화에서 지켜지는지 본다",
     ],
     answer: 3,
-    explain: "다른 곳에 없는 규칙이 지켜지면 그 파일을 읽었다고 볼 수 있습니다. 이번 실습에서 AGENTS.md 전 0번, 후 1번 지켜졌습니다.",
+    explain: "다른 곳에 없는 규칙이 지켜지면 그 파일을 읽었다고 볼 수 있습니다. 이번 실습에서는 AGENTS.md 전 0번, 후 1번 지켜졌습니다(각 1회, 메모 종류는 달랐음).",
   },
   {
     id: 'ch503-order',
@@ -336,7 +336,7 @@ export const CODEX_QUESTIONS: readonly Question[] = [
   {
     id: 'ch507-commands',
     chapter: 507,
-    prompt: "Codex CLI 대화형 화면에서 남은 사용량과 설정을 보려면 어떤 명령을 쓸까요?",
+    prompt: "Codex CLI 대화형 화면에서 대화 정보와 남은 한도를 보려면 어떤 명령을 쓸까요?",
     choices: [
       "/import",
       "/resume",
@@ -344,7 +344,7 @@ export const CODEX_QUESTIONS: readonly Question[] = [
       "/status",
     ],
     answer: 3,
-    explain: "/status는 세션 설정과 남은 사용량을 보여 줍니다. /permissions는 권한, /import는 가져오기, /resume은 이어 가기입니다.",
+    explain: "/status는 대화 정보와 남은 한도를 보여 줍니다. /permissions는 권한, /import는 가져오기, /resume은 이어 가기입니다.",
   },
   // chapter 508
   {
@@ -371,7 +371,7 @@ export const CODEX_QUESTIONS: readonly Question[] = [
       "리뷰 창의 Revert all을 누르면 대화가 학습에서 빠진다",
     ],
     answer: 2,
-    explain: "데이터 규칙은 로그인 방법으로 정해집니다. '기본적으로 학습하지 않음'은 Business·Enterprise·API 키에 해당하므로, 개인 계정은 ChatGPT 설정을 확인합니다.",
+    explain: "데이터 규칙은 로그인 방법으로 정해집니다. '기본적으로 학습하지 않음'은 Business·Enterprise·API 키에만 표시돼 있고, 개인 요금제의 학습 설정은 Codex 문서에 없습니다. 그래서 ChatGPT 계정 설정과 OpenAI 도움말에서 확인합니다.",
   },
   {
     id: 'ch508-injection',

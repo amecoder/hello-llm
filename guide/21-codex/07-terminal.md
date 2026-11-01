@@ -1,6 +1,6 @@
 # 7장. 터미널에서 쓰기 — `codex exec` 한 줄로 정리도구 확인
 
-> **한 줄 요약**: Codex CLI는 터미널에서 쓰는 Codex입니다. 같은 폴더에서 실행하면 앱과 같은 `AGENTS.md`와 스킬을 읽습니다.
+> **한 줄 요약**: Codex CLI는 터미널에서 쓰는 Codex입니다. 실행한 폴더의 `AGENTS.md`와 스킬을 읽습니다.
 > `codex exec "할 일"`은 한 번 실행하고 끝나며, **기본이 읽기 전용**입니다. Claude Code의 `claude -p`와 비슷하지만 이 점이 다릅니다.
 
 이 장은 2026년 11월 1일에 확인한 Codex 공식 문서와, macOS 터미널에서 Codex CLI 0.166.0을 실행한 결과를 바탕으로 썼습니다. **터미널이 처음이라면 이 장은 건너뛰어도 됩니다.** 터미널이 무엇인지는 [Claude Code 10장](../20-claude-code/10-terminal.md)에서 설명했습니다.
@@ -59,7 +59,7 @@ codex exec "notes 폴더의 파일 목록을 보여 주고, 각 파일이 어떤
 codex exec --sandbox workspace-write '$weekly-review'
 ```
 
-`codex exec`는 중간에 허락을 물을 수 없습니다. 5장에서 `.agents` 폴더에 쓰기가 막혔을 때, Codex가 묻지 못하고 그대로 멈춘 것도 이 때문입니다. 허락이 필요한 일은 앱이나 대화형 `codex`에서 하세요.
+`codex exec`는 허락 방식을 **미리 정해 두고** 돌리는 방식입니다.[^preset] 이 가이드의 5장 실습에서는 `.agents` 폴더 쓰기가 막히자, Codex가 묻지 못하고 그대로 멈췄습니다. 허락이 필요한 일은 앱이나 대화형 `codex`에서 하는 편이 편합니다.
 
 옛 글에 나오는 `--full-auto` 옵션은 더 이상 지원하지 않습니다.[^fullauto] 샌드박스와 허락을 모두 끄는 `--dangerously-bypass-approvals-and-sandbox` 같은 옵션도 있지만[^yolo], 메모 정리에는 필요 없습니다.
 
@@ -74,7 +74,7 @@ codex exec --sandbox workspace-write '$weekly-review'
 | `/permissions` | 권한 바꾸기(앱의 권한 메뉴) |
 | `/import` | Claude Code·Cursor 설정 가져오기 |
 | `/resume` | 저장된 대화 이어 가기 |
-| `/status` | 설정과 남은 사용량 보기 |
+| `/status` | 대화 정보와 남은 한도 보기 |
 
 출처: Codex 공식 문서[^permissions][^import][^resume][^status]
 
@@ -95,10 +95,10 @@ codex exec --sandbox workspace-write '$weekly-review'
 
 ## 정리
 
-- 터미널의 Codex는 실행한 폴더를 프로젝트로 보고, 앱과 같은 `AGENTS.md`·스킬을 읽는다.
+- 터미널의 Codex는 실행한 폴더를 프로젝트로 보고, 그 폴더의 `AGENTS.md`·스킬을 읽는다.
 - 설치 명령은 공식 문서와 같은지 확인하고 실행한다.
 - `codex exec`는 한 번 실행하고 끝나며, 기본이 읽기 전용이다. 고치려면 `--sandbox workspace-write`.
-- `codex exec`는 허락을 물을 수 없다. 허락이 필요한 일은 앱이나 대화형에서.
+- `codex exec`는 허락 방식을 미리 정해 두고 돈다. 허락이 필요한 일은 앱이나 대화형에서.
 
 ## 용어 정리
 
@@ -125,3 +125,4 @@ codex exec --sandbox workspace-write '$weekly-review'
 [^resume]: Codex 공식 문서, 「Projects and chats」. "Use `/resume` while Codex is open, or run `codex resume`, to continue a saved chat." https://learn.chatgpt.com/docs/projects (확인일 2026-11-01)
 [^status]: Codex 공식 문서, 「Pricing」. "If you want to see your remaining limits during an active Codex CLI session, you can use `/status`." https://learn.chatgpt.com/docs/pricing (확인일 2026-11-01)
 [^skills]: Codex 공식 문서, 「Build skills」. "In Codex CLI or the IDE extension, run `/skills` or type `$` to mention a skill." https://learn.chatgpt.com/docs/build-skills (확인일 2026-11-01)
+[^preset]: Codex 공식 문서, 「Non-interactive mode」. "Run with explicit, pre-set sandbox and approval settings." https://learn.chatgpt.com/docs/non-interactive-mode (확인일 2026-11-01)

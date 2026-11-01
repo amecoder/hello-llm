@@ -1,6 +1,6 @@
 # 3장. 규칙 파일 AGENTS.md — CLAUDE.md를 Codex로 옮기기
 
-> **한 줄 요약**: Codex는 일을 시작하기 전에 **`AGENTS.md`**를 읽습니다. Claude Code의 `CLAUDE.md`는 그대로 두면 읽지 않습니다.
+> **한 줄 요약**: Codex는 일을 시작하기 전에 **`AGENTS.md`**를 읽습니다. Claude Code의 `CLAUDE.md`는 Codex가 그대로 두면 읽지 않습니다.
 > 정리도구 폴더의 규칙을 `AGENTS.md`로 옮기고, 새 대화에서 **규칙을 말하지 않아도** 지키는지 시험합니다.
 
 이 장은 2026년 11월 1일에 확인한 Codex 공식 문서와, 이 가이드가 정리도구 폴더로 직접 해 본 결과를 바탕으로 썼습니다. 규칙 파일이 왜 필요한지는 [Claude Code 6장](../20-claude-code/06-claude-md.md)에서 설명했습니다. 여기서는 Codex에서 달라지는 점만 다룹니다.
@@ -17,7 +17,7 @@ Codex의 규칙 파일 이름은 `AGENTS.md`입니다.[^agents] 다른 이름의
 
 ## CLAUDE.md를 AGENTS.md로 옮기기
 
-옮기는 일도 Codex에게 맡깁니다. 이 장의 실행도 2장처럼 같은 Codex를 터미널에서 돌린 것입니다. 이번에는 규칙 하나를 **새로** 더했습니다. 나중에 이 규칙이 지켜지는지 보면, `AGENTS.md`를 읽었는지 확실히 알 수 있습니다.
+옮기는 일도 Codex에게 맡깁니다. 이 장의 실행도 2장처럼 같은 Codex를 터미널에서 돌린 것입니다. 이번에는 규칙 하나를 **새로** 더했습니다. 나중에 이 규칙이 지켜지는지 보면, `AGENTS.md`를 읽었는지 꽤 믿을 만하게 짐작할 수 있습니다.
 
 ```
 CLAUDE.md는 Claude Code가 읽는 규칙 파일이야. 같은 규칙을 Codex도 읽도록 AGENTS.md로 옮겨 줘. 규칙 내용은 바꾸지 말고, 규칙 하나만 추가해 줘: '정리한 파일 맨 아래에 「원본과 대조할 것」 절을 두고, 숫자·이름·날짜 중 다시 확인할 것을 3개 이내로 적는다.' CLAUDE.md는 그대로 둬.
@@ -58,7 +58,7 @@ inbox/공부-2026-10-28-프롬프트-강의.txt 를 공부 노트로 정리해�
 
 출처: 이 가이드의 실습 결과(2026-11-01, 각 1회)
 
-새 규칙은 `AGENTS.md`에만 있었으므로, Codex가 그 파일을 읽고 따랐다고 볼 수 있습니다. 다만 **한 번씩 해 본 결과**입니다. 매번 지킨다는 보장은 아니니, 결과를 볼 때마다 확인하세요.
+새 규칙은 `AGENTS.md`에만 있었으므로, Codex가 그 파일을 읽고 따랐다고 볼 수 있습니다. 다만 **한 번씩 해 본 결과**이고, 전과 후의 메모 종류(회의록·공부 노트)도 다릅니다. 양식 점검표에도 "원본 메모와 한 번 대조했다"는 비슷한 항목이 있습니다. 더 확실히 하려면 **같은 메모**를 `AGENTS.md` 없이 한 번, 있이 한 번 돌려 비교해 보세요. 매번 지킨다는 보장은 아니니, 결과를 볼 때마다 확인하세요.
 
 <Quiz id="ch503-test" />
 
@@ -98,7 +98,7 @@ inbox/공부-2026-10-28-프롬프트-강의.txt 를 공부 노트로 정리해�
 
 이 가이드는 가져오기를 **실행하지 않았습니다.** 가져오기는 폴더 하나가 아니라 내 컴퓨터의 개인 설정까지 함께 살펴봅니다.[^import-scope] 무엇이 옮겨지는지 직접 보고 싶다면 이 장처럼 손으로 옮기는 편이 낫습니다.
 
-**메모리**(Memories)는 예전 작업의 맥락을 다음 작업에 가져가는 기능입니다.[^memory] 내 컴퓨터의 Codex 메모리는 기본으로 꺼져 있습니다.[^memory-off] 공식 문서는 메모리를 "떠올리기 보조"로만 보고, 꼭 지킬 규칙은 메모리에 맡기지 말라고 합니다.[^memory-rules] **꼭 지킬 규칙은 `AGENTS.md`에** 적으세요.
+**메모리**(Memories)는 예전 작업의 맥락을 다음 작업에 가져가는 기능입니다.[^memory] 내 컴퓨터의 Codex 메모리는 기본으로 꺼져 있습니다.[^memory-off] 공식 문서는 메모리를 "떠올리기 보조"로만 보고, 꼭 지킬 규칙은 메모리에 맡기지 말라고 합니다.[^memory-rules] **꼭 지킬 규칙은 `AGENTS.md`에** 적으라고 합니다.[^memory-agents]
 
 <Quiz id="ch503-import" />
 
@@ -147,3 +147,4 @@ inbox/공부-2026-10-28-프롬프트-강의.txt 를 공부 노트로 정리해�
 [^memory]: Codex 공식 문서, 「Memories」. "Memories let ChatGPT and Codex carry useful context from earlier work into future work." https://learn.chatgpt.com/docs/customization/memories (확인일 2026-11-01)
 [^memory-off]: Codex 공식 문서, 「Memories」. "Local Codex memories are off by default." https://learn.chatgpt.com/docs/customization/memories (확인일 2026-11-01)
 [^memory-rules]: Codex 공식 문서, 「Memories」. "Treat memories as a helpful recall layer, not as the only source for rules that must always apply." https://learn.chatgpt.com/docs/customization/memories (확인일 2026-11-01)
+[^memory-agents]: Codex 공식 문서, 「Memories」. "Keep required team guidance in `AGENTS.md` or checked-in documentation." https://learn.chatgpt.com/docs/customization/memories (확인일 2026-11-01)

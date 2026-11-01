@@ -47,7 +47,7 @@ Claude Code 2장과 비슷한 요청을 보냅니다. 이번에는 형식을 따
 inbox/회의-2026-10-27-주간회의.txt 메모를 회의록으로 정리해서 notes/ 폴더에 새 파일로 저장해 줘.
 ```
 
-이 가이드에서 실행해 보니 Codex는 이렇게 일했습니다. 이 실행은 같은 Codex를 터미널([7장](07-terminal.md))에서 돌린 것입니다. 앱에서도 같은 규칙 파일과 양식을 읽습니다.
+이 가이드에서 실행해 보니 Codex는 이렇게 일했습니다. 이 실행은 같은 Codex를 터미널([7장](07-terminal.md))에서 돌린 것입니다. 공식 문서는 앱도 고른 폴더에서 `AGENTS.md`와 스킬을 자동으로 찾는다고 설명합니다.[^discovery] 다만 이 가이드가 앱 화면에서 같은 결과를 직접 확인하지는 않았습니다.
 
 1. 폴더에서 규칙 파일(`AGENTS.md`)과 양식을 찾았습니다. 규칙 파일은 아직 없어서 **양식만** 읽었습니다.
 2. 양식의 칸 순서대로 결정한 것 2개, 할 일 5개, 다음에 논의할 것, 다음 회의를 채웠습니다.
@@ -104,3 +104,4 @@ inbox/회의-2026-10-27-주간회의.txt 메모를 회의록으로 정리해서 
 [^cloud-files]: Codex 공식 문서, 「Codex environments」. "Use **Work in** to choose **This computer** or **Cloud**." / "Your computer's local files, running processes, browser sign-ins, and VPN access aren't automatically transferred to it." https://learn.chatgpt.com/docs/environments/modes (확인일 2026-11-01)
 [^review-git]: Codex 공식 문서, 「Code review」. "The review pane requires a project inside a Git repository. If your project isn't a Git repository yet, the app prompts you to create one." https://learn.chatgpt.com/docs/code-review (확인일 2026-11-01)
 [^review]: Codex 공식 문서, 「Use ChatGPT」. "A polished response can still be incomplete or wrong, so review the details that matter before you use or share it." https://learn.chatgpt.com/docs/use-chatgpt (확인일 2026-11-01)
+[^discovery]: Codex 공식 문서, 「Projects and chats」. "New chats start in the primary folder. Codex also uses that folder as the default for Git operations and automatic discovery of `AGENTS.md`, skills, and `config.toml`." https://learn.chatgpt.com/docs/projects (확인일 2026-11-01)

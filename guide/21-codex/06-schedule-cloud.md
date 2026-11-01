@@ -15,17 +15,19 @@
 매주 금요일 오후 6시에 $weekly-review 로 그 주의 주간 회고를 notes 폴더에 만들어 줘.
 ```
 
-**조건이 있습니다.** 내 컴퓨터의 폴더를 쓰는 예약은 컴퓨터가 켜져 있고 앱이 실행 중일 때만 돕니다.[^awake] macOS·Linux에서는 설정의 **Prevent sleep while running**을 켜 두면 자리를 비운 동안에도 대화가 이어집니다.[^sleep]
+**조건이 있습니다.** 내 컴퓨터의 폴더를 쓰는 예약은 컴퓨터가 켜져 있고 앱이 실행 중일 때만 돕니다.[^awake] macOS·Linux에서는 설정의 **Prevent sleep while running**을 켜 두면 자리를 비운 동안에도 내 컴퓨터의 대화가 이어집니다.[^sleep] 예약에도 같은지는 공식 문서에 따로 나오지 않습니다.
 
 예약은 **사람 없이** 돕니다. 그래서 그때 설정된 권한을 그대로 씁니다.[^unattended]
 
-| 내 기본 권한 | 예약에서 일어나는 일 |
+| 내 기본 권한(울타리) | 예약에서 일어나는 일 |
 |---|---|
 | 읽기만 | 파일을 써야 하는 예약은 실패 |
 | 폴더 안 쓰기 | 정리도구처럼 폴더 안에서만 쓰는 일은 돔 |
 | Full access | 묻지 않고 파일·명령·인터넷까지 씀. 위험 |
 
 출처: Codex 공식 문서(일부만 옮김, 가운데 줄은 이 가이드의 정리)[^modes]
+
+4장의 권한 메뉴로 말하면, Ask for approval과 Approve for me는 가운데 줄(폴더 안 쓰기)에, Full access는 마지막 줄에 해당합니다.[^ask] "읽기만"은 메뉴에 따로 보이지 않을 수 있는 설정입니다.
 
 예약을 만들기 전에 **같은 요청을 평소 대화에서 먼저 돌려 보세요.** 5장처럼 결과를 원본과 맞춰 보고 괜찮을 때 예약으로 옮깁니다. 첫 몇 번의 실행 결과도 꼭 확인합니다. 공식 문서도 같은 순서를 권합니다.[^test]
 
@@ -98,3 +100,4 @@
 [^connect]: Codex 공식 문서, 「Codex on mobile」. "Go to **Settings** > **Connections** > **Control this Mac or PC** and select **Set up** or **Add**." https://learn.chatgpt.com/docs/mobile (확인일 2026-11-01)
 [^trust]: Codex 공식 문서, 「Codex on mobile」. "Only connect devices you own and trust." https://learn.chatgpt.com/docs/mobile (확인일 2026-11-01)
 [^rollout]: Codex 공식 문서, 「Codex on mobile」. "Use the ChatGPT mobile app with Cloud or a connected Mac or Windows PC. Availability depends on rollout and your workspace settings." https://learn.chatgpt.com/docs/mobile (확인일 2026-11-01)
+[^ask]: Codex 공식 문서, 「Permissions」. "For most work, start with **Ask for approval**. It lets ChatGPT work within the current workspace and pauses before reaching beyond that boundary." / "Changing who reviews a request doesn't expand the sandbox." https://learn.chatgpt.com/docs/permission-modes (확인일 2026-11-01)
