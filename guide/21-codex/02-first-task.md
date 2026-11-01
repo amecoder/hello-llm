@@ -27,6 +27,10 @@
 
 출처: 이 가이드의 화면 확인(2026-11-01)
 
+![Codex 첫 화면: 가운데에 "What should we build in 정리도구?", 입력창 위에 프로젝트 「정리도구」와 「This computer」, 입력창 아래에 권한 「Ask for approval」과 모델 이름](assets/shot-01-home.png)
+
+위 화면은 정리도구 폴더를 프로젝트로 연 상태입니다. 입력창 위에 고른 폴더(정리도구)와 일하는 곳(This computer)이, 입력창 아래에 권한(Ask for approval)과 모델 이름이 보입니다. 왼쪽 대화 목록과 사용량 안내는 그림에서 잘라 냈습니다.
+
 **Choose project**를 눌러 `정리도구` 폴더(Claude Code 가이드를 따라 했다면 `~/hello-ai-연습/정리도구`)를 고릅니다. Codex는 고른 폴더의 파일을 읽고 고칠 수 있습니다.[^folder] 메뉴 막대의 「File → Open Folder…」로 열어도 됩니다.
 
 일하는 곳은 **This computer**(내 컴퓨터) 그대로 둡니다. Cloud는 GitHub 저장소를 연결한 사람을 위한 것이고, 내 컴퓨터의 파일은 클라우드로 넘어가지 않습니다.[^cloud-files]
