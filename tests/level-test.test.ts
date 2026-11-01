@@ -147,3 +147,14 @@ test('a long name is shrunk so it stays inside the badge', () => {
   assert.equal(size(short), 40)
   assert.ok(size(long) * 20 <= 430, `font ${size(long)}`)
 })
+
+test('English level badge and level info have no Korean', () => {
+  const svg = buildLevelBadgeSvg({ name: ' ', level: 'expert', correct: 45, total: 50, date: '2026-11-01', lang: 'en' })
+  assert.ok(svg.includes('Expert'), 'level label')
+  assert.ok(svg.includes('Learner'), 'default name')
+  assert.ok(!/[가-힣]/.test(svg), 'no Korean in the badge')
+  for (const l of LEVEL_TESTS) {
+    assert.equal(l.subjectsEn.length, l.subjects.length, l.level)
+    assert.ok(!/[가-힣]/.test(l.labelEn + l.audienceEn + l.subjectsEn.join('')), l.level)
+  }
+})

@@ -112,3 +112,30 @@ test('localizeQuestion keeps the exam fields (kind) and swaps only the text', ()
   assert.equal(en.answer, q.answer)
   assert.equal(en.prompt, EXAM_TEXT_EN[q.id].prompt)
 })
+
+test('every level test question has English text, and English answers are not given away by length', async () => {
+  const { LEVEL_QUESTIONS } = await import('../.vitepress/theme/level-bank/index.ts')
+  const { LEVEL_TEXT_EN, localizeLevelQuestion } = await import('../.vitepress/theme/level-bank-en/index.ts')
+  const levels = [...new Set(LEVEL_QUESTIONS.map((q) => q.level))]
+  for (const level of levels) {
+    const bank = LEVEL_QUESTIONS.filter((q) => q.level === level)
+    let longest = 0
+    let shortest = 0
+    for (const q of bank) {
+      const en = LEVEL_TEXT_EN[q.id]
+      assert.ok(en, q.id)
+      assert.equal(en.choices.length, q.choices.length, q.id)
+      assert.equal(new Set(en.choices).size, en.choices.length, q.id)
+      const lens = en.choices.map((c: string) => c.length)
+      if (lens[q.answer] === Math.max(...lens)) longest++
+      if (lens[q.answer] === Math.min(...lens)) shortest++
+      const local = localizeLevelQuestion(q, 'en')
+      assert.equal(local.answer, q.answer, q.id)
+      assert.ok(!/[가-힣]/.test(JSON.stringify([local.prompt, local.choices, local.explain, local.source.title])), q.id)
+      if (q.source.url.startsWith('/guide/')) assert.ok(local.source.url.startsWith('/en/guide/'), q.id)
+    }
+    assert.ok(longest / bank.length <= 0.4, `${level} longest ${longest}/${bank.length}`)
+    assert.ok(shortest / bank.length <= 0.4, `${level} shortest ${shortest}/${bank.length}`)
+  }
+  assert.equal(Object.keys(LEVEL_TEXT_EN).length, LEVEL_QUESTIONS.length)
+})

@@ -27,8 +27,4 @@ If you just want a quick check on how well you understood Chapters 1–9, take t
 
 ## Take the Test
 
-::: info The test screen is still in Korean
-The questions and buttons below have not been translated yet. An English version is on the way.
-:::
-
 <LevelTest />
