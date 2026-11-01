@@ -20,6 +20,7 @@ export default defineConfig({
     'guide/12-gemini/README.md': 'guide/12-gemini/index.md',
     'guide/20-claude-code/README.md': 'guide/20-claude-code/index.md',
     'guide/21-codex/README.md': 'guide/21-codex/index.md',
+    'guide/22-antigravity/README.md': 'guide/22-antigravity/index.md',
   },
   lastUpdated: true,
   markdown: {
@@ -43,6 +44,7 @@ export default defineConfig({
           { text: '2단계 · Gemini', link: '/guide/12-gemini/' },
           { text: '3단계 · Claude Code', link: '/guide/20-claude-code/' },
           { text: '3단계 · Codex', link: '/guide/21-codex/' },
+          { text: '3단계 · Antigravity', link: '/guide/22-antigravity/' },
         ],
       },
       {
@@ -55,6 +57,22 @@ export default defineConfig({
       },
     ],
     sidebar: {
+      '/guide/22-antigravity/': [
+        {
+          text: '3단계 · Antigravity 가이드',
+          items: [
+            { text: '목차', link: '/guide/22-antigravity/' },
+            { text: '1장. Antigravity는 무엇이고 앞의 두 도구와 무엇이 다른가', link: '/guide/22-antigravity/01-what-is' },
+            { text: '2장. 앱 설치와 첫 정리', link: '/guide/22-antigravity/02-first-task' },
+            { text: '3장. 규칙과 스킬 — 옮기지 않아도 된다', link: '/guide/22-antigravity/03-rules-skills' },
+            { text: '4장. 권한과 되돌리기', link: '/guide/22-antigravity/04-permissions-undo' },
+            { text: '5장. 계획·예약·브라우저·목표', link: '/guide/22-antigravity/05-plan-schedule' },
+            { text: '6장. 터미널에서 쓰기', link: '/guide/22-antigravity/06-terminal' },
+            { text: '7장. 비용·데이터·안전, 그리고 세 도구 고르기', link: '/guide/22-antigravity/07-safety-choose' },
+            { text: '← 3단계 · Codex', link: '/guide/21-codex/' },
+          ],
+        },
+      ],
       '/guide/21-codex/': [
         {
           text: '3단계 · Codex 가이드',

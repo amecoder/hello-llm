@@ -112,7 +112,7 @@ Codex 단계를 마무리하는 과제입니다. 위에서부터 하나씩 해 �
 
 <ChapterDone :chapter="508" />
 
-다음 장: 3단계 Codex 가이드를 마쳤습니다. [3단계 · Codex 목차](./)에서 다시 보고 싶은 장을 고르거나, [AI 지식 레벨 시험](../00-common/level-test.md)으로 지금까지 배운 것을 확인해 보세요.
+다음 장: 3단계 Codex 가이드를 마쳤습니다. 같은 정리도구 폴더를 Google의 Antigravity로 열어 보려면 [3단계 · Antigravity 가이드](../22-antigravity/)로 이어 가세요. [3단계 · Codex 목차](./)에서 다시 보고 싶은 장을 고르거나, [AI 지식 레벨 시험](../00-common/level-test.md)으로 지금까지 배운 것을 확인해 볼 수도 있습니다.
 
 [^depends]: Codex 공식 문서, 「Pricing」. "The number of messages you can send depends on the model used, size and complexity of your tasks, and whether you run them locally or in the cloud." https://learn.chatgpt.com/docs/pricing (확인일 2026-11-01)
 [^window]: Codex 공식 문서, 「Pricing」. "The estimates below show local messages per five-hour period for Plus and Standard Business." / "Cloud tasks may use more of your allowance than local messages." / "Local messages and cloud chats share your plan's usage allowance. Weekly limits may also apply." https://learn.chatgpt.com/docs/pricing (확인일 2026-11-01)

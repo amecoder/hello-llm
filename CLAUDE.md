@@ -7,7 +7,7 @@
 - **로드맵** (앞 단계가 뒤 단계의 전제):
   1. `00-common` — 모든 LLM에 통하는 공통 원리·사용법
   2. `10-claude` · `11-chatgpt` — 웹 서비스별 심화
-  3. `20-claude-code` · `21-codex` — 코딩 에이전트 도구
+  3. `20-claude-code` · `21-codex` · `22-antigravity` — 코딩 에이전트 도구
   4. `30-ai-sdlc` — AI와 함께하는 소프트웨어 개발 전 과정(최종 목표)
 - **실습 환경 (예정)**: 실제 서비스와 같은 UI를 재현한 연습 화면 + 화면 요소를 하나씩 짚어 주는
   코치 마크(coach mark, 처음 쓰는 사람에게 버튼·입력창 위에 말풍선으로 안내를 띄우는 온보딩 UI)
@@ -27,7 +27,7 @@
 guide/                 # 독자에게 보여줄 가이드 본문 (번호 = 학습 순서)
   00-common/
   10-claude/  11-chatgpt/
-  20-claude-code/  21-codex/
+  20-claude-code/  21-codex/  22-antigravity/
   30-ai-sdlc/
 docs/                  # 프로젝트 운영 문서 (독자용 아님)
   plans/  reports/  architecture/
