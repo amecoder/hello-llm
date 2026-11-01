@@ -94,6 +94,10 @@ features:
     details: Google의 Antigravity — 같은 정리도구 폴더를 옮기지 않고 그대로 열어 보는 7장, 무료 계정으로도 실습
     link: /guide/22-antigravity/
     linkText: Antigravity 가이드 시작
+  - title: 4단계 · AI-SDLC 가이드
+    details: AI와 함께 작은 웹 페이지를 기획부터 배포·개선까지 — GitHub 저장소, SPEC.md, 확인 장치, PR·리뷰, GitHub Pages, 안전까지 10장
+    link: /guide/30-ai-sdlc/
+    linkText: AI-SDLC 가이드 시작
   - title: AI 지식 레벨 시험 — 초급부터 전문가까지
     details: 자격증 필기시험처럼 5과목 50문제, 과락 있음. 합격하면 다음 레벨이 열리는 초급·중급·고급·전문가 4단계
     link: /guide/00-common/level-test
@@ -115,4 +119,4 @@ features:
 | 1 | [공통 가이드](/guide/00-common/) | 어떤 LLM에서든 통하는 공통 원리와 사용법 |
 | 2 | [ChatGPT](/guide/11-chatgpt/) · [Claude](/guide/10-claude/) · [Gemini](/guide/12-gemini/) | 서비스별 기능과 활용법 |
 | 3 | [Claude Code](/guide/20-claude-code/) · [Codex](/guide/21-codex/) · [Antigravity](/guide/22-antigravity/) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
-| 4 | AI-SDLC (준비 중) | AI와 함께 기획부터 배포까지 — 소프트웨어 개발 전 과정(SDLC) |
+| 4 | [AI-SDLC](/guide/30-ai-sdlc/) | AI와 함께 기획부터 배포까지 — 소프트웨어 개발 전 과정(SDLC) |

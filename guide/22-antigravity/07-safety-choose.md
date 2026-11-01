@@ -109,7 +109,7 @@ Claude Code 9장·Codex 8장에서 쓴 메모를 Antigravity에도 넣었습니�
 
 <ChapterDone :chapter="607" />
 
-다음 장: 3단계 Antigravity 가이드를 마쳤습니다. 이것으로 3단계(Claude Code·Codex·Antigravity)를 모두 마쳤습니다. [3단계 · Antigravity 목차](./)에서 다시 보고 싶은 장을 고르거나, [AI 지식 레벨 시험](../00-common/level-test.md)으로 지금까지 배운 것을 확인해 보세요.
+다음 장: 3단계 Antigravity 가이드를 마쳤습니다. 이것으로 3단계(Claude Code·Codex·Antigravity)를 모두 마쳤습니다. AI와 함께 작은 웹 페이지를 기획부터 배포까지 만들어 보려면 [4단계 · AI-SDLC 가이드](../30-ai-sdlc/)로 이어 가세요. [3단계 · Antigravity 목차](./)에서 다시 보고 싶은 장을 고르거나, [AI 지식 레벨 시험](../00-common/level-test.md)으로 지금까지 배운 것을 확인해 보세요.
 
 [^work]: Antigravity 공식 문서, 「Plans」. "Under the hood, the rate limits correlate with the amount of work done by the agent, which can differ from prompt to prompt." https://antigravity.google/docs/plans (확인일 2026-11-01)
 [^settings-usage]: Antigravity 공식 문서, 「Plans」. "You can view baseline quota usage across models on the **Settings** page." https://antigravity.google/docs/plans (확인일 2026-11-01)
