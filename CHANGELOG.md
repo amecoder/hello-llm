@@ -7,6 +7,7 @@
 - 3단계 Codex 사용 가이드 1~8장 — Claude Code에서 만든 정리 도구를 Codex로 옮기며 다른 점만: 1 Chat·Work·Codex와 대응표·요금제, 2 설치·폴더 열기(Git 필요)·첫 정리, 3 AGENTS.md(CLAUDE.md는 안 읽음, 새 규칙 전 0→후 1)·가져오기·메모리, 4 권한 메뉴 3가지·보호 폴더(.git·.agents·.codex)·리뷰 창·Git으로 되돌리기, 5 `.agents/skills`·`$weekly-review`(틀린 것 0·빠진 것 3), 6 예약(허락을 묻지 않는 방식)·클라우드·휴대폰, 7 `codex exec`(기본 읽기 전용), 8 사용량·데이터·숨은 지시 실험·두 도구 함께 쓰기·실습 과제. 퀴즈 ch501~508 29문제, 결과물 6개(`public/practice/notes/results/codex/`), 공식 자료 리포트·커리큘럼. 각주 인용 151개 원문 대조 불일치 0, 검토 [필수] 12건(대체 대조 5 + Gemini 7) 반영 (PR #56, `31f6b84`)
 
 ### Changed
+- 로드맵 그림 `assets/roadmap.svg` 에 2단계 Gemini·3단계 Antigravity 추가, 상자 폭 240, 대체 텍스트 갱신 (PR #58, `87f218e`)
 - 소개 페이지·README·전체 목차에 3단계 Antigravity 공개, CLAUDE.md 로드맵·폴더 구조에 `22-antigravity`, Codex 8장 끝에서 Antigravity로 연결 (PR #57)
 - 소개 페이지·README 진행 상황을 현재 공개 범위(2단계 Gemini, 3단계 Claude Code·Codex)로 갱신, Claude Code 12장 끝에서 Codex 가이드로 연결 (PR #56)
 
