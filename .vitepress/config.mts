@@ -21,6 +21,7 @@ export default defineConfig({
     'guide/20-claude-code/README.md': 'guide/20-claude-code/index.md',
     'guide/21-codex/README.md': 'guide/21-codex/index.md',
     'guide/22-antigravity/README.md': 'guide/22-antigravity/index.md',
+    'guide/30-ai-sdlc/README.md': 'guide/30-ai-sdlc/index.md',
   },
   lastUpdated: true,
   markdown: {
@@ -45,6 +46,7 @@ export default defineConfig({
           { text: '3단계 · Claude Code', link: '/guide/20-claude-code/' },
           { text: '3단계 · Codex', link: '/guide/21-codex/' },
           { text: '3단계 · Antigravity', link: '/guide/22-antigravity/' },
+          { text: '4단계 · AI-SDLC', link: '/guide/30-ai-sdlc/' },
         ],
       },
       {
@@ -57,6 +59,25 @@ export default defineConfig({
       },
     ],
     sidebar: {
+      '/guide/30-ai-sdlc/': [
+        {
+          text: '4단계 · AI-SDLC 가이드',
+          items: [
+            { text: '목차', link: '/guide/30-ai-sdlc/' },
+            { text: '1장. AI와 함께 만든다는 것', link: '/guide/30-ai-sdlc/01-what-is' },
+            { text: '2장. GitHub 저장소 만들기', link: '/guide/30-ai-sdlc/02-repository' },
+            { text: '3장. 기획과 명세', link: '/guide/30-ai-sdlc/03-plan-spec' },
+            { text: '4장. 만들기', link: '/guide/30-ai-sdlc/04-build' },
+            { text: '5장. 확인과 테스트', link: '/guide/30-ai-sdlc/05-test' },
+            { text: '6장. PR과 리뷰', link: '/guide/30-ai-sdlc/06-review' },
+            { text: '7장. 배포', link: '/guide/30-ai-sdlc/07-deploy' },
+            { text: '8장. 운영과 개선', link: '/guide/30-ai-sdlc/08-operate' },
+            { text: '9장. 안전과 책임', link: '/guide/30-ai-sdlc/09-safety' },
+            { text: '10장. 실습 과제', link: '/guide/30-ai-sdlc/10-practice' },
+            { text: '← 3단계 · Claude Code', link: '/guide/20-claude-code/' },
+          ],
+        },
+      ],
       '/guide/22-antigravity/': [
         {
           text: '3단계 · Antigravity 가이드',
