@@ -41,7 +41,7 @@ SPEC.md가 생기면 **새 세션**에서 그 파일을 보고 만들게 합니�
 
 ## 좋은 명세의 모양
 
-명세에는 **밖에서 보이는 동작**을 적습니다. OpenSpec 설명서는 명세를 "구현 계획이 아니라 동작의 약속"이라고 하고, 겉으로 보이는 동작을 바꾸지 않는 구현 이야기는 명세에 넣지 말라고 합니다.[^contract] spec-kit도 명세 단계에서는 기술이 아니라 **무엇을, 왜**에 집중하고, 기술 선택은 다음 계획 단계로 미루라고 합니다.[^what-why]
+명세에는 **밖에서 보이는 동작**을 적습니다. OpenSpec 설명서는 명세를 "구현 계획이 아니라 동작의 약속"이라고 하고, 겉으로 보이는 동작을 바꾸지 않는 구현 이야기는 보통 명세에 넣지 않는다고 합니다.[^contract] spec-kit도 명세 단계에서는 기술이 아니라 **무엇을, 왜**에 집중하고, 기술 선택은 다음 계획 단계로 미루라고 합니다.[^what-why]
 
 할 일 보드의 SPEC.md라면 이런 줄이 들어갑니다.
 
@@ -68,9 +68,9 @@ SPEC.md가 생기면 **새 세션**에서 그 파일을 보고 만들게 합니�
 
 출처: 각 도구의 설명(일부만 옮김)[^speckit][^openspec]
 
-두 도구 모두 AI가 문서를 쓰고, **사람은 코드가 쓰이기 전에 계획을 검토**한다는 점이 같습니다.[^openspec] spec-kit은 각 단계를 하나씩 실행하고, 결과를 검토한 뒤 넘어가라고 합니다.[^one-at-a-time]
+OpenSpec은 AI가 문서를 쓰고 **사람은 코드가 쓰이기 전에 계획을 검토**하게 합니다.[^openspec] spec-kit은 각 단계를 하나씩 실행하고, **결과를 검토한 뒤** 넘어가라고 합니다.[^one-at-a-time] 둘 다 사람이 중간에 확인하는 자리를 둡니다.
 
-이 가이드는 **두 도구를 설치하지 않습니다.** spec-kit은 Python 3.11 이상과 uv라는 도구가 필요하고[^speckit-req], OpenSpec은 터미널 설치가 필요합니다. 위에서 배운 "인터뷰 → SPEC.md → 새 세션" 흐름만으로도 같은 생각을 실천할 수 있습니다. 더 큰 프로젝트를 하게 되면 그때 살펴보세요.
+이 가이드는 **두 도구를 설치하지 않습니다.** spec-kit은 Python 3.11 이상과 uv라는 도구가 필요하고[^speckit-req], OpenSpec은 터미널 설치(또는 Node.js 22.12 이상)가 필요합니다.[^os-install] 위에서 배운 "인터뷰 → SPEC.md → 새 세션" 흐름만으로도 같은 생각을 실천할 수 있습니다. 더 큰 프로젝트를 하게 되면 그때 살펴보세요.
 
 <Quiz id="ch703-tools" />
 
@@ -118,3 +118,4 @@ SPEC.md가 생기면 **새 세션**에서 그 파일을 보고 만들게 합니�
 [^openspec]: OpenSpec README. "**Stay organized** — each change gets its own folder with proposal, specs, design, and tasks" / "Your AI writes these; you review the plan before any code is written." https://github.com/Fission-AI/OpenSpec (확인일 2026-11-01)
 [^one-at-a-time]: spec-kit README. "Create a constitution once per project and repeat the remaining steps for each feature. Run these skills in your agent's chat, not your terminal, one at a time, reviewing each result before continuing." https://github.com/github/spec-kit (확인일 2026-11-01)
 [^speckit-req]: spec-kit README. "You need Python 3.11+, [uv](https://github.github.io/spec-kit/install/uv.html), and a supported AI coding agent on Linux, macOS, or Windows." https://github.com/github/spec-kit (확인일 2026-11-01)
+[^os-install]: OpenSpec README. "Install OpenSpec. On macOS or Linux, in your terminal:" / "(needs Node.js 22.12.0 or higher)" https://github.com/Fission-AI/OpenSpec (확인일 2026-11-01)

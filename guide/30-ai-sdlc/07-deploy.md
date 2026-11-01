@@ -35,7 +35,7 @@ GitHub의 입문 튜토리얼은 Actions 방법을 씁니다. 설정의 Pages에
 | 구분 | 내용 |
 |---|---|
 | 금지 | 사업·쇼핑몰·상업용 서비스(SaaS) 운영 |
-| 금지 | 비밀번호·카드 번호를 주고받는 페이지 |
+| 쓰지 말 것 | 비밀번호·카드 번호를 주고받는 페이지 |
 | 크기 | 게시된 사이트 1GB 이하 |
 | 시간 | 배포가 10분을 넘으면 실패 |
 | 대역폭 | 한 달 100GB(느슨한 한도) |
@@ -60,17 +60,18 @@ GitHub의 입문 튜토리얼은 Actions 방법을 씁니다. 설정의 Pages에
 - 6장의 리뷰를 마치고 PR을 합쳤나?
 - 공개 저장소와 페이지에 실명·연락처·비밀번호가 없나?(9장)
 
-잘못 올렸다면 Git으로 되돌린 변경을 다시 올리면 됩니다. 페이지는 올린 내용대로 다시 게시됩니다.
+민감한 것을 올렸다면 되돌리는 것만으로는 부족합니다. 공개 저장소의 Git 기록에 남기 때문입니다. [9장](09-safety.md)의 순서(먼저 폐기·교체)를 따르세요.
 
 <Quiz id="ch707-undo" />
 
 ## 직접 해 보기
 
-1. GitHub에서 `cafe-todo-board` 저장소의 **Settings → Pages**를 연다.
-2. 「Build and deployment」의 **Source**에서 **Deploy from a branch**를 고르고, **Branch**에서 `main` 브랜치와 `/`(맨 위) 폴더를 고른다.[^quickstart]
-3. `https://내아이디.github.io/cafe-todo-board/`를 연다. 올린 뒤 반영까지 최대 10분쯤 걸릴 수 있다.[^quickstart] 할 일 보드가 보이면 성공이다.
-4. 휴대폰에서도 열어 본다.
-5. 페이지 아래에 "연습용으로 만든 페이지이며 방문 정보를 모으지 않습니다(GitHub Pages는 보안 목적으로 방문자 IP를 기록함)" 같은 안내를 달지 생각해 본다.
+1. 먼저 [9장의 공개 전 점검표](09-safety.md)로 비밀값·개인 정보를 확인한다.
+2. GitHub에서 `cafe-todo-board` 저장소의 **Settings → Pages**를 연다.
+3. 「Build and deployment」의 **Source**에서 **Deploy from a branch**를 고르고, **Branch**에서 `main` 브랜치와 `/`(맨 위) 폴더를 고른다.[^quickstart]
+4. 저장소 맨 위에 `index.html`이 있는지 확인한다. GitHub Pages는 게시 폴더 맨 위에서 이 파일을 찾는다.[^entry] 그다음 `https://내아이디.github.io/cafe-todo-board/`를 연다. 올린 뒤 반영까지 최대 10분쯤 걸릴 수 있다.[^quickstart] 할 일 보드가 보이면 성공이다.
+5. 휴대폰에서도 열어 본다.
+6. 페이지 아래에 "연습용으로 만든 페이지이며 방문 정보를 모으지 않습니다(GitHub Pages는 보안 목적으로 방문자 IP를 기록함)" 같은 안내를 달지 생각해 본다.
 
 **이어지는 과제**: 8장에서는 "기한 지난 할 일을 빨간색으로" 같은 개선을 이슈로 적고, 한 바퀴를 더 돕니다.
 
@@ -111,3 +112,4 @@ GitHub의 입문 튜토리얼은 Actions 방법을 씁니다. 설정의 Pages에
 [^remote]: Claude Code 공식 문서, 「How Claude Code works」. "Actions that affect remote systems (databases, APIs, deployments) can't be checkpointed. You control those with your permission mode and permission rules." https://code.claude.com/docs/en/how-claude-code-works (확인일 2026-11-01)
 [^responsible]: Claude Code 공식 문서, 「Security」. "You're responsible for reviewing proposed code and commands for safety before approval." https://code.claude.com/docs/en/security (확인일 2026-11-01)
 [^quickstart]: GitHub 공식 문서, 「Quickstart for GitHub Pages」. "Under "Build and deployment", under "Source", select **Deploy from a branch**." / "Note that it can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub." https://docs.github.com/en/pages/quickstart (확인일 2026-11-01)
+[^entry]: GitHub 공식 문서, 「Creating a GitHub Pages site」. "GitHub Pages will look for an `index.html`, `index.md`, or `README.md` file as the entry file for your site." https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site (확인일 2026-11-01)

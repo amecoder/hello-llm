@@ -46,7 +46,7 @@ GitHub 튜토리얼은 **혼자 일해도** 합치기 전에 의도적으로 리
 
 출처: GitHub 공식 문서[^decisions]
 
-리뷰의 기준은 3장의 **SPEC.md**입니다. 공식 모범 사례는 다 만든 뒤 **SPEC.md와 대조해** 모든 요구가 구현됐는지 확인하게 하고, 정확성에 영향을 주는 빈틈만 보고하고 **스타일은 건너뛰라**고 합니다.[^against-spec] 이유도 적혀 있습니다. 문제를 찾으라고 하면 리뷰어는 **늘 무언가를 찾아냅니다.**[^always-finds] 그걸 다 고치다 보면 쓸데없는 군더더기가 생깁니다.
+리뷰의 기준은 3장의 **SPEC.md**입니다. 공식 모범 사례 문서의 예시 프롬프트는 다 만든 뒤 **SPEC.md와 대조해** 모든 요구가 구현됐는지 확인하게 하고, 정확성에 영향을 주는 빈틈만 보고하고 **스타일은 건너뛰라**고 합니다(예시는 하위 에이전트에게 맡기지만, 이 가이드는 새 세션으로 바꿔 씁니다).[^against-spec] 이유도 적혀 있습니다. 문제를 찾으라고 하면 리뷰어는 **늘 무언가를 찾아냅니다.**[^always-finds] 그걸 다 고치다 보면 쓸데없는 군더더기가 생깁니다.
 
 ```
 새 세션에서 지금 브랜치의 변경을 SPEC.md와 대조해 리뷰해 줘. 요구가 다 구현됐는지, 확인 기준마다 검사가 있는지 보고, 정확성에 영향을 주는 빈틈만 알려 줘. 스타일은 건너뛰어.
@@ -79,7 +79,7 @@ Claude Code에는 리뷰 명령 `/code-review`가 있습니다. 작업 중인 �
 
 ## 직접 해 보기
 
-1. `first-board` 브랜치를 GitHub에 올리고(푸시), PR을 만든다. 설명에 무엇을 왜 바꿨는지 적는다.
+1. `first-board` 브랜치가 GitHub에 올라가 있는지 확인한다(4장). 저장소 첫 화면에서 **Pull requests** → **New pull request**를 누르고, 비교할 브랜치로 `first-board`를 고른 뒤 **Create pull request**를 누른다.[^create-pr] 제목과 설명에 무엇을 왜 바꿨는지 적는다.
 2. 만들기 전에 Claude에게 위험한 점을 짚어 달라고 한다.
 3. 새 세션에서 SPEC.md와 대조한 리뷰를 받는다. 정확성 문제만 고친다.
 4. `/code-review`를 한 번 더 받고, 발견이 없어도 직접 Files changed 탭을 훑어본다.
@@ -125,3 +125,4 @@ Claude Code에는 리뷰 명령 `/code-review`가 있습니다. 작업 중인 �
 [^plans]: Claude Code 공식 문서, 「Code Review」. "**Plans**: [Team and Enterprise](https://code.claude.com/docs/en/feature-availability.md)" / "Run [`/code-review`](https://code.claude.com/docs/en/code-review-local) in your Claude Code session on any plan, or [compare all the options](#compare-ways-to-get-a-review)." https://code.claude.com/docs/en/code-review (확인일 2026-11-01)
 [^delete]: GitHub 공식 문서, 「GitHub flow」. "Don't worry about losing information. Your pull request and commit history will not be deleted." https://docs.github.com/en/get-started/using-github/github-flow (확인일 2026-11-01)
 [^protect]: GitHub 공식 문서, 「About protected branches」. "By default, each branch protection rule disables force pushes to the matching branches and prevents the matching branches from being deleted." https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches (확인일 2026-11-01)
+[^create-pr]: GitHub 공식 문서, 「Quickstart for pull requests」. "then click **New pull request**." / "For the **compare** branch, select the branch that contains your changes." / "Click **Create pull request**." https://docs.github.com/en/pull-requests/get-started/pull-request-quickstart (확인일 2026-11-01)
