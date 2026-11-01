@@ -1,13 +1,13 @@
 {"skeleton": [
-  {"type": "rectangle", "id": "s1", "x": 0,   "y": 0, "width": 200, "height": 100, "backgroundColor": "#a5d8ff", "fillStyle": "solid", "label": {"text": "1단계\n공통 가이드"}},
-  {"type": "rectangle", "id": "s2", "x": 300, "y": 0, "width": 200, "height": 100, "backgroundColor": "#b2f2bb", "fillStyle": "solid", "label": {"text": "2단계\nClaude · ChatGPT"}},
-  {"type": "rectangle", "id": "s3", "x": 600, "y": 0, "width": 200, "height": 100, "backgroundColor": "#ffec99", "fillStyle": "solid", "label": {"text": "3단계\nClaude Code\nCodex"}},
-  {"type": "rectangle", "id": "s4", "x": 900, "y": 0, "width": 200, "height": 100, "backgroundColor": "#d0bfff", "fillStyle": "solid", "label": {"text": "4단계\nAI-SDLC"}},
-  {"type": "arrow", "x": 200, "y": 50, "start": {"id": "s1"}, "end": {"id": "s2"}},
-  {"type": "arrow", "x": 500, "y": 50, "start": {"id": "s2"}, "end": {"id": "s3"}},
-  {"type": "arrow", "x": 800, "y": 50, "start": {"id": "s3"}, "end": {"id": "s4"}},
-  {"type": "rectangle", "x": 0, "y": 110, "width": 200, "height": 40, "strokeColor": "transparent", "backgroundColor": "transparent", "label": {"text": "잘 묻는 법", "fontSize": 18, "strokeColor": "#495057"}},
-  {"type": "rectangle", "x": 300, "y": 110, "width": 200, "height": 40, "strokeColor": "transparent", "backgroundColor": "transparent", "label": {"text": "서비스별 기능", "fontSize": 18, "strokeColor": "#495057"}},
-  {"type": "rectangle", "x": 600, "y": 110, "width": 200, "height": 40, "strokeColor": "transparent", "backgroundColor": "transparent", "label": {"text": "AI에게 일 맡기기", "fontSize": 18, "strokeColor": "#495057"}},
-  {"type": "rectangle", "x": 900, "y": 110, "width": 200, "height": 40, "strokeColor": "transparent", "backgroundColor": "transparent", "label": {"text": "AI와 함께 만들기", "fontSize": 18, "strokeColor": "#495057"}}
+  {"type": "rectangle", "id": "s1", "x": 0,   "y": 0, "width": 240, "height": 110, "backgroundColor": "#a5d8ff", "fillStyle": "solid", "label": {"text": "1단계\n공통 가이드"}},
+  {"type": "rectangle", "id": "s2", "x": 320, "y": 0, "width": 240, "height": 110, "backgroundColor": "#b2f2bb", "fillStyle": "solid", "label": {"text": "2단계\nChatGPT · Claude\nGemini"}},
+  {"type": "rectangle", "id": "s3", "x": 640, "y": 0, "width": 240, "height": 110, "backgroundColor": "#ffec99", "fillStyle": "solid", "label": {"text": "3단계\nClaude Code\nCodex · Antigravity"}},
+  {"type": "rectangle", "id": "s4", "x": 960, "y": 0, "width": 240, "height": 110, "backgroundColor": "#d0bfff", "fillStyle": "solid", "label": {"text": "4단계\nAI-SDLC"}},
+  {"type": "arrow", "x": 240, "y": 55, "points": [[0, 0], [78, 0]], "width": 78, "height": 0, "start": {"id": "s1"}, "end": {"id": "s2"}},
+  {"type": "arrow", "x": 560, "y": 55, "points": [[0, 0], [78, 0]], "width": 78, "height": 0, "start": {"id": "s2"}, "end": {"id": "s3"}},
+  {"type": "arrow", "x": 880, "y": 55, "points": [[0, 0], [78, 0]], "width": 78, "height": 0, "start": {"id": "s3"}, "end": {"id": "s4"}},
+  {"type": "rectangle", "x": 0, "y": 120, "width": 240, "height": 40, "strokeColor": "transparent", "backgroundColor": "transparent", "label": {"text": "잘 묻는 법", "fontSize": 18, "strokeColor": "#495057"}},
+  {"type": "rectangle", "x": 320, "y": 120, "width": 240, "height": 40, "strokeColor": "transparent", "backgroundColor": "transparent", "label": {"text": "서비스별 기능", "fontSize": 18, "strokeColor": "#495057"}},
+  {"type": "rectangle", "x": 640, "y": 120, "width": 240, "height": 40, "strokeColor": "transparent", "backgroundColor": "transparent", "label": {"text": "AI에게 일 맡기기", "fontSize": 18, "strokeColor": "#495057"}},
+  {"type": "rectangle", "x": 960, "y": 120, "width": 240, "height": 40, "strokeColor": "transparent", "backgroundColor": "transparent", "label": {"text": "AI와 함께 만들기", "fontSize": 18, "strokeColor": "#495057"}}
 ]}

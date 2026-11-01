@@ -24,7 +24,7 @@ ChatGPT나 Claude에 질문은 해 봤지만 "이게 다인가?" 싶었던 분�
 
 웹사이트로 읽기: **https://amecoder.github.io/hello-llm/**
 
-![학습 로드맵: 1단계 공통 가이드(잘 묻는 법) → 2단계 Claude·ChatGPT(서비스별 기능) → 3단계 Claude Code·Codex(AI에게 일 맡기기) → 4단계 AI-SDLC(AI와 함께 만들기)](assets/roadmap.svg)
+![학습 로드맵: 1단계 공통 가이드(잘 묻는 법) → 2단계 ChatGPT·Claude·Gemini(서비스별 기능) → 3단계 Claude Code·Codex·Antigravity(AI에게 일 맡기기) → 4단계 AI-SDLC(AI와 함께 만들기)](assets/roadmap.svg)
 
 ## 진행 상황
 
