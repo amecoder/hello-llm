@@ -5,6 +5,8 @@ import { join, relative } from 'node:path'
 import { QUESTIONS } from '../.vitepress/theme/quiz-bank.ts'
 import { CHAPTER_TITLE_EN, QUESTION_TEXT_EN, localizeQuestion } from '../.vitepress/theme/quiz-bank-en.ts'
 import { TRANSLATED_STAGES } from '../.vitepress/theme/i18n.ts'
+import { EXAM_QUESTIONS } from '../.vitepress/theme/exam-bank.ts'
+import { EXAM_TEXT_EN } from '../.vitepress/theme/exam-bank-en.ts'
 import { STAGES } from '../.vitepress/theme/stages.ts'
 
 const root = join(import.meta.dirname, '..')
@@ -83,4 +85,30 @@ test('every translated chapter page has an English chapter title', () => {
     const m = /<ChapterDone :chapter="(\d+)" \/>/.exec(readFileSync(join(enRoot, rel), 'utf8'))
     if (m) assert.ok(CHAPTER_TITLE_EN[Number(m[1])], rel)
   }
+})
+
+test('every exam question has English text with the same choices count, and answers are not given away by length', () => {
+  let longest = 0
+  let shortest = 0
+  for (const q of EXAM_QUESTIONS) {
+    const en = EXAM_TEXT_EN[q.id]
+    assert.ok(en, q.id)
+    assert.equal(en.choices.length, q.choices.length, q.id)
+    assert.equal(new Set(en.choices).size, en.choices.length, q.id)
+    assert.ok(!/[가-힣]/.test(JSON.stringify(en)), q.id)
+    const lens = en.choices.map((c) => c.length)
+    if (lens[q.answer] === Math.max(...lens)) longest++
+    if (lens[q.answer] === Math.min(...lens)) shortest++
+  }
+  assert.equal(Object.keys(EXAM_TEXT_EN).length, EXAM_QUESTIONS.length)
+  assert.ok(longest / EXAM_QUESTIONS.length <= 0.4, `longest ${longest}`)
+  assert.ok(shortest / EXAM_QUESTIONS.length <= 0.4, `shortest ${shortest}`)
+})
+
+test('localizeQuestion keeps the exam fields (kind) and swaps only the text', () => {
+  const q = EXAM_QUESTIONS[0]
+  const en = localizeQuestion(q, 'en')
+  assert.equal(en.kind, q.kind)
+  assert.equal(en.answer, q.answer)
+  assert.equal(en.prompt, EXAM_TEXT_EN[q.id].prompt)
 })

@@ -26,10 +26,6 @@
 
 ## Take the Test
 
-::: info The test screen is still in Korean
-The questions and buttons below have not been translated yet. An English version is on the way.
-:::
-
 <CertExam />
 
 ## If Your Score Was Low

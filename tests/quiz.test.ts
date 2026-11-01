@@ -180,3 +180,13 @@ test('a long name is shrunk so it stays inside the guide exam badge too', () => 
   const size = Number(svg.match(/font-size="(\d+)" font-weight="700" fill="#111827">/)![1])
   assert.ok(size * 20 <= 430, `font ${size}`)
 })
+
+test('English badge and default name use English text', () => {
+  const svg = buildBadgeSvg({ name: '  ', level: 'intermediate', ...score(15, 7), date: '2026-11-01', lang: 'en' })
+  assert.ok(svg.includes('Intermediate'), 'level label')
+  assert.ok(svg.includes('Learner'), 'default name')
+  assert.ok(svg.includes('not an official certificate'), 'disclaimer')
+  assert.ok(!/[가-힣]/.test(svg), 'no Korean left')
+  assert.equal(normalizeName('  ', 'en'), 'Learner')
+  assert.equal(normalizeName('  '), '학습자')
+})
