@@ -5,6 +5,7 @@ import { CLAUDE_CHAPTERS, CLAUDE_QUESTIONS } from './quiz-bank-claude.ts'
 import { GEMINI_CHAPTERS, GEMINI_QUESTIONS } from './quiz-bank-gemini.ts'
 import { CLAUDE_CODE_CHAPTERS, CLAUDE_CODE_QUESTIONS } from './quiz-bank-claude-code.ts'
 import { CODEX_CHAPTERS, CODEX_QUESTIONS } from './quiz-bank-codex.ts'
+import { ANTIGRAVITY_CHAPTERS, ANTIGRAVITY_QUESTIONS } from './quiz-bank-antigravity.ts'
 
 export const CHAPTERS: Record<number, { title: string; link: string }> = {
   1: { title: '1장. LLM이란 무엇인가', link: '/guide/00-common/01-what-is-llm' },
@@ -34,6 +35,7 @@ export const CHAPTERS: Record<number, { title: string; link: string }> = {
   ...GEMINI_CHAPTERS,
   ...CLAUDE_CODE_CHAPTERS,
   ...CODEX_CHAPTERS,
+  ...ANTIGRAVITY_CHAPTERS,
 }
 
 export const QUESTIONS: readonly Question[] = [
@@ -1747,4 +1749,5 @@ export const QUESTIONS: readonly Question[] = [
   ...GEMINI_QUESTIONS,
   ...CLAUDE_CODE_QUESTIONS,
   ...CODEX_QUESTIONS,
+  ...ANTIGRAVITY_QUESTIONS,
 ]
