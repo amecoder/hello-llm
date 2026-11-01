@@ -85,6 +85,10 @@ inbox/공부-2026-10-28-프롬프트-강의.txt 를 공부 노트로 정리해�
 
 **가져오기**는 다른 에이전트의 설정을 한 번에 옮겨 주는 기능입니다. 앱에서는 Claude Code·Claude Cowork·Cursor에서 가져올 수 있습니다.[^import-from] 앱 설정의 **Import** 메뉴에서 시작합니다. 메뉴가 없으면 **General**에서 **Import other agent setup**을 찾습니다.[^import-menu]
 
+![ChatGPT 앱의 Settings → Import 화면: 「Import from another AI app」 아래에 Claude Code·Claude Cowork·Cursor가 있고 각각 Import 버튼이 있다](assets/shot-02-import.png)
+
+이 가이드의 화면(2026-11-01)에서는 설정 왼쪽 목록에 **Import**가 있었고, 이 컴퓨터에서 찾은 Claude Code·Claude Cowork·Cursor가 각각 **Import** 버튼과 함께 보였습니다. 이 가이드는 버튼을 누르지 않았습니다.
+
 | Claude Code 쪽 | Codex로 오면 |
 |---|---|
 | 규칙 파일(`CLAUDE.md` 등) | `AGENTS.md` |
