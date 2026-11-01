@@ -88,7 +88,7 @@
 
 <ChapterDone :chapter="412" />
 
-다음 장: 3단계 Claude Code 가이드를 마쳤습니다. [3단계 · Claude Code 목차](./)에서 다시 보고 싶은 장을 고르거나, [AI 지식 레벨 시험](../00-common/level-test.md)으로 지금까지 배운 것을 확인해 보세요.
+다음 장: 3단계 Claude Code 가이드를 마쳤습니다. 같은 정리 도구를 OpenAI의 Codex로 옮겨 보려면 [3단계 · Codex 가이드](../21-codex/)로 이어 가세요. [3단계 · Claude Code 목차](./)에서 다시 보고 싶은 장을 고르거나, [AI 지식 레벨 시험](../00-common/level-test.md)으로 지금까지 배운 것을 확인해 볼 수도 있습니다.
 
 [^match]: Claude Code 공식 문서, 「Extend Claude Code」. "Features range from always-on context that Claude sees every session, to on-demand capabilities you or Claude can invoke, to background automation that runs on specific events." https://code.claude.com/docs/en/features-overview (확인일 2026-10-31)
 [^build]: Claude Code 공식 문서, 「Extend Claude Code」. "You don't need to configure everything up front. Each feature has a recognizable trigger, and most teams add them in roughly this order" / "Claude gets a convention or command wrong twice" / "You keep typing the same prompt to start a task" / "You paste the same playbook or multi-step procedure into chat for the third time" / "You keep copying data from a browser tab Claude can't see" / "You want something to happen every time without asking" https://code.claude.com/docs/en/features-overview (확인일 2026-10-31)

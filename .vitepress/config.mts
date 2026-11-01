@@ -19,6 +19,7 @@ export default defineConfig({
     'guide/10-claude/README.md': 'guide/10-claude/index.md',
     'guide/12-gemini/README.md': 'guide/12-gemini/index.md',
     'guide/20-claude-code/README.md': 'guide/20-claude-code/index.md',
+    'guide/21-codex/README.md': 'guide/21-codex/index.md',
   },
   lastUpdated: true,
   markdown: {
@@ -41,6 +42,7 @@ export default defineConfig({
           { text: '2단계 · Claude', link: '/guide/10-claude/' },
           { text: '2단계 · Gemini', link: '/guide/12-gemini/' },
           { text: '3단계 · Claude Code', link: '/guide/20-claude-code/' },
+          { text: '3단계 · Codex', link: '/guide/21-codex/' },
         ],
       },
       {
@@ -53,6 +55,23 @@ export default defineConfig({
       },
     ],
     sidebar: {
+      '/guide/21-codex/': [
+        {
+          text: '3단계 · Codex 가이드',
+          items: [
+            { text: '목차', link: '/guide/21-codex/' },
+            { text: '1장. Codex는 무엇이고 Claude Code와 무엇이 다른가', link: '/guide/21-codex/01-what-is' },
+            { text: '2장. ChatGPT 앱에서 Codex 시작하기', link: '/guide/21-codex/02-first-task' },
+            { text: '3장. 규칙 파일 AGENTS.md', link: '/guide/21-codex/03-agents-md' },
+            { text: '4장. 권한과 되돌리기', link: '/guide/21-codex/04-permissions-undo' },
+            { text: '5장. 스킬 옮기기', link: '/guide/21-codex/05-skills' },
+            { text: '6장. 예약·클라우드·휴대폰', link: '/guide/21-codex/06-schedule-cloud' },
+            { text: '7장. 터미널에서 쓰기', link: '/guide/21-codex/07-terminal' },
+            { text: '8장. 비용·데이터·안전, 그리고 도구 고르기', link: '/guide/21-codex/08-safety-choose' },
+            { text: '← 3단계 · Claude Code', link: '/guide/20-claude-code/' },
+          ],
+        },
+      ],
       '/guide/20-claude-code/': [
         {
           text: '3단계 · Claude Code 가이드',
