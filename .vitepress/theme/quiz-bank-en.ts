@@ -4,6 +4,10 @@
 import type { Lang } from './i18n.ts'
 import type { Question } from './quiz.ts'
 import { EXAM_TEXT_EN } from './exam-bank-en.ts'
+import { AI_SDLC_CHAPTER_TITLE_EN, AI_SDLC_QUESTION_TEXT_EN } from './quiz-bank-en-ai-sdlc.ts'
+import { ANTIGRAVITY_CHAPTER_TITLE_EN, ANTIGRAVITY_QUESTION_TEXT_EN } from './quiz-bank-en-antigravity.ts'
+import { CODEX_CHAPTER_TITLE_EN, CODEX_QUESTION_TEXT_EN } from './quiz-bank-en-codex.ts'
+import { CLAUDE_CODE_CHAPTER_TITLE_EN, CLAUDE_CODE_QUESTION_TEXT_EN } from './quiz-bank-en-claude-code.ts'
 import { GEMINI_CHAPTER_TITLE_EN, GEMINI_QUESTION_TEXT_EN } from './quiz-bank-en-gemini.ts'
 import { CLAUDE_CHAPTER_TITLE_EN, CLAUDE_QUESTION_TEXT_EN } from './quiz-bank-en-claude.ts'
 import { CHATGPT_CHAPTER_TITLE_EN, CHATGPT_QUESTION_TEXT_EN } from './quiz-bank-en-chatgpt.ts'
@@ -11,6 +15,10 @@ import { CHATGPT_CHAPTER_TITLE_EN, CHATGPT_QUESTION_TEXT_EN } from './quiz-bank-
 type QuestionText = { prompt: string; choices: readonly string[]; explain: string }
 
 export const CHAPTER_TITLE_EN: Record<number, string> = {
+  ...AI_SDLC_CHAPTER_TITLE_EN,
+  ...ANTIGRAVITY_CHAPTER_TITLE_EN,
+  ...CODEX_CHAPTER_TITLE_EN,
+  ...CLAUDE_CODE_CHAPTER_TITLE_EN,
   ...GEMINI_CHAPTER_TITLE_EN,
   ...CLAUDE_CHAPTER_TITLE_EN,
   ...CHATGPT_CHAPTER_TITLE_EN,
@@ -28,6 +36,10 @@ export const CHAPTER_TITLE_EN: Record<number, string> = {
 }
 
 export const QUESTION_TEXT_EN: Record<string, QuestionText> = {
+  ...AI_SDLC_QUESTION_TEXT_EN,
+  ...ANTIGRAVITY_QUESTION_TEXT_EN,
+  ...CODEX_QUESTION_TEXT_EN,
+  ...CLAUDE_CODE_QUESTION_TEXT_EN,
   ...GEMINI_QUESTION_TEXT_EN,
   ...CLAUDE_QUESTION_TEXT_EN,
   ...CHATGPT_QUESTION_TEXT_EN,
