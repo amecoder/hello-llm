@@ -91,7 +91,7 @@ codex exec --sandbox workspace-write '$weekly-review'
 3. 用 `codex` 打开交互式界面，输入 `/status` 试试。
 4. 输入 `$`，或者运行 `/skills`，确认第5章的技能名称是否出现。[^skills]
 
-**接续的课题**：第8章里，我们会整理费用、数据、安全，并确认 Codex 怎么对待藏着隐藏指示的备忘。
+**连续任务**：第8章里，我们会整理费用、数据、安全，并确认 Codex 怎么对待藏着隐藏指示的备忘。
 
 ## 总结
 

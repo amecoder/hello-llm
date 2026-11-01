@@ -68,7 +68,7 @@
 3. 请它在第2章的会议记录"最上面加一行'撰写日期：今天的日期'"。
 4. 在 Review 窗口用 Agent Edits 查看，确认改动过的那一行。
 
-**贯穿始终的作业**：第5章要看计划（`/plan`）、定时（`/schedule`、Automations）、浏览器（`/browser`）、目标（`/goal`）。
+**连续任务**：第5章要看计划（`/plan`）、定时（`/schedule`、Automations）、浏览器（`/browser`）、目标（`/goal`）。
 
 ## 小结
 

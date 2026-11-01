@@ -75,7 +75,7 @@
 3. 用上面的请求让它整理会议备忘。
 4. 把待办事项数量·负责人·期限·日期和原始备忘对照。
 
-**接着做的任务**：在第3章里，我们把 Claude Code 的规则文件 `CLAUDE.md`，搬成 Codex 读取的 `AGENTS.md`。
+**连续任务**：在第3章里，我们把 Claude Code 的规则文件 `CLAUDE.md`，搬成 Codex 读取的 `AGENTS.md`。
 
 ## 小结
 

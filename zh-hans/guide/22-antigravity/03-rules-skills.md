@@ -95,7 +95,7 @@ Antigravity 会在固定的文件夹里查找规则和技能。[^where]
 3. 想更确定的话，把 `AGENTS.md` 暂时挪到别处，用同一个请求再做一次并比较。结束后放回去。
 4. 用 `/weekly-review` 做每周回顾，对照原件数一数错的和漏的。
 
-**接续任务**：第4章会把 Antigravity 的权限预设和撤销，与 Claude Code、Codex 做比较。
+**连续任务**：第4章会把 Antigravity 的权限预设和撤销，与 Claude Code、Codex 做比较。
 
 ## 小结
 

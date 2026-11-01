@@ -56,7 +56,7 @@ GitHub 的入门教程用的是 Actions 方法。在设置的 Pages 里把 **Sou
 
 部署前，请问问自己这些问题。
 
-- 第5章的检查装置通过了吗？
+- 第5章的检查环节通过了吗？
 - 第6章的审阅做完、PR 合并了吗？
 - 公开仓库和页面里，没有真实姓名、联系方式、密码吧？（第9章）
 
@@ -69,11 +69,11 @@ GitHub 的入门教程用的是 Actions 方法。在设置的 Pages 里把 **Sou
 1. 先用[第9章的公开前检查表](09-safety.md)确认密钥和个人信息。
 2. 在 GitHub 上打开 `cafe-todo-board` 仓库的 **Settings → Pages**。
 3. 在「Build and deployment」的 **Source** 里选 **Deploy from a branch**，在 **Branch** 里选 `main` 分支和 `/`（最外层）文件夹。[^quickstart]
-4. 确认仓库最外层有 `index.html`。GitHub Pages 会在发布文件夹的最外层寻找这个文件。[^entry] 然后打开 `https://我的ID.github.io/cafe-todo-board/` 。上传之后，最长可能要10分钟左右才会生效。[^quickstart] 看到待办看板就成功了。
+4. 确认仓库最外层有 `index.html`。GitHub Pages 会在发布文件夹的最外层寻找这个文件。[^entry] 然后打开 `https://我的ID.github.io/cafe-todo-board/`。上传之后，最长可能要10分钟左右才会生效。[^quickstart] 看到待办看板就成功了。
 5. 也用手机打开看看。
 6. 想一想，要不要在页面下方加上这样的声明："这是为练习做的页面，不收集访问信息（GitHub Pages 出于安全目的会记录访客 IP）"。
 
-**贯穿始终的作业**：第8章要把"过期的待办标成红色"这样的改进写成议题，再多走一圈。
+**连续任务**：第8章要把"过期的待办标成红色"这样的改进写成议题，再多走一圈。
 
 ## 小结
 

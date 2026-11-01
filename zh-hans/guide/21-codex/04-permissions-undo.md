@@ -91,7 +91,7 @@ Claude Code 里有把对话向前回退的功能（[Claude Code 第4章](../20-c
 4. 在审查窗格里用 Last turn 查看，确认改动的行。
 5. 只把那个文件撤销试试。
 
-**接下来的练习**：在第5章里，会把在 Claude Code 里做的3个技能搬到 Codex 上，并用 `$weekly-review` 一行做出周复盘。
+**连续任务**：在第5章里，会把在 Claude Code 里做的3个技能搬到 Codex 上，并用 `$weekly-review` 一行做出周复盘。
 
 ## 小结
 
