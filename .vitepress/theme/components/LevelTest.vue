@@ -6,13 +6,14 @@ import { computed, nextTick, onMounted, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { LEVEL_QUESTIONS } from '../level-bank'
 import { localizeLevelQuestion } from '../level-bank-en'
-import { langOf } from '../i18n.ts'
+import { langOf, uiOf } from '../i18n.ts'
 import {
   buildLevelBadgeSvg,
   drawLevelTest,
   gradeLevelTest,
   LEVEL_TESTS,
   levelStatus,
+  levelText,
   PASS_SUBJECT,
   PASS_TOTAL,
   PER_SUBJECT,
@@ -26,97 +27,14 @@ import { loadProgress, progress, progressLoaded, saveProgress } from '../progres
 type Stage = 'pick' | 'exam' | 'result'
 
 // strings with <strong> are rendered with v-html: pass only numbers and constants, never the reader's name
-const UI = {
-  ko: {
-    quitConfirm: '지금까지 고른 답이 모두 사라집니다. 그만둘까요?',
-    pick: '열린 레벨을 골라 시험을 보세요.',
-    loading: '합격 기록을 불러오는 중…',
-    passed: '✓ 합격',
-    locked: (prev: string) => `🔒 ${prev}에 합격하면 볼 수 있습니다`,
-    retake: '다시 보기',
-    take: '시험 보기',
-    storage: '합격 기록은 닉네임·읽음 표시와 함께 이 브라우저에만 저장되고 어디로도 보내지지 않습니다. 첫 화면의 「진행 현황 초기화」를 누르면 함께 지워져 레벨이 다시 잠깁니다.',
-    head: (label: string, subjects: number, count: number, total: number, perSubject: number) =>
-      `<strong>${label}</strong> · ${subjects}과목 ${count}문제 · 합격: 전체 ${total}문제 이상, 과목마다 ${perSubject}문제 이상`,
-    subject: (n: number, name: string) => `${n}과목 ${name}`,
-    answered: (a: number, t: number) => `${a} / ${t} 문제 답함`,
-    answerAll: ' · 모두 답하면 채점할 수 있어요',
-    submit: '채점하기',
-    quit: '그만두고 레벨 고르기로',
-    score: (label: string, t: number, c: number) => `${label} · ${t}문제 중 <strong>${c}문제</strong> —`,
-    pass: '합격',
-    fail: '불합격',
-    colSubject: '과목',
-    colRight: '맞힌 문제',
-    colResult: '결과',
-    subjectFail: '과락',
-    subjectPass: '통과',
-    passedBefore: '이미 합격한 레벨이라 이번 결과와 상관없이 합격 기록은 그대로 남습니다.',
-    howToPass: (total: number, perSubject: number) =>
-      `합격하려면 전체 ${total}문제 이상, 그리고 모든 과목에서 ${perSubject}문제 이상 맞혀야 합니다. 아래 틀린 문제의 해설과 공부할 자료를 보고 다시 도전해 보세요.`,
-    congrats: (label: string, color: string) => `축하합니다! <strong style="color: ${color}">${label}</strong>에 합격했습니다.`,
-    unlocked: (next: string) => ` 이제 <strong>${next}</strong> 시험이 열렸습니다.`,
-    nameLabel: '배지에 넣을 이름 (비워 두면 "학습자". 첫 화면에서 정한 닉네임이 미리 들어갑니다)',
-    namePlaceholder: '예: 김하늘',
-    badgeAlt: (label: string) => `AI 지식 레벨 시험 ${label} 합격 배지`,
-    savePng: '배지 이미지 저장 (PNG)',
-    saveError: 'PNG로 저장하지 못했습니다. 위 배지 그림을 길게 누르거나 오른쪽 클릭해서 저장할 수 있습니다(이때는 SVG 그림 파일로 저장됩니다).',
-    review: (n: number) => `틀린 문제 다시 보기 (${n}개)`,
-    answer: '정답:',
-    study: '공부할 자료:',
-    takeNext: (next: string) => `${next} 시험 보기`,
-    retry: '새 문제로 다시 보기',
-    backToPick: '레벨 고르기로',
-  },
-  en: {
-    quitConfirm: 'All the answers you picked so far will be lost. Stop the test?',
-    pick: 'Pick an open level and take its test.',
-    loading: 'Loading your pass records…',
-    passed: '✓ Passed',
-    locked: (prev: string) => `🔒 Opens after you pass ${prev}`,
-    retake: 'Take again',
-    take: 'Take the test',
-    storage: 'Pass records are saved only in this browser, together with your nickname and read marks, and never sent anywhere. Pressing "Reset progress" on the home page clears them too and locks the levels again.',
-    head: (label: string, subjects: number, count: number, total: number, perSubject: number) =>
-      `<strong>${label}</strong> · ${subjects} subjects, ${count} questions · To pass: ${total}+ correct overall and ${perSubject}+ in every subject`,
-    subject: (n: number, name: string) => `Subject ${n}: ${name}`,
-    answered: (a: number, t: number) => `${a} / ${t} answered`,
-    answerAll: ' · answer every question to get graded',
-    submit: 'Grade my answers',
-    quit: 'Stop and go back to levels',
-    score: (label: string, t: number, c: number) => `${label} · <strong>${c} of ${t}</strong> correct —`,
-    pass: 'Passed',
-    fail: 'Not passed',
-    colSubject: 'Subject',
-    colRight: 'Correct',
-    colResult: 'Result',
-    subjectFail: 'Below minimum',
-    subjectPass: 'OK',
-    passedBefore: 'You already passed this level, so your pass record stays no matter how this attempt went.',
-    howToPass: (total: number, perSubject: number) =>
-      `To pass you need ${total}+ correct overall and ${perSubject}+ correct in every subject. Read the explanations and study links for the questions you missed below, then try again.`,
-    congrats: (label: string, color: string) => `Congratulations! You passed <strong style="color: ${color}">${label}</strong>.`,
-    unlocked: (next: string) => ` The <strong>${next}</strong> test is now open.`,
-    nameLabel: 'Name on the badge (blank means "Learner"; the nickname you set on the home page is filled in for you)',
-    namePlaceholder: 'e.g. Sky Kim',
-    badgeAlt: (label: string) => `AI Knowledge Level Test ${label} pass badge`,
-    savePng: 'Save badge image (PNG)',
-    saveError: "Couldn't save as PNG. You can long-press or right-click the badge above to save it (it saves as an SVG image).",
-    review: (n: number) => `Review the questions you missed (${n})`,
-    answer: 'Answer:',
-    study: 'Study material:',
-    takeNext: (next: string) => `Take the ${next} test`,
-    retry: 'Try again with new questions',
-    backToPick: 'Back to levels',
-  },
-}
+const UI = uiOf('level')
 
 const { lang: siteLang } = useData()
 const lang = computed(() => langOf(siteLang.value))
 const ui = computed(() => UI[lang.value])
-const labelOf = (l: { label: string; labelEn: string }) => (lang.value === 'en' ? l.labelEn : l.label)
-const audienceOf = (l: { audience: string; audienceEn: string }) => (lang.value === 'en' ? l.audienceEn : l.audience)
-const subjectsOf = (l: { subjects: readonly string[]; subjectsEn: readonly string[] }) => (lang.value === 'en' ? l.subjectsEn : l.subjects)
+const labelOf = (l: { level: KnowledgeLevel }) => levelText(l.level, lang.value).label
+const audienceOf = (l: { level: KnowledgeLevel }) => levelText(l.level, lang.value).audience
+const subjectsOf = (l: { level: KnowledgeLevel }) => levelText(l.level, lang.value).subjects
 
 const stage = ref<Stage>('pick')
 const level = ref<KnowledgeLevel>('basic')

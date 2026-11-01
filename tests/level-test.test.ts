@@ -6,6 +6,7 @@ import {
   gradeLevelTest,
   LEVEL_TESTS,
   levelStatus,
+  levelText,
   openLevels,
   PER_SUBJECT,
   SUBJECT_COUNT,
@@ -154,7 +155,9 @@ test('English level badge and level info have no Korean', () => {
   assert.ok(svg.includes('Learner'), 'default name')
   assert.ok(!/[가-힣]/.test(svg), 'no Korean in the badge')
   for (const l of LEVEL_TESTS) {
-    assert.equal(l.subjectsEn.length, l.subjects.length, l.level)
-    assert.ok(!/[가-힣]/.test(l.labelEn + l.audienceEn + l.subjectsEn.join('')), l.level)
+    const en = levelText(l.level, 'en')
+    assert.equal(en.subjects.length, l.subjects.length, l.level)
+    assert.ok(!/[가-힣]/.test(en.label + en.audience + en.subjects.join('')), l.level)
+    assert.deepEqual(levelText(l.level, 'ko'), { label: l.label, audience: l.audience, subjects: l.subjects }, l.level)
   }
 })

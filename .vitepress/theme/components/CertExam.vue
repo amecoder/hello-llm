@@ -7,7 +7,7 @@ import { useData, withBase } from 'vitepress'
 import { CHAPTERS } from '../quiz-bank'
 import { EXAM_QUESTIONS } from '../exam-bank'
 import { CHAPTER_TITLE_EN, localizeQuestion } from '../quiz-bank-en.ts'
-import { langOf, localePrefix } from '../i18n.ts'
+import { langOf, localePrefix, uiOf } from '../i18n.ts'
 import {
   buildBadgeSvg,
   drawLevelExam,
@@ -15,8 +15,9 @@ import {
   LEVELS,
   levelFor,
   PRACTICE_CHECKS,
-  PRACTICE_TASK,
-  PRACTICE_TASK_EN,
+  certLevelLabel,
+  practiceChecksOf,
+  practiceTaskOf,
   practiceUnlocked,
   scoreParts,
   SITUATION_SIZE,
@@ -27,80 +28,14 @@ import { loadProgress, progress } from '../progress-store'
 type Stage = 'intro' | 'exam' | 'result'
 
 // some strings carry <strong> and are rendered with v-html: pass only numbers and constants, never the reader's name
-const UI = {
-  ko: {
-    intro: (size: number, concept: number, situation: number) =>
-      `1~9장 내용으로 <strong>${size}문제</strong>를 냅니다. 뜻을 묻는 <strong>개념 문제</strong> ${concept}개와, 실제 장면을 보여 주고 어떻게 할지 묻는 <strong>상황 판단 문제</strong> ${situation}개입니다. 볼 때마다 문제와 보기 순서가 바뀝니다.`,
-    level: '레벨',
-    rule: '받는 조건',
-    ruleTotal: (n: number) => `전체 ${n}문제 이상`,
-    ruleSituation: (n: number) => `상황 판단 ${n}문제 이상`,
-    rulePractice: '실습 과제 자기 점검 완료',
-    start: '시험 시작하기',
-    situation: '상황 판단',
-    concept: '개념',
-    answered: (a: number, t: number) => `${a} / ${t} 문제 답함`,
-    submit: '채점하기',
-    answerAll: '모든 문제에 답하면 채점할 수 있습니다.',
-    score: (t: number, c: number, st: number, sc: number) =>
-      `${t}문제 중 <strong>${c}문제</strong>를 맞혔습니다. (상황 판단 ${st}문제 중 ${sc}문제)`,
-    practiceTitle: '상급 레벨 실습 과제',
-    practiceLead: '점수는 상급 조건을 넘었습니다. 마지막으로 실제로 써 보는 과제가 남았습니다.',
-    practiceNote:
-      '스스로 확인하는 점검표입니다. 모두 체크하면 아래 배지가 상급 레벨로 바뀝니다. 점수는 저장되지 않으므로 페이지를 닫으면 사라집니다. 지금 과제를 하지 않을 거라면 아래 중급 배지를 먼저 저장하고, 과제를 마친 뒤 시험을 다시 보면 상급을 받을 수 있습니다.',
-    myLevel: (label: string, color: string) => `내 AI 이해 레벨은 <strong style="color: ${color}">${label}</strong>입니다!`,
-    nameLabel: '배지에 넣을 이름 (비워 두면 "학습자". 첫 화면에서 정한 닉네임이 미리 들어갑니다)',
-    namePlaceholder: '예: 김하늘',
-    badgeAlt: (label: string) => `이해도 확인 ${label} 레벨 배지`,
-    savePng: '배지 이미지 저장 (PNG)',
-    saveError: 'PNG로 저장하지 못했습니다. 위 배지 그림을 길게 누르거나 오른쪽 클릭해서 저장할 수 있습니다(이때는 SVG 그림 파일로 저장됩니다).',
-    noBadge: (n: number) => `레벨 배지는 ${n}문제 이상 맞히면 받을 수 있습니다. 아래 틀린 문제를 복습한 뒤 다시 도전해 보세요.`,
-    review: '틀린 문제 다시 보기',
-    answer: '정답:',
-    reread: (title: string) => `${title} 다시 읽기`,
-    retry: '새 문제로 다시 보기',
-    privacy: '답과 점수는 이 브라우저 안에서만 계산되고 어디에도 저장되거나 전송되지 않습니다. 페이지를 닫으면 사라집니다. 이름 칸에 미리 들어가는 닉네임만 이 브라우저에 저장되어 있습니다.',
-  },
-  en: {
-    intro: (size: number, concept: number, situation: number) =>
-      `You get <strong>${size} questions</strong> on Chapters 1–9: ${concept} <strong>concept questions</strong> about what things mean, and ${situation} <strong>situation questions</strong> that show a real scene and ask what you would do. The questions and the order of choices change every time.`,
-    level: 'Level',
-    rule: 'What you need',
-    ruleTotal: (n: number) => `${n}+ correct overall`,
-    ruleSituation: (n: number) => `${n}+ situation questions correct`,
-    rulePractice: 'practice task self-check done',
-    start: 'Start the test',
-    situation: 'Situation',
-    concept: 'Concept',
-    answered: (a: number, t: number) => `${a} / ${t} answered`,
-    submit: 'Grade my answers',
-    answerAll: 'Answer every question to get graded.',
-    score: (t: number, c: number, st: number, sc: number) =>
-      `You got <strong>${c} of ${t}</strong> right. (${sc} of ${st} situation questions)`,
-    practiceTitle: 'Advanced level practice task',
-    practiceLead: 'Your score clears the advanced level. One last task is left: actually using it.',
-    practiceNote:
-      'This is a checklist you mark yourself. Check every item and the badge below turns Advanced. Scores are not saved, so they disappear when you close the page. If you are not doing the task now, save the Intermediate badge below first, then take the test again after the task to get Advanced.',
-    myLevel: (label: string, color: string) => `Your AI skill level is <strong style="color: ${color}">${label}</strong>!`,
-    nameLabel: 'Name on the badge (blank means "Learner"; the nickname you set on the home page is filled in for you)',
-    namePlaceholder: 'e.g. Sky Kim',
-    badgeAlt: (label: string) => `Understanding Check ${label} level badge`,
-    savePng: 'Save badge image (PNG)',
-    saveError: "Couldn't save as PNG. You can long-press or right-click the badge above to save it (it saves as an SVG image).",
-    noBadge: (n: number) => `You get a level badge with ${n} or more correct. Review the questions you missed below and try again.`,
-    review: 'Review the questions you missed',
-    answer: 'Answer:',
-    reread: (title: string) => `Reread ${title}`,
-    retry: 'Try again with new questions',
-    privacy: 'Your answers and score are worked out only inside this browser and are never saved or sent anywhere. They disappear when you close the page. Only the nickname filled into the name box is stored in this browser.',
-  },
-}
+const UI = uiOf('cert')
 
 const { lang: siteLang } = useData()
 const lang = computed(() => langOf(siteLang.value))
 const ui = computed(() => UI[lang.value])
-const levelLabel = (l: (typeof LEVELS)[number]) => (lang.value === 'en' ? l.labelEn : l.label)
-const practiceTask = computed(() => (lang.value === 'en' ? PRACTICE_TASK_EN : PRACTICE_TASK))
+const levelLabel = (l: (typeof LEVELS)[number]) => certLevelLabel(l.level, lang.value)
+const practiceTask = computed(() => practiceTaskOf(lang.value))
+const practiceChecks = computed(() => practiceChecksOf(lang.value))
 const chapterTitle = (n: number) => (lang.value === 'en' ? (CHAPTER_TITLE_EN[n] ?? CHAPTERS[n].title) : CHAPTERS[n].title)
 
 const stage = ref<Stage>('intro')
@@ -243,7 +178,7 @@ async function savePng() {
         <p>{{ ui.practiceLead }} {{ practiceTask }}</p>
         <label v-for="(check, i) in PRACTICE_CHECKS" :key="i">
           <input v-model="practice[i]" type="checkbox" />
-          <span>{{ lang === 'en' ? check.textEn : check.text }} <span class="ce-from">({{ lang === 'en' ? check.chapterEn : check.chapter }})</span></span>
+          <span>{{ practiceChecks[i].text }} <span class="ce-from">({{ practiceChecks[i].chapter }})</span></span>
         </label>
         <p class="ce-note">{{ ui.practiceNote }}</p>
       </fieldset>

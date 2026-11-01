@@ -2,7 +2,7 @@
 // Nickname form and reading progress, shown on the intro page and the table of contents.
 import { computed, nextTick, onMounted, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
-import { STAGE_TITLE_EN, TRANSLATED_STAGES, langOf, localePrefix, type Lang } from '../i18n.ts'
+import { TRANSLATED_STAGES, langOf, localePrefix, stageTitle, uiOf } from '../i18n.ts'
 import { CHAPTER_TITLE_EN } from '../quiz-bank-en.ts'
 import { CHAPTERS } from '../quiz-bank'
 import { setNickname, summarize } from '../progress.ts'
@@ -17,60 +17,7 @@ import {
   storageBlocked,
 } from '../progress-store'
 
-const UI = {
-  ko: {
-    region: '내 학습 현황',
-    loading: '내 학습 현황을 불러오는 중…',
-    ask: '닉네임을 정하고 시작해 보세요',
-    optional: '(건너뛰어도 됩니다)',
-    placeholder: '예: 하늘',
-    save: '저장',
-    hint: '이해도 확인 시험의 레벨 배지에 이 이름이 들어갑니다. 실명이 아니어도 됩니다.',
-    hello: '님, 반가워요.',
-    rename: '닉네임 바꾸기',
-    count: (total: number, done: number) => `${total}장 중 ${done}장`,
-    countAfter: '을 다 읽었어요.',
-    barLabel: (stage: string) => `${stage} 읽은 장 수`,
-    read: '✓ 읽음',
-    next: '다음에 읽을 장:',
-    allDone: '모든 장을 읽었어요.',
-    examBefore: ' ',
-    exam: '이해도 확인 시험',
-    examAfter: '으로 내 AI 이해 레벨을 확인해 보세요.',
-    note1: '닉네임·읽음 표시·레벨 시험 합격 기록은 ',
-    noteStrong: '이 브라우저에만',
-    note2: ' 저장되고 어디로도 보내지지 않습니다. 그래서 다른 기기나 다른 브라우저에서는 이어지지 않습니다.',
-    blocked: ' 지금은 브라우저가 저장을 막고 있어 페이지를 닫으면 사라집니다.',
-    reset: '진행 현황 초기화',
-    confirm: '닉네임·읽음 표시·레벨 시험 합격 기록을 모두 지울까요? 되돌릴 수 없습니다.',
-  },
-  en: {
-    region: 'My progress',
-    loading: 'Loading your progress…',
-    ask: 'Pick a nickname to get started',
-    optional: '(you can skip this)',
-    placeholder: 'e.g. Sky',
-    save: 'Save',
-    hint: "This name goes on the level badge of the understanding check. It doesn't have to be your real name.",
-    hello: ', nice to see you.',
-    rename: 'Change nickname',
-    count: (total: number, done: number) => `${done} of ${total} chapters`,
-    countAfter: ' read.',
-    barLabel: (stage: string) => `Chapters read in ${stage}`,
-    read: '✓ Read',
-    next: 'Next to read:',
-    allDone: "You've read every chapter.",
-    examBefore: ' Check your AI level with the ',
-    exam: 'understanding check',
-    examAfter: '.',
-    note1: 'Your nickname, read marks and level test passes are saved ',
-    noteStrong: 'only in this browser',
-    note2: " and never sent anywhere. So they don't carry over to another device or browser.",
-    blocked: ' Your browser is blocking storage right now, so this disappears when you close the page.',
-    reset: 'Reset progress',
-    confirm: 'Delete your nickname, read marks and level test passes? This cannot be undone.',
-  },
-} satisfies Record<Lang, Record<string, unknown>>
+const UI = uiOf('progress')
 
 const { lang: siteLang } = useData()
 const lang = computed(() => langOf(siteLang.value))
@@ -93,7 +40,7 @@ const stages = computed(() =>
     .map((stage) => {
       const chapters = chaptersOf(stage.id, CHAPTER_NUMBERS)
       const status = summarize(progress.value, chapters)
-      const title = lang.value === 'en' ? STAGE_TITLE_EN[stage.id] : stage.title
+      const title = stageTitle(stage, lang.value)
       return { stage, title, chapters, status, next: status.next }
     })
     .filter((s) => s.chapters.length > 0),

@@ -2,7 +2,7 @@
 // "I've read this chapter" button at the end of each chapter.
 import { computed, nextTick, onMounted, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
-import { DONE_TEXT, STAGE_TITLE_EN, TRANSLATED_STAGES, langOf, localePrefix } from '../i18n.ts'
+import { DONE_TEXT, TRANSLATED_STAGES, langOf, localePrefix, stageTitle } from '../i18n.ts'
 import { CHAPTER_TITLE_EN } from '../quiz-bank-en.ts'
 import { CHAPTERS } from '../quiz-bank'
 import { summarize, toggleRead } from '../progress.ts'
@@ -18,7 +18,7 @@ const status = computed(() => summarize(progress.value, chaptersOf(stage.value.i
 const { lang } = useData()
 const lg = computed(() => langOf(lang.value))
 const t = computed(() => DONE_TEXT[lg.value])
-const stageTitle = computed(() => (lg.value === 'en' ? STAGE_TITLE_EN[stage.value.id] : stage.value.title))
+const stageName = computed(() => stageTitle(stage.value, lg.value))
 // links and titles follow the page language; untranslated chapters keep the Korean title
 const nextChapter = computed(() => {
   if (status.value.next === null) return null
@@ -46,7 +46,7 @@ async function toggle() {
   <div class="cd" :class="{ done: isRead }">
     <p class="cd-ask" role="status">
       <template v-if="!isRead">{{ t.ask }}</template>
-      <template v-else>{{ t.marked(stageTitle, status.total, status.done) }}</template>
+      <template v-else>{{ t.marked(stageName, status.total, status.done) }}</template>
     </p>
     <button v-if="!isRead" ref="markBtn" type="button" class="cd-btn" :disabled="!progressLoaded" @click="toggle">{{ t.mark }}</button>
     <template v-else>
