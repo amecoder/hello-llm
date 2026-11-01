@@ -1,0 +1,12 @@
+Translate the Korean Markdown document below into natural, plain, neutral Spanish (understandable in Spain and Latin America) for non-developer beginners: friendly and direct, short sentences, one idea per sentence, address the reader as "tú".
+Output ONLY the translated Markdown, nothing else (no preface, no code fences around the whole file).
+Rules:
+1. Keep the Markdown structure exactly: same headings, tables, lists, blockquotes, horizontal rules, line breaks between blocks.
+2. Keep unchanged: every link target (URLs and relative paths like (02-install.md) or (../00-common/)), image paths, footnote labels like [^name], HTML/Vue component tags such as <Quiz id="..." />, <ChapterDone :chapter="401" />, <YouTube id="..." title="..." /> (but translate a YouTube title attribute only if it is Korean), inline code that is a command, file name or path.
+3. Footnote definitions: translate the Korean parts (e.g. "Claude Code 공식 문서" -> "documentación oficial de Claude Code", "확인일" -> "consultado el"), but keep every English quotation inside double quotes EXACTLY as it is, and keep URLs.
+4. Translate Korean text inside code blocks (they are prompts the reader types) into Spanish. Keep code blocks that are shell commands unchanged except Korean comments.
+5. Korean brackets 「…」 for screen/menu names: use the official Spanish UI name if you are sure of it, written in «…» or quotes as you see fit; otherwise translate it and keep the Korean label once in parentheses, e.g. «Configuración» (설정). Screenshots in this guide show the Korean UI.
+6. Image alt text: translate.
+7. Keep proper nouns and product names (Claude, ChatGPT, Gemini, Codex, Antigravity, GitHub). Fictional people: 민지→Minji, 준호→Junho, 서연→Seoyeon; the cafe 모퉁이 카페 → «Café de la Esquina». Chapter "N장" → "capítulo N", stage "N단계" → "etapa N".
+8. In the glossary table at the end (용어 / 읽는 법 / 한 줄 뜻), the header becomes Término / En español / En una línea, and the "읽는 법" column holds the usual Spanish name of the term (e.g. Prompt → instrucción), since Spanish readers do not need the Korean pronunciation.
+9. Do not add or remove content. Do not add notes. Do not localize facts: numbers, dates, prices (원 → wones), place names (서울 → Seúl) stay as in the Korean. Write dates as in the Korean numerals (e.g. 10/27) and keep times.
