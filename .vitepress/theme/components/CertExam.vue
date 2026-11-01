@@ -3,9 +3,11 @@
 // Everything runs in the browser — no answers, names or scores leave the page or get stored;
 // the only stored value used here is the nickname the reader saved (progress-store).
 import { computed, nextTick, onMounted, ref } from 'vue'
-import { withBase } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 import { CHAPTERS } from '../quiz-bank'
 import { EXAM_QUESTIONS } from '../exam-bank'
+import { CHAPTER_TITLE_EN, localizeQuestion } from '../quiz-bank-en.ts'
+import { langOf, localePrefix } from '../i18n.ts'
 import {
   buildBadgeSvg,
   drawLevelExam,
@@ -14,6 +16,7 @@ import {
   levelFor,
   PRACTICE_CHECKS,
   PRACTICE_TASK,
+  PRACTICE_TASK_EN,
   practiceUnlocked,
   scoreParts,
   SITUATION_SIZE,
@@ -22,6 +25,82 @@ import {
 import { loadProgress, progress } from '../progress-store'
 
 type Stage = 'intro' | 'exam' | 'result'
+
+const UI = {
+  ko: {
+    intro: (size: number, concept: number, situation: number) =>
+      `1~9장 내용으로 <strong>${size}문제</strong>를 냅니다. 뜻을 묻는 <strong>개념 문제</strong> ${concept}개와, 실제 장면을 보여 주고 어떻게 할지 묻는 <strong>상황 판단 문제</strong> ${situation}개입니다. 볼 때마다 문제와 보기 순서가 바뀝니다.`,
+    level: '레벨',
+    rule: '받는 조건',
+    ruleTotal: (n: number) => `전체 ${n}문제 이상`,
+    ruleSituation: (n: number) => `상황 판단 ${n}문제 이상`,
+    rulePractice: '실습 과제 자기 점검 완료',
+    start: '시험 시작하기',
+    situation: '상황 판단',
+    concept: '개념',
+    answered: (a: number, t: number) => `${a} / ${t} 문제 답함`,
+    submit: '채점하기',
+    answerAll: '모든 문제에 답하면 채점할 수 있습니다.',
+    score: (t: number, c: number, st: number, sc: number) =>
+      `${t}문제 중 <strong>${c}문제</strong>를 맞혔습니다. (상황 판단 ${st}문제 중 ${sc}문제)`,
+    practiceTitle: '상급 레벨 실습 과제',
+    practiceLead: '점수는 상급 조건을 넘었습니다. 마지막으로 실제로 써 보는 과제가 남았습니다.',
+    practiceNote:
+      '스스로 확인하는 점검표입니다. 모두 체크하면 아래 배지가 상급 레벨로 바뀝니다. 점수는 저장되지 않으므로 페이지를 닫으면 사라집니다. 지금 과제를 하지 않을 거라면 아래 중급 배지를 먼저 저장하고, 과제를 마친 뒤 시험을 다시 보면 상급을 받을 수 있습니다.',
+    myLevel: (label: string, color: string) => `내 AI 이해 레벨은 <strong style="color: ${color}">${label}</strong>입니다!`,
+    nameLabel: '배지에 넣을 이름 (비워 두면 "학습자". 첫 화면에서 정한 닉네임이 미리 들어갑니다)',
+    namePlaceholder: '예: 김하늘',
+    badgeAlt: (label: string) => `이해도 확인 ${label} 레벨 배지`,
+    savePng: '배지 이미지 저장 (PNG)',
+    saveError: 'PNG로 저장하지 못했습니다. 위 배지 그림을 길게 누르거나 오른쪽 클릭해서 저장할 수 있습니다(이때는 SVG 그림 파일로 저장됩니다).',
+    noBadge: (n: number) => `레벨 배지는 ${n}문제 이상 맞히면 받을 수 있습니다. 아래 틀린 문제를 복습한 뒤 다시 도전해 보세요.`,
+    review: '틀린 문제 다시 보기',
+    answer: '정답:',
+    reread: (title: string) => `${title} 다시 읽기`,
+    retry: '새 문제로 다시 보기',
+    privacy: '답과 점수는 이 브라우저 안에서만 계산되고 어디에도 저장되거나 전송되지 않습니다. 페이지를 닫으면 사라집니다. 이름 칸에 미리 들어가는 닉네임만 이 브라우저에 저장되어 있습니다.',
+  },
+  en: {
+    intro: (size: number, concept: number, situation: number) =>
+      `You get <strong>${size} questions</strong> on Chapters 1–9: ${concept} <strong>concept questions</strong> about what things mean, and ${situation} <strong>situation questions</strong> that show a real scene and ask what you would do. The questions and the order of choices change every time.`,
+    level: 'Level',
+    rule: 'What you need',
+    ruleTotal: (n: number) => `${n}+ correct overall`,
+    ruleSituation: (n: number) => `${n}+ situation questions correct`,
+    rulePractice: 'practice task self-check done',
+    start: 'Start the test',
+    situation: 'Situation',
+    concept: 'Concept',
+    answered: (a: number, t: number) => `${a} / ${t} answered`,
+    submit: 'Grade my answers',
+    answerAll: 'Answer every question to get graded.',
+    score: (t: number, c: number, st: number, sc: number) =>
+      `You got <strong>${c} of ${t}</strong> right. (${sc} of ${st} situation questions)`,
+    practiceTitle: 'Advanced level practice task',
+    practiceLead: 'Your score clears the advanced level. One last task is left: actually using it.',
+    practiceNote:
+      'This is a checklist you mark yourself. Check every item and the badge below turns Advanced. Scores are not saved, so they disappear when you close the page. If you are not doing the task now, save the Intermediate badge below first, then take the test again after the task to get Advanced.',
+    myLevel: (label: string, color: string) => `Your AI skill level is <strong style="color: ${color}">${label}</strong>!`,
+    nameLabel: 'Name on the badge (blank means "Learner"; the nickname you set on the home page is filled in for you)',
+    namePlaceholder: 'e.g. Sky Kim',
+    badgeAlt: (label: string) => `Understanding Check ${label} level badge`,
+    savePng: 'Save badge image (PNG)',
+    saveError: "Couldn't save as PNG. You can long-press or right-click the badge above to save it (it saves as an SVG image).",
+    noBadge: (n: number) => `You get a level badge with ${n} or more correct. Review the questions you missed below and try again.`,
+    review: 'Review the questions you missed',
+    answer: 'Answer:',
+    reread: (title: string) => `Reread ${title}`,
+    retry: 'Try again with new questions',
+    privacy: 'Your answers and score are worked out only inside this browser and are never saved or sent anywhere. They disappear when you close the page. Only the nickname filled into the name box is stored in this browser.',
+  },
+}
+
+const { lang: siteLang } = useData()
+const lang = computed(() => langOf(siteLang.value))
+const ui = computed(() => UI[lang.value])
+const levelLabel = (l: (typeof LEVELS)[number]) => (lang.value === 'en' ? l.labelEn : l.label)
+const practiceTask = computed(() => (lang.value === 'en' ? PRACTICE_TASK_EN : PRACTICE_TASK))
+const chapterTitle = (n: number) => (lang.value === 'en' ? (CHAPTER_TITLE_EN[n] ?? CHAPTERS[n].title) : CHAPTERS[n].title)
 
 const stage = ref<Stage>('intro')
 const items = ref<ExamItem[]>([])
@@ -39,13 +118,13 @@ const levelInfo = computed(() => LEVELS.find((l) => l.level === level.value))
 const showPractice = computed(() => practiceUnlocked(score.value))
 const levelRule = (l: (typeof LEVELS)[number]) =>
   [
-    `전체 ${Math.ceil(l.min * EXAM_SIZE)}문제 이상`,
-    l.minSituation > 0 ? `상황 판단 ${Math.ceil(l.minSituation * SITUATION_SIZE)}문제 이상` : '',
-    l.needsPractice ? '실습 과제 자기 점검 완료' : '',
+    ui.value.ruleTotal(Math.ceil(l.min * EXAM_SIZE)),
+    l.minSituation > 0 ? ui.value.ruleSituation(Math.ceil(l.minSituation * SITUATION_SIZE)) : '',
+    l.needsPractice ? ui.value.rulePractice : '',
   ]
     .filter(Boolean)
     .join(', ')
-const kindLabel = (item: ExamItem) => ('kind' in item.question && item.question.kind === 'situation' ? '상황 판단' : '개념')
+const kindLabel = (item: ExamItem) => ('kind' in item.question && item.question.kind === 'situation' ? ui.value.situation : ui.value.concept)
 const wrongItems = computed(() => items.value.filter((item, i) => picks.value[i] !== item.answer))
 
 const today = () => {
@@ -54,11 +133,12 @@ const today = () => {
 }
 const badgeDate = ref('')
 const badgeSvg = computed(() =>
-  level.value ? buildBadgeSvg({ name: name.value, level: level.value, ...score.value, date: badgeDate.value }) : '',
+  level.value ? buildBadgeSvg({ name: name.value, level: level.value, ...score.value, date: badgeDate.value, lang: lang.value }) : '',
 )
 
 function start() {
-  items.value = drawLevelExam(EXAM_QUESTIONS, Math.random)
+  // questions are drawn in the page language; answer indexes are shared with the Korean bank
+  items.value = drawLevelExam(EXAM_QUESTIONS.map((q) => localizeQuestion(q, lang.value)), Math.random)
   picks.value = items.value.map(() => null)
   practice.value = PRACTICE_CHECKS.map(() => false)
   saveError.value = false
@@ -121,23 +201,23 @@ async function savePng() {
 <template>
   <div id="cert-exam" class="ce" tabindex="-1">
     <template v-if="stage === 'intro'">
-      <p>1~9장 내용으로 <strong>{{ EXAM_SIZE }}문제</strong>를 냅니다. 뜻을 묻는 <strong>개념 문제</strong> {{ EXAM_SIZE - SITUATION_SIZE }}개와, 실제 장면을 보여 주고 어떻게 할지 묻는 <strong>상황 판단 문제</strong> {{ SITUATION_SIZE }}개입니다. 볼 때마다 문제와 보기 순서가 바뀝니다.</p>
+      <p v-html="ui.intro(EXAM_SIZE, EXAM_SIZE - SITUATION_SIZE, SITUATION_SIZE)" />
       <table class="ce-grades">
-        <thead><tr><th>레벨</th><th>받는 조건</th></tr></thead>
+        <thead><tr><th>{{ ui.level }}</th><th>{{ ui.rule }}</th></tr></thead>
         <tbody>
           <tr v-for="l in LEVELS" :key="l.level">
-            <td><span class="ce-dot" :style="{ background: l.color }" />{{ l.label }}</td>
+            <td><span class="ce-dot" :style="{ background: l.color }" />{{ levelLabel(l) }}</td>
             <td>{{ levelRule(l) }}</td>
           </tr>
         </tbody>
       </table>
-      <button type="button" class="ce-primary" @click="start">시험 시작하기</button>
+      <button type="button" class="ce-primary" @click="start">{{ ui.start }}</button>
     </template>
 
     <template v-else-if="stage === 'exam'">
       <ol class="ce-list">
         <li v-for="(item, qi) in items" :key="item.question.id" class="ce-q">
-          <p class="ce-chapter">{{ kindLabel(item) }} · {{ CHAPTERS[item.question.chapter].title }}</p>
+          <p class="ce-chapter">{{ kindLabel(item) }} · {{ chapterTitle(item.question.chapter) }}</p>
           <p :id="`ce-q${qi}`" class="ce-prompt">{{ item.question.prompt }}</p>
           <div class="ce-choices" role="radiogroup" :aria-labelledby="`ce-q${qi}`">
             <label v-for="(choice, ci) in item.choices" :key="ci" :class="{ on: picks[qi] === ci }">
@@ -148,53 +228,53 @@ async function savePng() {
         </li>
       </ol>
       <div class="ce-submit">
-        <span>{{ answered }} / {{ items.length }} 문제 답함</span>
-        <button type="button" class="ce-primary" :disabled="answered < items.length" @click="submit">채점하기</button>
+        <span>{{ ui.answered(answered, items.length) }}</span>
+        <button type="button" class="ce-primary" :disabled="answered < items.length" @click="submit">{{ ui.submit }}</button>
       </div>
-      <p v-if="answered < items.length" class="ce-note">모든 문제에 답하면 채점할 수 있습니다.</p>
+      <p v-if="answered < items.length" class="ce-note">{{ ui.answerAll }}</p>
     </template>
 
     <template v-else>
-      <p class="ce-score">{{ score.total }}문제 중 <strong>{{ score.correct }}문제</strong>를 맞혔습니다. (상황 판단 {{ score.situationTotal }}문제 중 {{ score.situationCorrect }}문제)</p>
+      <p class="ce-score" v-html="ui.score(score.total, score.correct, score.situationTotal, score.situationCorrect)" />
 
       <fieldset v-if="showPractice" class="ce-practice">
-        <legend>상급 레벨 실습 과제</legend>
-        <p>점수는 상급 조건을 넘었습니다. 마지막으로 실제로 써 보는 과제가 남았습니다. {{ PRACTICE_TASK }}</p>
+        <legend>{{ ui.practiceTitle }}</legend>
+        <p>{{ ui.practiceLead }} {{ practiceTask }}</p>
         <label v-for="(check, i) in PRACTICE_CHECKS" :key="i">
           <input v-model="practice[i]" type="checkbox" />
-          <span>{{ check.text }} <span class="ce-from">({{ check.chapter }})</span></span>
+          <span>{{ lang === 'en' ? check.textEn : check.text }} <span class="ce-from">({{ lang === 'en' ? check.chapterEn : check.chapter }})</span></span>
         </label>
-        <p class="ce-note">스스로 확인하는 점검표입니다. 모두 체크하면 아래 배지가 상급 레벨로 바뀝니다. 점수는 저장되지 않으므로 페이지를 닫으면 사라집니다. 지금 과제를 하지 않을 거라면 아래 중급 배지를 먼저 저장하고, 과제를 마친 뒤 시험을 다시 보면 상급을 받을 수 있습니다.</p>
+        <p class="ce-note">{{ ui.practiceNote }}</p>
       </fieldset>
 
       <div v-if="level && levelInfo" class="ce-badge">
-        <p role="status">내 AI 이해 레벨은 <strong :style="{ color: levelInfo.color }">{{ levelInfo.label }}</strong>입니다!</p>
+        <p role="status" v-html="ui.myLevel(levelLabel(levelInfo), levelInfo.color)" />
         <label class="ce-name">
-          <span>배지에 넣을 이름 (비워 두면 "학습자". 첫 화면에서 정한 닉네임이 미리 들어갑니다)</span>
-          <input v-model="name" type="text" maxlength="20" placeholder="예: 김하늘" />
+          <span>{{ ui.nameLabel }}</span>
+          <input v-model="name" type="text" maxlength="20" :placeholder="ui.namePlaceholder" />
         </label>
-        <img class="ce-badge-img" :src="`data:image/svg+xml;charset=utf-8,${encodeURIComponent(badgeSvg)}`" :alt="`이해도 확인 ${levelInfo.label} 레벨 배지`" />
-        <button type="button" class="ce-primary" @click="savePng">배지 이미지 저장 (PNG)</button>
-        <p v-if="saveError" class="ce-error" role="alert">PNG로 저장하지 못했습니다. 위 배지 그림을 길게 누르거나 오른쪽 클릭해서 저장할 수 있습니다(이때는 SVG 그림 파일로 저장됩니다).</p>
+        <img class="ce-badge-img" :src="`data:image/svg+xml;charset=utf-8,${encodeURIComponent(badgeSvg)}`" :alt="ui.badgeAlt(levelLabel(levelInfo))" />
+        <button type="button" class="ce-primary" @click="savePng">{{ ui.savePng }}</button>
+        <p v-if="saveError" class="ce-error" role="alert">{{ ui.saveError }}</p>
       </div>
-      <p v-else>레벨 배지는 {{ Math.ceil(LEVELS[LEVELS.length - 1].min * EXAM_SIZE) }}문제 이상 맞히면 받을 수 있습니다. 아래 틀린 문제를 복습한 뒤 다시 도전해 보세요.</p>
+      <p v-else>{{ ui.noBadge(Math.ceil(LEVELS[LEVELS.length - 1].min * EXAM_SIZE)) }}</p>
 
       <template v-if="wrongItems.length">
-        <h3>틀린 문제 다시 보기</h3>
+        <h3>{{ ui.review }}</h3>
         <ul class="ce-review">
           <li v-for="item in wrongItems" :key="item.question.id">
             <p class="ce-prompt">{{ item.question.prompt }}</p>
-            <p>정답: <strong>{{ item.choices[item.answer] }}</strong></p>
+            <p>{{ ui.answer }} <strong>{{ item.choices[item.answer] }}</strong></p>
             <p class="ce-explain">{{ item.question.explain }}</p>
-            <a :href="withBase(`${CHAPTERS[item.question.chapter].link}.html`)">{{ CHAPTERS[item.question.chapter].title }} 다시 읽기</a>
+            <a :href="withBase(`${localePrefix(lang)}${CHAPTERS[item.question.chapter].link}.html`)">{{ ui.reread(chapterTitle(item.question.chapter)) }}</a>
           </li>
         </ul>
       </template>
 
-      <button type="button" class="ce-secondary" @click="start">새 문제로 다시 보기</button>
+      <button type="button" class="ce-secondary" @click="start">{{ ui.retry }}</button>
     </template>
 
-    <p class="ce-privacy">답과 점수는 이 브라우저 안에서만 계산되고 어디에도 저장되거나 전송되지 않습니다. 페이지를 닫으면 사라집니다. 이름 칸에 미리 들어가는 닉네임만 이 브라우저에 저장되어 있습니다.</p>
+    <p class="ce-privacy">{{ ui.privacy }}</p>
   </div>
 </template>
 

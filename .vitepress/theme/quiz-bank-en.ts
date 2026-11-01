@@ -3,6 +3,7 @@
 // A question without an English entry falls back to Korean.
 import type { Lang } from './i18n.ts'
 import type { Question } from './quiz.ts'
+import { EXAM_TEXT_EN } from './exam-bank-en.ts'
 
 type QuestionText = { prompt: string; choices: readonly string[]; explain: string }
 
@@ -643,7 +644,7 @@ export const QUESTION_TEXT_EN: Record<string, QuestionText> = {
   },
 }
 
-export function localizeQuestion(q: Question, lang: Lang): Question {
-  const text = lang === 'en' ? QUESTION_TEXT_EN[q.id] : undefined
+export function localizeQuestion<T extends Question>(q: T, lang: Lang): T {
+  const text = lang === 'en' ? (QUESTION_TEXT_EN[q.id] ?? EXAM_TEXT_EN[q.id]) : undefined
   return text === undefined ? q : { ...q, ...text }
 }
