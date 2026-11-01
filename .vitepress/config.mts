@@ -30,6 +30,7 @@ export default defineConfig({
     'en/guide/21-codex/README.md': 'en/guide/21-codex/index.md',
     'en/guide/22-antigravity/README.md': 'en/guide/22-antigravity/index.md',
     'en/guide/30-ai-sdlc/README.md': 'en/guide/30-ai-sdlc/index.md',
+    'ja/guide/00-common/README.md': 'ja/guide/00-common/index.md',
   },
   lastUpdated: true,
   // Korean is the source at the site root; translations live under /<lang>/ (see theme/i18n.ts)
@@ -232,6 +233,66 @@ export default defineConfig({
         sidebarMenuLabel: 'Menu',
         returnToTopLabel: 'Back to top',
         langMenuLabel: 'Change language',
+      },
+    },
+    ja: {
+      label: '日本語',
+      lang: 'ja-JP',
+      link: '/ja/',
+      description: 'チャットボットに質問して答えをもらうだけだったAIを、専門家のように使いこなすためのステップ別ガイド',
+      themeConfig: {
+        nav: [
+          {
+            text: '目次',
+            activeMatch: '^/ja/guide/',
+            items: [
+              { text: '全体の目次', link: '/ja/guide/' },
+              { text: 'ステップ1 · 共通ガイド', link: '/ja/guide/00-common/' },
+              { text: 'ステップ2〜4（現在は韓国語のみ）', link: '/guide/' },
+            ],
+          },
+          {
+            text: 'サービスへ移動',
+            items: [
+              { text: 'ChatGPT', link: 'https://chatgpt.com/' },
+              { text: 'Claude', link: 'https://claude.ai/new' },
+              { text: 'Gemini', link: 'https://gemini.google.com/app' },
+            ],
+          },
+        ],
+        // sidebar:ja
+        sidebar: {
+          '/ja/guide/00-common/': [
+            {
+              text: "ステップ1 · 共通ガイド",
+              items: [
+                { text: "目次", link: '/ja/guide/00-common/' },
+                { text: "第1章 LLMとは何か", link: '/ja/guide/00-common/01-what-is-llm' },
+                { text: "第2章 なぜこれほど話題なのか", link: '/ja/guide/00-common/02-why-it-matters' },
+                { text: "第3章 なぜ学ぶべきか", link: '/ja/guide/00-common/03-why-learn' },
+                { text: "第4章 プロンプトの基本", link: '/ja/guide/00-common/04-prompt-basics' },
+                { text: "第5章 プロンプトのパターン", link: '/ja/guide/00-common/05-prompt-patterns' },
+                { text: "第6章 会話を続けながら仕上げる", link: '/ja/guide/00-common/06-conversation' },
+                { text: "第7章 構造化プロンプト", link: '/ja/guide/00-common/07-structured-prompts' },
+                { text: "第8章 メタプロンプティング", link: '/ja/guide/00-common/08-meta-prompting' },
+                { text: "第9章 安全に使う", link: '/ja/guide/00-common/09-safety' },
+                { text: "第10章 実践課題集", link: '/ja/guide/00-common/10-practice' },
+                { text: "第11章 専門家のように使う", link: '/ja/guide/00-common/11-expert' },
+                { text: "連続課題", link: '/ja/guide/00-common/practice-kit' },
+                { text: "すぐ使えるプロンプト集", link: '/ja/guide/00-common/prompt-library' },
+                { text: "理解度確認テスト", link: '/ja/guide/00-common/certificate' },
+                { text: "AI知識レベルテスト", link: '/ja/guide/00-common/level-test' },
+              ],
+            },
+          ],
+        },
+        outline: { label: 'このページの内容' },
+        docFooter: { prev: '前へ', next: '次へ' },
+        lastUpdated: { text: '最終更新' },
+        darkModeSwitchLabel: '表示モード',
+        sidebarMenuLabel: 'メニュー',
+        returnToTopLabel: 'トップへ戻る',
+        langMenuLabel: '言語を変更',
       },
     },
   },
@@ -441,6 +502,16 @@ export default defineConfig({
                 noResultsText: '검색 결과가 없습니다',
                 resetButtonTitle: '지우기',
                 footer: { selectText: '선택', navigateText: '이동', closeText: '닫기' },
+              },
+            },
+          },
+          ja: {
+            translations: {
+              button: { buttonText: '検索', buttonAriaLabel: '検索' },
+              modal: {
+                noResultsText: '見つかりませんでした',
+                resetButtonTitle: 'クリア',
+                footer: { selectText: '選択', navigateText: '移動', closeText: '閉じる' },
               },
             },
           },
