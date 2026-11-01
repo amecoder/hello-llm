@@ -186,10 +186,10 @@ const BADGE_TEXT = {
   },
   en: {
     ring: 'AI Skill',
-    guide: 'hello-ai · Stage 1 Common Guide',
-    title: (label: string) => `Understanding Check · ${label}`,
+    guide: 'hello-ai · Understanding Check',
+    title: (label: string) => `${label} Level`,
     score: (c: number, t: number, sc: number, st: number) => `Score ${c} / ${t} · Situations ${sc} / ${st}`,
-    note: 'A learning badge for checking your own skills, not an official certificate.',
+    note: 'A self-check learning badge, not an official certificate.',
   },
 }
 
