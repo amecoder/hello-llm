@@ -59,7 +59,7 @@ features:
 | ステップ | 学べること |
 |---|---|
 | 1. [共通ガイド](/ja/guide/00-common/)（公開） | どのAIでも通用する仕組みと上手な聞き方 |
-| 2. [ChatGPT](/guide/11-chatgpt/) · [Claude](/guide/10-claude/) · [Gemini](/guide/12-gemini/)（公開・韓国語のみ） | サービスごとの機能と設定 |
+| 2. [ChatGPT](/ja/guide/11-chatgpt/) · [Claude](/ja/guide/10-claude/) · [Gemini](/ja/guide/12-gemini/)（公開） | サービスごとの機能と設定 |
 | 3. [Claude Code](/guide/20-claude-code/) · [Codex](/guide/21-codex/) · [Antigravity](/guide/22-antigravity/)（公開・韓国語のみ） | 自分のパソコンで直接ファイルを読み書きするAIツールに仕事を任せる方法 |
 | 4. [AI-SDLC](/guide/30-ai-sdlc/)（公開・韓国語のみ） | AIと一緒に企画から公開までソフトウェアを作る方法 — SDLCはソフトウェア開発の全工程（Software Development Life Cycle） |
 

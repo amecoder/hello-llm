@@ -72,16 +72,16 @@ features:
     linkText: テストを受ける
   - title: ステップ2 · ChatGPT 使い方ガイド
     details: 画面の見て回り方、会話の管理、ファイル・画像、メモリ、検索、プロジェクト、プライバシー設定、専門家のように使う方法まで — 実際の画面キャプチャ付き全11章
-    link: /guide/11-chatgpt/
-    linkText: ステップ2を始める（韓国語）
+    link: /ja/guide/11-chatgpt/
+    linkText: ステップ2を始める
   - title: ステップ2 · Claude 使い方ガイド
     details: 始め方、画面、会話の管理、ファイルとアーティファクト、メモリ、検索とリサーチ、プロジェクト・コネクタ、Cowork、プライバシー設定、専門家のように使う方法まで — 公式ヘルプ確認済みの全12章
-    link: /guide/10-claude/
-    linkText: Claudeガイドを始める（韓国語）
+    link: /ja/guide/10-claude/
+    linkText: Claudeガイドを始める
   - title: ステップ2 · Gemini 使い方ガイド
     details: 始め方、画面、会話の管理、ファイルと作成機能、メモリ、Deep Research、スキル・連携アプリ、タスク、プライバシー設定、音声、専門家のように使う方法まで — 公式ヘルプと実際の画面で確認済みの全12章
-    link: /guide/12-gemini/
-    linkText: Geminiガイドを始める（韓国語）
+    link: /ja/guide/12-gemini/
+    linkText: Geminiガイドを始める
   - title: ステップ3 · Claude Code 使い方ガイド
     details: パソコンのフォルダ内で直接ファイルを読み書きするClaude — ターミナル不要のデスクトップアプリから、自分流に整理してくれるツールを作りながら学ぶ全12章
     link: /guide/20-claude-code/
@@ -117,6 +117,6 @@ features:
 | ステップ | ガイド | 内容 |
 |---|---|---|
 | 1 | [共通ガイド](/ja/guide/00-common/) | どのLLMでも通じる共通の仕組みと使い方 |
-| 2 | [ChatGPT](/guide/11-chatgpt/) · [Claude](/guide/10-claude/) · [Gemini](/guide/12-gemini/) | サービス別の機能と活用法 |
+| 2 | [ChatGPT](/ja/guide/11-chatgpt/) · [Claude](/ja/guide/10-claude/) · [Gemini](/ja/guide/12-gemini/) | サービス別の機能と活用法 |
 | 3 | [Claude Code](/guide/20-claude-code/) · [Codex](/guide/21-codex/) · [Antigravity](/guide/22-antigravity/) | 自分のパソコンで動くコーディングAIツール |
 | 4 | [AI-SDLC](/guide/30-ai-sdlc/) | AIと一緒に企画から公開まで — ソフトウェア開発の全工程（SDLC） |

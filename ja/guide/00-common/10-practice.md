@@ -259,7 +259,7 @@ AI Fluency講座の4つの力は、このガイドとこのように繋がって
 - **Diligence（責任を持つ）**：AIを使った事実を明かし、出した結果に責任を持ちます。[第9章「3. 著作権」](09-safety.md#_3-著作権-—-作ったものと入れるもの)の「守るべき習慣」にあたります。
 
 英語のページは、Chromeなどのブラウザの翻訳機能（ページ上で右クリック →「日本語に翻訳（한국어로 번역）」）で読むことができます。
-Claude Academyの他の講座は、Claude編の[第12章](/guide/10-claude/12-expert.md)にまとめてあります。
+Claude Academyの他の講座は、Claude編の[第12章](/ja/guide/10-claude/12-expert.md)にまとめてあります。
 
 <Quiz id="ch10-academy" />
 

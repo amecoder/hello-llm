@@ -33,5 +33,5 @@ export function stageTitle(stage: { id: StageId; title: string }, lang: Lang): s
 // stages whose pages exist under /<lang>/; the rest link to the Korean pages
 export const TRANSLATED_STAGES: Record<Exclude<Lang, 'ko'>, readonly StageId[]> = {
   en: ['common', 'chatgpt', 'claude', 'gemini', 'claude-code', 'codex', 'antigravity', 'ai-sdlc'],
-  ja: ['common'],
+  ja: ['common', 'chatgpt', 'claude', 'gemini'],
 }
