@@ -2,12 +2,14 @@
 // then add it to Lang (i18n.ts) and to UI_TEXT below.
 import { en, enContent } from './en.ts'
 import { ja, jaContent } from './ja.ts'
+import { zhHans, zhHansContent } from './zh-hans.ts'
 import type { Content } from './content.ts'
+import { zhHant, zhHantContent } from './zh-hant.ts'
 import { ko, type Ui } from './ko.ts'
 
 export type { Content, Ui }
 
-export const UI_TEXT = { ko, en, ja } satisfies Record<string, Ui>
+export const UI_TEXT = { ko, en, ja, 'zh-hans': zhHans, 'zh-hant': zhHant } satisfies Record<string, Ui>
 
 // translated content for every language except Korean (Korean keeps its values next to the data)
-export const CONTENT = { en: enContent, ja: jaContent } satisfies Record<string, Content>
+export const CONTENT = { en: enContent, ja: jaContent, 'zh-hans': zhHansContent, 'zh-hant': zhHantContent } satisfies Record<string, Content>
