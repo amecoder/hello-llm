@@ -1,6 +1,15 @@
 import { defineConfig } from 'vitepress'
 import footnote from 'markdown-it-footnote'
 import { slugify } from './slugify'
+import { readFileSync, writeFileSync } from 'node:fs'
+import { join } from 'node:path'
+import type { SiteConfig } from 'vitepress'
+import { SITE_URL, descriptionFromMarkdown, llmsTxt, seoHead, titleFromMarkdown } from './seo'
+
+// page paths as published (after rewrites), e.g. 'guide/00-common/index.md'
+const publishedPages = (site: SiteConfig): Set<string> =>
+  new Set(site.pages.map((p) => site.rewrites.map[p] ?? p))
+const sourceOf = (site: SiteConfig, published: string): string => site.rewrites.inv[published] ?? published
 
 export default defineConfig({
   lang: 'ko-KR',
@@ -1066,6 +1075,33 @@ export default defineConfig({
         langMenuLabel: "Cambiar idioma",
       },
     },
+  },
+  // SEO / GEO (.vitepress/seo.ts): sitemap, per-page description, canonical + hreflang,
+  // Open Graph, JSON-LD, and llms.txt for AI search
+  sitemap: { hostname: SITE_URL },
+  transformPageData(pageData, { siteConfig }) {
+    if (pageData.frontmatter.description) return
+    const md = readFileSync(join(siteConfig.srcDir, pageData.filePath), 'utf-8')
+    const description = descriptionFromMarkdown(md)
+    return description ? { description } : undefined
+  },
+  transformHead({ pageData, siteConfig, description }) {
+    return seoHead({
+      relativePath: pageData.relativePath,
+      title: pageData.title,
+      description,
+      lastUpdated: pageData.lastUpdated,
+      pages: publishedPages(siteConfig),
+      isNotFound: pageData.isNotFound,
+    })
+  },
+  buildEnd(siteConfig) {
+    const entries = [...publishedPages(siteConfig)].map((relativePath) => {
+      const md = readFileSync(join(siteConfig.srcDir, sourceOf(siteConfig, relativePath)), 'utf-8')
+      return { relativePath, title: titleFromMarkdown(md), description: descriptionFromMarkdown(md) }
+    })
+    const summary = siteConfig.site.description
+    writeFileSync(join(siteConfig.outDir, 'llms.txt'), llmsTxt(siteConfig.site.title, summary, entries))
   },
   markdown: {
     anchor: { slugify },
