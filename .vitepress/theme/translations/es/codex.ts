@@ -195,32 +195,32 @@ export const CODEX: Record<string, QuestionText> = {
   "ch506-schedule": {
     prompt: "Creaste una programación para que cada viernes se haga la revisión semanal en la carpeta «Herramienta de orden». ¿Qué hace falta para que se ejecute?",
     choices: [
-      "Que el ordenador esté encendido y la aplicación en marcha",
-      "Que el móvil esté encendido",
+      "Que la computadora esté encendida y la aplicación en marcha",
+      "Que el teléfono esté encendido",
       "Crear un repositorio de GitHub y subir allí la carpeta",
       "Poner el permiso en Full access cada vez que se ejecute la programación",
     ],
-    explain: "Una programación que usa carpetas de tu ordenador solo se ejecuta si el ordenador está encendido y la aplicación está en marcha.",
+    explain: "Una programación que usa carpetas de tu computadora solo se ejecuta si la computadora está encendida y la aplicación está en marcha.",
   },
   "ch506-cloud": {
     prompt: "¿Qué afirmación sobre las tareas en la nube de Codex es correcta?",
     choices: [
-      "Los archivos de mi ordenador y mi sesión iniciada en el navegador pasan automáticamente",
+      "Los archivos de mi computadora y mi sesión iniciada en el navegador pasan automáticamente",
       "Hace falta un entorno publicado, y mis archivos no pasan",
-      "Si mi ordenador se apaga o se suspende, la tarea en la nube también se detiene enseguida",
+      "Si mi computadora se apaga o se suspende, la tarea en la nube también se detiene enseguida",
       "Es exclusivo de las cuentas gratuitas",
     ],
-    explain: "Una tarea en la nube empieza en un entorno publicado, y no pasan los archivos de tu ordenador, los programas en ejecución ni las sesiones iniciadas del navegador. A cambio, sigue aunque el ordenador esté suspendido.",
+    explain: "Una tarea en la nube empieza en un entorno publicado, y no pasan los archivos de tu computadora, los programas en ejecución ni las sesiones iniciadas del navegador. A cambio, sigue aunque la computadora esté suspendida.",
   },
   "ch506-mobile": {
-    prompt: "Al conectar el móvil para manejar el Codex de tu ordenador, ¿qué destaca la documentación oficial?",
+    prompt: "Al conectar el teléfono para manejar el Codex de tu computadora, ¿qué destaca la documentación oficial?",
     choices: [
-      "Conectar todos los móviles de la familia, también los que no son míos",
-      "Conectar primero un ordenador compartido",
+      "Conectar todos los teléfonos de la familia, también los que no son míos",
+      "Conectar primero una computadora compartida",
       "Conectar solo dispositivos míos y de confianza",
       "Pasar a Full access una vez conectado",
     ],
-    explain: "Un móvil conectado puede manejar el Codex de tu ordenador. Por eso solo se conectan dispositivos tuyos y de confianza.",
+    explain: "Un teléfono conectado puede manejar el Codex de tu computadora. Por eso solo se conectan dispositivos tuyos y de confianza.",
   },
   "ch507-install": {
     prompt: "Vas a ejecutar en el terminal el comando de instalación de Codex CLI. ¿Qué debes comprobar sí o sí antes?",

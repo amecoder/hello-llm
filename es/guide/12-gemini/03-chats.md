@@ -3,7 +3,7 @@
 > **En una línea**: las conversaciones anteriores se pueden **buscar, fijar, renombrar y eliminar** desde el menú lateral.
 > Para enseñárselas a otra persona usa el **enlace para compartir**, y para llevarlas a un documento o a un correo usa **exportar**. Recuerda solo una cosa: un enlace para compartir lo puede leer cualquiera que tenga el enlace.
 
-Las pantallas son de la versión web de octubre de 2026, y las imágenes son de la pantalla en coreano del plan de pago (Google AI Pro). En la app del móvil, los menús pueden estar en sitios algo distintos.
+Las pantallas son de la versión web de octubre de 2026, y las imágenes son de la pantalla en coreano del plan de pago (Google AI Pro). En la app del teléfono, los menús pueden estar en sitios algo distintos.
 
 ## Buscar conversaciones anteriores
 

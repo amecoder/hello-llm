@@ -3,7 +3,7 @@
 > **En una línea**: los materiales difíciles de explicar con palabras los **subes como archivo** para enseñarlos, y los documentos, tablas y presentaciones que necesites los puedes pedir **como archivo**.
 > Los resultados que merece la pena enseñar a otras personas se abren junto a la conversación como **artefactos**, y se pueden corregir y compartir. Eso sí, Claude no crea fotos ni ilustraciones.
 
-Las pantallas son de la versión web de octubre de 2026. Se están desplegando por turnos la nueva pantalla de Claude y la nueva pantalla de configuración, así que puede variar según la pantalla. En la aplicación del móvil funcionan algunas funciones distintas.
+Las pantallas son de la versión web de octubre de 2026. Se están desplegando por turnos la nueva pantalla de Claude y la nueva pantalla de configuración, así que puede variar según la pantalla. En la aplicación del teléfono funcionan algunas funciones distintas.
 
 ## Subir archivos
 
@@ -77,7 +77,7 @@ Claude no solo responde con texto: también puede **crear archivos**. Puedes des
 | PDF | Documento para imprimir |
 | Imagen PNG | Gráfico dibujado con números |
 
-Funciona en todos los planes, incluido el gratuito. Funciona en la web, en el escritorio y en la aplicación del móvil.[^create] También puede crear hojas de cálculo con fórmulas que funcionan y presentaciones que se abren con PowerPoint.[^new]
+Funciona en todos los planes, incluido el gratuito. Funciona en la web, en el escritorio y en la aplicación del teléfono.[^create] También puede crear hojas de cálculo con fórmulas que funcionan y presentaciones que se abren con PowerPoint.[^new]
 
 **Antes, comprueba que la opción está activada.** En los planes personales (Free, Pro y Max) viene activada desde el principio.[^create] Si está desactivada, actívala en «Configuración > Funciones» (Capabilities), en ④ «Ejecución de código y creación de archivos».[^create][^create-name]
 
@@ -178,7 +178,7 @@ Todos los artefactos que creas se guardan en la pestaña «Artefactos» del men�
 Esto conviene saber.[^artifacts]
 
 - **Si sale un error, pulsa «Intentar corregir con Claude» (Claude로 수정 시도).** Eso sí, no hay garantía de que se arregle.
-- **En la aplicación del móvil puedes pedir, ver y corregir.** Los ajustes de compartir se cambian en la web o en la aplicación de escritorio.
+- **En la aplicación del teléfono puedes pedir, ver y corregir.** Los ajustes de compartir se cambian en la web o en la aplicación de escritorio.
 - **Lo que creaste antes del 16 de septiembre de 2026 son «artefactos heredados» (레거시 아티팩트).** Se pueden seguir usando, pero no se pueden crear otros nuevos de esa forma.
 
 <Quiz id="ch204-artifacts" />
@@ -217,7 +217,7 @@ Los documentos no coinciden en si en el plan gratuito se puede compartir con «C
 
 Según la pregunta, Claude a veces te da la respuesta en forma **visual** en vez de texto. No hay nada que activar. Lo decide Claude, así que pregunta como siempre.[^visual]
 
-**Tarjetas del tiempo y de recetas.** Si preguntas por el tiempo o por una receta, puede responder con una tarjeta. Tiene que estar activada la búsqueda web.[^visual] En la pantalla nueva no hay interruptor de búsqueda web: Claude busca por su cuenta cuando hace falta.[^new][^old-search] En la tarjeta de recetas puedes cambiar el número de raciones y las unidades.[^visual] La tarjeta del tiempo solo se ve en la web y en el escritorio; en el móvil sale como texto.[^visual]
+**Tarjetas del tiempo y de recetas.** Si preguntas por el tiempo o por una receta, puede responder con una tarjeta. Tiene que estar activada la búsqueda web.[^visual] En la pantalla nueva no hay interruptor de búsqueda web: Claude busca por su cuenta cuando hace falta.[^new][^old-search] En la tarjeta de recetas puedes cambiar el número de raciones y las unidades.[^visual] La tarjeta del tiempo solo se ve en la web y en el escritorio; en el teléfono sale como texto.[^visual]
 
 **Responder eligiendo.** Cuando Claude te hace una pregunta, puede mostrarte opciones como una pregunta tipo test, elegir varias o ordenar por preferencia. Puedes responder pulsando o simplemente escribiendo.[^visual]
 
@@ -237,7 +237,7 @@ Una visualización personalizada es **un dibujo temporal que no se guarda aparte
 - «Descargar» (다운로드): lo descarga como archivo .svg o .html.
 - «Guardar como artefacto» (아티팩트로 저장): lo convierte en artefacto para seguir corrigiéndolo.
 
-Las visualizaciones personalizadas no se ven en la aplicación del móvil (iPhone y Android).[^custom]
+Las visualizaciones personalizadas no se ven en la aplicación del teléfono (iPhone y Android).[^custom]
 
 <Quiz id="ch204-visuals" />
 

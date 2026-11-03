@@ -3,7 +3,7 @@
 > **En una línea**: ChatGPT adapta sus respuestas a ti con la **memoria**, que recuerda lo que le has contado, y con las
 > **instrucciones personalizadas**, donde escribes lo que quieres que cumpla siempre. Aprenderás también a ver qué se recuerda y a borrarlo si no lo necesitas.
 
-Las pantallas corresponden a la web en octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
+Las pantallas corresponden a la web en octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del teléfono, la ubicación de los menús puede ser un poco distinta.
 
 ## Para qué sirven la memoria y la personalización
 
@@ -76,7 +76,7 @@ Con las aplicaciones conectadas ([capítulo 7](07-projects-plugins.md#fijar-los-
 
 La memoria es lo que ChatGPT recuerda por su cuenta, y las **instrucciones personalizadas** son lo que escribes tú directamente.
 En la web se entra por el enlace «Instrucciones personalizadas» de la pantalla «Personalización».
-En la aplicación del móvil está en «Personalizar ChatGPT» de los ajustes, y solo se aplican si activas «Usar personalización».[^ci]
+En la aplicación del teléfono está en «Personalizar ChatGPT» de los ajustes, y solo se aplican si activas «Usar personalización».[^ci]
 
 El número de caracteres que puedes escribir depende del plan.[^ci]
 

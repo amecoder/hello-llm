@@ -7,7 +7,7 @@ Este capítulo se ha escrito a partir de la documentación oficial de Codex y de
 
 ## Instalar e iniciar sesión
 
-1. Descarga e instala la app de ChatGPT para tu ordenador desde [chatgpt.com/download](https://chatgpt.com/download/). Para Linux, sigue las instrucciones aparte de la documentación oficial.[^install]
+1. Descarga e instala la app de ChatGPT para tu computadora desde [chatgpt.com/download](https://chatgpt.com/download/). Para Linux, sigue las instrucciones aparte de la documentación oficial.[^install]
 2. Abre la app e inicia sesión con tu cuenta de ChatGPT.[^signin]
 
 Si ya usaste ChatGPT en la etapa 2, entra con la misma cuenta. La cuenta y los planes se trataron en el [capítulo 1 de ChatGPT de la etapa 2](../11-chatgpt/01-getting-started.md).
@@ -23,7 +23,7 @@ Justo encima del cuadro de escritura hay dos opciones.
 | Nombre en pantalla | Qué hace |
 |---|---|
 | Choose project | Elegir la carpeta (proyecto) en la que trabajar |
-| This computer | Elegir dónde trabajar: en tu ordenador o en Cloud |
+| This computer | Elegir dónde trabajar: en tu computadora o en Cloud |
 
 Fuente: comprobación en pantalla de esta guía (2026-11-01)
 
@@ -33,7 +33,7 @@ La pantalla de arriba muestra la carpeta de la herramienta de organización abie
 
 Pulsa **Choose project** y elige la carpeta `정리도구` (`~/hello-ai-연습/정리도구` si seguiste la guía de Claude Code). Codex puede leer y modificar los archivos de la carpeta que elijas.[^folder] También puedes abrirla con «File → Open Folder…» de la barra de menús.
 
-Deja el lugar de trabajo en **This computer** (tu ordenador). Cloud es para quienes han conectado un repositorio de GitHub, y los archivos de tu ordenador no pasan a la nube.[^cloud-files]
+Deja el lugar de trabajo en **This computer** (tu computadora). Cloud es para quienes han conectado un repositorio de GitHub, y los archivos de tu computadora no pasan a la nube.[^cloud-files]
 
 Comprueba también si la carpeta es un **repositorio Git** (un mecanismo que guarda el registro de los cambios). En Codex, el panel para ver lo que cambió solo se abre en un repositorio Git. Si no lo es, la app te pregunta si quieres crear uno.[^review-git] Si seguiste el capítulo 3 de Claude Code, ya es un repositorio Git. Si empezaste de nuevo con los materiales de práctica, basta con seguir **cuando la app te pregunte si quieres crear el repositorio**.[^review-git] También puedes pedírselo a Codex hablando, pero la carpeta `.git`, que guarda el historial de Git, es una carpeta protegida ([capítulo 4](04-permissions-undo.md)), así que puede pedir permiso o quedar bloqueada.
 
@@ -89,7 +89,7 @@ Aunque la petición sea la misma, la forma del resultado varía un poco cada vez
 | Término | En español | En una línea |
 |---|---|---|
 | Project | Proyecto | La carpeta en la que trabaja Codex |
-| This computer | Este ordenador | Trabajar en tu ordenador |
+| This computer | Esta computadora | Trabajar en tu computadora |
 | Cloud | Nube | Trabajar en un espacio de trabajo al otro lado de internet |
 | Git | Git | Mecanismo que guarda el registro de los cambios de los archivos |
 

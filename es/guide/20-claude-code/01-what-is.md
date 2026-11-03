@@ -1,6 +1,6 @@
 # Capítulo 1. Qué es Claude Code y dónde se usa: en qué se diferencia del chat, dónde usarlo y planes
 
-> **En una línea**: Claude Code es un Claude que **lee directamente las carpetas de tu ordenador, modifica archivos y ejecuta comandos.** En lugar de recibir una respuesta y copiarla y pegarla como en el chat, le encargas el trabajo y revisas el resultado.
+> **En una línea**: Claude Code es un Claude que **lee directamente las carpetas de tu computadora, modifica archivos y ejecuta comandos.** En lugar de recibir una respuesta y copiarla y pegarla como en el chat, le encargas el trabajo y revisas el resultado.
 > Para usarlo hace falta una **suscripción de pago** (Pro, Max, Ultra, Team o Enterprise). Esta etapa empieza por la **aplicación de escritorio**, que se usa sin terminal.
 
 Este capítulo está escrito a partir de la documentación oficial de Claude Code consultada el 31 de octubre de 2026. Las funciones y los nombres de los menús cambian a menudo.
@@ -9,11 +9,11 @@ Este capítulo está escrito a partir de la documentación oficial de Claude Cod
 
 El chat de Claude que usaste en la etapa 2 era un sitio para **preguntar y recibir respuestas.** El texto de la respuesta lo copiabas tú y lo pegabas en un archivo.
 
-**Claude Code trabaja directamente en las carpetas de tu ordenador.** La documentación oficial presenta Claude Code como una herramienta que «lee el contenido de las carpetas, modifica archivos y ejecuta comandos».[^overview] Si le explicas con tus palabras de siempre lo que quieres, planifica el método, trabaja en varios archivos y hasta comprueba si funciona bien.[^overview]
+**Claude Code trabaja directamente en las carpetas de tu computadora.** La documentación oficial presenta Claude Code como una herramienta que «lee el contenido de las carpetas, modifica archivos y ejecuta comandos».[^overview] Si le explicas con tus palabras de siempre lo que quieres, planifica el método, trabaja en varios archivos y hasta comprueba si funciona bien.[^overview]
 
 | | Chat (etapa 2) | Claude Code (etapa 3) |
 |---|---|---|
-| Dónde trabaja | Dentro de la ventana de conversación | En una carpeta de mi ordenador |
+| Dónde trabaja | Dentro de la ventana de conversación | En una carpeta de mi computadora |
 | Archivos | Los subo yo y pego yo la respuesta que recibo | Claude lee y modifica directamente los archivos de la carpeta |
 | Trabajo de varios pasos | Yo lo voy continuando paso a paso | Encadena por sí solo planificar → trabajar → comprobar |
 | Lo que hago yo | Leer la respuesta y trasladarla | Encargar y revisar los cambios |
@@ -57,14 +57,14 @@ Claude Code se usa en varios sitios. Dondequiera que lo uses, funciona **el mism
 | **Aplicación de escritorio** (pestaña Code) | Revisar los cambios con los ojos, varios trabajos en paralelo, configuración sencilla |
 | Terminal (CLI) | Trabajar en la ventana de comandos, automatizar |
 | Un editor como VS Code | Usarlo directamente dentro del editor de código |
-| Web (nube) | Trabajos largos, o que deban continuar aunque apague mi ordenador |
-| Móvil | Empezar un trabajo fuera de casa y seguirlo |
+| Web (nube) | Trabajos largos, o que deban continuar aunque apague mi computadora |
+| Teléfono | Empezar un trabajo fuera de casa y seguirlo |
 
 Fuente: documentación oficial de Claude Code[^platforms]
 
 **Esta guía empieza por la aplicación de escritorio.** La documentación oficial indica que, para quien no quiere usar la terminal, la aplicación de escritorio ofrece el mismo motor con una pantalla gráfica.[^platforms] La aplicación de escritorio ya incluye Claude Code, así que no hay que instalar ningún programa aparte.[^quickstart]
 
-Puedes mezclar varios sitios para el mismo trabajo.[^platforms] La terminal se trata en el capítulo 10, y la web y el móvil, en el capítulo 8.
+Puedes mezclar varios sitios para el mismo trabajo.[^platforms] La terminal se trata en el capítulo 10, y la web y el teléfono, en el capítulo 8.
 
 <Quiz id="ch401-where" />
 
@@ -97,23 +97,23 @@ No hace falta saberlo todo desde el principio. Basta con encargar un trabajo peq
 ## Pruébalo tú
 
 1. Inicia sesión en claude.ai y comprueba qué plan tienes ahora. Si es el gratuito, las prácticas de esta etapa podrás hacerlas después de suscribirte.
-2. Apunta un «trabajo de carpeta» que te gustaría encargarle a Claude en tu ordenador (por ejemplo, reunir en un solo archivo unas notas dispersas).
+2. Apunta un «trabajo de carpeta» que te gustaría encargarle a Claude en tu computadora (por ejemplo, reunir en un solo archivo unas notas dispersas).
 3. Si hubieras hecho ese trabajo con el chat, cuenta cuántas veces habrías tenido que copiar y pegar.
 
 **Proyecto continuo**: elige algo que ordenes cada semana (actas de reunión, apuntes de clase, reflexiones, etc.) y apunta en tres líneas en qué formato te gustaría que quedara (por ejemplo: «lo decidido / tareas (responsable y plazo) / lo que se hablará la próxima vez»). En el capítulo 2 le encargarás un primer ordenado con unas notas de práctica, y en el capítulo 11 lo harás con tus propias notas.
 
 ## Resumen
 
-- Claude Code es una herramienta agéntica que lee directamente las carpetas de mi ordenador, modifica archivos y ejecuta comandos.
+- Claude Code es una herramienta agéntica que lee directamente las carpetas de mi computadora, modifica archivos y ejecuta comandos.
 - En el chat, yo traslado la respuesta que recibo; con Claude Code, encargo el trabajo y yo lo reviso.
-- Se usa el mismo motor en la aplicación de escritorio, la terminal, el editor, la web y el móvil. Esta etapa empieza por la aplicación de escritorio.
+- Se usa el mismo motor en la aplicación de escritorio, la terminal, el editor, la web y el teléfono. Esta etapa empieza por la aplicación de escritorio.
 - Hace falta una suscripción Pro, Max, Ultra, Team o Enterprise, y no se puede usar con el plan gratuito. Ultra es el antiguo Max 20x y Max es el antiguo Max 5x.
 
 ## Glosario
 
 | Término | En español | En una línea |
 |---|---|---|
-| Claude Code | Claude Code | Un Claude que trabaja directamente en las carpetas de mi ordenador |
+| Claude Code | Claude Code | Un Claude que trabaja directamente en las carpetas de mi computadora |
 | Agent | agente | Una IA que trabaja encadenando por sí sola varios pasos |
 | Code tab | pestaña Code | El sitio de la aplicación de escritorio donde se usa Claude Code |
 | CLI | CLI (interfaz de línea de comandos) | Programa que se usa escribiendo comandos como texto (la terminal) |

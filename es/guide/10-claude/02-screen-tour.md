@@ -23,7 +23,7 @@ Si tu pantalla se parece poco a la imagen, despliega el recuadro de abajo.
 
 ::: details Si usas la pantalla antigua (pulsa para desplegar)
 
-En la pantalla anterior solía haber por separado la conversación (Chat) y Cowork. La pantalla nueva se está desplegando por turnos, empezando por los planes Pro y Max, en la web, en la aplicación de ordenador y en la del móvil.[^new] Aunque tengas el mismo plan, el momento del cambio varía de una persona a otra.
+En la pantalla anterior solía haber por separado la conversación (Chat) y Cowork. La pantalla nueva se está desplegando por turnos, empezando por los planes Pro y Max, en la web, en la aplicación de computadora y en la del teléfono.[^new] Aunque tengas el mismo plan, el momento del cambio varía de una persona a otra.
 
 Si tienes el plan Pro o Max, mira el cuadro de texto. Si ves la selección «Chat» y «Cowork», todavía tienes la pantalla antigua.[^new] Con el plan gratuito no se puede distinguir así. Que el cuadro de texto no tenga esa selección no significa que tengas la pantalla nueva.
 
@@ -86,7 +86,7 @@ Si pulsas el **botón «+»** de abajo a la izquierda del cuadro de texto, o esc
 
 Es la pantalla del plan gratuito. **Los números rojos son los mismos que los de la lista de abajo.**[^screen]
 
-- ① «Subir o añadir archivo»: sube documentos o fotos de tu ordenador. También puedes arrastrar el archivo al cuadro de texto ([capítulo 4](04-files-artifacts.md)).[^upload]
+- ① «Subir o añadir archivo»: sube documentos o fotos de tu computadora. También puedes arrastrar el archivo al cuadro de texto ([capítulo 4](04-files-artifacts.md)).[^upload]
 - ② «Skills», ③ «Añadir conector», ④ «Sistema de diseño» y ⑤ «Añadir plugin»: son menús para añadir más funciones a Claude. Las skills, los conectores y los plugins se tratan en el [capítulo 7](07-projects-tools.md).
 - ⑥ «Memoria»: si tiene la marca de verificación, está activada ([capítulo 5](05-memory.md)).
 
@@ -113,7 +113,7 @@ Dime cinco cosas que puedo encargarte desde esta pantalla. Añade a cada una una
 
 ## Menú de modelo: elegir modelo, esfuerzo y razonamiento
 
-En la web y en la aplicación de ordenador, **debajo del cuadro de texto** ves el nombre del modelo que estás usando y el esfuerzo (el ⑥ «Sonnet 5.5 Medio» de la imagen de la primera pantalla). En la aplicación del móvil se ve en la parte de arriba de la pantalla.[^start][^screen]
+En la web y en la aplicación de computadora, **debajo del cuadro de texto** ves el nombre del modelo que estás usando y el esfuerzo (el ⑥ «Sonnet 5.5 Medio» de la imagen de la primera pantalla). En la aplicación del teléfono se ve en la parte de arriba de la pantalla.[^start][^screen]
 Al pulsar ese nombre se abre el **menú de modelo**. La ayuda dice que aquí se deciden tres cosas.[^model]
 
 | Lo que decides | Qué significa |
@@ -261,7 +261,7 @@ Es una pantalla con el nombre y el correo cambiados por ejemplos (plan gratuito)
 - ② «Idioma»: cambia el idioma de la pantalla.
 - ③ «Obtener ayuda»: consulta al servicio de atención al cliente ([capítulo 1](01-getting-started.md#que-probar-primero-si-algo-falla)).[^support]
 - ④ «Mejorar plan»: pasa a un plan de pago ([capítulo 1](01-getting-started.md#lo-que-debes-saber-antes-de-pasarte-a-un-plan-de-pago)).
-- ⑤ «Descargar aplicaciones y extensiones»: descarga la aplicación de ordenador, la del móvil, etc.
+- ⑤ «Descargar aplicaciones y extensiones»: descarga la aplicación de computadora, la del teléfono, etc.
 
 Si pulsas ① «Ajustes», se abre la pantalla de ajustes. A la izquierda hay un menú en vertical.
 
@@ -286,11 +286,11 @@ Fuente: la pantalla[^screen], ayuda de Anthropic[^cancel][^switch][^sessions][^s
 Las instrucciones que se aplican a todas las conversaciones se escriben en «Instrucciones para Claude» (Claude 지침), dentro de «Cuenta».[^screen]
 En los planes de pago también hay una pantalla de «Uso» (사용량, Usage) donde ves el límite que te queda ([capítulo 1](01-getting-started.md#limites-de-uso-5-horas-semanal-y-de-longitud)).[^best] En el menú de ajustes de esta cuenta gratuita no se veía.[^screen]
 
-**Cambiar el idioma de la pantalla**: se elige en ② «Idioma» del menú de la cuenta.[^lang][^screen] La web y la aplicación de ordenador se pueden usar en 11 idiomas, entre ellos el coreano.[^lang]
+**Cambiar el idioma de la pantalla**: se elige en ② «Idioma» del menú de la cuenta.[^lang][^screen] La web y la aplicación de computadora se pueden usar en 11 idiomas, entre ellos el coreano.[^lang]
 Sea cual sea el idioma de la pantalla, Claude **responde en el idioma que tú usas.** Aunque la pantalla esté en inglés, si le preguntas en coreano, responde en coreano.[^lang]
 El idioma que se usa en el modo de voz se decide aparte. Se elige en Ajustes → «General» → «Voz», en ③ «Idioma» ([capítulo 10](10-voice-mobile.md)).[^screen]
 
-**Usar la pantalla oscura**: en Ajustes → «General» → «Modo de pantalla», en ② «Tema», pulsa uno de los iconos de sistema, claro u oscuro.[^screen] Si eliges sistema, sigue los ajustes del ordenador o del móvil.[^appearance]
+**Usar la pantalla oscura**: en Ajustes → «General» → «Modo de pantalla», en ② «Tema», pulsa uno de los iconos de sistema, claro u oscuro.[^screen] Si eliges sistema, sigue los ajustes de la computadora o del teléfono.[^appearance]
 Si te cuesta leer las letras, cambia «Fuente de la interfaz» o «Fuente de las respuestas» en el mismo sitio.[^screen] La ayuda dice que entre las fuentes también se puede elegir «Apta para dislexia». Puede variar según la pantalla.[^appearance]
 
 ::: details Cuando el nombre no coincide con la ayuda (pulsa para desplegar)

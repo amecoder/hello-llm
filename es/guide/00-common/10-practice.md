@@ -167,7 +167,7 @@ Escríbeme un borrador de [el documento que quieres]. Deja el nombre, la fecha y
 **Comprueba si salió bien**
 
 - ☐ El texto que enviaste no contiene ningún nombre real, teléfono, número de residente, cuenta ni importe exacto
-- ☐ Los huecos `[ ]` del borrador recibido los rellenaste en un documento de tu ordenador o de tu móvil, no en la ventana de chat de la IA
+- ☐ Los huecos `[ ]` del borrador recibido los rellenaste en un documento de tu computadora o de tu teléfono, no en la ventana de chat de la IA
 
 <Quiz id="ch10-check" />
 
@@ -187,7 +187,7 @@ en la que las partes que cambian cada vez queden como huecos entre corchetes, co
 
 **Comprueba si salió bien**
 
-- ☐ Guardaste la plantilla recibida con un nombre en el bloc de notas o en las notas del móvil
+- ☐ Guardaste la plantilla recibida con un nombre en el bloc de notas o en las notas del teléfono
 - ☐ La siguiente vez rellenaste solo los huecos de esa plantilla y la enviaste en una conversación nueva, y recibiste una respuesta parecida a la primera
 
 **Dónde repasar**: [capítulo 6. Afinar sobre la marcha en la conversación](06-conversation.md) · [capítulo 8. Metaprompting](08-meta-prompting.md)

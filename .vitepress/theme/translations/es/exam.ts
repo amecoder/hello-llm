@@ -50,7 +50,7 @@ export const EXAM: Record<string, QuestionText> = {
       "Las personas introdujeron a mano el significado de cada palabra",
       "Pasó a memorizar por completo los textos de internet",
     ],
-    explain: "El método anterior tenía que leer las palabras una por una en orden, pero el transformer examina a la vez las relaciones entre las palabras. Por eso se pudo entrenar rápido, repartiendo el trabajo entre muchos ordenadores. (capítulo 2)",
+    explain: "El método anterior tenía que leer las palabras una por una en orden, pero el transformer examina a la vez las relaciones entre las palabras. Por eso se pudo entrenar rápido, repartiendo el trabajo entre muchas computadoras. (capítulo 2)",
   },
   "ex2-copyright-issue": {
     prompt: "La preocupación por los «derechos de autor» en torno a la IA, ¿a qué se refiere?",
@@ -76,7 +76,7 @@ export const EXAM: Record<string, QuestionText> = {
     prompt: "Tu abuela pregunta: «¿ChatGPT es una tecnología que apareció de golpe en 2022?». ¿Cuál es la respuesta correcta?",
     choices: [
       "«Sí, se hizo en unos pocos meses en 2022».",
-      "«No, desde 2017 todo el mundo la ha usado ya en una aplicación del móvil».",
+      "«No, desde 2017 todo el mundo la ha usado ya en una aplicación del teléfono».",
       "«No, se investiga desde hace mucho y se abrió al público en 2022».",
       "«Sí, antes no existía ninguna investigación sobre IA».",
     ],
@@ -216,7 +216,7 @@ export const EXAM: Record<string, QuestionText> = {
     prompt: "En la misma conversación, si dices «acorta solo el segundo párrafo del texto que acabas de escribir», la IA lo entiende. ¿Por qué?",
     choices: [
       "Porque relee toda esa conversación cada vez que responde",
-      "Porque abre a escondidas los archivos guardados en mi ordenador",
+      "Porque abre a escondidas los archivos guardados en mi computadora",
       "Porque recuerda para siempre un texto que ya ha visto una vez",
       "Porque va a buscar ese texto a internet",
     ],

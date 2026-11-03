@@ -5,7 +5,7 @@
 ## Cómo usarlos
 
 1. Busca abajo el apartado más parecido a lo que quieres hacer.
-2. Pasa el ratón por encima del recuadro gris y arriba a la derecha aparece el **botón de copiar**. Púlsalo para copiar el prompt. En el móvil, toca la esquina superior derecha del recuadro.
+2. Pasa el ratón por encima del recuadro gris y arriba a la derecha aparece el **botón de copiar**. Púlsalo para copiar el prompt. En el teléfono, toca la esquina superior derecha del recuadro.
 3. Pégalo en la ventana de chat de la IA y cambia los huecos marcados con `[corchetes]` o `(paréntesis)` por tu contenido. Por ejemplo, en `[pega aquí el artículo]` pegas el texto real del artículo.
 4. Cambia también a la persona del ejemplo (3 años en ventas, estudiante universitario, etc.) y las condiciones (tres líneas, cinco frases, etc.) para que encajen con tu situación. Si las dejas tal cual, la IA preparará la respuesta para esa persona.
 5. Si quieres saber por qué se escribe así, pulsa el enlace que hay debajo de cada apartado y lee el capítulo que lo explica.
@@ -98,7 +98,7 @@ Se usa pegándolo al final del acta.
 De esta acta de reunión, haz una tabla con quién se comprometió a hacer qué y para cuándo.
 ```
 
-→ Explicación: [capítulo 2, «Qué ha cambiado tanto»](02-why-it-matters.md#_1-puedes-encargarle-trabajo-al-ordenador-con-tus-palabras-de-siempre)
+→ Explicación: [capítulo 2, «Qué ha cambiado tanto»](02-why-it-matters.md#_1-puedes-encargarle-trabajo-a-la-computadora-con-tus-palabras-de-siempre)
 
 ### Un resumen para quien no estuvo en la reunión
 
@@ -439,7 +439,7 @@ Todavía no ejecutes la petición. Enséñame solo el prompt ordenado.
 
 ---
 hazme un plan del viaje a Jeju de la semana que viene con mis padres, mi padre tiene mal la rodilla
-tenemos coche de alquiler y son 3 días y 2 noches mete también sitios para comer y adónde ir si llueve
+tenemos auto de alquiler y son 3 días y 2 noches mete también sitios para comer y adónde ir si llueve
 ---
 ```
 

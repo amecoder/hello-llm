@@ -76,7 +76,7 @@ Las reglas que solo valen para una tarea concreta es mejor ponerlas en las **ins
 ## Memoria: lo que Claude recuerda mientras conversáis
 
 La **memoria** es la función con la que Claude guarda lo que va sabiendo de ti en las conversaciones.
-En los planes Free, Pro y Max está **activada desde el principio** en la web, el escritorio y la app del móvil.[^memory]
+En los planes Free, Pro y Max está **activada desde el principio** en la web, el escritorio y la app del teléfono.[^memory]
 En los planes de empresa (Team y Enterprise), el administrador debe permitirla, y cada persona la tiene desactivada hasta que la activa.[^memory]
 
 Claude no resume cuando termina la conversación. La guarda **mientras conversáis**, dividida por temas.[^memory]
@@ -229,7 +229,7 @@ También puedes pedirlo en el chat así.[^import]
 Escribe todo lo que recuerdas de mí tal como está en tu memoria, sin cambiar ni una letra.
 ```
 
-Si guardas el texto en un archivo de tu ordenador, tendrás una copia de seguridad.
+Si guardas el texto en un archivo de tu computadora, tendrás una copia de seguridad.
 
 <Quiz id="ch205-import" />
 
@@ -247,7 +247,7 @@ Es una pantalla del plan gratuito. **Los números rojos son los mismos que los d
 - ① **Aviso de descanso**: eliges las horas y los minutos.[^screen] Cuando los usas, aparece un aviso. Puedes parar, pedir que te lo recuerde más tarde o cerrarlo y seguir.[^wellbeing]
 - ② **Horas de silencio** (quiet hours)[^quiet-name] — eliges los días que quieres dejar libres para hacer otras cosas.[^screen]
 
-Si lo fijas una vez en la web o en el escritorio, también se aplica a la app del móvil.[^wellbeing]
+Si lo fijas una vez en la web o en el escritorio, también se aplica a la app del teléfono.[^wellbeing]
 
 Ninguna de las dos es **un bloqueo forzoso.** Siempre puedes pulsar «Continuar» para seguir.[^wellbeing]
 Además, son **independientes** del límite de uso de tu plan.[^wellbeing] El límite de uso se trata en el [capítulo 1](01-getting-started.md).

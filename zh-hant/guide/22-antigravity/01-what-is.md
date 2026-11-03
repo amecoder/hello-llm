@@ -71,7 +71,7 @@ Antigravity **在所有套餐裡都提供全部功能**。定時任務和 CLI �
 
 出處：本指南的整理（依據見各章的腳註）
 
-**最大的區別是“不需要搬”。** Antigravity 會讀取資料夾裡的 `AGENTS.md`、`GEMINI.md` 和 `.agents/` 資料夾。[^discovery] 檔名稱和位置，與你在 Codex 階段做的相同。在第3章裡會實際測試。
+**最大的區別是「不需要搬」。** Antigravity 會讀取資料夾裡的 `AGENTS.md`、`GEMINI.md` 和 `.agents/` 資料夾。[^discovery] 檔名稱和位置，與你在 Codex 階段做的相同。在第3章裡會實際測試。
 
 <Quiz id="ch601-compare" />
 

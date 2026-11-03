@@ -13,7 +13,7 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "Work 和 Codex 能做的事有重疊，但 Codex 會展示 diff（改動內容）之類的技術資訊。所以更便於把結果和原件對照。",
   },
   "ch501-compare": {
-    prompt: "你把在 Claude Code 裡用的規則檔案 CLAUDE.md 原樣留在“整理工具”資料夾裡，然後打開了 Codex。會怎麼樣？",
+    prompt: "你把在 Claude Code 裡用的規則檔案 CLAUDE.md 原樣留在「整理工具」資料夾裡，然後打開了 Codex。會怎麼樣？",
     choices: [
       "Codex 會自動找到資料夾裡的 CLAUDE.md，讀取並原樣遵守其中的規則",
       "Codex 讀 AGENTS.md，所以 CLAUDE.md 放著不動就不會被讀",
@@ -30,7 +30,7 @@ export const CODEX: Record<string, QuestionText> = {
       "Codex 被規定在免費賬號裡無論如何都不能用",
       "把應用刪掉重新安裝，無論是什麼賬號，一定都會出現",
     ],
-    explain: "官方的價格說明寫的是，Free 和 Go 裡的 Codex 是“在桌面應用中提供輕量模型、逐步開放”。各賬號會依次開放。",
+    explain: "官方的價格說明寫的是，Free 和 Go 裡的 Codex 是「在桌面應用中提供輕量模型、逐步開放」。各賬號會依次開放。",
   },
   "ch502-install": {
     prompt: "為了使用 Codex，第一步該做什麼？哪項是對的？",
@@ -43,7 +43,7 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "Codex 就在 ChatGPT 桌面應用裡。安裝應用，用 ChatGPT 賬號登入後，選擇 Codex 即可。",
   },
   "ch502-open": {
-    prompt: "想使用 Codex 裡檢視改動內容的視窗。事先在“整理工具”資料夾裡做好什麼比較好？",
+    prompt: "想使用 Codex 裡檢視改動內容的視窗。事先在「整理工具」資料夾裡做好什麼比較好？",
     choices: [
       "把資料夾名稱改成英文",
       "把整個資料夾上傳到雲端儲存",
@@ -63,7 +63,7 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "看起來像模像樣的結果，也可能有遺漏或錯誤。尤其是 Codex 自己改動的地方，要和原件對照，不是想要的方式就再拜託一次。",
   },
   "ch503-why": {
-    prompt: "沒有 AGENTS.md，Codex 卻遵守了“（筆記裡沒有）”這條規則。在這份指南的實操裡，原因是什麼？",
+    prompt: "沒有 AGENTS.md，Codex 卻遵守了「（筆記裡沒有）」這條規則。在這份指南的實操裡，原因是什麼？",
     choices: [
       "因為 Codex 在螢幕上看不見的地方偷偷開啟並讀了 CLAUDE.md",
       "因為同樣的規則也寫在了模板說明裡",
@@ -85,7 +85,7 @@ export const CODEX: Record<string, QuestionText> = {
   "ch503-test": {
     prompt: "想確認 AGENTS.md 是否真的被讀取了。這份指南用的是什麼方法？",
     choices: [
-      "問 Codex“你讀過 AGENTS.md 了嗎？”，並直接相信它的回答",
+      "問 Codex「你讀過 AGENTS.md 了嗎？」，並直接相信它的回答",
       "把 AGENTS.md 重複儲存好幾次，確保它被讀取",
       "把 AGENTS.md 的檔名全部改成大寫，讓它更顯眼",
       "只在 AGENTS.md 裡放一條新規則，在新對話裡看它有沒有被遵守",
@@ -93,7 +93,7 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "別處沒有的規則被遵守了，就可以認為讀取了那個檔案。這次實操裡，AGENTS.md 之前遵守 0 次，之後遵守 1 次（各 1 回，筆記種類不同）。",
   },
   "ch503-order": {
-    prompt: "~/.codex/AGENTS.md 和“整理工具”資料夾裡的 AGENTS.md 說的不一樣。哪一個優先？",
+    prompt: "~/.codex/AGENTS.md 和「整理工具」資料夾裡的 AGENTS.md 說的不一樣。哪一個優先？",
     choices: [
       "個人設定 ~/.codex/AGENTS.md 總是先適用，所以它優先",
       "兩個檔案中內容更長、檔案更大的優先",
@@ -153,7 +153,7 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "審閱窗口裡不僅有 Codex 的改動，還有我的改動和其他未記錄的改動。只想丟棄一部分時，以檔案或程式碼塊為單位撤銷。",
   },
   "ch505-where": {
-    prompt: "在 Codex 裡，“整理工具”資料夾專用技能的存放位置和呼叫方法，哪項是對的？",
+    prompt: "在 Codex 裡，「整理工具」資料夾專用技能的存放位置和呼叫方法，哪項是對的？",
     choices: [
       "放在 .claude/skills 資料夾裡，呼叫時用 /名稱",
       "放在 .agents/skills 裡，用 $名稱 呼叫",
@@ -163,7 +163,7 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "Codex 在 .agents/skills 裡查詢技能，呼叫時用 $名稱。SKILL.md 的格式和 Claude Code 相同。",
   },
   "ch505-move": {
-    prompt: "你請 Codex 把技能複製到 .agents/skills，它回答說“因為是隻讀，被攔下了”。合適的應對是什麼？",
+    prompt: "你請 Codex 把技能複製到 .agents/skills，它回答說「因為是隻讀，被攔下了」。合適的應對是什麼？",
     choices: [
       "把許可權改成 Full access，之後也不再改回來",
       "放棄移動技能，改成每次自己寫很長的請求",
@@ -193,11 +193,11 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "外掛裡可能帶有自動執行的鉤子。官方文件要求在它執行之前先審查，並判斷是否可信。",
   },
   "ch506-schedule": {
-    prompt: "你設定了每週五在“整理工具”資料夾裡生成每週回顧的定時。定時要執行，需要什麼？",
+    prompt: "你設定了每週五在「整理工具」資料夾裡生成每週回顧的定時。定時要執行，需要什麼？",
     choices: [
       "電腦開著，並且應用在執行",
       "手機要開著",
-      "要建一個 GitHub 倉庫，把“整理工具”資料夾上傳上去",
+      "要建一個 GitHub 倉庫，把「整理工具」資料夾上傳上去",
       "每次定時執行時，都要把許可權改成 Full access",
     ],
     explain: "使用我電腦裡資料夾的定時，只有在電腦開著、應用正在執行時才會執行。",
@@ -270,7 +270,7 @@ export const CODEX: Record<string, QuestionText> = {
       "檢視 ChatGPT 賬號設定和 OpenAI 幫助",
       "點審閱窗口裡的 Revert all，對話就會從訓練中排除",
     ],
-    explain: "資料規則由登入方式決定。“預設不用於訓練”只標註在 Business、Enterprise、API 金鑰上，個人套餐的訓練設定在 Codex 文件裡沒有寫。所以請到 ChatGPT 賬號設定和 OpenAI 幫助裡確認。",
+    explain: "資料規則由登入方式決定。「預設不用於訓練」只標註在 Business、Enterprise、API 金鑰上，個人套餐的訓練設定在 Codex 文件裡沒有寫。所以請到 ChatGPT 賬號設定和 OpenAI 幫助裡確認。",
   },
   "ch508-injection": {
     prompt: "Codex 沒有照一份帶有隱藏指令的筆記去做（1 次實驗）。該怎麼看待這個結果？",
@@ -283,7 +283,7 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "攔住了一次，並不保證每次都攔得住。放入別人的文件時，要把結果和原件對照，並把許可權和聯網訪問收得窄一些。",
   },
   "ch508-choose": {
-    prompt: "打算同時使用 Claude Code 和 Codex。這份指南建議的“整理工具”資料夾是什麼樣子？",
+    prompt: "打算同時使用 Claude Code 和 Codex。這份指南建議的「整理工具」資料夾是什麼樣子？",
     choices: [
       "每個工具各建一套筆記、模板、成果資料夾，互不混在一起",
       "把 CLAUDE.md 刪掉",

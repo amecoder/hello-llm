@@ -33,7 +33,7 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
     explain: "原來免費賬號可以選的 Claude 4.6 系列在 11 月 2 日下架，Gemini 4 Argon 和 Claude Sonnet 5.5 需要 Pro 以上。",
   },
   "ch601-compare": {
-    prompt: "把在 Codex 階段做好的“整理工具”資料夾用 Antigravity 開啟時，需要搬動什麼？",
+    prompt: "把在 Codex 階段做好的「整理工具」資料夾用 Antigravity 開啟時，需要搬動什麼？",
     choices: [
       "要把 AGENTS.md 改名為 GEMINI.md",
       "要把技能搬到 .gemini/skills 資料夾",
@@ -53,7 +53,7 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
     explain: "點 Sign in 後會開啟瀏覽器，用個人 Google 賬號（Free、Pro、Ultra）登入。",
   },
   "ch602-project": {
-    prompt: "在 Antigravity 應用裡開啟“整理工具”資料夾，怎麼做？",
+    prompt: "在 Antigravity 應用裡開啟「整理工具」資料夾，怎麼做？",
     choices: [
       "把資料夾壓縮後上傳到對話方塊",
       "資料夾必須先做成 Git 倉庫，之後才能新增到 New Project 裡",
@@ -186,7 +186,7 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
     prompt: "使用 /goal 時，這份指南建議怎麼做？",
     choices: [
       "把許可權改成 Turbo，在達成目標期間不再詢問許可",
-      "清楚寫明“做完的標準”，別含糊",
+      "清楚寫明「做完的標準」，別含糊",
       "改成 Fast mode",
       "把 Review 視窗關掉",
     ],
@@ -205,7 +205,7 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
   "ch606-install": {
     prompt: "第一次執行 agy 時確認的“Workspace trust”是什麼？",
     choices: [
-      "登記“信任這個資料夾”的步驟",
+      "登記「信任這個資料夾」的步驟",
       "修改 Google 賬號密碼的步驟",
       "換成付費套餐的步驟",
       "把資料夾上傳到雲端的步驟",
@@ -265,7 +265,7 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
   "ch607-data": {
     prompt: "決定我的對話是否用於改進模型的設定在哪裡？",
     choices: [
-      "在 AGENTS.md 最上面寫上“禁止訓練”這幾個字，對話就會照樣不被用於訓練",
+      "在 AGENTS.md 最上面寫上「禁止訓練」這幾個字，對話就會照樣不被用於訓練",
       "Review 窗口裡的 Discard 按鈕",
       "/goal 命令的選項",
       "Settings 的 Account 裡的 Enable Telemetry",
@@ -283,7 +283,7 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
     explain: "三個工具都各攔住了一次，但這不是保證。放入別人的文件時，要把結果與原件對照。",
   },
   "ch607-choose": {
-    prompt: "三個工具共用“整理工具”資料夾時，要修改規則，該怎麼做？",
+    prompt: "三個工具共用「整理工具」資料夾時，要修改規則，該怎麼做？",
     choices: [
       "新建 GEMINI.md，把其餘的刪掉",
       "CLAUDE.md 和 AGENTS.md 一起改",

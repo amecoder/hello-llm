@@ -70,7 +70,7 @@ Si subiste algo delicado, no basta con deshacerlo. Porque queda en el historial 
 2. En GitHub, abre **Settings → Pages** del repositorio `cafe-todo-board`.
 3. En «Build and deployment», elige **Deploy from a branch** en **Source** y, en **Branch**, elige la rama `main` y la carpeta `/` (la raíz).[^quickstart]
 4. Comprueba que hay un `index.html` en la parte de arriba del repositorio. GitHub Pages busca este archivo en la parte de arriba de la carpeta de publicación.[^entry] Después abre `https://tu-usuario.github.io/cafe-todo-board/`. Después de subirlo, puede tardar hasta 10 minutos en reflejarse.[^quickstart] Si ves el tablero de tareas, ha salido bien.
-5. Ábrelo también en el móvil.
+5. Ábrelo también en el teléfono.
 6. Piensa si poner abajo de la página un aviso como «Esta página se hizo para practicar y no recopila datos de visita (GitHub Pages registra la IP del visitante con fines de seguridad)».
 
 **Proyecto continuo**: en el capítulo 8 escribirás como incidencia una mejora como «las tareas vencidas, en rojo» y darás otra vuelta.

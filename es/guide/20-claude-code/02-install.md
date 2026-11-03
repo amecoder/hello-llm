@@ -9,7 +9,7 @@ Este capítulo se escribió a partir de la documentación oficial de Claude Code
 
 Claude Code **viene dentro de la aplicación de escritorio de Claude.** Solo tienes que instalar la aplicación; no hace falta instalar aparte otros programas (Node.js, una herramienta de ejecución para desarrollo, ni Claude Code para el terminal).[^quickstart]
 
-1. En la página de instalación de la documentación oficial, descarga el archivo que corresponde a tu ordenador.[^quickstart]
+1. En la página de instalación de la documentación oficial, descarga el archivo que corresponde a tu computadora.[^quickstart]
    - **macOS**: un solo archivo se instala tanto en los Mac con Intel como en los de chip Apple.
    - **Windows**: hay un instalador para los PC normales (x64) y otro aparte para los PC ARM64.
    - **Linux**: es beta (versión de pruebas) y se instala con apt (la herramienta de instalación de programas de Linux) en Ubuntu y Debian.
@@ -32,7 +32,7 @@ Si al pulsar Code aparece un aviso, haz lo siguiente.[^quickstart]
 
 Si abres una sesión nueva en la pestaña Code, aparece esta pantalla.
 
-![Pantalla de sesión nueva de la pestaña Code. Con números rojos: ① las tarjetas de inicio del centro («Elegir entorno», «Importar una sesión de Claude Code CLI», «Activar el modo automático» y «Elegir la carpeta de trabajo»), ② el cuadro de entrada («Describe la tarea o haz una pregunta»), ③ el entorno «Este ordenador», ④ la carpeta «Elegir…», ⑤ el modelo «Opus 5.5» y el nivel de esfuerzo «Medio», ⑥ el modo de permisos «Manual»](../../../guide/20-claude-code/assets/shot-01-new-session-marked.png)
+![Pantalla de sesión nueva de la pestaña Code. Con números rojos: ① las tarjetas de inicio del centro («Elegir entorno», «Importar una sesión de Claude Code CLI», «Activar el modo automático» y «Elegir la carpeta de trabajo»), ② el cuadro de entrada («Describe la tarea o haz una pregunta»), ③ el entorno «Esta computadora», ④ la carpeta «Elegir…», ⑤ el modelo «Opus 5.5» y el nivel de esfuerzo «Medio», ⑥ el modo de permisos «Manual»](../../../guide/20-claude-code/assets/shot-01-new-session-marked.png)
 
 Lo que más vas a mirar al trabajar es **la línea de debajo del cuadro de entrada**. La documentación oficial también indica que, antes de enviar el primer mensaje, elijas en esa línea el entorno, la carpeta, el modo de permisos y el modelo.[^desktop-start]
 
@@ -40,14 +40,14 @@ Lo que más vas a mirar al trabajar es **la línea de debajo del cuadro de entra
 |---|---|---|
 | ① | Tarjetas de inicio | Solo se ven en una sesión nueva. Por ahora no hace falta usarlas |
 | ② | Cuadro de entrada | Donde escribes y envías lo que quieres hacer |
-| ③ | Este ordenador | Dónde se trabaja (entorno). Si vas a trabajar en tu ordenador, déjalo como está |
+| ③ | Esta computadora | Dónde se trabaja (entorno). Si vas a trabajar en tu computadora, déjalo como está |
 | ④ | Elegir… | En qué carpeta se trabaja |
 | ⑤ | Opus 5.5 · Medio | Qué modelo y con cuánta profundidad piensa |
 | ⑥ | Manual | Qué puede hacer Claude sin preguntar (modo de permisos) |
 
 Fuente: los nombres de la pantalla son de la comprobación de pantalla de esta guía (2026-10-31); las funciones, de la documentación oficial[^desktop-start]
 
-Al principio puedes dejar el entorno de ③ en **Este ordenador** (이 컴퓨터). En la documentación oficial es «Local» (en tu ordenador).[^quickstart] Cómo trabajar en la nube se trata en el capítulo 8.
+Al principio puedes dejar el entorno de ③ en **Esta computadora** (이 컴퓨터). En la documentación oficial es «Local» (en tu computadora).[^quickstart] Cómo trabajar en la nube se trata en el capítulo 8.
 
 El modelo (⑤) se puede cambiar más adelante.[^quickstart] Al principio puedes usar el que ya viene elegido en la pantalla.
 
@@ -71,7 +71,7 @@ Claude Code trabaja **dentro de la carpeta que tú elijas**. Por eso, al princip
 
 Las fechas y los días de la semana de las notas son inventados para la historia, así que **no coinciden con el calendario real de 2026.** Al comprobar el resultado, mira si coincide con las fechas y los días **escritos en la nota**.
 
-1. En tu ordenador, crea una carpeta nueva llamada **Herramienta de orden** (정리도구) y dentro de ella una carpeta **inbox**.
+1. En tu computadora, crea una carpeta nueva llamada **Herramienta de orden** (정리도구) y dentro de ella una carpeta **inbox**.
 2. Descarga los 5 archivos de arriba y ponlos en **inbox**.
 3. En la pestaña Code, pulsa **Elegir…** (선택…) (④) en la línea de debajo del cuadro de entrada.
 
@@ -117,7 +117,7 @@ Después de enviarla, en la pantalla va saliendo línea a línea lo que hace Cla
 Si el modo de permisos es **Manual** (en la documentación oficial, Manual), Claude **pregunta antes** de modificar un archivo o ejecutar un comando. Te muestra qué va a cambiar y, cada vez que va a cambiar algo, puedes permitirlo o rechazarlo.[^desktop-modes] Al principio da más tranquilidad dejarlo en Manual y ver una por una qué quiere hacer. Los modos de permisos se tratan con detalle en el [capítulo 4](04-permissions-undo.md).
 
 ::: details Si estaba en Manual y creó el archivo sin pedir permiso
-Si has usado Claude Code en el terminal, puede que los ajustes que hiciste entonces se apliquen también en la aplicación. **La aplicación de escritorio lee los mismos archivos de configuración que Claude Code para el terminal.**[^desktop-modes] Por ejemplo, si pusiste una regla de permiso como «no preguntar al escribir archivos», aunque esté en Manual no preguntará por eso. Las capturas de esta guía también se hicieron en un ordenador con ese tipo de ajuste, y por eso no salió la ventana de permiso.
+Si has usado Claude Code en el terminal, puede que los ajustes que hiciste entonces se apliquen también en la aplicación. **La aplicación de escritorio lee los mismos archivos de configuración que Claude Code para el terminal.**[^desktop-modes] Por ejemplo, si pusiste una regla de permiso como «no preguntar al escribir archivos», aunque esté en Manual no preguntará por eso. Las capturas de esta guía también se hicieron en una computadora con ese tipo de ajuste, y por eso no salió la ventana de permiso.
 :::
 
 <Quiz id="ch402-first" />
@@ -148,7 +148,7 @@ Fuente: resultado de la práctica de esta guía (2026-10-31). Archivo del result
 
 **Aunque la petición sea la misma, el resultado cambia un poco cada vez.** No pasa nada si la forma de la tabla o el tono son distintos de los de esta guía. Si puedes responder «sí» a todas las preguntas de comprobación de arriba, ha salido bien.
 
-El archivo creado está en la carpeta **Herramienta de orden/notes** de tu ordenador. Ábrelo con el Finder o el explorador de archivos. Cómo ver dentro de la aplicación los archivos y los cambios se trata en el [capítulo 3](03-screen-tour.md).
+El archivo creado está en la carpeta **Herramienta de orden/notes** de tu computadora. Ábrelo con el Finder o el explorador de archivos. Cómo ver dentro de la aplicación los archivos y los cambios se trata en el [capítulo 3](03-screen-tour.md).
 
 <Quiz id="ch402-check" />
 
@@ -164,7 +164,7 @@ El archivo creado está en la carpeta **Herramienta de orden/notes** de tu orden
 ## Resumen
 
 - Claude Code está en la pestaña **Code** de la aplicación de escritorio de Claude. Basta con instalar la aplicación e iniciar sesión con la cuenta de Anthropic.
-- En la línea de debajo del cuadro de entrada se eligen el entorno (este ordenador), la carpeta, el modelo y el modo de permisos.
+- En la línea de debajo del cuadro de entrada se eligen el entorno (esta computadora), la carpeta, el modelo y el modo de permisos.
 - Al principio elige una carpeta de prácticas pequeña. La carpeta de trabajo es el alcance en el que Claude puede tocar cosas.
 - En la petición, escribe qué leer, el formato, dónde guardarlo y qué no tocar.
 - No te fíes de «ya está»: compruébalo con el original. El resultado cambia un poco cada vez.
@@ -174,8 +174,8 @@ El archivo creado está en la carpeta **Herramienta de orden/notes** de tu orden
 | Término | En español | En una línea |
 |---|---|---|
 | Session | Sesión | Una conversación de trabajo con Claude con una carpeta abierta |
-| Environment | Entorno | Dónde trabaja Claude: tu ordenador (este ordenador), la nube, etc. |
-| Local | Local | Tu ordenador. En la pantalla es «Este ordenador» |
+| Environment | Entorno | Dónde trabaja Claude: tu computadora (esta computadora), la nube, etc. |
+| Local | Local | Tu computadora. En la pantalla es «Esta computadora» |
 | Permission mode | Modo de permisos | El alcance de lo que Claude puede hacer sin preguntar |
 | Manual | Manual | Modo en el que pregunta cada vez antes de modificar un archivo o ejecutar un comando |
 

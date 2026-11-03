@@ -110,7 +110,7 @@ features:
 
 ## 学习路线图
 
-前一个阶段是后一个阶段的基础，所以建议按编号顺序阅读。现在正在充实第1阶段。
+前一个阶段是后一个阶段的基础，所以建议按编号顺序阅读。
 
 ![学习路线图：第1阶段 通用指南（怎样问得好）→ 第2阶段 ChatGPT、Claude、Gemini（各服务的功能）→ 第3阶段 Claude Code、Codex、Antigravity（把事交给 AI）→ 第4阶段 AI-SDLC（和 AI 一起制作）](../../assets/roadmap.svg)
 

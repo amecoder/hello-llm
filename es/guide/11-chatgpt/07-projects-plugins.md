@@ -3,7 +3,7 @@
 > **En una línea**: las conversaciones, los archivos y las instrucciones que usas para un mismo trabajo se agrupan en un **proyecto**, y para conectar otros servicios o añadir una forma de trabajar ya definida se usan los
 > **complementos** (plugins). Si quieres encargar un trabajo largo y recibir un resultado terminado, cambia arriba a **Work**.
 
-Las pantallas son de la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la posición de los menús puede ser un poco distinta.
+Las pantallas son de la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del teléfono, la posición de los menús puede ser un poco distinta.
 
 ![Primera pantalla tras iniciar sesión. Mira en el menú lateral «Complementos» (플러그인) y la sección «Proyectos» (프로젝트) («Informe semanal de la empresa», «Estudiar inglés»), y el botón para cambiar entre «Chat» y «Work» arriba, en el centro de la pantalla](../../../guide/11-chatgpt/assets/shot-01-home-projects.png)
 
@@ -130,12 +130,12 @@ El 2026-07-09 salió **ChatGPT Work** y la parte de arriba de la pantalla se div
 | Resultado | Un texto de respuesta | Un producto terminado: documento, tabla, presentación, informe, Sites (sitio web sencillo) |
 | Ejemplo | «Resume el acta de la reunión en tres líneas» | «Hazme una presentación de 10 diapositivas con el archivo de ventas de este trimestre» |
 
-- Work en la web y en el móvil se usa en los **planes de pago, excepto Free y Go**. Free y Go solo lo pueden usar de forma limitada en la aplicación de escritorio.[^rn][^pricing]
+- Work en la web y en el teléfono se usa en los **planes de pago, excepto Free y Go**. Free y Go solo lo pueden usar de forma limitada en la aplicación de escritorio.[^rn][^pricing]
 - En Work puedes **programar** tareas. Puedes hacer que se ejecuten una sola vez, con un calendario repetido o cuando se cumpla una condición. Las programaciones se gestionan en «Programaciones» (예약) del menú lateral.[^work][^screen]
 - Para usar Work dentro de un proyecto, elige el botón + → «Iniciar Work en el proyecto» (프로젝트에서 Work 시작).[^screen]
 - **Piensa con Chat y crea con Work.** Dentro de un mismo proyecto, Chat y Work usan los mismos materiales. Por eso puedes ir puliendo la estructura preguntando en Chat y, cuando estés listo para crear, pasar a Work sin tener que volver a explicar desde el principio.[^academy-content]
 - Sites salió en beta pública el 2026-07-09 y no se puede usar en Free ni Go.[^rn]
-- La aplicación de ordenador (macOS y Windows) tiene un **navegador integrado**. En las conversaciones de Work y Codex, ChatGPT puede abrir sitios web directamente con este navegador para trabajar. Si hace falta iniciar sesión, **escribe la contraseña solo en la pantalla de ese navegador y nunca en la ventana de la conversación.** Trata lo que está escrito en los sitios web como contenido en el que no se puede confiar.[^browser] Aunque una instrucción oculta en un sitio web le diga a ChatGPT que entregue mis datos, eso no es un permiso mío.[^sitetools]
+- La aplicación de computadora (macOS y Windows) tiene un **navegador integrado**. En las conversaciones de Work y Codex, ChatGPT puede abrir sitios web directamente con este navegador para trabajar. Si hace falta iniciar sesión, **escribe la contraseña solo en la pantalla de ese navegador y nunca en la ventana de la conversación.** Trata lo que está escrito en los sitios web como contenido en el que no se puede confiar.[^browser] Aunque una instrucción oculta en un sitio web le diga a ChatGPT que entregue mis datos, eso no es un permiso mío.[^sitetools]
 
 ![Pantalla con la parte de arriba cambiada a «Work». Debajo de «¿Qué trabajo hacemos?» (어떤 작업을 할까요?) hay un cuadro de escritura «Iniciar Work con ChatGPT» y los botones «Elegir proyecto», «Archivos», «Complementos» y «Abrir la aplicación de escritorio»](../../../guide/11-chatgpt/assets/shot-12-work-marked.png)
 
@@ -155,7 +155,7 @@ Además, los GPT no usan mi memoria, mis instrucciones personalizadas ni mis con
 
 Si tienes un GPT que hiciste tú, prepárate así antes de que termine.
 
-1. **Copia el texto de las instrucciones** que escribiste al crear el GPT y guárdalo en el bloc de notas, y guarda aparte en tu ordenador también los **archivos de consulta** que habías metido.
+1. **Copia el texto de las instrucciones** que escribiste al crear el GPT y guárdalo en el bloc de notas, y guarda aparte en tu computadora también los **archivos de consulta** que habías metido.
 2. Comprueba el método oficial para trasladarlo en la ayuda «Custom GPT retirement and migration FAQ»[^gpts].
 3. Si el GPT lo usabas solo tú, también puedes crear un **proyecto** con las instrucciones y los archivos guardados y usarlo de forma parecida (es una sugerencia de esta guía).
 
@@ -196,7 +196,7 @@ Es un vídeo de presentación hecho por la propia empresa. La pantalla y los nom
 - Archivos por proyecto: Free 5, Go y Plus 25, Pro 40. Si compartes, la memoria queda fijada como «memoria exclusiva del proyecto».
 - Es cómodo meter en las instrucciones del proyecto la plantilla que vas a reutilizar.
 - Los complementos se buscan en «Complementos» del menú lateral y se usan preguntando, con `@`, con el botón + o con «Plugins».
-- Chat es para conversar; Work, para trabajos largos y resultados terminados. Work en la web y en el móvil se usa en los planes de pago, excepto Free y Go.
+- Chat es para conversar; Work, para trabajos largos y resultados terminados. Work en la web y en el teléfono se usa en los planes de pago, excepto Free y Go.
 - Los permisos predeterminados de las aplicaciones conectadas se eligen en «Configuración» → «Complementos». De la tarjeta de aprobación lee la aplicación, la cuenta y lo que va a hacer antes de pulsar, y aunque cortes la conexión, lo que ya ha entrado se queda.
 - Los GPT personalizados está previsto que terminen el 2026-12-11, así que guarda antes las instrucciones y los archivos. Los planes personales ya no pueden crear GPT nuevos. El modo agente, Sora y Atlas ya han terminado.
 

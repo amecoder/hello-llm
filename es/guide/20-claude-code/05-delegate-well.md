@@ -91,7 +91,7 @@ Esta vez pulsé **«Aceptar»**. Al aprobar, Claude sale del modo plan, cambia a
 
 ![Pantalla ejecutando el plan. Con números rojos: ① la lista de tareas en ejecución, ② los resultados del panel de información de la sesión (README, balance semanal, apunte de estudio, acta), ③ los cambios «+155 −1», ④ el modo de permisos «Manual»](../../../guide/20-claude-code/assets/shot-21-plan-run-marked.png)
 
-Los pasos «crear una rama» y «escribir HANDOFF.md» que se ven en la lista de tareas de ① surgieron de una instrucción personal del ordenador donde se hizo la captura (el recuadro desplegable del capítulo 6). Puede que en tu pantalla no salgan.
+Los pasos «crear una rama» y «escribir HANDOFF.md» que se ven en la lista de tareas de ① surgieron de una instrucción personal de la computadora donde se hizo la captura (el recuadro desplegable del capítulo 6). Puede que en tu pantalla no salgan.
 
 Las plantillas creadas son estas (resultado de la práctica de esta guía).
 

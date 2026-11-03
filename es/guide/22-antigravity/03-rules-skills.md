@@ -48,7 +48,7 @@ Si miras el registro de ejecución, la diferencia se ve todavía más clara.
 - **Cuando no estaba `AGENTS.md`**: el agente buscó y abrió por su cuenta `AGENTS.md`, `CLAUDE.md` y `GEMINI.md`.
 - **Cuando estaba `AGENTS.md`**: aunque no abrió ese archivo aparte, cumplió la regla nueva. Parece que es porque ya estaba incluido desde el principio como regla siempre activa.
 
-`CLAUDE.md` lo **abrió y lo leyó por su cuenta** las dos veces. No entró automáticamente como archivo de reglas, pero parece que, si está en la carpeta, puede leerlo como material de consulta. En este ordenador también hay un archivo de reglas personales (`~/.gemini/GEMINI.md`), que entró en la ejecución, así que no se puede distinguir si este comportamiento es por su influencia. Es el resultado de una sola vez cada uno.
+`CLAUDE.md` lo **abrió y lo leyó por su cuenta** las dos veces. No entró automáticamente como archivo de reglas, pero parece que, si está en la carpeta, puede leerlo como material de consulta. En esta computadora también hay un archivo de reglas personales (`~/.gemini/GEMINI.md`), que entró en la ejecución, así que no se puede distinguir si este comportamiento es por su influencia. Es el resultado de una sola vez cada uno.
 
 Con la misma nota hubo además otra diferencia en el resultado. Codex corrigió el día de la semana de la nota según el calendario de 2026, pero Antigravity usó tal cual el día de la semana escrito en la nota (`10/27(월)`, lunes). Los días de la semana de las notas de prácticas están inventados para la historia, así que no coinciden con el calendario real. Cada herramienta juzga esto de forma distinta, así que compara siempre las fechas con el original.
 

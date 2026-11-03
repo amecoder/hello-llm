@@ -18,7 +18,7 @@ Son cosas como dónde está cada botón, cómo se organizan las conversaciones y
 | 7 | [Skills y aplicaciones conectadas](07-skills-apps.md) | De los Gems a los skills, conectar aplicaciones de Google |
 | 8 | [Encargar tareas](08-tasks.md) | Tareas, programación, Gemini en Chrome, normas de seguridad |
 | 9 | [Privacidad y seguridad](09-privacy.md) | Conservación del historial de actividad, periodo de conservación, revisión humana |
-| 10 | [Voz y móvil](10-voice-mobile.md) | Gemini Live, app del móvil, app del ordenador |
+| 10 | [Voz y teléfono](10-voice-mobile.md) | Gemini Live, app del teléfono, app de la computadora |
 | 11 | [Ejercicios prácticos](11-practice.md) | Ejercicios y lista de comprobación para probar tú mismo las funciones de los capítulos 1 a 10 |
 | 12 | [Usarlo como un experto](12-expert.md) | Elegir la función adecuada para cada tarea y usarlo acumulando |
 

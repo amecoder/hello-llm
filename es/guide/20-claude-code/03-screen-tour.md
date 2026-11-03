@@ -81,7 +81,7 @@ En la práctica de esta guía, Claude explicó antes una decisión suya. En la r
 :::
 
 ::: warning El nombre que queda en el registro de Git
-Git deja en cada registro **el nombre y el correo que figuran en la configuración de Git de este ordenador**. Si es un ordenador de la empresa, puede quedar la cuenta de la empresa. Compruébalo antes de enseñar la pantalla del registro a otra persona o de subir la carpeta. Si el ordenador no tiene Git, instálalo desde el sitio oficial (git-scm.com).[^git]
+Git deja en cada registro **el nombre y el correo que figuran en la configuración de Git de esta computadora**. Si es una computadora de la empresa, puede quedar la cuenta de la empresa. Compruébalo antes de enseñar la pantalla del registro a otra persona o de subir la carpeta. Si la computadora no tiene Git, instálalo desde el sitio oficial (git-scm.com).[^git]
 :::
 
 El panel de cambios también se abre y se cierra con el atajo **Cmd+Shift+D**.[^keys]
@@ -92,11 +92,11 @@ El panel de cambios también se abre y se cierra con el atajo **Cmd+Shift+D**.[^
 
 Si pulsas el botón ③, se abre junto a la conversación el **panel de información de la sesión**. Muestra en tarjetas dónde se ejecuta esta sesión, qué ha cambiado y cuánto contexto ha usado.[^rail]
 
-![Panel de información de la sesión. Los números rojos marcan: ① el entorno (este ordenador · Herramienta de orden · main), ② el contexto, al 12%, ③ los resultados (el archivo del acta) y ④ los cambios (+7 −7 y el botón «Confirmar cambios» (변경 사항 커밋))](../../../guide/20-claude-code/assets/shot-09-rail-marked.png)
+![Panel de información de la sesión. Los números rojos marcan: ① el entorno (esta computadora · Herramienta de orden · main), ② el contexto, al 12%, ③ los resultados (el archivo del acta) y ④ los cambios (+7 −7 y el botón «Confirmar cambios» (변경 사항 커밋))](../../../guide/20-claude-code/assets/shot-09-rail-marked.png)
 
 | N.º | Tarjeta | Qué se ve |
 |---|---|---|
-| ① | Entorno | Dónde (este ordenador) y en qué carpeta se trabaja |
+| ① | Entorno | Dónde (esta computadora) y en qué carpeta se trabaja |
 | ② | Contexto | Cuánto se ha usado de lo que esta sesión puede recordar |
 | ③ | Resultados | Los archivos que se crearon en esta sesión |
 | ④ | Cambios | Número de líneas cambiadas. Si pulsas el número, se abre el panel de cambios |
@@ -116,7 +116,7 @@ Si pulsas el botón de archivos ⑦, se abre el panel de archivos junto con la l
 ![Panel de archivos. Los números rojos marcan: ① la lista de carpetas de la derecha (.claude, inbox, notes y el acta dentro de ellas) y ② el acta abierta a la izquierda](../../../guide/20-claude-code/assets/shot-10-files-marked.png)
 
 - También se abre un archivo si **pulsas su ruta** cuando aparece en la conversación.[^files]
-- Si es una sesión que se ejecuta en este ordenador, **también puedes editar directamente en el panel de archivos.** Lo que cambias se guarda automáticamente.[^files]
+- Si es una sesión que se ejecuta en esta computadora, **también puedes editar directamente en el panel de archivos.** Lo que cambias se guarda automáticamente.[^files]
 - En la lista puede aparecer la carpeta `.claude`. Es donde Claude Code deja la configuración de esta carpeta, y se trata en el capítulo 6.
 
 Los archivos que crea Claude puedes **comprobarlos directamente dentro de la aplicación, sin usar el Finder ni el Explorador**. Lo que en el capítulo 2 hacías contrastando con las notas originales, ahora puedes hacerlo en una sola pantalla.

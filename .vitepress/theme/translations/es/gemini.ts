@@ -38,7 +38,7 @@ export const GEMINI: Record<string, QuestionText> = {
       "El uso solo se cuenta por número de preguntas, así que haces menos preguntas",
       "Abrir un chat nuevo cuando cambia el tema",
       "Cuanto más larga es la conversación, menos uso se gasta, así que sigues en una sola",
-      "Pasarte a la aplicación del móvil",
+      "Pasarte a la aplicación del teléfono",
     ],
     explain: "Gemini vuelve a leer la conversación anterior cada vez que responde, así que cuanto más larga es, más gasta. Si abres un chat nuevo cuando cambia el tema, ahorras uso.",
   },
@@ -207,7 +207,7 @@ export const GEMINI: Record<string, QuestionText> = {
     choices: [
       "No escribes la contraseña y, si parece peligrosa, la denuncias con el enlace de abajo",
       "Como es una aplicación creada dentro de Gemini, es segura y la escribes",
-      "Si la abres desde la aplicación del móvil es segura, así que la abres de nuevo desde el móvil",
+      "Si la abres desde la aplicación del teléfono es segura, así que la abres de nuevo desde el teléfono",
       "En lugar de la contraseña, pones el número de tu tarjeta",
     ],
     explain: "Google recomienda tener muchísimo cuidado con las aplicaciones que piden contraseñas o datos de pago. Una aplicación de Canvas que te parezca peligrosa se puede denunciar con el enlace de la parte inferior de la página.",
@@ -248,7 +248,7 @@ export const GEMINI: Record<string, QuestionText> = {
       "Solo funcionan con una cuenta personal de Google, no con una de empresa",
       "Las funciones de personalización solo se abren en cuentas de empresa",
       "Con un plan de pago funcionan seguro también en cuentas de empresa",
-      "Las funciones de personalización solo se activan desde la aplicación del móvil",
+      "Las funciones de personalización solo se activan desde la aplicación del teléfono",
     ],
     explain: "Las funciones de personalización, como la memoria, las aplicaciones conectadas y las instrucciones, requieren iniciar sesión con una cuenta personal de Google. No funcionan con cuentas de trabajo o de centros educativos, ni con cuentas gestionadas por un tutor.",
   },
@@ -378,7 +378,7 @@ export const GEMINI: Record<string, QuestionText> = {
       "Las cuentas gratuitas también pueden usarlo, hasta 3 veces al día como máximo",
       "Cualquiera puede usarlo con solo iniciar sesión",
       "Las tareas solo se pueden usar con una suscripción a Google AI Pro o Ultra",
-      "En la aplicación del móvil se puede usar gratis",
+      "En la aplicación del teléfono se puede usar gratis",
     ],
     explain: "Las tareas necesitan tener 18 años o más, una cuenta personal, una suscripción a Google AI Pro o Ultra, «Conservar actividad» y «Inteligencia personal».",
   },
@@ -413,14 +413,14 @@ export const GEMINI: Record<string, QuestionText> = {
     explain: "Esconder en una página web o en un correo instrucciones para engañar a la IA se llama inyección de prompts. Aunque haya medidas de seguridad, no evitan todos los riesgos, así que vigila cómo se ejecuta la tarea.",
   },
   "ch308-chrome": {
-    prompt: "Un adulto que vive en Corea quiere usar Gemini en Chrome en el ordenador. ¿Qué afirmación es correcta?",
+    prompt: "Un adulto que vive en Corea quiere usar Gemini en Chrome en la computadora. ¿Qué afirmación es correcta?",
     choices: [
       "Gemini en Chrome solo se puede usar en Estados Unidos, y en ningún otro país del mundo por el momento",
       "Solo se puede usar en modo incógnito",
       "Con 18 años o más también en Corea (por fases); la navegación automática, solo en Estados Unidos",
       "Solo se puede enviar una pestaña cada vez",
     ],
-    explain: "Corea figura entre las regiones compatibles de Gemini en Chrome para mayores de 18 años. Hay que iniciar sesión en la última versión de Chrome del ordenador, y no funciona en modo incógnito. Todavía no se ha abierto a todo el mundo, así que puede que no lo veas.",
+    explain: "Corea figura entre las regiones compatibles de Gemini en Chrome para mayores de 18 años. Hay que iniciar sesión en la última versión de Chrome de la computadora, y no funciona en modo incógnito. Todavía no se ha abierto a todo el mundo, así que puede que no lo veas.",
   },
   "ch309-saved": {
     prompt: "Te preguntas si el contenido de tus chats con Gemini se usa para publicidad. ¿Qué explica Google?",
@@ -473,14 +473,14 @@ export const GEMINI: Record<string, QuestionText> = {
     explain: "Google pide no depender de Gemini para el diagnóstico, el tratamiento o los consejos médicos, ni para ayuda profesional como la jurídica o la financiera. Las respuestas son solo información de referencia, y pueden afirmar como hechos cosas erróneas.",
   },
   "ch310-voice": {
-    prompt: "Pulsas el micrófono en la aplicación de Gemini del móvil y estás pensando la pregunta. ¿Cuánto tiempo puede estar abierto el micrófono como máximo?",
+    prompt: "Pulsas el micrófono en la aplicación de Gemini del teléfono y estás pensando la pregunta. ¿Cuánto tiempo puede estar abierto el micrófono como máximo?",
     choices: [
       "10 segundos",
       "30 segundos",
       "5 minutos como máximo",
       "Todo el rato, hasta que lo apagues",
     ],
-    explain: "El micrófono de la aplicación del móvil está abierto un máximo de 5 minutos para escuchar tu pregunta.",
+    explain: "El micrófono de la aplicación del teléfono está abierto un máximo de 5 minutos para escuchar tu pregunta.",
   },
   "ch310-live": {
     prompt: "Practicabas una presentación con Gemini Live y pulsaste «Finalizar». ¿Qué pasa con esa conversación?",
@@ -493,17 +493,17 @@ export const GEMINI: Record<string, QuestionText> = {
     explain: "Al pulsar «Finalizar», la misma conversación continúa como chat de texto, y si pulsas «Live» otra vez, vuelve a la voz. Para pausar un momento se usa «En espera».",
   },
   "ch310-mobile": {
-    prompt: "Vas a compartir la pantalla del móvil durante Live. ¿Qué debes comprobar antes de compartir?",
+    prompt: "Vas a compartir la pantalla del teléfono durante Live. ¿Qué debes comprobar antes de compartir?",
     choices: [
       "El brillo de la pantalla",
       "Que la batería esté por encima del 50 % para no quedarte sin carga mientras compartes",
       "Que la pantalla esté en horizontal",
       "Que no se vean contraseñas, datos de pago ni mensajes de otras personas",
     ],
-    explain: "Al compartir pantalla, Gemini ve toda la pantalla del móvil. Antes de compartir, comprueba que no haya nada que no deba verse. Si vas a grabar a otras personas, pídeles permiso primero.",
+    explain: "Al compartir pantalla, Gemini ve toda la pantalla del teléfono. Antes de compartir, comprueba que no haya nada que no deba verse. Si vas a grabar a otras personas, pídeles permiso primero.",
   },
   "ch310-desktop": {
-    prompt: "Instalaste la aplicación de Gemini en un ordenador con Windows. ¿Con qué atajo de teclado la puedes llamar al momento?",
+    prompt: "Instalaste la aplicación de Gemini en una computadora con Windows. ¿Con qué atajo de teclado la puedes llamar al momento?",
     choices: [
       "Alt + Espacio",
       "Ctrl + C",

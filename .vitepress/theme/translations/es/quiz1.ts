@@ -10,7 +10,7 @@ export const QUIZ1: Record<string, QuestionText> = {
       "Estos tres son webs que reúnen resultados de búsqueda de internet, sin relación con los LLM",
       "«LLM» se refiere solo a ChatGPT, y Claude y Gemini funcionan de otra manera",
     ],
-    explain: "Si el LLM fuera el motor de un coche, ChatGPT, Claude y Gemini serían servicios que le ponen una carrocería cómoda para conversar (la pantalla de chat).",
+    explain: "Si el LLM fuera el motor de un auto, ChatGPT, Claude y Gemini serían servicios que le ponen una carrocería cómoda para conversar (la pantalla de chat).",
   },
   "ch1-training": {
     prompt: "¿Qué explicación se acerca más a decir que una IA «aprendió»?",
@@ -30,7 +30,7 @@ export const QUIZ1: Record<string, QuestionText> = {
       "Un empleado de la empresa lee cada pregunta y escribe la respuesta en su lugar",
       "Busca en internet la misma pregunta y copia la respuesta que hay debajo",
     ],
-    explain: "Como el autocompletado del teclado del móvil, la IA repite el proceso de elegir y añadir «la palabra que viene después» hasta completar la respuesta.",
+    explain: "Como el autocompletado del teclado del teléfono, la IA repite el proceso de elegir y añadir «la palabra que viene después» hasta completar la respuesta.",
   },
   "ch1-tools": {
     prompt: "Cuando un servicio de chat con IA te cuenta las noticias de hoy mediante una búsqueda web, ¿qué ocurre en realidad?",
@@ -115,8 +115,8 @@ export const QUIZ1: Record<string, QuestionText> = {
   "ch2-change": {
     prompt: "Con la llegada de los servicios de chat con IA, ¿qué es lo que más ha cambiado?",
     choices: [
-      "Se le puede encargar al ordenador casi cualquier tarea de texto con el lenguaje de todos los días",
-      "Ahora solo se le puede encargar trabajo al ordenador si antes se aprende un lenguaje de programación",
+      "Se le puede encargar a la computadora casi cualquier tarea de texto con el lenguaje de todos los días",
+      "Ahora solo se le puede encargar trabajo a la computadora si antes se aprende un lenguaje de programación",
       "En vez de hacer muchas cosas, ahora hace mucho mejor que las personas solo una: traducir",
       "Ahora conoce hasta las últimas noticias de hoy sin necesidad de conectarse a internet",
     ],
@@ -167,7 +167,7 @@ export const QUIZ1: Record<string, QuestionText> = {
     choices: [
       "La IA lo hace todo por su cuenta aunque yo no le cuente mi situación",
       "Para usar bien la IA hay que memorizar antes comandos difíciles",
-      "Las respuestas de la IA son siempre exactas porque las calcula un ordenador",
+      "Las respuestas de la IA son siempre exactas porque las calcula una computadora",
       "Si la respuesta no convence, lo normal es seguir y pedirle que la corrija",
     ],
     explain: "Más que esperar una respuesta perfecta a la primera, lo normal es seguir conversando y pedir correcciones. Las otras tres son malentendidos habituales.",
@@ -490,7 +490,7 @@ export const QUIZ1: Record<string, QuestionText> = {
       "Escribir los nombres con espacios entre las letras para que cueste reconocerlos",
       "Cambiar los nombres por «el Sr. A» o «la empresa B» y los importes por cantidades aproximadas",
     ],
-    explain: "Lo que escribes en la IA se envía a los ordenadores de la empresa de IA y, según los ajustes, puede usarse para entrenar o ser revisado por personas. La información que no hace falta, como las fechas, se deja en blanco con [ ], y la información real se rellena en tu ordenador después de recibir la respuesta.",
+    explain: "Lo que escribes en la IA se envía a las computadoras de la empresa de IA y, según los ajustes, puede usarse para entrenar o ser revisado por personas. La información que no hace falta, como las fechas, se deja en blanco con [ ], y la información real se rellena en tu computadora después de recibir la respuesta.",
   },
   "ch9-copyright": {
     prompt: "Sobre los derechos de un texto o dibujo hecho con IA, ¿cuál es la conclusión correcta del informe de 2025 de la Oficina de Derechos de Autor de EE. UU.?",
@@ -527,10 +527,10 @@ export const QUIZ1: Record<string, QuestionText> = {
     choices: [
       "En la ventana de chat de la IA, diciéndole el nombre y el importe reales y pidiéndole que los rellene",
       "Pegando el borrador en otro servicio de IA y pidiéndole que rellene los huecos",
-      "Directamente en el archivo del documento que tengo en mi propio ordenador",
+      "Directamente en el archivo del documento que tengo en mi propia computadora",
       "Se puede enviar a la otra persona dejando los huecos como están",
     ],
-    explain: "Si rellenas los huecos en tu ordenador, puedes completar el documento sin enviar a la IA el nombre ni el importe reales.",
+    explain: "Si rellenas los huecos en tu computadora, puedes completar el documento sin enviar a la IA el nombre ni el importe reales.",
   },
   "ch10-academy": {
     prompt: "¿Cuál es la afirmación correcta sobre las actividades de práctica del curso gratuito «AI Fluency» creado por Anthropic?",

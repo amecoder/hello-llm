@@ -1,9 +1,9 @@
 # Capítulo 1. Primeros pasos: dónde se usa, registro, planes y límites de uso
 
-> **En una línea**: Claude se usa con la misma cuenta en la web, en la aplicación de ordenador y en la del móvil. Para registrarte necesitas un correo (o una cuenta de Google o Apple)
-> y una verificación por SMS en el móvil. Empieza gratis y piensa en un plan de pago solo cuando el límite se te quede corto con frecuencia.
+> **En una línea**: Claude se usa con la misma cuenta en la web, en la aplicación de computadora y en la del teléfono. Para registrarte necesitas un correo (o una cuenta de Google o Apple)
+> y una verificación por SMS en el teléfono. Empieza gratis y piensa en un plan de pago solo cuando el límite se te quede corto con frecuencia.
 
-Las pantallas son de la versión web de octubre de 2026, y las imágenes corresponden al plan gratuito. En la aplicación del móvil o del ordenador, la posición de los menús puede ser un poco distinta.
+Las pantallas son de la versión web de octubre de 2026, y las imágenes corresponden al plan gratuito. En la aplicación del teléfono o de la computadora, la posición de los menús puede ser un poco distinta.
 
 ## Qué es Claude y dónde se usa
 
@@ -15,12 +15,12 @@ Hay tres sitios donde usarlo. Estés donde estés, la cuenta es una sola.
 | Dónde se usa | Cómo se abre | Qué necesitas |
 |---|---|---|
 | Web | claude.ai en el navegador | Un navegador de internet |
-| Aplicación de ordenador | Descargarla de la página de descargas | macOS 13 o superior, Windows 10 o superior |
-| Aplicación del móvil | Descargarla de la tienda de aplicaciones | iOS 18 o superior, Android 8.0 o superior |
+| Aplicación de computadora | Descargarla de la página de descargas | macOS 13 o superior, Windows 10 o superior |
+| Aplicación del teléfono | Descargarla de la tienda de aplicaciones | iOS 18 o superior, Android 8.0 o superior |
 
 Fuente: ayuda de Anthropic[^start][^desktop][^ios][^android]
 
-La aplicación de ordenador también se puede usar en Linux (uno de los sistemas operativos de los ordenadores) en versión **beta** (una fase de pruebas antes del lanzamiento oficial).[^desktop]
+La aplicación de computadora también se puede usar en Linux (uno de los sistemas operativos de las computadoras) en versión **beta** (una fase de pruebas antes del lanzamiento oficial).[^desktop]
 Si es tu primera vez, empieza por la web. No hay que instalar nada, así que es lo más fácil.
 
 Para usarlo hay dos condiciones.[^start]
@@ -28,7 +28,7 @@ Para usarlo hay dos condiciones.[^start]
 - Tienes que estar en una **región compatible** (un país donde el servicio se ofrece oficialmente). Corea está en la lista de regiones compatibles.[^where]
 - Tienes que tener **18 años o más**.
 
-Para descargar la aplicación del móvil, busca «Claude by Anthropic» en la tienda de aplicaciones.[^ios][^android]
+Para descargar la aplicación del teléfono, busca «Claude by Anthropic» en la tienda de aplicaciones.[^ios][^android]
 En la App Store del iPhone también hay una versión para empresas, «Claude for Intune». Si tu empresa no te ha pedido usarla, descarga «Claude by Anthropic».[^ios]
 Si la aplicación no aparece en la búsqueda, puede que tu región, tu dispositivo o la versión de tu sistema operativo no sean compatibles.[^android]
 Si una función nueva solo te falta a ti, actualiza la aplicación a mano desde la tienda.[^update]
@@ -53,22 +53,22 @@ Es cómodo, porque no tienes que memorizar ninguna contraseña. A cambio, **tien
 
 Hay tres cosas que conviene saber.[^login]
 
-1. **Si pulsas el enlace en otro dispositivo, aparece un código.** Por ejemplo, imagina que pides iniciar sesión en el ordenador y abres el correo en el móvil. Entonces el móvil muestra un código de verificación. Escribe ese código en el ordenador donde pediste iniciar sesión.
+1. **Si pulsas el enlace en otro dispositivo, aparece un código.** Por ejemplo, imagina que pides iniciar sesión en la computadora y abres el correo en el teléfono. Entonces el teléfono muestra un código de verificación. Escribe ese código en la computadora donde pediste iniciar sesión.
 2. **Si el correo no llega, mira la carpeta de spam.** Busca un mensaje de @mail.anthropic.com.
 3. **Entra con el mismo correo en todos los dispositivos.** Solo si inicias sesión con el correo de siempre se abre la misma cuenta.
 
 <Quiz id="ch201-login" />
 
-## Verificación por SMS en el móvil
+## Verificación por SMS en el teléfono
 
-Al registrarte por primera vez te piden **verificar tu número de móvil**. Escribes un número de móvil de una región compatible y te llega por SMS un código de **6 cifras**.[^phone]
+Al registrarte por primera vez te piden **verificar tu número de teléfono**. Escribes un número de teléfono de una región compatible y te llega por SMS un código de **6 cifras**.[^phone]
 Este paso **no se puede saltar**. Lo hacen todos los usuarios nuevos.[^phone]
 
-<!-- Falta captura de pantalla: pantalla para escribir el número de móvil y pantalla «Confirmar código» (web) -->
+<!-- Falta captura de pantalla: pantalla para escribir el número de teléfono y pantalla «Confirmar código» (web) -->
 
 Antes de escribirlo, comprueba lo siguiente.[^phone]
 
-- **Solo sirven números de móvil normales.** No valen los números de telefonía por internet (VoIP), Google Voice, números creados con una aplicación ni teléfonos fijos.
+- **Solo sirven números de teléfono normales.** No valen los números de telefonía por internet (VoIP), Google Voice, números creados con una aplicación ni teléfonos fijos.
 - **Si pasan 5 minutos y no llega el SMS**, pulsa «Reintentar» (다시 시도).
 - **Con un mismo número se pueden verificar hasta 3 cuentas.**
 - **Un número que ya has verificado no se puede cambiar después.** Por eso verifica con un número tuyo que vayas a usar mucho tiempo. Si verificas con un número prestado un rato, luego no hay manera de cambiarlo.
@@ -89,7 +89,7 @@ Claude también tiene varios **planes** (formas de uso en las que las funciones 
 Fuente: página de precios y ayuda de Anthropic[^pricing][^pro][^max]
 
 Estos precios son **en dólares de EE. UU.** y **no incluyen impuestos**.[^pricing] En el país donde vives pueden mostrarse en la moneda local, y los impuestos también cambian según el país.[^pro]
-Si pagas desde la aplicación del móvil, el precio puede ser distinto del de la web.[^max] En esta guía no hemos podido comprobar el precio en wones que se ve en Corea. Antes de pagar, compruébalo tú en la [página de precios](https://claude.com/pricing).
+Si pagas desde la aplicación del teléfono, el precio puede ser distinto del de la web.[^max] En esta guía no hemos podido comprobar el precio en wones que se ve en Corea. Antes de pagar, compruébalo tú en la [página de precios](https://claude.com/pricing).
 
 ### En qué se diferencia cada plan
 
@@ -136,7 +136,7 @@ En su lugar hay tres límites.
 Fuente: ayuda de Anthropic[^start][^limits]
 
 El **límite de sesión y el límite semanal** son como depósitos que miden lo que has usado. El límite semanal se repone el día y a la hora que tiene asignados cada cuenta.[^pro]
-Lo que usas en la web, en la aplicación de ordenador y en la del móvil se cuenta **en un solo depósito**. Pasarte al móvil no te da un límite nuevo.[^limits][^pricing]
+Lo que usas en la web, en la aplicación de computadora y en la del teléfono se cuenta **en un solo depósito**. Pasarte al teléfono no te da un límite nuevo.[^limits][^pricing]
 
 Cuando te acercas al límite aparece un aviso: «Te acercas al límite de la sesión» (세션 제한에 접근 중) o «Te acercas al límite semanal» (주간 제한에 접근 중).[^errors] Cuando llegas al límite, te dice a qué hora podrás volver a usarlo.[^errors]
 Entonces puedes esperar hasta esa hora o subir de plan.[^limits] En los planes de pago, en «Uso» (Usage) dentro de la configuración, ves con barras cuánto has gastado.[^best][^usage-name]
@@ -203,14 +203,14 @@ No hace falta empezar con un plan de pago. Lo más sensato es **empezar gratis y
 
 El nombre y el correo son de ejemplo en esta pantalla (plan gratuito). En el menú de la cuenta, además de ① «Configuración», se ve directamente ④ «Mejorar el plan».[^screen] Entres por donde entres, vuelve a leer el precio y las condiciones antes de pagar.
 
-En la aplicación del móvil, pulsa la inicial de tu nombre arriba a la derecha y elige «Mejorar a Pro» (Pro로 업그레이드). Se hace con el pago de la tienda de aplicaciones (compra dentro de la aplicación).[^ios-pro][^android-pro]
+En la aplicación del teléfono, pulsa la inicial de tu nombre arriba a la derecha y elige «Mejorar a Pro» (Pro로 업그레이드). Se hace con el pago de la tienda de aplicaciones (compra dentro de la aplicación).[^ios-pro][^android-pro]
 
 Antes de pagar, ten presente lo siguiente.
 
 - **La suscripción se renueva sola.** Por defecto se renueva automáticamente al final de cada periodo de pago.[^signup]
-- **Se cancela en el sitio donde te suscribiste.** Si te suscribiste en la web o en la aplicación de ordenador, pulsa «Cancelar» (취소) en «Configuración» → «Facturación».[^billing-name] Si te suscribiste en la aplicación del móvil, ve a la inicial de tu nombre en la aplicación → «Facturación» (청구) → «Administrar suscripción» (구독 관리). En ese caso el pago lo gestiona Apple o Google.[^cancel]
+- **Se cancela en el sitio donde te suscribiste.** Si te suscribiste en la web o en la aplicación de computadora, pulsa «Cancelar» (취소) en «Configuración» → «Facturación».[^billing-name] Si te suscribiste en la aplicación del teléfono, ve a la inicial de tu nombre en la aplicación → «Facturación» (청구) → «Administrar suscripción» (구독 관리). En ese caso el pago lo gestiona Apple o Google.[^cancel]
 - **Cancela como mínimo 24 horas antes del día de pago.** Así no se cobra el siguiente importe. La cancelación se aplica cuando termina el periodo de pago actual.[^cancel]
-- **Si borras la aplicación, la suscripción sigue.** Aunque desinstales la aplicación del móvil, la suscripción no se cancela sola.[^ios]
+- **Si borras la aplicación, la suscripción sigue.** Aunque desinstales la aplicación del teléfono, la suscripción no se cancela sola.[^ios]
 - **Si cancelas, tus conversaciones se quedan.** Los chats, los proyectos y los archivos siguen ahí, y cuando termina el periodo pasas al plan gratuito.[^pricing]
 - **En principio no hay reembolsos.** Las únicas excepciones son los casos que fijan las condiciones del servicio o la ley de tu país.[^pricing]
 - **En la web, el pago solo se acepta con tarjeta de crédito o débito.**[^billing]
@@ -252,17 +252,17 @@ Cuando mandes una captura de pantalla, procura que no se vean otros datos person
 ## Pruébalo tú mismo
 
 1. Entra en claude.ai, regístrate con tu correo y entra pulsando el enlace del correo de inicio de sesión. Si el correo no llega, mira la carpeta de spam.
-2. Completa la verificación por SMS en el móvil. Comprueba una vez más que es un número tuyo que vas a usar mucho tiempo.
+2. Completa la verificación por SMS en el teléfono. Comprueba una vez más que es un número tuyo que vas a usar mucho tiempo.
 3. Pregunta: «¿En qué tareas me puedes ayudar?».
-4. Instala la aplicación «Claude by Anthropic» en el móvil, inicia sesión con el mismo correo y comprueba si se ven las conversaciones que tuviste en el ordenador.
+4. Instala la aplicación «Claude by Anthropic» en el teléfono, inicia sesión con el mismo correo y comprueba si se ven las conversaciones que tuviste en la computadora.
 
 **Proyecto continuo** ([Preparar un club de lectura](../00-common/practice-kit.md)): pregunta «Soy el tesorero de un club de lectura de mi barrio. Hazme una lista de lo que tengo que preparar para la reunión del mes que viene». Cuando termines el ejercicio, compara la lista que recibiste con lo que hiciste de verdad.
 
 ## Resumen
 
-- Claude se usa con la misma cuenta en la web (claude.ai), en la aplicación de ordenador y en la del móvil. Se puede usar desde los 18 años y en las regiones compatibles (incluida Corea).
+- Claude se usa con la misma cuenta en la web (claude.ai), en la aplicación de computadora y en la del teléfono. Se puede usar desde los 18 años y en las regiones compatibles (incluida Corea).
 - El registro y el inicio de sesión se hacen con el correo o con una cuenta de Google o Apple. En lugar de contraseña, recibes un correo con un enlace de inicio de sesión.
-- Al registrarte por primera vez haces la verificación por SMS en el móvil. Un número que ya has verificado no se puede cambiar.
+- Al registrarte por primera vez haces la verificación por SMS en el teléfono. Un número que ya has verificado no se puede cambiar.
 - Los planes para uso personal son Free, Pro y Max. Los precios son en dólares de EE. UU. y sin impuestos, así que compruébalos en la página de precios.
 - Los límites son tres: el límite de sesión de 5 horas, el límite semanal (en los planes de pago) y el límite de longitud de una conversación. No hay un número fijo de mensajes.
 - La suscripción se renueva sola. Cancélala en el sitio donde te suscribiste, como mínimo 24 horas antes del día de pago. Aunque borres la aplicación, la suscripción sigue.

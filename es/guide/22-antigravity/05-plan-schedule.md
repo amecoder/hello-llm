@@ -37,7 +37,7 @@ Las Automations envían mensajes al agente según el calendario que hayas fijado
 - No se ejecutan en el minuto exacto. Se reparten hasta el 10 % del intervalo, con un máximo de 15 minutos.[^jitter]
 - Con **Run Now** puedes ejecutar una vez de inmediato, o con **Create with Prompt** crearla conversando con el agente.[^run-now]
 
-Mientras el agente trabaja, impide que el ordenador se duerma.[^sleep] Pero **la documentación oficial no dice si las Automations se ejecutan cuando la app está cerrada o el ordenador está dormido.** Como con las programaciones de escritorio de Claude Code y Codex, es más seguro dejar la app abierta y el ordenador despierto (recomendación de esta guía).
+Mientras el agente trabaja, impide que la computadora se duerma.[^sleep] Pero **la documentación oficial no dice si las Automations se ejecutan cuando la app está cerrada o la computadora está dormida.** Como con las programaciones de escritorio de Claude Code y Codex, es más seguro dejar la app abierta y la computadora despierta (recomendación de esta guía).
 
 Antes de crear una programación, prueba primero la misma petición en una conversación normal, ejecútala una vez con Run Now y solo entonces fija el calendario.
 
@@ -59,9 +59,9 @@ El modo objetivo cambia **solo la forma de detenerse**. Los ajustes de permisos 
 
 ## Seguirlo desde otro dispositivo
 
-Si activas **Settings → Application → Enable Remote Control** en la app, puedes manejar el Antigravity de tu ordenador desde el navegador web de otro dispositivo.[^remote][^any-browser] En el otro dispositivo, inicia sesión también con **la misma cuenta de Google que en el escritorio**.[^same-account]
+Si activas **Settings → Application → Enable Remote Control** en la app, puedes manejar el Antigravity de tu computadora desde el navegador web de otro dispositivo.[^remote][^any-browser] En el otro dispositivo, inicia sesión también con **la misma cuenta de Google que en el escritorio**.[^same-account]
 
-Aunque lo uses en remoto, el trabajo se hace con los archivos, las herramientas y los datos de inicio de sesión de **tu ordenador**.[^local] Por lo cómodo que es, activa el control remoto solo en dispositivos de confianza.
+Aunque lo uses en remoto, el trabajo se hace con los archivos, las herramientas y los datos de inicio de sesión de **tu computadora**.[^local] Por lo cómodo que es, activa el control remoto solo en dispositivos de confianza.
 
 <Quiz id="ch605-remote" />
 
@@ -78,9 +78,9 @@ Aunque lo uses en remoto, el trabajo se hace con los archivos, las herramientas 
 
 - `/plan` pide primero el plan, y `/grill-me` saca los requisitos con una pregunta cada vez.
 - `/schedule` solo dentro de esa conversación; lo que debe seguir funcionando, en Automations.
-- La documentación no dice si las Automations funcionan con la app cerrada. Es más seguro dejar la app abierta y el ordenador despierto.
+- La documentación no dice si las Automations funcionan con la app cerrada. Es más seguro dejar la app abierta y la computadora despierta.
 - `/browser` maneja Chrome y lo graba. `/goal` no se detiene, así que dale un criterio de terminado.
-- El control remoto se usa con la misma cuenta, y el trabajo se hace en tu ordenador.
+- El control remoto se usa con la misma cuenta, y el trabajo se hace en tu computadora.
 
 ## Glosario
 
@@ -88,7 +88,7 @@ Aunque lo uses en remoto, el trabajo se hace con los archivos, las herramientas 
 |---|---|---|
 | Automations | Automatizaciones | Programación que sigue funcionando más allá de la conversación |
 | Subagent | Subagente | Agente auxiliar al que el agente principal reparte trabajo |
-| Remote Control | Control remoto | Manejar el Antigravity de tu ordenador desde otro dispositivo |
+| Remote Control | Control remoto | Manejar el Antigravity de tu computadora desde otro dispositivo |
 
 <ChapterDone :chapter="605" />
 

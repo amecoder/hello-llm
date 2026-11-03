@@ -3,7 +3,7 @@
 > **En una línea**: cuando se acumulan conversaciones, las encuentras con la **búsqueda**, y las que no usas las **archivas** o las **eliminas**.
 > Para enseñarle una conversación a otra persona usa el **enlace para compartir**; si no quieres que quede registro, el **chat temporal**; y si una conversación te incomodaría que la viera quien está a tu lado, los **chats bloqueados**.
 
-Las pantallas corresponden a la web en octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
+Las pantallas corresponden a la web en octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del teléfono, la ubicación de los menús puede ser un poco distinta.
 
 ## Empezar un chat nuevo
 
@@ -145,13 +145,13 @@ Cosas que debes saber.
 
 ## Para que otros no la abran — chats bloqueados
 
-Si compartes ordenador con tu familia y no quieres que se vean las conversaciones de consultas de salud, prueba los **chats bloqueados**. Es una función que se está ofreciendo por etapas a partir del 20 de octubre de 2026.[^rn-lock]
+Si compartes computadora con tu familia y no quieres que se vean las conversaciones de consultas de salud, prueba los **chats bloqueados**. Es una función que se está ofreciendo por etapas a partir del 20 de octubre de 2026.[^rn-lock]
 
 1. Pulsa el menú de más opciones (•••) de la conversación que quieras bloquear → «Bloquear chat» (대화 잠그기).
 2. Los chats bloqueados se reúnen en «Proyectos» → «Chats bloqueados» (잠긴 대화).
-3. Para abrirlos se introduce un **PIN de cuenta de 4 cifras** (una contraseña numérica que eliges tú). En el móvil también se puede usar la autenticación biométrica, como Face ID.
+3. Para abrirlos se introduce un **PIN de cuenta de 4 cifras** (una contraseña numérica que eliges tú). En el teléfono también se puede usar la autenticación biométrica, como Face ID.
 
-El PIN de cuenta se fija en Configuración → «Seguridad e inicio de sesión» (보안 및 로그인).[^lock] En la aplicación del móvil se vuelve a bloquear al pasar 1 minuto. Es cuando sales 1 minuto de un chat bloqueado o cuando la aplicación pasa 1 minuto en segundo plano.
+El PIN de cuenta se fija en Configuración → «Seguridad e inicio de sesión» (보안 및 로그인).[^lock] En la aplicación del teléfono se vuelve a bloquear al pasar 1 minuto. Es cuando sales 1 minuto de un chat bloqueado o cuando la aplicación pasa 1 minuto en segundo plano.
 
 <!-- Falta captura de pantalla: la pantalla en la que se pide el PIN en el menú lateral «Proyectos» → «Chats bloqueados» (web) -->
 

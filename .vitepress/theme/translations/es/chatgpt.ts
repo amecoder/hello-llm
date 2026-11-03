@@ -33,7 +33,7 @@ export const CHATGPT: Record<string, QuestionText> = {
     explain: "Los anuncios solo pueden aparecer en Free y Go, no influyen en la respuesta y los anunciantes no ven tus conversaciones. En el chat temporal no hay anuncios.",
   },
   "ch101-subscribe": {
-    prompt: "Quieres dejar de usar el plan Plus y borras la aplicación de ChatGPT del móvil. ¿Qué pasa?",
+    prompt: "Quieres dejar de usar el plan Plus y borras la aplicación de ChatGPT del teléfono. ¿Qué pasa?",
     choices: [
       "En cuanto borras la aplicación, la suscripción se cancela sola",
       "El mes siguiente pasas solo al plan gratuito",
@@ -43,14 +43,14 @@ export const CHATGPT: Record<string, QuestionText> = {
     explain: "Aunque borres la aplicación, la suscripción continúa. Para dejar de pagar tienes que cancelarla tú.",
   },
   "ch101-apps": {
-    prompt: "¿Qué afirmación es correcta sobre las aplicaciones de móvil y de ordenador?",
+    prompt: "¿Qué afirmación es correcta sobre las aplicaciones de teléfono y de computadora?",
     choices: [
       "Tienes que crear una cuenta nueva en cada aplicación",
       "En las aplicaciones inicias sesión con la misma cuenta que usas en la web",
-      "En la aplicación de móvil no hay forma de elegir Work",
+      "En la aplicación de teléfono no hay forma de elegir Work",
       "Cualquier aplicación que tenga ChatGPT en el nombre es una aplicación oficial de OpenAI",
     ],
-    explain: "No hace falta crear una cuenta nueva en cada aplicación: inicias sesión con la misma. En el móvil eliges Chat o Work en el menú desplegable de arriba. Al descargar una aplicación, comprueba el nombre del desarrollador (en App Store «OpenAI OpCo, LLC» y en Google Play «OpenAI»).",
+    explain: "No hace falta crear una cuenta nueva en cada aplicación: inicias sesión con la misma. En el teléfono eliges Chat o Work en el menú desplegable de arriba. Al descargar una aplicación, comprueba el nombre del desarrollador (en App Store «OpenAI OpCo, LLC» y en Google Play «OpenAI»).",
   },
   "ch101-trouble": {
     prompt: "La respuesta de ChatGPT se detuvo y cada vez aparece el puzle de «comprueba que eres una persona». ¿Qué es lo primero que conviene probar?",
@@ -90,7 +90,7 @@ export const CHATGPT: Record<string, QuestionText> = {
       "Chat conversa solo en inglés y Work solo en coreano",
       "Solo cambia el nombre; hacen lo mismo",
     ],
-    explain: "Chat es para preguntar y responder. Work es un modo en el que encargas una tarea larga y recibes un resultado, como un documento o una tabla. En la web y el móvil, Work está disponible en los planes de pago (excepto Free y Go).",
+    explain: "Chat es para preguntar y responder. Work es un modo en el que encargas una tarea larga y recibes un resultado, como un documento o una tabla. En la web y el teléfono, Work está disponible en los planes de pago (excepto Free y Go).",
   },
   "ch102-plus": {
     prompt: "¿Qué pasa si pegas en el cuadro de entrada un texto de más de 10.000 caracteres?",
@@ -226,7 +226,7 @@ export const CHATGPT: Record<string, QuestionText> = {
     prompt: "¿Cuándo conviene usar «Boceto» del menú +?",
     choices: [
       "Cuando quieres mostrar con un dibujo una distribución difícil de explicar",
-      "Cuando quieres elegir y subir una foto que ya tienes guardada en el ordenador",
+      "Cuando quieres elegir y subir una foto que ya tienes guardada en la computadora",
       "Cuando quieres sacar de la biblioteca un archivo que subiste antes",
       "Cuando quieres buscar una imagen parecida en internet y pegarla",
     ],
@@ -426,11 +426,11 @@ export const CHATGPT: Record<string, QuestionText> = {
     prompt: "Desactivaste «Mejorar el modelo para todos». ¿En qué caso se pueden seguir usando tus conversaciones para entrenar?",
     choices: [
       "Cuando cambias el título de una conversación en el menú lateral",
-      "Cuando inicias sesión en la aplicación del móvil con la misma cuenta que usas en la web",
+      "Cuando inicias sesión en la aplicación del teléfono con la misma cuenta que usas en la web",
       "Cuando envías comentarios, como «Me gusta» o «No me gusta», sobre una respuesta",
       "Cuando archivas la conversación y la ocultas del menú lateral",
     ],
-    explain: "Aunque desactives el entrenamiento, si envías comentarios, esa conversación entera puede usarse para entrenar. El ajuste que desactivas con la sesión iniciada se aplica a todos tus dispositivos, incluida la aplicación del móvil.",
+    explain: "Aunque desactives el entrenamiento, si envías comentarios, esa conversación entera puede usarse para entrenar. El ajuste que desactivas con la sesión iniciada se aplica a todos tus dispositivos, incluida la aplicación del teléfono.",
   },
   "ch108-share": {
     prompt: "Hace unos meses publicaste un enlace compartido de ChatGPT en un chat de grupo. ¿Cómo haces para que ya nadie pueda verlo?",
@@ -460,12 +460,12 @@ export const CHATGPT: Record<string, QuestionText> = {
       "El archivo solo tiene datos de la cuenta, sin conversaciones, así que lo puedo dejar en cualquier sitio",
       "Al recibir el enlace la cuenta se elimina sola, así que antes cancelo la suscripción",
     ],
-    explain: "El enlace puede tardar hasta 7 días en llegar, pero una vez recibido caduca a las 24 horas. El archivo contiene todas tus conversaciones, así que no lo descargues en un ordenador compartido.",
+    explain: "El enlace puede tardar hasta 7 días en llegar, pero una vez recibido caduca a las 24 horas. El archivo contiene todas tus conversaciones, así que no lo descargues en una computadora compartida.",
   },
   "ch108-account": {
     prompt: "Alguien pagó la suscripción de ChatGPT en la App Store del iPhone y quiere eliminar su cuenta. ¿Qué debe hacer primero?",
     choices: [
-      "Borrar la aplicación de ChatGPT del móvil",
+      "Borrar la aplicación de ChatGPT del teléfono",
       "Vaciar antes las conversaciones con «Eliminar todos los chats»",
       "Cancelar la suscripción directamente en Apple",
       "Crear otra cuenta con el mismo correo",
@@ -517,7 +517,7 @@ export const CHATGPT: Record<string, QuestionText> = {
     choices: [
       "En la conversación de voz no puedes pedir correcciones",
       "Solo puedes tener una conversación de voz abierta a la vez",
-      "La conversación de voz solo funciona en la aplicación del móvil, no en la web",
+      "La conversación de voz solo funciona en la aplicación del teléfono, no en la web",
       "Si activas varias conversaciones de voz a la vez, las respuestas llegan más rápido",
     ],
     explain: "Solo se puede tener una conversación de voz a la vez. En la web se inicia con el botón de voz del cuadro de entrada, y de palabra puedes pedir cambios, como “dilo más corto”.",
@@ -526,11 +526,11 @@ export const CHATGPT: Record<string, QuestionText> = {
     prompt: "Quieres enfocar con la cámara un electrodoméstico averiado y preguntar por voz. ¿Qué modo debes usar?",
     choices: [
       "El dictado del cuadro de entrada de la web (botón del micrófono)",
-      "El modo Live de la aplicación del móvil",
-      "El modo Advanced de la aplicación del móvil",
-      "El modo Standard de la aplicación del móvil",
+      "El modo Live de la aplicación del teléfono",
+      "El modo Advanced de la aplicación del teléfono",
+      "El modo Standard de la aplicación del teléfono",
     ],
-    explain: "El vídeo y compartir pantalla solo funcionan en el modo Advanced de la aplicación del móvil. El modo Live escucha y habla a la vez, pero no admite vídeo ni compartir pantalla.",
+    explain: "El vídeo y compartir pantalla solo funcionan en el modo Advanced de la aplicación del teléfono. El modo Live escucha y habla a la vez, pero no admite vídeo ni compartir pantalla.",
   },
   "ch109-limits": {
     prompt: "¿Qué afirmación sobre el límite de uso de la conversación de voz (modo Live) es correcta?",
@@ -645,7 +645,7 @@ export const CHATGPT: Record<string, QuestionText> = {
   "ch111-study": {
     prompt: "¿Dónde no se puede activar el modo de estudio?",
     choices: [
-      "En una conversación normal de la aplicación del móvil",
+      "En una conversación normal de la aplicación del teléfono",
       "En una conversación dentro de un proyecto",
       "En una conversación normal del plan gratuito",
       "En un chat nuevo abierto en la web",

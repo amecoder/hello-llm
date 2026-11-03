@@ -99,7 +99,7 @@ Ahora, en una conversación nueva dentro del proyecto solo tienes que pegar las 
 Un **conector** (connector) es una conexión que une a Claude con las aplicaciones y servicios que usas. Si lo conectas, Claude puede traer los datos que hay dentro e incluso hacer tareas dentro de ese servicio.[^connectors]
 Por ejemplo, si conectas Google Calendar, puedes preguntar: "dime cuándo estoy libre la semana que viene". No hace falta copiar y pegar tus citas.
 
-Los conectores los puede usar cualquier usuario, incluido el plan gratuito, en la web, el escritorio y el móvil.[^connectors]
+Los conectores los puede usar cualquier usuario, incluido el plan gratuito, en la web, el escritorio y el teléfono.[^connectors]
 
 ### Cómo conectar
 
@@ -129,7 +129,7 @@ Es una pantalla del plan gratuito. En este capítulo usamos estas tres.
 
 *Es la pantalla de una cuenta gratuita que todavía no tiene ningún conector conectado. Por eso, en lugar de los interruptores de activar y desactivar de cada servicio, solo se ve «Explorar conectores». «Añadir conector personalizado» aparecía en gris y no se podía pulsar.*[^screen-connectors]
 
-Instalar conectores desde el móvil todavía está en beta. Si los conectas en la web o en el escritorio, la próxima vez que inicies sesión en la app del móvil podrás usarlos tal cual.[^connectors]
+Instalar conectores desde el teléfono todavía está en beta. Si los conectas en la web o en el escritorio, la próxima vez que inicies sesión en la app del teléfono podrás usarlos tal cual.[^connectors]
 
 ### Lo que debes saber antes de conectar
 
@@ -297,7 +297,7 @@ En la pantalla del plan gratuito también se ven la pestaña «Plugins» y «Añ
 
 - Los plugins que añades se guardan en tu cuenta. Se pueden usar en el chat web, en el Chat de la app de escritorio y en Cowork.[^plugins]
 - Algunas funciones (como los subagentes) no se ejecutan en el chat y aparecen en gris. Se ejecutan en Cowork, del [capítulo 8](08-cowork.md).[^plugins]
-- **Instala solo plugins de sitios de confianza.** Según el plugin, puede contener partes que se ejecutan en tu ordenador con los mismos permisos que otros programas.[^plugins]
+- **Instala solo plugins de sitios de confianza.** Según el plugin, puede contener partes que se ejecutan en tu computadora con los mismos permisos que otros programas.[^plugins]
 
 <Quiz id="ch207-plugins" />
 

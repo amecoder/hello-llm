@@ -51,7 +51,7 @@ En la pantalla nueva no existe la opción «Chat»/«Cowork» (mira abajo «Empe
 
 ## Empezar con Cowork
 
-1. Abre la web (claude.ai), la aplicación de escritorio o la aplicación del móvil.
+1. Abre la web (claude.ai), la aplicación de escritorio o la aplicación del teléfono.
 2. En la pantalla nueva no hay nada que elegir. Cualquier conversación puede encargarse de un trabajo de Cowork.[^cowork]
 3. Describe lo que hay que hacer.
 4. Mira el plan que presenta Claude y, si está bien, dale paso.[^cowork]
@@ -117,7 +117,7 @@ Antes de empezar, Claude puede hacerte algunas preguntas. En su mayoría basta c
 - **Puedes intervenir mientras avanza.** Si la dirección es errónea, corrígela a mitad de camino.[^cowork]
 - **Siempre pregunta antes de borrar un archivo para siempre.** Solo lo borra si pulsas «Permitir» (허용).[^cowork]
 - **Gasta mucho uso.** Un trabajo de varios pasos que ejecuta código, crea archivos y usa aplicaciones gasta más del límite que una pregunta corta. Junta las tareas relacionadas en un solo trabajo. Puedes ver lo que te queda en Configuración → «Uso» (사용량).[^cowork]
-- **Memoria**: los trabajos de Cowork que se ejecutan en la nube comparten la memoria con el chat. Los trabajos que se ejecutan en tu ordenador no usan la memoria.[^memory] Si quieres hacer solo este trabajo sin memoria, desactiva «Memoria» (Memory) en «+» **antes** de enviar el primer mensaje. No se puede cambiar una vez empezado.[^cowork]
+- **Memoria**: los trabajos de Cowork que se ejecutan en la nube comparten la memoria con el chat. Los trabajos que se ejecutan en tu computadora no usan la memoria.[^memory] Si quieres hacer solo este trabajo sin memoria, desactiva «Memoria» (Memory) en «+» **antes** de enviar el primer mensaje. No se puede cambiar una vez empezado.[^cowork]
 - **Las indicaciones que siempre debe respetar** se escriben en las instrucciones del [capítulo 5](05-memory.md). En la pantalla nueva, estas instrucciones también se aplican a Cowork.[^cowork][^cowork-instr-old]
 - **Borrar un trabajo**: si pulsas «⋮» → «Delete» junto al trabajo, desaparece enseguida de la lista y en 30 días también se borra del servidor.[^cowork]
 
@@ -176,25 +176,25 @@ Si la respuesta a alguna es «sí», déjalo en «Manual» y vigílalo de cerca.
 
 ### Desde el 6 de octubre de 2026 — en la nube
 
-Desde el 6 de octubre de 2026, todos los trabajos **nuevos** de Cowork en Pro y Max se ejecutan en la nube. La opción «solo en mi ordenador» que había en Configuración desapareció y no se puede volver a cambiar.[^devices]
-Los trabajos que empezaste antes en tu ordenador siguen ahí y puedes terminarlos.[^devices]
+Desde el 6 de octubre de 2026, todos los trabajos **nuevos** de Cowork en Pro y Max se ejecutan en la nube. La opción «solo en mi computadora» que había en Configuración desapareció y no se puede volver a cambiar.[^devices]
+Los trabajos que empezaste antes en tu computadora siguen ahí y puedes terminarlos.[^devices]
 
-Aun así, tus carpetas siguen en tu ordenador. Claude solo llega a las carpetas que has conectado, y solo mientras la aplicación de escritorio está abierta. Se lleva copiados solo los archivos que el trabajo necesita, y si borras el trabajo, esas copias también se borran.[^devices]
-Si es algo que debe ejecutarse solo dentro de tu ordenador, usa Claude Code de la aplicación de escritorio.[^devices]
+Aun así, tus carpetas siguen en tu computadora. Claude solo llega a las carpetas que has conectado, y solo mientras la aplicación de escritorio está abierta. Se lleva copiados solo los archivos que el trabajo necesita, y si borras el trabajo, esas copias también se borran.[^devices]
+Si es algo que debe ejecutarse solo dentro de tu computadora, usa Claude Code de la aplicación de escritorio.[^devices]
 
 ### Diferencias según el dispositivo
 
-| Lo que puedes hacer | Web y móvil | Aplicación de escritorio |
+| Lo que puedes hacer | Web y teléfono | Aplicación de escritorio |
 |---|---|---|
 | Iniciar trabajos, conectores y skills | Sí | Sí |
 | Tareas programadas y proyectos | Sí | Sí |
-| Archivos, navegador y uso del ordenador | A través de la aplicación de escritorio | Sí |
+| Archivos, navegador y uso de la computadora | A través de la aplicación de escritorio | Sí |
 
-Solo se llega a los archivos de tu ordenador mientras la aplicación de escritorio de ese ordenador está abierta. Además, el trabajo tiene que haber empezado en el escritorio o ser una tarea programada. Si la aplicación está cerrada, el trabajo sigue ejecutándose, pero no llega a tus archivos.[^devices]
-Cuando el trabajo termina o necesita tu respuesta, te llega una notificación al móvil.[^devices]
+Solo se llega a los archivos de tu computadora mientras la aplicación de escritorio de esa computadora está abierta. Además, el trabajo tiene que haber empezado en el escritorio o ser una tarea programada. Si la aplicación está cerrada, el trabajo sigue ejecutándose, pero no llega a tus archivos.[^devices]
+Cuando el trabajo termina o necesita tu respuesta, te llega una notificación al teléfono.[^devices]
 
-- La aplicación de escritorio (Mac, Windows y Linux en beta) se usa en todos los planes de pago. La web y el móvil se usan en Pro, Max y Team (en Team, en beta), y en Enterprise si el administrador los activa.[^cowork]
-- En la web, lo encuentras en la pestaña «Home» de claude.ai. En el móvil y en la aplicación de escritorio, tienes que actualizar a la última versión para verlo.[^devices]
+- La aplicación de escritorio (Mac, Windows y Linux en beta) se usa en todos los planes de pago. La web y el teléfono se usan en Pro, Max y Team (en Team, en beta), y en Enterprise si el administrador los activa.[^cowork]
+- En la web, lo encuentras en la pestaña «Home» de claude.ai. En el teléfono y en la aplicación de escritorio, tienes que actualizar a la última versión para verlo.[^devices]
 - Si quieres usarlo por separado en el trabajo y en casa, crea cuentas distintas. No se admite compartir el inicio de sesión de una misma cuenta.[^devices]
 
 <Quiz id="ch208-devices" />
@@ -203,7 +203,7 @@ Cuando el trabajo termina o necesita tu respuesta, te llega una notificación al
 
 Una **tarea programada** (scheduled task) es un trabajo que describes una vez y que se ejecuta solo con la periodicidad que fijaste. Se usa en todos los planes de pago.[^scheduled]
 Sirve, por ejemplo, para un resumen de los correos de las últimas 24 horas, un informe semanal o la búsqueda de noticias de un tema que te interesa.[^scheduled]
-Las tareas programadas se ejecutan de forma remota, así que se ejecutan con su periodicidad incluso con el ordenador en reposo o con la aplicación de escritorio cerrada.[^scheduled] Pero pueden ser una excepción las tareas programadas que se ejecutaban en tu ordenador antes del 6 de octubre y las que necesitan tus archivos o aplicaciones (mira abajo).[^scheduled]
+Las tareas programadas se ejecutan de forma remota, así que se ejecutan con su periodicidad incluso con la computadora en reposo o con la aplicación de escritorio cerrada.[^scheduled] Pero pueden ser una excepción las tareas programadas que se ejecutaban en tu computadora antes del 6 de octubre y las que necesitan tus archivos o aplicaciones (mira abajo).[^scheduled]
 
 ### Cómo crearlas
 
@@ -238,11 +238,11 @@ Todos los viernes a las 5 de la tarde, ordena en una tabla los eventos y los pla
 Lo que no tenga fecha clara no lo inventes: escribe «a comprobar» y añade el enlace de la fuente. No te inscribas ni publiques nada.
 ```
 
-> También existe **Dispatch** (una función en la que encargas un trabajo desde el móvil y se hace en tu escritorio), pero es una beta limitada abierta solo a algunos Pro y Max, y los usuarios nuevos no pueden usarla.[^dispatch]
+> También existe **Dispatch** (una función en la que encargas un trabajo desde el teléfono y se hace en tu escritorio), pero es una beta limitada abierta solo a algunos Pro y Max, y los usuarios nuevos no pueden usarla.[^dispatch]
 
 <Quiz id="ch208-scheduled" />
 
-## Cuando encargas el navegador y el ordenador
+## Cuando encargas el navegador y la computadora
 
 En las tareas que hay que hacer en sitios web, Claude puede abrir el sitio, leerlo, hacer clic y escribir por sí mismo.[^cowork] Hay tres maneras.
 
@@ -250,7 +250,7 @@ En las tareas que hay que hacer en sitios web, Claude puede abrir el sitio, leer
 |---|---|---|
 | Navegador integrado | Dentro de la aplicación de escritorio | Para encargarlo sin tocar mis pestañas |
 | Claude in Chrome | Mi navegador Chrome | Para trabajar en la página que estoy viendo |
-| Uso del ordenador | La pantalla de mi ordenador | Cuando no hay una herramienta adecuada |
+| Uso de la computadora | La pantalla de mi computadora | Cuando no hay una herramienta adecuada |
 
 Claude suele empezar por el método más rápido. Si hay un conector, usa el conector; después, el navegador; y si tampoco así puede, maneja la pantalla directamente. Manejar la pantalla es lo más lento y donde más se equivoca.[^computer]
 
@@ -259,7 +259,7 @@ Claude suele empezar por el método más rápido. Si hay un conector, usa el con
 En un panel lateral de la aplicación de escritorio puedes ver cómo Claude abre un sitio, hace clic y escribe. No hace falta cambiar de ventana.[^browser]
 - Se usa en el Cowork de la aplicación de escritorio de Mac, Windows y Linux (beta), con los planes Pro y Max. En Team y Enterprise se usa si el administrador no lo ha desactivado.[^browser]
 - La primera vez que lo abres, puedes elegir sitio por sitio qué datos de inicio de sesión (cookies) de tu navegador traer. Los sitios de bancos, correo y acceso único de la empresa vienen sin marcar desde el principio.[^browser]
-- Los sitios en los que inicias sesión en el navegador integrado también los usa Claude en los siguientes trabajos de Cowork en ese ordenador.[^browser] Elige con cuidado en qué sitios dejas la sesión iniciada.
+- Los sitios en los que inicias sesión en el navegador integrado también los usa Claude en los siguientes trabajos de Cowork en esa computadora.[^browser] Elige con cuidado en qué sitios dejas la sesión iniciada.
 - Antes de actuar por primera vez en un sitio, pide permiso. Los sitios de mucho riesgo quedan bloqueados.[^browser]
 - Para cambiar qué navegador usar, ve a Configuración → «Cowork» → Navegador predeterminado.[^browser]
 
@@ -267,7 +267,7 @@ En un panel lateral de la aplicación de escritorio puedes ver cómo Claude abre
 
 **Claude in Chrome** es una extensión que se instala en tu navegador Chrome. Claude lee los sitios web, hace clic y se mueve por ellos.[^chrome]
 - Se usa en los planes de pago (Pro, Max, Team y Enterprise).[^chrome]
-- Solo funciona en Google Chrome. No funciona en otros navegadores ni en el móvil.[^chrome]
+- Solo funciona en Google Chrome. No funciona en otros navegadores ni en el teléfono.[^chrome]
 - Se instala desde la Chrome Web Store con «Añadir a Chrome» (Chrome에 추가) y se inicia sesión.[^chrome]
 - Al pulsar el icono de Claude de la barra de herramientas, se abre un panel lateral. Puedes hacer que resuma o compare las pestañas abiertas.[^chrome]
 - El panel lateral empieza en modo «Aprobar automáticamente» (자동 승인).[^chrome] Al principio, cámbialo a «Aprobar manualmente» (수동 승인) y mira las acciones una a una. Los nombres de los menús de la extensión de Chrome pueden ser distintos de los de la pantalla web de Claude.
@@ -275,11 +275,11 @@ En un panel lateral de la aplicación de escritorio puedes ver cómo Claude abre
 
 <!-- Captura de pantalla necesaria: la pantalla con el panel lateral de Chrome abierto y la selección del modo de permisos en el cuadro de entrada -->
 
-### Uso del ordenador
+### Uso de la computadora
 
-El **uso del ordenador** (computer use) es una función con la que, cuando no hay una herramienta adecuada, Claude mira tu pantalla y hace clic y escribe directamente para usar aplicaciones.[^computer]
+El **uso de la computadora** (computer use) es una función con la que, cuando no hay una herramienta adecuada, Claude mira tu pantalla y hace clic y escribe directamente para usar aplicaciones.[^computer]
 - Es una **beta** de Pro y Max, y solo funciona en la aplicación de escritorio de Mac y Windows. Team y Enterprise todavía no pueden usarlo.[^computer]
-- En la aplicación de escritorio, ve a Configuración → «Funciones» (기능) y activa «Activar el uso del ordenador» (컴퓨터 사용 활성화).[^computer]
+- En la aplicación de escritorio, ve a Configuración → «Funciones» (기능) y activa «Activar el uso de la computadora» (컴퓨터 사용 활성화).[^computer]
 - En cada aplicación, pide permiso la primera vez que se usa.[^computer]
 - Como ve la pantalla en capturas, **se ve todo lo que está en la pantalla.** Antes de empezar, cierra los archivos y aplicaciones sensibles.[^computer]
 - Si haces clic en un enlace en una aplicación, puede abrirse en un Chrome al que no diste permiso.[^computer]
@@ -288,7 +288,7 @@ El **uso del ordenador** (computer use) es una función con la que, cuando no ha
 
 ## Normas de seguridad — una vez más antes de encargar
 
-Cowork y el uso del navegador y del ordenador le dan a Claude manos y pies de verdad. Por eso, si algo sale mal, el daño también es real. Las normas de este apartado se aplican por igual a todas las funciones de este capítulo. Es el mismo principio cuando usas la investigación del [capítulo 6](06-search.md) o los conectores del [capítulo 7](07-projects-tools.md).
+Cowork y el uso del navegador y de la computadora le dan a Claude manos y pies de verdad. Por eso, si algo sale mal, el daño también es real. Las normas de este apartado se aplican por igual a todas las funciones de este capítulo. Es el mismo principio cuando usas la investigación del [capítulo 6](06-search.md) o los conectores del [capítulo 7](07-projects-tools.md).
 
 ### Dos cosas que deciden el tamaño del daño
 
@@ -307,7 +307,7 @@ Claude in Chrome está pensado para no seguir, en ningún modo, instrucciones qu
 
 - **No lo uses con información sensible.** Aquí entran los documentos financieros, los documentos legales, la información médica, el material sensible de la empresa y los datos personales de otras personas.[^safe][^chrome-safe]
 - **Crea una carpeta de trabajo solo para Claude.** No des un acceso amplio, y haz copia de seguridad de los archivos importantes.[^safe]
-- **Bloquea las aplicaciones de bancos, salud y administraciones.** En el uso del ordenador no hay separación entre la pantalla y Claude. No des permisos a esas aplicaciones.[^safe][^computer]
+- **Bloquea las aplicaciones de bancos, salud y administraciones.** En el uso de la computadora no hay separación entre la pantalla y Claude. No des permisos a esas aplicaciones.[^safe][^computer]
 - **En Chrome, usa un perfil aparte.** Claude in Chrome ve en capturas la pestaña en la que trabaja y no puede filtrar el contenido sensible. Se recomienda un perfil de Chrome aparte, sin sesión iniciada en cuentas sensibles.[^chrome-safe]
 - **Empieza por trabajos sencillos.** Practica con trabajos de poco riesgo, como investigar u ordenar, y después amplía.[^computer]
 - **No pongas en tareas programadas cosas difíciles de deshacer.** No programes enviar mensajes ni comprar.[^safe]
@@ -390,9 +390,9 @@ Si tienes un plan de pago, pruébalo. Si tienes el plan gratuito, puedes leer la
 - Cowork es una función con la que dices el resultado y recorre varios pasos por sí mismo hasta devolverte el trabajo terminado. Es exclusiva de los planes de pago.
 - En la pantalla nueva, cualquier conversación se encarga de un trabajo de Cowork. En la pantalla antigua, eliges «Cowork» en el cuadro de entrada.
 - El modo de permisos muestra en pantalla «Manual» y «Automático» (según el plan y la pantalla, puede haber más). Usa «Manual» con herramientas que usas por primera vez, con dinero, mensajes o archivos importantes, y con lo que es difícil de deshacer.
-- Desde el 6 de octubre de 2026, los trabajos nuevos de Cowork en Pro y Max se ejecutan en la nube. Para tus archivos, el navegador y el uso del ordenador, la aplicación de escritorio tiene que estar abierta.
-- La mayoría de las tareas programadas nuevas se ejecutan aunque el ordenador esté en reposo (las que necesitan tus archivos pueden ser una excepción). Encarga primero trabajos de poco riesgo, como los resúmenes, y no programes enviar ni comprar.
-- El navegador integrado se usa aparte de mis pestañas, Claude in Chrome se usa en la página de Chrome que estoy viendo, y el uso del ordenador (beta) se usa cuando no hay una herramienta adecuada.
+- Desde el 6 de octubre de 2026, los trabajos nuevos de Cowork en Pro y Max se ejecutan en la nube. Para tus archivos, el navegador y el uso de la computadora, la aplicación de escritorio tiene que estar abierta.
+- La mayoría de las tareas programadas nuevas se ejecutan aunque la computadora esté en reposo (las que necesitan tus archivos pueden ser una excepción). Encarga primero trabajos de poco riesgo, como los resúmenes, y no programes enviar ni comprar.
+- El navegador integrado se usa aparte de mis pestañas, Claude in Chrome se usa en la página de Chrome que estoy viendo, y el uso de la computadora (beta) se usa cuando no hay una herramienta adecuada.
 - No lo uses con información sensible. Usa una carpeta propia y un perfil de Chrome aparte, y detén el trabajo enseguida si algo parece raro. La probabilidad de un ataque no es 0, y la responsabilidad es tuya.
 
 ## Glosario
@@ -402,10 +402,10 @@ Si tienes un plan de pago, pruébalo. Si tienes el plan gratuito, puedes leer la
 | Cowork | Cowork | Función que se encarga de un trabajo de varios pasos y devuelve el resultado terminado |
 | Permission mode | Modo de permisos | Ajuste que decide cuándo Claude te pide permiso |
 | Scheduled task | Tarea programada | Trabajo que se ejecuta solo con la periodicidad que fijaste |
-| Cloud | Nube | Lo que se ejecuta en los servidores de la empresa y no en tu ordenador |
+| Cloud | Nube | Lo que se ejecuta en los servidores de la empresa y no en tu computadora |
 | Built-in browser | Navegador integrado | El navegador que Claude usa dentro de la aplicación de escritorio |
 | Claude in Chrome | Claude in Chrome | Extensión con la que Claude trabaja en tu Chrome |
-| Computer use | Uso del ordenador | Función con la que Claude mira tu pantalla y la maneja directamente |
+| Computer use | Uso de la computadora | Función con la que Claude mira tu pantalla y la maneja directamente |
 | Prompt injection | Inyección de prompts | Ataque que engaña a la IA con instrucciones escondidas en el material |
 | Beta | Beta | Función que ya se puede usar pero que todavía se está puliendo |
 
@@ -434,4 +434,4 @@ Siguiente capítulo: [Capítulo 9. Privacidad y seguridad](09-privacy.md)
 [^academy-safe]: Claude Academy, curso «Introduction to Claude Cowork», lección «Best practices for working safely». "How you ask matters as much as what folder you point at." / "If the wrong reading would be irrecoverable, name what you mean" / "This narrows what Cowork is doing and gives you a clear line for spotting drift." / "Once you've seen it behave, point it at the live folder." / "Until you're confident that the task runs the way you need it to, prompt it to draft for your review rather than send on your behalf." / "Most mistakes don't happen because the safeguards failed; they happen because someone clicked through a confirmation that wasn't quite the action they intended." / "Claude can prepare; you ship." https://academy.claude.com/courses/introduction-to-claude-cowork/permissions-usage-choosing-your-model (consultado el 2026-10-26)
 [^academy-setup]: Claude Academy, curso «Introduction to Claude Cowork», lección «Setting up Claude Cowork». "Read the brief and check it against your own knowledge." / "What did Claude catch that you might have missed? What did it miss or get wrong?" https://academy.claude.com/courses/introduction-to-claude-cowork/getting-set-up (consultado el 2026-10-26)
 [^cowork-instr-old]: En la pantalla antigua se escriben en Configuración → «Cowork» → Instrucciones globales, «Editar» (편집).
-[^scheduled-where]: Los documentos describen de forma distinta dónde se ejecutan las tareas programadas que necesitan archivos o aplicaciones de tu ordenador.
+[^scheduled-where]: Los documentos describen de forma distinta dónde se ejecutan las tareas programadas que necesitan archivos o aplicaciones de tu computadora.

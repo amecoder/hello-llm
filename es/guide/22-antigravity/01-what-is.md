@@ -1,6 +1,6 @@
 # Capítulo 1. Qué es Antigravity y en qué se diferencia de las dos herramientas anteriores
 
-> **En una línea**: Antigravity es una herramienta de IA creada por Google que **trabaja directamente en una carpeta de tu ordenador**. Tiene una aplicación de escritorio y un programa de terminal, `agy`.
+> **En una línea**: Antigravity es una herramienta de IA creada por Google que **trabaja directamente en una carpeta de tu computadora**. Tiene una aplicación de escritorio y un programa de terminal, `agy`.
 > Se diferencia de las dos herramientas anteriores en dos cosas. Puedes usar **todas las funciones incluso con una cuenta de Google gratuita**, y **lee tal cual el `AGENTS.md` y el `.agents/skills`** que creaste en la etapa de Codex.
 
 Este capítulo se escribió a partir de la documentación oficial de Antigravity (antigravity.google/docs) consultada el 1 de noviembre de 2026. Las funciones y los nombres de los menús cambian con frecuencia.
@@ -18,7 +18,7 @@ Antigravity tiene cuatro formas, según dónde se use.[^surfaces]
 
 Fuente: documentación oficial de Antigravity (resumen de esta guía)[^surfaces][^ide][^sdk]
 
-La aplicación y la CLI ejecutan **el mismo agente**, así que la mayoría de las funciones están en las dos.[^same] Si inicias sesión en un lugar, las demás formas de mi ordenador usan el mismo inicio de sesión.[^auth]
+La aplicación y la CLI ejecutan **el mismo agente**, así que la mayoría de las funciones están en las dos.[^same] Si inicias sesión en un lugar, las demás formas de mi computadora usan el mismo inicio de sesión.[^auth]
 
 <Quiz id="ch601-surfaces" />
 

@@ -63,7 +63,7 @@ cd ~/hello-ai-연습/정리도구
 agy -p "Muéstrame la lista de archivos de la carpeta notes y dime en una línea cada uno con qué formulario (cuál de templates) está escrito. No modifiques ningún archivo. Responde brevemente, solo con una tabla. No uses comandos de shell; solo lee archivos." --mode accept-edits
 ```
 
-Resultado: [salida de agy -p](/practice/notes/results/antigravity/6장-agy-p-출력.txt) (la ruta de mi ordenador se cambió por `~`)
+Resultado: [salida de agy -p](/practice/notes/results/antigravity/6장-agy-p-출력.txt) (la ruta de mi computadora se cambió por `~`)
 
 | | Claude Code | Codex | Antigravity |
 |---|---|---|---|

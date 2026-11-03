@@ -34,7 +34,7 @@ Es la pantalla del plan gratuito. **Los números rojos señalan los mismos lugar
 
 Más abajo hay también «Artefactos compartidos», «Archivos subidos», «Mis comentarios» y «Ajustes de memoria», cada uno con su botón «Administrar».[^screen]
 
-En la aplicación del móvil el orden es el mismo. Tu nombre → «Configuración» → privacidad → el mismo interruptor. Los nombres de los menús de la aplicación pueden ser un poco distintos de los de la web.[^toggle]
+En la aplicación del teléfono el orden es el mismo. Tu nombre → «Configuración» → privacidad → el mismo interruptor. Los nombres de los menús de la aplicación pueden ser un poco distintos de los de la web.[^toggle]
 
 ### Qué cambia si lo desactivas
 
@@ -90,7 +90,7 @@ Una conversación en la que permitiste el entrenamiento también la puede ver so
 
 ### Cómo usa tu ubicación
 
-Cuando se buscan resultados cercanos con la búsqueda web, como «restaurantes cerca de mí», Claude puede usar una ubicación aproximada, a nivel de ciudad o región, a partir de la dirección de acceso a internet (dirección IP). En esta pantalla, el interruptor ① «Metadatos de ubicación» de «Privacidad» decide esto.[^screen] En la aplicación del móvil, el permiso de ubicación se gestiona en los ajustes del móvil. Pero no se puede desactivar que se deduzca el país o la región aproximada, por seguridad y para evitar abusos.[^location]
+Cuando se buscan resultados cercanos con la búsqueda web, como «restaurantes cerca de mí», Claude puede usar una ubicación aproximada, a nivel de ciudad o región, a partir de la dirección de acceso a internet (dirección IP). En esta pantalla, el interruptor ① «Metadatos de ubicación» de «Privacidad» decide esto.[^screen] En la aplicación del teléfono, el permiso de ubicación se gestiona en los ajustes del teléfono. Pero no se puede desactivar que se deduzca el país o la región aproximada, por seguridad y para evitar abusos.[^location]
 
 ### Si ves un dispositivo que no conoces
 
@@ -106,18 +106,18 @@ Es la pantalla del plan gratuito. La tabla «Sesiones activas» está en la part
 
 **Exportar datos** (export) es la función que te da en un archivo todo el historial de conversaciones y la información de la cuenta. Se usa como copia de seguridad antes de eliminar la cuenta. Pueden usarla todos los usuarios individuales de Free, Pro y Max.[^export]
 
-1. En la web o en la aplicación de ordenador, abre «Configuración» → «Privacidad».[^screen]
+1. En la web o en la aplicación de computadora, abre «Configuración» → «Privacidad».[^screen]
 2. Pulsa el botón ③ «Exportar datos» de la imagen de arriba.
 3. Cuando esté listo, llegará un enlace de descarga al correo de tu cuenta.
 4. Con la sesión iniciada, pulsa el enlace y descárgalo.
 
 Hay cosas que debes saber.
 
-- **No se puede exportar desde la aplicación del móvil.** Usa la web o la aplicación de ordenador.
+- **No se puede exportar desde la aplicación del teléfono.** Usa la web o la aplicación de computadora.
 - El enlace **caduca a las 24 horas** de recibirlo. Si se te pasó, puedes volver a solicitarlo.
 - Los datos exportados **no se pueden importar a otra cuenta personal.**[^export]
 
-> El archivo que descargas contiene todas tus conversaciones. No lo descargues en un ordenador compartido ni lo subas a una carpeta que uses con otras personas.
+> El archivo que descargas contiene todas tus conversaciones. No lo descargues en una computadora compartida ni lo subas a una carpeta que uses con otras personas.
 
 En los planes de empresa (Team y Enterprise), solo se pueden exportar tus propios datos si el administrador lo permite.[^export]
 
@@ -204,7 +204,7 @@ Si te resulta difícil llevarlo tú solo, puedes empezar simplemente contándose
 
 **1. Comprobar tu ajuste de entrenamiento**
 
-Abre «Configuración» → «Privacidad» y mira si ② «Help improve our AI models» está activado. Cámbialo a lo que prefieras y, si tienes la aplicación del móvil, comprueba que también allí tiene el mismo valor.
+Abre «Configuración» → «Privacidad» y mira si ② «Help improve our AI models» está activado. Cámbialo a lo que prefieras y, si tienes la aplicación del teléfono, comprueba que también allí tiene el mismo valor.
 
 **2. Revisar los dispositivos con sesión iniciada**
 
@@ -230,7 +230,7 @@ Compara la lista de comprobación que recibas con este capítulo. Si los nombres
 - El chat incógnito no se usa para el entrenamiento. Si envías «me gusta» o «no me gusta», esa conversación se conserva hasta 5 años.
 - Una conversación borrada se elimina también del servidor en un plazo de 30 días. Una conversación en la que permitiste el entrenamiento puede conservarse hasta 5 años.
 - Por defecto, los empleados no ven las conversaciones. Los dispositivos que no conozcas ciérralos en «Sesiones activas».
-- Exportar solo funciona en la web y en la aplicación de ordenador, y el enlace caduca a las 24 horas. Eliminar la cuenta no se puede deshacer, y una suscripción de pago se cancela antes.
+- Exportar solo funciona en la web y en la aplicación de computadora, y el enlace caduca a las 24 horas. Eliminar la cuenta no se puede deshacer, y una suscripción de pago se cancela antes.
 - Lo de «ya lo envié» compruébalo tú mismo. Una suspensión errónea se reclama iniciando sesión.
 - Si es una situación de peligro, contacta primero con los servicios de emergencia. Los centros de atención se encuentran en claude.findahelpline.com.
 
@@ -253,7 +253,7 @@ Compara la lista de comprobación que recibas con este capítulo. Si los nombres
 
 <ChapterDone :chapter="209" />
 
-Siguiente capítulo: [Capítulo 10. Voz y móvil](10-voice-mobile.md)
+Siguiente capítulo: [Capítulo 10. Voz y teléfono](10-voice-mobile.md)
 
 ---
 

@@ -18,7 +18,7 @@ Por ejemplo: dónde está cada botón, cómo organizar tus conversaciones y cóm
 | 7 | [Proyectos, conectores y habilidades](07-projects-tools.md) | Proyectos que reúnen materiales, conectar otras aplicaciones, habilidades |
 | 8 | [Cowork: encargarle el trabajo completo](08-cowork.md) | Cómo encargar tareas de varios pasos, tareas programadas, uso seguro |
 | 9 | [Privacidad y seguridad](09-privacy.md) | Evitar que se use para entrenar, exportar datos, eliminar la cuenta |
-| 10 | [Voz y móvil](10-voice-mobile.md) | Dictado y modo de voz, cómo abrirlo rápido en el móvil |
+| 10 | [Voz y teléfono](10-voice-mobile.md) | Dictado y modo de voz, cómo abrirlo rápido en el teléfono |
 | 11 | [Tareas de práctica](11-practice.md) | Tareas para probar tú mismo las funciones de los capítulos 1~10 y lista de comprobación |
 | 12 | [Usar Claude como un experto](12-expert.md) | Elegir la función adecuada para cada trabajo, acumular conocimiento con instrucciones y habilidades, análisis de tablas y gráficos, Claude Academy |
 

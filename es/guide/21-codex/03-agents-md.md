@@ -87,7 +87,7 @@ Si tienes una carpeta que todavía no tiene `AGENTS.md`, también puedes crear e
 
 ![Pantalla Settings → Import de la aplicación de ChatGPT: bajo «Import from another AI app» están Claude Code, Claude Cowork y Cursor, cada uno con su botón Import](../../../guide/21-codex/assets/shot-02-import.png)
 
-En la pantalla de esta guía (2026-11-01), en la lista de la izquierda de los ajustes estaba **Import**, y se veían, cada uno con su botón **Import**, Claude Code, Claude Cowork y Cursor, que se encontraron en este ordenador. Esta guía no pulsó el botón.
+En la pantalla de esta guía (2026-11-01), en la lista de la izquierda de los ajustes estaba **Import**, y se veían, cada uno con su botón **Import**, Claude Code, Claude Cowork y Cursor, que se encontraron en esta computadora. Esta guía no pulsó el botón.
 
 | En Claude Code | Al pasar a Codex |
 |---|---|
@@ -100,9 +100,9 @@ Fuente: documentación oficial de Codex (traducida solo en parte)[^import-map]
 
 Aunque lo importes, los ajustes originales no se cambian ni se borran.[^import-keep] Eso sí, dice que después de importar revises sin falta **las restricciones de permisos de las skills, los hooks y los comandos que usan argumentos**.[^import-review]
 
-Esta guía **no ejecutó la importación.** La importación no mira una sola carpeta, sino también los ajustes personales de mi ordenador.[^import-scope] Si quieres ver tú mismo qué se traslada, es mejor pasarlo a mano como en este capítulo.
+Esta guía **no ejecutó la importación.** La importación no mira una sola carpeta, sino también los ajustes personales de mi computadora.[^import-scope] Si quieres ver tú mismo qué se traslada, es mejor pasarlo a mano como en este capítulo.
 
-La **memoria** (Memories) es la función que lleva el contexto de trabajos anteriores al siguiente trabajo.[^memory] La memoria de Codex de mi ordenador está desactivada por defecto.[^memory-off] La documentación oficial ve la memoria solo como una «ayuda para recordar» y dice que no dejes en la memoria las reglas que hay que cumplir sí o sí.[^memory-rules] Dice que **las reglas que hay que cumplir sí o sí se escriben en `AGENTS.md`**.[^memory-agents]
+La **memoria** (Memories) es la función que lleva el contexto de trabajos anteriores al siguiente trabajo.[^memory] La memoria de Codex de mi computadora está desactivada por defecto.[^memory-off] La documentación oficial ve la memoria solo como una «ayuda para recordar» y dice que no dejes en la memoria las reglas que hay que cumplir sí o sí.[^memory-rules] Dice que **las reglas que hay que cumplir sí o sí se escriben en `AGENTS.md`**.[^memory-agents]
 
 <Quiz id="ch503-import" />
 

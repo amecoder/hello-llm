@@ -42,7 +42,7 @@ Todavía no ejecutes la petición. Enséñame solo el prompt ordenado.
 
 ---
 hazme un plan del viaje a Jeju de la semana que viene con mis padres, mi padre tiene mal la rodilla
-tenemos coche de alquiler y son 3 días y 2 noches mete también sitios para comer y adónde ir si llueve
+tenemos auto de alquiler y son 3 días y 2 noches mete también sitios para comer y adónde ir si llueve
 ---
 ```
 

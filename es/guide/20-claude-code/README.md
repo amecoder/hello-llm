@@ -1,6 +1,6 @@
 # Etapa 3 · Guía de uso de Claude Code
 
-En la etapa 2 **preguntabas y recibías respuestas** por chat. En la etapa 3 aprenderás Claude Code, con el que Claude **lee y modifica directamente los archivos de una carpeta de tu ordenador**.
+En la etapa 2 **preguntabas y recibías respuestas** por chat. En la etapa 3 aprenderás Claude Code, con el que Claude **lee y modifica directamente los archivos de una carpeta de tu computadora**.
 No pasa nada si no sabes programar. Esta guía practica con una carpeta de notas y archivos de tablas, y empieza por la **pestaña Code de la app de escritorio de Claude**, que se usa sin terminal.
 
 > **Esta guía se ha escrito a partir de la documentación oficial de Claude Code (code.claude.com/docs) y de las pantallas reales consultadas el 31 de octubre de 2026.** Las funciones y los nombres de los menús cambian a menudo.
@@ -23,7 +23,7 @@ No pasa nada si no sabes programar. Esta guía practica con una carpeta de notas
 
 ## Materiales de práctica
 
-Las prácticas de la etapa 3 se hacen con las 6 notas de abajo. **Todo su contenido es inventado** (una semana de Seoyeon, empleada de una cafetería pequeña, el «Café de la Esquina»). Crea en tu ordenador la carpeta `정리도구/inbox`, descarga los archivos y ponlos dentro. Las fechas y los días de la semana de las notas están inventados para la historia, así que no coinciden con el calendario real de 2026.
+Las prácticas de la etapa 3 se hacen con las 6 notas de abajo. **Todo su contenido es inventado** (una semana de Seoyeon, empleada de una cafetería pequeña, el «Café de la Esquina»). Crea en tu computadora la carpeta `정리도구/inbox`, descarga los archivos y ponlos dentro. Las fechas y los días de la semana de las notas están inventados para la historia, así que no coinciden con el calendario real de 2026.
 
 | Archivo | Contenido | Primer capítulo donde se usa |
 |---|---|---|

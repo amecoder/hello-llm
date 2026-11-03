@@ -1,16 +1,16 @@
 # Capítulo 1. Primeros pasos: dónde se usa, cómo iniciar sesión, planes y límites de uso
 
-> **En una línea**: Gemini se usa con una sola cuenta de Google en la web, en la aplicación del móvil y en la de ordenador. No hay que registrarse aparte:
+> **En una línea**: Gemini se usa con una sola cuenta de Google en la web, en la aplicación del teléfono y en la de computadora. No hay que registrarse aparte:
 > basta con iniciar sesión con la cuenta de Google que ya usas. Empieza gratis y piensa en un plan de pago solo si el límite se te queda corto a menudo.
 
-Las pantallas corresponden a la versión web de octubre de 2026, y las imágenes son de la pantalla en coreano del plan de pago (Google AI Pro). En una cuenta gratuita o en la aplicación del móvil, los menús pueden ser algo distintos.
+Las pantallas corresponden a la versión web de octubre de 2026, y las imágenes son de la pantalla en coreano del plan de pago (Google AI Pro). En una cuenta gratuita o en la aplicación del teléfono, los menús pueden ser algo distintos.
 
 ## Qué es Gemini y dónde se usa
 
 Gemini es un servicio de IA creado por Google. Funciona con un **LLM** (modelo de lenguaje grande, [capítulo 1 de la etapa 1](../00-common/01-what-is-llm.md)) como el que aprendiste en la etapa 1.
 Lo que aprendiste en la etapa 1 sobre cómo preguntar bien vale igual para Gemini. En este capítulo solo vemos cómo entrar en el servicio Gemini.
 
-Se usa en la web, en la aplicación del móvil y en la aplicación de ordenador. Dondequiera que lo uses, entras con la misma cuenta de Google.
+Se usa en la web, en la aplicación del teléfono y en la aplicación de computadora. Dondequiera que lo uses, entras con la misma cuenta de Google.
 
 | Dónde se usa | Cómo se abre | Qué necesitas |
 |---|---|---|
@@ -26,11 +26,11 @@ Si es tu primera vez, empieza por la web. No hay nada que instalar, así que es 
 
 Para usarlo hay dos condiciones.
 
-- Hay que estar en un **país donde esté disponible.** Corea está en la lista de países donde funcionan la aplicación web y la del móvil, y el coreano también está admitido.[^where][^mobile]
+- Hay que estar en un **país donde esté disponible.** Corea está en la lista de países donde funcionan la aplicación web y la del teléfono, y el coreano también está admitido.[^where][^mobile]
 - Hay que tener **13 años o más** (en una cuenta personal; la edad puede variar según el país). En una cuenta de empresa, 18 años o más.[^signin]
 
 Pero los planes de pago y algunas funciones (personalización, importar desde otra IA, etc.) solo las pueden usar quienes tienen **18 años o más.**[^plans][^customize]
-Una cuenta gestionada con Family Link (la función de gestión familiar), como la de un hijo, no puede usar Gemini en la web. En la aplicación del móvil, los padres pueden desactivar el uso del hijo en los ajustes de Family Link.[^signin]
+Una cuenta gestionada con Family Link (la función de gestión familiar), como la de un hijo, no puede usar Gemini en la web. En la aplicación del teléfono, los padres pueden desactivar el uso del hijo en los ajustes de Family Link.[^signin]
 
 Cuando entres por primera vez, pregúntale esto.
 
@@ -63,7 +63,7 @@ Fuente: ayuda de Google[^start]
 Si quieres conservar las conversaciones para volver a verlas, inicia sesión. En la aplicación de Android hay que haber iniciado sesión desde el principio para poder usarla.[^start]
 
 Para cerrar sesión, en el menú de la izquierda pulsa tu foto de perfil (o la primera letra de tu nombre) y elige «Cerrar sesión» (로그아웃).[^signin]
-Si usas un ordenador compartido con otras personas, cierra siempre la sesión al terminar. Si la dejas iniciada, la siguiente persona puede abrir tus conversaciones desde el menú lateral.
+Si usas una computadora compartida con otras personas, cierra siempre la sesión al terminar. Si la dejas iniciada, la siguiente persona puede abrir tus conversaciones desde el menú lateral.
 
 <Quiz id="ch301-login" />
 
@@ -214,13 +214,13 @@ Si aun así no funciona, envía tus comentarios. Escríbelos en «Ajustes» → 
 1. Entra en gemini.google.com e inicia sesión con la cuenta de Google que usas normalmente.
 2. Pregúntale «¿con qué tipo de trabajos puedes ayudarme?».
 3. Abre «Ajustes» → «Límites de uso» y comprueba tu plan actual y cuánto has usado.
-4. Instala la aplicación Gemini en el móvil, inicia sesión con la misma cuenta de Google y comprueba si ves las conversaciones que tuviste en el ordenador.
+4. Instala la aplicación Gemini en el teléfono, inicia sesión con la misma cuenta de Google y comprueba si ves las conversaciones que tuviste en la computadora.
 
 **Proyecto continuo** ([Preparar el club de lectura](../00-common/practice-kit.md)): pregúntale «Soy el tesorero de un club de lectura del barrio. Hazme una lista de cosas que tengo que tener en cuenta al preparar la reunión del mes que viene». Cuando termines la tarea, compara la lista que te dio con lo que hiciste de verdad.
 
 ## Resumen
 
-- Gemini se usa con la misma cuenta de Google en la web (gemini.google.com), en la aplicación del móvil y en las de Mac y Windows. Corea y el coreano están admitidos.
+- Gemini se usa con la misma cuenta de Google en la web (gemini.google.com), en la aplicación del teléfono y en las de Mac y Windows. Corea y el coreano están admitidos.
 - No hay que registrarse aparte: se inicia sesión con la cuenta de Google. Si no inicias sesión, no puedes usar las conversaciones anteriores, subir archivos ni crear imágenes.
 - Una cuenta personal exige 13 años o más, pero los planes de pago y algunas funciones exigen 18 años o más.
 - Los de pago son Google AI Plus, Pro y Ultra, y se contratan con Google One. Incluyen almacenamiento de Google.

@@ -94,7 +94,7 @@ Un **plugin** es un paquete que se instala y que junta skills y conexiones con h
 3. Envía `$weekly-review` y compara el resultado con las notas originales. Cuenta por separado lo que está mal y lo que falta.
 4. Si falta algo, añade una línea al skill y vuelve a ejecutarlo.
 
-**Proyecto continuo**: en el capítulo 6 veremos una programación que ejecuta sola el resumen semanal todos los viernes, y la nube y el móvil.
+**Proyecto continuo**: en el capítulo 6 veremos una programación que ejecuta sola el resumen semanal todos los viernes, y la nube y el teléfono.
 
 ## Resumen
 
@@ -113,7 +113,7 @@ Un **plugin** es un paquete que se instala y que junta skills y conexiones con h
 
 <ChapterDone :chapter="505" />
 
-Siguiente capítulo: [Capítulo 6. Programación, nube y móvil](06-schedule-cloud.md)
+Siguiente capítulo: [Capítulo 6. Programación, nube y teléfono](06-schedule-cloud.md)
 
 [^format]: Documentación oficial de Codex, «Build skills». "A skill is a directory with a `SKILL.md` file plus optional scripts and references. The `SKILL.md` file must include `name` and `description`." https://learn.chatgpt.com/docs/build-skills (consultado el 2026-11-01)
 [^standard]: Documentación oficial de Codex, «Build skills». "Skills build on the [open agent skills standard](https://agentskills.io)." https://learn.chatgpt.com/docs/build-skills (consultado el 2026-11-01)

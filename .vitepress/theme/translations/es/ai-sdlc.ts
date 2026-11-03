@@ -37,7 +37,7 @@ export const AI_SDLC: Record<string, QuestionText> = {
     choices: [
       "Git sigue los cambios de los archivos y GitHub guarda ese registro en internet para colaborar",
       "Git y GitHub son dos nombres del mismo programa: instalas uno y aparece el otro, con exactamente las mismas funciones",
-      "GitHub es un programa que solo se usa en tu ordenador y Git es un servicio de internet",
+      "GitHub es un programa que solo se usa en tu computadora y Git es un servicio de internet",
       "Git es un programa para escribir documentos y GitHub, uno para dibujar",
     ],
     explain: "Git es un sistema de control de versiones, y GitHub es un servicio que guarda repositorios de Git en internet y añade herramientas de planificación y colaboración.",
@@ -63,12 +63,12 @@ export const AI_SDLC: Record<string, QuestionText> = {
     explain: ".gitignore es una lista de archivos que se ignoran. Un archivo ya confirmado exige antes dejar de seguirlo, así que conviene escribirlo desde el principio.",
   },
   "ch702-clone": {
-    prompt: "¿Qué pasa cuando clonas un repositorio en tu ordenador?",
+    prompt: "¿Qué pasa cuando clonas un repositorio en tu computadora?",
     choices: [
-      "El repositorio original de GitHub se borra y la copia queda solo en tu ordenador, así que ya no puedes intercambiar nada con GitHub",
+      "El repositorio original de GitHub se borra y la copia queda solo en tu computadora, así que ya no puedes intercambiar nada con GitHub",
       "Solo se descargan los nombres de los archivos y el contenido queda vacío",
       "Se publica enseguida en GitHub Pages",
-      "Se crea en tu ordenador una copia conectada con el original de GitHub",
+      "Se crea en tu computadora una copia conectada con el original de GitHub",
     ],
     explain: "La copia clonada sigue conectada al original de GitHub, así que puedes volver a subir lo que has registrado.",
   },
@@ -366,7 +366,7 @@ export const AI_SDLC: Record<string, QuestionText> = {
     prompt: "Quieres usar de verdad en tu negocio una página informativa de tienda hecha con tu propio problema. ¿Qué compruebas primero?",
     choices: [
       "La ortografía del mensaje de commit",
-      "Si el tipo y el color de letra de la página se ven bien en el móvil y si el logotipo de la tienda se ve nítido",
+      "Si el tipo y el color de letra de la página se ven bien en el teléfono y si el logotipo de la tienda se ve nítido",
       "La longitud del nombre del repositorio",
       "Las prohibiciones de GitHub Pages (llevar un negocio, una tienda online o un servicio comercial)",
     ],

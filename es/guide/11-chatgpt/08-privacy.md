@@ -1,9 +1,9 @@
 # Capítulo 8. Datos personales y gestión de datos: decide para qué se usan tus conversaciones
 
-> **En una línea**: las conversaciones que envías a ChatGPT se guardan en los ordenadores (servidores) de OpenAI y, según tus ajustes, pueden usarse para el entrenamiento que mejora la IA.
+> **En una línea**: las conversaciones que envías a ChatGPT se guardan en las computadoras (servidores) de OpenAI y, según tus ajustes, pueden usarse para el entrenamiento que mejora la IA.
 > En una sola pantalla, «Ajustes > Gestión de datos» (설정 > 데이터 관리), decides si permites el entrenamiento, los enlaces para compartir, el archivado y el borrado, y la exportación.
 
-Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, los menús pueden estar en un sitio algo distinto.
+Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del teléfono, los menús pueden estar en un sitio algo distinto.
 
 **Qué no debes escribir** es igual para cualquier IA, y ya lo vimos en el [capítulo 9 de la etapa 1, «Lo que no debes escribir»](../00-common/09-safety.md#lo-que-no-debes-escribir). En este capítulo solo vemos **cómo gestionar en ChatGPT las conversaciones que ya has escrito**.
 
@@ -44,7 +44,7 @@ Por eso no des por hecho que «seguro que está desactivado»: **ábrelo y compr
 1. Abre tu nombre de cuenta → «Ajustes» → «Gestión de datos».
 2. Pulsa el interruptor de la derecha de «Permitir usar mis datos para mejorar el modelo» (② de la primera imagen de este capítulo) para que quede gris. Si sale una ventana de confirmación, pulsa «Listo» (완료).
 
-Si lo cambias con la sesión iniciada, se aplica a **todos los dispositivos en los que hayas iniciado sesión con la misma cuenta** (incluida la aplicación del móvil). Si lo cambias sin haber iniciado sesión, se guarda **solo en ese navegador.**[^controls]
+Si lo cambias con la sesión iniciada, se aplica a **todos los dispositivos en los que hayas iniciado sesión con la misma cuenta** (incluida la aplicación del teléfono). Si lo cambias sin haber iniciado sesión, se guarda **solo en ese navegador.**[^controls]
 
 ### Lo que no cambia aunque lo desactives
 
@@ -111,7 +111,7 @@ Si es una conversación de la que no quieres dejar registro desde el principio, 
 
 Se puede usar en cuentas personales Free, Go, Plus y Pro. No se puede usar sin haber iniciado sesión.[^export]
 
-> El archivo descargado contiene **todas tus conversaciones.** No lo descargues en un ordenador compartido ni lo subas a una carpeta de la nube que compartas con otras personas.
+> El archivo descargado contiene **todas tus conversaciones.** No lo descargues en una computadora compartida ni lo subas a una carpeta de la nube que compartas con otras personas.
 
 **No existe una función para pasar las conversaciones a otra cuenta.** No se pueden unir dos cuentas ni trasladar entera la lista de conversaciones. Lo único que puedes hacer es subir a una conversación de la cuenta nueva el archivo `conversations.json` del archivo comprimido que descargaste y usarlo **como material de consulta.** No aparecen conversaciones antiguas en el menú lateral.[^transfer]
 
@@ -140,7 +140,7 @@ Cuando ya no vayas a usar ChatGPT, puedes borrar la cuenta.[^account]
 | Recuperarla | Es imposible |
 | Volver a registrarte | La ayuda dice que puedes volver a registrarte con el mismo correo **30 días después.** La ventana de confirmación dice que no se puede crear una cuenta nueva con el mismo correo[^screen-account] |
 
-**Cancela la suscripción por separado.** Las suscripciones pagadas a través de la App Store del iPhone (Apple) no se cancelan aunque borres la cuenta.[^account] Aunque borres la aplicación del móvil, la suscripción continúa.[^pro] Por eso, antes de borrar la cuenta, cancela primero la suscripción en el sitio donde la pagaste.
+**Cancela la suscripción por separado.** Las suscripciones pagadas a través de la App Store del iPhone (Apple) no se cancelan aunque borres la cuenta.[^account] Aunque borres la aplicación del teléfono, la suscripción continúa.[^pro] Por eso, antes de borrar la cuenta, cancela primero la suscripción en el sitio donde la pagaste.
 
 <Quiz id="ch108-account" />
 
@@ -149,7 +149,7 @@ Cuando ya no vayas a usar ChatGPT, puedes borrar la cuenta.[^account]
 Tu cuenta contiene todas tus conversaciones. Por eso es peligroso protegerla solo con una contraseña. En Ajustes → «Seguridad e inicio de sesión» (보안 및 로그인), comprueba los elementos siguientes.[^screen-security]
 
 - «Autenticación multifactor (MFA)» (다중 인증): además de la contraseña, se comprueba otra vez con **un código de un solo uso de una aplicación de autenticación o un código de 6 cifras de un mensaje de texto.** Se recomienda dejarla activada (es una sugerencia de esta guía).
-- «Claves de acceso y llaves de seguridad» (패스키 및 보안 키): en lugar de la contraseña, inicias sesión con la huella o el reconocimiento facial del móvil. Es un método resistente al phishing (la técnica de robar contraseñas con sitios falsos).
+- «Claves de acceso y llaves de seguridad» (패스키 및 보안 키): en lugar de la contraseña, inicias sesión con la huella o el reconocimiento facial del teléfono. Es un método resistente al phishing (la técnica de robar contraseñas con sitios falsos).
 - «Sesiones activas» (활성 세션): ves todos los dispositivos que han accedido a tu cuenta. Puedes quitar un dispositivo o cerrar la sesión en todos.
 - «Conexiones de inicio de sesión» (로그인 연동) → «Iniciar sesión con ChatGPT»: ves otras aplicaciones y sitios en los que iniciaste sesión con tu cuenta de ChatGPT y les cortas el acceso.
 - «Modo de bloqueo» (락다운 모드): se explica más abajo.
@@ -204,7 +204,7 @@ Hay más cosas que conviene saber de las cuentas de empresa.
 
 **1. Comprueba tu ajuste de entrenamiento**
 
-Abre «Ajustes» → «Gestión de datos» y mira si «Permitir usar mis datos para mejorar el modelo» está activado. Cámbialo al lado que prefieras y, si tienes la aplicación del móvil, comprueba que en la aplicación también ha cambiado al mismo valor.
+Abre «Ajustes» → «Gestión de datos» y mira si «Permitir usar mis datos para mejorar el modelo» está activado. Cámbialo al lado que prefieras y, si tienes la aplicación del teléfono, comprueba que en la aplicación también ha cambiado al mismo valor.
 
 **2. Limpieza general de los enlaces compartidos**
 

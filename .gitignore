@@ -3,9 +3,9 @@
 .env.local
 .env.*.local
 
-# IDE
-.idea/
-.vscode/
+# IDE (no trailing slash: the sandbox can leave these as files, not folders)
+.idea
+.vscode
 *.swp
 *.swo
 
@@ -20,3 +20,19 @@ node_modules/
 
 # raw browser captures (may contain personal data before review)
 .playwright-mcp/
+
+# Personal shell/tool settings and local Claude Code state — never publish.
+# The Claude Code sandbox also mounts empty placeholders at these paths.
+.claude/
+.mcp.json
+.bash_profile
+.bashrc
+.profile
+.zprofile
+.zshrc
+.gitconfig
+.gitmodules
+.ripgreprc
+
+# Python bytecode (docs/tools scripts)
+__pycache__/

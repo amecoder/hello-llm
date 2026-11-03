@@ -10,7 +10,7 @@ export const LEVEL_EXPERT: Record<string, QuestionText> = {
       "為了即使頭數增加，也讓每個頭的輸出維度與 d_model 保持一致",
       "為了防止 GPU 矩陣乘法結果溢位，預先把計算精度降低一級",
     ],
-    explain: "原論文認為 d_k 大時點積值會變大，把 softmax 推進梯度極小的區間（作者寫的是“推測”），為避免這一點而縮小為 1/√d_k。",
+    explain: "原論文認為 d_k 大時點積值會變大，把 softmax 推進梯度極小的區間（作者寫的是「推測」），為避免這一點而縮小為 1/√d_k。",
   },
   "expert-s1-multi-head": {
     prompt: "使用 multi-head attention 而不是 single-head，與原論文說明最接近的理由是什麼？",
@@ -263,7 +263,7 @@ export const LEVEL_EXPERT: Record<string, QuestionText> = {
     explain: "RAG 論文指出，更新知識和給出出處（provenance）是僅依賴權重的模型尚未解決的難題，外部 non-parametric 記憶可以起到幫助。",
   },
   "expert-s3-contextual-chunk": {
-    prompt: "像“銷售額增長了 3%”這樣的 chunk 不包含是哪家公司、哪個季度的資訊，檢索因此跑偏。Anthropic Contextual Retrieval 的解決辦法是什麼？",
+    prompt: "像「銷售額增長了 3%」這樣的 chunk 不包含是哪家公司、哪個季度的資訊，檢索因此跑偏。Anthropic Contextual Retrieval 的解決辦法是什麼？",
     choices: [
       "把 chunk 大小擴大到整篇文件，用一個向量表示一篇文件來建立索引，再用於檢索時與問題比對",
       "增加 embedding 維度，更精確地容納數字資訊",
@@ -483,7 +483,7 @@ export const LEVEL_EXPERT: Record<string, QuestionText> = {
     explain: "文件建議選最快、最可靠、可擴充套件的方式，對答案固定的類別型回答，像 exact match 這樣基於程式碼的評分比較合適。",
   },
   "expert-s5-indirect-injection": {
-    prompt: "正在總結網頁的智慧體，遵從了頁面裡隱藏的“忽略之前的指示”這句話。這種攻擊屬於什麼型別？",
+    prompt: "正在總結網頁的智慧體，遵從了頁面裡隱藏的「忽略之前的指示」這句話。這種攻擊屬於什麼型別？",
     choices: [
       "間接提示詞注入——外部資料裡的指示進入模型",
       "直接提示詞注入——使用者親自在輸入框裡寫攻擊語句",
@@ -493,7 +493,7 @@ export const LEVEL_EXPERT: Record<string, QuestionText> = {
     explain: "OWASP 把 LLM 接收網站、檔案這類外部來源的輸入時發生的注入，定義為間接提示詞注入。",
   },
   "expert-s5-rag-not-mitigation": {
-    prompt: "對於“已經引入了 RAG 和微調，提示詞注入就解決了”的說法，OWASP 的立場是什麼？",
+    prompt: "對於「已經引入了 RAG 和微調，提示詞注入就解決了」的說法，OWASP 的立場是什麼？",
     choices: [
       "把攻擊語句作為微調資料去學習，注入就會消失",
       "據研究，RAG、微調並不能完全防住注入攻擊",
@@ -513,7 +513,7 @@ export const LEVEL_EXPERT: Record<string, QuestionText> = {
     explain: "OWASP 建議，把模型的訪問許可權限制在所需的最低限度，對許可權大的操作設定人工批准（human-in-the-loop）。",
   },
   "expert-s5-system-prompt-leakage": {
-    prompt: "在系統提示詞裡放了資料庫連線字串和“只有管理員才能退款”的規則。從 OWASP LLM07 的角度看，評價是什麼？",
+    prompt: "在系統提示詞裡放了資料庫連線字串和「只有管理員才能退款」的規則。從 OWASP LLM07 的角度看，評價是什麼？",
     choices: [
       "系統提示詞使用者看不到，所以是安全的",
       "把規則寫得語氣更強，就是足夠的安全控制",

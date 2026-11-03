@@ -7,12 +7,12 @@ Este capítulo está escrito a partir de la documentación oficial de Codex cons
 
 ## Uso
 
-El número de mensajes que puedes enviar no es fijo. Depende del modelo elegido, del tamaño y la complejidad del trabajo y de si se hace en mi ordenador o en la nube.[^depends] La tabla de la documentación oficial muestra, tomando como base Plus, un rango de lo que puedes usar **cada 5 horas**, y añade que además puede haber un límite semanal.[^window]
+El número de mensajes que puedes enviar no es fijo. Depende del modelo elegido, del tamaño y la complejidad del trabajo y de si se hace en mi computadora o en la nube.[^depends] La tabla de la documentación oficial muestra, tomando como base Plus, un rango de lo que puedes usar **cada 5 horas**, y añade que además puede haber un límite semanal.[^window]
 
 | En este caso | Uso |
 |---|---|
 | Modelo grande, trabajo grande | Gasta mucho |
-| Tarea en la nube | Puede gastar más que en mi ordenador |
+| Tarea en la nube | Puede gastar más que en mi computadora |
 | Approve for me | Gasta más, lo que cuesta la revisión automática |
 | ChatGPT Work | Gasta de la misma cuota que Codex |
 
@@ -30,7 +30,7 @@ Qué reglas de datos se aplican depende de **cómo iniciaste sesión.**[^signin]
 
 La tabla comparativa oficial de tarifas tiene un elemento «No se entrena por defecto con datos de empresa», pero solo aparece marcado en Business, Enterprise y las claves de API.[^training] **Los planes personales, como Plus y Pro, no entran en esa garantía por defecto.** El ajuste para que las conversaciones de una cuenta personal no se usen para mejorar el modelo se vio en el [capítulo 8 de ChatGPT de la etapa 2](../11-chatgpt/08-privacy.md). Comprueba en la pantalla de ajustes de ChatGPT y en la ayuda de OpenAI si también se aplica a Codex.
 
-También queda registro en mi ordenador. Codex guarda por defecto el historial de conversaciones bajo `~/.codex`.[^local] Si conviertes una conversación en un **enlace para compartir**, en una cuenta personal cualquiera que tenga el enlace puede abrirla.[^share] Antes de compartir, comprueba que no haya rutas de archivos ni contenido de las notas.
+También queda registro en mi computadora. Codex guarda por defecto el historial de conversaciones bajo `~/.codex`.[^local] Si conviertes una conversación en un **enlace para compartir**, en una cuenta personal cualquiera que tenga el enlace puede abrirla.[^share] Antes de compartir, comprueba que no haya rutas de archivos ni contenido de las notas.
 
 A las notas que metas en la carpeta de la herramienta de orden sigue **quitándoles los datos personales** antes de meterlas, como hacías con Claude Code.
 
@@ -59,9 +59,9 @@ Fue el mismo resultado que con Claude Code, pero es lo que salió **en una sola 
 - Deja el permiso en Ask for approval y concede el acceso a internet solo cuando haga falta (capítulo 4).
 - Si el resultado afirma algo sin comprobar, como «hecho» o «completado», compáralo con el original.
 
-**Aparte** del acceso a internet para ejecutar comandos (capítulo 4, desactivado por defecto), la búsqueda web de Codex viene activada por defecto en las conversaciones de mi ordenador y trae los resultados de un índice reunido de antemano.[^search-on] Este método reduce el riesgo, pero no lo elimina.[^websearch] La documentación oficial también dice que no hay que fiarse de los resultados de la búsqueda web.[^untrusted]
+**Aparte** del acceso a internet para ejecutar comandos (capítulo 4, desactivado por defecto), la búsqueda web de Codex viene activada por defecto en las conversaciones de mi computadora y trae los resultados de un índice reunido de antemano.[^search-on] Este método reduce el riesgo, pero no lo elimina.[^websearch] La documentación oficial también dice que no hay que fiarse de los resultados de la búsqueda web.[^untrusted]
 
-Algunos modelos llevan una **vigilancia de seguridad** que puede detener el trabajo si detecta una acción que parece peligrosa.[^monitor] Si se detiene, lee el aviso y continúa solo después de comprobar que es seguro.[^resume] Pero en la terminal y en el móvil, si se detiene, el trabajo termina sin posibilidad de continuar.[^ends]
+Algunos modelos llevan una **vigilancia de seguridad** que puede detener el trabajo si detecta una acción que parece peligrosa.[^monitor] Si se detiene, lee el aviso y continúa solo después de comprobar que es seguro.[^resume] Pero en la terminal y en el teléfono, si se detiene, el trabajo termina sin posibilidad de continuar.[^ends]
 
 <Quiz id="ch508-injection" />
 

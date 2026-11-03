@@ -185,13 +185,13 @@ En este proyecto, responde en tono informal y en cinco líneas como máximo.
 
 **Dónde repasarlo**: [capítulo 7, Proyectos, conectores y skills](07-projects-tools.md)
 
-### Tarea 8. Preguntar hablando desde el móvil
+### Tarea 8. Preguntar hablando desde el teléfono
 
 **Para cuándo**: cuando te da pereza escribir con las manos o quieres ordenar tus ideas hablando.
 
 **Qué hacer**
 
-1. Instala en el móvil la aplicación «Claude by Anthropic» e inicia sesión con **el mismo correo** que en el ordenador.
+1. Instala en el teléfono la aplicación «Claude by Anthropic» e inicia sesión con **el mismo correo** que en la computadora.
 2. En un chat nuevo, pulsa el **micrófono** (dictado) a la derecha del cuadro de entrada, di la pregunta de abajo y envíala con la flecha. Después de enviar, lee el texto que quedó escrito en la ventana del chat.
 3. En un chat nuevo, pulsa el **símbolo de onda de sonido** (modo de voz) junto al micrófono y haz la misma pregunta hablando. Mientras Claude habla, di «Espera, más corto».
 
@@ -203,13 +203,13 @@ En la nevera tengo huevos, tofu y cebolleta. Dime dos platos que se puedan hacer
 
 **Comprueba si salió bien**
 
-- ☐ Veo en la aplicación del móvil las conversaciones que tuve en el ordenador
+- ☐ Veo en la aplicación del teléfono las conversaciones que tuve en la computadora
 - ☐ Comprobé si mi pregunta escrita en la ventana del chat es igual a lo que dije (si era distinta, la corregí por escrito y la pregunté de nuevo)
 - ☐ En el modo de voz, cuando empecé a hablar, Claude se detuvo y volvió a decirlo más corto
 - ☐ Vi que la conversación de voz quedó en la lista de conversaciones como registro de texto[^voice]
 - ☐ No dije en voz alta datos personales como nombres o direcciones
 
-**Dónde repasarlo**: [capítulo 10, Voz y móvil](10-voice-mobile.md) · [capítulo 1, Empezar](01-getting-started.md)
+**Dónde repasarlo**: [capítulo 10, Voz y teléfono](10-voice-mobile.md) · [capítulo 1, Empezar](01-getting-started.md)
 
 ### Tarea 9. Recibir un informe con la investigación (plan de pago)
 
@@ -242,7 +242,7 @@ La investigación reúne varias fuentes y hace una respuesta larga, así que el 
 
 **Qué hacer**
 
-1. En el ordenador, crea una carpeta de prácticas solo para Claude y mete unos diez archivos cualquiera. No metas archivos importantes.[^safe]
+1. En la computadora, crea una carpeta de prácticas solo para Claude y mete unos diez archivos cualquiera. No metas archivos importantes.[^safe]
 2. En la aplicación de escritorio, abre una conversación nueva (Cowork, si tienes la pantalla antigua) y deja el modo de permisos en «Manual» (수동).[^screen][^manual-name]
 3. Conecta al trabajo solo esa carpeta de prácticas y encárgale lo de abajo.
 4. Cada vez que pida permiso, lee qué quiere hacer y pulsa.
@@ -270,10 +270,10 @@ No borres ningún archivo y, cuando termines, dime en una tabla qué archivo mov
 
 - ☐ «Help improve our AI models», en «Privacidad» (개인정보보호), está en el lado que yo quiero (activado o desactivado)[^toggle][^improve-name]
 - ☐ En esa misma pantalla de «Privacidad», abrí «Chats compartidos» (공유된 채팅) → «Administrar» (관리)[^screen] y desactivé los que ya no necesito compartir[^share] (si no tenía ninguna conversación compartida, márcalo)
-- ☐ En «Cuenta», en «Sesiones activas» (활성 세션) (en la pantalla de configuración nueva, «Dónde has iniciado sesión»; 로그인된 위치), comprobé que no hay ningún dispositivo que no conozca. El móvil en el que inicié sesión en la tarea 8 es mío[^sessions]
+- ☐ En «Cuenta», en «Sesiones activas» (활성 세션) (en la pantalla de configuración nueva, «Dónde has iniciado sesión»; 로그인된 위치), comprobé que no hay ningún dispositivo que no conozca. El teléfono en el que inicié sesión en la tarea 8 es mío[^sessions]
 - ☐ Borré las conversaciones de práctica de las tareas 3, 4, 5 y 8 (si ya no necesito el «Proyecto de práctica» ni el trabajo de Cowork de la tarea 10, también los ordené). Como las conversaciones borradas desaparecen enseguida de la lista, antes miré que no hubiera mezclada alguna que quiera conservar[^delete]
 - ☐ En la lista de «Configuración» → «Memoria», borré aparte los recuerdos que se crearon con las prácticas.[^your-claude] Aunque borres la conversación, la memoria creada en esa conversación se queda[^memory] (si no había recuerdos que borrar, márcalo)
-- ☐ Si todavía no he ordenado todo, pensé si hacer una copia de seguridad con «Exportar datos» (데이터 내보내기), en «Privacidad». La exportación solo se puede hacer desde la web o la aplicación del ordenador, y el enlace recibido caduca a las 24 horas[^export]
+- ☐ Si todavía no he ordenado todo, pensé si hacer una copia de seguridad con «Exportar datos» (데이터 내보내기), en «Privacidad». La exportación solo se puede hacer desde la web o la aplicación de la computadora, y el enlace recibido caduca a las 24 horas[^export]
 
 **Dónde repasarlo**: [capítulo 9, Privacidad y seguridad](09-privacy.md) · [capítulo 3, Gestión de conversaciones](03-chats.md) · [capítulo 5, Memoria y personalización](05-memory.md)
 

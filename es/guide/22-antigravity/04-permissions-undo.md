@@ -16,7 +16,7 @@ Este capítulo se escribió a partir de la documentación oficial de Antigravity
 
 Fuente: documentación oficial de Antigravity (solo una parte)[^presets]
 
-**Turbo** puede leer y escribir en todo el ordenador, sin vallado.[^turbo] Para ordenar notas no hace falta.
+**Turbo** puede leer y escribir en todo la computadora, sin vallado.[^turbo] Para ordenar notas no hace falta.
 
 Hay tres sitios donde cambiarlo.[^where]
 

@@ -5,15 +5,18 @@
 # Run: uvx --from opencc==1.1.9 python make-hant.py <repo> <i18n-dir>
 import glob, json, os, re, sys
 import opencc
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import tw_quotes
 repo, I = sys.argv[1], sys.argv[2]
 _cc = opencc.OpenCC('s2twp')
 
 
 class cc:
-    # OpenCC reads '天后' as 'empress' and keeps 后 in '30 天后' (after 30 days) and '聊天后' (after chatting)
+    # OpenCC reads '天后' as 'empress' and keeps 后 in '30 天后' (after 30 days) and '聊天后' (after chatting).
+    # OpenCC also keeps Simplified quotes “” — Taiwan uses 「」 (tw_quotes.py).
     @staticmethod
     def convert(s):
-        return re.sub(r'(\d+ ?天|聊天)后', r'\1後', _cc.convert(s))
+        return tw_quotes.convert(re.sub(r'(\d+ ?天|聊天)后', r'\1後', _cc.convert(s)))
 
 # 1. pages
 src_root, dst_root = f'{repo}/zh-hans', f'{repo}/zh-hant'

@@ -3,7 +3,7 @@
 > **En una línea**: un experto no es quien conoce más funciones nuevas, sino quien **encarga el trabajo hablando como se hace con una persona, elige la herramienta adecuada para cada tarea, convierte lo que se repite en una plantilla y comprueba el resultado antes de usarlo**.
 > Este capítulo explica cómo **combinar** las funciones de los capítulos 1~10 y presenta las tareas programadas, el análisis de datos y el modo de estudio, que aún no hemos tratado.
 
-Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
+Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del teléfono, la ubicación de los menús puede ser un poco distinta.
 
 ## Qué hace diferente a un experto
 
@@ -181,7 +181,7 @@ Todos los lunes a las 8 de la mañana, organiza la previsión del tiempo de esta
 
 Puedes ver, editar, pausar y borrar la tarea creada en «Programadas» del menú lateral.[^tasks][^scheduled-name] También se abre desde «Ajustes» → «Notificaciones» (알림) → «Gestionar tareas» (작업 관리), o desde ••• (Más opciones) → «Ver tareas programadas» (예약 작업 보기) de la conversación.[^tasks]
 
-Elige en «Ajustes» → «Notificaciones» cómo quieres recibir los avisos, por notificación push o por correo. Para recibir las notificaciones push en el móvil, crea la tarea desde la aplicación del móvil.[^tasks]
+Elige en «Ajustes» → «Notificaciones» cómo quieres recibir los avisos, por notificación push o por correo. Para recibir las notificaciones push en el teléfono, crea la tarea desde la aplicación del teléfono.[^tasks]
 
 ![Pantalla «Programadas» del menú lateral. Arriba está el cuadro de entrada «Programar tarea» (작업 예약하기); debajo, una línea con una tarea creada (botones de pausar, editar y •••); y más abajo, la lista de tareas «Sugeridas» (추천)](../../../guide/11-chatgpt/assets/shot-29-scheduled.png)
 
@@ -342,7 +342,7 @@ En los tres cursos aparecen, con otros nombres, los mismos contenidos que en est
 - **Encargar tareas a un agente** (Agents and Workflows): escribes de antemano qué hay que crear, qué materiales usar, qué no hay que hacer (no enviar, no inventar fechas ni responsables, etc.), la forma del resultado y lo que vas a comprobar tú. Es casi lo mismo que las [«Cinco líneas para encargar un trabajo»](#cinco-lineas-para-encargar-un-trabajo-resultado-materiales-que-conservar-criterios-de-revision-y-forma) de este capítulo.
 - **Reglas para elegir la función** (Agents and Workflows): en muchos casos basta con un prompt claro. Si necesitas materiales de otro servicio, usa un plugin; si la misma tarea se repite, una habilidad; y si quieres repetir la misma comprobación a una hora fijada, una tarea programada. Mira [«Lo que se repite, en plantilla»](#lo-que-se-repite-en-plantilla-instrucciones-plantillas-y-habilidades) y [«Que se haga solo a la hora fijada»](#que-se-haga-solo-a-la-hora-fijada-tareas-programadas).
 
-En los cursos hay muchas actividades para hacer tú mismo. Si tienes ChatGPT abierto en otra pestaña, puedes seguirlas al instante mientras escuchas. Se recomienda seguir los cursos desde un ordenador y no desde el móvil.[^academy-content]
+En los cursos hay muchas actividades para hacer tú mismo. Si tienes ChatGPT abierto en otra pestaña, puedes seguirlas al instante mientras escuchas. Se recomienda seguir los cursos desde una computadora y no desde el teléfono.[^academy-content]
 
 ### Materiales públicos que puedes ver gratis
 

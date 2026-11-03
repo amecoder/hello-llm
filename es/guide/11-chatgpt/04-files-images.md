@@ -3,14 +3,14 @@
 > **En una línea**: lo que cuesta explicar con palabras, **súbelo como foto o archivo** para mostrarlo, y las imágenes que necesites **pídelas**.
 > Los archivos que subes se reúnen en la «Biblioteca» (라이브러리) y puedes volver a usarlos. El plan gratuito permite subir pocos archivos al día.
 
-Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
+Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del teléfono, la ubicación de los menús puede ser un poco distinta.
 
 ## Subir fotos y archivos
 
-Pulsa el botón + de la izquierda del cuadro de entrada y elige «Añadir fotos y archivos» (사진 및 파일 추가). Luego elige el archivo en tu ordenador.[^files]
+Pulsa el botón + de la izquierda del cuadro de entrada y elige «Añadir fotos y archivos» (사진 및 파일 추가). Luego elige el archivo en tu computadora.[^files]
 Cuando el archivo aparezca pegado encima del cuadro de entrada, escribe también una pregunta que diga qué quieres hacer con él y envíala.
 
-![Menú + del cuadro de entrada desplegado. Fíjate en «Añadir fotos y archivos: subir desde el ordenador» (사진 및 파일 추가 — 컴퓨터에서 업로드) en lo más alto y, debajo, en «Importar desde la biblioteca» (라이브러리에서 가져오기), «Crear imagen» (이미지 생성) y «Boceto» (스케치)](../../../guide/11-chatgpt/assets/shot-02-plus-menu-marked.png)
+![Menú + del cuadro de entrada desplegado. Fíjate en «Añadir fotos y archivos: subir desde la computadora» (사진 및 파일 추가 — 컴퓨터에서 업로드) en lo más alto y, debajo, en «Importar desde la biblioteca» (라이브러리에서 가져오기), «Crear imagen» (이미지 생성) y «Boceto» (스케치)](../../../guide/11-chatgpt/assets/shot-02-plus-menu-marked.png)
 
 Los títulos de las conversaciones y el nombre de la cuenta se han cambiado por ejemplos en esta pantalla. En este capítulo usamos ① el botón +, ② «Añadir fotos y archivos», ③ «Importar desde la biblioteca», ④ «Crear imagen» y ⑧ «Boceto».
 
@@ -200,7 +200,7 @@ Es un vídeo de presentación hecho por la propia empresa. Los nombres de las pa
 
 ## Pruébalo tú
 
-1. Haz con el móvil una foto de un recibo o una nota que tengas en casa, pásala al ordenador, súbela con «Añadir fotos y archivos» y pide "Organiza lo que está escrito en una tabla" (tapa el nombre y el número de tarjeta).
+1. Haz con el teléfono una foto de un recibo o una nota que tengas en casa, pásala a la computadora, súbela con «Añadir fotos y archivos» y pide "Organiza lo que está escrito en una tabla" (tapa el nombre y el número de tarjeta).
 2. Abre la «Biblioteca» del menú lateral y comprueba que la foto que acabas de subir se ha guardado.
 3. Crea con «Crear imagen» la imagen de la tienda de comida casera de arriba y corrígela una vez con "cambia el fondo a un ambiente primaveral y deja todo lo demás igual".
 4. Dibuja tres cuadrados con «Boceto», adjúntalos y pide "Crea una invitación de cumpleaños con esta disposición".
