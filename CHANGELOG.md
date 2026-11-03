@@ -2,6 +2,9 @@
 
 ## [2026-11-03]
 
+### Added
+- SEO·GEO — 페이지별 설명문(「한 줄 요약」→첫 문단, 6종→581종), canonical·hreflang(+x-default)·Open Graph·JSON-LD 582쪽 전체, `sitemap.xml`(582개), AI 검색용 `llms.txt`(언어별 링크 582개). VitePress 1.6.4 기본 description 태그가 큰따옴표를 이스케이프하지 않는 문제를 직접 낸 태그로 우회. `.vitepress/seo.ts`·`tests/seo.test.ts`(18개) (PR #75, `2e2771f`)
+
 ### Changed
 - 번역 다듬기 — 번체 따옴표를 대만식 「」『』로(`tw_quotes.py`, 116개 파일), 스페인어의 스페인식 낱말을 중립 스페인어로(auto·teléfono·computadora), 전체 목차의 「지금은 1단계를 채우는 중」 문구를 6개 언어에서 삭제, `.gitignore` 에 개인 설정 제외. 테스트 142/142·빌드 통과 (PR #74, `8a4f3eb`)
 
