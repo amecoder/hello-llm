@@ -83,7 +83,7 @@ features:
     link: /es/guide/12-gemini/
     linkText: "Empezar la guía de Gemini"
   - title: "Etapa 3 · Guía de uso de Claude Code"
-    details: "Un Claude que lee y modifica archivos directamente en las carpetas de tu ordenador. Se empieza por la aplicación de escritorio, sin terminal, y se aprende creando una herramienta que ordena a tu manera: 12 capítulos"
+    details: "Un Claude que lee y modifica archivos directamente en las carpetas de tu computadora. Se empieza por la aplicación de escritorio, sin terminal, y se aprende creando una herramienta que ordena a tu manera: 12 capítulos"
     link: /es/guide/20-claude-code/
     linkText: "Empezar la guía de Claude Code"
   - title: "Etapa 3 · Guía de uso de Codex"
@@ -110,7 +110,7 @@ features:
 
 ## Hoja de ruta
 
-Como cada etapa es la base de la siguiente, te recomendamos leerlas por orden de número. Por ahora estamos completando la etapa 1.
+Como cada etapa es la base de la siguiente, te recomendamos leerlas por orden de número.
 
 ![Hoja de ruta de aprendizaje: etapa 1, guía común (cómo preguntar bien) → etapa 2, ChatGPT, Claude y Gemini (funciones de cada servicio) → etapa 3, Claude Code, Codex y Antigravity (encargarle trabajos a la IA) → etapa 4, AI-SDLC (crear con la IA)](../../assets/roadmap.svg)
 
@@ -118,5 +118,5 @@ Como cada etapa es la base de la siguiente, te recomendamos leerlas por orden de
 |---|---|---|
 | 1 | [Guía común](/es/guide/00-common/) | Principios y usos comunes que valen con cualquier LLM |
 | 2 | [ChatGPT](/es/guide/11-chatgpt/) · [Claude](/es/guide/10-claude/) · [Gemini](/es/guide/12-gemini/) | Funciones y usos de cada servicio |
-| 3 | [Claude Code](/es/guide/20-claude-code/) · [Codex](/es/guide/21-codex/) · [Antigravity](/es/guide/22-antigravity/) | Herramientas de IA para programar que trabajan en tu ordenador |
+| 3 | [Claude Code](/es/guide/20-claude-code/) · [Codex](/es/guide/21-codex/) · [Antigravity](/es/guide/22-antigravity/) | Herramientas de IA para programar que trabajan en tu computadora |
 | 4 | [AI-SDLC](/es/guide/30-ai-sdlc/) | Con la IA, desde la planificación hasta la publicación: todo el proceso del desarrollo de software (SDLC) |

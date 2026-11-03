@@ -140,7 +140,7 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
       "Default",
       "Turbo",
     ],
-    explain: "Turbo ejecuta todos los comandos sin valla y sin preguntar, y lee y escribe en todo el ordenador. No hace falta para ordenar notas.",
+    explain: "Turbo ejecuta todos los comandos sin valla y sin preguntar, y lee y escribe en todo la computadora. No hace falta para ordenar notas.",
   },
   "ch604-sandbox": {
     prompt: "Con el preajuste Default de la aplicación y en el terminal (agy), ¿cómo está por defecto la valla de comandos (el sandbox)?",
@@ -198,9 +198,9 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
       "Dentro del otro dispositivo, por separado",
       "En un espacio de trabajo vacío de Google Cloud, sin tus archivos",
       "Solo dentro de un navegador web",
-      "Con los archivos y las herramientas de mi ordenador",
+      "Con los archivos y las herramientas de mi computadora",
     ],
-    explain: "Aunque lo uses a distancia, el agente trabaja con los archivos, las herramientas y las sesiones iniciadas de tu ordenador. En el otro dispositivo, inicias sesión con la misma cuenta de Google.",
+    explain: "Aunque lo uses a distancia, el agente trabaja con los archivos, las herramientas y las sesiones iniciadas de tu computadora. En el otro dispositivo, inicias sesión con la misma cuenta de Google.",
   },
   "ch606-install": {
     prompt: "Al ejecutar agy por primera vez te pide confirmar «Workspace trust». ¿Qué es?",
@@ -227,7 +227,7 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
     choices: [
       "Abre una ventana en pantalla para pedir permiso",
       "Se rechaza en silencio, la ejecución sigue y termina con código de salida 0",
-      "Reinicia el ordenador",
+      "Reinicia la computadora",
       "Se detiene al instante con código de error 1 y no da ninguna indicación de qué se bloqueó",
     ],
     explain: "Como no hay ventana para preguntar, se resuelve por política. La acción sin permiso se rechaza en silencio, el código de salida es 0 y el aviso sale por stderr.",

@@ -186,11 +186,11 @@ Todos los lunes a las 8 de la mañana, resúmeme en tres líneas el tiempo de es
 
 **Dónde repasarlo**: [capítulo 8, Encargar trabajos](08-tasks.md)
 
-### Tarea 9. Preguntar hablando desde el móvil
+### Tarea 9. Preguntar hablando desde el teléfono
 
 **Para cuándo**: cuando es difícil teclear, o cuando quieres practicar hablando.
 
-**Qué hacer**: instala la aplicación Gemini en el móvil e inicia sesión con la misma cuenta de Google. Pulsa el micrófono y di lo de abajo. Si tienes Android, pulsa también «Live».
+**Qué hacer**: instala la aplicación Gemini en el teléfono e inicia sesión con la misma cuenta de Google. Pulsa el micrófono y di lo de abajo. Si tienes Android, pulsa también «Live».
 
 ```
 Dime tres platos que pueda hacer esta noche con los huevos, el tofu y la cebolleta que tengo en la nevera.
@@ -199,10 +199,10 @@ Dime tres platos que pueda hacer esta noche con los huevos, el tofu y la cebolle
 **Comprueba si salió bien**
 
 - ☐ Lo que dije se convirtió en texto y se envió la pregunta
-- ☐ Esta conversación también se veía en la lista de conversaciones de la web del ordenador (si era un chat normal)
+- ☐ Esta conversación también se veía en la lista de conversaciones de la web de la computadora (si era un chat normal)
 - ☐ Si usé Live, vi que, después de pulsar «Finalizar» (종료), la misma conversación continuaba por escrito (si no usé Live, márcalo)
 
-**Dónde repasarlo**: [capítulo 10, Voz y móvil](10-voice-mobile.md)
+**Dónde repasarlo**: [capítulo 10, Voz y teléfono](10-voice-mobile.md)
 
 ### Tarea 10. Revisar y ordenar mi configuración de datos
 

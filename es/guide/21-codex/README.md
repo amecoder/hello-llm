@@ -1,6 +1,6 @@
 # Etapa 3 · Guía de uso de Codex
 
-Codex es una herramienta de IA creada por OpenAI que **trabaja directamente en una carpeta de tu ordenador**. Hoy se usa eligiendo «Codex» dentro de la aplicación de escritorio de ChatGPT.
+Codex es una herramienta de IA creada por OpenAI que **trabaja directamente en una carpeta de tu computadora**. Hoy se usa eligiendo «Codex» dentro de la aplicación de escritorio de ChatGPT.
 Esta guía traslada a Codex la «herramienta que ordena tus apuntes a tu manera» que creaste en la [guía de Claude Code](../20-claude-code/), y te enseña **solo lo que cambia respecto a Claude Code**.
 
 > **Esta guía se escribió a partir de la documentación oficial de Codex (learn.chatgpt.com) consultada el 1 de noviembre de 2026 y de resultados de ejecución reales.** Las funciones y los nombres de los menús cambian a menudo.
@@ -13,7 +13,7 @@ Esta guía traslada a Codex la «herramienta que ordena tus apuntes a tu manera�
 | 3 | [El archivo de reglas AGENTS.md](03-agents-md.md) | Trasladar CLAUDE.md, probar las reglas sin mencionarlas, importar y memoria |
 | 4 | [Permisos y cómo deshacer](04-permissions-undo.md) | Los tres modos del menú de permisos, carpetas protegidas, ventana de revisión, deshacer con Git |
 | 5 | [Trasladar las skills](05-skills.md) | .agents/skills, una línea con $weekly-review, lo que está mal y lo que falta |
-| 6 | [Programación, nube y móvil](06-schedule-cloud.md) | Condiciones y permisos de las tareas programadas, diferencias con la nube, conectar el móvil |
+| 6 | [Programación, nube y teléfono](06-schedule-cloud.md) | Condiciones y permisos de las tareas programadas, diferencias con la nube, conectar el teléfono |
 | 7 | [Usarlo desde el terminal](07-terminal.md) | Instalación, codex exec (solo lectura por defecto), comandos interactivos |
 | 8 | [Coste, datos, seguridad y cómo elegir herramienta](08-safety-choose.md) | Uso, ajustes de datos, experimento de la instrucción oculta, usar las dos herramientas juntas, ejercicio final |
 

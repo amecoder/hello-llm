@@ -55,7 +55,7 @@ Cuando recibas la respuesta, busca tú mismo el número del artículo en una pá
 
 ## 2. Datos personales y secretos — pensarlo antes de escribir
 
-Lo que escribes en la ventana de chat de la IA no se queda solo en tu móvil o tu ordenador. Se envía a los **ordenadores (servidores) de la empresa de IA** y, según el servicio y los ajustes, se guarda allí. Además, **puede usarse en el aprendizaje que mejora la IA, o puede leerlo una persona que revisa**. Las propias empresas lo indican en sus avisos oficiales.
+Lo que escribes en la ventana de chat de la IA no se queda solo en tu teléfono o tu computadora. Se envía a las **computadoras (servidores) de la empresa de IA** y, según el servicio y los ajustes, se guarda allí. Además, **puede usarse en el aprendizaje que mejora la IA, o puede leerlo una persona que revisa**. Las propias empresas lo indican en sus avisos oficiales.
 
 - Google explica en su aviso de privacidad de Gemini que revisores humanos ven una parte de los datos recopilados, y avisa: **«no introduzcas información confidencial que no quieras que vea un revisor»**.[^gemini]
 - En agosto de 2025, Anthropic hizo que los usuarios de los planes personales (Free, Pro y Max) eligieran por sí mismos si permiten usar sus conversaciones para el aprendizaje.
@@ -91,7 +91,7 @@ Escribe un borrador del informe de los hechos desde el punto de vista del compa�
 ```
 
 La petición después de ocultar no tiene nombre, teléfono, fecha exacta ni importe exacto. Aun así, se conserva la descripción de la situación necesaria para pedir el borrador del informe.
-Cuando recibas el resultado, rellena los huecos [ ] solo en tu ordenador. Así completas el documento sin haber enviado a la IA los datos reales.
+Cuando recibas el resultado, rellena los huecos [ ] solo en tu computadora. Así completas el documento sin haber enviado a la IA los datos reales.
 
 <Quiz id="ch9-privacy" />
 

@@ -7,7 +7,7 @@ Este capítulo se escribió a partir de la documentación oficial de Antigravity
 
 ## Instalar e iniciar sesión
 
-1. En [antigravity.google/download](https://antigravity.google/download) descarga el archivo de instalación para tu ordenador. En macOS, abre `Antigravity.dmg` y arrastra la aplicación a la carpeta **Applications**.[^dmg]
+1. En [antigravity.google/download](https://antigravity.google/download) descarga el archivo de instalación para tu computadora. En macOS, abre `Antigravity.dmg` y arrastra la aplicación a la carpeta **Applications**.[^dmg]
 2. Abre la aplicación y pulsa **Sign in**. Cuando se abra el navegador, inicia sesión con tu cuenta personal de Google.[^signin]
 
 El plan de la cuenta con la que inicias sesión (gratuito, Pro o Ultra) determina el uso y los modelos ([capítulo 1](01-what-is.md)).

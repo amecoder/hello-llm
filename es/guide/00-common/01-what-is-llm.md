@@ -12,7 +12,7 @@ LLM son las siglas de **Large Language Model**, en español **modelo de lenguaje
 - **Model (modelo)**: significa que es un programa creado mediante el entrenamiento.
 
 ChatGPT, Claude y Gemini son **servicios** que envuelven un LLM para que sea cómodo conversar con él.
-Piensa en un motor (el LLM) al que se le ha puesto la carrocería de un coche (la pantalla de chat).
+Piensa en un motor (el LLM) al que se le ha puesto la carrocería de un auto (la pantalla de chat).
 
 Filtrar el correo basura o recomendar vídeos también es IA. Pero esas IA eligen y clasifican cosas que ya existen. Un LLM **crea** texto nuevo.
 Por eso a una IA como el LLM se la llama **IA generativa** (generative AI).[^academy-genai]
@@ -78,7 +78,7 @@ Si la función de memoria está desactivada, dirá que no lo sabe. Si está acti
 
 Lo esencial de lo que hace un LLM es sorprendentemente sencillo. **Mira el texto hasta ahora y va añadiendo, una por una, la palabra siguiente que le parece más verosímil.**
 
-Piensa en el autocompletado del teclado del móvil. Si escribes «hoy para comer», te sugiere «qué».
+Piensa en el autocompletado del teclado del teléfono. Si escribes «hoy para comer», te sugiere «qué».
 Un LLM hace lo mismo. Solo que mira un contexto mucho más largo y lo hace a una escala mucho mayor.
 
 ![Entre los candidatos para la palabra que sigue a «hoy para comer» y su probabilidad (ejemplo: «qué» 62 %, «¿vamos?» 25 %, otros candidatos), se elige uno para formar «hoy para comer qué». Se repite añadir la palabra elegida y escoger la siguiente, hasta que la respuesta está completa](../../../guide/00-common/assets/ch1-next-word.svg)
@@ -240,7 +240,7 @@ También importa cómo se pulió después del entrenamiento. En «Para saber má
 ### Por eso no se elige mirando solo el número
 
 - **Los servicios comerciales de hoy rara vez dan a conocer el tamaño.** Por ejemplo, OpenAI explicó en el informe técnico de GPT-4 de 2023 que, por la situación de competencia y por razones de seguridad, no publica la estructura, incluido el tamaño del modelo.[^gpt4] Muchos modelos de otros servicios tampoco anuncian oficialmente su tamaño. Así que los números que circulan por internet pueden ser suposiciones.
-- Los **modelos cuyo tamaño se publica** suelen ser modelos abiertos que cualquiera puede descargar y usar (por ejemplo, Llama). Hacer funcionar esos modelos en tu propio ordenador se trata en la etapa 3.
+- Los **modelos cuyo tamaño se publica** suelen ser modelos abiertos que cualquiera puede descargar y usar (por ejemplo, Llama). Hacer funcionar esos modelos en tu propia computadora se trata en la etapa 3.
 - Si en un servicio puedes elegir entre un «modelo rápido» y uno «más inteligente», normalmente la diferencia es de tamaño, velocidad y coste. Encarga **las tareas sencillas al modelo rápido y las difíciles al grande**. Y compara los resultados. Es el método más exacto.
 
 <Quiz id="ch1-parameters" />

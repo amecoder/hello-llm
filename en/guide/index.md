@@ -110,7 +110,7 @@ features:
 
 ## Learning Roadmap
 
-Each stage builds on the one before it, so we recommend reading in numbered order. We are currently filling out Stage 1.
+Each stage builds on the one before it, so we recommend reading in numbered order.
 
 ![Learning Roadmap: Stage 1 Common Guide (How to ask well) → Stage 2 ChatGPT · Claude · Gemini (Features by service) → Stage 3 Claude Code · Codex · Antigravity (Delegating work to AI) → Stage 4 AI-SDLC (Building together with AI)](../../assets/roadmap.svg)
 

@@ -100,12 +100,12 @@ export const AI_SDLC: Record<string, QuestionText> = {
       "看起來很漂亮",
       "用最新技術把程式碼寫得乾淨好讀，讓以後無論誰看了都讚歎",
     ],
-    explain: "規格說明裡，要寫能用“是/否”確認的外部可見行為。不要寫實現方法或模糊的感覺。",
+    explain: "規格說明裡，要寫能用「是/否」確認的外部可見行為。不要寫實現方法或模糊的感覺。",
   },
   "ch703-tools": {
     prompt: "這份指南是怎樣處理 spec-kit 和 OpenSpec 的？",
     choices: [
-      "只介紹概念不安裝，透過“採訪 → SPEC.md”的流程實踐同樣的想法",
+      "只介紹概念不安裝，透過「採訪 → SPEC.md」的流程實踐同樣的想法",
       "說明必須安裝這兩個工具才能開始第 4 階段，並讓你每一章都照著輸入安裝命令",
       "說這兩個工具很危險，絕對不要用",
       "只安裝 spec-kit，不介紹 OpenSpec",
@@ -173,14 +173,14 @@ export const AI_SDLC: Record<string, QuestionText> = {
     explain: "把執行檢查裝置的命令寫進 CLAUDE.md，Claude 每次都能自己檢查。",
   },
   "ch705-evidence": {
-    prompt: "Claude 說“測試全都通過了”。這份指南建議怎麼應對？",
+    prompt: "Claude 說「測試全都通過了」。這份指南建議怎麼應對？",
     choices: [
       "相信這句話，直接部署",
       "把測試全部刪掉",
       "請它出示執行的命令及其輸出這種證據",
       "把同一個問題也問另一個 AI，兩個 AI 都說通過了就相信，直接部署",
     ],
-    explain: "光有“都通過了”這句話，幾乎得不到任何資訊。要拿到命令和輸出，或者螢幕這樣的證據。",
+    explain: "光有「都通過了」這句話，幾乎得不到任何資訊。要拿到命令和輸出，或者螢幕這樣的證據。",
   },
   "ch705-actions": {
     prompt: "關於 GitHub Actions，哪種說法是對的？",
@@ -203,7 +203,7 @@ export const AI_SDLC: Record<string, QuestionText> = {
     explain: "PR 為合併之前的討論和審查提供了一個場所。要做得小一些，並寫明改了什麼、為什麼改。",
   },
   "ch706-review": {
-    prompt: "對照 SPEC.md 做評審時，官方文件為什麼說“風格可以跳過”？",
+    prompt: "對照 SPEC.md 做評審時，官方文件為什麼說「風格可以跳過」？",
     choices: [
       "讓評審者找問題，他總會找出點什麼，全部改完就會多出一堆多餘的東西",
       "修改風格被 GitHub 服務條款禁止，評審中提到的話，倉庫會被封",

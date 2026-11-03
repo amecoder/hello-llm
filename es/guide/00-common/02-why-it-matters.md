@@ -7,7 +7,7 @@
 La investigación en IA lleva décadas. El punto de inflexión que lleva a los LLM de hoy es un solo artículo científico.
 Es «Attention Is All You Need», que publicó en 2017 un equipo de investigación de Google.[^1]
 Ese artículo presentó una estructura llamada **transformer (Transformer)**. Gracias a ella se pudo entrenar a la IA con muchísimos textos de forma eficiente.
-El método anterior tenía que leer la frase palabra por palabra, desde el principio. El transformer mira **a la vez** cómo se relacionan entre sí las palabras de la frase. Por eso se puede repartir el entrenamiento entre muchos ordenadores y hacerlo mucho más rápido.
+El método anterior tenía que leer la frase palabra por palabra, desde el principio. El transformer mira **a la vez** cómo se relacionan entre sí las palabras de la frase. Por eso se puede repartir el entrenamiento entre muchas computadoras y hacerlo mucho más rápido.
 La mayoría de los LLM que se usan hoy se basan en esta estructura. En el vídeo con dibujos de «Más en vídeo», más abajo, puedes ver cómo funciona un transformer por dentro.
 
 Pero la gente corriente empezó a notar la IA en primera persona cinco años después.
@@ -31,9 +31,9 @@ Después, varias empresas, como Claude de Anthropic y Gemini de Google, lanzaron
 
 ## Qué ha cambiado tanto
 
-### 1. Puedes encargarle trabajo al ordenador con tus palabras de siempre
+### 1. Puedes encargarle trabajo a la computadora con tus palabras de siempre
 
-Antes, para que un ordenador hiciera algo había que aprender un lenguaje de programación o memorizar menús y botones fijos.
+Antes, para que una computadora hiciera algo había que aprender un lenguaje de programación o memorizar menús y botones fijos.
 Con un LLM basta con decirlo así:
 
 ```
@@ -47,7 +47,7 @@ Un solo LLM puede traducir, resumir, redactar, responder preguntas, hacer lluvia
 
 ### 3. Coste y acceso
 
-La mayoría de los servicios se pueden empezar a usar gratis. También se usan desde una aplicación del móvil.
+La mayoría de los servicios se pueden empezar a usar gratis. También se usan desde una aplicación del teléfono.
 Ahora cualquiera puede probar algo parecido a tener un asistente o un profesor particular.
 
 <Quiz id="ch2-change" />
@@ -100,7 +100,7 @@ Hazte estas preguntas: ¿la fecha coincide con la nota al pie? ¿La fuente que m
 ## Resumen
 
 - El artículo del transformer de 2017 fue el punto de inflexión técnico, y la apertura de ChatGPT en 2022 fue el punto de inflexión de su popularización.
-- El cambio clave es que «con tus palabras de siempre puedes encargarle al ordenador casi cualquier tarea con textos».
+- El cambio clave es que «con tus palabras de siempre puedes encargarle a la computadora casi cualquier tarea con textos».
 - Conviene conocer también las polémicas: empleo, exactitud, derechos de autor y datos personales.
 
 <ChapterDone :chapter="2" />

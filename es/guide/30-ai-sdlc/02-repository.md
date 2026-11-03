@@ -1,6 +1,6 @@
 # Capítulo 2. Crear un repositorio de GitHub: construir la casa del proyecto
 
-> **En una línea**: un repositorio (Repository) es el lugar donde se guardan los archivos del proyecto y **todo el historial de cambios**. Si creas un repositorio en GitHub, tienes una copia segura fuera de tu ordenador y un espacio para colaborar.
+> **En una línea**: un repositorio (Repository) es el lugar donde se guardan los archivos del proyecto y **todo el historial de cambios**. Si creas un repositorio en GitHub, tienes una copia segura fuera de tu computadora y un espacio para colaborar.
 > Que sea público o privado está relacionado con **si más adelante podrás publicarlo gratis en la web**, así que decídelo desde el momento de crearlo.
 
 Este capítulo se ha escrito a partir de la documentación oficial de GitHub consultada el 1 de noviembre de 2026. Las pantallas de GitHub se describen en inglés. Si en la etapa 3 ya probaste a dejar un "historial de cambios" con Git, piensa que este es el paso de subir ese historial a internet.
@@ -17,8 +17,8 @@ Conviene conocer de antemano estas palabras que aparecen mucho.
 |---|---|
 | Rama (branch) | Una línea de trabajo aparte que no afecta a la versión principal |
 | Fusión (merge) | Unir a otra rama los cambios de una rama |
-| Remoto (remote) | Un repositorio que está en GitHub, no en tu ordenador |
-| Clonar (clone) | Descargar a tu ordenador un repositorio con todo su historial |
+| Remoto (remote) | Un repositorio que está en GitHub, no en tu computadora |
+| Clonar (clone) | Descargar a tu computadora un repositorio con todo su historial |
 
 Fuente: documentación oficial de GitHub (solo una parte)[^terms]
 
@@ -55,9 +55,9 @@ Cuando importes un repositorio que ya tiene historial de Git, no elijas ninguna 
 
 <Quiz id="ch702-files" />
 
-## Conectarlo con tu ordenador
+## Conectarlo con tu computadora
 
-Traer a tu ordenador un repositorio de GitHub se llama **clonar** (clone). La copia clonada se queda **conectada** con el original de GitHub, así que puedes volver a subir lo que hayas registrado.[^clone]
+Traer a tu computadora un repositorio de GitHub se llama **clonar** (clone). La copia clonada se queda **conectada** con el original de GitHub, así que puedes volver a subir lo que hayas registrado.[^clone]
 
 Hay varias formas de traerlo.
 
@@ -74,7 +74,7 @@ A Claude Code se lo puedes pedir así. Como dirección del repositorio usa la qu
 Clona este repositorio de GitHub en la carpeta ~/hello-ai-연습/할일보드: <dirección del repositorio>
 ```
 
-**También puedes subir una carpeta que ya existe.** Una carpeta que ya tenías en tu ordenador, como la herramienta de organización de la etapa 3, también se puede subir a GitHub, y si era una carpeta que no se gestionaba con Git, primero se convierte en un repositorio Git.[^existing] Pero esta guía crea el **tablero de tareas como un repositorio nuevo**. La herramienta de organización tiene las notas originales, y es más seguro evitar subirlas tal cual a un repositorio público.
+**También puedes subir una carpeta que ya existe.** Una carpeta que ya tenías en tu computadora, como la herramienta de organización de la etapa 3, también se puede subir a GitHub, y si era una carpeta que no se gestionaba con Git, primero se convierte en un repositorio Git.[^existing] Pero esta guía crea el **tablero de tareas como un repositorio nuevo**. La herramienta de organización tiene las notas originales, y es más seguro evitar subirlas tal cual a un repositorio público.
 
 <Quiz id="ch702-clone" />
 
@@ -103,7 +103,7 @@ Clona este repositorio de GitHub en la carpeta ~/hello-ai-연습/할일보드: <
 | GitHub | GitHub | Servicio que guarda repositorios de Git en internet y permite colaborar |
 | README | README | El primer manual de un repositorio |
 | .gitignore | .gitignore | Lista de archivos que Git debe ignorar |
-| Clone | Clonar | Descargar a tu ordenador un repositorio con todo su historial |
+| Clone | Clonar | Descargar a tu computadora un repositorio con todo su historial |
 
 <ChapterDone :chapter="702" />
 

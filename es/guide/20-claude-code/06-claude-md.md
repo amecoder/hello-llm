@@ -98,8 +98,8 @@ La documentación oficial dice claramente que CLAUDE.md es **un contexto de refe
 - Si hay **reglas que chocan entre sí**, Claude puede elegir una cualquiera. Léelo de vez en cuando y borra las reglas obsoletas.[^conflict]
 - Lo que hay que impedir pase lo que pase (por ejemplo, borrar la carpeta de originales) no lo fíes solo a CLAUDE.md: protégelo además con el modo de permisos del capítulo 4 y con el registro de Git.
 
-::: details También hay un CLAUDE.md que se aplica a todo tu ordenador
-Las instrucciones que escribas en `~/.claude/CLAUDE.md` (tu carpeta de usuario) se aplican a **las sesiones de todas las carpetas**.[^where] El ordenador con el que se hicieron las capturas de esta guía también tiene este tipo de instrucciones personales, y por eso la pantalla es un poco distinta, por ejemplo con una línea «Estado:» al final de las respuestas. Las reglas que sirvan para una sola carpeta, escríbelas en el CLAUDE.md de esa carpeta.
+::: details También hay un CLAUDE.md que se aplica a todo tu computadora
+Las instrucciones que escribas en `~/.claude/CLAUDE.md` (tu carpeta de usuario) se aplican a **las sesiones de todas las carpetas**.[^where] La computadora con el que se hicieron las capturas de esta guía también tiene este tipo de instrucciones personales, y por eso la pantalla es un poco distinta, por ejemplo con una línea «Estado:» al final de las respuestas. Las reglas que sirvan para una sola carpeta, escríbelas en el CLAUDE.md de esa carpeta.
 :::
 
 <Quiz id="ch406-not-enforced" />

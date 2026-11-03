@@ -16,7 +16,7 @@ Los skills tienen estas características.[^transition]
 - **A veces se usan solos.** Si hay un skill que encaja con tu pregunta de ahora, Gemini lo reconoce y lo aplica.
 - **Se pueden combinar.** En un mismo chat se pueden usar varios skills a la vez.
 
-Para usarlos tienes que **tener 18 años o más**, haber iniciado sesión y tener activado «Conservar actividad» (활동 기록 보관).[^skills] **No hace falta un plan de pago.**[^skills] Se usan en la web, en la app del móvil y en la app de Mac.[^skills]
+Para usarlos tienes que **tener 18 años o más**, haber iniciado sesión y tener activado «Conservar actividad» (활동 기록 보관).[^skills] **No hace falta un plan de pago.**[^skills] Se usan en la web, en la app del teléfono y en la app de Mac.[^skills]
 
 ### Abrir la pantalla de skills
 
@@ -43,7 +43,7 @@ En la pantalla de skills, elige un skill y pulsa «Más» (더보기).[^skills]
 |---|---|
 | Dejar de usarlo un tiempo | «Desactivar» (비활성화) |
 | Corregirlo conversando | «Editar con Gemini» (Gemini로 수정) |
-| Guardarlo en tu ordenador | «Descargar» (다운로드) (archivo .zip) |
+| Guardarlo en tu computadora | «Descargar» (다운로드) (archivo .zip) |
 | Eliminarlo | «Eliminar» (삭제): no se puede deshacer |
 
 Fuente: ayuda de Google[^skills]

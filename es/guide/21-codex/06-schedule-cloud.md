@@ -1,7 +1,7 @@
-# Capítulo 6. Programación, nube y móvil: solo en el momento fijado, aunque no estés
+# Capítulo 6. Programación, nube y teléfono: solo en el momento fijado, aunque no estés
 
-> **En una línea**: lo que haces igual todas las semanas lo ejecutas con una **programación** (Scheduled). Una programación que usa mi carpeta solo se ejecuta si **el ordenador está encendido y la aplicación en marcha.**
-> La nube es para quien tiene un repositorio de GitHub, y el móvil se usa como un mando a distancia que maneja mi ordenador.
+> **En una línea**: lo que haces igual todas las semanas lo ejecutas con una **programación** (Scheduled). Una programación que usa mi carpeta solo se ejecuta si **la computadora está encendida y la aplicación en marcha.**
+> La nube es para quien tiene un repositorio de GitHub, y el teléfono se usa como un mando a distancia que maneja mi computadora.
 
 Este capítulo está escrito a partir de la documentación oficial de Codex consultada el 1 de noviembre de 2026. Esta guía no llegó a guardar ninguna programación. El motivo es que se vería el contenido real del trabajo y se gastaría uso (es la misma razón que en el [capítulo 8 de Claude Code](../20-claude-code/08-parallel-cloud-schedule.md)).
 
@@ -15,7 +15,7 @@ Las programaciones se crean en la aplicación de escritorio o en la web, y la te
 Cada viernes a las 6 de la tarde, con $weekly-review crea en la carpeta notes la reflexión semanal de esa semana.
 ```
 
-**Hay una condición.** Una programación que usa carpetas de mi ordenador solo se ejecuta si el ordenador está encendido y la aplicación en marcha.[^awake] El ajuste **Prevent sleep while running** de macOS y Linux hace que el ordenador no se duerma **mientras se ejecuta** una conversación, de modo que la conversación continúe aunque no estés.[^sleep] No es una función que mantenga despierto el ordenador hasta la hora de la programación, así que, si vas a usar programaciones, comprueba aparte los ajustes de suspensión de tu ordenador.
+**Hay una condición.** Una programación que usa carpetas de mi computadora solo se ejecuta si la computadora está encendida y la aplicación en marcha.[^awake] El ajuste **Prevent sleep while running** de macOS y Linux hace que la computadora no se duerma **mientras se ejecuta** una conversación, de modo que la conversación continúe aunque no estés.[^sleep] No es una función que mantenga despierto la computadora hasta la hora de la programación, así que, si vas a usar programaciones, comprueba aparte los ajustes de suspensión de tu computadora.
 
 Las programaciones se ejecutan **sin nadie delante.** Por eso mantienen el alcance de mi valla básica (el sandbox), pero, si la organización no lo impide, se ejecutan **sin pedir permiso.**[^unattended] Lo que queda fuera de la valla, como no hay nadie a quien preguntar, se puede dar por fallido.
 
@@ -35,23 +35,23 @@ Antes de crear una programación, **ejecuta primero la misma petición en una co
 
 ## En qué se diferencia la nube
 
-Las tareas en la nube se ejecutan en un espacio de trabajo al otro lado de internet, así que siguen aunque mi ordenador esté dormido.[^cloud] A cambio, tienen condiciones.
+Las tareas en la nube se ejecutan en un espacio de trabajo al otro lado de internet, así que siguen aunque mi computadora esté dormida.[^cloud] A cambio, tienen condiciones.
 
 - Tiene que haber un **entorno publicado** (published environment) al que yo pueda acceder.[^env]
 - Para crear el entorno, eliges un **repositorio de GitHub** y lo conectas.[^github]
-- Los archivos de mi ordenador, los programas en ejecución y los inicios de sesión del navegador no pasan a la nube.[^not-moved]
+- Los archivos de mi computadora, los programas en ejecución y los inicios de sesión del navegador no pasan a la nube.[^not-moved]
 
-La carpeta de la herramienta de orden está solo en mi ordenador, así que esta guía no usa la nube. Si en el trabajo usas GitHub, recuerda solo que los trabajos largos puedes mandarlos a la nube y apagar el ordenador.
+La carpeta de la herramienta de orden está solo en mi computadora, así que esta guía no usa la nube. Si en el trabajo usas GitHub, recuerda solo que los trabajos largos puedes mandarlos a la nube y apagar la computadora.
 
 <Quiz id="ch506-cloud" />
 
-## Seguirlo desde el móvil
+## Seguirlo desde el teléfono
 
-Desde el móvil puedes ver cómo avanza, dar permisos y enviar instrucciones. El trabajo real se ejecuta en la nube o en **mi ordenador conectado.**[^mobile] Para conectar mi ordenador, en la aplicación pulsa **Set up** en **Settings → Connections → Control this Mac or PC.**[^connect]
+Desde el teléfono puedes ver cómo avanza, dar permisos y enviar instrucciones. El trabajo real se ejecuta en la nube o en **mi computadora conectada.**[^mobile] Para conectar mi computadora, en la aplicación pulsa **Set up** en **Settings → Connections → Control this Mac or PC.**[^connect]
 
-La conexión se hace con un código QR. La documentación oficial dice que **conectes solo dispositivos tuyos y de confianza.**[^trust] El motivo es que un móvil conectado puede manejar el Codex de mi ordenador.
+La conexión se hace con un código QR. La documentación oficial dice que **conectes solo dispositivos tuyos y de confianza.**[^trust] El motivo es que un teléfono conectado puede manejar el Codex de mi computadora.
 
-La documentación oficial lo explica tomando como base la aplicación de iOS. Las funciones se abren por turnos en cada cuenta, así que puede que en mi móvil todavía no estén.[^rollout]
+La documentación oficial lo explica tomando como base la aplicación de iOS. Las funciones se abren por turnos en cada cuenta, así que puede que en mi teléfono todavía no estén.[^rollout]
 
 <Quiz id="ch506-mobile" />
 
@@ -66,10 +66,10 @@ La documentación oficial lo explica tomando como base la aplicación de iOS. La
 ## Resumen
 
 - Las programaciones se crean conversando y se ven en Scheduled. Una programación puede llamar a una `$skill`.
-- Una programación que usa mi carpeta exige que el ordenador esté encendido y la aplicación en marcha.
+- Una programación que usa mi carpeta exige que la computadora esté encendida y la aplicación en marcha.
 - Las programaciones se ejecutan sin nadie delante y usan el permiso básico tal cual. Full access es peligroso.
 - La nube necesita un repositorio de GitHub y un entorno publicado. Mis archivos no pasan a ella.
-- El móvil maneja mi ordenador o la nube. Conecta solo dispositivos de confianza.
+- El teléfono maneja mi computadora o la nube. Conecta solo dispositivos de confianza.
 
 ## Glosario
 

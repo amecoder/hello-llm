@@ -1,20 +1,20 @@
-# Capítulo 10. Voz y móvil — preguntar hablando, Gemini Live y las aplicaciones del móvil y del ordenador
+# Capítulo 10. Voz y teléfono — preguntar hablando, Gemini Live y las aplicaciones del teléfono y de la computadora
 
-> **En una línea**: si te da pereza teclear, pregunta con el **micrófono**. Si quieres una conversación hablada de ida y vuelta, usa **Gemini Live** en el móvil.
-> También puedes preguntar enseñando la cámara o la pantalla. La aplicación del ordenador se abre al instante con **un solo atajo de teclado**.
+> **En una línea**: si te da pereza teclear, pregunta con el **micrófono**. Si quieres una conversación hablada de ida y vuelta, usa **Gemini Live** en el teléfono.
+> También puedes preguntar enseñando la cámara o la pantalla. La aplicación de la computadora se abre al instante con **un solo atajo de teclado**.
 
-Las pantallas del móvil de este capítulo no las capturó esta guía. Se ha escrito basándose en la ayuda, y la posición de los menús puede ser distinta según el móvil.
+Las pantallas del teléfono de este capítulo no las capturó esta guía. Se ha escrito basándose en la ayuda, y la posición de los menús puede ser distinta según el teléfono.
 
 ## Preguntar hablando — el botón del micrófono
 
 En lugar de escribir, puedes preguntar hablando.
 
-- **Aplicación del móvil**: pulsa el micrófono del cuadro de entrada y habla. El micrófono se queda abierto **hasta 5 minutos** para escuchar tu pregunta.[^mobilestart]
+- **Aplicación del teléfono**: pulsa el micrófono del cuadro de entrada y habla. El micrófono se queda abierto **hasta 5 minutos** para escuchar tu pregunta.[^mobilestart]
 - **Web**: pulsa el botón del micrófono a la derecha del cuadro de entrada («Dictado por voz»; 음성기록). En Mac también puedes usar el atajo ⌘ + Shift + D.[^screen]
 
 Aunque preguntes hablando, los consejos que aprendiste en la etapa 1 son los mismos. Di qué quieres, para quién y en qué forma ([capítulo 4 de la etapa 1](../00-common/04-prompt-basics.md)).
 
-El coreano es un idioma que admite la aplicación del móvil, y Corea es un país compatible.[^mobile] Pero algunas funciones de voz, como cambiar la voz, no están disponibles en algunos idiomas.[^voice]
+El coreano es un idioma que admite la aplicación del teléfono, y Corea es un país compatible.[^mobile] Pero algunas funciones de voz, como cambiar la voz, no están disponibles en algunos idiomas.[^voice]
 
 <Quiz id="ch310-voice" />
 
@@ -33,7 +33,7 @@ Voy a decirlo yo primero y, cuando termine, explícame cómo decirlo de forma m�
 
 ### Dónde se usa y qué condiciones hay
 
-La ayuda indica que se usa en la **aplicación Gemini de móviles y tabletas Android**. **En la web todavía no se puede usar Live.**[^live] Hay que tener 13 años o más (varía según el país) e iniciar sesión.[^live]
+La ayuda indica que se usa en la **aplicación Gemini de teléfonos y tabletas Android**. **En la web todavía no se puede usar Live.**[^live] Hay que tener 13 años o más (varía según el país) e iniciar sesión.[^live]
 El widget de Gemini para iPhone (iOS 17 o superior) también tiene un acceso directo a Live.[^widget] Pero como la ayuda de Live está basada en Android, esta guía no pudo comprobar hasta dónde llega en el iPhone.
 
 Por ahora, **los Gems no se pueden usar en Live.**[^live] La función de personalización que usa en Live el recuerdo de conversaciones pasadas (la memoria) dicen que solo funciona **en inglés en Estados Unidos**.[^live]
@@ -50,13 +50,13 @@ Aunque hayas desactivado interrumpir con la voz, puedes pararlo tocando la panta
 
 ### Cambiar la voz de Gemini
 
-La voz se elige en los **ajustes de la aplicación del móvil**. Pulsa el nombre para escucharla antes y guárdala con «Aceptar» (확인).[^voice] La voz elegida se usa no solo en Live, sino en **todas las funciones que responden con sonido**, como «Escuchar» (듣기), que lee la respuesta en voz alta.[^voice]
+La voz se elige en los **ajustes de la aplicación del teléfono**. Pulsa el nombre para escucharla antes y guárdala con «Aceptar» (확인).[^voice] La voz elegida se usa no solo en Live, sino en **todas las funciones que responden con sonido**, como «Escuchar» (듣기), que lee la respuesta en voz alta.[^voice]
 
 ### Enseñar la cámara y la pantalla
 
 Si activas la **cámara** durante Live, puedes hablar enseñando lo que ves.[^live] Por ejemplo, puedes enfocar el interior de la nevera y preguntar: «¿Qué ceno con esto?».
 
-También se puede **compartir la pantalla**. En ese caso, Gemini ve **toda la pantalla de tu móvil**.[^live] Por eso, antes de compartir, comprueba que en la pantalla no haya contraseñas, datos de pago ni mensajes de otras personas.
+También se puede **compartir la pantalla**. En ese caso, Gemini ve **toda la pantalla de tu teléfono**.[^live] Por eso, antes de compartir, comprueba que en la pantalla no haya contraseñas, datos de pago ni mensajes de otras personas.
 
 - Para terminar de compartir, desliza hacia abajo desde arriba de la pantalla y, en la tarjeta «Compartir pantalla» (화면 공유), pulsa «Dejar de compartir» (공유 중지).[^live]
 - Si sales de la aplicación, la cámara se apaga y, aunque vuelvas, no se enciende sola otra vez. Con compartir pantalla pasa lo mismo.[^live]
@@ -65,16 +65,16 @@ También se puede **compartir la pantalla**. En ese caso, Gemini ve **toda la pa
 
 <Quiz id="ch310-live" />
 
-## Aplicación del móvil — preguntar con una foto y usarla como asistente
+## Aplicación del teléfono — preguntar con una foto y usarla como asistente
 
-En la aplicación del móvil puedes hacer algo más que en la web.
+En la aplicación del teléfono puedes hacer algo más que en la web.
 
 - **Preguntar con una foto**: pulsa la cámara de la aplicación, haz una foto y pregunta sobre ella.[^mobileuse]
-- **Resumir Gmail y Drive**: si las aplicaciones conectadas están activadas, también resume en el móvil los correos y los archivos ([capítulo 7](07-skills-apps.md)).[^mobileuse]
+- **Resumir Gmail y Drive**: si las aplicaciones conectadas están activadas, también resume en el teléfono los correos y los archivos ([capítulo 7](07-skills-apps.md)).[^mobileuse]
 
 ### Usarla como asistente en Android
 
-En Android puedes fijar Gemini como **asistente predeterminado** (el ayudante al que llamas con un botón del móvil o con la voz).[^mobilestart]
+En Android puedes fijar Gemini como **asistente predeterminado** (el ayudante al que llamas con un botón del teléfono o con la voz).[^mobilestart]
 
 - Se le llama, por ejemplo, manteniendo pulsado el botón de encendido o el botón de inicio. El método cambia según el dispositivo.[^mobilestart]
 - Hay idiomas en que "Hey Google" no funciona, pero aun así puedes pulsar el micrófono y conversar hablando.[^mobilestart]
@@ -82,17 +82,17 @@ En Android puedes fijar Gemini como **asistente predeterminado** (el ayudante al
 
 ### Usarla desde la pantalla de bloqueo
 
-En móviles y tabletas Android puedes encargarle a Gemini algunas tareas sin desbloquear. En los ajustes, se activa y se desactiva «Usar Gemini sin desbloquear» (잠금 해제하지 않고 Gemini 사용하기).[^lock] Aunque lo hayas permitido, **para las tareas que necesitan información personal te pide que desbloquees.**[^lock]
+En teléfonos y tabletas Android puedes encargarle a Gemini algunas tareas sin desbloquear. En los ajustes, se activa y se desactiva «Usar Gemini sin desbloquear» (잠금 해제하지 않고 Gemini 사용하기).[^lock] Aunque lo hayas permitido, **para las tareas que necesitan información personal te pide que desbloquees.**[^lock]
 
-Si compartes el móvil con otras personas o lo dejas por ahí a menudo, es más seguro dejar este ajuste desactivado.
+Si compartes el teléfono con otras personas o lo dejas por ahí a menudo, es más seguro dejar este ajuste desactivado.
 
 <Quiz id="ch310-mobile" />
 
-## Aplicación del ordenador — llamarla al instante con un atajo
+## Aplicación de la computadora — llamarla al instante con un atajo
 
 Cómo instalar la aplicación de Mac y Windows está en el [capítulo 1](01-getting-started.md#que-es-gemini-y-donde-se-usa). Si ya la tienes instalada y abierta, la llamas al instante con un **atajo de teclado**.
 
-| Ordenador | Atajo | Otras cosas |
+| Computadora | Atajo | Otras cosas |
 |---|---|---|
 | Mac | Option + Espacio | Compartir ventana, «Hablar a la ventana» (현재 창에서 바로 말하기) |
 | Windows | Alt + Espacio | — |
@@ -104,27 +104,27 @@ En la aplicación de Mac también puedes hacer esto.[^mac]
 - **Compartir ventana**: con «Añadir archivos y herramientas» (파일 및 도구 추가) → «Compartir ventana» (창 공유) le enseñas a Gemini la ventana que estás viendo y recibes una respuesta adaptada a ese contenido.
 - **«Hablar a la ventana»** (Speak to Window): hablas manteniendo pulsada la tecla fn y, al soltarla, se envía la pregunta. Todavía no está abierta para todo el mundo.
 
-Al compartir una ventana pasa lo mismo que con compartir la pantalla del móvil. Antes, mira que en esa ventana no haya contenido que no debas enseñar.
+Al compartir una ventana pasa lo mismo que con compartir la pantalla del teléfono. Antes, mira que en esa ventana no haya contenido que no debas enseñar.
 
 <Quiz id="ch310-desktop" />
 
 ## Pruébalo tú
 
-1. En la aplicación Gemini del móvil, pulsa el micrófono y di: «Recomiéndame tres platos para la cena de hoy».
+1. En la aplicación Gemini del teléfono, pulsa el micrófono y di: «Recomiéndame tres platos para la cena de hoy».
 2. Si tienes Android, pulsa «Live», practica una presentación personal de 1 minuto, pulsa «Finalizar» y comprueba si la misma conversación continúa por escrito.
-3. En los ajustes de la aplicación del móvil, escucha dos o tres voces de Gemini y elige una.
-4. Si tienes la aplicación del ordenador, llama a Gemini con el atajo (Option + Espacio en Mac, Alt + Espacio en Windows).
+3. En los ajustes de la aplicación del teléfono, escucha dos o tres voces de Gemini y elige una.
+4. Si tienes la aplicación de la computadora, llama a Gemini con el atajo (Option + Espacio en Mac, Alt + Espacio en Windows).
 
 **Proyecto continuo** ([preparar el club de lectura](../00-common/practice-kit.md)): practica con Live, hablando, las palabras con que presentarás la próxima reunión. Cuando termines, en la conversación que pasó a texto, pídele que ordene lo que hay que mejorar.
 
 ## Resumen
 
-- Si pulsas el micrófono, puedes preguntar hablando. El micrófono de la aplicación del móvil escucha hasta 5 minutos. El coreano es un idioma que admite la aplicación.
+- Si pulsas el micrófono, puedes preguntar hablando. El micrófono de la aplicación del teléfono escucha hasta 5 minutos. El coreano es un idioma que admite la aplicación.
 - Gemini Live es una conversación hablada de ida y vuelta. Según la ayuda, se usa en la aplicación Android y en la web todavía no. Se detiene con «En espera» y «Finalizar»; al «Finalizar» continúa como conversación de texto.
-- Durante Live puedes enseñar la cámara y la pantalla. Al compartir pantalla se ve toda la pantalla del móvil.
-- La voz se cambia en los ajustes de la aplicación del móvil y se usa en todas las funciones que responden con sonido.
+- Durante Live puedes enseñar la cámara y la pantalla. Al compartir pantalla se ve toda la pantalla del teléfono.
+- La voz se cambia en los ajustes de la aplicación del teléfono y se usa en todas las funciones que responden con sonido.
 - En Android puedes usar Gemini como asistente predeterminado y también desde la pantalla de bloqueo. Para tareas que necesitan información personal hay que desbloquear.
-- La aplicación del ordenador se llama con Option + Espacio en Mac y Alt + Espacio en Windows.
+- La aplicación de la computadora se llama con Option + Espacio en Mac y Alt + Espacio en Windows.
 
 ## Glosario
 
@@ -132,7 +132,7 @@ Al compartir una ventana pasa lo mismo que con compartir la pantalla del móvil.
 |---|---|---|
 | Gemini Live | Gemini Live | Conversación hablada de ida y vuelta con Gemini |
 | Screen sharing | Compartir pantalla | Enseñarle a Gemini la pantalla de mi dispositivo |
-| Mobile assistant | Asistente del móvil | Ayudante predeterminado al que llamas con un botón del móvil o con la voz |
+| Mobile assistant | Asistente del teléfono | Ayudante predeterminado al que llamas con un botón del teléfono o con la voz |
 | Widget | Widget | Pequeña ventana que abre una función de la aplicación desde la pantalla de inicio |
 | Speak to Window | Hablar a la ventana | Función de Mac para preguntar hablando mientras mantienes pulsada la tecla fn |
 

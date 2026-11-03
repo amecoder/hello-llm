@@ -1,9 +1,9 @@
-# Capítulo 10. Voz y móvil — pregunta hablando y ve más rápido desde el móvil
+# Capítulo 10. Voz y teléfono — pregunta hablando y ve más rápido desde el teléfono
 
 > **En una línea**: el **micrófono** del cuadro de entrada escribe lo que dices (dictado), y el **símbolo de onda de sonido** te permite hablar con Claude y escuchar sus respuestas (modo de voz).
-> En el móvil puedes abrirlo más rápido con widgets, atajos y la pantalla de bloqueo, y pasar a la aplicación los borradores de mensajes y correos.
+> En el teléfono puedes abrirlo más rápido con widgets, atajos y la pantalla de bloqueo, y pasar a la aplicación los borradores de mensajes y correos.
 
-Las pantallas corresponden a la versión web de octubre de 2026. En la aplicación del móvil y en la del ordenador la posición de los botones puede ser un poco distinta, y el nombre de los menús de configuración también puede variar según la pantalla.
+Las pantallas corresponden a la versión web de octubre de 2026. En la aplicación del teléfono y en la de la computadora la posición de los botones puede ser un poco distinta, y el nombre de los menús de configuración también puede variar según la pantalla.
 
 ## Dictado y modo de voz
 
@@ -24,7 +24,7 @@ Las dos funciones se pueden usar también con el plan gratuito.[^dictation][^voi
 
 ## Prueba el dictado
 
-Este apartado explica el dictado de la aplicación del móvil (iPhone y Android).[^dictation] En Cowork de la aplicación del ordenador también se puede usar el dictado.[^voice]
+Este apartado explica el dictado de la aplicación del teléfono (iPhone y Android).[^dictation] En Cowork de la aplicación de la computadora también se puede usar el dictado.[^voice]
 
 1. Abre un chat nuevo en la aplicación de Claude.
 2. Pulsa el **micrófono** a la derecha del cuadro de entrada.
@@ -43,7 +43,7 @@ El dictado admite 12 idiomas, incluido el coreano. Los idiomas distintos del ing
 
 Los nombres de personas y de lugares pueden transcribirse mal. Después de enviar, lee una vez tu pregunta tal como quedó en la ventana del chat.[^dictation]
 
-### En un ordenador Mac — entrada rápida
+### En una computadora Mac — entrada rápida
 
 Si usas la aplicación de escritorio de Claude en un Mac, prueba a pulsar **dos veces la tecla Option**. Se abre enseguida el cuadro de entrada de Claude, estés en la aplicación que estés.[^quick] Puedes preguntar sin interrumpir lo que estabas haciendo.
 
@@ -62,9 +62,9 @@ Explícame de forma sencilla qué significa cada uno de los números de la panta
 
 ## Prueba el modo de voz
 
-El modo de voz todavía está en **versión de prueba**. Se puede usar en la web, en la aplicación del ordenador y en la del móvil, pero está hecho para funcionar mejor en el móvil.[^voice]
+El modo de voz todavía está en **versión de prueba**. Se puede usar en la web, en la aplicación de la computadora y en la del teléfono, pero está hecho para funcionar mejor en el teléfono.[^voice]
 
-**En la web y en la aplicación del ordenador**
+**En la web y en la aplicación de la computadora**
 
 Primero fíjate en dónde están los botones. En ⑧, abajo a la derecha del cuadro de entrada, están juntos el micrófono (dictado) y el símbolo de onda de sonido (modo de voz).[^screen]
 
@@ -77,7 +77,7 @@ Es una pantalla con los nombres y los títulos de las conversaciones cambiados p
 3. Al hablar, lo que dices se escribe solo en el cuadro de entrada. Cuando terminas de hablar, Claude responde.
 4. Para terminar, pulsa «Detener» (Stop; 중지) abajo a la derecha.
 
-**En la aplicación del móvil**
+**En la aplicación del teléfono**
 
 1. Pulsa el **símbolo de onda de sonido** junto al micrófono del cuadro de entrada.
 2. Elige la voz que más te guste.
@@ -126,8 +126,8 @@ Cuando yo respondo, sigue así.
 
 La voz de Claude se elige solo entre unas pocas ya fijadas. Es para impedir que se imite o se copie la voz de alguien.[^voice]
 
-- **Web y aplicación del ordenador**: está en «Configuración» (설정) → «General» (일반), en «Voz» (음성). Bajo «Idioma» (언어) también están «Estilo» (스타일) y «Velocidad» (속도).[^screen][^voice-settings-name] Si pulsas una voz, puedes escucharla antes.
-- **Aplicación del móvil**: durante el modo de voz, pulsa el botón de ajustes de abajo a la izquierda y elige la voz y la velocidad al hablar.[^voice]
+- **Web y aplicación de la computadora**: está en «Configuración» (설정) → «General» (일반), en «Voz» (음성). Bajo «Idioma» (언어) también están «Estilo» (스타일) y «Velocidad» (속도).[^screen][^voice-settings-name] Si pulsas una voz, puedes escucharla antes.
+- **Aplicación del teléfono**: durante el modo de voz, pulsa el botón de ajustes de abajo a la izquierda y elige la voz y la velocidad al hablar.[^voice]
 
 **El idioma en que hablas hay que fijarlo por separado.** Aunque cambies la pantalla de la aplicación al coreano, el idioma de la voz no cambia.[^voice] En esta pantalla se elige en «Configuración» → «General» → «Voz» → ③ «Idioma».[^screen] Los idiomas distintos del inglés están en versión de prueba. También puedes pedirlo durante la conversación con «Háblame en coreano».[^voice]
 
@@ -154,7 +154,7 @@ Una conversación hablada **también la oye quien está a tu lado.** Se oye tu p
 
 <Quiz id="ch210-privacy" />
 
-## Más rápido desde el móvil — widgets, atajos y pantalla de bloqueo
+## Más rápido desde el teléfono — widgets, atajos y pantalla de bloqueo
 
 Puedes llamar a Claude sin buscar la aplicación y abrirla. Todo esto **cuenta para el límite de uso.**[^ios][^android]
 
@@ -191,9 +191,9 @@ Mantén pulsado un hueco de la pantalla de inicio, busca Claude en «Widgets» (
 
 <Quiz id="ch210-shortcuts" />
 
-## Conectar con las aplicaciones del móvil — mensajes, correo, calendario y mapas
+## Conectar con las aplicaciones del teléfono — mensajes, correo, calendario y mapas
 
-Claude de la aplicación del móvil puede conectarse con otras aplicaciones del teléfono para ayudarte. Funciona en todos los planes.[^ios-apps][^android-apps]
+Claude de la aplicación del teléfono puede conectarse con otras aplicaciones del teléfono para ayudarte. Funciona en todos los planes.[^ios-apps][^android-apps]
 
 | | iPhone | Android |
 |---|---|---|
@@ -240,7 +240,7 @@ Y pregúntate: ¿el texto que escribió el dictado es igual a lo que dije? ¿Qu�
 
 En el modo de voz, pide una explicación larga y, mientras Claude habla, di «Espera, más corto». Comprueba si Claude se detiene y lo repite más corto.
 
-**3. Poner un acceso directo en el móvil**
+**3. Poner un acceso directo en el teléfono**
 
 En un iPhone, pon el widget de Claude en la pantalla de inicio; en un Android, pon el widget de Claude. Pulsa el botón del micrófono y comprueba que se abre enseguida el dictado.
 
@@ -248,8 +248,8 @@ En un iPhone, pon el widget de Claude en la pantalla de inicio; en un Android, p
 
 ## Resumen
 
-- El micrófono es el **dictado**: convierte lo que dices en texto para enviarlo, y la respuesta llega como texto. Este capítulo lo explicó tomando como base la aplicación del móvil.
-- El símbolo de onda de sonido es el **modo de voz**: preguntas hablando y escuchas la respuesta. Está en versión de prueba y funciona mejor en el móvil.
+- El micrófono es el **dictado**: convierte lo que dices en texto para enviarlo, y la respuesta llega como texto. Este capítulo lo explicó tomando como base la aplicación del teléfono.
+- El símbolo de onda de sonido es el **modo de voz**: preguntas hablando y escuchas la respuesta. Está en versión de prueba y funciona mejor en el teléfono.
 - El modo de voz usa por defecto el modo manos libres y, si hay ruido, se cambia a pulsar para hablar. Cuenta para el límite de uso.
 - El idioma en que hablas se fija aparte del idioma de la pantalla de la aplicación. En esta pantalla es «Configuración» → «General» → «Voz» → «Idioma».
 - Las conversaciones de voz quedan como registro de texto. La grabación del dictado se borra, pero el texto resultante sigue la configuración del entrenamiento.

@@ -1,6 +1,6 @@
 # Etapa 3 · Guía de uso de Antigravity
 
-Antigravity es una herramienta de IA creada por Google que **trabaja directamente en una carpeta de tu ordenador**. Tiene una aplicación de escritorio y un programa de terminal, `agy`.
+Antigravity es una herramienta de IA creada por Google que **trabaja directamente en una carpeta de tu computadora**. Tiene una aplicación de escritorio y un programa de terminal, `agy`.
 En esta guía abres **sin trasladarla, tal cual**, la carpeta «Herramienta que organiza a mi manera» (내 방식대로 정리해 주는 도구) que creaste hasta la [guía de Codex](../21-codex/), compruebas que también funciona con la tercera herramienta y aprendes solo lo que es distinto.
 
 > **Esta guía se escribió a partir de la documentación oficial de Antigravity (antigravity.google/docs) consultada el 1 de noviembre de 2026 y de los resultados ejecutados con la terminal `agy`. Todavía no pudo practicarse con la pantalla de la aplicación.** Las funciones y los nombres de los menús cambian con frecuencia.

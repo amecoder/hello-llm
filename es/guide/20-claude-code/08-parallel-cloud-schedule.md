@@ -1,7 +1,7 @@
 # Capítulo 8. Varias tareas a la vez, la nube y las tareas programadas: que la herramienta de orden funcione sola
 
 > **En una línea**: puedes abrir varias sesiones y encargar **tareas en paralelo**. Para que algo funcione solo a la hora fijada, crea una **tarea programada**.
-> Hay tres tipos de programación (de escritorio, en la nube y `/loop`), y la mayor diferencia es **si tu ordenador tiene que estar encendido**.
+> Hay tres tipos de programación (de escritorio, en la nube y `/loop`), y la mayor diferencia es **si tu computadora tiene que estar encendida**.
 
 Este capítulo se escribió a partir de la documentación oficial de Claude Code consultada el 2026-10-31. Las listas de sesiones y de tareas programadas muestran tal cual los nombres de tus tareas reales, así que este capítulo se guía por la descripción y los nombres de pantalla de la documentación oficial en lugar de capturas. Usa la habilidad `/weekly-review` que creaste en el capítulo 7.
 
@@ -25,15 +25,15 @@ Una tarea programada hace que Claude **inicie una sesión nueva por sí solo** a
 
 | | Programación de escritorio | Programación en la nube | `/loop` |
 |---|---|---|---|
-| Dónde se ejecuta | En mi ordenador | En la nube | En mi ordenador |
-| Ordenador encendido | Sí (aplicación abierta, ordenador despierto) | No | Sí |
+| Dónde se ejecuta | En mi computadora | En la nube | En mi computadora |
+| Computadora encendida | Sí (aplicación abierta, computadora despierta) | No | Sí |
 | Hay que dejar la sesión abierta | No | No | Sí |
 | Acceso a mis archivos | Sí | No (copia recién descargada) | Sí |
 | Intervalo más corto | 1 hora (formulario de la pantalla) | 1 hora | 1 minuto |
 
 Fuente: documentación oficial de Claude Code[^compare]
 
-**Para la herramienta de orden, lo adecuado es la programación de escritorio**, porque tiene que leer las notas de `inbox` de mi ordenador. La programación en la nube funciona aunque apagues el ordenador, pero no trabaja con mis archivos, sino con un repositorio de GitHub que descarga de nuevo.[^compare][^cloud] `/loop` se usa para repetir una comprobación un rato dentro de una sesión que dejas abierta, y termina solo a los 7 días.[^loop]
+**Para la herramienta de orden, lo adecuado es la programación de escritorio**, porque tiene que leer las notas de `inbox` de mi computadora. La programación en la nube funciona aunque apagues la computadora, pero no trabaja con mis archivos, sino con un repositorio de GitHub que descarga de nuevo.[^compare][^cloud] `/loop` se usa para repetir una comprobación un rato dentro de una sesión que dejas abierta, y termina solo a los 7 días.[^loop]
 
 En una versión anterior de la aplicación, la función de programación puede aparecer con el nombre **Routines**.[^old-name]
 
@@ -53,16 +53,16 @@ Crea una tarea programada que todos los viernes a las 6 de la tarde cree con /we
 
 Al programar, hay cuatro cosas que no debes olvidar.
 
-1. **La aplicación y el ordenador deben estar despiertos**: la programación de escritorio solo funciona **con la aplicación abierta y el ordenador despierto**. Para evitar que se duerma, activa **Keep computer awake** en los ajustes. Aun así, si cierras la tapa del portátil, se duerme.[^awake]
-2. **Ejecuciones mientras estaba apagado**: si el ordenador estaba dormido, al despertar ejecuta **solo la más reciente una vez** de las que se perdió. Una tarea programada para el viernes a las 6 de la tarde puede ejecutarse el sábado por la mañana.[^missed] Por eso añade a la petición una **condición**, como "si esa semana no hay notas…".[^missed]
+1. **La aplicación y la computadora deben estar despiertos**: la programación de escritorio solo funciona **con la aplicación abierta y la computadora despierta**. Para evitar que se duerma, activa **Keep computer awake** en los ajustes. Aun así, si cierras la tapa del portátil, se duerme.[^awake]
+2. **Ejecuciones mientras estaba apagado**: si la computadora estaba dormida, al despertar ejecuta **solo la más reciente una vez** de las que se perdió. Una tarea programada para el viernes a las 6 de la tarde puede ejecutarse el sábado por la mañana.[^missed] Por eso añade a la petición una **condición**, como "si esa semana no hay notas…".[^missed]
 3. **Se detiene en la ventana de permisos**: la tarea programada también tiene su propio modo de permisos. Si es «Manual» (수동), **se detiene y espera** en cuanto necesita permiso.[^perm] Después de crearla, ejecútala una vez con **Run now** y, en la ventana de permisos que aparezca, elige **permitir siempre**. Así no se detendrá a partir de la siguiente ejecución.[^perm] La razón de que sea distinto del «permitir una sola vez» del capítulo 7 es que la programación se ejecuta mientras tú no estás mirando.
-4. **También se aplican mis reglas personales de permiso**: las reglas de permiso de la configuración de Claude Code de mi ordenador (`~/.claude/settings.json`) también se aplican a las tareas programadas.[^perm]
+4. **También se aplican mis reglas personales de permiso**: las reglas de permiso de la configuración de Claude Code de mi computadora (`~/.claude/settings.json`) también se aplican a las tareas programadas.[^perm]
 
 <Quiz id="ch408-schedule" />
 
 ## Trabajar en la nube
 
-Las sesiones en la nube **siguen trabajando aunque apagues tu ordenador.**[^cloud-run] Eso sí, la nube no puede ver las carpetas de tu ordenador y suele trabajar descargando un **repositorio de GitHub**. Por eso normalmente hace falta una conexión con GitHub.[^cloud] Lo que haces en una carpeta de tu ordenador, como la herramienta de orden de esta guía, es más propio del escritorio. La nube pruébala cuando empieces a subir el trabajo a GitHub y a usarlo desde allí.
+Las sesiones en la nube **siguen trabajando aunque apagues tu computadora.**[^cloud-run] Eso sí, la nube no puede ver las carpetas de tu computadora y suele trabajar descargando un **repositorio de GitHub**. Por eso normalmente hace falta una conexión con GitHub.[^cloud] Lo que haces en una carpeta de tu computadora, como la herramienta de orden de esta guía, es más propio del escritorio. La nube pruébala cuando empieces a subir el trabajo a GitHub y a usarlo desde allí.
 
 <Quiz id="ch408-cloud" />
 
@@ -78,7 +78,7 @@ Las sesiones en la nube **siguen trabajando aunque apagues tu ordenador.**[^clou
 ## Resumen
 
 - Las sesiones son independientes. Abre varias y encarga en paralelo tareas con archivos distintos. Evita el mismo archivo o usa un worktree.
-- La programación puede ser de escritorio (mi ordenador, acceso a archivos), en la nube (el ordenador puede estar apagado, GitHub) o `/loop` (dentro de una sesión, 7 días).
+- La programación puede ser de escritorio (mi computadora, acceso a archivos), en la nube (la computadora puede estar apagada, GitHub) o `/loop` (dentro de una sesión, 7 días).
 - La herramienta de orden lee mis archivos, así que lo adecuado es la programación de escritorio.
 - Una ejecución perdida se ejecuta una sola vez al despertar. Escribe la condición en la petición y atiende de antemano la ventana de permisos con Run now.
 
@@ -89,7 +89,7 @@ Las sesiones en la nube **siguen trabajando aunque apagues tu ordenador.**[^clou
 | Scheduled task | Tarea programada | Tarea que inicia una sesión nueva por sí sola a la hora fijada |
 | Routine | Rutina (Routine) | Nombre anterior de las tareas programadas en la nube |
 | Worktree | Árbol de trabajo (worktree) | Copia de trabajo aparte del mismo repositorio de Git |
-| Cloud session | Sesión en la nube | Sesión que se ejecuta en la nube en lugar de en mi ordenador |
+| Cloud session | Sesión en la nube | Sesión que se ejecuta en la nube en lugar de en mi computadora |
 | `/loop` | `/loop` | Comando que repite una tarea dentro de una sesión abierta (termina a los 7 días) |
 
 <ChapterDone :chapter="408" />

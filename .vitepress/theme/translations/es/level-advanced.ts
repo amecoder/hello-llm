@@ -268,7 +268,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
       "El registro de conversaciones del usuario y un archivo con la lista de clientes de la empresa",
       "El conocimiento guardado en los parámetros del modelo y un índice de búsqueda con la Wikipedia",
       "La tabla de puntuaciones de los evaluadores humanos y la lista de respuestas que el modelo creó antes",
-      "El espacio del disco duro del ordenador y los archivos de copia de seguridad en la nube",
+      "El espacio del disco duro de la computadora y los archivos de copia de seguridad en la nube",
     ],
     explain: "Lewis et al. combinaron la memoria de parámetros de un modelo generativo preentrenado con una memoria externa (el recuperador), un índice de vectores densos de la Wikipedia, y produjeron textos más concretos y ajustados a los hechos.",
   },
@@ -593,7 +593,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "La documentación de arquitectura de MCP cita como elementos clave que expone el servidor las herramientas (tools), funciones ejecutables; los recursos (resources), material de contexto; y los prompts, plantillas reutilizables que ayudan en la interacción.",
   },
   "advanced-s5-local-mcp-consent": {
-    prompt: "Un compañero te mandó un servidor MCP local (local MCP server, un programa MCP que se ejecuta en tu ordenador) de origen desconocido diciendo que «se instala con un solo clic». A la luz de la documentación de seguridad de MCP, ¿cuál es la actitud adecuada?",
+    prompt: "Un compañero te mandó un servidor MCP local (local MCP server, un programa MCP que se ejecuta en tu computadora) de origen desconocido diciendo que «se instala con un solo clic». A la luz de la documentación de seguridad de MCP, ¿cuál es la actitud adecuada?",
     choices: [
       "Comprobar yo mismo el comando que se va a ejecutar y aprobarlo sabiendo que corre con mis permisos",
       "Como MCP es un protocolo estándar, cualquier servidor tiene la seguridad garantizada, así que se instala enseguida",

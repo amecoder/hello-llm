@@ -3,7 +3,7 @@
 > **En una línea**: puedes probar ChatGPT sin registrarte. Si quieres conservar las conversaciones y subir archivos, regístrate gratis,
 > y piensa en un plan de pago solo cuando lo gratuito se te quede corto.
 
-Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
+Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del teléfono, la ubicación de los menús puede ser un poco distinta.
 
 ## Probar primero sin iniciar sesión
 
@@ -54,9 +54,9 @@ Hay dos formas de entrar.[^login]
 | Correo electrónico y contraseña | Creas la cuenta con tu dirección de correo |
 | **Inicio de sesión social** (entrar con la cuenta de otra empresa) | Entras con una cuenta de Google, Microsoft o Apple |
 
-![Ventana «Inicia sesión o regístrate» (로그인 또는 회원가입) que aparece al pulsar «Regístrate gratis» en la pantalla sin sesión iniciada. Tiene los botones para continuar con una cuenta de Google, una cuenta de Apple o un número de teléfono móvil, y un campo para la dirección de correo](../../../guide/11-chatgpt/assets/shot-23-signup.png)
+![Ventana «Inicia sesión o regístrate» (로그인 또는 회원가입) que aparece al pulsar «Regístrate gratis» en la pantalla sin sesión iniciada. Tiene los botones para continuar con una cuenta de Google, una cuenta de Apple o un número de teléfono@@Teléfono@@, y un campo para la dirección de correo](../../../guide/11-chatgpt/assets/shot-23-signup.png)
 
-*Pantalla web del 2026-10-28. En esta ventana apareció «Continuar con el número de teléfono móvil» (휴대 전화 번호로 계속하기) en lugar del botón de Microsoft.*[^screen-signup]
+*Pantalla web del 2026-10-28. En esta ventana apareció «Continuar con el número de teléfono@@Teléfono@@» (휴대 전화 번호로 계속하기) en lugar del botón de Microsoft.*[^screen-signup]
 
 Hay cuatro cosas que debes saber.
 
@@ -92,7 +92,7 @@ Es más fácil elegir si te fijas en **"qué cambia"** y no en las cifras.
 | **Anuncios** | En Free y Go pueden aparecer anuncios debajo de la respuesta | Desde Plus no hay anuncios |
 | **Elegir la profundidad de razonamiento** | Activas «Pensar» (생각하기) para que piense más a fondo | Desde Plus eliges el «nivel de razonamiento» (추론 수준) ([capítulo 2](02-screen-tour.md)) |
 | **Subir archivos** | Hasta 3 al día ([capítulo 4](04-files-images.md)) | Puedes subir muchos más |
-| **Work** (modo para encargar tareas largas) | No se puede usar en la web ni en el móvil | Se puede usar ([capítulo 7](07-projects-plugins.md)) |
+| **Work** (modo para encargar tareas largas) | No se puede usar en la web ni en el teléfono | Se puede usar ([capítulo 7](07-projects-plugins.md)) |
 
 El "sin límite de veces" del plan gratuito solo vale para las conversaciones de texto cotidianas. Existen mecanismos para evitar abusos. Funciones como archivos, imágenes y voz tienen límites aparte.[^free]
 
@@ -107,10 +107,10 @@ En la información oficial no pude comprobar si también aparecen en Corea.
 No hace falta empezar con un plan de pago. Lo más sensato es **empezar gratis y subir de plan cuando te topes a menudo con el límite**. Antes de pagar, ten muy en cuenta lo siguiente.
 
 - **Solo se paga mes a mes.** Go, Plus y Pro no tienen pago anual, es decir, no puedes pagar de una vez 1 año completo.[^go]
-- **Aunque borres la aplicación, la suscripción continúa.** Si desinstalas la aplicación de ChatGPT del móvil, el cobro no se detiene. Si quieres dejar de usarlo, tienes que cancelar la suscripción tú mismo.[^pro]
-- **La cancelación se hace donde empezaste la suscripción.** Si pagaste en la web, cancela en la web; si pagaste con App Store o Google Play, cancela en esa tienda. No se puede cancelar desde la aplicación de ChatGPT del móvil. Debes cancelar **al menos 24 horas antes** de la siguiente fecha de cobro para que no te cobren el mes siguiente.[^promo]
+- **Aunque borres la aplicación, la suscripción continúa.** Si desinstalas la aplicación de ChatGPT del teléfono, el cobro no se detiene. Si quieres dejar de usarlo, tienes que cancelar la suscripción tú mismo.[^pro]
+- **La cancelación se hace donde empezaste la suscripción.** Si pagaste en la web, cancela en la web; si pagaste con App Store o Google Play, cancela en esa tienda. No se puede cancelar desde la aplicación de ChatGPT del teléfono. Debes cancelar **al menos 24 horas antes** de la siguiente fecha de cobro para que no te cobren el mes siguiente.[^promo]
 - **La prueba gratuita pasa a cobro automático cuando termina.** Cuando acaba el periodo de prueba gratuita o de descuento que conseguiste por invitar a un amigo o por un evento, la suscripción de pago continúa con el método de pago que registraste. Si no piensas seguir usándolo, cancela antes de que termine el periodo. Los códigos de descuento solo se pueden usar una vez y no se pueden acumular.[^trial]
-- **Si has pagado y te sigue saliendo como gratuita, no vuelvas a pagar.** Primero comprueba si has iniciado sesión con la cuenta con la que pagaste. En la aplicación del móvil, pulsa «Restaurar compras» (Restore purchases) en los ajustes. No pude comprobar cómo se llama este menú en la pantalla en coreano.[^plus]
+- **Si has pagado y te sigue saliendo como gratuita, no vuelvas a pagar.** Primero comprueba si has iniciado sesión con la cuenta con la que pagaste. En la aplicación del teléfono, pulsa «Restaurar compras» (Restore purchases) en los ajustes. No pude comprobar cómo se llama este menú en la pantalla en coreano.[^plus]
 - **Go no puede usar los modelos heredados.** Los modelos heredados (modelos de IA de generaciones anteriores) no están incluidos en Go, y la conversación por voz tiene el mismo límite que el plan gratuito.[^go]
 
 También existen los **créditos** (Credit, uso adicional que compras por adelantado, aparte del plan). En «Ajustes» → «Uso» (사용량) hay un aviso que dice: "Compra créditos o activa la recarga automática para seguir usando Work y Codex cuando alcances el límite de uso".[^screen-usage]
@@ -127,15 +127,15 @@ decidir en qué momento necesitaré un plan de pago.
 
 <Quiz id="ch101-subscribe" />
 
-## Aplicaciones para móvil y ordenador
+## Aplicaciones para teléfono y computadora
 
-Además del navegador web, puedes usar ChatGPT con la aplicación del móvil y la del ordenador. No hace falta crear una cuenta nueva en cada dispositivo: basta con **iniciar sesión con la misma cuenta**. Para comprobar si ves las conversaciones que tuviste en otro dispositivo, mira el punto 4 de «Pruébalo tú» más abajo.
+Además del navegador web, puedes usar ChatGPT con la aplicación del teléfono y la de la computadora. No hace falta crear una cuenta nueva en cada dispositivo: basta con **iniciar sesión con la misma cuenta**. Para comprobar si ves las conversaciones que tuviste en otro dispositivo, mira el punto 4 de «Pruébalo tú» más abajo.
 
-- **Aplicación del móvil**: en el menú desplegable de arriba (la lista que se abre al pulsar) eliges Chat o Work.[^work]
-- **Aplicación del ordenador**: usas Chat, Work y Codex juntos en una sola aplicación nueva. La aplicación anterior puede seguir existiendo con el nombre «ChatGPT Classic».[^desktop] La aplicación para Mac necesita macOS 14 o posterior.[^macos]
+- **Aplicación del teléfono**: en el menú desplegable de arriba (la lista que se abre al pulsar) eliges Chat o Work.[^work]
+- **Aplicación de la computadora**: usas Chat, Work y Codex juntos en una sola aplicación nueva. La aplicación anterior puede seguir existiendo con el nombre «ChatGPT Classic».[^desktop] La aplicación para Mac necesita macOS 14 o posterior.[^macos]
 - **KakaoTalk**: en Corea también puedes usar ChatGPT dentro de KakaoTalk (explicación más abajo).[^kakao]
 
-En marzo de 2026, el menú lateral de la aplicación del móvil se simplificó. Funciones como las imágenes pasaron a una barra horizontal encima de la lista de chats.
+En marzo de 2026, el menú lateral de la aplicación del teléfono se simplificó. Funciones como las imágenes pasaron a una barra horizontal encima de la lista de chats.
 Es posible que haya vuelto a cambiar después. Si la ubicación no coincide con la pantalla web de esta guía, busca un botón con un nombre parecido.[^rn]
 
 Al descargar la aplicación, busca "ChatGPT" en la tienda de aplicaciones y comprueba el **nombre del desarrollador**. En iPhone (App Store) debe aparecer «OpenAI OpCo, LLC» y en Android (Google Play), «OpenAI». Hay muchas otras aplicaciones con nombres parecidos.[^appfaq]
@@ -145,7 +145,7 @@ Al descargar la aplicación, busca "ChatGPT" en la tienda de aplicaciones y comp
 - Si ya tienes una cuenta de ChatGPT, conéctala. El historial de conversaciones que tengas en KakaoTalk también podrás verlo en ChatGPT. Si no tienes cuenta, puedes registrarte con una cuenta de Kakao. La cuenta creada desde KakaoTalk la usas igual en la aplicación de ChatGPT.
 - Para OpenAI es un **servicio de terceros** (un servicio en cuyo funcionamiento participa otra empresa). Por eso conviene leer **ambos** conjuntos de condiciones y avisos de privacidad, los de OpenAI y los de Kakao.[^kakaofaq]
 
-<!-- Falta captura de pantalla: pantalla inicial de la aplicación del móvil (menú desplegable Chat/Work y barra horizontal), Android o iOS -->
+<!-- Falta captura de pantalla: pantalla inicial de la aplicación del teléfono (menú desplegable Chat/Work y barra horizontal), Android o iOS -->
 
 <Quiz id="ch101-apps" />
 
@@ -157,7 +157,7 @@ Puede que la respuesta se quede parada, que aparezca un mensaje de error o que t
 2. **Espera de 30 a 60 segundos.** A veces la respuesta termina tarde. Si sigue parada y la conversación es muy larga, vuelve a preguntar en un **chat nuevo**.
 3. **Ábrelo en una ventana de incógnito** (una ventana del navegador que se abre sin historial ni extensiones). También puedes probar con otro navegador.
 4. **Apaga la VPN** (programa que cambia tu dirección de internet) por un momento. Que de vez en cuando aparezca el puzle de "comprobar que eres una persona" (**CAPTCHA**) es normal. Si te sale todas las veces, la causa puede ser la VPN o una extensión del navegador.[^captcha]
-5. **Si solo falla con el wifi de la empresa**, cambia a los datos del móvil. Si entonces funciona, el problema es de la red de la empresa. Pregunta al personal de informática.[^network]
+5. **Si solo falla con el wifi de la empresa**, cambia a los datos del teléfono. Si entonces funciona, el problema es de la red de la empresa. Pregunta al personal de informática.[^network]
 6. **Si aparece un aviso de que has alcanzado el límite** o una hora a partir de la cual puedes volver a usarlo, espera hasta entonces. También puedes elegir otra función.[^feature]
 
 Aunque borres la aplicación y la vuelvas a instalar, **el límite de uso no se restablece.**[^mobile] Si aun así no funciona, contacta con el soporte de help.openai.com. Basta con enviar el texto del error tal cual. Si envías una captura de pantalla, asegúrate de que no se vea ninguna contraseña ni otros datos personales.
@@ -169,7 +169,7 @@ Aunque borres la aplicación y la vuelvas a instalar, **el límite de uso no se 
 1. Entra en chatgpt.com sin iniciar sesión y pregunta "¿En qué tipo de tareas puedes ayudarme?".
 2. Cierra el navegador por completo, vuelve a abrirlo y comprueba si la conversación de hace un momento sigue ahí (las conversaciones previas al inicio de sesión solo se ven mientras sigues conectado en el mismo navegador).[^home]
 3. Regístrate con un correo personal, haz la misma pregunta otra vez y mira si la conversación aparece en «Recientes» (최근) del menú lateral izquierdo.
-4. Instala la aplicación en el móvil, inicia sesión con la misma cuenta y comprueba si ves las conversaciones que tuviste en el ordenador.
+4. Instala la aplicación en el teléfono, inicia sesión con la misma cuenta y comprueba si ves las conversaciones que tuviste en la computadora.
 
 **Proyecto continuo** ([Preparar un club de lectura](../00-common/practice-kit.md)): con la sesión iniciada, pregunta "Soy el coordinador de un club de lectura de mi barrio. Hazme una lista de lo que tengo que encargarme al preparar la reunión del mes que viene.". Cuando termines la tarea, compara la lista que recibiste con lo que hiciste realmente.
 
@@ -229,4 +229,4 @@ Siguiente capítulo: [Capítulo 2. Recorrido por la pantalla](02-screen-tour.md)
 [^network]: Ayuda de OpenAI, «Network recommendations for ChatGPT errors on web and apps». "Company WiFi network vs Cellular hotspot". https://help.openai.com/en/articles/9247338 (consultado el 2026-10-24)
 [^feature]: Ayuda de OpenAI, «Troubleshooting model feature access». "If it says you reached a limit or shows a reset time, wait until that time and try again, or choose another available option." https://help.openai.com/en/articles/10258669 (consultado el 2026-10-24)
 [^mobile]: Ayuda de OpenAI, «Troubleshooting the ChatGPT mobile app». "Reinstalling doesn't reset usage limits, change workspace permissions, or remove account restrictions." https://help.openai.com/en/articles/7910461 (consultado el 2026-10-24)
-[^screen-signup]: Comprobado directamente en una ventana nueva del navegador sin sesión iniciada. Los botones son «Continuar con la cuenta de Google» (Google 계정으로 계속하기), «Continuar con la cuenta de Apple» (Apple 계정으로 계속하기) y «Continuar con el número de teléfono móvil» (휴대 전화 번호로 계속하기), y debajo el campo «Dirección de correo electrónico» (이메일 주소) y «Continuar» (계속) (consultado el 2026-10-28, pantalla web antes de iniciar sesión)
+[^screen-signup]: Comprobado directamente en una ventana nueva del navegador sin sesión iniciada. Los botones son «Continuar con la cuenta de Google» (Google 계정으로 계속하기), «Continuar con la cuenta de Apple» (Apple 계정으로 계속하기) y «Continuar con el número de teléfono@@Teléfono@@» (휴대 전화 번호로 계속하기), y debajo el campo «Dirección de correo electrónico» (이메일 주소) y «Continuar» (계속) (consultado el 2026-10-28, pantalla web antes de iniciar sesión)

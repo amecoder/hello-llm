@@ -36,7 +36,7 @@ Fuente: documentación oficial de Claude Code (para cuentas personales)[^retenti
 
 Las cuentas de trabajo, como Team y Enterprise, no se usan para entrenar a menos que se elija otra cosa.[^commercial]
 
-**También queda un registro en tu ordenador.** Claude Code guarda en tu ordenador el historial de conversaciones **como texto sin cifrar** para poder retomar las sesiones. Las sesiones del terminal se borran por defecto a los 30 días, pero **las sesiones abiertas en la app de escritorio quedan por defecto fuera de este plazo**, así que pueden durar más.[^local] Si las notas de una reunión contienen datos personales de otras personas, es mejor borrarlos u ocultarlos antes de encargar la organización (es el mismo principio de datos personales del [capítulo 9 de la etapa 1](../00-common/09-safety.md)).
+**También queda un registro en tu computadora.** Claude Code guarda en tu computadora el historial de conversaciones **como texto sin cifrar** para poder retomar las sesiones. Las sesiones del terminal se borran por defecto a los 30 días, pero **las sesiones abiertas en la app de escritorio quedan por defecto fuera de este plazo**, así que pueden durar más.[^local] Si las notas de una reunión contienen datos personales de otras personas, es mejor borrarlos u ocultarlos antes de encargar la organización (es el mismo principio de datos personales del [capítulo 9 de la etapa 1](../00-common/09-safety.md)).
 
 <Quiz id="ch409-data" />
 
@@ -94,7 +94,7 @@ A esto esta guía añade dos hábitos.
 ## Resumen
 
 - El uso de Claude Code de la suscripción está incluido en la suscripción, y todos los sitios donde lo usas lo comparten. Se ve con `/usage`.
-- En las cuentas personales tú eliges si se usa para entrenar (permitir: 5 años; no permitir: 30 días de conservación). También queda un registro en tu ordenador (las sesiones de la app de escritorio quedan por defecto fuera del plazo de 30 días).
+- En las cuentas personales tú eliges si se usa para entrenar (permitir: 5 años; no permitir: 30 días de conservación). También queda un registro en tu computadora (las sesiones de la app de escritorio quedan por defecto fuera del plazo de 30 días).
 - Las instrucciones ocultas son instrucciones metidas a escondidas en el material. En este experimento no las obedeció, pero no es una garantía.
 - Lee antes de permitir, echa un vistazo al material ajeno antes de encargarlo, y comprueba el resultado y los «puntos que hay que confirmar».
 

@@ -3,7 +3,7 @@
 > **En una línea**: las conversaciones que ya no necesitas puedes **renombrarlas o borrarlas**, y las anteriores las encuentras en la lista o **pidiéndole a Claude que las busque**.
 > Para enseñárselas a otras personas usa la **invitación a personas concretas** o el **enlace público**, y si no quieres que quede registro, usa el **chat incógnito**.
 
-Las pantallas son de la versión web de octubre de 2026. Se está desplegando por turnos la nueva pantalla de Claude, que junta el chat y Cowork, así que puede variar según la pantalla. En la aplicación del móvil la posición de los menús es un poco distinta.
+Las pantallas son de la versión web de octubre de 2026. Se está desplegando por turnos la nueva pantalla de Claude, que junta el chat y Cowork, así que puede variar según la pantalla. En la aplicación del teléfono la posición de los menús es un poco distinta.
 
 En la etapa 1 aprendiste cuándo conviene abrir una conversación nueva: cuando cambia el tema, cuando se olvida una y otra vez de las primeras indicaciones o cuando la conversación se ha hecho demasiado larga ([capítulo 6 de la etapa 1](../00-common/06-conversation.md#cuando-empezar-una-conversacion-nueva)). En Claude vale igual. En este capítulo veremos cómo manejar las conversaciones que se van acumulando.
 
@@ -32,7 +32,7 @@ En el mismo menú también están «Quitar de fijados» (고정 해제) (o «Fij
 La ayuda también explica cómo borrar varias conversaciones a la vez. En la lista completa de conversaciones («Chats y tareas», Chats and tasks), pulsa «⋮» → «Seleccionar» (선택), marca las conversaciones que quieres borrar o pulsa «Seleccionar todo» (모두 선택) arriba del todo.[^delete] El nombre de los menús puede variar según la pantalla.
 :::
 
-En el móvil se hace un poco distinto.[^delete]
+En el teléfono se hace un poco distinto.[^delete]
 
 - **iPhone**: mantén pulsada la conversación en la lista de chats.
 - **Android**: pulsa «⋮» arriba a la derecha de la conversación abierta. Para varias, pulsa el icono de lista de verificación arriba a la derecha de la lista y bórralas con el icono de la papelera.
@@ -50,7 +50,7 @@ Hay dos caminos para encontrar una conversación anterior.
 
 **Primero, buscarla en la lista.** Echa un vistazo a la lista «Recientes» del menú lateral. Arriba del menú lateral también hay un botón «Buscar» (검색).[^screen] Las preguntas cortas y las tareas largas se reúnen en una sola lista, «Recientes» (Recents).[^new] Si has cambiado los títulos por otros tuyos, así las encuentras mucho más rápido.
 
-**Segundo, pedirle a Claude que la busque.** Si tienes un plan de pago (Pro, Max, Team o Enterprise), basta con preguntárselo en una conversación nueva. Funciona en la web, en el escritorio y en la aplicación del móvil.[^search]
+**Segundo, pedirle a Claude que la busque.** Si tienes un plan de pago (Pro, Max, Team o Enterprise), basta con preguntárselo en una conversación nueva. Funciona en la web, en el escritorio y en la aplicación del teléfono.[^search]
 
 ```
 Busca la conversación de la semana pasada en la que te pregunté por una función de Excel. Vuelve a ordenarme la función que me dijiste entonces.
@@ -92,7 +92,7 @@ Este método tiene estas características.[^share-people]
 - **Solo se puede ver.** Quien lo recibe no puede continuar la conversación, copiarla en su cuenta ni descargar archivos.
 - **También puedes invitar a quien no tiene cuenta de Claude.** Puede verla si crea una cuenta gratuita. Las invitaciones que no se abren desaparecen a los 30 días.
 - **Hay un límite de personas que puedes invitar al día.** La ayuda no dice la cifra exacta.
-- **Desde la aplicación del móvil todavía no se puede enviar.** Envíala desde la web. La conversación recibida se abre en cualquier dispositivo.
+- **Desde la aplicación del teléfono todavía no se puede enviar.** Envíala desde la web. La conversación recibida se abre en cualquier dispositivo.
 
 Compartir es **como hacer una foto de ese momento** (una instantánea, snapshot).[^share-old] Lo que se conversa después de compartir no lo ve quien la recibió. Para enseñarle también lo nuevo, pulsa «Actualizar chat compartido» (Update shared chat) en la ventana de compartir.[^share-people]
 
@@ -209,9 +209,9 @@ Este ejemplo lo ha preparado esta guía. La respuesta real depende del servicio 
 
 ## Gestionar los dispositivos con sesión iniciada
 
-¿Has iniciado alguna vez sesión en Claude desde un ordenador de un cibercafé o desde el móvil de otra persona? Si es así, comprueba dónde tienes la sesión iniciada.
+¿Has iniciado alguna vez sesión en Claude desde una computadora de un cibercafé o desde el teléfono de otra persona? Si es así, comprueba dónde tienes la sesión iniciada.
 
-Si inicias sesión en la web, la sesión se mantiene 28 días. Si usas Claude durante ese tiempo, a partir de ese momento vuelve a ampliarse a 28 días.[^logout] Quiere decir que un ordenador en el que olvidaste cerrar sesión puede quedarse abierto bastante tiempo.
+Si inicias sesión en la web, la sesión se mantiene 28 días. Si usas Claude durante ese tiempo, a partir de ese momento vuelve a ampliarse a 28 días.[^logout] Quiere decir que una computadora en la que olvidaste cerrar sesión puede quedarse abierta bastante tiempo.
 
 **Ver dónde tienes la sesión iniciada**[^sessions]
 
@@ -227,8 +227,8 @@ Verás el dispositivo, el navegador, la ubicación aproximada y la última vez q
 
 **Cerrar sesión en todos los dispositivos a la vez**[^logout]
 
-En la misma pantalla «Configuración > Cuenta», pulsa «Cerrar sesión en todos los dispositivos» y confirma.[^screen][^logout-name] Se cierra la sesión al instante en todos los sitios donde habías iniciado sesión: web, móvil, aplicación de escritorio, etc.[^logout]
-Esta función solo está en la web. En la aplicación del móvil todavía no existe.
+En la misma pantalla «Configuración > Cuenta», pulsa «Cerrar sesión en todos los dispositivos» y confirma.[^screen][^logout-name] Se cierra la sesión al instante en todos los sitios donde habías iniciado sesión: web, teléfono, aplicación de escritorio, etc.[^logout]
+Esta función solo está en la web. En la aplicación del teléfono todavía no existe.
 
 <Quiz id="ch203-sessions" />
 

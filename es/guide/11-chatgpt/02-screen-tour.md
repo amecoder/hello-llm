@@ -3,7 +3,7 @@
 > **En una línea**: de la pantalla de ChatGPT solo tienes que conocer cuatro zonas: el **menú lateral izquierdo** (conversaciones anteriores y funciones), el **cuadro de entrada del centro** (donde preguntas),
 > el **selector Chat/Work de arriba** y el **menú de cuenta de abajo a la izquierda** (ajustes). Al principio basta con el cuadro de entrada y «Nuevo chat» (새 채팅).
 
-Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la ubicación de los menús puede ser un poco distinta.
+Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del teléfono, la ubicación de los menús puede ser un poco distinta.
 
 ## La pantalla inicial de un vistazo
 
@@ -67,7 +67,7 @@ El selector «Chat»/«Work» de arriba en el centro es un botón de cambio que 
 - **Chat**: es el ChatGPT de siempre. Preguntas y respondes conversando. La mayor parte de esta guía se basa en Chat.
 - **Work**: es el modo en el que encargas una tarea larga de varios pasos y recibes un **resultado terminado**, como un documento, una tabla, una presentación o un informe.
 
-En la web y en el móvil, Work solo se puede usar con un **plan de pago (excepto Free y Go)**. Free y Go solo pueden usarlo de forma limitada en la aplicación del ordenador.[^rn-work] Cómo se usa se explica en el [capítulo 7](07-projects-plugins.md).
+En la web y en el teléfono, Work solo se puede usar con un **plan de pago (excepto Free y Go)**. Free y Go solo pueden usarlo de forma limitada en la aplicación de la computadora.[^rn-work] Cómo se usa se explica en el [capítulo 7](07-projects-plugins.md).
 
 <Quiz id="ch102-chat-work" />
 
@@ -81,7 +81,7 @@ Los títulos de las conversaciones y el nombre de la cuenta se han cambiado por 
 
 | N.º | Elemento | Qué hace | Más información |
 |---|---|---|---|
-| ② | «Añadir fotos y archivos» (사진 및 파일 추가) | Sube fotos y documentos de tu ordenador | [Capítulo 4](04-files-images.md) |
+| ② | «Añadir fotos y archivos» (사진 및 파일 추가) | Sube fotos y documentos de tu computadora | [Capítulo 4](04-files-images.md) |
 | ③ | «Importar desde la biblioteca» (라이브러리에서 가져오기) | Vuelve a usar un archivo que subiste antes | [Capítulo 4](04-files-images.md) |
 | ④ | «Crear imagen» (이미지 생성) | Le pides que cree una imagen | [Capítulo 4](04-files-images.md) |
 | ⑤ | «Búsqueda web» (웹 검색) | Hace que busque información actual en internet y responda | [Capítulo 6](06-search.md) |
@@ -118,7 +118,7 @@ Fuente: ayuda de OpenAI[^levels]
 Hay dos cosas que debes saber.
 
 - **Aunque le digas "piensa más a fondo", el nivel no cambia.** Si lo dejas en Instant y se lo escribes, tampoco sube solo. Mueve tú mismo el control deslizante.[^levels]
-- **Los planes gratuito (Free) y Go activan «Pensar» (생각하기) en lugar del control deslizante.** En la aplicación del móvil del plan Go, eliges «Think harder» en el menú +.[^go-think]
+- **Los planes gratuito (Free) y Go activan «Pensar» (생각하기) en lugar del control deslizante.** En la aplicación del teléfono del plan Go, eliges «Think harder» en el menú +.[^go-think]
 
 <!-- Falta captura de pantalla: dónde se activa «Pensar» (생각하기) en la pantalla web del plan Free -->
 
@@ -166,7 +166,7 @@ El menú de ajustes tiene tres grupos: «Personal», «Integraciones» (통합) 
 | ⑩ | «Gestión de datos» (데이터 관리)[^data-name] | Permitir el entrenamiento, enlaces compartidos, exportar datos | [Capítulo 8](08-privacy.md) |
 
 Si la pantalla aparece en inglés, ve a «Settings» → «General» → «Language» y elige el coreano. El idioma **solo se puede cambiar con la sesión iniciada**.[^lang]
-La pantalla oscura que eliges en «Apariencia» se define **por separado en cada dispositivo**. Aunque la cambies en la web, la aplicación del móvil sigue igual. Elígela otra vez también en la aplicación.[^appearance]
+La pantalla oscura que eliges en «Apariencia» se define **por separado en cada dispositivo**. Aunque la cambies en la web, la aplicación del teléfono sigue igual. Elígela otra vez también en la aplicación.[^appearance]
 
 <Quiz id="ch102-settings" />
 

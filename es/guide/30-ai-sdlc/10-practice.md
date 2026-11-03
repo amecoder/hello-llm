@@ -11,13 +11,13 @@ Si has seguido el «Pruébalo tú mismo» de los capítulos anteriores, este eje
 
 | Orden | Qué hacer | Capítulo |
 |---|---|---|
-| 1 | Crear en GitHub el repositorio público `cafe-todo-board` y clonarlo en mi ordenador | 2 |
+| 1 | Crear en GitHub el repositorio público `cafe-todo-board` y clonarlo en mi computadora | 2 |
 | 2 | Que Claude me entreviste y escribir SPEC.md | 3 |
 | 3 | Recibir el plan en una sesión nueva en modo plan y crear la primera pantalla en una rama | 4 |
 | 4 | Crear un mecanismo que compruebe los criterios de SPEC.md y recibir pruebas | 5 |
 | 5 | Crear el PR y fusionarlo después de una revisión contrastada con SPEC.md | 6 |
 | 6 | Comprobar con la lista de antes de publicar los valores secretos y los datos personales | 9 |
-| 7 | Publicar con GitHub Pages y abrirlo en el móvil | 7 |
+| 7 | Publicar con GitHub Pages y abrirlo en el teléfono | 7 |
 | 8 | Anotar una mejora como incidencia y dar otra vuelta con `fixes #número` | 8 |
 
 Fuente: resumen de esta guía
@@ -63,7 +63,7 @@ Cuando termines los ejercicios, comprueba lo siguiente una por una. Si todo es �
 - ☐ Recibí, en una sesión nueva, una revisión contrastada con SPEC.md. Aunque no encontrara nada, lo repasé yo mismo.
 
 **Despliegue y operación**
-- ☐ La dirección pública se abre también en el móvil.
+- ☐ La dirección pública se abre también en el teléfono.
 - ☐ La siguiente mejora está anotada como incidencia.
 
 **Seguridad**

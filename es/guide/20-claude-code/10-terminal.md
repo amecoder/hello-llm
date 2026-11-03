@@ -7,7 +7,7 @@ Este capítulo se escribió a partir de la documentación oficial de Claude Code
 
 ## Qué es el terminal
 
-El **terminal** (Terminal) es una ventana donde manejas el ordenador **escribiendo comandos con letras** en vez de usar el ratón. En macOS se usa «Aplicaciones → Utilidades → Terminal», y en Windows, PowerShell. La documentación oficial tiene también una guía aparte para quien abre el terminal por primera vez.[^install]
+El **terminal** (Terminal) es una ventana donde manejas la computadora **escribiendo comandos con letras** en vez de usar el ratón. En macOS se usa «Aplicaciones → Utilidades → Terminal», y en Windows, PowerShell. La documentación oficial tiene también una guía aparte para quien abre el terminal por primera vez.[^install]
 
 Si ya tienes la aplicación de escritorio, hay dos razones para usar el terminal.
 
@@ -18,7 +18,7 @@ Si ya tienes la aplicación de escritorio, hay dos razones para usar el terminal
 
 ## Instalar y empezar
 
-Abre el terminal y pega el comando que corresponde a tu ordenador.[^install]
+Abre el terminal y pega el comando que corresponde a tu computadora.[^install]
 
 ```bash
 # macOS, Linux, WSL
@@ -115,7 +115,7 @@ Eso sí, una ejecución que termina de una vez con `-p` **no puede pedir permiso
 
 | Término | En español | En una línea |
 |---|---|---|
-| Terminal | Terminal | Ventana donde manejas el ordenador escribiendo comandos con letras |
+| Terminal | Terminal | Ventana donde manejas la computadora escribiendo comandos con letras |
 | CLI | CLI | Programa que se usa en el terminal (Command Line Interface) |
 | `cd` | `cd` | Comando para ir a otra carpeta |
 | `-p` | `-p` (print) | Forma de ejecución que pregunta una vez, muestra la respuesta y termina |

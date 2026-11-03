@@ -3,7 +3,7 @@
 > **En una línea**: a la derecha del cuadro de texto hay dos botones para escribir hablando. El **micrófono** transcribe lo que dices (dictado)
 > y el **botón azul de ondas** te permite hablar con ChatGPT como por teléfono (conversación de voz). Tu voz también puede guardarse como el historial de conversaciones, así que elige bien el lugar y el contenido.
 
-Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, los menús pueden estar en un sitio algo distinto.
+Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del teléfono, los menús pueden estar en un sitio algo distinto.
 
 ## La diferencia entre los dos botones: dictado y conversación de voz
 
@@ -32,7 +32,7 @@ Los nombres de personas y de lugares se transcriben mal con facilidad. Por eso l
 
 ## Probar la conversación de voz
 
-1. Pulsa el **botón azul de ondas** a la derecha del cuadro de texto. En la aplicación del móvil es el icono de voz de la línea donde escribes el mensaje.[^voice]
+1. Pulsa el **botón azul de ondas** a la derecha del cuadro de texto. En la aplicación del teléfono es el icono de voz de la línea donde escribes el mensaje.[^voice]
 2. La primera vez, si el navegador te pregunta si puede usar el micrófono, permítelo. Si no lo permites, no entra tu voz.
 3. Habla como lo harías normalmente. Cuando termines, cierra la conversación con el botón de finalizar de la pantalla.
 
@@ -68,7 +68,7 @@ Si yo digo "I want one coffee.", sigue así.
 
 Si la respuesta es demasiado larga, basta con decirle de palabra «dímelo más corto». Es igual que pedir correcciones cuando conversas por escrito ([capítulo 6 de la etapa 1](../00-common/06-conversation.md)).
 
-Mientras conduces, también puedes hablar por voz con ChatGPT desde **CarPlay** (la función de Apple que conecta el iPhone a la pantalla del coche). Funciona en todos los planes y en todo el mundo. Hace falta un iPhone con iOS 26.4 o posterior. Eso sí, **no ve mapas, información del vehículo ni la ubicación actual.** Por eso no sirve para sustituir a una aplicación de navegación.[^carplay]
+Mientras conduces, también puedes hablar por voz con ChatGPT desde **CarPlay** (la función de Apple que conecta el iPhone a la pantalla del auto). Funciona en todos los planes y en todo el mundo. Hace falta un iPhone con iOS 26.4 o posterior. Eso sí, **no ve mapas, información del vehículo ni la ubicación actual.** Por eso no sirve para sustituir a una aplicación de navegación.[^carplay]
 
 <Quiz id="ch109-start" />
 
@@ -79,10 +79,10 @@ Mientras conduces, también puedes hablar por voz con ChatGPT desde **CarPlay** 
 Hay tres modos de conversación de voz.[^voice]
 
 - **En vivo (Live)**: escucha y habla a la vez. Por eso puedes interrumpir a ChatGPT mientras habla. No permite compartir vídeo ni pantalla.
-- **Avanzado (Advanced)**: es el modo en tiempo real que existía desde antes. En la aplicación del móvil puedes hablar enseñándole vídeo de la cámara o la pantalla.
+- **Avanzado (Advanced)**: es el modo en tiempo real que existía desde antes. En la aplicación del teléfono puedes hablar enseñándole vídeo de la cámara o la pantalla.
 - **Estándar (Standard)**: primero transcribe lo que dices y después responde. Os turnáis de uno en uno.
 
-Si necesitas compartir vídeo o pantalla, usa el modo avanzado de la aplicación del móvil. Por ejemplo, puedes enseñarle con la cámara un electrodoméstico estropeado y preguntar «¿qué significa esta luz?».
+Si necesitas compartir vídeo o pantalla, usa el modo avanzado de la aplicación del teléfono. Por ejemplo, puedes enseñarle con la cámara un electrodoméstico estropeado y preguntar «¿qué significa esta luz?».
 
 ### Elegir el modo y la voz
 
@@ -102,7 +102,7 @@ Los números rojos de la imagen son los de la tabla de abajo.
 En el modo en vivo se han añadido las voces coreanas **Haetsal** (햇살) y **Hanul** (한울).[^voice] Si ves abajo en la pantalla inicial el aviso «Nuevas voces en coreano», prueba a pulsar «Probar la voz nueva». Qué modos y voces puedes elegir puede variar según el plan. Los nombres de las voces a veces se ven en inglés, como «Cove» en la captura de arriba. Para usar otra voz, pulsa el apartado «Estilo de voz» (①) y elígela en la lista.
 
 ::: details ¿Dónde se eligen los modos en vivo, avanzado y estándar? (pulsa para desplegar)
-La ayuda dice que se elige entre en vivo, avanzado y estándar en el elemento de voz de los ajustes. Sin embargo, en la lista de la izquierda de los ajustes de la pantalla web de octubre de 2026 se veía un elemento llamado «Estilo de voz» y no «Voz», y **no se veía** en esa pantalla el apartado para elegir entre en vivo, avanzado y estándar. Puede variar según la aplicación del móvil y el plan.
+La ayuda dice que se elige entre en vivo, avanzado y estándar en el elemento de voz de los ajustes. Sin embargo, en la lista de la izquierda de los ajustes de la pantalla web de octubre de 2026 se veía un elemento llamado «Estilo de voz» y no «Voz», y **no se veía** en esa pantalla el apartado para elegir entre en vivo, avanzado y estándar. Puede variar según la aplicación del teléfono y el plan.
 :::
 
 <Quiz id="ch109-modes" />
@@ -143,7 +143,7 @@ Una conversación hablada **la oye también la persona de al lado.** No solo tu 
 - Cuando haya otras personas contigo, evita que se grabe también su voz o su conversación.
 - En la conversación de voz puede que no funcionen las aplicaciones conectadas ([capítulo 7](07-projects-plugins.md#fijar-los-permisos-de-las-aplicaciones-conectadas)). Si no funcionan, escribe la misma petición con texto.[^apps-voice]
 
-**Si vas a hacer que transcriba una reunión, avisa antes a todos los asistentes y pide su consentimiento.** El **plugin Meetings** de la aplicación de ordenador para Mac (planes Pro y Business, versión de prueba) transcribe la reunión y crea un resumen y tareas. El aviso de consentimiento que muestra la aplicación solo lo ves tú; no les llega a los demás asistentes. Cuando las notas están listas, la grabación se borra y no se puede volver a escuchar.[^meetings]
+**Si vas a hacer que transcriba una reunión, avisa antes a todos los asistentes y pide su consentimiento.** El **plugin Meetings** de la aplicación de computadora para Mac (planes Pro y Business, versión de prueba) transcribe la reunión y crea un resumen y tareas. El aviso de consentimiento que muestra la aplicación solo lo ves tú; no les llega a los demás asistentes. Cuando las notas están listas, la grabación se borra y no se puede volver a escuchar.[^meetings]
 
 
 <Quiz id="ch109-privacy" />
@@ -186,7 +186,7 @@ En la conversación de voz, pídele una explicación larga y, mientras ChatGPT e
 
 - El micrófono es el **dictado**: convierte lo que dices en texto y lo mete en el cuadro de texto, y lo envías tú después de comprobarlo.
 - El botón azul de ondas es la **conversación de voz**: habláis de palabra. Solo puede hacerse una a la vez.
-- Hay tres modos: en vivo, avanzado y estándar. En la web, la voz y el idioma se eligen en «Ajustes» → «Estilo de voz» (el apartado de en vivo, avanzado y estándar puede no verse según la pantalla). Compartir vídeo o pantalla solo es posible en el modo avanzado de la aplicación del móvil.
+- Hay tres modos: en vivo, avanzado y estándar. En la web, la voz y el idioma se eligen en «Ajustes» → «Estilo de voz» (el apartado de en vivo, avanzado y estándar puede no verse según la pantalla). Compartir vídeo o pantalla solo es posible en el modo avanzado de la aplicación del teléfono.
 - El límite de uso se cuenta por 24 horas, es distinto en cada plan y cambia a menudo.
 - Las grabaciones del modo en vivo y el avanzado se conservan 30 días, y las del dictado se conservan mientras siga la conversación. Si vas a transcribir una reunión, pide antes el consentimiento de todos. El texto transcrito sigue el ajuste de entrenamiento. En lugares públicos, usa el dictado o auriculares y no digas datos personales.
 
@@ -200,7 +200,7 @@ En la conversación de voz, pídele una explicación larga y, mientras ChatGPT e
 | Advanced | avanzado | Modo de voz que permite compartir vídeo y pantalla |
 | Standard | estándar | Modo de voz que transcribe y después responde por turnos |
 | Transcript | transcripción | Registro escrito de lo que se ha dicho |
-| CarPlay | CarPlay | Función de Apple que conecta el iPhone a la pantalla del coche |
+| CarPlay | CarPlay | Función de Apple que conecta el iPhone a la pantalla del auto |
 
 <ChapterDone :chapter="109" />
 
@@ -208,7 +208,7 @@ Siguiente capítulo: [Capítulo 10. Tareas prácticas](10-practice.md)
 
 ---
 
-[^voice]: Ayuda de OpenAI, «ChatGPT Voice». Tres modos (en vivo, avanzado y estándar) que se eligen en el elemento de voz de los ajustes; el modo en vivo no admite compartir vídeo ni pantalla (solo el avanzado en el móvil); voces coreanas Haetsal y Hanul; límite de uso por 24 horas (Free limitado, Go 3 horas, Plus 3 horas, Pro 15 horas o ilimitado); posición del icono de voz; los clips de audio de los modos en vivo y avanzado se conservan 30 días, y en el estándar se borran tras transcribir; el audio solo se usa para entrenar si eliges compartirlo por separado; la conversación de voz es de una en una; diferencia con el dictado (Dictation). https://help.openai.com/en/articles/20001274 (consultado el 2026-10-23)
+[^voice]: Ayuda de OpenAI, «ChatGPT Voice». Tres modos (en vivo, avanzado y estándar) que se eligen en el elemento de voz de los ajustes; el modo en vivo no admite compartir vídeo ni pantalla (solo el avanzado en el teléfono); voces coreanas Haetsal y Hanul; límite de uso por 24 horas (Free limitado, Go 3 horas, Plus 3 horas, Pro 15 horas o ilimitado); posición del icono de voz; los clips de audio de los modos en vivo y avanzado se conservan 30 días, y en el estándar se borran tras transcribir; el audio solo se usa para entrenar si eliges compartirlo por separado; la conversación de voz es de una en una; diferencia con el dictado (Dictation). https://help.openai.com/en/articles/20001274 (consultado el 2026-10-23)
 [^dictation]: Ayuda de OpenAI, «Voice Dictation - FAQ». "Audio from dictation will be retained for as long as the chat is part of your chat history." / "When you delete the chat, we’ll also delete the associated audio clip within 30 days". https://help.openai.com/en/articles/12168547 (consultado el 2026-10-24)
 [^apps-voice]: Ayuda de OpenAI, «Troubleshooting plugins and apps in ChatGPT». "If an app is unavailable in voice, try a supported text conversation." https://help.openai.com/en/articles/20001497 (consultado el 2026-10-24)
 [^meetings]: Ayuda de OpenAI, «The Meetings plugin in ChatGPT». "Meetings is available in beta in the ChatGPT desktop app on macOS for all Pro plans and all Business plans." / "get everyone’s consent before you start." / "The consent reminder in your app is visible to you." / "Once your notes are ready, the audio is deleted from your Mac and OpenAI’s servers and can’t be replayed." https://help.openai.com/en/articles/20001546 (consultado el 2026-10-24)

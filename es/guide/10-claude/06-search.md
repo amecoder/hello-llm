@@ -99,7 +99,7 @@ En las preguntas en las que importa el lugar, como «restaurantes cerca de aquí
 
 La **investigación** (Research) es la función que profundiza en una sola pregunta.
 Encadena varias búsquedas y, según lo que encuentra, decide por sí misma qué mirar después.[^research]
-Se puede usar en los planes de pago (Pro, Max, Team y Enterprise), en la web, en el escritorio y en la aplicación del móvil.[^research]
+Se puede usar en los planes de pago (Pro, Max, Team y Enterprise), en la web, en el escritorio y en la aplicación del teléfono.[^research]
 
 ### Cómo empezar
 
@@ -159,7 +159,7 @@ Incluye condiciones como el presupuesto, la zona y el plazo.[^academy-research] 
 - **El uso se puede gastar rápido.** El límite es el mismo que el de las conversaciones normales. Pero como reúne varias fuentes y crea una respuesta larga, lo gastas más deprisa.[^research]
 - **Si parece que no está investigando**, dilo tú: «usa la herramienta de investigación para…».[^research]
 - **También usa las aplicaciones conectadas.** Si tienes activados los conectores (otras aplicaciones conectadas a Claude, [capítulo 7](07-projects-tools.md)), durante la investigación usa esas herramientas sin preguntarte cada vez.[^research]
-- **Si empiezas desde el móvil, solo busca en la web.** Aunque se salte los conectores, no te lo avisa. Si necesitas también los materiales de las aplicaciones conectadas, empieza desde la web o el escritorio.[^research]
+- **Si empiezas desde el teléfono, solo busca en la web.** Aunque se salte los conectores, no te lo avisa. Si necesitas también los materiales de las aplicaciones conectadas, empieza desde la web o el escritorio.[^research]
 - **El modelo está fijado.** Sea cual sea el modelo que hayas elegido, funciona el modelo fijado para la investigación.[^research]
 
 Cuanto más largo y convincente es el informe, más fácil es saltarse la comprobación. Empieza por abrir las fuentes de los números que aparecen en la conclusión y compáralos.

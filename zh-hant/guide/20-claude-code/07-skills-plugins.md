@@ -12,7 +12,7 @@
 遇到這些情況，就做一個技能。[^when]
 
 - 一直在**反覆貼上**同樣的指令或檢查表時
-- CLAUDE.md 的某一部分已經不是“事實”，而是長成了**多步驟的流程**時
+- CLAUDE.md 的某一部分已經不是「事實」，而是長成了**多步驟的流程**時
 
 和 CLAUDE.md 的不同之處在於**什麼時候被讀取**。CLAUDE.md 每次會話都會被讀取，而技能的正文**只在用到時**才被讀取。所以即使寫得又長又詳細，平時也幾乎沒有負擔。[^when]
 
@@ -60,7 +60,7 @@
 
 做出來的技能（本指南的成果）：[meeting-notes](/practice/notes/results/7장-스킬-meeting-notes.txt) · [study-notes](/practice/notes/results/7장-스킬-study-notes.txt) · [weekly-review](/practice/notes/results/7장-스킬-weekly-review.txt)
 
-每個 SKILL.md 的最上面都有 `name`（名稱）和 `description`（什麼時候用）。Claude 是看 description 來決定什麼時候用這個技能的。[^desc] 比如，weekly-review 的 description 裡寫著，遇到“寫每週回顧”“整理這周的回顧”這類請求時使用。
+每個 SKILL.md 的最上面都有 `name`（名稱）和 `description`（什麼時候用）。Claude 是看 description 來決定什麼時候用這個技能的。[^desc] 比如，weekly-review 的 description 裡寫著，遇到「寫每週回顧」「整理這周的回顧」這類請求時使用。
 
 <Quiz id="ch407-make" />
 
@@ -70,7 +70,7 @@
 
 ![技能列表。紅色編號標出：①「study-notes」條目，② 旁邊的說明框（說明末尾有「(project)」）](../../../guide/20-claude-code/assets/shot-28-skill-menu-marked.png)
 
-② 裡的 **(project)** 是表示“這是這個資料夾的專案技能”的標記。用 Enter 選中，再接著寫上要整理的檔案，然後傳送。
+② 裡的 **(project)** 是表示「這是這個資料夾的專案技能」的標記。用 Enter 選中，再接著寫上要整理的檔案，然後傳送。
 
 ![執行技能。紅色編號標出：① 輸入了「/study-notes inbox/공부-2026-10-28-프롬프트-강의.txt」的輸入框](../../../guide/20-claude-code/assets/shot-29-skill-run-marked.png)
 
@@ -88,7 +88,7 @@
 | 學習筆記 | `/study-notes inbox/공부-….txt` |
 | 好幾天的每日回顧 | `/weekly-review` |
 
-不記得名稱也沒關係。像“整理這周的回顧”這樣說，Claude 就會看 description，選出合適的技能來用。[^what]
+不記得名稱也沒關係。像「整理這周的回顧」這樣說，Claude 就會看 description，選出合適的技能來用。[^what]
 
 <Quiz id="ch407-run" />
 
@@ -100,7 +100,7 @@
 
 - 只安裝知道是誰做的、值得信任的外掛。
 - 用不著的外掛要刪掉。
-- 透過聯結器連線的服務裡的內容（郵件·日程），也會成為 Claude 讀取的資料。請一併閱讀第9章的“隱藏指令”。
+- 透過聯結器連線的服務裡的內容（郵件·日程），也會成為 Claude 讀取的資料。請一併閱讀第9章的「隱藏指令」。
 
 本指南的整理工具，**只靠我自己做的技能**就夠了。外掛和聯結器，等真的需要時再一個一個增加。
 
@@ -111,14 +111,14 @@
 1. 請它建立 3 個整理技能，彈出許可視窗時，先讀 ② 裡的預覽，再選「僅允許一次」。
 2. 在新會話裡輸入 `/`，再輸入技能名稱的一部分，看看列表裡有沒有出現。
 3. 用 `/study-notes` 整理學習筆記，確認是否按第5章模板的順序生成。
-4. 不帶名稱，只發“整理這周的回顧”，看看 Claude 會不會選出 weekly-review 技能來用。
+4. 不帶名稱，只發「整理這周的回顧」，看看 Claude 會不會選出 weekly-review 技能來用。
 
 **連續任務**：現在每到週五，都是我自己呼叫 `/weekly-review`。在第8章裡，我們來看把這件事**設成定時**的方法，以及同時執行多個整理的方法。
 
 ## 小結
 
 - 技能是寫在 SKILL.md 裡的流程。只在用到時才被讀取，用 `/名稱` 或相關請求來使用。
-- 資料夾裡的 `.claude/skills/<名稱>/SKILL.md` 是隻屬於那個資料夾的技能。description 決定了“什麼時候用”。
+- 資料夾裡的 `.claude/skills/<名稱>/SKILL.md` 是隻屬於那個資料夾的技能。description 決定了「什麼時候用」。
 - `.claude` 資料夾是受保護的路徑，寫入前會詢問許可。一開始選「僅允許一次」。
 - 整理工具完成：`/meeting-notes`、`/study-notes`、`/weekly-review`。
 - 外掛可以用我的許可權執行程式碼。只安裝值得信任的，而且只在需要時安裝。

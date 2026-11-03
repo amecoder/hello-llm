@@ -3,7 +3,7 @@
 > **En una línea**: lo que ha pasado hoy o la información que cambia a menudo se pregunta con la **búsqueda web**, y las preguntas grandes que obligan a comparar varios materiales,
 > con la **investigación profunda**. Sea cual sea, forma parte del trabajo abrir tú mismo las fuentes que vienen adjuntas.
 
-Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del móvil, la posición de los menús puede ser un poco distinta.
+Las pantallas corresponden a la versión web de octubre de 2026 (plan Plus). En el plan gratuito o en la aplicación del teléfono, la posición de los menús puede ser un poco distinta.
 
 ## Búsqueda web — hacer que ChatGPT mire en internet
 

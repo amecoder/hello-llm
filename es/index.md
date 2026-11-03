@@ -60,7 +60,7 @@ Por ahora están publicadas la etapa 1, **guía común**; la etapa 2, **guías d
 |---|---|
 | 1. Guía común (publicada) | Los principios y la forma de preguntar bien que valen con cualquier IA |
 | 2. [ChatGPT](/es/guide/11-chatgpt/) · [Claude](/es/guide/10-claude/) · [Gemini](/es/guide/12-gemini/) (publicadas) | Funciones y ajustes de cada servicio |
-| 3. [Claude Code](/es/guide/20-claude-code/) · [Codex](/es/guide/21-codex/) · [Antigravity](/es/guide/22-antigravity/) (publicadas) | Encargar trabajos a herramientas de IA que leen y modifican archivos directamente en tu ordenador |
+| 3. [Claude Code](/es/guide/20-claude-code/) · [Codex](/es/guide/21-codex/) · [Antigravity](/es/guide/22-antigravity/) (publicadas) | Encargar trabajos a herramientas de IA que leen y modifican archivos directamente en tu computadora |
 | 4. [AI-SDLC](/es/guide/30-ai-sdlc/) (publicada) | Crear software con la IA, desde la planificación hasta la publicación; SDLC es todo el proceso del desarrollo de software (Software Development Life Cycle) |
 
 El contenido de cada capítulo está en el [índice completo](/es/guide/).

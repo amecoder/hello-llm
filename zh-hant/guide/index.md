@@ -110,7 +110,7 @@ features:
 
 ## 學習路線圖
 
-前一個階段是後一個階段的基礎，所以建議按編號順序閱讀。現在正在充實第1階段。
+前一個階段是後一個階段的基礎，所以建議按編號順序閱讀。
 
 ![學習路線圖：第1階段 通用指南（怎樣問得好）→ 第2階段 ChatGPT、Claude、Gemini（各服務的功能）→ 第3階段 Claude Code、Codex、Antigravity（把事交給 AI）→ 第4階段 AI-SDLC（和 AI 一起製作）](../../assets/roadmap.svg)
 

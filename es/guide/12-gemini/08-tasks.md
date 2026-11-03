@@ -21,7 +21,7 @@ Para usarlo hay que cumplir todas estas condiciones.[^tasks]
 - Tener 18 años o más y una **cuenta personal de Google** (las cuentas de empresa o de centros educativos todavía no)
 - Estar suscrito a **Google AI Pro o Ultra**
 - «Guardar actividad» (활동 기록 보관) activado y usar «Inteligencia personal» (개인 인텔리전스) ([capítulo 5](05-memory.md))
-- Solo funciona en la web, en la aplicación del móvil y en la de Mac. No se puede usar en el Espacio Económico Europeo, Nigeria, Suiza ni el Reino Unido. En la cuenta de Corea de esta guía, «Tareas» se abrió.[^screen]
+- Solo funciona en la web, en la aplicación del teléfono y en la de Mac. No se puede usar en el Espacio Económico Europeo, Nigeria, Suiza ni el Reino Unido. En la cuenta de Corea de esta guía, «Tareas» se abrió.[^screen]
 
 ### Empezar una tarea
 
@@ -100,10 +100,10 @@ Las programaciones se reúnen en **«Programadas»** (예약됨), en el menú la
 
 También puedes encargarle trabajos en los que **hay que pulsar directamente en sitios web**, como comprar, reservar un viaje o reservar mesa en un restaurante.[^tasks] En ese caso, Gemini usa uno de los dos navegadores.[^tasks]
 
-| | El Chrome de mi ordenador | El navegador remoto en la nube |
+| | El Chrome de mi computadora | El navegador remoto en la nube |
 |---|---|---|
 | Sitios a los que entra | Incluso los sitios en los que yo he iniciado sesión | Desde un navegador exclusivo de Gemini |
-| Dónde se usa | Solo en el ordenador | En el móvil se usa solo este |
+| Dónde se usa | Solo en la computadora | En el teléfono se usa solo este |
 | Si apago el dispositivo | Tiene que estar encendido. Si lo apago, puede pasar al navegador remoto | Sigue adelante |
 | Si hace falta iniciar sesión | — | Se detiene y lo continúo yo |
 
@@ -137,7 +137,7 @@ En el menú de ajustes «Ajustes de tareas» (작업 설정) ([capítulo 2](02-s
 |---|---|
 | «Entregar tareas con el modo de tareas» (작업 모드를 사용하여 작업 전달) → «Desactivar» (사용 중지) | Desactiva la función de tareas. Se borran el historial de uso de internet y los archivos de ejecución remota de código, y las programaciones se detienen (no se borran) |
 | «Eliminar datos del navegador remoto» (원격 브라우저 데이터 삭제) → «Eliminar» (삭제) | Borra las cookies del navegador remoto y cierra la sesión en los sitios |
-| «Eliminar datos de ejecución remota de código» (원격 코드 실행 데이터 삭제) → «Eliminar» | Borra los archivos y demás que quedan en el ordenador remoto |
+| «Eliminar datos de ejecución remota de código» (원격 코드 실행 데이터 삭제) → «Eliminar» | Borra los archivos y demás que quedan en la computadora remota |
 
 Fuente: pantalla web de Gemini[^screen]
 
@@ -161,9 +161,9 @@ La inyección de prompt ya la vimos en la etapa 1 ([capítulo 9 de la etapa 1](.
 
 ## Gemini en Chrome
 
-También puedes llamar a Gemini desde el **navegador Chrome** del ordenador. Puedes hacer que resuma la página que estás viendo, explique un concepto difícil o busque una respuesta dentro de la página.[^chrome]
+También puedes llamar a Gemini desde el **navegador Chrome** de la computadora. Puedes hacer que resuma la página que estás viendo, explique un concepto difícil o busque una respuesta dentro de la página.[^chrome]
 
-- Se usa en la **última versión de Chrome** del ordenador (Chromebook Plus, Mac o Windows).[^chrome] Si tienes **18 años o más**, Corea está en la lista de regiones admitidas y el coreano está entre los idiomas admitidos.[^chromeavail]
+- Se usa en la **última versión de Chrome** de la computadora (Chromebook Plus, Mac o Windows).[^chrome] Si tienes **18 años o más**, Corea está en la lista de regiones admitidas y el coreano está entre los idiomas admitidos.[^chromeavail]
 - Hay que iniciar sesión en Chrome y **no funciona en modo incógnito.**[^chrome]
 - Pulsa **«Preguntar a Gemini»** (Gemini에게 물어보기), arriba en Chrome, y la primera vez acepta su uso siguiendo las indicaciones de la pantalla.[^chrome]
 - Por defecto, a Gemini le llega **el contenido de la pestaña actual.** Si escribes `@` en el cuadro de la pregunta, puedes elegir otras pestañas, y puedes enviar juntas **hasta 10** pestañas abiertas.[^chrome]
@@ -180,7 +180,7 @@ Esta guía no pudo comprobar esta sección en pantalla, así que la escribió ba
 1. Pulsa «Tareas» bajo el cuadro de texto y envía «pregúntame» (물어봐 줘) para ver qué tareas te propone Gemini (plan de pago).
 2. En el chat, pon una programación como «cada lunes a las 8 de la mañana resúmeme el tiempo de esta semana», compruébala en «Programadas» del menú lateral y pruébala a detener o a borrar con «Más».
 3. Abre Ajustes → «Ajustes de tareas» y lee el nombre y la descripción de los tres elementos (no hace falta pulsarlos).
-4. En el Chrome del ordenador, pulsa «Preguntar a Gemini» y haz que resuma en tres líneas un artículo que estés leyendo.
+4. En el Chrome de la computadora, pulsa «Preguntar a Gemini» y haz que resuma en tres líneas un artículo que estés leyendo.
 
 **Proyecto continuo** ([Preparar el club de lectura](../00-common/practice-kit.md)): pon una programación como «la tarde anterior a la reunión, a las 8, vuelve a recordarme la lista de lo que hay que llevar». Comprueba si la lista que recibas coincide con lo que hay que llevar según el acta y, cuando termine la reunión, borra la programación.
 
@@ -190,7 +190,7 @@ Esta guía no pudo comprobar esta sección en pantalla, así que la escribió ba
 - Hay dos tipos de programación. Puedes tener activas hasta 10 del chat y 50 de las tareas. Se gestionan en «Programadas», en el menú lateral.
 - Las tareas que usan la web piden permiso por defecto. Al principio usa solo «Permitir una vez» y, si ves algo raro, detén con «Detener respuesta» o «Control directo».
 - No escribas en la conversación datos de inicio de sesión ni de pago, y no programes trabajos delicados. Ten cuidado con las instrucciones ocultas (inyección de prompt) y vigila cómo se ejecuta.
-- Gemini en Chrome funciona en la última versión de Chrome del ordenador y, si tienes 18 años o más, también en Corea. Se está abriendo por fases, así que puede que todavía no lo veas. La exploración automática es, por ahora, solo para Estados Unidos.
+- Gemini en Chrome funciona en la última versión de Chrome de la computadora y, si tienes 18 años o más, también en Corea. Se está abriendo por fases, así que puede que todavía no lo veas. La exploración automática es, por ahora, solo para Estados Unidos.
 
 ## Glosario
 

@@ -63,14 +63,14 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "Google Gemini API 的文件說明，是把 token 從機率最高的開始挑選，一直到這些機率的總和達到 topP 的值為止，作為候選。",
   },
   "advanced-s1-nucleus": {
-    prompt: "2019 年的一篇論文指出了“只選機率最高的詞”這種方式的問題，並提出了核取樣（nucleus sampling，top-p 方式的始祖）。這個問題和解決辦法，哪個是對的？",
+    prompt: "2019 年的一篇論文指出了「只選機率最高的詞」這種方式的問題，並提出了核取樣（nucleus sampling，top-p 方式的始祖）。這個問題和解決辦法，哪個是對的？",
     choices: [
       "回答變得太短，所以新增了強制拉長篇幅的規則",
       "事實經常出錯，所以讓它把搜尋結果附加到回答裡",
       "計算變慢了，所以總是把候選縮減為一個",
       "文字平淡又重複，所以砍掉機率低的尾部再選",
     ],
-    explain: "Holtzman 等人認為，最大化機率的方式會生成“平淡、奇怪地重複”的文字，於是提出每一步都砍掉機率分佈中不可信的尾部，在剩下的“核”裡挑選的方法。",
+    explain: "Holtzman 等人認為，最大化機率的方式會生成「平淡、奇怪地重複」的文字，於是提出每一步都砍掉機率分佈中不可信的尾部，在剩下的「核」裡挑選的方法。",
   },
   "advanced-s1-context-contents": {
     prompt: "佔用上下文視窗（context window，模型一次能參考的文字量）的是什麼，下面哪項最合適？",
@@ -83,7 +83,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "Anthropic 的文件說明，系統提示詞、所有訊息（包括工具結果、圖片、文件）、工具定義，以及這一輪的輸出（包括思考過程），全都算在上下文窗口裡。",
   },
   "advanced-s1-context-rot": {
-    prompt: "對於“上下文視窗（context window，模型一次能看到的文字量）很大，所以儘量多放資料”這種想法，官方文件是怎麼說的？",
+    prompt: "對於「上下文視窗（context window，模型一次能看到的文字量）很大，所以儘量多放資料」這種想法，官方文件是怎麼說的？",
     choices: [
       "視窗大，資料放得越多，準確度必然越高",
       "token 增加，準確度和記憶可能下降，所以要挑著放",
@@ -120,7 +120,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
       "上下文視窗越大，模型學過的資料量也相應越多",
       "這兩個詞是同一個意思，都指模型至今讀過的全部文字",
     ],
-    explain: "Anthropic 術語表說明，上下文視窗與模型學習的大規模資料不同，相當於生成回答時參考的“工作記憶（working memory）”。",
+    explain: "Anthropic 術語表說明，上下文視窗與模型學習的大規模資料不同，相當於生成回答時參考的「工作記憶（working memory）」。",
   },
   "advanced-s2-pretraining": {
     prompt: "在預訓練（pretraining，製造模型時最先經歷的學習階段）中，模型主要做的是什麼？",
@@ -133,7 +133,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "術語表說，預訓練是用沒有標註（label）的大規模文字集合來訓練語言模型的第一個過程，讓它看著前面的上下文預測下一個詞。",
   },
   "advanced-s2-base-model": {
-    prompt: "對只完成了預訓練（pretraining，用大量文字學會預測下一個詞的階段）的模型寫“幫我做一份請假申請表格式”，容易發生什麼？",
+    prompt: "對只完成了預訓練（pretraining，用大量文字學會預測下一個詞的階段）的模型寫「幫我做一份請假申請表格式」，容易發生什麼？",
     choices: [
       "準確理解請求，總是做出整潔的格式",
       "因為學習還沒有完成，所以一個字也輸出不了",
@@ -200,10 +200,10 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
       "整個跳過預訓練階段，從頭只用偏好資料造模型",
       "用搜索引擎的排名代替人來當獎勵，進行學習",
     ],
-    explain: "Rafailov 等人（2023）認為，先單獨擬合獎勵模型、再做強化學習的 RLHF 既複雜又不穩定，於是提出 DPO：省去這兩步，把偏好資料當作“哪個回答更好”的簡單分類問題來學習。",
+    explain: "Rafailov 等人（2023）認為，先單獨擬合獎勵模型、再做強化學習的 RLHF 既複雜又不穩定，於是提出 DPO：省去這兩步，把偏好資料當作「哪個回答更好」的簡單分類問題來學習。",
   },
   "advanced-s2-hhh-honest": {
-    prompt: "在 HHH（helpful·honest·harmless，即有幫助、誠實、無害的研究框架）中，哪種行為屬於“誠實（honest）”的 AI？",
+    prompt: "在 HHH（helpful·honest·harmless，即有幫助、誠實、無害的研究框架）中，哪種行為屬於「誠實（honest）」的 AI？",
     choices: [
       "即使是不知道的問題，也為了不讓使用者失望而編一個像樣的回答",
       "為迎合使用者想聽的，把事實一點點調整",
@@ -218,7 +218,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
       "多做一些專門衡量幻覺的新測試並加進去",
       "在所有服務裡把模型溫度固定為 0，徹底消除隨機性",
       "引導使用者把問題提短，從而避免幻覺",
-      "改變常用評估的評分方式，不再對“不知道”扣分",
+      "改變常用評估的評分方式，不再對「不知道」扣分",
     ],
     explain: "Kalai 等人認為，標準評分獎勵的是自信地瞎蒙，而不是承認不確定，所以與其增加幻覺專用評估，不如改變決定排行榜的現有評估的評分方式。",
   },
@@ -233,7 +233,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "論文說明，幻覺不是神秘現象，而是當模型無法把假陳述和真陳述區分開時，像二元分類的錯誤一樣自然產生的統計結果。",
   },
   "advanced-s2-aligned-still-errs": {
-    prompt: "有人說：“這是接受過人類反饋對齊（alignment，讓模型符合人的意圖和價值）訓練的模型，現在不會出錯了。”根據 InstructGPT（用人類反饋打磨的 GPT-3）論文，合適的反應是哪個？",
+    prompt: "有人說：「這是接受過人類反饋對齊（alignment，讓模型符合人的意圖和價值）訓練的模型，現在不會出錯了。」根據 InstructGPT（用人類反饋打磨的 GPT-3）論文，合適的反應是哪個？",
     choices: [
       "對。完成對齊訓練的模型不會出現事實錯誤",
       "不對。對齊之後，模型仍然可能犯簡單的錯誤",
@@ -257,7 +257,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     choices: [
       "把最新的規定文件放進檢索物件，清理掉過時的文件",
       "調高溫度，讓回答多樣，最新規定也會混著出現",
-      "只要補一句“請按最新內容回答”，模型就會自己知道",
+      "只要補一句「請按最新內容回答」，模型就會自己知道",
       "把問題翻譯成英語傳送，模型就更能記住最新規定",
     ],
     explain: "術語表說明，RAG 在需要最新資訊或特定領域知識時有用，但效果取決於外部知識庫的質量和找來資料的相關性。所以文件本身必須保持最新。",
@@ -283,7 +283,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "OpenAI 的嵌入指南把嵌入定義為由實陣列成的向量（數字列表），並說明距離小則相關性高，距離大則相關性低。",
   },
   "advanced-s3-semantic-search": {
-    prompt: "員工問“產假有幾天？”，而公司內部文件裡只寫著“產前產後休假期間”。基於嵌入（embedding，把文字的意思變成數字列表）的檢索為什麼有幫助？",
+    prompt: "員工問「產假有幾天？」，而公司內部文件裡只寫著「產前產後休假期間」。基於嵌入（embedding，把文字的意思變成數字列表）的檢索為什麼有幫助？",
     choices: [
       "因為它只會準確挑出含有與問題一個字都不差的詞的文件",
       "因為它按最近修改的順序把文件放在最上面",
@@ -293,7 +293,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "OpenAI 的指南說明，嵌入檢索是按與問題的相關性對結果排序的。意思相近的文字，向量距離也近，所以不用相同的詞也能找到。",
   },
   "advanced-s3-bm25": {
-    prompt: "需要找到“錯誤程式碼 TS-999”這樣的精確字串時，在嵌入（embedding，把意思變成數字）檢索之外，再同時用 BM25（檢視單詞是否原樣一致的檢索方式），是為什麼？",
+    prompt: "需要找到「錯誤程式碼 TS-999」這樣的精確字串時，在嵌入（embedding，把意思變成數字）檢索之外，再同時用 BM25（檢視單詞是否原樣一致的檢索方式），是為什麼？",
     choices: [
       "因為嵌入雖然能抓住意思，但可能漏掉精確術語的匹配",
       "因為用了 BM25，模型就把答案背下來，不用檢索了",
@@ -303,7 +303,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "Anthropic 的 Contextual Retrieval 文章說明，嵌入雖然能抓住意思，卻可能漏掉精確術語的匹配，所以像“Error code TS-999”這樣的檢索，要同時使用基於單詞匹配的 BM25。",
   },
   "advanced-s3-chunk-context": {
-    prompt: "為了 RAG（檢索增強生成），把報告切成了片段（chunk，為便於檢索而切開的文件小塊），結果只找來“銷售額增長了 3%”這一片段，看不出是哪家公司、哪個季度。減少這個問題的辦法是什麼？",
+    prompt: "為了 RAG（檢索增強生成），把報告切成了片段（chunk，為便於檢索而切開的文件小塊），結果只找來「銷售額增長了 3%」這一片段，看不出是哪家公司、哪個季度。減少這個問題的辦法是什麼？",
     choices: [
       "把片段切得更碎，每個只留一句話",
       "給每個片段補上文件背景說明，再建立索引",
@@ -327,7 +327,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     choices: [
       "把收到的英語段落自然地翻譯成韓語",
       "讀完很長的會議記錄，把要點總結成三行",
-      "回答“什麼是光合作用？”這類一般知識問題",
+      "回答「什麼是光合作用？」這類一般知識問題",
       "從公司內部資料庫確認今天的庫存數量",
     ],
     explain: "Anthropic 的文件說明，即時/外部資料、有副作用的行動、呼叫現有系統時需要工具，而總結、翻譯、一般知識問題，僅靠學習就能回答，不需要工具。",
@@ -356,7 +356,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     prompt: "人事部想讓多模態（也能讀圖片的）模型判定應聘者提交的照片是不是 AI 生成的。根據官方文件，哪個判斷是對的？",
     choices: [
       "模型連圖片檔案裡的隱藏資訊也能讀，所以可以直接相信它的判定",
-      "模型說“是真的”，就問兩次，答案相同時確定下來",
+      "模型說「是真的」，就問兩次，答案相同時確定下來",
       "模型無法判別是否由 AI 生成，可能出錯，不能依賴",
       "把照片轉成黑白再上傳，模型就能準確判斷是否由 AI 生成",
     ],
@@ -373,7 +373,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "Wei 等人報告說，只要在提示詞裡放入幾個展示中間推理步驟的解題示例，算術、常識、符號推理的效能就大幅提高。",
   },
   "advanced-s4-zero-shot-cot": {
-    prompt: "不給示例，只在回答前加一句“我們一步一步仔細想想”的方法，叫作零樣本 CoT（zero-shot chain-of-thought，不給示例就引出分步解題的方法）。2022 年論文報告的結果是什麼？",
+    prompt: "不給示例，只在回答前加一句「我們一步一步仔細想想」的方法，叫作零樣本 CoT（zero-shot chain-of-thought，不給示例就引出分步解題的方法）。2022 年論文報告的結果是什麼？",
     choices: [
       "沒有示例，引導分步解題完全沒有效果",
       "僅靠這一句話，多種推理成績就大幅提高",
@@ -403,7 +403,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "Anthropic 的文件說明，思考 token 屬於 max_tokens（輸出限額）的一部分，按輸出 token 計費，也計入上下文視窗限額。",
   },
   "advanced-s4-inverse-scaling": {
-    prompt: "對於“推理模型（reasoning model，回答前先寫很長思考的模型）讓它想得越久，就一定越準確”的說法，2025 年研究《Inverse Scaling in Test-Time Compute》表明了什麼？",
+    prompt: "對於「推理模型（reasoning model，回答前先寫很長思考的模型）讓它想得越久，就一定越準確」的說法，2025 年研究《Inverse Scaling in Test-Time Compute》表明了什麼？",
     choices: [
       "有些任務，思考得越長，效能反而下降",
       "思考長度與準確率在所有任務中完全成正比",
@@ -473,7 +473,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "Anthropic 的文件建議，做出貼近真實任務分佈、針對具體任務的評估，不要忘記例外情況，並且說明可以自動評分的大量題目，比人工親手評分的少量題目更好。",
   },
   "advanced-s4-grading-method": {
-    prompt: "要評估一個把 1,000 條客戶諮詢分為“正面、負面、中性”的模型。評分（grading，判斷模型回答對不對）方法，哪個最合適？",
+    prompt: "要評估一個把 1,000 條客戶諮詢分為「正面、負面、中性」的模型。評分（grading，判斷模型回答對不對）方法，哪個最合適？",
     choices: [
       "由人類專家把所有回答一條一條讀完，憑感覺打分",
       "直接問生成回答的那個模型，自己的回答對不對",
@@ -493,7 +493,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "文章把工作流定義為 LLM 和工具按預先定好的程式碼路徑來協調的系統，把智慧體定義為 LLM 自己指揮自己的過程和工具使用的系統。",
   },
   "advanced-s5-observe-ground-truth": {
-    prompt: "智慧體（agent，計劃、行動、看結果來工作的 AI）重複“計劃 → 行動 → 觀察”時，觀察這一步為什麼重要？",
+    prompt: "智慧體（agent，計劃、行動、看結果來工作的 AI）重複「計劃 → 行動 → 觀察」時，觀察這一步為什麼重要？",
     choices: [
       "因為在觀察步驟，模型會重新學習，引數也會改變",
       "因為跳過觀察能降低成本，結果更準確",
@@ -513,7 +513,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "Yao 等人報告說，推理的痕跡有助於制訂和修改行動計劃，並且在 HotpotQA、Fever 任務中，透過查詢維基百科 API 減少了幻覺。",
   },
   "advanced-s5-loop-stop": {
-    prompt: "使用工具的智慧體迴圈（agent loop，重複“呼叫模型 → 執行工具 → 傳回結果”的結構），通常在什麼時候停止重複？",
+    prompt: "使用工具的智慧體迴圈（agent loop，重複「呼叫模型 → 執行工具 → 傳回結果」的結構），通常在什麼時候停止重複？",
     choices: [
       "模型不再請求工具，給出最終回答或因故停止",
       "只要執行一次工具，不管結果如何，就總是停止",
@@ -533,7 +533,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "Anthropic 的文章說明，智慧體的任務通常在完成時結束，但為了保持控制，設定最大重複次數這類停止條件很常見。",
   },
   "advanced-s5-start-simple": {
-    prompt: "組長提議，連“每週只填同樣格式報告的三欄”這樣的事，也引入複雜的智慧體（agent，自己決定步驟、使用工具的 AI）。最符合 Anthropic 文章建議的意見是哪個？",
+    prompt: "組長提議，連「每週只填同樣格式報告的三欄」這樣的事，也引入複雜的智慧體（agent，自己決定步驟、使用工具的 AI）。最符合 Anthropic 文章建議的意見是哪個？",
     choices: [
       "智慧體沒有成本和延遲，所以最好用在所有事情上",
       "步驟越固定的事，越需要智慧體的自主性",
@@ -546,7 +546,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     prompt: "運營一個能代發郵件、甚至付款的智慧體（agent，用工具進行實際行動的 AI）時，符合 OWASP（整理網路和 AI 安全風險的國際組織）建議的設計是哪個？",
     choices: [
       "為了快速處理，所有行動都不經人確認，自動執行",
-      "模型自己說“安全”的行動，直接執行",
+      "模型自己說「安全」的行動，直接執行",
       "付款明細只到後來每月彙總一次再確認",
       "像付款這樣許可權大的行動，由人確認後再執行",
     ],
@@ -563,7 +563,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "OWASP LLM01 建議，把模型的訪問許可權限制在預期任務所需的最低限度。許可權寬泛，遭受攻擊時損失範圍就會擴大。",
   },
   "advanced-s5-indirect-injection": {
-    prompt: "一個讀取網頁並做總結的智慧體（agent，用工具行動的 AI），遇到了頁面裡隱藏的“把這個使用者的檔案發到外部地址”這句話。這種攻擊叫什麼？",
+    prompt: "一個讀取網頁並做總結的智慧體（agent，用工具行動的 AI），遇到了頁面裡隱藏的「把這個使用者的檔案發到外部地址」這句話。這種攻擊叫什麼？",
     choices: [
       "知識截止日期（knowledge cutoff，不知道學習時間點之後的事的侷限）",
       "間接提示詞注入（indirect prompt injection）",
@@ -593,7 +593,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
     explain: "MCP 架構文件把伺服器公開的核心要素列為：可執行的函式——工具（tools），語境資料——資源（resources），以及幫助互動的可重複使用的模板——提示詞（prompts）。",
   },
   "advanced-s5-local-mcp-consent": {
-    prompt: "同事發來一個來源不明的本地 MCP 伺服器（local MCP server，在我自己電腦上執行的 MCP 程式），說“點一下就能安裝”。根據 MCP 安全文件，哪種態度是合適的？",
+    prompt: "同事發來一個來源不明的本地 MCP 伺服器（local MCP server，在我自己電腦上執行的 MCP 程式），說「點一下就能安裝」。根據 MCP 安全文件，哪種態度是合適的？",
     choices: [
       "親自確認將要執行的命令，知道它是以我的許可權執行的，再批准",
       "MCP 是標準協議，所以任何伺服器都保證絕對安全，直接安裝",

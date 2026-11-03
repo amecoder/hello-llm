@@ -40,9 +40,9 @@ Si pones la carpeta de un skill `.claude/skills/<nombre>/SKILL.md` dentro de esa
 
 Justo cuando iba a escribir el archivo del skill, apareció una **ventana de permiso**.
 
-![Ventana de permiso. Con números rojos: ① «¿Permitir que Claude escriba SKILL.md?» (Claude가 쓰기 SKILL.md하도록 허용하시겠습니까?), ② vista previa de lo que va a escribir (líneas verdes), ③ «Rechazar» (거부), ④ «Permitir siempre» (항상 허용) y el botón ▾ (la línea de la ruta está tapada porque contiene el nombre de usuario del ordenador)](../../../guide/20-claude-code/assets/shot-26-permission-marked.png)
+![Ventana de permiso. Con números rojos: ① «¿Permitir que Claude escriba SKILL.md?» (Claude가 쓰기 SKILL.md하도록 허용하시겠습니까?), ② vista previa de lo que va a escribir (líneas verdes), ③ «Rechazar» (거부), ④ «Permitir siempre» (항상 허용) y el botón ▾ (la línea de la ruta está tapada porque contiene el nombre de usuario de la computadora)](../../../guide/20-claude-code/assets/shot-26-permission-marked.png)
 
-En los capítulos 2 a 4 no apareció la ventana de permiso por una regla personal de este ordenador. Esta vez apareció porque la carpeta `.claude` es una **ruta protegida**. Aunque estés en el modo «Aceptar ediciones automáticamente», sigue preguntando cuando se escribe en rutas protegidas.[^protected] En esa carpeta hay archivos que cambian el comportamiento de Claude, como skills y ajustes, y por eso se hace que una persona lo confirme antes de cambiarlos.
+En los capítulos 2 a 4 no apareció la ventana de permiso por una regla personal de esta computadora. Esta vez apareció porque la carpeta `.claude` es una **ruta protegida**. Aunque estés en el modo «Aceptar ediciones automáticamente», sigue preguntando cuando se escribe en rutas protegidas.[^protected] En esa carpeta hay archivos que cambian el comportamiento de Claude, como skills y ajustes, y por eso se hace que una persona lo confirme antes de cambiarlos.
 
 En ② **puedes leer primero lo que va a escribir.** Si pulsas ▾, aparece «Permitir solo esta vez» (한 번만 허용).
 
@@ -96,7 +96,7 @@ Aunque no recuerdes el nombre, no pasa nada. Si dices algo como "organiza el bal
 
 Un **plugin** (Plugin) es instalar en un paquete skills, comandos y herramientas hechos por otras personas, y un **conector** (Connector) es conectar a Claude servicios externos como Gmail o el calendario. En la app de escritorio, los conectores y plugins se añaden con el botón **+** que hay junto al cuadro de escritura.[^plus] Los conectores son servidores MCP (la forma estándar en que una IA se conecta a herramientas externas) con una configuración fácil desde la pantalla.[^connectors]
 
-Es cómodo, pero hay algo que **debes pensar sin falta antes de instalar**. Un plugin puede **ejecutar código en tu ordenador con tus permisos**.[^plugin-risk] Y a veces ese código funciona fuera del alcance que protegen los modos de permisos del capítulo 4. Las reglas de permisos se aplican a las llamadas a herramientas de Claude, no al código que el propio plugin ejecuta por su cuenta.[^plugin-scope]
+Es cómodo, pero hay algo que **debes pensar sin falta antes de instalar**. Un plugin puede **ejecutar código en tu computadora con tus permisos**.[^plugin-risk] Y a veces ese código funciona fuera del alcance que protegen los modos de permisos del capítulo 4. Las reglas de permisos se aplican a las llamadas a herramientas de Claude, no al código que el propio plugin ejecuta por su cuenta.[^plugin-scope]
 
 - Instala solo plugins de los que conozcas a su creador y sean de confianza.
 - Borra los plugins que ya no necesites.

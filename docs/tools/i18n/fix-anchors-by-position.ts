@@ -3,7 +3,7 @@
 // Usage: node fix-anchors-by-position.ts <repo> <from> <to>
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs'
 import { dirname, join, normalize, relative } from 'node:path'
-import { slugify } from '/Users/amecoder/study/hello-llm/.vitepress/slugify.ts'
+import { slugify } from '../../../.vitepress/slugify.ts'
 const [repo, from, to] = process.argv.slice(2)
 function slugs(text: string): string[] {
   const seen = new Map<string, number>(); const out: string[] = []; let fence = false

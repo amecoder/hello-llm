@@ -39,7 +39,7 @@ Cada modo **cambia comodidad por cuánto vigilas tú.**[^tradeoff]
 **Omitir permisos** aparece atenuado en el menú y hay que activarlo aparte en la configuración para que aparezca.[^modes] La documentación oficial dice que este modo se use **solo en contenedores aislados o máquinas virtuales.**[^modes] Un usuario normal no tiene por qué activarlo.
 
 ::: details Si estás en «Manual» y no sale la ventana de permiso
-Como viste en el capítulo 2, si en Claude Code para terminal definiste reglas de permiso, esa configuración también se aplica en la aplicación.[^same-settings] Las capturas de esta guía también se hicieron en un ordenador así, y por eso no salió la ventana de permiso. En una pantalla en la que sí sale la ventana de permiso, te muestra qué va a cambiar y puedes permitir o rechazar cada cambio.[^modes]
+Como viste en el capítulo 2, si en Claude Code para terminal definiste reglas de permiso, esa configuración también se aplica en la aplicación.[^same-settings] Las capturas de esta guía también se hicieron en una computadora así, y por eso no salió la ventana de permiso. En una pantalla en la que sí sale la ventana de permiso, te muestra qué va a cambiar y puedes permitir o rechazar cada cambio.[^modes]
 :::
 
 <Quiz id="ch404-auto" />

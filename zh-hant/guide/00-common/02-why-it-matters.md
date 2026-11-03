@@ -31,7 +31,7 @@ OpenAI 在 2022 年 11 月 30 日免費公開了 ChatGPT。[^2]
 
 ## 到底有什麼不同
 
-### 1. 可以用“平時說的話”給計算機派活
+### 1. 可以用「平時說的話」給計算機派活
 
 以前想讓計算機幹活，得學程式語言，或者熟悉固定的選單和按鈕。
 LLM 只要這樣說就行。
@@ -72,7 +72,7 @@ LLM 只要這樣說就行。
 
 都是韓語影片。從第一個影片開始依次觀看，就能由易到難。
 
-**[[ChatGPT] 沒有比這更簡單的講解了，'ChatGPT'](https://www.youtube.com/watch?v=i1VqqX4iAZ0)** · 洪真慶（Hong Jin-kyung，頻道“學習王天才”） · 科學 YouTuber Andoegwahak·Gwedo用簡單的話講解 ChatGPT 是什麼、為什麼這麼火。影片裡還有這樣的對比：聚集 100 萬用戶，Netflix 花了 3.5 年，Instagram 花了 2.5 個月，ChatGPT 只花了 5 天（9 分鐘，2023 年的影片）
+**[[ChatGPT] 沒有比這更簡單的講解了，'ChatGPT'](https://www.youtube.com/watch?v=i1VqqX4iAZ0)** · 洪真慶（Hong Jin-kyung，頻道「學習王天才」） · 科學 YouTuber Andoegwahak·Gwedo用簡單的話講解 ChatGPT 是什麼、為什麼這麼火。影片裡還有這樣的對比：聚集 100 萬用戶，Netflix 花了 3.5 年，Instagram 花了 2.5 個月，ChatGPT 只花了 5 天（9 分鐘，2023 年的影片）
 
 <YouTube id="i1VqqX4iAZ0" title="[ChatGPT] 沒有比這更簡單的講解了，'ChatGPT'" />
 
@@ -80,7 +80,7 @@ LLM 只要這樣說就行。
 
 <YouTube id="g38aoGttLhI" title="Transformer，ChatGPT 就是用 Transformer 做出來的。- DL5" />
 
-**[大名鼎鼎的注意力，看完這個影片就懂了！- DL6](https://www.youtube.com/watch?v=_Z3rXeJahMs)** · 3Blue1Brown 韓語版 · 上面那個影片的下一集，講詞與詞之間相互關注的“注意力（Attention）”。有一點難。**前 5 分鐘**出現的例子是關鍵。比如在“塔”前面加上“埃菲爾”，意思就會偏向埃菲爾鐵塔（26 分鐘）
+**[大名鼎鼎的注意力，看完這個影片就懂了！- DL6](https://www.youtube.com/watch?v=_Z3rXeJahMs)** · 3Blue1Brown 韓語版 · 上面那個影片的下一集，講詞與詞之間相互關注的「注意力（Attention）」。有一點難。**前 5 分鐘**出現的例子是關鍵。比如在「塔」前面加上「埃菲爾」，意思就會偏向埃菲爾鐵塔（26 分鐘）
 
 <YouTube id="_Z3rXeJahMs" title="大名鼎鼎的注意力，看完這個影片就懂了！- DL6" />
 
@@ -95,12 +95,12 @@ LLM 只要這樣說就行。
 
 把 LLM 回答的日期，和這一章的腳註比一比。可能對，也可能錯。
 日期和腳註一樣嗎？它給出的出處真的存在嗎？像這樣問問自己就可以了。
-**“核實的習慣”是整本指南里最重要的習慣。**
+**「核實的習慣」是整本指南里最重要的習慣。**
 
 ## 整理
 
 - 2017 年的 Transformer 論文是技術上的契機，2022 年 ChatGPT 的公開是走向大眾的契機。
-- 核心變化是“可以用平時說的話，讓計算機做幾乎所有的文字工作”。
+- 核心變化是「可以用平時說的話，讓計算機做幾乎所有的文字工作」。
 - 工作崗位、準確性、版權、個人資訊等爭議也要一併瞭解。
 
 <ChapterDone :chapter="2" />

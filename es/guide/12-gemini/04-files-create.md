@@ -97,7 +97,7 @@ Por ejemplo, si creas una aplicación para recoger los contactos de los socios d
 - **No descargues aplicaciones de orígenes poco fiables.**
 - Si una aplicación te parece peligrosa, puedes denunciarla con el enlace de la parte inferior de la página.
 
-Un enlace de Canvas que te hayan compartido solo se abre en la web (gemini.google.com), no en la aplicación del móvil.[^canvas]
+Un enlace de Canvas que te hayan compartido solo se abre en la web (gemini.google.com), no en la aplicación del teléfono.[^canvas]
 
 <Quiz id="ch304-canvas-safety" />
 

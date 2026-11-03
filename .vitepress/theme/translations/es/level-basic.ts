@@ -5,7 +5,7 @@ export const LEVEL_BASIC: Record<string, QuestionText> = {
   "basic-s1-autocomplete": {
     prompt: "¿Qué se parece más a la forma en que un chatbot de IA construye las frases?",
     choices: [
-      "El autocompletado del teclado del móvil, que te sugiere la palabra que sigue",
+      "El autocompletado del teclado del teléfono, que te sugiere la palabra que sigue",
       "Buscar una palabra en el diccionario y copiar su significado tal cual, letra por letra",
       "Elegir y poner, según la situación, un aviso de megafonía grabado de antemano",
       "Una calculadora que introduce los números en una fórmula fija y calcula",
@@ -243,7 +243,7 @@ export const LEVEL_BASIC: Record<string, QuestionText> = {
     explain: "Funciones como regenerar o corregir la pregunta existen en la mayoría de los servicios, pero el nombre y la posición de los botones cambian según el servicio.",
   },
   "basic-s3-reader-level": {
-    prompt: "Le preguntaste a la IA cómo conectar unos auriculares al móvil para explicárselo a tu padre y llegó una respuesta llena de términos técnicos. ¿Qué habría sido bueno poner en la primera petición?",
+    prompt: "Le preguntaste a la IA cómo conectar unos auriculares al teléfono para explicárselo a tu padre y llegó una respuesta llena de términos técnicos. ¿Qué habría sido bueno poner en la primera petición?",
     choices: [
       "Repetir tres veces la palabra «exactamente» para enfatizarla mucho",
       "Escribir con precisión, en inglés, el nombre de la empresa que fabrica los auriculares",
@@ -486,7 +486,7 @@ export const LEVEL_BASIC: Record<string, QuestionText> = {
     prompt: "Lo que escribes en la ventana de chat de la IA, ¿a dónde va normalmente?",
     choices: [
       "Se envía a los servidores de la empresa de IA, donde puede quedar guardado",
-      "Se queda solo en mi móvil o en mi ordenador y no sale nunca a ningún otro sitio",
+      "Se queda solo en mi teléfono o en mi computadora y no sale nunca a ningún otro sitio",
       "Al cerrar la ventana de chat desaparece sin quedar en ninguna parte",
       "Se ve también en las pantallas de otros usuarios que usan el mismo servicio",
     ],

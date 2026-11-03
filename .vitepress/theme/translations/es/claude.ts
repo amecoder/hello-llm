@@ -6,8 +6,8 @@ export const CLAUDE: Record<string, QuestionText> = {
     prompt: "Tu sobrina de bachillerato quiere usar Claude para los deberes y te pide ayuda para registrarse. ¿Qué es lo primero que debes comprobar?",
     choices: [
       "Que tenga 18 años o más, la edad mínima para usarlo",
-      "Que instale la aplicación de ordenador",
-      "Que descargue la aplicación del móvil, porque solo se registra desde ahí",
+      "Que instale la aplicación de computadora",
+      "Que descargue la aplicación del teléfono, porque solo se registra desde ahí",
       "Que no hay condición de región y se puede registrar desde cualquier sitio",
     ],
     explain: "Para usar Claude hay que tener 18 años o más y estar en una región compatible (Corea incluida). Si se cumplen las condiciones, lo más fácil es empezar en la web, donde no hay nada que instalar.",
@@ -23,11 +23,11 @@ export const CLAUDE: Record<string, QuestionText> = {
     explain: "Claude no tiene contraseña propia de la cuenta. Si entras con el correo, te llega un mensaje con un enlace de inicio de sesión y solo tienes que pulsarlo. Si no lo ves, mira en la carpeta de spam.",
   },
   "ch201-phone": {
-    prompt: "Al registrarte aparece la verificación por SMS. Piensas pedir prestado un momento el móvil de un familiar para verificar. ¿Qué conviene hacer?",
+    prompt: "Al registrarte aparece la verificación por SMS. Piensas pedir prestado un momento el teléfono de un familiar para verificar. ¿Qué conviene hacer?",
     choices: [
       "Verificar con el número prestado y cambiarlo luego por el mío cuando termine",
       "Saltarme la verificación y terminar primero el registro",
-      "Verificar con el número de mi propio móvil, que voy a usar mucho tiempo",
+      "Verificar con el número de mi propio teléfono, que voy a usar mucho tiempo",
       "Crear un número de telefonía por internet y verificar con él",
     ],
     explain: "Un número que ya has verificado no se puede cambiar después. Este paso no se puede omitir, y tampoco sirven los números de telefonía por internet ni los fijos. Verifica con tu número, el que vas a usar mucho tiempo.",
@@ -46,16 +46,16 @@ export const CLAUDE: Record<string, QuestionText> = {
     prompt: "Usas Claude todos los días para el trabajo de tu tienda y a menudo llegas al límite de uso. ¿Qué conviene probar primero?",
     choices: [
       "Agrupar las preguntas relacionadas en un solo mensaje",
-      "Pasarte a la aplicación del móvil para tener un límite nuevo",
+      "Pasarte a la aplicación del teléfono para tener un límite nuevo",
       "Seguir con una sola conversación aunque cambie el tema",
       "Trocear la misma pregunta y enviarla varias veces",
     ],
     explain: "Gastas menos si preguntas todo de una vez que si lo haces en tres mensajes. El uso de la web y de las aplicaciones se cuenta junto, y las conversaciones largas gastan más, así que abre una nueva cuando cambie el tema.",
   },
   "ch201-billing": {
-    prompt: "Te suscribiste a Pro desde la aplicación del móvil y quieres dejar de usarlo. ¿Cuál es el método correcto?",
+    prompt: "Te suscribiste a Pro desde la aplicación del teléfono y quieres dejar de usarlo. ¿Cuál es el método correcto?",
     choices: [
-      "Basta con borrar la aplicación del móvil para que la suscripción termine",
+      "Basta con borrar la aplicación del teléfono para que la suscripción termine",
       "Cancelar antes del cobro desde «Facturación» → «Gestionar suscripción»",
       "Llamar a atención al cliente el día siguiente a la fecha de cobro",
       "Registrarte de nuevo con otro correo, y la suscripción anterior se detiene sola",
@@ -87,7 +87,7 @@ export const CLAUDE: Record<string, QuestionText> = {
     choices: [
       "Entrar en Configuración y desactivar el menú lateral del todo",
       "Dejarlo cerrado normalmente y abrirlo cuando busques una conversación anterior",
-      "Buscar las conversaciones anteriores solo desde la aplicación del móvil, no desde la web",
+      "Buscar las conversaciones anteriores solo desde la aplicación del teléfono, no desde la web",
       "Renunciar a las conversaciones anteriores y abrir siempre una nueva",
     ],
     explain: "El menú lateral no se puede apagar del todo; solo se abre y se cierra. Si la pantalla es estrecha, déjalo cerrado y ábrelo cuando busques una conversación anterior.",
@@ -128,7 +128,7 @@ export const CLAUDE: Record<string, QuestionText> = {
       "Que, aunque la pantalla esté en inglés, pueden preguntar en coreano",
       "Que hasta que cambien la pantalla solo pueden preguntar en inglés",
       "Que añadan a cada pregunta una traducción al inglés",
-      "Que las respuestas en coreano solo funcionan en la aplicación del móvil",
+      "Que las respuestas en coreano solo funcionan en la aplicación del teléfono",
     ],
     explain: "Claude responde en el idioma en que escribes, sea cual sea el idioma de la pantalla. Si también quieres cambiar el de la pantalla, pulsa tu nombre abajo a la izquierda y elígelo en «Idioma».",
   },
@@ -186,11 +186,11 @@ export const CLAUDE: Record<string, QuestionText> = {
     prompt: "En la lista de dispositivos con la sesión iniciada ves uno que no conoces. ¿Qué conviene hacer?",
     choices: [
       "Dejarlo, porque se desconecta solo a los 28 días",
-      "Pulsar «Cerrar sesión en todos los dispositivos» en la aplicación del móvil",
+      "Pulsar «Cerrar sesión en todos los dispositivos» en la aplicación del teléfono",
       "Esperar a ver si en ese dispositivo se crean conversaciones nuevas",
       "Pulsar «⋮» junto a ese dispositivo y elegir «Finalizar»",
     ],
-    explain: "Un dispositivo desconocido se puede desconectar al momento con «⋮» → «Finalizar» a su lado. Cerrar la sesión en todos los dispositivos de una vez solo se puede en la web, no en la aplicación del móvil.",
+    explain: "Un dispositivo desconocido se puede desconectar al momento con «⋮» → «Finalizar» a su lado. Cerrar la sesión en todos los dispositivos de una vez solo se puede en la web, no en la aplicación del teléfono.",
   },
   "ch204-upload": {
     prompt: "Quieres subir un informe en PDF de 300 páginas para que te expliquen los gráficos que contiene. ¿Qué conviene hacer?",
@@ -237,7 +237,7 @@ export const CLAUDE: Record<string, QuestionText> = {
     choices: [
       "Nada, porque se guarda solo",
       "Lo copias, lo descargas o lo guardas como artefacto",
-      "Lo abres en la aplicación del móvil y se guarda",
+      "Lo abres en la aplicación del teléfono y se guarda",
       "Creas un enlace público de la conversación y se guarda",
     ],
     explain: "Los diagramas dibujados dentro de la conversación (visualizaciones personalizadas) son dibujos temporales que no se guardan. Para conservarlos, elige «Copiar como imagen», «Descargar» o «Guardar como artefacto».",
@@ -336,7 +336,7 @@ export const CLAUDE: Record<string, QuestionText> = {
     prompt: "Quieres pasar a Claude los recuerdos acumulados en otra IA, pero no quieres que pasen los que hablan de tu salud. ¿Qué haces?",
     choices: [
       "Importarlo todo y que Claude filtre",
-      "Importarlo desde la aplicación del móvil, y así se quedan fuera los datos sensibles",
+      "Importarlo desde la aplicación del teléfono, y así se quedan fuera los datos sensibles",
       "Meterlo todo, porque es una función experimental y no hay forma de excluir nada",
       "Quitar ese contenido antes de pegarlo para importar",
     ],
@@ -388,9 +388,9 @@ export const CLAUDE: Record<string, QuestionText> = {
       "Enviar solo algo corto, como “dime las aplicaciones de reparto”",
       "Dejar la búsqueda web desactivada y enviar solo con Research activado",
       "Incluir en la pregunta condiciones como presupuesto, zona y periodo",
-      "Empezar desde el móvil y usar también las aplicaciones conectadas",
+      "Empezar desde el teléfono y usar también las aplicaciones conectadas",
     ],
-    explain: "Research tarda varios minutos, así que afina la pregunta antes de enviarla. Si añades condiciones como presupuesto, zona y periodo, es más fácil que encuentre material adaptado a tu caso. En la pantalla antigua la búsqueda web tiene que estar activada, y si empiezas desde el móvil solo busca en la web.",
+    explain: "Research tarda varios minutos, así que afina la pregunta antes de enviarla. Si añades condiciones como presupuesto, zona y periodo, es más fácil que encuentre material adaptado a tu caso. En la pantalla antigua la búsqueda web tiene que estar activada, y si empiezas desde el teléfono solo busca en la web.",
   },
   "ch206-when": {
     prompt: "¿Qué función es la más adecuada para una pregunta como “¿quién ganó anoche el partido de béisbol?”?",
@@ -483,14 +483,14 @@ export const CLAUDE: Record<string, QuestionText> = {
     explain: "Cuando sea una herramienta o un sitio que usas por primera vez, un mensaje que sale en tu nombre o algo difícil de deshacer, déjalo en «Manual» y vigila de cerca. «Automático» solo se detiene y pregunta cuando ve riesgo.",
   },
   "ch208-devices": {
-    prompt: "Con el plan Pro, en la aplicación de escritorio, le encargaste a Cowork ordenar una carpeta de tu ordenador. ¿Qué debes hacer para que la tarea llegue a tus archivos?",
+    prompt: "Con el plan Pro, en la aplicación de escritorio, le encargaste a Cowork ordenar una carpeta de tu computadora. ¿Qué debes hacer para que la tarea llegue a tus archivos?",
     choices: [
-      "Elegir «Solo en mi ordenador» en la configuración",
+      "Elegir «Solo en mi computadora» en la configuración",
       "Subir la carpeta entera al servidor",
       "Cerrar la aplicación de escritorio para pasar la tarea al servidor",
-      "Dejar abierta la aplicación de escritorio de ese ordenador",
+      "Dejar abierta la aplicación de escritorio de esa computadora",
     ],
-    explain: "Desde el 6 de octubre de 2026, las tareas nuevas de Cowork en Pro y Max se ejecutan en la nube y la opción «Solo en mi ordenador» ya no existe. La carpeta sigue en tu ordenador y solo se alcanza con la aplicación de escritorio abierta. Si la cierras, la tarea sigue, pero no llega a tus archivos.",
+    explain: "Desde el 6 de octubre de 2026, las tareas nuevas de Cowork en Pro y Max se ejecutan en la nube y la opción «Solo en mi computadora» ya no existe. La carpeta sigue en tu computadora y solo se alcanza con la aplicación de escritorio abierta. Si la cierras, la tarea sigue, pero no llega a tus archivos.",
   },
   "ch208-scheduled": {
     prompt: "¿Qué trabajo es el más adecuado para encargar por primera vez como tarea programada, que se ejecuta sola con la periodicidad que fijas?",
@@ -503,14 +503,14 @@ export const CLAUDE: Record<string, QuestionText> = {
     explain: "Una tarea programada se ejecuta sin que puedas vigilarla, así que empieza por trabajos de poco riesgo, como un resumen. No programes enviar mensajes, hacer compras ni nada difícil de deshacer.",
   },
   "ch208-browser": {
-    prompt: "Antes de activar el «uso del ordenador», con el que Claude mira tu pantalla y hace clic y escribe por sí mismo, ¿qué es lo adecuado?",
+    prompt: "Antes de activar el «uso de la computadora», con el que Claude mira tu pantalla y hace clic y escribe por sí mismo, ¿qué es lo adecuado?",
     choices: [
       "Dejar abierta la aplicación del banco para que la use enseguida",
       "Dejar todas las ventanas abiertas para que se vea bien la pantalla",
       "Escribir la contraseña en la conversación para ayudarle a iniciar sesión más rápido",
       "Cerrar de antemano los archivos y las aplicaciones con información sensible",
     ],
-    explain: "El uso del ordenador mira la pantalla mediante capturas, así que ve todo lo que está a la vista. Antes de empezar, cierra los archivos y las aplicaciones sensibles, y no des permiso a aplicaciones de bancos, de salud o de la administración.",
+    explain: "El uso de la computadora mira la pantalla mediante capturas, así que ve todo lo que está a la vista. Antes de empezar, cierra los archivos y las aplicaciones sensibles, y no des permiso a aplicaciones de bancos, de salud o de la administración.",
   },
   "ch208-safety": {
     prompt: "Claude, que estaba ordenando tus correos con Cowork, de pronto te pide datos de tu cuenta bancaria sin que hayas preguntado. ¿Qué haces?",
@@ -553,19 +553,19 @@ export const CLAUDE: Record<string, QuestionText> = {
     explain: "Por defecto, el personal no puede ver las conversaciones y los datos están cifrados. Pero algunos empleados pueden ver las conversaciones enviadas con comentarios, las que requieren revisar las normas de uso y las que permitiste usar para entrenar. Con datos muy sensibles, como el número de identidad o el historial de salud, ten cuidado al incluirlos.",
   },
   "ch209-export": {
-    prompt: "Antes de eliminar tu cuenta quieres hacer una copia de seguridad de tus conversaciones. Si normalmente solo usas la aplicación del móvil, ¿qué haces?",
+    prompt: "Antes de eliminar tu cuenta quieres hacer una copia de seguridad de tus conversaciones. Si normalmente solo usas la aplicación del teléfono, ¿qué haces?",
     choices: [
-      "Pulsar «Exportar» directamente en la configuración de la aplicación del móvil",
+      "Pulsar «Exportar» directamente en la configuración de la aplicación del teléfono",
       "Pasar el archivo exportado a una cuenta personal nueva",
       "Abrir con calma, unos días después, el enlace que llega por correo",
-      "Hacer «Exportar datos» desde la web o la aplicación de ordenador",
+      "Hacer «Exportar datos» desde la web o la aplicación de computadora",
     ],
-    explain: "Exportar no se puede desde la aplicación del móvil, sino desde la web o la aplicación de ordenador, en «Configuración» → «Privacidad». El enlace que llega por correo caduca a las 24 horas, y no se puede importar a otra cuenta personal.",
+    explain: "Exportar no se puede desde la aplicación del teléfono, sino desde la web o la aplicación de computadora, en «Configuración» → «Privacidad». El enlace que llega por correo caduca a las 24 horas, y no se puede importar a otra cuenta personal.",
   },
   "ch209-delete": {
     prompt: "Alguien con el plan de pago (Pro) quiere eliminar su cuenta. ¿Qué debe hacer primero?",
     choices: [
-      "Borrar primero la aplicación del móvil y volver a instalarla desde cero",
+      "Borrar primero la aplicación del teléfono y volver a instalarla desde cero",
       "Cancelar la suscripción y esperar a que termine el periodo ya pagado",
       "Cambiar antes la contraseña",
       "Pasar una por una todas las conversaciones a chats incógnito",
@@ -613,7 +613,7 @@ export const CLAUDE: Record<string, QuestionText> = {
     explain: "El modo de voz te deja preguntar hablando y escuchar la respuesta. El dictado convierte lo que dices en texto para enviarlo, y la respuesta llega escrita.",
   },
   "ch210-dictation": {
-    prompt: "Por dictado del móvil dijiste y enviaste una pregunta que incluía el nombre de una persona. ¿Qué te conviene hacer después?",
+    prompt: "Por dictado del teléfono dijiste y enviaste una pregunta que incluía el nombre de una persona. ¿Qué te conviene hacer después?",
     choices: [
       "Repetirla en inglés, porque con el coreano no funciona",
       "Comprobar el nombre en tu pregunta tal como aparece en el chat",
@@ -638,7 +638,7 @@ export const CLAUDE: Record<string, QuestionText> = {
       "Porque el modo de voz solo admite inglés",
       "Porque el idioma de la voz se elige aparte",
       "Porque el plan gratuito tiene el idioma fijo",
-      "Porque en la aplicación del móvil no se puede cambiar el idioma",
+      "Porque en la aplicación del teléfono no se puede cambiar el idioma",
     ],
     explain: "Aunque cambies el idioma de la pantalla de la aplicación, el idioma de la voz no cambia. Elígelo aparte en «Configuración» → «General» → «Voz» → «Idioma».",
   },
@@ -663,7 +663,7 @@ export const CLAUDE: Record<string, QuestionText> = {
     explain: "Los widgets, los atajos y las funciones de la pantalla de bloqueo, que llaman a Claude sin abrir la aplicación, también cuentan para el límite de uso. «Preguntar a Claude» y los atajos usan el modelo predeterminado que ves al abrir la aplicación.",
   },
   "ch210-apps": {
-    prompt: "En la aplicación del móvil le pediste un correo para avisar a tu jefe de que llegas tarde, y se abrió la aplicación de correo. ¿Qué haces ahora?",
+    prompt: "En la aplicación del teléfono le pediste un correo para avisar a tu jefe de que llegas tarde, y se abrió la aplicación de correo. ¿Qué haces ahora?",
     choices: [
       "Leer el destinatario y el contenido, y pulsar tú «Enviar»",
       "Cerrar la aplicación de correo, porque Claude ya lo ha enviado",
@@ -686,11 +686,11 @@ export const CLAUDE: Record<string, QuestionText> = {
     prompt: "Terminaste la práctica con material falso y borraste todas las conversaciones de práctica. ¿Qué más debes hacer para dejar limpio?",
     choices: [
       "Nada más: al borrar las conversaciones, desaparecen también los recuerdos y lo compartido",
-      "Cerrar también la sesión de mi móvil, que inicié en la práctica, como si fuera un dispositivo desconocido",
+      "Cerrar también la sesión de mi teléfono, que inicié en la práctica, como si fuera un dispositivo desconocido",
       "Revisar en los ajustes las memorias que quedan, lo compartido y los dispositivos",
       "Eliminar la cuenta y registrarme de nuevo para no dejar rastro",
     ],
-    explain: "Aunque borres la conversación, la memoria creada en ella se queda, así que bórrala aparte en «Configuración» → «Memoria». Desactiva lo que no necesites en «Chats compartidos» y comprueba en «Sesiones activas» que no hay dispositivos desconocidos. El móvil con el que iniciaste sesión en la práctica es tuyo.",
+    explain: "Aunque borres la conversación, la memoria creada en ella se queda, así que bórrala aparte en «Configuración» → «Memoria». Desactiva lo que no necesites en «Chats compartidos» y comprueba en «Sesiones activas» que no hay dispositivos desconocidos. El teléfono con el que iniciaste sesión en la práctica es tuyo.",
   },
   "ch212-tools": {
     prompt: "Quieres pulir con Claude el texto de un cartel para un evento del barrio. ¿Qué función te conviene usar primero?",

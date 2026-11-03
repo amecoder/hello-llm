@@ -10,3 +10,4 @@ Rules:
 7. Keep proper nouns and product names (Claude, ChatGPT, Gemini, Codex, Antigravity, GitHub). Fictional people: 민지→Minji, 준호→Junho, 서연→Seoyeon; the cafe 모퉁이 카페 → «Café de la Esquina». Chapter "N장" → "capítulo N", stage "N단계" → "etapa N".
 8. In the glossary table at the end (용어 / 읽는 법 / 한 줄 뜻), the header becomes Término / En español / En una línea, and the "읽는 법" column holds the usual Spanish name of the term (e.g. Prompt → instrucción), since Spanish readers do not need the Korean pronunciation.
 9. Do not add or remove content. Do not add notes. Do not localize facts: numbers, dates, prices (원 → wones), place names (서울 → Seúl) stay as in the Korean. Write dates as in the Korean numerals (e.g. 10/27) and keep times.
+10. Avoid words used only in Spain: computer → "computadora" (not "ordenador"), phone → "teléfono" (not "móvil" as a noun; "aplicación móvil" is fine), car → "auto" (not "coche"). No "vosotros" forms.
