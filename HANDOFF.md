@@ -8,11 +8,8 @@
 ## Pending Tasks
 - [ ] **(다음 세션 시작점, 2026-11-02 리눅스) Mac에서 넘긴 남은 일** — 다국어 6개 언어(ko 원본 + en·ja·zh-hans·zh-hant·es)는 전 단계 완료(PR #61~#72). 아래가 남았다
   1. **Codex 남은 캡처 3장**(입력창 아래 권한 메뉴 → `guide/21-codex/04-permissions-undo.md`, 왼쪽 위 「Codex ⌄」 제품 선택 메뉴 → `01-what-is.md`, 입력창에 `$` 를 친 스킬 목록 → `05-skills.md`) — Codex 사용 한도(2026-11-20까지)에 걸려 있고, 2026-11-01 Mac에서 다시 시도했지만 자동 조작(cmux-cua)으로는 메뉴가 열리지 않았다(백그라운드 클릭은 앱 안 버튼에 닿지 않고, 앞으로 가져오는 클릭은 원래 앱으로 돌아가며 메뉴가 닫힘). **Codex 앱은 Mac 앱이라 리눅스에서는 못 찍는다** — 11-20 이후 Mac에서, 사용자가 메뉴를 열어 둔 상태로 찍는다. 앞을 가리는 다른 창(메신저 등 개인 대화)은 치우고, 왼쪽 「Recents」 실제 대화 제목은 잘라 내거나 가린다. 찍은 뒤 본문 그림 추가는 한국어 페이지만 하면 번역판은 한국어 assets 를 가리키므로 alt 텍스트만 5개 언어로 넣는다
-  2. **번역 개선(제안, 사용자 결정 전)**
-     - 번체(`zh-hant/`)의 따옴표 “” → 대만식 「」 (간체에서 OpenCC 로 변환해 그대로 남음)
-     - 한국어 `guide/index.md` 113줄 「지금은 1단계를 채우는 중입니다」가 4단계까지 공개된 지금과 안 맞음 — 고치면 번역 5개(같은 줄)도 함께
+  2. **번역 개선** — 번체 대만식 따옴표·중립 스페인어·목차 문구는 **완료**(PR #74 `8a4f3eb`, 2026-11-03. 번체 따옴표는 `make-hant.py` 가 `tw_quotes.py` 로 변환하므로 다시 만들어도 유지). 남은 것:
      - 화면 이름은 공식 현지 UI를 확인하지 못해 「현지어（한국어）」 병기 — 현지 UI를 확인할 수 있으면 바꾼다
-     - 스페인어는 스페인식 낱말(ordenador·móvil)이 섞임 — 규칙은 중립 스페인어
   3. **번역 유지보수 규칙**: 한국어 본문을 고치면 en·ja·zh-hans·es 도 같이 고치고, 번체는 간체를 고친 뒤 `make-hant.py` 로 다시 만든다(번체만 고치면 다음 변환 때 덮인다). `tests/i18n.test.ts` 는 페이지 짝·컴포넌트 순서·퀴즈 수·길이 편향만 검사하고 문장 뜻은 못 본다. 프롬프트를 고치면 `sync-library.py` 로 번역판 프롬프트 모음을 다시 맞춘다
   4. **리눅스에서 번역 도구 쓰기**: `docs/tools/i18n/` 의 스크립트 9개(`en-fix.ts`·`bal-pick.ts`·`fix-anchors-by-position.ts`·`export-*.ts`·`bias-any.ts`·`trl.sh`·`agent-pages.md`·README)에 Mac 절대 경로(`/Users/amecoder/study/hello-llm`, `/private/tmp/claude-501/...`)가 박혀 있다 — 실행 전에 리눅스 경로로 바꾼다(`rg -l '/Users/amecoder|/private/tmp' docs/tools/i18n`). 번역 중간 산출물(퀴즈 JSON `<묶음>-<언어>.json` 등)은 Mac scratchpad 에만 있었다 — 퀴즈를 다시 고칠 때는 `translations/<언어>/*.ts` 를 직접 고치되, 재생성(`gen-lang.py`)하면 덮이니 섞어 쓰지 않는다. 번체 변환은 `uvx --from opencc==1.1.9 python docs/tools/i18n/make-hant.py <저장소> <JSON 폴더>`
   5. **리눅스 환경 메모**: `ego-browser`·`aside` 없음 → 웹 조작은 `playwright` MCP, 검색은 `agy`(사용 한도 ≈ 2026-11-08 초기화). `gh`·`git push` 는 단독 명령으로. 미리보기 포트 5180(`npm run docs:dev -- --port 5180 --strictPort`)
