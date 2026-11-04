@@ -3,6 +3,7 @@
 ## [2026-11-04]
 
 ### Added
+- 검색엔진 소유 확인 태그 — 구글 `google-site-verification`(PR #77, `ed08966`), 네이버 `naver-site-verification`은 호스트 단위 등록만 되어 `amecoder/amecoder.github.io` 첫 페이지에(그쪽 PR #2 `ea7dc85`), 같은 저장소에 사이트맵 위치를 알리는 `robots.txt`(그쪽 PR #1 `9e3a0a7`). 라이브 태그 0→1 확인
 - GoatCounter 익명 방문 통계(`hello-ai.goatcounter.com`) — 첫 페이지는 count.js, 화면 안 이동은 router 훅이 경로·직전 페이지·새 제목을 넘겨 집계(`theme/analytics.ts`). 진입 주소 3형태 모두 시나리오 집계 4/4, 앵커 이동·첫 페이지 중복 없음. 6개 언어 첫 화면 약속에 방문 통계 안내 추가 (PR #76, `e9d7f8a`)
 
 ## [2026-11-03]
