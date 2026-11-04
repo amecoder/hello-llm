@@ -1,4 +1,5 @@
 ---
+title: "LLM, usados como un experto"
 layout: home
 
 hero:

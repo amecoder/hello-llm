@@ -19,6 +19,16 @@ const LOCALES = [
   { id: 'es', prefix: 'es/', hreflang: 'es', og: 'es_LA', name: 'Español' },
 ] as const
 
+// guides about one product; the same chapter titles repeat across them, so titles need the name
+const SERVICES: Record<string, string> = {
+  '10-claude': 'Claude',
+  '11-chatgpt': 'ChatGPT',
+  '12-gemini': 'Gemini',
+  '20-claude-code': 'Claude Code',
+  '21-codex': 'Codex',
+  '22-antigravity': 'Antigravity',
+}
+
 const CJK = /[　-ヿ一-鿿＀-￯]/
 const SKIP_BLOCK = /^(#|!\[|<|[-*+] |\||```|\d+\. |\[\^|\[\[|> \[!|-{3,}\s*$)/
 const FENCE = /^```[\s\S]*?^```\s*$/gm
@@ -110,12 +120,40 @@ export function alternateLinks(relativePath: string, pages: ReadonlySet<string>)
   return pages.has(rest) ? [...links, ['link', { rel: 'alternate', hreflang: 'x-default', href: pageUrl(rest) }]] : links
 }
 
+/** Page title for search results and link cards; the name goes first so a long title keeps it when cut. */
+export function seoTitle(relativePath: string, title: string): string {
+  const service = SERVICES[splitLocale(relativePath).rest.match(/^guide\/([^/]+)\//)?.[1] ?? '']
+  return service && title && !title.includes(service) ? `${service} ${title}` : title
+}
+
+/** Trail home > stage > page. Empty for a home page, which has nothing above it. */
+export function breadcrumbItems(
+  relativePath: string,
+  title: string,
+  titleOf: (relativePath: string) => string,
+): { name: string; url: string }[] {
+  const { locale, rest } = splitLocale(relativePath)
+  if (rest === 'index.md') return []
+  const prefix = LOCALES.find((l) => l.id === locale)!.prefix
+  const stageDir = rest.match(/^guide\/[^/]+\//)?.[0]
+  const stage = stageDir ? `${prefix}${stageDir}index.md` : relativePath
+  return [
+    { name: SITE_NAME, url: pageUrl(`${prefix}index.md`) },
+    ...(stage === relativePath ? [] : [{ name: titleOf(stage), url: pageUrl(stage) }]),
+    { name: title, url: pageUrl(relativePath) },
+  ]
+}
+
+// escape "<" so text such as "</script>" cannot end the tag early
+const jsonLd = (data: object): Head => ['script', { type: 'application/ld+json' }, JSON.stringify(data).replace(/</g, '\\u003c')]
+
 interface PageSeo {
   relativePath: string
   title: string
   description: string
   lastUpdated?: number
   pages: ReadonlySet<string>
+  titleOf: (relativePath: string) => string
   isNotFound?: boolean
 }
 
@@ -142,6 +180,12 @@ export function seoHead(page: PageSeo): Head[] {
         author: AUTHOR,
         isPartOf: site,
       }
+  const crumbs = breadcrumbItems(page.relativePath, title, page.titleOf)
+  const crumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.url })),
+  }
 
   return [
     // VitePress 1.6.4 prints its default description meta unescaped, so a quote cuts it short;
@@ -156,8 +200,8 @@ export function seoHead(page: PageSeo): Head[] {
     meta('og:url', url),
     meta('og:locale', loc.og),
     ['meta', { name: 'twitter:card', content: 'summary' }],
-    // escape "<" so text such as "</script>" cannot end the tag early
-    ['script', { type: 'application/ld+json' }, JSON.stringify(ld).replace(/</g, '\\u003c')],
+    jsonLd(ld),
+    ...(crumbs.length ? [jsonLd(crumbLd)] : []),
   ]
 }
 

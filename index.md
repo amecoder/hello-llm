@@ -1,4 +1,5 @@
 ---
+title: "LLM, 전문가처럼 쓰기"
 layout: home
 
 hero:
