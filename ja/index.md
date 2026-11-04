@@ -1,4 +1,5 @@
 ---
+title: "LLMをプロのように使いこなす"
 layout: home
 
 hero:

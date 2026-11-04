@@ -1,4 +1,5 @@
 ---
+title: "Índice completo"
 layout: home
 
 hero:

@@ -1,13 +1,16 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
+import { readFileSync, readdirSync } from 'node:fs'
 import {
   SITE_URL,
+  breadcrumbItems,
   descriptionFromMarkdown,
   pageUrl,
   splitLocale,
   alternateLinks,
   seoHead,
   llmsTxt,
+  seoTitle,
   titleFromMarkdown,
 } from '../.vitepress/seo.ts'
 
@@ -72,6 +75,7 @@ test('adds canonical, Open Graph and JSON-LD for a guide page', () => {
     description: 'What an LLM is </script>',
     lastUpdated: Date.UTC(2026, 10, 3),
     pages: new Set(['guide/a.md', 'en/guide/a.md']),
+    titleOf: () => '',
   })
   const find = (k: string, v: string) => head.find(([, a]) => (a as Record<string, string>)[k] === v)
   assert.deepEqual(find('rel', 'canonical'), ['link', { rel: 'canonical', href: SITE_URL + 'en/guide/a.html' }])
@@ -87,7 +91,7 @@ test('adds canonical, Open Graph and JSON-LD for a guide page', () => {
 })
 
 test('marks a locale home page as a WebSite', () => {
-  const head = seoHead({ relativePath: 'ja/index.md', title: '', description: 'd', pages: new Set(['ja/index.md']) })
+  const head = seoHead({ relativePath: 'ja/index.md', title: '', description: 'd', pages: new Set(['ja/index.md']), titleOf: () => '' })
   const data = JSON.parse(head.find(([tag]) => tag === 'script')![2]!)
   assert.equal(data['@type'], 'WebSite')
   assert.equal(data.url, SITE_URL + 'ja/')
@@ -113,7 +117,7 @@ test('takes the title from frontmatter, else the first heading', () => {
 
 test('emits its own description meta so VitePress escapes quotes in it', () => {
   // VitePress 1.6.4 writes its default description meta without escaping "; a head entry replaces it
-  const head = seoHead({ relativePath: 'guide/a.md', title: 't', description: '"다음 말"', pages: new Set(['guide/a.md']) })
+  const head = seoHead({ relativePath: 'guide/a.md', title: 't', description: '"다음 말"', pages: new Set(['guide/a.md']), titleOf: () => '' })
   assert.deepEqual(head.find(([, a]) => a.name === 'description'), ['meta', { name: 'description', content: '"다음 말"' }])
 })
 
@@ -146,5 +150,76 @@ test('keeps llms.txt markdown intact for ] in titles and newlines in the summary
 })
 
 test('adds nothing to the 404 page', () => {
-  assert.deepEqual(seoHead({ relativePath: '404.md', title: '', description: '', pages: new Set(), isNotFound: true }), [])
+  assert.deepEqual(seoHead({ relativePath: '404.md', title: '', description: '', pages: new Set(), titleOf: () => '', isNotFound: true }), [])
+})
+
+test('puts the service name in front of a service guide title, in every language', () => {
+  assert.equal(seoTitle('guide/11-chatgpt/02-screen-tour.md', '2장. 화면 둘러보기'), 'ChatGPT 2장. 화면 둘러보기')
+  assert.equal(seoTitle('es/guide/12-gemini/02-screen-tour.md', 'Capítulo 2.'), 'Gemini Capítulo 2.')
+  assert.equal(seoTitle('guide/20-claude-code/03-screen-tour.md', '3장.'), 'Claude Code 3장.')
+})
+
+test('leaves a title alone when it already names the service, or the guide is not about one service', () => {
+  assert.equal(seoTitle('guide/21-codex/01-what-is.md', '1장. Codex란'), '1장. Codex란')
+  assert.equal(seoTitle('guide/11-chatgpt/index.md', '2단계 · ChatGPT 사용 가이드'), '2단계 · ChatGPT 사용 가이드')
+  assert.equal(seoTitle('guide/00-common/01-what-is-llm.md', '1장.'), '1장.')
+  assert.equal(seoTitle('guide/30-ai-sdlc/04-build.md', '4장.'), '4장.')
+  assert.equal(seoTitle('index.md', ''), '')
+})
+
+test('gives every published page a title of its own', () => {
+  const seen = new Map<string, string>()
+  for (const locale of ['', 'en/', 'ja/', 'zh-hans/', 'zh-hant/', 'es/']) {
+    const stages = readdirSync(`${locale || '.'}/guide`, { withFileTypes: true }).filter((e) => e.isDirectory() && e.name !== 'assets')
+    const sources = [
+      `${locale}index.md`,
+      `${locale}guide/index.md`,
+      ...stages.flatMap((s) =>
+        readdirSync(`${locale}guide/${s.name}`).filter((f) => f.endsWith('.md')).map((f) => `${locale}guide/${s.name}/${f}`),
+      ),
+    ]
+    for (const source of sources) {
+      const published = source.replace(/README\.md$/, 'index.md')
+      const title = seoTitle(published, titleFromMarkdown(readFileSync(source, 'utf-8')))
+      assert.ok(title, `${source} has no title`)
+      assert.equal(seen.get(title), undefined, `${source} repeats the title "${title}"`)
+      seen.set(title, source)
+    }
+  }
+  assert.equal(seen.size, 582)
+})
+
+const stageTitle = (path: string) => (path === 'en/guide/11-chatgpt/index.md' ? 'Stage 2 · ChatGPT' : '')
+
+test('builds the breadcrumb trail home > stage > chapter inside the page language', () => {
+  assert.deepEqual(breadcrumbItems('en/guide/11-chatgpt/02-screen-tour.md', 'ChatGPT Chapter 2', stageTitle), [
+    { name: 'hello-ai', url: SITE_URL + 'en/' },
+    { name: 'Stage 2 · ChatGPT', url: SITE_URL + 'en/guide/11-chatgpt/' },
+    { name: 'ChatGPT Chapter 2', url: SITE_URL + 'en/guide/11-chatgpt/02-screen-tour.html' },
+  ])
+})
+
+test('shortens the breadcrumb for stage and contents pages and skips the home page', () => {
+  assert.deepEqual(breadcrumbItems('en/guide/11-chatgpt/index.md', 'Stage 2 · ChatGPT', stageTitle), [
+    { name: 'hello-ai', url: SITE_URL + 'en/' },
+    { name: 'Stage 2 · ChatGPT', url: SITE_URL + 'en/guide/11-chatgpt/' },
+  ])
+  assert.deepEqual(breadcrumbItems('guide/index.md', '전체 목차', stageTitle), [
+    { name: 'hello-ai', url: SITE_URL },
+    { name: '전체 목차', url: SITE_URL + 'guide/' },
+  ])
+  assert.deepEqual(breadcrumbItems('ja/index.md', 'x', stageTitle), [])
+})
+
+test('adds BreadcrumbList JSON-LD after the Article, and none on a home page', () => {
+  const scripts = (relativePath: string) =>
+    seoHead({ relativePath, title: 'T </script>', description: 'd', pages: new Set([relativePath]), titleOf: () => 'S' })
+      .filter(([tag]) => tag === 'script')
+      .map((s) => s[2]!)
+  const [, crumbs] = scripts('guide/11-chatgpt/a.md')
+  assert.ok(!crumbs.includes('</script>'))
+  const data = JSON.parse(crumbs)
+  assert.equal(data['@type'], 'BreadcrumbList')
+  assert.deepEqual(data.itemListElement[1], { '@type': 'ListItem', position: 2, name: 'S', item: SITE_URL + 'guide/11-chatgpt/' })
+  assert.equal(scripts('index.md').length, 1)
 })

@@ -1,4 +1,5 @@
 ---
+title: "Use LLMs Like a Pro"
 layout: home
 
 hero:

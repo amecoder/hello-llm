@@ -1,4 +1,5 @@
 ---
+title: "Full Table of Contents"
 layout: home
 
 hero:
