@@ -7,7 +7,7 @@
 
 ## Pending Tasks
 - [ ] **(2026-11-03) SEO·GEO 후속 — 사용자 작업 필요** (SEO·GEO 본체는 PR #75 `2e2771f` 로 배포)
-  1. **검색엔진 등록(구글·네이버·빙)** — 확인 태그는 배포 완료(구글 PR #77 `ed08966`, 네이버 `amecoder.github.io` PR #2 `ea7dc85`, 2026-11-04, 라이브 0→1 확인). **남은 것은 사용자가 각 콘솔에서 「확인」·사이트맵 제출.** 태그는 확인 뒤에도 지우지 않는다
+  1. **검색엔진 등록(구글·네이버·빙)** — 확인 태그는 배포 완료(구글 PR #77 `ed08966`, 네이버 `amecoder.github.io` PR #2 `ea7dc85`, 2026-11-04, 라이브 0→1 확인). **구글·네이버 소유 확인·사이트맵 제출은 사용자가 완료했다고 알림(2026-11-04, 콘솔 화면은 직접 보지 못함).** 태그는 확인 뒤에도 지우지 않는다. 검색 반영은 며칠~몇 주 뒤 — 그때 각 콘솔에서 색인 수와 사이트맵 처리 결과를 본다. 빙 등록 여부는 미확인
      - **구글**: Search Console 「URL 접두어」 `https://amecoder.github.io/hello-llm/`(끝 `/` 포함, 「도메인」은 DNS 권한이 없어 불가) + HTML 태그 → **이 저장소** `config.mts` 루트 `head` 에 `google-site-verification`. 확인 뒤 Sitemaps 에 `sitemap.xml` 제출 (support.google.com/webmasters/answer/34592 · 9008080 · 7451001, 2026-11-04 확인)
      - **네이버**: 「사이트 등록은 호스트 단위만 지원」(`http://www.mysite.com/myid (X)`, searchadvisor.naver.com/guide/seo-basic-intro, 2026-11-04 확인) → `https://amecoder.github.io` 로 등록하고 `naver-site-verification` 태그는 **다른 저장소 `amecoder/amecoder.github.io`(프로필 게임, `main` 맨 위를 그대로 배포)의 `index.html` `<head>`** 에 넣는다 — 넣기 전 사용자에게 다시 확인. 그 뒤 요청 → 사이트맵 제출에 `https://amecoder.github.io/hello-llm/sitemap.xml`
      - **네이버 주의**: 호스트 전체 등록이라 네이버 통계에 프로필 게임이 섞인다. 호스트로 등록한 뒤 폴더 아래 사이트맵을 받아 주는지는 **미확인**(사이트맵 안내 페이지 `guide/request-sitemap` 이 「존재하지 않는 포스트」 오류) — 안 되면 아래 robots.txt 가 대비책. 수집 요청은 1일~몇 주, 검색 반영은 로봇 방문 뒤 최대 1주일(guide/request-crawl)
