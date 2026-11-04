@@ -74,7 +74,11 @@ export default defineConfig({
   },
   lastUpdated: true,
   // anonymous visit counts (no cookies); in-page moves are counted in theme/analytics.ts
-  head: [['script', { 'data-goatcounter': 'https://hello-ai.goatcounter.com/count', async: '', src: 'https://gc.zgo.at/count.js' }]],
+  head: [
+    ['script', { 'data-goatcounter': 'https://hello-ai.goatcounter.com/count', async: '', src: 'https://gc.zgo.at/count.js' }],
+    // Search Console ownership check; keep it after verifying, Google re-checks periodically
+    ['meta', { name: 'google-site-verification', content: 'PkdDqza0Dp9r0jrm_DPRcpwTYfsn-82DHlWuN6cbFes' }],
+  ],
   // Korean is the source at the site root; translations live under /<lang>/ (see theme/i18n.ts)
   locales: {
     root: { label: '한국어', lang: 'ko-KR' },
