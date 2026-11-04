@@ -3,6 +3,7 @@ import type { Ui } from './ko.ts'
 import type { Content } from './content.ts'
 
 export const es: Ui = {
+  translationNotice: 'Esta página se tradujo del original en coreano con IA y puede contener errores.',
   quiz: {
     label: 'Comprueba lo aprendido',
     right: '✓ Correcta',

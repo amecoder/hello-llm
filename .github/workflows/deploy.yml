@@ -36,6 +36,15 @@ jobs:
         run: npm test
       - name: Build with VitePress
         run: npm run docs:build
+      - name: List pages changed since the live site
+        continue-on-error: true # search engine pings must never block a deploy
+        run: node scripts/indexnow.mjs list
+      - name: Keep the changed page list for the indexnow job
+        uses: actions/upload-artifact@v4
+        with:
+          name: indexnow-urls
+          path: indexnow-urls.json
+          if-no-files-found: ignore
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -51,3 +60,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Get the changed page list
+        uses: actions/download-artifact@v4
+        with:
+          name: indexnow-urls
+      - name: Tell search engines
+        run: node scripts/indexnow.mjs send

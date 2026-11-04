@@ -4,6 +4,7 @@ import type { Ui } from './ko.ts'
 import type { Content } from './content.ts'
 
 export const zhHans: Ui = {
+  translationNotice: '本页由 AI 根据韩语原文翻译，可能存在错误。',
   quiz: {
     label: '理解检查',
     right: '✓ 正确答案',

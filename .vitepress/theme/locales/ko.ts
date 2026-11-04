@@ -1,6 +1,7 @@
 // Korean screen text for the reader-facing components (the source language).
 // Every other locale file must have the same shape (type Ui).
 export const ko = {
+  translationNotice: '',
   quiz: {
     label: '확인 퀴즈',
     right: '✓ 정답',
