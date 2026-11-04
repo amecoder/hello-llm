@@ -10,18 +10,21 @@ import MyProgress from './components/MyProgress.vue'
 import ScrollProgress from './components/ScrollProgress.vue'
 import LevelTest from './components/LevelTest.vue'
 import YouTube from './components/YouTube.vue'
+import { trackPageViews } from './analytics'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
   // the scroll bar is fixed to the top edge, so it takes no room in the layout
   Layout: () => h(DefaultTheme.Layout, null, { 'layout-top': () => h(ScrollProgress) }),
-  enhanceApp({ app }) {
+  enhanceApp({ app, router }) {
+    trackPageViews(router)
     app.component('PromptBuilder', PromptBuilder)
     app.component('Quiz', Quiz)
     app.component('CertExam', CertExam)
     app.component('ChapterDone', ChapterDone)
     app.component('MyProgress', MyProgress)
     app.component('LevelTest', LevelTest)
-    app.component('YouTube', YouTube)  },
+    app.component('YouTube', YouTube)
+  },
 } satisfies Theme

@@ -73,6 +73,8 @@ export default defineConfig({
     'es/guide/30-ai-sdlc/README.md': 'es/guide/30-ai-sdlc/index.md',
   },
   lastUpdated: true,
+  // anonymous visit counts (no cookies); in-page moves are counted in theme/analytics.ts
+  head: [['script', { 'data-goatcounter': 'https://hello-ai.goatcounter.com/count', async: '', src: 'https://gc.zgo.at/count.js' }]],
   // Korean is the source at the site root; translations live under /<lang>/ (see theme/i18n.ts)
   locales: {
     root: { label: '한국어', lang: 'ko-KR' },
