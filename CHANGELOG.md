@@ -3,6 +3,7 @@
 ## [2026-11-04]
 
 ### Added
+- 번역판 AI 안내 485쪽, 대표 이미지 9장(`og:image` 582쪽, Article `image` 576쪽), 배포 때 바뀐 주소를 알리는 IndexNow(PR #79, `6f1497a`)
 - 검색 제목·이동 경로(PR #78, `cb27821`) — 서비스 가이드 장 제목 앞에 서비스 이름(`seoTitle`), 첫 화면·전체 목차 12쪽에 `title:`, BreadcrumbList 576쪽. 제목만 `hello-ai` 12쪽→0, 중복 제목 23쪽→0. 점검 리포트 `docs/reports/2026-11-04_SEO-GEO-점검.md`
 - 검색엔진 소유 확인 태그 — 구글 `google-site-verification`(PR #77, `ed08966`), 네이버 `naver-site-verification`은 호스트 단위 등록만 되어 `amecoder/amecoder.github.io` 첫 페이지에(그쪽 PR #2 `ea7dc85`), 같은 저장소에 사이트맵 위치를 알리는 `robots.txt`(그쪽 PR #1 `9e3a0a7`). 라이브 태그 0→1 확인
 - GoatCounter 익명 방문 통계(`hello-ai.goatcounter.com`) — 첫 페이지는 count.js, 화면 안 이동은 router 훅이 경로·직전 페이지·새 제목을 넘겨 집계(`theme/analytics.ts`). 진입 주소 3형태 모두 시나리오 집계 4/4, 앵커 이동·첫 페이지 중복 없음. 6개 언어 첫 화면 약속에 방문 통계 안내 추가 (PR #76, `e9d7f8a`)
