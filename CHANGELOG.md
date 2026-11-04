@@ -1,5 +1,10 @@
 # Changelog
 
+## [2026-11-04]
+
+### Added
+- GoatCounter 익명 방문 통계(`hello-ai.goatcounter.com`) — 첫 페이지는 count.js, 화면 안 이동은 router 훅이 경로·직전 페이지·새 제목을 넘겨 집계(`theme/analytics.ts`). 진입 주소 3형태 모두 시나리오 집계 4/4, 앵커 이동·첫 페이지 중복 없음. 6개 언어 첫 화면 약속에 방문 통계 안내 추가 (PR #76, `e9d7f8a`)
+
 ## [2026-11-03]
 
 ### Added
