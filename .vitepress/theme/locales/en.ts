@@ -3,6 +3,7 @@ import type { Ui } from './ko.ts'
 import type { Content } from './content.ts'
 
 export const en: Ui = {
+  translationNotice: 'This page was translated from the Korean original with AI and may contain errors.',
   quiz: {
     label: 'Quick check',
     right: '✓ Correct',

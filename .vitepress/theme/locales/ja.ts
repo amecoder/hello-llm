@@ -3,6 +3,7 @@ import type { Ui } from './ko.ts'
 import type { Content } from './content.ts'
 
 export const ja: Ui = {
+  translationNotice: 'このページは韓国語の原文をAIで翻訳したものです。誤りが含まれる場合があります。',
   quiz: {
     label: '理解度チェック',
     right: '✓ 正解',

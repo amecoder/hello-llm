@@ -126,6 +126,12 @@ export function seoTitle(relativePath: string, title: string): string {
   return service && title && !title.includes(service) ? `${service} ${title}` : title
 }
 
+/** Link card image: one per guide stage, without language-specific text (see scripts/make-og-images.py). */
+export function ogImage(relativePath: string): string {
+  const stage = splitLocale(relativePath).rest.match(/^guide\/([^/]+)\//)?.[1]
+  return `${SITE_URL}og/${stage ?? 'home'}.png`
+}
+
 /** Trail home > stage > page. Empty for a home page, which has nothing above it. */
 export function breadcrumbItems(
   relativePath: string,
@@ -164,6 +170,7 @@ export function seoHead(page: PageSeo): Head[] {
   const url = pageUrl(page.relativePath)
   const title = page.title || SITE_NAME
   const isHome = rest === 'index.md'
+  const image = ogImage(page.relativePath)
   const meta = (property: string, content: string): Head => ['meta', { property, content }]
 
   const site = { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL }
@@ -175,6 +182,7 @@ export function seoHead(page: PageSeo): Head[] {
         headline: title,
         description: page.description,
         url,
+        image,
         inLanguage: loc.hreflang,
         ...(page.lastUpdated ? { dateModified: new Date(page.lastUpdated).toISOString() } : {}),
         author: AUTHOR,
@@ -199,7 +207,10 @@ export function seoHead(page: PageSeo): Head[] {
     meta('og:description', page.description),
     meta('og:url', url),
     meta('og:locale', loc.og),
-    ['meta', { name: 'twitter:card', content: 'summary' }],
+    meta('og:image', image),
+    meta('og:image:width', '1200'),
+    meta('og:image:height', '675'),
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     jsonLd(ld),
     ...(crumbs.length ? [jsonLd(crumbLd)] : []),
   ]
