@@ -6,6 +6,7 @@
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
 
 ## Pending Tasks
+- [ ] **(2026-11-04) SEO·GEO 점검 후속** — 1순위 제목·3순위 BreadcrumbList 는 PR #78 `cb27821` 로 완료. 남은 것: 대표 이미지, IndexNow, 번역판 AI 안내(근거·우선순위 `docs/reports/2026-11-04_SEO-GEO-점검.md`). 자체 도메인은 사용자 결정 대기. 새 서비스 가이드를 추가하면 `.vitepress/seo.ts` 의 `SERVICES` 에도 넣는다
 - [ ] **(2026-11-03) SEO·GEO 후속 — 사용자 작업 필요** (SEO·GEO 본체는 PR #75 `2e2771f` 로 배포)
   1. **검색엔진 등록(구글·네이버·빙)** — 확인 태그는 배포 완료(구글 PR #77 `ed08966`, 네이버 `amecoder.github.io` PR #2 `ea7dc85`, 2026-11-04, 라이브 0→1 확인). **구글·네이버 소유 확인·사이트맵 제출은 사용자가 완료했다고 알림(2026-11-04, 콘솔 화면은 직접 보지 못함).** 태그는 확인 뒤에도 지우지 않는다. 검색 반영은 며칠~몇 주 뒤 — 그때 각 콘솔에서 색인 수와 사이트맵 처리 결과를 본다. 빙도 「Google Search Console에서 가져오기」로 사용자가 완료(2026-11-04)
      - **구글**: Search Console 「URL 접두어」 `https://amecoder.github.io/hello-llm/`(끝 `/` 포함, 「도메인」은 DNS 권한이 없어 불가) + HTML 태그 → **이 저장소** `config.mts` 루트 `head` 에 `google-site-verification`. 확인 뒤 Sitemaps 에 `sitemap.xml` 제출 (support.google.com/webmasters/answer/34592 · 9008080 · 7451001, 2026-11-04 확인)
