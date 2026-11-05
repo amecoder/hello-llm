@@ -92,6 +92,13 @@ Put the two answers side by side and compare them. Which one can you use right a
 - You can use it right away for work, paperwork, studying, or daily life.
 - Instead of expecting a perfect answer on the first try, refine it through follow-up conversation.
 
+## Glossary
+
+| Term | One-line meaning |
+|---|---|
+| Prompt | The request you send to AI |
+| E-commerce | Selling goods over the internet, as an online store does |
+
 <ChapterDone :chapter="3" />
 
 Next chapter: [Chapter 4. Prompt Basics](04-prompt-basics.md)

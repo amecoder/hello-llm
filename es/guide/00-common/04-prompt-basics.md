@@ -142,6 +142,15 @@ Después compáralo con el resultado de preguntar en una sola línea, sin huecos
 - Usa los cinco elementos (objetivo, contexto, destinatario, formato y condiciones) como lista de revisión.
 - No hace falta que salga perfecto a la primera. Sigue la conversación y ve corrigiendo.
 
+## Glosario
+
+| Término | En español | En una línea |
+|---|---|---|
+| Prompt | Prompt | El texto de petición que envías a la IA; todo lo que escribes en el chat |
+| Context | Contexto | En los cinco elementos, lo que explica la situación |
+| Format | Formato | La forma en que quieres recibir la respuesta |
+| Constraint | Condición | Lo que hay que cumplir y lo que hay que evitar |
+
 <ChapterDone :chapter="4" />
 
 Siguiente capítulo: [Capítulo 5. Patrones de prompt](05-prompt-patterns.md)

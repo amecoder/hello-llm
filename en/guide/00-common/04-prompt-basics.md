@@ -138,6 +138,15 @@ Then compare the result with what you get when you ask in a single line without 
 - Use the five elements—Goal, Context, Audience, Format, and Constraints—as a checklist.
 - It doesn't have to be perfect on the first try. Keep the conversation going and refine the answer.
 
+## Glossary
+
+| Term | One-line meaning |
+|---|---|
+| Prompt | The request you send to AI; everything you type into the chat box |
+| Context | In the five elements, what tells AI the situation |
+| Format | The shape you want the answer in |
+| Constraint | What must be followed or avoided |
+
 <ChapterDone :chapter="4" />
 
 Next chapter: [Chapter 5. Prompt Patterns](05-prompt-patterns.md)
