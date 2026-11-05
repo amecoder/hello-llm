@@ -103,6 +103,14 @@ Does the date match the footnote? Does the source it gave you actually exist? As
 - The core shift is that you can now tell a computer to do almost any text task using everyday language.
 - Keep in mind the ongoing debates around jobs, accuracy, copyright, and privacy.
 
+## Glossary
+
+| Term | One-line meaning |
+|---|---|
+| Transformer | A design that looks at how all the words in a sentence relate at once; most LLMs today are built on it |
+| Hallucination | When AI says something untrue in a way that sounds convincing |
+| arXiv | A public site where papers are posted before peer review |
+
 <ChapterDone :chapter="2" />
 
 Next chapter: [Chapter 3. Why Learn It?](03-why-learn.md)

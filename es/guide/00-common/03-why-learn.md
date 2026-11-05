@@ -92,6 +92,13 @@ Pon las dos respuestas una al lado de la otra y compáralas. ¿Cuál puedes usar
 - Se puede usar enseguida en el trabajo, en los papeles, en el estudio y en la vida diaria.
 - En lugar de esperar una respuesta perfecta a la primera, sigue la conversación y ve puliéndola.
 
+## Glosario
+
+| Término | En español | En una línea |
+|---|---|---|
+| Prompt | Prompt | El texto de petición que envías a la IA |
+| E-commerce | Comercio electrónico | Vender productos por internet, como una tienda en línea |
+
 <ChapterDone :chapter="3" />
 
 Siguiente capítulo: [Capítulo 4. Fundamentos del prompt](04-prompt-basics.md)

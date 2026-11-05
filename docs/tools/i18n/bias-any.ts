@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs'
-import { QUESTIONS } from '/Users/amecoder/study/hello-llm/.vitepress/theme/quiz-bank.ts'
-import { EXAM_QUESTIONS } from '/Users/amecoder/study/hello-llm/.vitepress/theme/exam-bank.ts'
-import { LEVEL_QUESTIONS } from '/Users/amecoder/study/hello-llm/.vitepress/theme/level-bank/index.ts'
+import { QUESTIONS } from '../../../.vitepress/theme/quiz-bank.ts'
+import { EXAM_QUESTIONS } from '../../../.vitepress/theme/exam-bank.ts'
+import { LEVEL_QUESTIONS } from '../../../.vitepress/theme/level-bank/index.ts'
 const all = [...QUESTIONS, ...EXAM_QUESTIONS, ...LEVEL_QUESTIONS]
 for (const f of process.argv.slice(2)) {
   const tr: { id: string; choices: string[] }[] = JSON.parse(readFileSync(f, 'utf8'))

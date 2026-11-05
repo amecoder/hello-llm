@@ -103,6 +103,14 @@ Hazte estas preguntas: ¿la fecha coincide con la nota al pie? ¿La fuente que m
 - El cambio clave es que «con tus palabras de siempre puedes encargarle a la computadora casi cualquier tarea con textos».
 - Conviene conocer también las polémicas: empleo, exactitud, derechos de autor y datos personales.
 
+## Glosario
+
+| Término | En español | En una línea |
+|---|---|---|
+| Transformer | Transformer | Estructura que examina a la vez cómo se relacionan las palabras de una frase; es la base de casi todos los LLM actuales |
+| Hallucination | Alucinación | Cuando la IA dice algo falso de forma convincente |
+| arXiv | arXiv | Sitio público donde se publican artículos antes de su revisión |
+
 <ChapterDone :chapter="2" />
 
 Siguiente capítulo: [Capítulo 3. Por qué conviene aprender](03-why-learn.md)
