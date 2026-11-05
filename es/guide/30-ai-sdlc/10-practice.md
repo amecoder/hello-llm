@@ -22,6 +22,8 @@ Si has seguido el «Pruébalo tú mismo» de los capítulos anteriores, este eje
 
 Fuente: resumen de esta guía
 
+Si quieres ver cómo queda terminado, mira la [página de ejemplo](https://amecoder.github.io/cafe-todo-board/) y el [repositorio](https://github.com/amecoder/cafe-todo-board) creados siguiendo esta tarea. No pasa nada si el tuyo se ve distinto.
+
 <Quiz id="ch710-loop" />
 
 ## Ejercicio 2: desde cero con mi propio problema

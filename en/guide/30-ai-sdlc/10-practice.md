@@ -22,6 +22,8 @@ If you followed the "Try It Yourself" sections in the earlier chapters, you have
 
 Source: Summary from this guide
 
+Want to see a finished version? Look at the [example page](https://amecoder.github.io/cafe-todo-board/) and [repository](https://github.com/amecoder/cafe-todo-board) built by following this assignment. It is fine if yours looks different.
+
 <Quiz id="ch710-loop" />
 
 ## Exercise 2 — From Scratch with Your Own Problem

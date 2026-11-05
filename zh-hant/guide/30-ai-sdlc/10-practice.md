@@ -22,6 +22,8 @@
 
 來源：本指南的整理
 
+想看完成後的樣子，可以看實際按這個作業做出來的[示例頁面](https://amecoder.github.io/cafe-todo-board/)和[倉庫](https://github.com/amecoder/cafe-todo-board)。你的結果和它長得不一樣也沒關係。
+
 <Quiz id="ch710-loop" />
 
 ## 任務 2——用我自己的問題從頭做起

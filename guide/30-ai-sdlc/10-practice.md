@@ -22,6 +22,8 @@
 
 출처: 이 가이드의 정리
 
+완성한 모습이 궁금하면 이 과제를 실제로 따라 만든 [예시 페이지](https://amecoder.github.io/cafe-todo-board/)와 [저장소](https://github.com/amecoder/cafe-todo-board)를 보세요. 내 결과와 모양이 달라도 괜찮습니다.
+
 <Quiz id="ch710-loop" />
 
 ## 과제 2 — 내 문제로 처음부터
