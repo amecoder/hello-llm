@@ -3,14 +3,16 @@
 ## [2026-11-05]
 
 ### Added
+- 4단계 10장에 할 일 보드 완성 예시 연결, PR마다 브라우저 테스트 실행(PR #81, `e10b64d`), `cafe-todo-board` MIT 라이선스(PR #4, `71b195a`)
 - 탭 아이콘, 공통 가이드 2~4장 용어 정리 표, 프롬프트 모음 Gemini 프롬프트 6개, 컴포넌트 브라우저 테스트 6개(PR #80, `003afea`)
 - 4단계 실습 결과물 `amecoder/cafe-todo-board`(PR #1 `3df5bcb`, 이슈 #2, PR #3 `1efb88c`) — https://amecoder.github.io/cafe-todo-board/
 
 ### Fixed
+- 번체의 `物件` 오변환 32곳을 `對象`으로 복구, 다시 생성해도 유지되게 `make-hant.py` 수정(PR #81)
 - 번역 도구의 Mac 절대 경로와 BSD 전용 `sed -i ''` 제거(PR #80)
 
 ### Removed
-- 머지가 끝난 원격 브랜치 18개
+- 머지가 끝난 원격 브랜치 31개
 
 ## [2026-11-04]
 

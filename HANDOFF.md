@@ -6,6 +6,7 @@
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
 
 ## Pending Tasks
+- [x] **(2026-11-05) 사용자 결정 반영** — PR #81 `e10b64d`: 번체 `物件`→`對象` 32곳(`make-hant.py` 규칙 포함), 10장에 할 일 보드 예시 연결, PR 브라우저 테스트(`e2e.yml`). `cafe-todo-board` MIT(PR #4 `71b195a`). 남은 원격 브랜치 13개 삭제(`docs/beginner-review-fixes` 는 내용이 main `cb966ce` 에 있음을 확인)
 - [x] **(2026-11-05) HANDOFF 후속 묶음** — PR #80 `003afea`: 탭 아이콘, 2~4장 용어 표, 프롬프트 모음 Gemini 6개, 브라우저 테스트 6개(`npm run test:e2e`), 번역 도구 경로. 원격 브랜치 18개 삭제, `cafe-todo-board` 공개. 새 서비스의 프롬프트를 모음에 넣을 때는 `tests/prompt-library.test.ts` 의 폴더 목록과 `linkRe` 도 고친다
 - [ ] **(2026-11-05) 후속 제안** — ① 이번 리뷰는 Codex·agy 한도로 Claude 별도 세션이 맡았다. 한도가 풀리면 외부 모델 재검토 권장 ② AI-SDLC 5·6장 각주의 영어 인용 안에 공식 문서의 절 링크 4개(`#see-session-details` 등)가 그대로 있어 6개 언어에서 눌러도 이동하지 않는다. 링크 표시만 지우면 된다 ③ 연습 자료의 요일은 일부러 지어낸 것(3단계 2장에 안내)이라 고치지 않는다. `cafe-todo-board` 만 달력에 맞췄다 ④ 이 저장소 커밋 메일은 2026-11-05부터 GitHub noreply(저장소 설정). 다른 머신에서는 다시 설정한다. 과거 기록은 그대로 둔다(사용자 결정)
 - [x] **(2026-11-04) SEO·GEO 점검 후속** — 제목·BreadcrumbList(PR #78 `cb27821`), AI 안내·대표 이미지·IndexNow(PR #79 `6f1497a`), 키 파일(`amecoder.github.io` PR #3 `1406153`) 완료, 582쪽 첫 전송 HTTP 200. 자체 도메인은 **트래픽을 보고 나중에 판단**(2026-11-05 사용자 결정, 지금은 github.io 유지). 키 파일을 지우면 전송이 실패한다(배포는 영향 없음). 새 서비스 가이드를 추가하면 `.vitepress/seo.ts` 의 `SERVICES` 와 `scripts/make-og-images.py` 에도 넣는다
@@ -25,7 +26,7 @@
   3. **번역 유지보수 규칙**: 한국어 본문을 고치면 en·ja·zh-hans·es 도 같이 고치고, 번체는 간체를 고친 뒤 `make-hant.py` 로 다시 만든다(번체만 고치면 다음 변환 때 덮인다). `tests/i18n.test.ts` 는 페이지 짝·컴포넌트 순서·퀴즈 수·길이 편향만 검사하고 문장 뜻은 못 본다. 프롬프트를 고치면 `sync-library.py` 로 번역판 프롬프트 모음을 다시 맞춘다
   4. ~~리눅스에서 번역 도구 쓰기~~ **완료**(2026-11-05) — `docs/tools/i18n/` 은 경로를 고치지 않고 Mac·리눅스에서 바로 돈다. `trl.sh` 결과 폴더는 `I=` 로 바꾼다. 번역 중간 산출물(퀴즈 JSON `<묶음>-<언어>.json` 등)은 Mac scratchpad 에만 있었다 — 퀴즈를 다시 고칠 때는 `translations/<언어>/*.ts` 를 직접 고치되, 재생성(`gen-lang.py`)하면 덮이니 섞어 쓰지 않는다. 번체 변환은 `uvx --from opencc==1.1.9 python docs/tools/i18n/make-hant.py <저장소> <JSON 폴더>`
   5. **리눅스 환경 메모**: `ego-browser`·`aside` 없음 → 웹 조작은 `playwright` MCP, 검색은 `agy`(사용 한도 ≈ 2026-11-08 초기화). `gh`·`git push` 는 단독 명령으로. 미리보기 포트 5180(`npm run docs:dev -- --port 5180 --strictPort`)
-  6. ~~원격 브랜치 정리~~ **완료**(2026-11-05) — 목록의 18개를 PR 머지 때 커밋과 대조해 삭제. 목록 밖 13개는 그대로 남겼다(`docs/gemini-ch3~7`·`docs/claude-code-*` 3개·`feat/*` 3개·`docs/i18n-polish` 는 머지 커밋과 같고, `docs/beginner-review-fixes` 는 PR #14 머지 뒤 커밋이 달라 내용 확인 필요)
+  6. ~~원격 브랜치 정리~~ **완료**(2026-11-05) — 머지 기록과 대조해 31개 삭제
   7. 그 밖에 이전부터 남은 것: Antigravity 앱 화면 캡처(한도가 풀린 뒤 사용자와 진행). `cafe-todo-board`·프롬프트 모음 Gemini 추가는 2026-11-05 완료
 - [ ] **(다음 세션 시작점, 2026-10-29~) 사용자가 문서 전체를 직접 검토 중** — 사용자가 고칠 곳을 하나씩 알려 줄 때까지 기다린다. 받으면 새 feature 브랜치 → 수정 → Gemini 검토(`agy --model gemini-4-argon-high`) → PR → 사용자 확인 → 머지 → HANDOFF·CHANGELOG. 아래 「화면 변화 반영」은 검토 범위와 겹치므로 검토 지적과 함께 처리하는 것을 추천했다(아직 승인 전)
   - 1차 반영 완료(2026-10-30, PR #44): 1장 학습·도구 호출, 영상 임베드, 붉은 진행 막대, 시험 문구. 이 PR은 메모리 부족(자원 보호 훅)으로 Gemini 검토 없이 사용자 요청으로 머지했다
