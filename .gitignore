@@ -37,3 +37,7 @@ node_modules/
 # Python bytecode (docs/tools scripts)
 __pycache__/
 indexnow-urls.json
+
+# Playwright end-to-end run output
+test-results/
+playwright-report/
