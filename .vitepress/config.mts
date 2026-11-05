@@ -76,6 +76,7 @@ export default defineConfig({
   lastUpdated: true,
   // anonymous visit counts (no cookies); in-page moves are counted in theme/analytics.ts
   head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/hello-llm/favicon.svg' }],
     ['script', { 'data-goatcounter': 'https://hello-ai.goatcounter.com/count', async: '', src: 'https://gc.zgo.at/count.js' }],
     // Search Console ownership check; keep it after verifying, Google re-checks periodically
     ['meta', { name: 'google-site-verification', content: 'PkdDqza0Dp9r0jrm_DPRcpwTYfsn-82DHlWuN6cbFes' }],
