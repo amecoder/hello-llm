@@ -6,6 +6,7 @@
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
 
 ## Pending Tasks
+- **다음 세션 시작점(2026-11-05 세션 종료)** — 바로 아래 ① Claude Code 터미널 가이드부터. 우선순위 기록은 PR #82 `f7e5f8d`. 외부 모델 재검토(PR #80·#81)는 아직 안 함
 - [ ] **(2026-11-05 사용자 지시, 다음 가이드 우선순위) ① Claude Code 터미널 가이드 → ② NotebookLM 가이드(아래 항목) → ③ Codex 가이드** — 지금 3단계는 앱 중심이고 터미널은 `guide/20-claude-code/10-terminal.md`·`guide/21-codex/07-terminal.md` 한 장씩뿐이다. 착수 때 정할 것: 새 폴더 번호(단계 규칙상 같은 단계의 다음 번호)와 기존 장과의 관계, Codex 도 터미널판인지(가정: 터미널판, 사용자 확인 필요), 번역 범위(6개 언어 동시인지 한국어 먼저인지). 공식 문서를 새로 확인하고 `docs/reports/` 리포트부터 만든다
 - [ ] **(2026-11-05 사용자 지시) NotebookLM 사용 가이드** — 우선순위 2번째(Claude Code 터미널 다음, Codex 앞 · 사용자 결정). 착수 때 정할 것: 폴더 번호(웹 서비스이므로 2단계의 다음 번호 `13-notebooklm` 후보), Gemini 가이드와의 관계, 캡처용 계정. 공식 도움말을 확인해 `docs/reports/` 리포트부터 만든다
 - [x] **(2026-11-05) 사용자 결정 반영** — PR #81 `e10b64d`: 번체 `物件`→`對象` 32곳(`make-hant.py` 규칙 포함), 10장에 할 일 보드 예시 연결, PR 브라우저 테스트(`e2e.yml`). `cafe-todo-board` MIT(PR #4 `71b195a`). 남은 원격 브랜치 13개 삭제(`docs/beginner-review-fixes` 는 내용이 main `cb966ce` 에 있음을 확인)

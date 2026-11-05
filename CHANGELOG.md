@@ -3,6 +3,7 @@
 ## [2026-11-05]
 
 ### Added
+- 다음 가이드 우선순위 기록: Claude Code 터미널 → NotebookLM → Codex(PR #82, `f7e5f8d`)
 - 4단계 10장에 할 일 보드 완성 예시 연결, PR마다 브라우저 테스트 실행(PR #81, `e10b64d`), `cafe-todo-board` MIT 라이선스(PR #4, `71b195a`)
 - 탭 아이콘, 공통 가이드 2~4장 용어 정리 표, 프롬프트 모음 Gemini 프롬프트 6개, 컴포넌트 브라우저 테스트 6개(PR #80, `003afea`)
 - 4단계 실습 결과물 `amecoder/cafe-todo-board`(PR #1 `3df5bcb`, 이슈 #2, PR #3 `1efb88c`) — https://amecoder.github.io/cafe-todo-board/
