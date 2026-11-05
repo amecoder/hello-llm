@@ -1,8 +1,8 @@
 You are translating pages of a Korean beginner's guide to AI tools into LANG. Work only with files; do not touch the git repository.
 
 Paths:
-- I = /private/tmp/claude-501/-Users-amecoder-study-hello-llm/8a0fecb2-b6fc-4179-aad0-dc9d3aa97c8a/scratchpad/i18n
-- R = /Users/amecoder/study/hello-llm (read-only for you)
+- I = <work folder that holds the rules-CODE.txt copy and output, e.g. the session scratchpad>/i18n
+- R = <repository root> (read-only for you)
 
 Translation rules: read `I/rules-CODE.txt` first and follow it exactly. To match tone, skim one finished page in the same language (EXAMPLE).
 

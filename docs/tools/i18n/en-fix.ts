@@ -5,7 +5,7 @@
 // Usage: node en-fix.ts <repo> <translated-dir-prefix...>   e.g. guide/00-common
 import { readFileSync, writeFileSync, existsSync, readdirSync, statSync } from 'node:fs'
 import { dirname, join, normalize, relative } from 'node:path'
-import { slugify } from '/Users/amecoder/study/hello-llm/.vitepress/slugify.ts'
+import { slugify } from '../../../.vitepress/slugify.ts'
 
 const repo = process.argv[2]
 const lang = process.argv[3] ?? 'en'
