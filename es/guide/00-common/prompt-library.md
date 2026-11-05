@@ -1,6 +1,6 @@
 # Prompts listos para usar
 
-> **En una línea**: aquí tienes reunidos, por usos, los ejemplos de prompts de las guías de la etapa 1 y de ChatGPT y Claude de la etapa 2. Cópialos, cambia solo los huecos `[ ]` por tu situación y ya puedes usarlos.
+> **En una línea**: aquí tienes reunidos, por usos, los ejemplos de prompts de las guías de la etapa 1 y de ChatGPT, Claude y Gemini de la etapa 2. Cópialos, cambia solo los huecos `[ ]` por tu situación y ya puedes usarlos.
 
 ## Cómo usarlos
 
@@ -656,6 +656,78 @@ Deja los números y las tablas como están y escribe el título en 15 caracteres
 ```
 
 → Explicación: [capítulo 11, «Usarlo dentro de Word y PowerPoint»](../11-chatgpt/11-expert.md#usarlo-dentro-de-word-y-powerpoint)
+
+## Encargar trabajos en Gemini
+
+Son prompts de la guía de Gemini de la etapa 2. Los apartados que usan funciones de Gemini (Deep Research, skills, programaciones) pueden no funcionar igual en otras IA.
+
+### Buscar datos personales antes de compartir
+
+Antes de enviar una conversación con un enlace, pide que busque primero la información que otros no deberían ver.
+
+```
+Voy a compartir esta conversación con otra persona. Busca si en la conversación hasta ahora hay información que
+pueda resultar incómoda si la ve otra persona, como nombres, números de teléfono, direcciones o nombres de empresas, y dame una lista.
+```
+
+→ Explicación: [Gemini capítulo 3, «Eliminar un enlace compartido»](../12-gemini/03-chats.md#eliminar-un-enlace-compartido)
+
+### Investigar a fondo con estadísticas oficiales (Deep Research)
+
+Indica a la vez el tema, las fuentes fiables y la forma de la respuesta. Abre las fuentes y comprueba tú las cifras.
+
+```
+Investiga cómo ha cambiado en los últimos 10 años el índice anual de lectura de los adultos de Corea.
+Usa en primer lugar las estadísticas oficiales (como la Encuesta Nacional de Hábitos de Lectura del Ministerio de Cultura, Deportes y Turismo),
+pon las cifras de cada año en una tabla y añade la fuente a cada cifra.
+```
+
+→ Explicación: [Gemini capítulo 6, «Qué debes saber»](../12-gemini/06-search.md#que-debes-saber)
+
+### Crear un cuestionario con lo que estudias
+
+Cambia el tema y el número de preguntas según lo que estés estudiando.
+
+```
+Hazme un cuestionario. El tema es el Silhak de la segunda mitad de Joseon, con 10 preguntas de opción múltiple.
+```
+
+→ Explicación: [Gemini capítulo 6, «Ayuda para estudiar: aprendizaje guiado, cuestionarios y tarjetas de estudio»](../12-gemini/06-search.md#ayuda-para-estudiar-aprendizaje-guiado-cuestionarios-y-tarjetas-de-estudio)
+
+### Fijar reglas para las actas (skill)
+
+Si lo pones en las instrucciones de una skill, las actas se ordenarán siempre igual. Incluye una línea que pide no inventar nada.
+
+```
+Cuando recibas un acta, organízala en este orden.
+1. Lo que se decidió (una línea por cada cosa)
+2. Tareas (tarea - responsable - fecha límite)
+3. Lo que hay que volver a ver en la próxima reunión
+Si el acta no dice quién es el responsable o cuál es la fecha límite, no te lo inventes: escribe "por confirmar".
+```
+
+→ Explicación: [Gemini capítulo 7, «Escribir el nombre, la descripción y las instrucciones»](../12-gemini/07-skills-apps.md#escribir-el-nombre-la-descripcion-y-las-instrucciones)
+
+### Recibirlo cada día a la misma hora (programación)
+
+Escribe en una frase la hora y lo que quieres recibir. Cuando ya no lo necesites, bórralo en «Programadas», en el menú lateral.
+
+```
+Cada mañana a las 7 resúmeme el tiempo de hoy y tres noticias que convenga saber de camino al trabajo.
+```
+
+→ Explicación: [Gemini capítulo 8, «Programar desde el chat»](../12-gemini/08-tasks.md#programar-desde-el-chat)
+
+### Obtener totales y un gráfico de una tabla
+
+Si pides también el método de cálculo, será más fácil comprobar el resultado.
+
+```
+La tabla adjunta es el registro de ventas por artículo de una tienda del barrio durante los últimos tres meses. Hazme una tabla con el total por artículo, de mayor a menor, y dibuja un gráfico de barras.
+Escribe también, línea por línea, el método que usaste para calcular.
+```
+
+→ Explicación: [Gemini capítulo 12, «Encargar tablas y números»](../12-gemini/12-expert.md#encargar-tablas-y-numeros)
 
 ## Usarla como un experto
 

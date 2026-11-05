@@ -7,14 +7,15 @@ import { slugify } from '../.vitepress/slugify.ts'
 const GUIDE = join(import.meta.dirname, '..', 'guide', '00-common')
 const LIBRARY = readFileSync(join(GUIDE, 'prompt-library.md'), 'utf8')
 
-// the library may also collect prompts from the 2단계 ChatGPT and Claude guides (linked as ../11-chatgpt/NN-x.md, ../10-claude/NN-x.md)
+// the library may also collect prompts from the 2단계 ChatGPT, Claude and Gemini guides (linked as ../11-chatgpt/NN-x.md, ../10-claude/NN-x.md, ../12-gemini/NN-x.md)
 const CHATGPT = join(import.meta.dirname, '..', 'guide', '11-chatgpt')
 const CLAUDE = join(import.meta.dirname, '..', 'guide', '10-claude')
-const chapterPaths = [GUIDE, CHATGPT, CLAUDE].flatMap((dir) =>
+const GEMINI = join(import.meta.dirname, '..', 'guide', '12-gemini')
+const chapterPaths = [GUIDE, CHATGPT, CLAUDE, GEMINI].flatMap((dir) =>
   readdirSync(dir).filter((f) => /^\d\d-.+\.md$/.test(f)).map((f) => join(dir, f)),
 )
 const chapterCode = new Set(chapterPaths.flatMap((p) => codeBlocks(readFileSync(p, 'utf8'))))
-const linkRe = /\]\(((?:\.\.\/1[01]-[a-z]+\/)?\d\d-[a-z-]+\.md)#([^)]+)\)/
+const linkRe = /\]\(((?:\.\.\/1[012]-[a-z]+\/)?\d\d-[a-z-]+\.md)#([^)]+)\)/
 
 // contents of every fenced code block, in file order
 function codeBlocks(md: string): string[] {
@@ -87,6 +88,11 @@ test('every prompt points back to the chapter that explains it', () => {
   const entries = LIBRARY.split(/^### /m).slice(1)
   assert.ok(entries.length >= 25)
   for (const entry of entries) {
-    assert.match(entry, /\]\((?:\.\.\/1[01]-[a-z]+\/)?\d\d-[a-z-]+\.md(#[^)]+)?\)/, `no chapter link: ${entry.split('\n')[0]}`)
+    assert.match(entry, /\]\((?:\.\.\/1[012]-[a-z]+\/)?\d\d-[a-z-]+\.md(#[^)]+)?\)/, `no chapter link: ${entry.split('\n')[0]}`)
   }
+})
+
+test('the library collects prompts from the Gemini guide', () => {
+  const entries = LIBRARY.split(/^### /m).slice(1).filter((e) => e.match(linkRe)?.[1].startsWith('../12-gemini/'))
+  assert.ok(entries.length >= 5, `only ${entries.length} Gemini entries`)
 })

@@ -1,6 +1,6 @@
 # Ready-to-Use Prompts
 
-> **In One Line**: This page collects the example prompts from the Stage 1 and Stage 2 ChatGPT and Claude guides, organized by use case. Just copy a prompt and replace the `[ ]` blanks with your own details.
+> **In One Line**: This page collects the example prompts from the Stage 1 and Stage 2 ChatGPT, Claude, and Gemini guides, organized by use case. Just copy a prompt and replace the `[ ]` blanks with your own details.
 
 ## How to Use
 
@@ -651,6 +651,78 @@ Keep the numbers and tables as they are, and keep the title under 15 words.
 ```
 
 → Explanation: [Chapter 11 "Using It Inside Word and PowerPoint"](/en/guide/11-chatgpt/11-expert.md#using-it-inside-word-and-powerpoint)
+
+## Delegating Work in Gemini
+
+These prompts come from the Stage 2 Gemini guide. Items that use Gemini features (Deep Research, skills, schedules) may not work the same way in other AI tools.
+
+### Finding Personal Details Before Sharing
+
+Before you send a chat as a share link, ask Gemini to look for anything others should not see.
+
+```
+I want to share this chat with someone else. Please check our conversation so far and list any
+sensitive information—like names, phone numbers, addresses, or company names—that I shouldn't show to others.
+```
+
+→ Explanation: [Gemini Chapter 3 "Deleting a Shared Link"](../12-gemini/03-chats.md#deleting-a-shared-link)
+
+### Researching in Depth with Official Statistics (Deep Research)
+
+Give the topic, the sources to trust, and the shape of the answer together. Open the sources and check the numbers yourself.
+
+```
+Research how the annual reading rate of Korean adults has changed over the past 10 years.
+Prioritize official statistics (such as the National Reading Survey by the Ministry of Culture, Sports and Tourism),
+put the yearly figures in a table, and attach a source to every figure.
+```
+
+→ Explanation: [Gemini Chapter 6 "Good to Know"](../12-gemini/06-search.md#good-to-know)
+
+### Making a Quiz from What You Study
+
+Change the topic and the number of questions to fit what you are studying.
+
+```
+Create a quiz for me. The topic is Silhak in the late Joseon Dynasty, with 10 multiple-choice questions.
+```
+
+→ Explanation: [Gemini Chapter 6 "Study Helpers — Guided Learning, Quizzes, and Flashcards"](../12-gemini/06-search.md#study-helpers-—-guided-learning-quizzes-and-flashcards)
+
+### Setting Rules for Meeting Notes (Skill)
+
+Put this in a skill's instructions and meeting notes get organized in the same order every time. It includes a line telling Gemini not to make things up.
+
+```
+When you receive meeting notes, organize them in the order below.
+1. Decisions made (one line each)
+2. Action items (task - owner - due date)
+3. Items to revisit at the next meeting
+If an owner or due date is missing from the meeting notes, do not make it up. Write "Needs confirmation."
+```
+
+→ Explanation: [Gemini Chapter 7 "Write the Name, Description, and Instructions"](../12-gemini/07-skills-apps.md#write-the-name-description-and-instructions)
+
+### Getting It at the Same Time Every Day (Schedule)
+
+State the time and what you want in one sentence. When you no longer need it, delete it under Scheduled in the side menu.
+
+```
+Every morning at 7 AM, summarize today's weather and three news stories to know for my commute.
+```
+
+→ Explanation: [Gemini Chapter 8 "Setting a Schedule in Chat"](../12-gemini/08-tasks.md#setting-a-schedule-in-chat)
+
+### Getting Totals and a Chart from a Table
+
+Asking for the method it used makes the result easier to check.
+
+```
+The attached table is the past three months of item sales records for a neighborhood shop. Make a table of totals by item from largest to smallest, and draw a bar chart.
+Also write down the method you used for the calculation, one line at a time.
+```
+
+→ Explanation: [Gemini Chapter 12 "Handing Off Tables and Numbers"](../12-gemini/12-expert.md#handing-off-tables-and-numbers)
 
 ## Using AI Like an Expert
 
