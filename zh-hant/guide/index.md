@@ -28,7 +28,7 @@ features:
     link: /zh-hant/guide/00-common/03-why-learn
     linkText: 閱讀
   - title: 第4章. 提示詞基礎
-    details: 得到好回答的請求文字的 5 個要素——目標、背景、物件、格式、條件
+    details: 得到好回答的請求文字的 5 個要素——目標、背景、對象、格式、條件
     link: /zh-hant/guide/00-common/04-prompt-basics
     linkText: 閱讀
   - title: 第5章. 提示詞模式
