@@ -6,6 +6,7 @@
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
 
 ## Pending Tasks
+- [x] **(2026-11-05) HANDOFF 후속 묶음** — PR #80 `003afea`: 탭 아이콘, 2~4장 용어 표, 프롬프트 모음 Gemini 6개, 브라우저 테스트 6개(`npm run test:e2e`), 번역 도구 경로. 원격 브랜치 18개 삭제, `cafe-todo-board` 공개. 새 서비스의 프롬프트를 모음에 넣을 때는 `tests/prompt-library.test.ts` 의 폴더 목록과 `linkRe` 도 고친다
 - [ ] **(2026-11-05) 후속 제안** — ① 번체 `物件` 12개 파일: OpenCC 가 `对象`(대화 상대·독자)을 프로그래밍 뜻으로 잘못 변환. `make-hant.py` 에서 고쳐야 재생성 때 유지된다(이 사이트에 진짜 object 뜻이 있는지 먼저 확인) ② `npm run test:e2e` 는 아직 수동 실행 — PR 때 자동으로 돌릴지 결정 ③ `cafe-todo-board` 를 가이드 4단계 10장에 완성 예시로 링크할지 결정(6개 언어 수정) ④ `cafe-todo-board` 라이선스 없음(9장 「정할지 생각해 본다」) ⑤ 공개 저장소 커밋 기록에 이름·이메일이 있다(회사 메일 포함, 기존부터). 앞으로 가리려면 GitHub noreply 메일로 바꾼다 ⑥ 가이드 연습 자료의 `10/27(월)` 등은 2026년 달력과 요일이 다르다(`cafe-todo-board` 는 달력에 맞춤) ⑦ 이번 리뷰는 Codex·agy 한도로 Claude 별도 세션이 맡았다. 한도가 풀리면 외부 모델 재검토 권장
 - [x] **(2026-11-04) SEO·GEO 점검 후속** — 제목·BreadcrumbList(PR #78 `cb27821`), AI 안내·대표 이미지·IndexNow(PR #79 `6f1497a`), 키 파일(`amecoder.github.io` PR #3 `1406153`) 완료, 582쪽 첫 전송 HTTP 200. 자체 도메인은 **트래픽을 보고 나중에 판단**(2026-11-05 사용자 결정, 지금은 github.io 유지). 키 파일을 지우면 전송이 실패한다(배포는 영향 없음). 새 서비스 가이드를 추가하면 `.vitepress/seo.ts` 의 `SERVICES` 와 `scripts/make-og-images.py` 에도 넣는다
 - [x] **(2026-11-03) SEO·GEO 후속 — 사용자 작업 필요** (SEO·GEO 본체는 PR #75 `2e2771f` 로 배포) — GoatCounter 내 방문 제외는 일단 그대로 둔다(2026-11-05 사용자 결정)

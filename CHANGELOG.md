@@ -1,5 +1,17 @@
 # Changelog
 
+## [2026-11-05]
+
+### Added
+- 탭 아이콘, 공통 가이드 2~4장 용어 정리 표, 프롬프트 모음 Gemini 프롬프트 6개, 컴포넌트 브라우저 테스트 6개(PR #80, `003afea`)
+- 4단계 실습 결과물 `amecoder/cafe-todo-board`(PR #1 `3df5bcb`, 이슈 #2, PR #3 `1efb88c`) — https://amecoder.github.io/cafe-todo-board/
+
+### Fixed
+- 번역 도구의 Mac 절대 경로와 BSD 전용 `sed -i ''` 제거(PR #80)
+
+### Removed
+- 머지가 끝난 원격 브랜치 18개
+
 ## [2026-11-04]
 
 ### Added
