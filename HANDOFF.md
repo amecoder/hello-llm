@@ -6,6 +6,8 @@
 - 사이트: https://amecoder.github.io/hello-llm/ (VitePress, `main` 푸시마다 자동 배포)
 
 ## Pending Tasks
+- [ ] **(2026-11-05 사용자 지시, 다음 가이드 우선순위) ① Claude Code 터미널 가이드 → ② NotebookLM 가이드(아래 항목) → ③ Codex 가이드** — 지금 3단계는 앱 중심이고 터미널은 `guide/20-claude-code/10-terminal.md`·`guide/21-codex/07-terminal.md` 한 장씩뿐이다. 착수 때 정할 것: 새 폴더 번호(단계 규칙상 같은 단계의 다음 번호)와 기존 장과의 관계, Codex 도 터미널판인지(가정: 터미널판, 사용자 확인 필요), 번역 범위(6개 언어 동시인지 한국어 먼저인지). 공식 문서를 새로 확인하고 `docs/reports/` 리포트부터 만든다
+- [ ] **(2026-11-05 사용자 지시) NotebookLM 사용 가이드** — 우선순위 2번째(Claude Code 터미널 다음, Codex 앞 · 사용자 결정). 착수 때 정할 것: 폴더 번호(웹 서비스이므로 2단계의 다음 번호 `13-notebooklm` 후보), Gemini 가이드와의 관계, 캡처용 계정. 공식 도움말을 확인해 `docs/reports/` 리포트부터 만든다
 - [x] **(2026-11-05) 사용자 결정 반영** — PR #81 `e10b64d`: 번체 `物件`→`對象` 32곳(`make-hant.py` 규칙 포함), 10장에 할 일 보드 예시 연결, PR 브라우저 테스트(`e2e.yml`). `cafe-todo-board` MIT(PR #4 `71b195a`). 남은 원격 브랜치 13개 삭제(`docs/beginner-review-fixes` 는 내용이 main `cb966ce` 에 있음을 확인)
 - [x] **(2026-11-05) HANDOFF 후속 묶음** — PR #80 `003afea`: 탭 아이콘, 2~4장 용어 표, 프롬프트 모음 Gemini 6개, 브라우저 테스트 6개(`npm run test:e2e`), 번역 도구 경로. 원격 브랜치 18개 삭제, `cafe-todo-board` 공개. 새 서비스의 프롬프트를 모음에 넣을 때는 `tests/prompt-library.test.ts` 의 폴더 목록과 `linkRe` 도 고친다
 - [ ] **(2026-11-05) 후속 제안** — ① 이번 리뷰는 Codex·agy 한도로 Claude 별도 세션이 맡았다. 한도가 풀리면 외부 모델 재검토 권장 ② AI-SDLC 5·6장 각주의 영어 인용 안에 공식 문서의 절 링크 4개(`#see-session-details` 등)가 그대로 있어 6개 언어에서 눌러도 이동하지 않는다. 링크 표시만 지우면 된다 ③ 연습 자료의 요일은 일부러 지어낸 것(3단계 2장에 안내)이라 고치지 않는다. `cafe-todo-board` 만 달력에 맞췄다 ④ 이 저장소 커밋 메일은 2026-11-05부터 GitHub noreply(저장소 설정). 다른 머신에서는 다시 설정한다. 과거 기록은 그대로 둔다(사용자 결정)
