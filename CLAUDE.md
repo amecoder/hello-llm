@@ -73,4 +73,4 @@ assets/                # README 그림 (.excalidraw 원본 + .svg)
 - `npm run docs:dev` — 로컬 미리보기 (http://localhost:5173/hello-llm/)
 - `npm run docs:build` — 배포와 같은 빌드. 죽은 링크가 있으면 실패하므로 PR 전에 실행
 - `npm test` — 컴포넌트 로직 단위 테스트
-- `npm run test:e2e` — 실제 브라우저로 컴포넌트를 검사(Playwright, 빌드까지 함께 돈다. 브라우저가 없으면 `npx playwright install chromium`)
+- `npm run test:e2e` — 실제 브라우저로 컴포넌트를 검사(Playwright, 빌드까지 함께 돈다. 브라우저가 없으면 `npx playwright install chromium`). PR 마다 `.github/workflows/e2e.yml` 이 자동으로 돌린다

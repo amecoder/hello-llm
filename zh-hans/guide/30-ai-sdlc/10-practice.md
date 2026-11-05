@@ -22,6 +22,8 @@
 
 来源：本指南的整理
 
+想看完成后的样子，可以看实际按这个作业做出来的[示例页面](https://amecoder.github.io/cafe-todo-board/)和[仓库](https://github.com/amecoder/cafe-todo-board)。你的结果和它长得不一样也没关系。
+
 <Quiz id="ch710-loop" />
 
 ## 任务 2——用我自己的问题从头做起

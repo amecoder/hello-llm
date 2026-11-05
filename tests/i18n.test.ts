@@ -138,3 +138,9 @@ for (const lang of langs) {
     for (const [n, title] of Object.entries(t.chapters)) assert.equal(chapterTitleOf(Number(n), lang), title)
   })
 }
+
+test('Traditional Chinese keeps 對象: OpenCC turns every 对象 into the programming word 物件', () => {
+  const quizzes = join(root, '.vitepress', 'theme', 'translations', 'zh-hant')
+  const files = [...walk(join(root, 'zh-hant')), ...readdirSync(quizzes).map((f) => join(quizzes, f))]
+  assert.deepEqual(files.filter((p) => readFileSync(p, 'utf8').includes('物件')).map((p) => relative(root, p)), [])
+})

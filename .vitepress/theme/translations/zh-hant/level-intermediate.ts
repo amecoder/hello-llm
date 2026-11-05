@@ -108,9 +108,9 @@ export const LEVEL_INTERMEDIATE: Record<string, QuestionText> = {
       "目標和語境",
       "語境和條件（背景與限制條件）",
       "目標和條件",
-      "物件和格式（讀者、形式）",
+      "對象和格式（讀者、形式）",
     ],
-    explain: "目標（道歉信）和語境（分揀錯誤）是有的，但沒有說是誰來讀（物件），也沒有篇幅和語氣（格式），所以 AI 是靠猜來寫的。",
+    explain: "目標（道歉信）和語境（分揀錯誤）是有的，但沒有說是誰來讀（對象），也沒有篇幅和語氣（格式），所以 AI 是靠猜來寫的。",
   },
   "intermediate-s1-conflicting-rules": {
     prompt: "在一份很長的請求文字的前面寫了「五行以內簡短」，最後又寫了「不要遺漏，詳細一點」，兩條指示互相沖突。根據 OpenAI 的指南，哪個說明和應對最合適？",
@@ -470,7 +470,7 @@ export const LEVEL_INTERMEDIATE: Record<string, QuestionText> = {
       "含有合同金額和交貨日期的客戶回覆郵件",
       "留在個人記事本里的會議感想整理",
     ],
-    explain: "OWASP 建議，越重要或敏感的資訊，越要有人工審查和事實核對。涉及錢和日期的對外檔案，就是核實的物件。",
+    explain: "OWASP 建議，越重要或敏感的資訊，越要有人工審查和事實核對。涉及錢和日期的對外檔案，就是核實的對象。",
   },
   "intermediate-s4-executive-questions": {
     prompt: "高管報告的草稿寫完了。彙報之前想找出漏洞時，請求 AI 做什麼最合適？",

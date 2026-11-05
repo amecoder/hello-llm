@@ -255,7 +255,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
   "advanced-s3-outdated-policy": {
     prompt: "公司內部聊天機器人把已經改變的休假規定，仍按以前的內容告訴大家。想用 RAG（檢索增強生成，找出相關文件並放進回答的方式）來修正，哪個辦法最合適？",
     choices: [
-      "把最新的規定文件放進檢索物件，清理掉過時的文件",
+      "把最新的規定文件放進檢索對象，清理掉過時的文件",
       "調高溫度，讓回答多樣，最新規定也會混著出現",
       "只要補一句「請按最新內容回答」，模型就會自己知道",
       "把問題翻譯成英語傳送，模型就更能記住最新規定",
@@ -480,7 +480,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
       "用回答越長越詳細、分數越高的規則",
       "用與標準答案核對、基於程式碼的精確匹配評分",
     ],
-    explain: "Anthropic 的文件說明，對答案明確的分類任務，基於程式碼的精確匹配評分比較合適；人工評分又慢又貴，LLM 評分者最好用和被評估物件不同的模型。",
+    explain: "Anthropic 的文件說明，對答案明確的分類任務，基於程式碼的精確匹配評分比較合適；人工評分又慢又貴，LLM 評分者最好用和被評估對象不同的模型。",
   },
   "advanced-s5-workflow-vs-agent": {
     prompt: "Anthropic 的文章《Building effective agents》區分了工作流（workflow，按規定順序處理的方式）和智慧體（agent，自己決定步驟、使用工具來工作的 AI 系統）。哪個說明是對的？",
