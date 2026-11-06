@@ -61,6 +61,8 @@ claude --version
 
 이렇게 번호가 나오면 성공입니다. 번호는 달라도 됩니다. 뒤에 `(Claude Code)`가 붙어 있는지 보세요.
 
+![버전 확인 화면. ① 버전 번호. 이 그림을 찍은 날은 자동 업데이트로 2.1.319였습니다. 번호는 내 화면과 달라도 됩니다](assets/shot-01-version-marked.png)
+
 ```text
 2.1.318 (Claude Code)
 ```

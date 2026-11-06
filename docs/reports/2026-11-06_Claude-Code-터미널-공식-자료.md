@@ -74,6 +74,7 @@ tags: [리서치, Claude-Code, 23-claude-code-cli, 터미널, 공식문서, 사�
 | R42 | Ctrl+Z | `Claude Code has been suspended. Run `fg` to bring Claude Code back.` 후 `fg` 로 돌아온다 |
 | R43 | `claude -p "@파일 ..."` | 파이프 없이 파일을 넘겨 할 일을 뽑았다 |
 | R44 | 새 폴더의 첫 요청 | `회의록.md` 를 수동 모드 허락 창(R7)으로 만들었다. 입력창에는 다음 요청 제안이 흐리게 뜰 수 있다 |
+| R45 | 실제 터미널 그림 | 2026-11-06 Claude Code가 2.1.319로 자동 업데이트된 뒤 리눅스 gnome-terminal 창을 찍었다. 요금제 이름은 그림에서 가렸다. 셸 명령 허락 창은 `Do you want to proceed?` 아래 `Yes` / `Yes, allow reading from ...` / `Yes, and switch to auto mode` / `No` 네 가지였다 |
 
 원본 로그는 작업용 임시 폴더에 두었다. 공개 저장소에는 결과물만 넣었다.
 
@@ -1081,4 +1082,4 @@ tags: [리서치, Claude-Code, 23-claude-code-cli, 터미널, 공식문서, 사�
 
 ## 갱신 기록
 
-- 2026-11-06 처음 작성. 리뷰 뒤 R9·R26 정정, R39~R44·E19~E30 추가.
+- 2026-11-06 처음 작성. 리뷰 뒤 R9·R26 정정, R39~R45·E19~E30 추가.

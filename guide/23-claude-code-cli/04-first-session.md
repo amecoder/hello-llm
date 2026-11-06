@@ -35,6 +35,10 @@ claude
 
 처음 여는 폴더에서는 이런 창이 먼저 뜹니다.
 
+![폴더 신뢰 확인 창. ① 처음 커서가 있는 곳은 No, exit입니다. ② 아래 화살표로 Yes, I trust this folder로 옮긴 뒤 Enter를 누릅니다](assets/shot-02-trust-marked.png)
+
+실제 터미널 창을 찍은 그림입니다. 이 장과 뒤의 그림은 리눅스 터미널에서 Claude Code 2.1.319로 찍었습니다. 색과 글꼴은 내 터미널 설정에 따라 다릅니다. 폴더 경로도 연습용 임시 폴더라서 내 화면과 다르고, 요금제 이름은 가렸습니다. 아래 상자에는 같은 화면을 글자로 옮겼습니다.
+
 ```text
  Accessing workspace:
 
@@ -65,6 +69,8 @@ claude
 ## 시작 화면 읽기
 
 `Yes`를 고르면 이런 화면이 나옵니다.
+
+![시작 화면. ① 지금 일하는 폴더, ② Claude 입력창, ③ 맨 아래 줄의 권한 모드(auto mode on)](assets/shot-03-start-marked.png)
 
 ```text
  ▐▛███▛█   Claude Code v2.1.318
@@ -118,6 +124,8 @@ inbox의 회의 메모를 읽고 회의록.md 로 저장해 줘. 답은 한 줄�
 - **나은 예**: 위 문장 — 읽을 것, 저장할 곳, 답의 길이가 다 있습니다.
 
 수동 모드라면 Claude가 메모를 읽고 파일 내용을 보여 준 뒤 이렇게 묻습니다.
+
+![파일을 만들기 전 허락 창. 다른 파일을 만들 때 찍은 그림입니다. ① 만들 파일 이름, ② 선택지. 1번 Yes가 이번 한 번만 허락합니다](assets/shot-04-create-marked.png)
 
 ```text
  Do you want to create 회의록.md?

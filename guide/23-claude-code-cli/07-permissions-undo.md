@@ -46,6 +46,12 @@ claude --permission-mode manual
 
 있는 파일을 고칠 때는 `Do you want to make this edit to 회의록2.md?`라고 묻고 바뀌는 줄도 보여 줍니다. 앞에 `+`가 붙은 줄이 새로 들어가는 줄입니다. 창이 뜨면 이렇게 물어보세요.
 
+![파일을 고치기 전 허락 창. ① 초록 줄이 새로 들어갈 내용, ② 선택지](assets/shot-05-edit-marked.png)
+
+셸 명령을 실행할 때는 모양이 조금 다른 창이 뜹니다. 실행할 명령을 그대로 보여 주니 먼저 읽으세요. 자동 모드를 쓸 수 있으면 자동 모드로 바꾸는 선택지도 붙습니다.[^switch-auto]
+
+![셸 명령 허락 창. ① 실행할 명령, ② 자동 모드로 바꾸는 선택지](assets/shot-06-bash-marked.png)
+
 - 내가 말한 그 파일인가?
 - 바뀌는 내용이 내가 부탁한 것인가?
 - 부탁하지 않은 일이 섞여 있지 않나?
@@ -114,6 +120,10 @@ Claude가 고친 파일은 자동으로 추적됩니다. 요청을 보낼 때마
 입력창이 빈 상태에서 Esc를 두 번 누르면 `Rewind` 메뉴가 열립니다. `/rewind`를 쳐도 됩니다. **입력창이 비어 있어야** 합니다. 글자가 있으면 메뉴 대신 글자가 지워집니다.[^checkpoint] 지워진 글은 위쪽 화살표로 되살릴 수 있습니다.[^esc-up]
 
 메뉴에는 내가 보낸 메시지와 바뀐 파일이 나옵니다. 위쪽 화살표로 메시지를 고르고 Enter를 누르면 선택지가 나옵니다.[^checkpoint]
+
+![되감기 메뉴. ① 내가 보낸 메시지와 바뀐 파일, ② 지금 위치(current)](assets/shot-07-rewind-marked.png)
+
+![되감기 확인 화면. ① 파일과 대화를 함께 되돌리는 선택지, ② 경고 문구](assets/shot-08-rewind-confirm-marked.png)
 
 | 선택지 | 뜻 |
 |---|---|
@@ -194,3 +204,4 @@ Claude가 하는 일을 멈추고 싶을 때는 Esc를 **한 번**만 누릅니�
 [^limits]: Claude Code 공식 문서, 「Checkpointing」. "A file that only Bash commands changed isn't tracked and stays as it is." / "To revert it, use version control, such as Git." / "The subagent's edits to other files stay, so use version control, such as Git, to revert them." / "Manual changes you make to files outside of Claude Code and edits from other concurrent sessions are normally not captured, unless they happen to modify the same files as the current session." https://code.claude.com/docs/en/checkpointing (확인일 2026-11-06)
 [^remote]: Claude Code 공식 문서, 「How Claude Code works」. "Actions that affect remote systems (databases, APIs, deployments) can't be checkpointed." https://code.claude.com/docs/en/how-claude-code-works (확인일 2026-11-06)
 [^deny-limit]: Claude Code 공식 문서, 「Configure permissions」. "They don't apply to a command that reads files without naming them" https://code.claude.com/docs/en/permissions (확인일 2026-11-06)
+[^switch-auto]: Claude Code 공식 문서, 「Choose a permission mode」. "Claude Code adds **Yes, and switch to auto mode** to a Bash command's permission prompt." https://code.claude.com/docs/en/permission-modes (확인일 2026-11-06)
