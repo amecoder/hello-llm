@@ -75,6 +75,8 @@ tags: [리서치, Claude-Code, 23-claude-code-cli, 터미널, 공식문서, 사�
 | R43 | `claude -p "@파일 ..."` | 파이프 없이 파일을 넘겨 할 일을 뽑았다 |
 | R44 | 새 폴더의 첫 요청 | `회의록.md` 를 수동 모드 허락 창(R7)으로 만들었다. 입력창에는 다음 요청 제안이 흐리게 뜰 수 있다 |
 | R45 | 실제 터미널 그림 | 2026-11-06 Claude Code가 2.1.319로 자동 업데이트된 뒤 리눅스 gnome-terminal 창을 찍었다. 요금제 이름은 그림에서 가렸다. 셸 명령 허락 창은 `Do you want to proceed?` 아래 `Yes` / `Yes, allow reading from ...` / `Yes, and switch to auto mode` / `No` 네 가지였다 |
+| R46 | 맨 `claude` 재실행 | 작성자 머신은 `bypassPermissions` 와 개인 규칙을 불러와 허락 없이도 파일이 저장됐다. 독자 환경과 달라 `--setting-sources project` 쪽이 독자에 더 가깝다. 공개 스크립트는 옵션 없이도 돌았다 |
+| R47 | `git config core.quotePath false` | `git status --short` 가 한글 파일 이름을 그대로 보여 줬다. 이 설정이 없으면 `비밀` 폴더가 담겨도 숫자로 보인다 |
 
 원본 로그는 작업용 임시 폴더에 두었다. 공개 저장소에는 결과물만 넣었다.
 
@@ -1083,4 +1085,4 @@ tags: [리서치, Claude-Code, 23-claude-code-cli, 터미널, 공식문서, 사�
 
 ## 갱신 기록
 
-- 2026-11-06 처음 작성. 리뷰 뒤 R9·R26 정정, R39~R45·E19~E31 추가.
+- 2026-11-06 처음 작성. 리뷰 뒤 R9·R26 정정, R39~R47·E19~E31 추가.

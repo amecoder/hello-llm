@@ -14,11 +14,11 @@ const SUBCOMMAND_DEPTH: Record<string, number> = { git: 1, claude: 1, 'claude mc
 // quoted text and placeholders are what the reader fills in, not part of the command
 function parse(text: string): Command[] {
   const bare = text.replace(/"[^"]*"|'[^']*'/g, ' ').replace(/[()]/g, ' ')
-  return bare.split(/\\?\|/).flatMap((piece) => {
+  return bare.split(/\\?\||&&|;/).flatMap((piece) => {
     const words = piece.trim().split(/\s+/).filter(Boolean)
     if (!words.length || /^[$[}{]/.test(words[0])) return []
     const head = [words[0]]
-    while (SUBCOMMAND_DEPTH[head.join(' ')] && /^[a-z]+$/.test(words[head.length] ?? '')) head.push(words[head.length])
+    while (SUBCOMMAND_DEPTH[head.join(' ')] && /^[a-z][a-z-]*$/.test(words[head.length] ?? '')) head.push(words[head.length])
     return [{ head, options: words.filter((w) => /^--?[A-Za-z]/.test(w)) }]
   })
 }
@@ -45,14 +45,18 @@ function typedLines(md: string): string[] {
   })
 }
 
-// `claude ...` and `git ...` written in sentences; footnotes quote the English documents as they are
+// commands written in sentences; footnotes quote the English documents as they are
 function namedInProse(md: string): string[] {
   const prose = md.replace(/```[\s\S]*?```/g, '').replace(/^\[\^.*$/gm, '')
-  return [...prose.matchAll(/`((?:claude|git)(?: [^`]*)?)`/g)].map((m) => m[1])
+  return [...prose.matchAll(/`((?:claude|git|ls|cd|mkdir|cp|mv|rm|echo|fg)(?: [^`]*)?)`/g)].map((m) => m[1])
 }
 
 function explained(command: Command, option?: string): boolean {
-  return rows.some((row) => command.head.every((word, i) => row.head[i] === word) && (!option || row.options.includes(option)))
+  return rows.some((row) =>
+    option
+      ? row.head.join(' ') === command.head.join(' ') && row.options.includes(option)
+      : command.head.every((word, i) => row.head[i] === word),
+  )
 }
 
 const chapters = readdirSync(DIR).filter((f) => /^\d\d-.+\.md$/.test(f))
@@ -71,5 +75,5 @@ test('every command and option a chapter uses has its own row in the command ref
 })
 
 test('the symbols used in the chapters are explained in the command reference', () => {
-  for (const symbol of ['`\\|`', '`>`', '`>>`', "`<<'EOF'`", '`~`', '`*`']) assert.ok(reference.includes(symbol), symbol)
+  for (const symbol of ['`\\|`', '`>`', '`>>`', "`<<'EOF'`", '`~`', '`*`', '`$?`', '`;`', '`2>/dev/null`']) assert.ok(reference.includes(symbol), symbol)
 })
