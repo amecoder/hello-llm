@@ -1,5 +1,13 @@
 # Changelog
 
+## [2026-11-06]
+
+### Added
+- 3단계 Claude Code 터미널 가이드 14장(`guide/23-claude-code-cli/`, 퀴즈 85문제, 실제 터미널 그림 9장)과 공식 자료 리포트(PR #83, `0d38356`)
+
+### Changed
+- 메뉴 순서와 장 번호를 분리하려고 `stageOf` 를 배열 순서가 아니라 `base` 기준으로 변경(PR #83)
+
 ## [2026-11-05]
 
 ### Added
