@@ -4,7 +4,7 @@
 
 명령을 읽는 법은 [2장](02-shell-basics.md)에 있습니다. 짧게 말하면 **이름 · 옵션 · 대상** 순서입니다. 옵션은 `-`나 `--`로 시작합니다.
 
-먼저 어디에 치는지 보세요. 맨 앞이 `%`, `$`, `>`이면 터미널이고, `❯`이면 Claude 입력창입니다. 이 사전의 표는 대부분 터미널에 치는 명령입니다. 마지막 절만 Claude 입력창에 칩니다.
+먼저 어디에 치는지 보세요. 커서 바로 앞의 기호가 `%`, `$`, `>`이면 터미널이고, `❯`이면 Claude 입력창입니다. 이 사전의 표는 대부분 터미널에 치는 명령입니다. 마지막 절만 Claude 입력창에 칩니다.
 
 ## 기호
 
@@ -20,7 +20,7 @@
 | `<<'EOF'` | `EOF` 줄 앞까지를 그대로 입력으로 넘김 | 아래 설명 |
 | `"…"` | 띄어쓰기가 있어도 한 덩어리로 묶음 | `claude -p "두 단어 이상"` |
 
-`>`는 파일 내용을 지우고 새로 씁니다. 지우면 안 되는 파일에는 쓰지 마세요.
+`>`는 파일 내용을 지우고 새로 씁니다. 지우면 안 되는 파일에는 쓰지 마세요. `<<'EOF'`는 맥·리눅스 전용입니다. Windows PowerShell에서는 메모장으로 파일을 만듭니다.
 
 여러 장에서 쓰는 아래 모양은 파일 하나를 만드는 묶음입니다.
 
@@ -34,6 +34,8 @@ EOF
 `cat > 메모.txt`는 받은 내용을 `메모.txt`에 저장합니다. `<<'EOF'`는 `EOF`만 있는 줄이 나올 때까지를 내용으로 넘깁니다. 그래서 파일에는 가운데 두 줄만 들어갑니다. `EOF`는 "여기서 끝"이라는 표시입니다. 따옴표를 붙였으므로 `$HOME` 같은 글자도 바뀌지 않고 그대로 저장됩니다.
 
 ## 폴더와 파일
+
+이 표는 맥·리눅스 기준입니다. PowerShell도 `ls`, `cd`, `cp`, `mv`, `rm` 같은 이름을 받지만 옵션이 다릅니다. 그래서 `ls -la`나 `rm -rf`는 PowerShell에서 그대로 쓰지 마세요. PowerShell 명령은 아래 절에 따로 모았습니다.
 
 | 명령 | 하는 일 |
 |---|---|
@@ -104,11 +106,14 @@ EOF
 | `claude --permission-mode manual` | 수동 모드로 시작 |
 | `claude -c` | 이 폴더의 가장 최근 대화 잇기 |
 | `claude -r` | 지난 대화 골라서 열기 |
+| `claude --resume 이름` | 이름 붙인 대화 바로 열기 |
+| `claude --safe-mode` | 내 설정을 끄고 시작 |
+| `claude purge` | 이 폴더의 저장된 기록 지우기 |
 | `claude -p "요청"` | 한 번 묻고 끝내기 |
 | `claude --worktree 이름` | 별도 작업 폴더에서 시작 |
 | `claude doctor` | 설치 상태 점검 |
 | `claude update` | 최신 버전으로 업데이트 |
-| `claude mcp add` | MCP 서버 추가 |
+| `claude mcp add --transport http 이름 주소` | 원격 MCP 서버 추가 |
 | `claude mcp list` | MCP 서버 목록과 연결 상태 |
 | `claude mcp remove 이름` | MCP 서버 지우기 |
 
@@ -120,7 +125,7 @@ EOF
 | `claude -p "요청" --max-turns 10` | 일을 이어 가는 횟수의 상한 |
 | `claude -p "요청" --output-format json` | 답을 JSON 형식으로 출력 |
 
-`--allowedTools`의 `Read`는 파일 읽기, `Write`는 파일 쓰기입니다. `claude mcp add`의 `--transport http`는 인터넷으로 연결하는 서버라는 뜻입니다.
+`--allowedTools`의 `Read`는 파일 읽기, `Write`는 파일 쓰기입니다. `--transport http`는 HTTP 방식으로 연결하는 원격 서버라는 뜻입니다.
 
 ## git 명령
 
@@ -131,8 +136,9 @@ EOF
 | `git config user.name "이름"` | 기록에 적힐 이름 정하기 |
 | `git config user.email "메일"` | 기록에 적힐 메일 정하기 |
 | `git add .` | 지금 폴더의 변경을 다음 기록에 담기 |
-| `git status --short` | 담긴 변경을 짧게 보기 |
+| `git status --short` | 변경 상태를 짧게 보기 |
 | `git commit -m "설명"` | 설명을 붙여 기록 남기기 |
+| `git reset` | 다음 기록에 담은 것을 취소 |
 | `git log --oneline` | 기록을 한 줄씩 보기 |
 
 `-m`은 message(메시지)의 줄임말입니다. `--short`는 목록을 짧게 보여 주라는 뜻입니다.
