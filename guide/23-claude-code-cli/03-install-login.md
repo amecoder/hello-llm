@@ -33,6 +33,8 @@ Windows PowerShell은 이렇게 칩니다.
 irm https://claude.ai/install.ps1 | iex
 ```
 
+두 명령은 같은 일을 합니다. 앞부분이 설치 파일을 받고, `|` 뒤가 받은 내용을 실행합니다. 맥·리눅스는 `curl`이 받고 `bash`가 실행합니다. PowerShell은 `irm`이 받고 `iex`가 실행합니다.[^irm] `|`는 앞 명령의 결과를 뒤 명령으로 넘기는 기호입니다. `-fsSL`은 받는 방식을 정하는 옵션 네 개를 붙여 쓴 것입니다. 뜻은 [명령어 사전](command-reference.md)에 있습니다.
+
 내려받는 동안에는 진행 표시가 없습니다. 아무 일도 없어 보여도 창을 닫지 말고 기다리세요. 끝나면 `Claude Code successfully installed!`라는 문구가 보입니다.[^progress]
 
 명령을 엉뚱한 창에 넣으면 오류가 납니다. 고장이 아니라 창을 잘못 고른 것입니다.[^wrong-shell]
@@ -107,7 +109,7 @@ $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
 [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
 ```
 
-맥·리눅스의 `echo` 줄은 설정을 저장하고, `source` 줄은 지금 창에 적용합니다. Windows는 터미널을 다시 시작해야 합니다.[^path-apply] 그런 다음 `claude --version`을 다시 쳐 보세요.
+맥·리눅스의 `echo` 줄은 설정을 저장하고, `source` 줄은 지금 창에 적용합니다. `>>`는 파일 끝에 덧붙이는 기호입니다. 그래서 설정 파일의 기존 내용은 지워지지 않습니다. 이 줄을 두 번 치면 같은 줄이 두 번 들어가니 한 번만 칩니다. Windows는 터미널을 다시 시작해야 합니다.[^path-apply] 그런 다음 `claude --version`을 다시 쳐 보세요.
 
 그래도 안 되면 공식 문서 「[Troubleshoot installation and login](https://code.claude.com/docs/en/troubleshoot-install)」을 보세요. `claude`가 실행은 된다면 `claude doctor`로 설치 상태를 읽어 볼 수 있습니다. 세션을 열지 않고 진단만 보여 줍니다.[^doctor]
 
@@ -155,7 +157,7 @@ rm -f ~/.local/bin/claude
 rm -rf ~/.local/share/claude
 ```
 
-`rm`은 휴지통을 거치지 않고 바로 지우는 명령입니다. 글자를 꼭 확인하고 치세요. Windows와 다른 설치 방법은 공식 문서 「[Advanced setup](https://code.claude.com/docs/en/setup)」의 Uninstall 절을 따르세요.
+`rm`은 휴지통을 거치지 않고 바로 지우는 명령입니다. `-r`은 폴더 안까지 전부, `-f`는 묻지 않고 지우라는 옵션입니다. 글자를 꼭 확인하고 치세요. Windows와 다른 설치 방법은 공식 문서 「[Advanced setup](https://code.claude.com/docs/en/setup)」의 Uninstall 절을 따르세요.
 
 <Quiz id="ch803-update" />
 
@@ -211,3 +213,4 @@ rm -rf ~/.local/share/claude
 [^update]: Claude Code 공식 문서, 「CLI reference」. "Update to latest version" https://code.claude.com/docs/en/cli-reference · 「Advanced setup」. "If you're already on the newest version, it reports `Claude Code is up to date (<version>)`." https://code.claude.com/docs/en/setup (확인일 2026-11-06)
 [^manual-update]: Claude Code 공식 문서, 「Quickstart」. "Homebrew installations do not auto-update." / "Run `winget upgrade Anthropic.ClaudeCode` periodically to get the latest features and security fixes." https://code.claude.com/docs/en/quickstart (확인일 2026-11-06)
 [^uninstall]: Claude Code 공식 문서, 「Advanced setup」. "rm -f ~/.local/bin/claude" https://code.claude.com/docs/en/setup (확인일 2026-11-06)
+[^irm]: Claude Code 공식 문서, 「Terminal guide for new users」. "`irm` fetches the file and `iex` runs it." https://code.claude.com/docs/en/terminal-guide (확인일 2026-11-06)

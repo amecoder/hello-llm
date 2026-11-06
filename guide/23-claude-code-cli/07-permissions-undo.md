@@ -101,6 +101,13 @@ cat > .claude/settings.json <<'EOF'
 EOF
 ```
 
+이 상자를 한 줄씩 읽어 봅니다.
+
+- `mkdir 비밀`: `비밀` 폴더를 만듭니다.
+- `echo '…' > 비밀/암호.txt`: 따옴표 안의 글자를 파일에 저장합니다. `>`는 출력을 파일에 저장하는 기호입니다.
+- `mkdir -p .claude`: `.claude` 폴더를 만듭니다. 이미 있어도 오류가 나지 않습니다.
+- `cat > .claude/settings.json <<'EOF'`: 다음 줄부터 `EOF`까지를 이 파일에 저장합니다. 뒤의 장에서도 파일을 만들 때 이 모양을 씁니다.
+
 붙여 넣은 뒤 아직 실행되지 않았으면 Enter를 한 번 더 누르세요. 아무것도 안 나오면 성공입니다. `ls`로 `비밀` 폴더가 생겼는지 보세요.
 
 Windows PowerShell은 `mkdir 비밀`, `mkdir .claude`로 폴더를 만듭니다. `notepad 비밀\암호.txt`로 메모장을 열어 `가짜 비밀번호: cafe-1234`를 넣습니다. `notepad .claude\settings.json`에는 위 상자에서 `cat`으로 시작하는 줄과 `EOF` 줄을 빼고 그 사이만 넣습니다. 새 파일을 만들지 물으면 `예`를 누르고, `Ctrl + S`로 저장하고 닫습니다. 이 방법은 실행해 보지 않았습니다.
