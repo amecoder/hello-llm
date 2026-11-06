@@ -15,6 +15,14 @@ test('chapter numbers map to their stage: 1-99 common guide, 101-199 ChatGPT', (
   assert.deepEqual(chaptersOf('chatgpt', [1, 102, 101]), [101, 102])
 })
 
+test('stageOf follows chapter numbers, not the menu order of STAGES', () => {
+  assert.equal(stageOf(601).id, 'antigravity')
+  assert.equal(stageOf(701).id, 'ai-sdlc')
+  assert.equal(stageOf(801).id, 'claude-code-cli')
+  const ids = STAGES.map((s) => s.id)
+  assert.ok(ids.indexOf('claude-code-cli') < ids.indexOf('ai-sdlc'), 'the terminal course sits with the other 3단계 guides')
+})
+
 test('every stage folder has exactly the chapters listed in CHAPTERS, each ending with its own read button', () => {
   for (const stage of STAGES) {
     const dir = join(ROOT, stage.dir)

@@ -87,6 +87,10 @@ features:
     details: 내 컴퓨터의 폴더에서 직접 파일을 읽고 고치는 Claude — 터미널 없이 데스크톱 앱부터, 내 방식대로 정리해 주는 도구를 만들며 배우는 12장
     link: /guide/20-claude-code/
     linkText: Claude Code 가이드 시작
+  - title: 3단계 · Claude Code 터미널 가이드
+    details: 터미널을 처음 여는 사람을 위한 14장 — 기초 명령부터 설치, 허락과 되돌리기, 스킬, 명령 한 줄로 도는 주간 정리까지
+    link: /guide/23-claude-code-cli/
+    linkText: 터미널 가이드 시작
   - title: 3단계 · Codex 사용 가이드
     details: ChatGPT 앱 안의 Codex — Claude Code로 만든 정리 도구를 옮기며 다른 점만 배우는 8장
     link: /guide/21-codex/
@@ -119,5 +123,5 @@ features:
 |---|---|---|
 | 1 | [공통 가이드](/guide/00-common/) | 어떤 LLM에서든 통하는 공통 원리와 사용법 |
 | 2 | [ChatGPT](/guide/11-chatgpt/) · [Claude](/guide/10-claude/) · [Gemini](/guide/12-gemini/) | 서비스별 기능과 활용법 |
-| 3 | [Claude Code](/guide/20-claude-code/) · [Codex](/guide/21-codex/) · [Antigravity](/guide/22-antigravity/) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
+| 3 | [Claude Code](/guide/20-claude-code/) · [Claude Code 터미널](/guide/23-claude-code-cli/) · [Codex](/guide/21-codex/) · [Antigravity](/guide/22-antigravity/) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
 | 4 | [AI-SDLC](/guide/30-ai-sdlc/) | AI와 함께 기획부터 배포까지 — 소프트웨어 개발 전 과정(SDLC) |

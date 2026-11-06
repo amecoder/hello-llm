@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "deny": ["Read(./비밀/**)"]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          { "type": "command", "command": "date '+%F %T 파일이 바뀌었습니다' >> 변경기록.txt" }
+        ]
+      }
+    ]
+  },
+  "statusLine": { "type": "command", "command": "echo 모퉁이 카페 정리 중" }
+}
