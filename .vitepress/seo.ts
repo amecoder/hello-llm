@@ -26,6 +26,7 @@ const SERVICES: Record<string, string> = {
   '12-gemini': 'Gemini',
   '20-claude-code': 'Claude Code',
   '21-codex': 'Codex',
+  '23-claude-code-cli': 'Claude Code 터미널',
   '22-antigravity': 'Antigravity',
 }
 

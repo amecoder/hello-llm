@@ -23,6 +23,7 @@ CARDS = [
     ("10-claude", "Claude", 2, "#fb923c"),
     ("12-gemini", "Gemini", 2, "#60a5fa"),
     ("20-claude-code", "Claude Code", 3, "#fb923c"),
+    ("23-claude-code-cli", "Claude Code CLI", 3, "#fb923c"),
     ("21-codex", "Codex", 3, "#34d399"),
     ("22-antigravity", "Antigravity", 3, "#60a5fa"),
     ("30-ai-sdlc", "AI-SDLC", 4, "#c084fc"),

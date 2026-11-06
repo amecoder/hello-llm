@@ -186,7 +186,7 @@ test('gives every published page a title of its own', () => {
       seen.set(title, source)
     }
   }
-  assert.equal(seen.size, 582)
+  assert.equal(seen.size, 597)
 })
 
 const stageTitle = (path: string) => (path === 'en/guide/11-chatgpt/index.md' ? 'Stage 2 · ChatGPT' : '')

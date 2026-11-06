@@ -4,6 +4,7 @@ import type { Question } from './quiz'
 import { CLAUDE_CHAPTERS, CLAUDE_QUESTIONS } from './quiz-bank-claude.ts'
 import { GEMINI_CHAPTERS, GEMINI_QUESTIONS } from './quiz-bank-gemini.ts'
 import { CLAUDE_CODE_CHAPTERS, CLAUDE_CODE_QUESTIONS } from './quiz-bank-claude-code.ts'
+import { CLAUDE_CODE_CLI_CHAPTERS, CLAUDE_CODE_CLI_QUESTIONS } from './quiz-bank-claude-code-cli.ts'
 import { CODEX_CHAPTERS, CODEX_QUESTIONS } from './quiz-bank-codex.ts'
 import { ANTIGRAVITY_CHAPTERS, ANTIGRAVITY_QUESTIONS } from './quiz-bank-antigravity.ts'
 import { AI_SDLC_CHAPTERS, AI_SDLC_QUESTIONS } from './quiz-bank-ai-sdlc.ts'
@@ -35,6 +36,7 @@ export const CHAPTERS: Record<number, { title: string; link: string }> = {
   ...CLAUDE_CHAPTERS,
   ...GEMINI_CHAPTERS,
   ...CLAUDE_CODE_CHAPTERS,
+  ...CLAUDE_CODE_CLI_CHAPTERS,
   ...CODEX_CHAPTERS,
   ...ANTIGRAVITY_CHAPTERS,
   ...AI_SDLC_CHAPTERS,
@@ -1750,6 +1752,7 @@ export const QUESTIONS: readonly Question[] = [
   ...CLAUDE_QUESTIONS,
   ...GEMINI_QUESTIONS,
   ...CLAUDE_CODE_QUESTIONS,
+  ...CLAUDE_CODE_CLI_QUESTIONS,
   ...CODEX_QUESTIONS,
   ...ANTIGRAVITY_QUESTIONS,
   ...AI_SDLC_QUESTIONS,
