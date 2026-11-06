@@ -94,7 +94,14 @@ claude mcp list
 claude mcp remove claude-code-docs
 ```
 
-세 명령을 실행하면 차례로 이런 줄이 나옵니다.
+첫 줄을 끊어 읽어 봅니다.
+
+- `claude mcp add`: MCP 서버를 추가합니다.
+- `--transport http`: 인터넷으로 연결하는 서버라는 뜻입니다.
+- `claude-code-docs`: 내가 붙이는 서버 이름입니다.
+- `https://…`: 서버 주소입니다.
+
+`list`는 목록을 보고, `remove` 뒤에는 지울 서버 이름을 씁니다. 세 명령을 실행하면 차례로 이런 줄이 나옵니다.
 
 ```text
 Added HTTP MCP server claude-code-docs with URL: https://code.claude.com/docs/mcp to local config

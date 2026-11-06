@@ -31,6 +31,7 @@ export const CLAUDE_CODE_CLI_QUESTIONS: readonly Question[] = [
   { id: 'ch802-prompt', chapter: 802, prompt: "터미널 맨 앞에 보이는 seoyeon@macbook ~ % 같은 글자는 무엇을 뜻하나요?", choices: ["명령을 기다리고 있다는 표시", "오류가 났다는 표시", "내가 매번 쳐야 하는 글자", "인터넷이 끊겼다는 표시"], answer: 0, explain: "이것은 프롬프트입니다. 터미널이 명령을 기다린다는 표시이고, 끝의 기호는 내가 치는 글자가 아닙니다." },
   { id: 'ch802-where', chapter: 802, prompt: "지금 어느 폴더에 있는지 알고 싶을 때 치는 명령은 무엇인가요?", choices: ["mkdir", "cp", "pwd", "cd"], answer: 2, explain: "pwd는 지금 있는 폴더를 보여 줍니다. ls는 폴더 안의 목록을 보여 줍니다. 둘 다 아무것도 바꾸지 않으니 길을 잃었을 때 쳐 보면 됩니다." },
   { id: 'ch802-path', chapter: 802, prompt: "경로에 쓰인 ~ 기호는 무엇을 뜻하나요?", choices: ["한 단계 위 폴더", "지금 폴더", "휴지통", "내 집 폴더"], answer: 3, explain: "~ 는 내 계정의 시작 폴더인 집 폴더를 줄여 쓴 것입니다. 한 단계 위 폴더는 .. 이고, 지금 폴더는 . 입니다." },
+  { id: 'ch802-anatomy', chapter: 802, prompt: "명령 ls -la ~ 에서 -la 는 어떤 역할일까요?", choices: ["목록을 보는 명령 이름입니다", "어디에 할지 정하는 대상입니다", "명령의 동작을 바꾸는 옵션입니다", "파일 이름을 묶는 따옴표입니다"], answer: 2, explain: "- 로 시작하는 낱말은 옵션입니다. ls 가 명령 이름, ~ 가 대상입니다." },
   { id: 'ch802-move', chapter: 802, prompt: "메모.txt 를 inbox 폴더로 복사하는 올바른 명령은 무엇인가요?", choices: ["cd 메모.txt inbox/", "cp 메모.txt inbox/", "mkdir 메모.txt inbox/", "cp inbox/"], answer: 1, explain: "cp는 \"무엇을, 어디로\" 순서로 씁니다. 메모.txt 를 inbox/ 로 복사한다는 뜻입니다. cd는 옮겨 가기, mkdir은 폴더 만들기입니다." },
   { id: 'ch802-keys', chapter: 802, prompt: "터미널에서 돌고 있는 명령을 멈추고 싶을 때 누르는 키는 무엇인가요?", choices: ["Tab", "위쪽 화살표", "Ctrl+C", "Enter"], answer: 2, explain: "글자를 고르지 않은 상태에서 Ctrl+C는 멈추기입니다. Tab은 이름 채우기, 위쪽 화살표는 지난 명령 불러오기입니다." },
   // chapter 803

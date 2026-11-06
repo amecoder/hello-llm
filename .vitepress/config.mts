@@ -1188,6 +1188,7 @@ export default defineConfig({
             { text: '12장. 동시 작업과 원격', link: '/guide/23-claude-code-cli/12-parallel-remote' },
             { text: '13장. 비용·안전·문제 해결', link: '/guide/23-claude-code-cli/13-cost-safety-trouble' },
             { text: '14장. 실습 과제와 전문가처럼 쓰기', link: '/guide/23-claude-code-cli/14-practice-expert' },
+            { text: '명령어 사전', link: '/guide/23-claude-code-cli/command-reference' },
             { text: '← 3단계 · Claude Code', link: '/guide/20-claude-code/' },
           ],
         },
