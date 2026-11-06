@@ -42,7 +42,7 @@ export const TRANSLATED_STAGES: Record<Exclude<Lang, 'ko'>, readonly StageId[]> 
 // The language menu swaps the locale in the address without knowing whether that page exists.
 // Pages of an untranslated stage have no copy there, so the reader gets the language's table of contents.
 export function untranslatedFallback(path: string, base: string): string | null {
-  const rest = path.startsWith(base) ? path.slice(base.length) : path
+  const rest = (path.startsWith(base) ? path.slice(base.length) : path).replace(/\.html(?=$|[?#])/, '/')
   const lang = (Object.keys(TRANSLATED_STAGES) as (keyof typeof TRANSLATED_STAGES)[]).find((l) => rest.startsWith(`${l}/`))
   if (!lang) return null
   const stage = STAGES.find((s) => rest.startsWith(`${lang}/${s.dir}/`))
