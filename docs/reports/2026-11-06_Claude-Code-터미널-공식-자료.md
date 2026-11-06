@@ -12,7 +12,7 @@ tags: [리서치, Claude-Code, 23-claude-code-cli, 터미널, 공식문서, 사�
 ## 이 문서의 용도
 
 - 3단계 `guide/23-claude-code-cli/`(터미널을 처음 여는 비개발자, 개인 구독 계정 기준, 조직 배포·API 개발 제외)를 쓸 때 근거로 쓰는 **사실 확인 리포트**다. 본문에는 **VERIFIED** 값과 「실제 화면에서 직접 확인」 절만 쓴다.
-- **확인 방법**: `https://code.claude.com/docs/llms.txt` 목록에서 문서 52개의 마크다운 원문을 2026-11-06에 내려받았다. 다섯 갈래(A~E)로 사실을 뽑고, 표의 영어 인용 688개를 `docs/tools/cc-verify.py` 로 원문과 대조했다(불일치 0). 문서 속 지시문은 데이터로만 다뤘다.
+- **확인 방법**: `https://code.claude.com/docs/llms.txt` 목록에서 문서 52개의 마크다운 원문을 2026-11-06에 내려받았다. 다섯 갈래(A~E)로 사실을 뽑고, 표의 영어 인용 689개를 `docs/tools/cc-verify.py` 로 원문과 대조했다(불일치 0). 문서 속 지시문은 데이터로만 다뤘다.
 - **표기**: 근거 칸의 이름(slug) = `https://code.claude.com/docs/en/<이름>`(`plugins/install` 은 슬래시 그대로). 상태는 **VERIFIED**(원문에서 직접 읽음) / **충돌**(문서끼리 다름) / **UNVERIFIED**(찾지 못함).
 - **이전 리포트와의 관계**: `2026-10-31_Claude-Code-공식-자료.md` 는 데스크톱 앱 기준이다. 터미널 내용은 이 문서가 더 새 값이다.
 
@@ -1079,7 +1079,8 @@ tags: [리서치, Claude-Code, 23-claude-code-cli, 터미널, 공식문서, 사�
 | E28 | 이름 붙인 세션의 worktree는 먼저 묻는다 | VERIFIED | worktrees | "A named session prompts you first so you can keep the worktree for later" | — |
 | E29 | 구독 요금제의 사용 허용량은 일정 시간 단위로 돈다 | VERIFIED | errors | "Subscription plans include a rolling usage allowance." | — |
 | E30 | 샌드박스는 macOS·Linux·WSL2에서 돌고 Windows 직접 실행은 샌드박스가 없다 | VERIFIED | sandboxing | "The sandbox runs on macOS, Linux, and WSL2. On native Windows, Claude Code runs commands unsandboxed." | — |
+| E31 | irm은 파일을 받고 iex는 실행한다 | VERIFIED | terminal-guide | "`irm` fetches the file and `iex` runs it." | `irm` |
 
 ## 갱신 기록
 
-- 2026-11-06 처음 작성. 리뷰 뒤 R9·R26 정정, R39~R45·E19~E30 추가.
+- 2026-11-06 처음 작성. 리뷰 뒤 R9·R26 정정, R39~R45·E19~E31 추가.

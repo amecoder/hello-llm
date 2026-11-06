@@ -1,7 +1,7 @@
 // Default theme plus the guide's interactive components and small style fixes.
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
-import type { Theme } from 'vitepress'
+import { withBase, type Theme } from 'vitepress'
 import PromptBuilder from './components/PromptBuilder.vue'
 import Quiz from './components/Quiz.vue'
 import CertExam from './components/CertExam.vue'
@@ -12,6 +12,7 @@ import LevelTest from './components/LevelTest.vue'
 import YouTube from './components/YouTube.vue'
 import TranslationNotice from './components/TranslationNotice.vue'
 import { trackPageViews } from './analytics'
+import { untranslatedFallback } from './i18n'
 import './custom.css'
 
 export default {
@@ -25,6 +26,12 @@ export default {
     }),
   enhanceApp({ app, router }) {
     trackPageViews(router)
+    router.onBeforeRouteChange = (to) => {
+      const fallback = untranslatedFallback(to, withBase('/'))
+      if (!fallback) return
+      router.go(fallback)
+      return false
+    }
     app.component('PromptBuilder', PromptBuilder)
     app.component('Quiz', Quiz)
     app.component('CertExam', CertExam)
