@@ -5,7 +5,7 @@ layout: home
 hero:
   name: Full Table of Contents
   text: Choose a chapter to read
-  tagline: If you are new here, we recommend reading in order starting from Chapter 1. Every chapter has a quick quiz and hands-on exercises.
+  tagline: If you are new here, start with Chapter 1. You do not need to read every chapter, so pick the path that fits your goal in the roadmap below.
   actions:
     - theme: brand
       text: Start with Chapter 1
@@ -111,7 +111,14 @@ features:
 
 ## Learning Roadmap
 
-Each stage builds on the one before it, so we recommend reading in numbered order.
+Each stage builds on the one before it. But you do not need to read every chapter. Pick the path that fits your goal.
+
+- **If you are new to AI**: Stage 1 Common Guide → in Stage 2, **just one** service you use
+- **If you want to use AI often for work or study**: the path above + that service's guide to the end
+- **If you want AI to handle file work on your computer**: the paths above + **one** Stage 3 tool (Claude Code if you are new)
+- **If you want to build a web page with AI**: Stage 3 Claude Code → Stage 4 AI-SDLC
+
+The Stage 2 ChatGPT, Claude, and Gemini guides do not depend on each other. You do not need all three.
 
 ![Learning Roadmap: Stage 1 Common Guide (How to ask well) → Stage 2 ChatGPT · Claude · Gemini (Features by service) → Stage 3 Claude Code · Codex · Antigravity (Delegating work to AI) → Stage 4 AI-SDLC (Building together with AI)](../../assets/roadmap.svg)
 

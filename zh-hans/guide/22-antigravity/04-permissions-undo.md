@@ -3,7 +3,7 @@
 > **一句话总结**：应用的权限用**四个预设**（Request Review、Default、Auto、Turbo）来选。刚开始请从 **Request Review** 或 **Default** 用起。
 > Review 窗口里的**丢弃会不经确认直接生效**。终端里有 `/rewind`，但最可靠的安全网仍然是 Git 记录。
 
-本章依据 2026年11月1日确认的 Antigravity 官方文档写成。为什么需要权限，在 [Claude Code 第4章](../20-claude-code/04-permissions-undo.md)里讲过。本章以个人 Google 账号为准，公司、企业账号的权限界面不同。[^business]
+本章依据 2026年11月1日确认的 Antigravity 官方文档写成。**本指南还没有在应用界面上实际练习过。** 和你的界面不同时，以你的界面为准。为什么需要权限，在 [Claude Code 第4章](../20-claude-code/04-permissions-undo.md)里讲过。本章以个人 Google 账号为准，公司、企业账号的权限界面不同。[^business]
 
 ## 四种权限预设
 

@@ -28,6 +28,6 @@ El «Pruébalo tú» del final de cada capítulo continúa con un único ejemplo
 
 Los nombres de las notas (Minji, Junho y Seoyeon) están todos inventados. Si lo adaptas a tus propias notas, borra los nombres reales y los contactos antes de subirlas a un repositorio público (capítulo 9).
 
-**Los resultados de la práctica de esta guía (el tablero de tareas realmente creado) todavía no se han publicado.** Primero se escribe el curso, y los resultados de la práctica se añadirán después.
+**Puedes ver un tablero de tareas creado de verdad siguiendo esta guía en la [página de ejemplo](https://amecoder.github.io/cafe-todo-board/) y en el [repositorio](https://github.com/amecoder/cafe-todo-board).** No pasa nada si el tuyo se ve distinto.
 
 Si todavía no has visto la etapa 3, empieza por la [etapa 3 · Claude Code](../20-claude-code/). Allí se explican las carpetas, los permisos, los archivos de reglas y el modo plan, y esta etapa se enlaza con ellos.

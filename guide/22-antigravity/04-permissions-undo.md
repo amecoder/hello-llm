@@ -3,7 +3,7 @@
 > **한 줄 요약**: 앱의 권한은 **프리셋 네 개**(Request Review·Default·Auto·Turbo)로 고릅니다. 처음에는 **Request Review**나 **Default**로 시작하세요.
 > Review 창의 **버리기는 확인 없이 바로** 적용됩니다. 터미널에는 `/rewind`가 있지만, 가장 확실한 안전망은 여전히 Git 기록입니다.
 
-이 장은 2026년 11월 1일에 확인한 Antigravity 공식 문서를 바탕으로 썼습니다. 권한이 왜 필요한지는 [Claude Code 4장](../20-claude-code/04-permissions-undo.md)에서 설명했습니다. 개인 Google 계정 기준이며, 회사·기업 계정은 권한 화면이 다릅니다.[^business]
+이 장은 2026년 11월 1일에 확인한 Antigravity 공식 문서를 바탕으로 썼습니다. **이 가이드는 아직 앱 화면으로 실습하지 못했습니다.** 화면 이름이 내 화면과 다르면 화면을 따르세요. 권한이 왜 필요한지는 [Claude Code 4장](../20-claude-code/04-permissions-undo.md)에서 설명했습니다. 개인 Google 계정 기준이며, 회사·기업 계정은 권한 화면이 다릅니다.[^business]
 
 ## 권한 프리셋 네 가지
 

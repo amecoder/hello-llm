@@ -3,7 +3,7 @@
 > **一句話總結**：`/plan` 是修改之前先做計劃，`/schedule` 是**只在這場對話裡**執行的定時器，要跨對話持續執行的定時是 **Automations**。
 > `/browser` 會操作 Chrome 來做網頁上的事，`/goal` 在完成之前不會停下來。這兩個都可能消耗很多用量。
 
-這一章依據 2026年11月1日確認的 Antigravity 官方文件編寫。本指南沒有真正儲存定時。因為會暴露實際的工作內容，而且會消耗用量（和 [Claude Code 第8章](../20-claude-code/08-parallel-cloud-schedule.md)是同樣的原因）。
+這一章依據 2026年11月1日確認的 Antigravity 官方文件編寫。**本指南還沒有在應用介面上實際練習過。** 和你的介面不同時，以你的介面為準。本指南沒有真正儲存定時。因為會暴露實際的工作內容，而且會消耗用量（和 [Claude Code 第8章](../20-claude-code/08-parallel-cloud-schedule.md)是同樣的原因）。
 
 ## 先要計劃 — `/plan`
 

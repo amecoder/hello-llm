@@ -18,7 +18,9 @@
 | Expert | People who build or run AI services | The papers, official docs, and security guidelines linked in the explanations |
 
 > **The Advanced and Expert levels go beyond this guide.** They ask about deeper topics like tokens, training methods, retrieval-augmented generation (RAG), agents, and security.
-> Every missed question includes a link to the source material, so you can study those resources and try again. Service-specific features are covered in the [Stage 2 ChatGPT Guide](/en/guide/11-chatgpt/), and coding tools and development workflows will be covered in the upcoming Stage 3 and 4 guides.
+> Every missed question includes a link to the source material, so you can study those resources and try again. Service-specific features are covered in Stage 2 ([ChatGPT](/en/guide/11-chatgpt/) · [Claude](/en/guide/10-claude/) · [Gemini](/en/guide/12-gemini/)), coding tools in Stage 3 ([Claude Code](/en/guide/20-claude-code/) · [Codex](/en/guide/21-codex/) · [Antigravity](/en/guide/22-antigravity/)), and the development process in [Stage 4 AI-SDLC](/en/guide/30-ai-sdlc/).
+
+> **This is a multiple-choice knowledge test.** The level you pass shows how much you know; it does not certify that you can actually get real work done well with AI. Check your real skills with the hands-on assignments in each guide.
 
 > **This badge is not an official certification.** It is a learning badge to check your own skills.
 > Your answers and scores are calculated only inside this browser and are never sent anywhere. The levels you pass are saved along with your nickname only in this browser to unlock the next level. Clicking "Reset progress" on the start screen clears them as well.
