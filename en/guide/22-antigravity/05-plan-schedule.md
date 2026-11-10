@@ -3,7 +3,7 @@
 > **One-line summary**: `/plan` makes a plan before changing anything, `/schedule` is a timer that runs **only inside this chat**, and **Automations** are schedules that keep running beyond a single chat.
 > `/browser` drives Chrome to do web tasks, and `/goal` does not stop until the job is done. Both can use a lot of your quota.
 
-This chapter is based on the Antigravity official docs checked on November 1, 2026. This guide did not actually save any schedules. That is because doing so would expose real work content and use up quota (for the same reason as in [Claude Code Chapter 8](../20-claude-code/08-parallel-cloud-schedule.md)).
+This chapter is based on the Antigravity official docs checked on November 1, 2026. **This guide has not yet been tested directly on the app screen.** If your screen looks different, follow your screen. This guide did not actually save any schedules. That is because doing so would expose real work content and use up quota (for the same reason as in [Claude Code Chapter 8](../20-claude-code/08-parallel-cloud-schedule.md)).
 
 ## Getting a Plan First — `/plan`
 

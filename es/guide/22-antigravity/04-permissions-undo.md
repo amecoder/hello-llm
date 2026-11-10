@@ -3,7 +3,7 @@
 > **En una línea**: los permisos de la aplicación se eligen con **cuatro preajustes** (Request Review, Default, Auto y Turbo). Al principio empieza con **Request Review** o **Default**.
 > **Descartar en la ventana Review se aplica al instante, sin confirmación.** En el terminal existe `/rewind`, pero la red de seguridad más fiable sigue siendo el historial de Git.
 
-Este capítulo se escribió a partir de la documentación oficial de Antigravity consultada el 1 de noviembre de 2026. Por qué hacen falta los permisos se explicó en el [capítulo 4 de Claude Code](../20-claude-code/04-permissions-undo.md). Vale para una cuenta personal de Google; en las cuentas de empresa y de organización la pantalla de permisos es distinta.[^business]
+Este capítulo se escribió a partir de la documentación oficial de Antigravity consultada el 1 de noviembre de 2026. **Esta guía todavía no ha podido practicar con la pantalla de la aplicación.** Si tu pantalla es distinta, sigue tu pantalla. Por qué hacen falta los permisos se explicó en el [capítulo 4 de Claude Code](../20-claude-code/04-permissions-undo.md). Vale para una cuenta personal de Google; en las cuentas de empresa y de organización la pantalla de permisos es distinta.[^business]
 
 ## Los cuatro preajustes de permisos
 

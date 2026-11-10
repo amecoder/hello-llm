@@ -3,7 +3,7 @@
 > **In One Line**: In the app, you pick permissions using **four presets** (Request Review, Default, Auto, Turbo). Start with **Request Review** or **Default** at first.
 > **Discard** in the Review pane takes effect **right away without asking to confirm**. The terminal has `/rewind`, but your safest net is still your Git history.
 
-This chapter is based on the official Antigravity docs checked on November 1, 2026. We explained why permissions matter in [Claude Code Chapter 4](../20-claude-code/04-permissions-undo.md). This guide assumes a personal Google account; work and enterprise accounts have a different permissions screen.[^business]
+This chapter is based on the official Antigravity docs checked on November 1, 2026. **This guide has not yet been tested directly on the app screen.** If your screen looks different, follow your screen. We explained why permissions matter in [Claude Code Chapter 4](../20-claude-code/04-permissions-undo.md). This guide assumes a personal Google account; work and enterprise accounts have a different permissions screen.[^business]
 
 ## Four Permission Presets
 

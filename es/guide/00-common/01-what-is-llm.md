@@ -3,6 +3,8 @@
 > **En una línea**: un LLM es un programa que ha leído una cantidad enorme de texto y ha practicado adivinar «la palabra que viene después».
 > Por eso habla de forma muy natural, pero no siempre dice la verdad.
 
+> **Si es tu primera vez, empieza por estos apartados.** Basta con leer “El nombre «LLM»”, «¿Cómo construye una respuesta?», «Lo que hace bien», «Lo que no hace bien y puntos de atención» y «Practica tú mismo». Puedes volver al resto cuando te dé curiosidad.
+
 ## El nombre «LLM»
 
 LLM son las siglas de **Large Language Model**, en español **modelo de lenguaje de gran tamaño**.

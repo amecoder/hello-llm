@@ -3,6 +3,8 @@
 > **One-line summary**: An LLM is a program that read an enormous amount of text and practiced guessing "what comes next."
 > That is why it speaks very naturally, even though it does not always tell the truth.
 
+> **New here? Start with these sections.** Reading just "The Name 'LLM'," "How Does It Make an Answer?," "What It Is Good At," "What It Is Bad At, and What to Watch Out For," and "Try It Yourself" is fine. You can come back to the other sections when you get curious.
+
 ## The Name "LLM"
 
 LLM stands for **Large Language Model**.

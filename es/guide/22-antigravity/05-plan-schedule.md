@@ -3,7 +3,7 @@
 > **En una línea**: `/plan` pide primero un plan antes de modificar nada, `/schedule` es un temporizador que funciona **solo dentro de esta conversación**, y la programación que sigue funcionando más allá de la conversación son las **Automations**.
 > `/browser` maneja Chrome para hacer tareas web, y `/goal` no se detiene hasta que todo esté hecho. Los dos pueden gastar mucho uso.
 
-Este capítulo se ha escrito a partir de la documentación oficial de Antigravity consultada el 1 de noviembre de 2026. Esta guía no llegó a guardar ninguna programación de verdad, porque se mostraría el contenido real del trabajo y gastaría uso (por la misma razón que en el [capítulo 8 de Claude Code](../20-claude-code/08-parallel-cloud-schedule.md)).
+Este capítulo se ha escrito a partir de la documentación oficial de Antigravity consultada el 1 de noviembre de 2026. **Esta guía todavía no ha podido practicar con la pantalla de la aplicación.** Si tu pantalla es distinta, sigue tu pantalla. Esta guía no llegó a guardar ninguna programación de verdad, porque se mostraría el contenido real del trabajo y gastaría uso (por la misma razón que en el [capítulo 8 de Claude Code](../20-claude-code/08-parallel-cloud-schedule.md)).
 
 ## Recibir primero el plan: `/plan`
 

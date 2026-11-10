@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Índice completo"
   text: "Elige el capítulo que quieres leer"
-  tagline: "Si es tu primera vez, te recomendamos leer en orden desde el capítulo 1. Cada capítulo tiene un cuestionario de repaso y ejercicios para practicar."
+  tagline: "Si es tu primera vez, empieza por el capítulo 1. No hace falta leer todos los capítulos, así que elige en la hoja de ruta de abajo el camino que se ajuste a tu objetivo."
   actions:
     - theme: brand
       text: "Empezar por el capítulo 1"
@@ -111,7 +111,14 @@ features:
 
 ## Hoja de ruta
 
-Como cada etapa es la base de la siguiente, te recomendamos leerlas por orden de número.
+Cada etapa es la base de la siguiente. Pero no hace falta leer todos los capítulos. Elige el camino que se ajuste a tu objetivo.
+
+- **Si es la primera vez que usas la IA**: etapa 1, guía común → en la etapa 2, **solo un** servicio, el que uses
+- **Si quieres usarla a menudo para trabajar o estudiar**: el camino anterior + la guía de ese servicio hasta el final
+- **Si quieres que la IA se encargue de trabajos con archivos de tu ordenador**: los caminos anteriores + **una** herramienta de la etapa 3 (Claude Code si empiezas)
+- **Si quieres crear una página web con la IA**: etapa 3, Claude Code → etapa 4, AI-SDLC
+
+Las guías de ChatGPT, Claude y Gemini de la etapa 2 no dependen unas de otras. No hace falta ver las tres.
 
 ![Hoja de ruta de aprendizaje: etapa 1, guía común (cómo preguntar bien) → etapa 2, ChatGPT, Claude y Gemini (funciones de cada servicio) → etapa 3, Claude Code, Codex y Antigravity (encargarle trabajos a la IA) → etapa 4, AI-SDLC (crear con la IA)](../../assets/roadmap.svg)
 

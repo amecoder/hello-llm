@@ -20,6 +20,8 @@
 > **Los niveles avanzado y experto van más allá de esta guía.** Preguntan contenidos más profundos, como los tokens, la forma de entrenamiento, la búsqueda combinada (RAG), los agentes y la seguridad.
 > De cada pregunta fallada recibirás el enlace al material en que se basa, así que estudia con él y vuelve a intentarlo. Las funciones de cada servicio las verás en la etapa 2 ([ChatGPT](../11-chatgpt/) · [Claude](../10-claude/) · [Gemini](../12-gemini/)), las herramientas de programación en la etapa 3 ([Claude Code](../20-claude-code/) · [Codex](../21-codex/) · [Antigravity](../22-antigravity/)) y el proceso de desarrollo en la [etapa 4 AI-SDLC](../30-ai-sdlc/).
 
+> **Esta es una prueba de conocimientos de opción múltiple.** El nivel que apruebes muestra cuánto sabes, pero no certifica que sepas hacer bien un trabajo real con la IA. Comprueba tu habilidad real con las prácticas de cada guía.
+
 > **Esta insignia no es una certificación oficial.** Es una insignia de aprendizaje para que compruebes tu propio nivel.
 > Las respuestas y la nota se calculan solo dentro de este navegador y no se envían a ningún sitio. El nivel que has aprobado se guarda únicamente en este navegador, junto con tu apodo, y sirve para abrir el siguiente nivel. Si pulsas «Reiniciar el progreso» en la pantalla inicial, se borra también.
 
