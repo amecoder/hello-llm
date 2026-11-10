@@ -28,6 +28,6 @@ The "Try It Yourself" section at the end of each chapter connects into a single 
 
 All names in the notes (Minji, Junho, Seoyeon) are fictional. If you use your own notes instead, remove real names and contact info before uploading to a public repository (Chapter 9).
 
-**The hands-on result of this guide (the actual to-do board we build) has not been published yet.** We are writing the course first and will add the hands-on result later.
+**You can see a to-do board actually built by following this guide on the [example page](https://amecoder.github.io/cafe-todo-board/) and in the [repository](https://github.com/amecoder/cafe-todo-board).** It is fine if yours looks different.
 
 If you have not gone through Stage 3 yet, start with [Stage 3 · Claude Code](../20-claude-code/). Folders, permissions, rule files, and plan mode are explained there, and this stage links back to them.

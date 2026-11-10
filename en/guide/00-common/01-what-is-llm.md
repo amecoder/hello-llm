@@ -573,7 +573,7 @@ Compare the AI's count with your own count. Did it get the numbers right? Did it
 | B (Billion) | One billion; "70B" means 70 billion parameters |
 | Training Data | The text fed to a model during training, measured in tokens |
 | Interpretability | The research field that peers inside a model's internal calculations to explain how they work |
-| Reasoning Model | A model that writes out a step-by-step chain of thought before giving its final answer |
+| Reasoning Model | A model that writes out a step-by-step chain of thought before giving its final answer (that text is not guaranteed to match its actual computation) |
 | Introspection | A model's ability to notice and report its own internal state |
 | RLHF | Training that polishes a model toward good answers chosen by humans |
 | Fine-tuning | The stage of shaping a pre-trained model into a helpful conversation partner; RLHF is one method |

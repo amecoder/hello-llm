@@ -575,7 +575,7 @@ Compara los números que contó la IA con los que cuentes tú mismo. ¿Coinciden
 | B (Billion) | B (mil millones) | Mil millones. «70B» son 70 000 millones de parámetros |
 | Training Data | Datos de entrenamiento | El texto que se le hizo leer al entrenarlo. Su cantidad se cuenta en tokens |
 | Interpretability | Interpretabilidad | Campo de investigación que mira y explica el cálculo interno de un modelo |
-| Reasoning Model | Modelo de razonamiento | Modelo que, antes de responder, va paso a paso escribiendo su proceso de pensamiento |
+| Reasoning Model | Modelo de razonamiento | Modelo que, antes de responder, va paso a paso escribiendo su proceso de pensamiento (no se garantiza que ese texto coincida con su cálculo real) |
 | Introspection | Introspección | Capacidad del modelo de darse cuenta de su propio estado interno y expresarlo |
 | RLHF | RLHF (aprendizaje por refuerzo con comentarios humanos) | Entrenamiento que pule el modelo hacia las respuestas buenas elegidas por personas |
 | Fine-tuning | Ajuste fino | Etapa que pule como interlocutor a un modelo que ya lo ha leído todo. RLHF es uno de sus métodos |
