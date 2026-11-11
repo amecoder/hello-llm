@@ -1,5 +1,7 @@
 # 1장. Antigravity는 무엇이고 앞의 두 도구와 무엇이 다른가
 
+<Badge type="tip" text="필수" /> 이 단계를 따라가려면 꼭 읽으세요.
+
 > **한 줄 요약**: Antigravity는 Google이 만든, **내 컴퓨터의 폴더에서 직접 일하는** AI 도구입니다. 데스크톱 앱과 터미널 프로그램 `agy`가 있습니다.
 > 앞의 두 도구와 다른 점은 둘입니다. **무료 Google 계정으로도 모든 기능**을 쓸 수 있고, Codex 단계에서 만든 **`AGENTS.md`와 `.agents/skills`를 그대로 읽습니다.**
 

@@ -1,5 +1,7 @@
 # 5장. 스킬 옮기기 — `$weekly-review` 한 줄로 주간 회고
 
+<Badge type="tip" text="필수" /> 이 단계를 따라가려면 꼭 읽으세요.
+
 > **한 줄 요약**: Codex의 스킬은 Claude Code와 **같은 형식**(`SKILL.md`)이고, 두는 곳과 부르는 기호만 다릅니다. 폴더는 `.agents/skills`, 부를 때는 `$이름`입니다.
 > 정리도구의 스킬 3개를 옮기고, `$weekly-review` 한 줄로 주간 회고를 만들어 원본과 맞춰 봅니다.
 

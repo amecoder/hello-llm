@@ -1,5 +1,7 @@
 # 4장. 권한과 되돌리기 — 프리셋 넷, 버리기는 조심
 
+<Badge type="tip" text="필수" /> 이 단계를 따라가려면 꼭 읽으세요.
+
 > **한 줄 요약**: 앱의 권한은 **프리셋 네 개**(Request Review·Default·Auto·Turbo)로 고릅니다. 처음에는 **Request Review**나 **Default**로 시작하세요.
 > Review 창의 **버리기는 확인 없이 바로** 적용됩니다. 터미널에는 `/rewind`가 있지만, 가장 확실한 안전망은 여전히 Git 기록입니다.
 

@@ -1,5 +1,7 @@
 # 3장. 규칙 파일 AGENTS.md — CLAUDE.md를 Codex로 옮기기
 
+<Badge type="tip" text="필수" /> 이 단계를 따라가려면 꼭 읽으세요.
+
 > **한 줄 요약**: Codex는 일을 시작하기 전에 **`AGENTS.md`**를 읽습니다. Claude Code의 `CLAUDE.md`는 Codex가 그대로 두면 읽지 않습니다.
 > 정리도구 폴더의 규칙을 `AGENTS.md`로 옮기고, 새 대화에서 **규칙을 말하지 않아도** 지키는지 시험합니다.
 
