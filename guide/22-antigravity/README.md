@@ -6,15 +6,15 @@ Antigravity는 Google이 만든, **내 컴퓨터의 폴더에서 직접 일하�
 > **이 가이드는 2026년 11월 1일에 확인한 Antigravity 공식 문서(antigravity.google/docs)와 터미널 `agy`로 실행한 결과를 바탕으로 썼습니다. 앱 화면으로는 아직 실습하지 못했습니다.** 기능과 메뉴 이름은 자주 바뀝니다.
 > 세 도구 중 유일하게 **무료 Google 계정**(만 18세 이상)으로도 모든 기능을 쓸 수 있습니다. 요금제에 따라 사용량과 모델만 다릅니다.
 
-| 장 | 제목 | 이런 걸 알게 됩니다 |
-|---|---|---|
-| 1 | [Antigravity는 무엇이고 앞의 두 도구와 무엇이 다른가](01-what-is.md) | 네 가지 모양, 무료로도 모든 기능, 모델, 세 도구 대응 |
-| 2 | [앱 설치와 첫 정리](02-first-task.md) | 설치·로그인, 프로젝트로 열기, Planning mode와 Proceed, Review 창 |
-| 3 | [규칙과 스킬 — 옮기지 않아도 된다](03-rules-skills.md) | AGENTS.md·.agents/skills 그대로, 같은 메모로 0→1, /스킬이름 |
-| 4 | [권한과 되돌리기](04-permissions-undo.md) | 프리셋 넷, 울타리 기본값(앱·터미널), 버리기 주의, /rewind |
-| 5 | [계획·예약·브라우저·목표](05-plan-schedule.md) | /plan, /schedule과 Automations, /browser, /goal, 원격 조종 |
-| 6 | [터미널에서 쓰기](06-terminal.md) | agy -p, 조용한 거절과 종료 코드 0, 폴더 신뢰, 함정 네 가지 |
-| 7 | [비용·데이터·안전, 그리고 세 도구 고르기](07-safety-choose.md) | 사용량·크레딧, Enable Telemetry, 숨은 지시 실험, 세 도구 함께 쓰기, 실습 과제 |
+| 장 | 읽기 | 제목 | 이런 걸 알게 됩니다 |
+|---|---|---|---|
+| 1 | 필수 | [Antigravity는 무엇이고 앞의 두 도구와 무엇이 다른가](01-what-is.md) | 네 가지 모양, 무료로도 모든 기능, 모델, 세 도구 대응 |
+| 2 | 필수 | [앱 설치와 첫 정리](02-first-task.md) | 설치·로그인, 프로젝트로 열기, Planning mode와 Proceed, Review 창 |
+| 3 | 필수 | [규칙과 스킬 — 옮기지 않아도 된다](03-rules-skills.md) | AGENTS.md·.agents/skills 그대로, 같은 메모로 0→1, /스킬이름 |
+| 4 | 필수 | [권한과 되돌리기](04-permissions-undo.md) | 프리셋 넷, 울타리 기본값(앱·터미널), 버리기 주의, /rewind |
+| 5 | 선택 | [계획·예약·브라우저·목표](05-plan-schedule.md) | /plan, /schedule과 Automations, /browser, /goal, 원격 조종 |
+| 6 | 선택 | [터미널에서 쓰기](06-terminal.md) | agy -p, 조용한 거절과 종료 코드 0, 폴더 신뢰, 함정 네 가지 |
+| 7 | 필수 | [비용·데이터·안전, 그리고 세 도구 고르기](07-safety-choose.md) | 사용량·크레딧, Enable Telemetry, 숨은 지시 실험, 세 도구 함께 쓰기, 실습 과제 |
 
 ## 연습 자료
 

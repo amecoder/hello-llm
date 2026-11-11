@@ -6,16 +6,16 @@ Codex는 OpenAI가 만든, **내 컴퓨터의 폴더에서 직접 일하는** AI
 > **이 가이드는 2026년 11월 1일에 확인한 Codex 공식 문서(learn.chatgpt.com)와 실제 실행 결과를 바탕으로 썼습니다.** 기능과 메뉴 이름은 자주 바뀝니다.
 > 실습은 **Plus 이상** 요금제를 기준으로 합니다. Free·Go는 점진적 제공이라 아직 Codex가 보이지 않을 수 있습니다.
 
-| 장 | 제목 | 이런 걸 알게 됩니다 |
-|---|---|---|
-| 1 | [Codex는 무엇이고 Claude Code와 무엇이 다른가](01-what-is.md) | ChatGPT 앱 안의 Chat·Work·Codex, Claude Code와 대응, 요금제 |
-| 2 | [ChatGPT 앱에서 Codex 시작하기](02-first-task.md) | 설치, Codex 고르기, 폴더 열기, 첫 정리 맡기기 |
-| 3 | [규칙 파일 AGENTS.md](03-agents-md.md) | CLAUDE.md 옮기기, 규칙을 말하지 않고 시험, 가져오기·메모리 |
-| 4 | [권한과 되돌리기](04-permissions-undo.md) | 권한 메뉴 세 가지, 보호 폴더, 리뷰 창, Git으로 되돌리기 |
-| 5 | [스킬 옮기기](05-skills.md) | .agents/skills, $weekly-review 한 줄, 틀린 것과 빠진 것 |
-| 6 | [예약·클라우드·휴대폰](06-schedule-cloud.md) | 예약 조건과 권한, 클라우드와의 차이, 휴대폰 연결 |
-| 7 | [터미널에서 쓰기](07-terminal.md) | 설치, codex exec(기본 읽기 전용), 대화형 명령 |
-| 8 | [비용·데이터·안전, 그리고 도구 고르기](08-safety-choose.md) | 사용량, 데이터 설정, 숨은 지시 실험, 두 도구 함께 쓰기, 실습 과제 |
+| 장 | 읽기 | 제목 | 이런 걸 알게 됩니다 |
+|---|---|---|---|
+| 1 | 필수 | [Codex는 무엇이고 Claude Code와 무엇이 다른가](01-what-is.md) | ChatGPT 앱 안의 Chat·Work·Codex, Claude Code와 대응, 요금제 |
+| 2 | 필수 | [ChatGPT 앱에서 Codex 시작하기](02-first-task.md) | 설치, Codex 고르기, 폴더 열기, 첫 정리 맡기기 |
+| 3 | 필수 | [규칙 파일 AGENTS.md](03-agents-md.md) | CLAUDE.md 옮기기, 규칙을 말하지 않고 시험, 가져오기·메모리 |
+| 4 | 필수 | [권한과 되돌리기](04-permissions-undo.md) | 권한 메뉴 세 가지, 보호 폴더, 리뷰 창, Git으로 되돌리기 |
+| 5 | 필수 | [스킬 옮기기](05-skills.md) | .agents/skills, $weekly-review 한 줄, 틀린 것과 빠진 것 |
+| 6 | 선택 | [예약·클라우드·휴대폰](06-schedule-cloud.md) | 예약 조건과 권한, 클라우드와의 차이, 휴대폰 연결 |
+| 7 | 선택 | [터미널에서 쓰기](07-terminal.md) | 설치, codex exec(기본 읽기 전용), 대화형 명령 |
+| 8 | 필수 | [비용·데이터·안전, 그리고 도구 고르기](08-safety-choose.md) | 사용량, 데이터 설정, 숨은 지시 실험, 두 도구 함께 쓰기, 실습 과제 |
 
 ## 연습 자료
 

@@ -1,5 +1,7 @@
 # 1장. Codex는 무엇이고 Claude Code와 무엇이 다른가
 
+<Badge type="tip" text="필수" /> 이 단계를 따라가려면 꼭 읽으세요.
+
 > **한 줄 요약**: Codex는 OpenAI가 만든, **내 컴퓨터의 폴더에서 직접 일하는** AI 도구입니다. 지금은 **ChatGPT 데스크톱 앱 안에서 「Codex」를 골라** 씁니다.
 > 하는 일은 Claude Code와 거의 같습니다. 이 단계에서는 Claude Code 장에서 만든 「정리 도구」를 Codex로 옮기면서 **다른 점만** 배웁니다.
 

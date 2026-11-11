@@ -1,5 +1,7 @@
 # 7장. 터미널에서 쓰기 — `codex exec` 한 줄로 정리도구 확인
 
+<Badge type="info" text="선택" /> 필요할 때 읽으세요. 건너뛰어도 뒤 장을 따라갈 수 있습니다.
+
 > **한 줄 요약**: Codex CLI는 터미널에서 쓰는 Codex입니다. 실행한 폴더의 `AGENTS.md`와 스킬을 읽습니다.
 > `codex exec "할 일"`은 한 번 실행하고 끝나며, **기본이 읽기 전용**입니다. Claude Code의 `claude -p`와 비슷하지만 이 점이 다릅니다.
 
