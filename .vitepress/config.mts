@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import footnote from 'markdown-it-footnote'
+import { foldFootnotes, langOfPath } from './footnotes'
 import { slugify } from './slugify'
 import { readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
@@ -1119,6 +1120,9 @@ export default defineConfig({
     config: (md) => {
       // footnote type lives in .vitepress/env.d.ts
       md.use(footnote)
+      // fold the footnote list and hide long source quotes (see .vitepress/footnotes.ts)
+      const render = md.render.bind(md)
+      md.render = (src, env) => foldFootnotes(render(src, env), langOfPath(env?.relativePath ?? ''))
     },
   },
   themeConfig: {

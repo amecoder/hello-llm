@@ -12,6 +12,7 @@ import LevelTest from './components/LevelTest.vue'
 import YouTube from './components/YouTube.vue'
 import TranslationNotice from './components/TranslationNotice.vue'
 import { trackPageViews } from './analytics'
+import { setupFootnotes } from './footnotes-client'
 import { untranslatedFallback } from './i18n'
 import './custom.css'
 
@@ -26,6 +27,7 @@ export default {
     }),
   enhanceApp({ app, router }) {
     trackPageViews(router)
+    setupFootnotes(router)
     router.onBeforeRouteChange = (to) => {
       const fallback = untranslatedFallback(to, withBase('/'))
       if (!fallback) return
