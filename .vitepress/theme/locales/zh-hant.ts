@@ -163,6 +163,7 @@ export const zhHantContent: Content = {
     claude: '第2階段 · Claude',
     gemini: '第2階段 · Gemini',
     'claude-code': '第3階段 · Claude Code',
+    'claude-code-cli': '第3階段 · Claude Code 終端',
     codex: '第3階段 · Codex',
     antigravity: '第3階段 · Antigravity',
     'ai-sdlc': '第4階段 · AI-SDLC',

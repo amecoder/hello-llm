@@ -52,8 +52,8 @@ test('translated pages carry the AI translation notice, Korean pages do not', as
 
 test('the language menu on an untranslated page leads to that language, not a 404', async ({ page }) => {
   await page.goto('guide/23-claude-code-cli/04-first-session.html')
-  await page.locator('.VPNavBarTranslations a[href*="/en/guide/"]').evaluate((a: HTMLElement) => a.click())
-  await expect(page).toHaveURL(/\/en\/guide\/$/)
+  await page.locator('.VPNavBarTranslations a[href*="/es/guide/"]').evaluate((a: HTMLElement) => a.click())
+  await expect(page).toHaveURL(/\/es\/guide\/$/)
   await expect(page.locator('.NotFound')).toHaveCount(0)
 })
 

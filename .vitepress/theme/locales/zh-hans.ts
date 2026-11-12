@@ -163,6 +163,7 @@ export const zhHansContent: Content = {
     claude: '第2阶段 · Claude',
     gemini: '第2阶段 · Gemini',
     'claude-code': '第3阶段 · Claude Code',
+    'claude-code-cli': '第3阶段 · Claude Code 终端',
     codex: '第3阶段 · Codex',
     antigravity: '第3阶段 · Antigravity',
     'ai-sdlc': '第4阶段 · AI-SDLC',

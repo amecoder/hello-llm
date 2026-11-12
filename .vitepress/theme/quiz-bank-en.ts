@@ -4,6 +4,7 @@ import { AI_SDLC_CHAPTER_TITLE_EN, AI_SDLC_QUESTION_TEXT_EN } from './quiz-bank-
 import { ANTIGRAVITY_CHAPTER_TITLE_EN, ANTIGRAVITY_QUESTION_TEXT_EN } from './quiz-bank-en-antigravity.ts'
 import { CODEX_CHAPTER_TITLE_EN, CODEX_QUESTION_TEXT_EN } from './quiz-bank-en-codex.ts'
 import { CLAUDE_CODE_CHAPTER_TITLE_EN, CLAUDE_CODE_QUESTION_TEXT_EN } from './quiz-bank-en-claude-code.ts'
+import { CLAUDE_CODE_CLI_CHAPTER_TITLE_EN, CLAUDE_CODE_CLI_QUESTION_TEXT_EN } from './quiz-bank-en-claude-code-cli.ts'
 import { GEMINI_CHAPTER_TITLE_EN, GEMINI_QUESTION_TEXT_EN } from './quiz-bank-en-gemini.ts'
 import { CLAUDE_CHAPTER_TITLE_EN, CLAUDE_QUESTION_TEXT_EN } from './quiz-bank-en-claude.ts'
 import { CHATGPT_CHAPTER_TITLE_EN, CHATGPT_QUESTION_TEXT_EN } from './quiz-bank-en-chatgpt.ts'
@@ -15,6 +16,7 @@ export const CHAPTER_TITLE_EN: Record<number, string> = {
   ...ANTIGRAVITY_CHAPTER_TITLE_EN,
   ...CODEX_CHAPTER_TITLE_EN,
   ...CLAUDE_CODE_CHAPTER_TITLE_EN,
+  ...CLAUDE_CODE_CLI_CHAPTER_TITLE_EN,
   ...GEMINI_CHAPTER_TITLE_EN,
   ...CLAUDE_CHAPTER_TITLE_EN,
   ...CHATGPT_CHAPTER_TITLE_EN,
@@ -36,6 +38,7 @@ export const QUESTION_TEXT_EN: Record<string, QuestionText> = {
   ...ANTIGRAVITY_QUESTION_TEXT_EN,
   ...CODEX_QUESTION_TEXT_EN,
   ...CLAUDE_CODE_QUESTION_TEXT_EN,
+  ...CLAUDE_CODE_CLI_QUESTION_TEXT_EN,
   ...GEMINI_QUESTION_TEXT_EN,
   ...CLAUDE_QUESTION_TEXT_EN,
   ...CHATGPT_QUESTION_TEXT_EN,

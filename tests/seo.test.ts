@@ -159,6 +159,14 @@ test('puts the service name in front of a service guide title, in every language
   assert.equal(seoTitle('guide/20-claude-code/03-screen-tour.md', '3장.'), 'Claude Code 3장.')
 })
 
+test('names the terminal guide in the page language', () => {
+  assert.equal(seoTitle('guide/23-claude-code-cli/02-shell-basics.md', '2장. 터미널 기초'), 'Claude Code 터미널 2장. 터미널 기초')
+  assert.equal(seoTitle('en/guide/23-claude-code-cli/02-shell-basics.md', 'Chapter 2. Terminal Basics'), 'Claude Code Terminal Chapter 2. Terminal Basics')
+  assert.equal(seoTitle('ja/guide/23-claude-code-cli/02-shell-basics.md', '第2章 ターミナルの基本'), 'Claude Code ターミナル 第2章 ターミナルの基本')
+  assert.equal(seoTitle('zh-hans/guide/23-claude-code-cli/02-shell-basics.md', '第2章 终端基础'), 'Claude Code 终端 第2章 终端基础')
+  assert.equal(seoTitle('zh-hant/guide/23-claude-code-cli/02-shell-basics.md', '第2章 終端基礎'), 'Claude Code 終端 第2章 終端基礎')
+})
+
 test('leaves a title alone when it already names the service, or the guide is not about one service', () => {
   assert.equal(seoTitle('guide/21-codex/01-what-is.md', '1장. Codex란'), '1장. Codex란')
   assert.equal(seoTitle('guide/11-chatgpt/index.md', '2단계 · ChatGPT 사용 가이드'), '2단계 · ChatGPT 사용 가이드')
@@ -186,7 +194,7 @@ test('gives every published page a title of its own', () => {
       seen.set(title, source)
     }
   }
-  assert.equal(seen.size, 598)
+  assert.equal(seen.size, 662)
 })
 
 const stageTitle = (path: string) => (path === 'en/guide/11-chatgpt/index.md' ? 'Stage 2 · ChatGPT' : '')

@@ -6,6 +6,7 @@ import { CHATGPT } from './chatgpt.ts'
 import { CLAUDE } from './claude.ts'
 import { GEMINI } from './gemini.ts'
 import { CLAUDE_CODE } from './claude-code.ts'
+import { CLAUDE_CODE_CLI } from './claude-code-cli.ts'
 import { CODEX } from './codex.ts'
 import { ANTIGRAVITY } from './antigravity.ts'
 import { AI_SDLC } from './ai-sdlc.ts'
@@ -98,10 +99,24 @@ const chapters: Record<number, string> = {
   708: "第8章 运营与改进",
   709: "第9章 安全与责任",
   710: "第10章 实践任务",
+  801: "第1章 终端与 Claude Code",
+  802: "第2章 终端基础",
+  803: "第3章 安装与登录",
+  804: "第4章 第一次会话",
+  805: "第5章 输入技巧与命令",
+  806: "第6章 会话与上下文",
+  807: "第7章 许可与撤回",
+  808: "第8章 项目记忆与设置",
+  809: "第9章 技能与扩展",
+  810: "第10章 一行运行与自动化",
+  811: "第11章 钩子与界面定制",
+  812: "第12章 同时工作与远程",
+  813: "第13章 费用·安全·问题解决",
+  814: "第14章 实践任务与像专家一样使用",
 }
 
 export const zh_hans: Translation = {
   chapters,
-  questions: { ...QUIZ1, ...EXAM, ...CHATGPT, ...CLAUDE, ...GEMINI, ...CLAUDE_CODE, ...CODEX, ...ANTIGRAVITY, ...AI_SDLC },
+  questions: { ...QUIZ1, ...EXAM, ...CHATGPT, ...CLAUDE, ...GEMINI, ...CLAUDE_CODE, ...CLAUDE_CODE_CLI, ...CODEX, ...ANTIGRAVITY, ...AI_SDLC },
   level: { ...LEVEL_BASIC, ...LEVEL_INTERMEDIATE, ...LEVEL_ADVANCED, ...LEVEL_EXPERT },
 }

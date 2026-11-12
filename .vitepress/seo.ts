@@ -30,6 +30,11 @@ const SERVICES: Record<string, string> = {
   '22-antigravity': 'Antigravity',
 }
 
+// a service name that is a phrase, not a product name, is said in the page language
+const LOCAL_SERVICES: Record<string, Record<string, string>> = {
+  '23-claude-code-cli': { en: 'Claude Code Terminal', ja: 'Claude Code ターミナル', 'zh-hans': 'Claude Code 终端', 'zh-hant': 'Claude Code 終端' },
+}
+
 const CJK = /[　-ヿ一-鿿＀-￯]/
 const SKIP_BLOCK = /^(#|!\[|<|[-*+] |\||```|\d+\. |\[\^|\[\[|> \[!|-{3,}\s*$)/
 const FENCE = /^```[\s\S]*?^```\s*$/gm
@@ -123,7 +128,9 @@ export function alternateLinks(relativePath: string, pages: ReadonlySet<string>)
 
 /** Page title for search results and link cards; the name goes first so a long title keeps it when cut. */
 export function seoTitle(relativePath: string, title: string): string {
-  const service = SERVICES[splitLocale(relativePath).rest.match(/^guide\/([^/]+)\//)?.[1] ?? '']
+  const { locale, rest } = splitLocale(relativePath)
+  const stage = rest.match(/^guide\/([^/]+)\//)?.[1] ?? ''
+  const service = LOCAL_SERVICES[stage]?.[locale] ?? SERVICES[stage]
   return service && title && !title.includes(service) ? `${service} ${title}` : title
 }
 

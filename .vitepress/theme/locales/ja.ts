@@ -162,6 +162,7 @@ export const jaContent: Content = {
     claude: 'ステップ2 · Claude',
     gemini: 'ステップ2 · Gemini',
     'claude-code': 'ステップ3 · Claude Code',
+    'claude-code-cli': 'ステップ3 · Claude Code ターミナル',
     codex: 'ステップ3 · Codex',
     antigravity: 'ステップ3 · Antigravity',
     'ai-sdlc': 'ステップ4 · AI-SDLC',

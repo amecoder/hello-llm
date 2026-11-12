@@ -61,7 +61,7 @@ features:
 |---|---|
 | 1. 通用指南（已公開） | 在任何 AI 裡都通用的原理和提問的方法 |
 | 2. [ChatGPT](/zh-hant/guide/11-chatgpt/) · [Claude](/zh-hant/guide/10-claude/) · [Gemini](/zh-hant/guide/12-gemini/)（已公開） | 各服務的功能和設定 |
-| 3. [Claude Code](/zh-hant/guide/20-claude-code/) · [Codex](/zh-hant/guide/21-codex/) · [Antigravity](/zh-hant/guide/22-antigravity/)（已公開） | 用能在我電腦上直接讀取、修改檔案的 AI 工具來交代工作 |
+| 3. [Claude Code](/zh-hant/guide/20-claude-code/) · [Claude Code 終端](/zh-hant/guide/23-claude-code-cli/) · [Codex](/zh-hant/guide/21-codex/) · [Antigravity](/zh-hant/guide/22-antigravity/)（已公開） | 用能在我電腦上直接讀取、修改檔案的 AI 工具來交代工作 |
 | 4. [AI-SDLC](/zh-hant/guide/30-ai-sdlc/)（已公開） | 和 AI 一起從規劃到釋出來製作軟體——SDLC 是軟體開發的全過程（Software Development Life Cycle） |
 
 各章內容可以在[完整目錄](/zh-hant/guide/)裡檢視。

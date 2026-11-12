@@ -87,6 +87,10 @@ features:
     details: Claude reading and editing files directly in a folder on your computer — 12 chapters starting from the desktop app without a terminal, learning by building a custom file-organizing tool
     link: /en/guide/20-claude-code/
     linkText: Start Claude Code Guide
+  - title: Stage 3 · Claude Code Terminal Guide
+    details: 14 chapters for people opening a terminal for the first time — from basic commands to installing, approving and undoing, skills, and a weekly summary that runs with one command
+    link: /en/guide/23-claude-code-cli/
+    linkText: Start Terminal Guide
   - title: Stage 3 · Codex User Guide
     details: Codex inside the ChatGPT app — 8 chapters learning only what is different by moving over the organizing tool you built with Claude Code
     link: /en/guide/21-codex/
@@ -126,5 +130,5 @@ The Stage 2 ChatGPT, Claude, and Gemini guides do not depend on each other. You 
 |---|---|---|
 | 1 | [Common Guide](/en/guide/00-common/) | Core principles and skills that work with any LLM |
 | 2 | [ChatGPT](/en/guide/11-chatgpt/) · [Claude](/en/guide/10-claude/) · [Gemini](/en/guide/12-gemini/) | Features and practical tips for each service |
-| 3 | [Claude Code](/en/guide/20-claude-code/) · [Codex](/en/guide/21-codex/) · [Antigravity](/en/guide/22-antigravity/) | Coding AI tools that work right on your computer |
+| 3 | [Claude Code](/en/guide/20-claude-code/) · [Claude Code Terminal](/en/guide/23-claude-code-cli/) · [Codex](/en/guide/21-codex/) · [Antigravity](/en/guide/22-antigravity/) | Coding AI tools that work right on your computer |
 | 4 | [AI-SDLC](/en/guide/30-ai-sdlc/) | From planning to deployment with AI — the full software development lifecycle (SDLC) |

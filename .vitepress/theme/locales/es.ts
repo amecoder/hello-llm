@@ -162,6 +162,7 @@ export const esContent: Content = {
     claude: 'Etapa 2 · Claude',
     gemini: 'Etapa 2 · Gemini',
     'claude-code': 'Etapa 3 · Claude Code',
+    'claude-code-cli': 'Etapa 3 · Claude Code en la terminal',
     codex: 'Etapa 3 · Codex',
     antigravity: 'Etapa 3 · Antigravity',
     'ai-sdlc': 'Etapa 4 · AI-SDLC',

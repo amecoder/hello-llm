@@ -87,6 +87,10 @@ features:
     details: 在我电脑的文件夹里直接读取、修改文件的 Claude——不用终端，从桌面应用开始，一边做出按我的方式整理的工具一边学习，共 12 章
     link: /zh-hans/guide/20-claude-code/
     linkText: 开始 Claude Code 指南
+  - title: 第3阶段 · Claude Code 终端指南
+    details: 写给第一次打开终端的人的 14 章 — 从基础命令到安装、许可与撤销、技能，再到一行命令就能运行的每周整理
+    link: /zh-hans/guide/23-claude-code-cli/
+    linkText: 开始终端指南
   - title: 第3阶段 · Codex 使用指南
     details: ChatGPT 应用里的 Codex——一边搬运用 Claude Code 做的整理工具，一边只学不同之处，共 8 章
     link: /zh-hans/guide/21-codex/
@@ -126,5 +130,5 @@ features:
 |---|---|---|
 | 1 | [通用指南](/zh-hans/guide/00-common/) | 在任何 LLM 里都通用的原理和用法 |
 | 2 | [ChatGPT](/zh-hans/guide/11-chatgpt/) · [Claude](/zh-hans/guide/10-claude/) · [Gemini](/zh-hans/guide/12-gemini/) | 各服务的功能和使用方法 |
-| 3 | [Claude Code](/zh-hans/guide/20-claude-code/) · [Codex](/zh-hans/guide/21-codex/) · [Antigravity](/zh-hans/guide/22-antigravity/) | 在我电脑上工作的编程 AI 工具 |
+| 3 | [Claude Code](/zh-hans/guide/20-claude-code/) · [Claude Code 终端](/zh-hans/guide/23-claude-code-cli/) · [Codex](/zh-hans/guide/21-codex/) · [Antigravity](/zh-hans/guide/22-antigravity/) | 在我电脑上工作的编程 AI 工具 |
 | 4 | [AI-SDLC](/zh-hans/guide/30-ai-sdlc/) | 和 AI 一起从规划到发布——软件开发全过程（SDLC） |

@@ -14,7 +14,7 @@ export type BadgeText = {
 }
 
 export type Content = {
-  stages: Record<'common' | 'chatgpt' | 'claude' | 'gemini' | 'claude-code' | 'codex' | 'antigravity' | 'ai-sdlc', string>
+  stages: Record<'common' | 'chatgpt' | 'claude' | 'gemini' | 'claude-code' | 'claude-code-cli' | 'codex' | 'antigravity' | 'ai-sdlc', string>
   builderHeadings: Record<'context' | 'document' | 'example' | 'instructions' | 'format', string>
   defaultName: string
   certLevels: Record<'advanced' | 'intermediate' | 'beginner', string>
