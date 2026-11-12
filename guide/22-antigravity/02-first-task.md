@@ -5,7 +5,7 @@
 > **한 줄 요약**: Antigravity 앱을 설치하고 Google 계정으로 로그인한 뒤, 정리도구 폴더를 **프로젝트**로 엽니다.
 > 처음에는 **Planning mode**(먼저 계획)로 맡기고, 계획을 읽은 뒤 **Proceed**로 진행합니다.
 
-이 장은 2026년 11월 1일에 확인한 Antigravity 공식 문서를 바탕으로 썼습니다. **이 가이드는 아직 앱 화면으로 실습하지 못했습니다.** 화면 이름은 공식 문서의 영어 이름을 그대로 적었고, 내 화면과 다르면 화면을 따르세요. 실제 실행 결과는 3장(터미널로 실행)에 있습니다.
+이 가이드는 아직 앱 화면으로 실습하지 못했습니다. 화면의 버튼 이름은 공식 문서의 영어 이름을 그대로 적었습니다. 내 화면과 조금 달라도 괜찮습니다. 이름이 비슷한 버튼을 찾아 따라 해 보세요. 실제로 돌려 본 결과는 3장(터미널로 실행)에 있습니다.[^tested]
 
 ## 설치하고 로그인하기
 
@@ -32,9 +32,14 @@ Antigravity 앱의 에이전트는 **프로젝트**(Projects) 안에서 일합�
 
 출처: Antigravity 공식 문서[^modes]
 
-정리도구에는 **Local mode**로 충분합니다. New worktree mode는 Git 저장소에서만 쓰는 방식입니다.[^worktree]
+정리도구에는 **Local mode**를 고르세요. 지금 폴더에서 바로 일하므로 결과 파일을 바로 찾을 수 있습니다.
 
-새 프로젝트는 처음에 **Inherit Global** 권한으로 시작하고, 프로젝트 폴더 전부를 읽고 쓸 수 있습니다.[^inherit] 권한은 4장에서 다룹니다.
+권한(에이전트가 무엇을 해도 되는지)은 4장에서 다룹니다. 지금은 설정을 바꾸지 않아도 됩니다.
+
+::: details 자세히 (눌러서 펼치기)
+- New worktree mode는 Git 저장소에서만 쓰는 방식입니다. 복잡한 일을 지금 폴더와 떼어 놓고 시킬 때 씁니다.[^worktree]
+- 새 프로젝트는 처음에 **Inherit Global** 권한으로 시작합니다. 프로젝트 폴더 전부를 읽고 쓸 수 있는 상태입니다.[^inherit]
+:::
 
 <Quiz id="ch602-project" />
 
@@ -51,9 +56,13 @@ Antigravity 앱의 에이전트는 **프로젝트**(Projects) 안에서 일합�
 
 처음에는 **Planning mode**를 권합니다. 계획서(Implementation plan)가 나오면 읽어 보고, 괜찮으면 대화나 계획서 위쪽의 **Proceed**를 눌러 진행합니다.[^proceed] Claude Code 5장의 「계획」 모드, Codex 4장의 `/plan`과 같은 역할입니다.
 
-설정의 **Agent** 탭에서 검토 방식을 고를 수 있습니다. **Request review**는 계획이나 바뀐 내용을 만들면 멈추고 내 승인을 기다립니다.[^review-mode] 반대로 Always proceed는 멈추지 않고 바로 실행합니다.[^always] 처음에는 Request review가 안전합니다.
-
 일을 마치면 에이전트가 **정리 보고**(Walkthrough)를 만들어 무엇이 바뀌었는지 요약합니다.[^walkthrough]
+
+처음에는 **Request review**(내 승인을 기다리는 방식)로 두는 것이 안전합니다. 에이전트가 계획을 만들면 멈추고 내가 Proceed를 누를 때까지 기다립니다.[^review-mode] 검토 방식은 설정의 **Agent** 탭에서 고릅니다.[^review-mode]
+
+::: details 자세히 (눌러서 펼치기)
+반대쪽 끝인 Always proceed는 멈추지 않고 바로 실행합니다.[^always] 익숙해지기 전에는 고르지 않는 편이 좋습니다.
+:::
 
 <Quiz id="ch602-plan" />
 
@@ -77,7 +86,12 @@ inbox/회의-2026-10-27-주간회의.txt 메모를 회의록으로 정리해서 
 
 앱의 **Review** 창은 프로젝트 Git 저장소의 변경을 보여 줍니다.[^review] 기본 보기는 아직 기록하지 않은 모든 변경(**Uncommitted**)이라, 내가 고친 것도 함께 보입니다. **Agent Edits**를 고르면 이 대화에서 에이전트가 고친 파일만 봅니다.[^views]
 
-Review 창이 Git 저장소의 변경을 보여 주므로, 정리도구 폴더도 Git 저장소로 만들어 두면 편합니다. Claude Code 3장이나 Codex 2장을 따라 했다면 이미 Git 저장소입니다. Git이 아닌 폴더에서 Review 창이 어떻게 보이는지는 공식 문서에 나오지 않습니다.
+**Git**(깃)은 파일이 언제 어떻게 바뀌었는지 기록해 두는 도구입니다. Review 창은 이 기록과 지금 파일을 비교해서 보여 줍니다. 그래서 정리도구 폴더도 Git 저장소(Git 기록이 켜진 폴더)로 만들어 두면 편합니다.
+
+- Claude Code 3장이나 Codex 2장을 따라 했다면 이미 Git 저장소입니다.
+- 아직 아니라면 Git 명령을 몰라도 됩니다. 에이전트에게 「이 폴더에 변경 기록(Git)을 켜 줘」라고 부탁하는 방법이 [Claude Code 3장](../20-claude-code/03-screen-tour.md)에 있습니다(선택). Claude Code에서 확인한 방법이라, Antigravity에서도 그대로 되는지는 이 가이드가 확인하지 못했습니다.
+
+Git이 아닌 폴더에서 Review 창이 어떻게 보이는지는 공식 문서에 나오지 않습니다.
 
 <Quiz id="ch602-review" />
 
@@ -110,6 +124,7 @@ Review 창이 Git 저장소의 변경을 보여 주므로, 정리도구 폴더�
 
 다음 장: [3장. 규칙과 스킬 — 옮기지 않아도 된다](03-rules-skills.md)
 
+[^tested]: 이 장은 2026년 11월 1일에 확인한 Antigravity 공식 문서를 바탕으로 썼습니다. 이 가이드는 아직 앱 화면으로 실습하지 못했습니다.
 [^dmg]: Antigravity 공식 문서, 「Get started」. "Open the downloaded `Antigravity.dmg` disk image and drag **Antigravity** into your **Applications** folder." https://antigravity.google/docs/getting-started (확인일 2026-11-01)
 [^signin]: Antigravity 공식 문서, 「Authenticate」. "Click **Sign in** to open the browser authentication flow." / "Complete the browser-based OAuth flow using your personal Google Account (Free, Pro, or Ultra plan)." https://antigravity.google/docs/install (확인일 2026-11-01)
 [^projects]: Antigravity 공식 문서, 「Get started」. "Agents operate within **Projects**, which define the repository boundaries, file scopes, and security permissions for your workspaces." https://antigravity.google/docs/getting-started (확인일 2026-11-01)

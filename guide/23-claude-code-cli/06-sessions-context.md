@@ -4,9 +4,7 @@
 
 > **한 줄 요약**: 대화는 폴더별로 저장되어 언제든 다시 열 수 있습니다. 대화가 길어지면 `/compact`로 줄이고, 다른 일로 넘어가면 `/clear`로 비웁니다.
 
-이 장의 화면은 2026년 11월 6일 리눅스에서 Claude Code 2.1.318로 실행한 결과입니다.
-
-어제 하던 일을 오늘 이어 가고 싶을 때가 있습니다. 대화가 길어져서 답이 흐려질 때도 있습니다. 이 장은 그 두 가지를 다룹니다.
+어제 하던 일을 오늘 이어 가고 싶을 때가 있습니다. 대화가 길어져서 답이 흐려질 때도 있습니다. 이 장은 그 두 가지를 다룹니다.[^run]
 
 ## 세션이란
 
@@ -59,7 +57,12 @@ cd ~/hello-ai-연습/터미널
     to rename · Type to search · Esc to cancel
 ```
 
-위아래 화살표로 고르고 Enter를 누르면 열립니다. 이름 아래 줄은 언제 쓴 대화인지와 크기를 보여 줍니다. `HEAD`는 무시해도 됩니다. 맨 아래 줄이 쓸 수 있는 키입니다. 글자를 치면 검색되고, Space는 미리 보기, Ctrl+R은 이름 바꾸기, Esc는 취소입니다.
+위아래 화살표로 고르고 Enter를 누르면 열립니다. 볼 곳은 두 군데뿐입니다.
+
+- **`❯` 줄**: 고른 대화의 이름입니다.
+- **그 아래 줄**: 언제 쓴 대화인지(`4 seconds ago`)와 크기(`320.7KB`)입니다. 가운데 `HEAD`는 무시해도 됩니다.
+
+맨 아래 두 줄은 쓸 수 있는 키 안내입니다. 글자를 치면 검색되고, Space는 미리 보기, Ctrl+R은 이름 바꾸기, Esc는 취소입니다. 나머지 키는 지금 쓰지 않아도 됩니다.
 
 이미 `claude` 안에 있다면 `/resume`을 치세요. 같은 목록이 열립니다.[^session-names] 다시 열면 같은 세션에 새 메시지가 이어서 쌓입니다.[^same-session]
 
@@ -67,13 +70,15 @@ cd ~/hello-ai-연습/터미널
 
 ## 맥락 창이란
 
-**맥락 창**(Context window)은 Claude가 지금 이 순간 들고 있는 내용 전체입니다. 내가 보낸 말만 들어 있는 것이 아닙니다. 대화 기록, 파일 내용, 명령 출력, `CLAUDE.md`, 자동 메모리, 불러온 스킬, 시스템 지시가 함께 들어 있습니다.[^window] `CLAUDE.md`와 자동 메모리는 8장, 스킬은 9장에서 배웁니다. 책상 위에 펼친 자료라고 생각하면 쉽습니다.
+**맥락 창**(Context window)은 Claude가 지금 이 순간 들고 있는 내용 전체입니다. 책상 위에 펼친 자료라고 생각하면 쉽습니다.
 
-이 공간은 **토큰**(Token)으로 셉니다. AI가 글을 잘게 나눠 세는 단위입니다.
+책상 위에는 내가 보낸 말만 있는 것이 아닙니다. 대화 기록, Claude가 읽은 파일 내용, 명령을 실행한 결과가 함께 놓여 있습니다. 규칙을 적어 둔 파일, 자동으로 남긴 메모, 불러온 스킬, 기본 지시도 함께 들어 있습니다.[^window] 이 넷의 이름은 차례로 `CLAUDE.md`, 자동 메모리, 스킬, 시스템 지시입니다. `CLAUDE.md`와 자동 메모리는 8장, 스킬은 9장에서 배웁니다. 지금은 이름만 알아 두세요.
+
+이 공간은 **토큰**(Token)으로 셉니다. AI가 글을 잘게 나눠 세는 단위입니다. 단어 하나가 한 조각이 되기도 하고, 여러 조각으로 나뉘기도 합니다([1단계 1장](../00-common/01-what-is-llm.md)에서 본 그 조각입니다). 긴 파일을 하나 읽히면 그만큼 많은 토큰이 책상 위 자리를 차지합니다.
 
 대화가 길어지면 공간이 찹니다. 그러면 Claude Code는 대화를 자동으로 압축합니다. 다만 대화 초반에 준 지시는 잊힐 수 있습니다.[^works-context] "표로 써 줘"라고 처음에 한 번 말했는데 어느 순간 표가 사라졌다면 이런 경우일 수 있습니다.
 
-그래서 오래 지켜야 할 규칙은 대화에 말로 두지 말고 `CLAUDE.md`에 적습니다.[^works-context] 만드는 법은 [8장](08-memory-settings.md)에서 다룹니다.
+그래서 오래 지켜야 할 규칙은 대화에 말로 두지 말고 `CLAUDE.md`(프로젝트에서 지킬 규칙을 적어 두는 파일)에 적습니다.[^works-context] 만드는 법은 [8장](08-memory-settings.md)에서 다룹니다.
 
 <Quiz id="ch806-window" />
 
@@ -106,7 +111,9 @@ cd ~/hello-ai-연습/터미널
 - 같은 일을 계속하나? 그러면 `/compact`.
 - 다른 일로 넘어가나? 그러면 `/clear`.
 
+::: details 자세히 (눌러서 펼치기)
 `/clear`를 쓰면 같은 이름의 세션이 둘이 될 수 있습니다. 이때 `claude -r 이름`은 그 이름의 목록을 보여 줍니다. 시간과 크기를 보고 고르면 됩니다.
+:::
 
 한 가지 요령이 더 있습니다. 두 번 고쳐 말해도 답이 계속 빗나가면 세 번째로 고쳐 말하지 마세요. `/clear` 하고 요청을 더 잘 써서 다시 시작하는 편이 낫습니다.[^two-corrections] 틀린 시도가 대화에 쌓여 있지 않아서입니다.
 
@@ -131,7 +138,12 @@ Context limit reached · /compact or /clear to continue
 - 비밀번호나 인증 정보가 든 파일은 Claude에게 읽히지 마세요. 읽는 순간 기록에도 남을 수 있습니다.
 - 다른 사람과 같이 쓰는 컴퓨터라면 이 폴더가 있다는 것을 기억해 두세요.
 
-읽기를 아예 막는 방법은 [7장](07-permissions-undo.md)에서 해 봅니다. 한 프로젝트의 기록을 지우는 `claude purge` 명령도 있습니다.[^purge] 되돌리기 어려우니 연습 삼아 실행하지는 마세요. 이 가이드에서도 실행하지 않았습니다. 서버 쪽 보관 기간은 [13장](13-cost-safety-trouble.md)에서 다룹니다.
+읽기를 아예 막는 방법은 [7장](07-permissions-undo.md)에서 해 봅니다.
+
+::: details 자세히 (눌러서 펼치기)
+- 한 프로젝트의 기록을 지우는 `claude purge` 명령도 있습니다.[^purge] 되돌리기 어려우니 연습 삼아 실행하지는 마세요. 이 가이드에서도 실행하지 않았습니다.
+- 서버 쪽 보관 기간은 [13장](13-cost-safety-trouble.md)에서 다룹니다.
+:::
 
 <Quiz id="ch806-history" />
 
@@ -177,6 +189,7 @@ Context limit reached · /compact or /clear to continue
 
 다음 장: [7장. 허락과 되돌리기](07-permissions-undo.md)
 
+[^run]: 이 장의 화면은 2026년 11월 6일 리눅스에서 Claude Code 2.1.318로 실행한 결과입니다.
 [^session-names]: Claude Code 공식 문서, 「Manage sessions」. "A session is a saved conversation tied to a project directory." / "if you don't name a session, Claude Code generates a session title for it." / "Run `/resume` inside a session, or `claude --resume` with no arguments, to open the interactive session picker." https://code.claude.com/docs/en/sessions (확인일 2026-11-06)
 [^fresh]: Claude Code 공식 문서, 「How Claude Code works」. "Each new session starts with a fresh context window, without the conversation history from previous sessions." https://code.claude.com/docs/en/how-claude-code-works (확인일 2026-11-06)
 [^rename-tip]: Claude Code 공식 문서, 「Best practices for Claude Code」. "for work that spans several days, `/rename oauth-migration` in the session names it" https://code.claude.com/docs/en/best-practices (확인일 2026-11-06)

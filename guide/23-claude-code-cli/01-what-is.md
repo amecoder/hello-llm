@@ -2,9 +2,9 @@
 
 <Badge type="tip" text="필수" /> 이 단계를 따라가려면 꼭 읽으세요.
 
-> **한 줄 요약**: 터미널은 글자로 컴퓨터에 일을 시키는 창입니다. 이 강좌는 터미널을 한 번도 안 열어 본 사람이 Claude Code를 설치하고, 마지막에는 명령 한 줄로 주간 메모를 정리하는 데까지 갑니다.
+> **한 줄 요약**: 터미널은 글자로 컴퓨터에 일을 시키는 창입니다. 이 강좌는 터미널을 한 번도 안 열어 본 사람이 Claude Code를 설치하고, 마지막에는 명령 한 줄로 주간 메모를 정리하는 데까지 갑니다.[^tested]
 
-이 장은 2026년 11월 6일에 확인한 Claude Code 공식 문서를 바탕으로 썼습니다. 이 강좌의 실행 결과는 같은 날 리눅스에서 Claude Code 2.1.318로 실행한 결과입니다. 작성자의 개인 설정이 섞이지 않도록 그 설정을 끄고 돌렸습니다. macOS와 Windows에서는 실행해 보지 않았습니다. 그 두 곳의 내용은 공식 문서를 근거로 썼습니다. 이 안내는 뒤의 장에서 되풀이하지 않습니다. 실행해 보지 않은 기능은 그 자리에서 밝힙니다.
+이 강좌의 실행 결과는 리눅스에서 얻었습니다. macOS·Windows에서는 실행하지 않았고, 그 두 곳은 공식 문서를 근거로 썼습니다.
 
 처음부터 완벽할 필요는 없습니다. 코드를 몰라도 괜찮습니다. 원하는 것을 말로 설명하면 됩니다.[^no-code]
 
@@ -62,9 +62,16 @@ Windows에는 PowerShell과 CMD라는 두 가지 창이 있습니다. 쓰는 명
 
 필요한 것은 세 가지입니다.
 
-1. **유료 계정**: Claude Code는 Pro, Max, Ultra, Team, Enterprise, Console 중 한 계정이 있어야 합니다.[^paid] 무료 claude.ai 요금제에는 Claude Code가 들어 있지 않습니다.[^free]
-2. **맞는 컴퓨터**: 맥은 macOS 13.0 이상, Windows는 Windows 10 1809 이상이어야 합니다.[^os] 리눅스는 Ubuntu 20.04 이상 등을 지원합니다.[^linux] 메모리는 4GB 이상이어야 합니다.[^ram]
-3. **인터넷 연결**: 꼭 필요합니다.[^ram] Anthropic이 지원하는 국가에서만 쓸 수 있습니다.[^countries]
+1. **유료 계정**: 무료 claude.ai 요금제에는 Claude Code가 들어 있지 않습니다.[^free] Pro, Max 같은 유료 계정이 있어야 합니다.[^paid]
+2. **맞는 컴퓨터**: 맥, Windows, 리눅스 모두 됩니다. 운영체제 버전과 메모리 조건은 아래 상자에 있습니다.
+3. **인터넷 연결**: 꼭 필요합니다.[^ram]
+
+::: details 자세히 (눌러서 펼치기)
+- **쓸 수 있는 계정**: Pro, Max, Ultra, Team, Enterprise, Console 중 하나입니다.[^paid]
+- **운영체제**: 맥은 macOS 13.0 이상, Windows는 Windows 10 1809 이상입니다.[^os] 리눅스는 Ubuntu 20.04 이상 등을 지원합니다.[^linux]
+- **메모리**: 4GB 이상이어야 합니다.[^ram]
+- **지역**: Anthropic이 지원하는 국가에서만 쓸 수 있습니다.[^countries]
+:::
 
 연습 자료는 이 강좌가 드립니다. 지어낸 카페 메모로 연습하니 내 파일을 건드릴 걱정 없이 시작할 수 있습니다.
 
@@ -78,16 +85,16 @@ Windows에는 PowerShell과 CMD라는 두 가지 창이 있습니다. 쓰는 명
 
 미리 보고 싶다면 [완성된 스크립트](/practice/cli/results/10장-주간정리.sh.txt)와 [그 스크립트가 만든 회의록](/practice/cli/results/10장-회의록-스크립트로.txt)을 열어 보세요. 지금은 무슨 뜻인지 몰라도 됩니다.
 
-이렇게 할 수 있는 이유는 `claude -p "할 일"`처럼 한 번 답하고 끝나는 실행 방식이 있기 때문입니다.[^oneshot] 실패하면 스크립트가 알아챌 수 있습니다.[^exit-code] 사람이 지켜보지 않아도 되는 일을 맡기기에 좋습니다.
+이렇게 할 수 있는 이유는 Claude Code에 **한 번 답하고 끝나는 실행 방식**이 있기 때문입니다.[^oneshot] 대화를 주고받지 않습니다. 할 일을 한 줄로 건네면 답한 뒤 스스로 끝납니다. 이 방식은 10장에서 배웁니다.
+
+일이 잘못되면 스크립트가 그 사실을 알아챌 수 있습니다.[^exit-code] 그래서 사람이 지켜보지 않아도 되는 일을 맡기기에 좋습니다.
 
 강좌는 이런 순서로 갑니다.
 
 - **1~5장**: 터미널 기초, 설치, 첫 세션, 입력 요령
 - **6~9장**: 대화 이어 가기, 허락과 되돌리기, 프로젝트 기억, 스킬
-- **10~13장**: 자동화, 훅, 동시 작업, 비용과 문제 해결
+- **10~13장**: 자동화, 훅, 동시 작업, 비용과 문제 해결[^bash-only]
 - **14장**: 내 메모로 만드는 주간 정리
-
-단, 스크립트는 맥·리눅스의 bash 기준입니다. Windows PowerShell에서는 그대로 돌지 않습니다. Windows는 저장한 파일 대신 블록을 붙여 넣어 돌립니다. 10장에서 다시 짚습니다.
 
 <Quiz id="ch801-goal" />
 
@@ -142,6 +149,8 @@ claude --version
 
 다음 장: [2장. 터미널 기초](02-shell-basics.md)
 
+[^tested]: 이 강좌는 2026년 11월 6일에 확인한 Claude Code 공식 문서를 바탕으로 썼습니다. 실행 결과는 같은 날 리눅스에서 Claude Code 2.1.318로 실행한 결과입니다. 작성자의 개인 설정이 섞이지 않도록 그 설정을 끄고 돌렸습니다. macOS와 Windows에서는 실행해 보지 않았습니다. 그 두 곳의 내용은 공식 문서를 근거로 썼습니다. 이 안내는 뒤의 장에서 되풀이하지 않습니다. 실행해 보지 않은 기능은 그 자리에서 밝힙니다.
+[^bash-only]: 이 강좌의 스크립트는 맥·리눅스의 bash(배시) 기준입니다. bash는 셸(터미널에서 명령을 알아듣는 프로그램)의 한 종류입니다. 맥의 기본 셸은 zsh지만, 이 강좌는 스크립트를 `bash 파일이름`처럼 bash로 돌립니다. Windows PowerShell에서는 그대로 돌지 않습니다. Windows는 저장한 파일 대신 블록을 붙여 넣어 돌립니다. 10장에서 다시 짚습니다.
 [^no-code]: Claude Code 공식 문서, 「Terminal guide for new users」. "You don't need to know how to code." https://code.claude.com/docs/en/terminal-guide (확인일 2026-11-06)
 [^cursor]: Claude Code 공식 문서, 「Terminal guide for new users」. "A window will appear with a blinking cursor. This is your terminal, where you type commands." https://code.claude.com/docs/en/terminal-guide (확인일 2026-11-06)
 [^no-click]: Claude Code 공식 문서, 「Terminal guide for new users」. "You can't click on things in the terminal. Use the arrow keys to move around." https://code.claude.com/docs/en/terminal-guide (확인일 2026-11-06)

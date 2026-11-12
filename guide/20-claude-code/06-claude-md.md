@@ -9,8 +9,11 @@
 
 ## 세션은 매번 처음부터 시작한다
 
-Claude Code의 세션은 매번 **빈 상태로 시작합니다.** 앞 세션에서 "날짜는 이렇게 써 줘"라고 했어도 새 세션은 모릅니다.[^fresh] 세션을 넘어 기억을 이어 주는 장치는 두 가지입니다.[^two]
+Claude Code의 세션은 매번 **빈 상태로 시작합니다.** 앞 세션에서 "날짜는 이렇게 써 줘"라고 했어도 새 세션은 모릅니다.[^fresh] 세션을 넘어 기억을 이어 주는 장치는 두 가지입니다.[^two] 내가 직접 쓰는 **CLAUDE.md**와, Claude가 스스로 적는 **자동 메모리**입니다.
 
+이 장은 내가 직접 쓰는 **CLAUDE.md**만 다룹니다. 자동 메모리는 Claude가 내 지적을 보고 스스로 적어 두는 메모라서, 지금은 따로 할 일이 없습니다.[^two]
+
+::: details 두 장치를 나란히 보면 (눌러서 펼치기)
 | | CLAUDE.md | 자동 메모리 |
 |---|---|---|
 | 누가 쓰나 | 내가 | Claude가 |
@@ -18,8 +21,7 @@ Claude Code의 세션은 매번 **빈 상태로 시작합니다.** 앞 세션에
 | 언제 읽히나 | 모든 세션 시작 때 | 모든 세션 시작 때(앞부분만) |
 
 출처: Claude Code 공식 문서[^two]
-
-이 장은 내가 직접 쓰는 **CLAUDE.md**를 다룹니다. 자동 메모리는 Claude가 내 지적을 보고 스스로 적어 두는 메모입니다.[^two]
+:::
 
 <Quiz id="ch406-fresh" />
 
@@ -84,11 +86,19 @@ inbox의 회고 메모 3개로 이번 주 주간 회고를 써 줘.
 
 출처: 이 가이드의 실습 결과(2026-10-31)
 
-숫자(인스타 3번, 좋아요 12개, 잘못 쓴 가격 6,000원, 세트 4개·주간 11개, 뱅쇼 원가 1,800원)도 모두 메모와 같았습니다.
+숫자도 모두 메모와 같았습니다. 인스타 3번, 좋아요 12개, 잘못 쓴 가격 6,000원, 세트 4개·주간 11개, 뱅쇼 원가 1,800원이 그대로 들어갔습니다.
 
 ![결과 화면. ① Claude가 양식의 점검표로 스스로 확인한 「점검 결과」, ② 「확인이 필요한 것 3가지」, ③ 세션 정보 칸의 결과물(주간회고 파일)에 빨간 번호가 붙어 있다](assets/shot-24-claudemd-result-marked.png)
 
-①을 보면 Claude가 5장에서 만든 양식 안내의 **점검표로 스스로 확인**하고, 확인 범위(회고 메모 3/3)까지 밝혔습니다. ②에서는 메모의 요일이 실제 달력과 다르다는 점(2장에서 밝힌 "지어낸 날짜"), 이유가 메모에 없는 칸, 원본 메모의 기록되지 않은 수정(캡처 전에 이 가이드가 고쳐 둔 한 줄로, Claude가 한 것이 아님)을 먼저 알려 왔습니다. **규칙과 점검표를 적어 두면, 결과와 함께 근거가 돌아옵니다.**
+①을 보면 Claude가 5장에서 만든 양식 안내의 **점검표로 스스로 확인**했습니다. 확인 범위(회고 메모 3/3)까지 밝혔습니다.
+
+②에서는 확인이 필요한 것 세 가지를 먼저 알려 왔습니다.
+
+- 메모의 요일이 실제 달력과 다르다는 점(2장에서 밝힌 "지어낸 날짜")
+- 이유가 메모에 없는 칸
+- 원본 메모에 기록되지 않은 수정이 있다는 점[^memo-edit]
+
+**규칙과 점검표를 적어 두면, 결과와 함께 근거가 돌아옵니다.**
 
 <Quiz id="ch406-test" />
 
@@ -98,7 +108,9 @@ inbox의 회고 메모 3개로 이번 주 주간 회고를 써 줘.
 
 - 꼭 지켜야 하는 것일수록 **구체적이고 짧게** 씁니다. 구체적일수록 더 일관되게 지킵니다.[^context]
 - 서로 **부딪치는 규칙**이 있으면 Claude가 아무거나 하나를 고를 수 있습니다. 가끔 읽어 보고 낡은 규칙을 지웁니다.[^conflict]
-- 어떤 일이 있어도 막아야 하는 것(예: 원본 폴더 지우기)은 CLAUDE.md만 믿지 말고 4장의 권한 모드와 Git 기록으로 함께 지킵니다.
+- 어떤 일이 있어도 막아야 하는 것(예: 원본 폴더 지우기)은 CLAUDE.md만 믿지 말고 4장의 권한 모드와 Git 기록으로 함께 지킵니다. 예를 들어 「수동」 모드로 두면 Claude가 파일을 고치거나 명령을 실행하기 전에 먼저 묻습니다. 커밋을 남겨 두면 실수가 생겨도 그 기록으로 되돌릴 수 있습니다.
+
+이 장의 그림 속 답변 끝에 "상태:" 줄이 보일 수 있습니다. 캡처한 컴퓨터에는 모든 폴더에 적용되는 개인 지시 파일(`~/.claude/CLAUDE.md`)이 있어서 생긴 줄입니다. 내 화면에 없어도 정상입니다.[^where]
 
 ::: details 내 컴퓨터 전체에 적용되는 CLAUDE.md도 있다
 `~/.claude/CLAUDE.md`(내 사용자 폴더)에 적은 지시는 **모든 폴더의 세션**에 적용됩니다.[^where] 이 가이드의 캡처 컴퓨터에도 이런 개인 지시가 있어서, 답변 끝에 "상태:" 줄을 붙이는 등 화면이 조금 다릅니다. 한 폴더에만 쓸 규칙은 그 폴더의 CLAUDE.md에 적으세요.
@@ -143,4 +155,5 @@ inbox의 회고 메모 3개로 이번 주 주간 회고를 써 줘.
 [^short]: Claude Code 공식 문서, 「How Claude remembers your project」. "target under 200 lines per CLAUDE.md file. Longer files consume more context and reduce adherence." https://code.claude.com/docs/en/memory (확인일 2026-10-31)
 [^where]: Claude Code 공식 문서, 「How Claude remembers your project」. "Personal preferences for all projects" / "Team-shared instructions for the project" / "A project CLAUDE.md can be stored in either ./CLAUDE.md or ./.claude/CLAUDE.md." https://code.claude.com/docs/en/memory (확인일 2026-10-31)
 [^context]: Claude Code 공식 문서, 「How Claude remembers your project」. "Claude treats them as context, not enforced configuration." / "The more specific and concise your instructions, the more consistently Claude follows them." https://code.claude.com/docs/en/memory (확인일 2026-10-31)
+[^memo-edit]: 이 수정은 캡처 전에 이 가이드가 원본 메모 한 줄을 고쳐 둔 것입니다. Claude가 한 일이 아니므로, 내 실습에서는 이 항목이 나오지 않을 수 있습니다.
 [^conflict]: Claude Code 공식 문서, 「How Claude remembers your project」. "if two instructions contradict each other, Claude may pick one arbitrarily." https://code.claude.com/docs/en/memory (확인일 2026-10-31)

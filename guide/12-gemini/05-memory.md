@@ -43,7 +43,7 @@ Gemini는 세 가지로 나에게 맞춘 답을 합니다.[^personal]
 
 - **만 18세 이상**, 개인 Google 계정
 - **「활동 기록 보관」이 켜져 있을 것**([3장](03-chats.md#지난-대화-찾기))
-- **일부 기능에서는 쓰이지 않습니다.** 대표적으로 Gem과 음성 대화(Live)입니다. 대신 글로 대화할 때 지난 음성 대화를 참고해 달라고 할 수는 있습니다.
+- **일부 기능에서는 쓰이지 않습니다.** 대표적으로 Gem(지침을 넣어 만든 나만의 Gemini, [7장](07-skills-apps.md))과 음성 대화(Live, 말로 주고받는 대화, [10장](10-voice-mobile.md))입니다. 대신 글로 대화할 때 지난 음성 대화를 참고해 달라고 할 수는 있습니다.
 
 ### 지난 대화를 물어보기
 
@@ -58,9 +58,18 @@ Gemini가 지난 대화를 참고했다면, 답 아래 「소스 및 관련 콘�
 
 ### 기억이 틀렸을 때, 지우고 싶을 때
 
-**틀린 내용은 대화에서 바로 고쳐 말하세요.** 메모리가 켜져 있으면 Gemini가 그 말을 반영합니다. 그래도 늘 맞게 고치지는 못할 수 있습니다.[^memory]
+하고 싶은 일에 따라 방법이 다릅니다.
 
-**기억을 지우려면 그 내용이 담긴 대화를 모두 지워야 합니다.** 「Gemini 앱 활동」에서 그 대화들을 찾아 지우세요.[^memory] 지운 뒤에도 답에서 빠지기까지 잠시 걸릴 수 있습니다.[^memory]
+| 하고 싶은 일 | 방법 |
+|---|---|
+| 틀린 기억 고치기 | 대화에서 바로 고쳐 말하기 |
+| 기억 지우기 | 그 내용이 담긴 대화를 모두 지우기 |
+| 새로 배우지 않게 하기 | 메모리 스위치 끄기 |
+
+**틀린 내용은 대화에서 바로 고쳐 말하세요.** 예를 들어 "나 이제 서울 말고 부산에 살아."라고 말하면 됩니다. 메모리가 켜져 있으면 Gemini가 그 말을 반영합니다. 그래도 늘 맞게 고치지는 못할 수 있습니다.[^memory]
+
+**기억을 지우려면 그 내용이 담긴 대화를 모두 지워야 합니다.** 「Gemini 앱 활동」에서 그 대화들을 찾아 지우세요.[^memory]
+지운 뒤에도 답에서 빠지기까지 잠시 걸릴 수 있습니다.[^memory]
 
 "그 이야기는 잊어 줘"라고 지침을 줘도 **늘 지켜지지는 않습니다.** 확실히 멈추게 하려면 그 주제의 대화를 지우세요.[^instructions]
 
@@ -100,16 +109,23 @@ Gemini가 지난 대화를 참고했다면, 답 아래 「소스 및 관련 콘�
 
 ### 대화로 기억시키기 (미국 전용)
 
-"내가 채식주의자라는 걸 기억해"처럼 대화 중에 말해서 기억시키는 기능도 있습니다. 하지만 이 기능은 **지금 미국에서만** 되고, Google AI 요금제와 만 18세 이상이 필요합니다.[^instructions]
+"내가 채식주의자라는 걸 기억해"처럼 대화 중에 말해서 기억시키는 기능은 **지금 한국에서 쓸 수 없습니다.** 미국에서만 됩니다.[^instructions]
 한국에서는 위의 **지침**으로 같은 효과를 내 보세요. "나는 채식을 해. 음식 추천에서는 고기를 빼 줘."처럼 적어 두면 됩니다.
 
-Gemini가 나에 대해 이해한 내용을 모아 보고 고치는 **메모리 요약** 화면도 있지만, 이것도 **미국의 유료 요금제 사용자에게 영어로만** 제공됩니다.[^summary]
+Gemini가 나에 대해 이해한 내용을 모아 보고 고치는 **메모리 요약**(Memory summary) 화면도 미국 전용입니다.[^summary]
+
+::: details 미국 전용 기능 자세히 (눌러서 펼치기)
+- **대화로 기억시키기**: 미국에서만 되고, Google AI 요금제와 만 18세 이상이 필요합니다.[^instructions]
+- **메모리 요약**: **미국의 유료 요금제 사용자에게 영어로만** 제공됩니다.[^summary]
+:::
 
 <Quiz id="ch305-instructions" />
 
 ## 다른 AI에서 옮겨 오기
 
-ChatGPT나 Claude를 쓰다가 Gemini로 옮긴다면, **기억과 대화를 가져올 수 있습니다.**[^import] 「설정」 메뉴의 「데이터 및 개인 정보 보호」 묶음에서 「Gemini로 메모리 가져오기」를 누르세요([2장](02-screen-tour.md#설정-화면-—-계정·환경설정·개인정보)).[^screen]
+ChatGPT나 Claude를 쓰다가 Gemini로 옮긴다면, **기억과 대화를 가져올 수 있습니다.**[^import] 다른 AI를 써 본 적이 없다면 이 절은 건너뛰어도 됩니다.
+
+「설정」 메뉴의 「데이터 및 개인 정보 보호」 묶음에서 「Gemini로 메모리 가져오기」를 누르세요([2장](02-screen-tour.md#설정-화면-—-계정·환경설정·개인정보)).[^screen]
 
 ![「Gemini로 메모리 가져오기」 화면. ① 다른 AI에 붙여 넣을 프롬프트와 「복사」, ② 「여기에 정보를 붙여넣으세요...」 칸과 「메모리 추가」, ③ 「채팅 가져오기」 — ZIP 파일(5 GB 이하)과 「추가」, ④ 가져온 채팅이 활동에 저장되고 AI 모델 학습을 비롯한 서비스 개선에 쓰인다는 안내에 빨간 번호가 붙어 있다](assets/shot-15-import-marked.png)
 
@@ -121,13 +137,13 @@ ChatGPT나 Claude를 쓰다가 Gemini로 옮긴다면, **기억과 대화를 가
 
 **대화 가져오기**는 ③에서 합니다. ChatGPT나 Claude에서 내보낸 ZIP 파일을 「추가」로 올리세요.[^import][^screen]
 
-- ChatGPT는 「설정 > 데이터 관리」의 「데이터 내보내기」에서, Claude는 「설정」 → 「개인정보보호」의 「데이터 내보내기」에서 받습니다. 자세한 길은 [ChatGPT 8장](../11-chatgpt/08-privacy.md#데이터-내보내기)·[Claude 9장](../10-claude/09-privacy.md#내-데이터-내려받기)을 보세요. Gemini 도움말은 이 메뉴를 「데이터 제어」라고 옮겼지만, 이 가이드가 확인한 ChatGPT 화면 이름은 「데이터 관리」입니다.[^import]
+- ChatGPT는 「설정 > 데이터 관리」의 「데이터 내보내기」에서, Claude는 「설정」 → 「개인정보보호」의 「데이터 내보내기」에서 받습니다.[^import][^menu-name] 자세한 길은 [ChatGPT 8장](../11-chatgpt/08-privacy.md#데이터-내보내기)·[Claude 9장](../10-claude/09-privacy.md#내-데이터-내려받기)을 보세요.
 - 파일 하나는 5GB까지, 하루 5개까지 올릴 수 있습니다.[^import]
 - 같은 ZIP을 다시 올리면 새 대화는 더해지고, 전에 가져온 대화는 덮어씁니다.[^import]
 
 **가져오기 전에 알아 둘 점이 있습니다.** ④에 적힌 대로, 가져와서 **이어 간** 대화는 내 활동에 저장되고 **생성형 AI 모델 학습을 비롯한 Google 서비스 개선에 쓰입니다.**[^import][^screen] 활동은 언제든 관리하고 지울 수 있습니다.
 
-가져오기는 개인 Google 계정, 만 18세 이상만 됩니다. 유럽경제지역(EEA)·스위스·영국에서는 안 됩니다.[^import]
+가져오기는 개인 Google 계정, 만 18세 이상만 됩니다.[^import][^import-region]
 
 <Quiz id="ch305-import" />
 
@@ -170,4 +186,6 @@ ChatGPT나 Claude를 쓰다가 Gemini로 옮긴다면, **기억과 대화를 가
 [^instructions]: Google 도움말, 「Manage what Gemini remembers about you and customize responses」(한국어판 「Gemini가 나에 대해 기억하는 정보 관리 및 대답 맞춤설정」). "Gemini will remember the information or instructions you share with it, even in new chats." / "be over 18." (한국어판 "만 18세 이상이어야 합니다.") / "Have a Google AI plan." / "Only available in the US. All users can add instructions for Gemini Apps." / "Remember that I am vegetarian." / "“Start all responses with a short summary.”" / "Important: Instructions for Gemini to forget or avoid topics in chats doesn’t always work perfectly. To make sure Gemini stops mentioning a topic, delete any chats about it from your Gemini Apps Activity." / "Tap Add +." / "At the top, turn Instructions for Gemini off  or on ." / "To stop Gemini from learning about you" 한국어 화면 이름 「Gemini 요청 사항」「추가 +」「제출」「더보기」「수정」「삭제」. https://support.google.com/gemini/answer/16598625 (확인일 2026-10-31)
 [^summary]: Google 도움말, 「View & manage your Memory summary in Gemini Apps」(한국어판 「Gemini 앱에서 내 메모리 요약 보기 및 관리하기」). "You can use memory summary to view, edit, and delete what Gemini Apps understands about you." / "Currently available to US users with an active Google AI plan." / "Available in English." https://support.google.com/gemini/answer/18617127 (확인일 2026-10-31)
 [^apps]: Google 도움말, 「Connect your Google apps to personalize your Gemini experience」(한국어판 「Google 앱을 연결하여 Gemini 환경 개인화하기」). "Get content from Gmail and Google Photos, like photos from your last vacation." https://support.google.com/gemini/answer/16598406 (확인일 2026-10-31)
+[^menu-name]: Gemini 도움말은 ChatGPT 메뉴를 「데이터 제어」라고 옮겼지만, 이 가이드가 확인한 ChatGPT 화면 이름은 「데이터 관리」입니다.
+[^import-region]: 유럽경제지역(EEA)·스위스·영국에서는 가져오기를 쓸 수 없습니다. 근거는 아래 「Import from other AI platforms to Gemini Apps」 도움말입니다.
 [^import]: Google 도움말, 「Import from other AI platforms to Gemini Apps」(한국어판 「다른 AI 플랫폼에서 Gemini 앱으로 가져오기」). "You can bring over your preferences, remembered facts & details, and general contextual information (sometimes called  "memory") from other AI platforms." / "Be signed in with a personal Google Account. This feature isn’t available if you sign in to a work, school, or supervised Google Account." / "Be 18 or older." / "The EEA, Switzerland, or the United Kingdom." / "Click Settings  Data controls." / "Click Settings  Privacy." / "Copy the response from the other AI platform that contains memories about you." / "Tip:  You can upload up to 5 .zip.files per day." / "A download link will be sent to the email associated with your account on the other AI platform." / "If you reupload a  .zip file with your exported chats it will add any new conversations and overwrite previously imported ones." / "Your imported and continued chats are saved in your Activity. This data is used to improve our services (including training generative AI models), and to protect Google, our users and the public." https://support.google.com/gemini/answer/16868299 (확인일 2026-10-31)

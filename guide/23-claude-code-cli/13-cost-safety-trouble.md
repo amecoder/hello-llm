@@ -16,7 +16,7 @@
 
 [10장](10-headless-automation.md)의 스크립트를 자주 돌릴 생각이라면 돌리기 전후의 `/usage`를 직접 비교해 보세요.
 
-세션 한도나 주간 한도에 닿으면 안내된 시각까지 요청이 막힙니다. 여기서 세션 한도는 대화 하나가 아니라 일정 시간 동안 쓸 수 있는 양입니다. `/clear`나 재시작으로는 풀리지 않습니다. 이 두 한도는 모든 모델이 함께 쓰므로 모델을 바꿔도 풀리지 않습니다.[^limit]
+세션 한도(대화 하나가 아니라 일정 시간 동안 쓸 수 있는 양)나 주간 한도에 닿으면 안내된 시각까지 요청이 막힙니다. 그때는 기다려야 합니다. `/clear`, 재시작, 모델 바꾸기로는 풀리지 않습니다. 모든 모델이 같은 한도를 함께 쓰기 때문입니다.[^limit]
 
 쓰는 양을 줄이는 가장 쉬운 습관은 관련 없는 일로 넘어갈 때 `/clear`로 새로 시작하는 것입니다. 오래된 대화가 메시지마다 토큰을 쓰는 일을 막아 줍니다.[^clear]
 
@@ -48,26 +48,36 @@
 
 ## 추가 요금이 들 수 있는 것
 
-모르고 쓰면 요금이 예상과 달라질 수 있는 것이 셋 있습니다.
+모르고 쓰면 요금이 예상과 달라질 수 있는 것이 셋 있습니다. 먼저 한눈에 보면 이렇습니다.
 
-**빠른 모드**(`/fast`)는 같은 Opus를 최대 2.5배 빠르게 쓰는 대신 토큰당 값이 더 비쌉니다. 구독 요금제에서는 사용 크레딧으로만 쓸 수 있고 구독 한도에 포함되지 않습니다.[^fast] 크레딧은 한도 이후에도 계속 쓰기 위한 추가 요금으로, `/usage-credits`에서 관리합니다.[^credits]
+- 빠른 모드(`/fast`): 구독 한도가 아니라 크레딧으로 씁니다.
+- Fable 모델: 크레딧으로 청구될 수 있습니다.
+- API 키: 컴퓨터에 있으면 구독 대신 쓰일 수 있습니다.
 
-**Fable 모델**은 기본값이 아니라 `/model fable`로 직접 골라야 하는 모델입니다. 요금제와 좌석 등급(Team·Enterprise에서 구성원마다 정해지는 등급)에 따라 구독 한도 대신 크레딧으로 청구될 수 있습니다. 특히 `-p` 실행은 그런 경우에도 동의를 묻지 않고 청구합니다.[^fable] 스크립트에 `--model fable`을 넣기 전에 내 요금제를 꼭 확인하세요.
+**크레딧**은 한도 이후에도 계속 쓰기 위한 추가 요금입니다.[^credits] 하나씩 자세히 보겠습니다.
 
-**API 키**(프로그램이 서비스에 접속할 때 쓰는 열쇠 글자)도 살펴보세요. 구독이 있어도 컴퓨터에 `ANTHROPIC_API_KEY`라는 설정이 있으면, 내가 승인한 뒤에는 그 API 키가 쓰입니다.[^api-key] 그러면 요금이 구독과 다르게 나갈 수 있습니다. 이상하면 세션에서 `/status`로 어느 방식인지 확인하세요.
+**빠른 모드**(`/fast`)는 같은 Opus를 최대 2.5배 빠르게 쓰는 대신 토큰당 값이 더 비쌉니다. 구독 요금제에서는 사용 크레딧으로만 쓸 수 있고 구독 한도에 포함되지 않습니다.[^fast] 크레딧은 `/usage-credits`에서 관리합니다.[^credits]
+
+**Fable 모델**은 기본값이 아니라 `/model fable`로 직접 골라야 하는 모델입니다. 요금제에 따라 구독 한도 대신 크레딧으로 청구될 수 있습니다.[^seat] 특히 `-p` 실행은 그런 경우에도 동의를 묻지 않고 청구합니다.[^fable] 스크립트에 `--model fable`을 넣기 전에 내 요금제를 꼭 확인하세요.
+
+**API 키**(프로그램이 서비스에 접속할 때 쓰는 열쇠 글자)도 살펴보세요. 구독이 있어도 컴퓨터에 `ANTHROPIC_API_KEY`라는 환경 변수가 있으면, 내가 승인한 뒤에는 그 API 키가 쓰입니다.[^api-key] 그러면 요금이 구독과 다르게 나갈 수 있습니다. **환경 변수**는 컴퓨터에 이름과 값을 짝지어 저장해 두는 설정입니다. 프로그램이 켜질 때 이 값을 읽어 갑니다. 내 컴퓨터에 있는지 직접 찾기는 어려우니, 이상하면 세션에서 `/status`로 지금 어느 방식으로 접속했는지 확인하세요.
 
 <Quiz id="ch813-extra" />
 
 ## 샌드박스
 
-샌드박스(Sandbox)는 Claude가 돌리는 셸 명령이 닿을 수 있는 범위를 운영체제가 제한하는 울타리입니다. 기본으로 꺼져 있고, 세션에서 `/sandbox`를 실행해 켭니다.[^sandbox] 이 가이드에서는 켜 보지 않았습니다. macOS·Linux·WSL2에서 동작하고, Windows PowerShell에서 직접 실행하면 쓸 수 없습니다.[^sandbox-win]
+샌드박스(Sandbox)는 Claude가 돌리는 셸 명령이 닿을 수 있는 범위를 운영체제가 제한하는 울타리입니다. 기본으로 꺼져 있고, 세션에서 `/sandbox`를 실행해 켭니다.[^sandbox] 이 가이드에서는 켜 보지 않았습니다. Windows PowerShell에서 직접 실행하면 쓸 수 없습니다.[^sandbox-win]
 
-처음에는 켜지 않아도 됩니다. 허락 창을 읽는 습관이 먼저입니다. 샌드박스가 있으니 안전하다고 생각하면 곤란합니다. 한계가 분명합니다.
+처음에는 켜지 않아도 됩니다. 허락 창을 읽는 습관이 먼저입니다. 샌드박스가 있으니 안전하다고 생각하면 곤란합니다. 큰 한계 두 가지만 기억하세요.
 
 - **셸 명령만 감쌉니다.**[^sandbox-only] 파일 도구, MCP 서버, 훅은 그 밖에서 실행됩니다.
 - **읽기는 기본으로 넓습니다.** `~/.ssh`처럼 비밀번호나 인증 키 같은 로그인 정보가 든 파일까지, 컴퓨터 대부분을 읽을 수 있습니다.[^sandbox-read]
+
+::: details 나머지 한계와 지원 환경 (눌러서 펼치기)
 - **내가 `!`로 친 명령은 샌드박스 밖에서 실행됩니다.**[^sandbox-bang]
 - **밖에서 다시 시도할 수 있습니다.** 샌드박스에서 실패한 명령을 Claude가 분석해 샌드박스 밖으로 재시도할 수 있습니다.[^sandbox-retry]
+- **동작하는 곳**: macOS·Linux·WSL2입니다.[^sandbox-win]
+:::
 
 <Quiz id="ch813-sandbox" />
 
@@ -128,9 +138,11 @@ Remove-Item inbox\회의-2026-10-29-임시회의.txt
 
 Free·Pro·Max·Ultra 개인 계정은 내 데이터를 모델 개선에 쓸지 고를 수 있습니다. 이 설정이 켜져 있으면 Claude Code로 쓴 데이터도 새 모델 학습에 쓰입니다.[^train-choice] 보관 기간도 이 선택을 따릅니다. 허용하면 5년, 허용하지 않으면 30일입니다.[^retention]
 
-설정은 claude.ai의 개인정보 설정(`claude.ai/settings/data-privacy-controls`, 2026년 11월 6일 기준)에서 바꿉니다.
+설정은 claude.ai의 개인정보 설정에서 바꿉니다.[^privacy-url]
 
-내 컴퓨터에도 기록이 남습니다. 대화 기록은 `~/.claude/projects/` 아래에 **암호화 없이** 기본 30일 저장됩니다. 도구를 거친 파일 내용, 명령 출력, 붙여 넣은 글이 그대로 들어갑니다.[^local] 그래서 비밀번호가 든 파일은 애초에 읽히지 않는 것이 낫습니다. [7장](07-permissions-undo.md)의 거부 규칙이 그 방법입니다.[^deny-creds] 한 프로젝트의 기록을 지우는 명령으로 `claude purge`가 있습니다.[^purge]
+내 컴퓨터에도 기록이 남습니다. 대화 기록은 `~/.claude/projects/` 아래에 **암호화 없이** 기본 30일 저장됩니다. 도구를 거친 파일 내용, 명령 출력, 붙여 넣은 글이 그대로 들어갑니다.[^local]
+
+그래서 비밀번호가 든 파일은 애초에 읽히지 않는 것이 낫습니다. [7장](07-permissions-undo.md)의 거부 규칙이 그 방법입니다.[^deny-creds] 한 프로젝트의 기록을 지우는 명령으로 `claude purge`가 있습니다.[^purge]
 
 <Quiz id="ch813-data" />
 
@@ -210,6 +222,8 @@ Free·Pro·Max·Ultra 개인 계정은 내 데이터를 모델 개선에 쓸지 
 [^api-key]: Claude Code 공식 문서, 「Authentication」. "If you have an active Claude subscription but also have `ANTHROPIC_API_KEY` set in your environment, Claude Code uses the API key once you approve it." / "Run `unset ANTHROPIC_API_KEY` to fall back to your subscription, and check `/status` to confirm which method is active." https://code.claude.com/docs/en/authentication (확인일 2026-11-06)
 [^fast]: Claude Code 공식 문서, 「Speed up responses with fast mode」. "Fast mode is a high-speed configuration for Claude Opus, making the model up to 2.5x faster at a higher cost per token." / "For Claude Code users on subscription plans (Pro/Max/Ultra/Team/Enterprise), fast mode is available via usage credits only and not included in the subscription rate limits." https://code.claude.com/docs/en/fast-mode (확인일 2026-11-06)
 [^credits]: Claude Code 공식 문서, 「Manage costs effectively」. "To manage them, run `/usage-credits` after signing in with your claude.ai subscription through `/login`; the command isn't available with API key authentication." https://code.claude.com/docs/en/costs (확인일 2026-11-06)
+[^privacy-url]: 주소는 `claude.ai/settings/data-privacy-controls`입니다(2026년 11월 6일 기준).
+[^seat]: 정확히는 요금제와 좌석 등급(Team·Enterprise에서 구성원마다 정해지는 등급)에 따라 달라집니다. 근거는 바로 아래 Fable 각주의 "Depending on your plan and seat tier" 문장입니다.
 [^fable]: Claude Code 공식 문서, 「Model configuration」. "Neither Fable model is the account-type default on any plan or provider." / "Depending on your plan and seat tier, Fable usage can bill to usage credits instead of drawing on your plan's included limits." / "When a Fable request there would bill to usage credits, Claude Code bills it without asking." https://code.claude.com/docs/en/model-config (확인일 2026-11-06)
 [^sandbox]: Claude Code 공식 문서, 「Configure the sandboxed Bash tool」. "The Bash sandbox is a boundary that the operating system enforces around the shell commands Claude runs on your machine." / "The sandbox is off by default." / "To turn it on, run `/sandbox` in a session" https://code.claude.com/docs/en/sandboxing (확인일 2026-11-06)
 [^sandbox-win]: Claude Code 공식 문서, 「Configure the sandboxed Bash tool」. "The sandbox runs on macOS, Linux, and WSL2. On native Windows, Claude Code runs commands unsandboxed." https://code.claude.com/docs/en/sandboxing (확인일 2026-11-06)

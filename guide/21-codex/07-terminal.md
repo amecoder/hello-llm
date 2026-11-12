@@ -5,7 +5,7 @@
 > **한 줄 요약**: Codex CLI는 터미널에서 쓰는 Codex입니다. 실행한 폴더의 `AGENTS.md`와 스킬을 읽습니다.
 > `codex exec "할 일"`은 한 번 실행하고 끝나며, **기본이 읽기 전용**입니다. Claude Code의 `claude -p`와 비슷하지만 이 점이 다릅니다.
 
-이 장은 2026년 11월 1일에 확인한 Codex 공식 문서와, macOS 터미널에서 Codex CLI 0.166.0을 실행한 결과를 바탕으로 썼습니다. **터미널이 처음이라면 이 장은 건너뛰어도 됩니다.** 터미널이 무엇인지는 [Claude Code 10장](../20-claude-code/10-terminal.md)에서 설명했습니다.
+이 장은 2026년 11월 1일에 확인한 Codex 공식 문서와, macOS 터미널에서 Codex CLI를 실행한 결과를[^version] 바탕으로 썼습니다. **터미널이 처음이라면 이 장은 건너뛰어도 됩니다.** 터미널이 무엇인지는 [Claude Code 10장](../20-claude-code/10-terminal.md)에서 설명했습니다.
 
 ## 설치하고 시작하기
 
@@ -20,6 +20,13 @@ curl -fsSL https://chatgpt.com/codex/install.sh | sh
 # Windows PowerShell
 powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"
 ```
+
+명령을 조각별로 풀면 이렇습니다.
+
+- `curl -fsSL 주소`: 주소에 있는 설치 스크립트(설치 순서를 적어 둔 파일)를 내려받습니다. `-fsSL`은 "오류가 나면 멈추기, 진행 표시 숨기기, 오류는 보여 주기, 주소가 옮겨졌으면 따라가기"라는 옵션 네 개를 붙여 쓴 것입니다.
+- `|`(파이프): 앞 명령의 결과를 뒤 명령에 넘깁니다.
+- `sh`: 넘겨받은 스크립트를 실행합니다.
+- Windows 쪽도 같습니다. `irm`이 내려받고, `iex`가 실행합니다. `-ExecutionPolicy ByPass`는 이번 한 번만 스크립트 실행 제한을 풀어 줍니다.
 
 **설치 명령은 공식 문서(learn.chatgpt.com)에 적힌 그대로인지 확인하고 실행하세요.** 인터넷에서 받은 스크립트를 바로 실행하는 명령이기 때문입니다.
 
@@ -53,7 +60,12 @@ codex exec "notes 폴더의 파일 목록을 보여 주고, 각 파일이 어떤
 
 출처: 이 가이드의 실습 결과(2026-11-01). 진행 기록은 따로 버리고 최종 답만 남겼다.
 
-`codex exec`는 진행 상황과 최종 답을 **다른 길로** 내보냅니다. 진행 상황은 화면 옆길(stderr), 최종 답만 정식 출력(stdout)입니다.[^stdout] 그래서 `codex exec "…" > 결과.md`처럼 쓰면 최종 답만 파일에 담깁니다.
+`codex exec`는 진행 상황과 최종 답을 **다른 길로** 내보냅니다.[^stdout]
+
+- 진행 상황: 화면 옆길(stderr, 스탠다드 에러)로 나갑니다.
+- 최종 답: 정식 출력(stdout, 스탠다드 아웃)으로만 나갑니다.
+
+이 차이는 결과를 파일로 받을 때 쓸모가 있습니다. 예를 들어 `codex exec "…" > 결과.md`를 쳐 보세요. `>`는 "정식 출력을 화면 대신 이 파일에 담아라"라는 기호입니다. 그러면 화면에는 진행 상황만 지나가고, `결과.md`에는 최종 답만 담깁니다. 같은 이름의 파일이 이미 있으면 `>`가 그 내용을 지우고 새로 씁니다. 그러니 처음 쓰는 새 이름을 고르세요.
 
 **`codex exec`는 기본이 읽기 전용입니다.** 파일을 고치게 하려면 `--sandbox workspace-write`를 붙입니다.[^readonly] 이 가이드의 2·3·5장 실습도 이 옵션을 붙여 실행했습니다.
 
@@ -63,7 +75,13 @@ codex exec --sandbox workspace-write '$weekly-review'
 
 `codex exec`는 허락 방식을 **미리 정해 두고** 돌리는 방식입니다.[^preset] 이 가이드의 5장 실습에서는 `.agents` 폴더 쓰기가 막히자, Codex가 묻지 못하고 그대로 멈췄습니다. 허락이 필요한 일은 앱이나 대화형 `codex`에서 하는 편이 편합니다.
 
+샌드박스와 허락을 모두 끄는 위험한 옵션도 있지만, 메모 정리에는 쓰지 마세요.
+
+::: details 옛 글에 나오는 옵션과 위험한 옵션 (눌러서 펼치기)
+
 옛 글에 나오는 `--full-auto` 옵션은 더 이상 지원하지 않습니다.[^fullauto] 샌드박스와 허락을 모두 끄는 `--dangerously-bypass-approvals-and-sandbox` 같은 옵션도 있지만[^yolo], 메모 정리에는 필요 없습니다.
+
+:::
 
 <Quiz id="ch507-exec" />
 
@@ -77,8 +95,9 @@ codex exec --sandbox workspace-write '$weekly-review'
 | `/import` | Claude Code·Cursor 설정 가져오기 |
 | `/resume` | 저장된 대화 이어 가기 |
 | `/status` | 대화 정보와 남은 한도 보기 |
+| `/skills` | 스킬 목록 보기 |
 
-출처: Codex 공식 문서[^permissions][^import][^resume][^status]
+출처: Codex 공식 문서[^permissions][^import][^resume][^status][^skills]
 
 대화형을 끝낸 뒤 밖에서 이어 가려면 `codex resume`을 칩니다.[^resume]
 
@@ -114,6 +133,7 @@ codex exec --sandbox workspace-write '$weekly-review'
 
 다음 장: [8장. 비용·데이터·안전, 그리고 도구 고르기](08-safety-choose.md)
 
+[^version]: 이 가이드가 실행한 버전은 Codex CLI 0.166.0입니다.
 [^install]: Codex 공식 문서, 「Codex CLI」. "curl -fsSL https://chatgpt.com/codex/install.sh | sh" / "powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"" https://learn.chatgpt.com/docs/codex/cli (확인일 2026-11-01)
 [^signin]: Codex 공식 문서, 「Codex CLI」. "Open a project directory and run `codex`. The first time you run Codex, choose **Sign in with ChatGPT** or another available sign-in method." https://learn.chatgpt.com/docs/codex/cli (확인일 2026-11-01)
 [^cwd]: Codex 공식 문서, 「Projects and chats」. "Codex CLI treats the directory where you start it as the project for the chat." https://learn.chatgpt.com/docs/projects (확인일 2026-11-01)

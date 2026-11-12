@@ -11,13 +11,19 @@
 
 예약 작업은 반복할 일을 정해 두고 뒤에서 돌리는 기능입니다.[^schedule] 앱 사이드바의 **Scheduled**에서 예약과 실행 기록을 모두 봅니다.[^inbox]
 
-예약은 데스크톱 앱이나 웹에서 만들고, 터미널(Codex CLI)에는 예약 관리 화면이 없습니다.[^no-cli] 예약도 대화로 만듭니다.[^chat-create] 예약 안에서 `$스킬이름`으로 스킬을 부를 수도 있습니다.[^skill] 5장의 스킬을 쓰면 이렇게 부탁할 수 있습니다.
+예약은 데스크톱 앱이나 웹에서, 평소처럼 대화로 만듭니다.[^chat-create][^no-cli] 예약 안에서 `$스킬이름`으로 스킬을 부를 수도 있습니다.[^skill] 5장의 스킬을 쓰면 이렇게 부탁할 수 있습니다.
 
 ```
 매주 금요일 오후 6시에 $weekly-review 로 그 주의 주간 회고를 notes 폴더에 만들어 줘.
 ```
 
-**조건이 있습니다.** 내 컴퓨터의 폴더를 쓰는 예약은 컴퓨터가 켜져 있고 앱이 실행 중일 때만 돕니다.[^awake] macOS·Linux의 **Prevent sleep while running** 설정은 대화가 **도는 동안** 컴퓨터가 잠들지 않게 해, 자리를 비워도 대화가 이어지게 합니다.[^sleep] 예약 시각까지 컴퓨터를 깨워 두는 기능은 아니니, 예약을 쓰려면 컴퓨터의 절전 설정을 따로 확인하세요.
+**조건이 있습니다.** 내 컴퓨터의 폴더를 쓰는 예약은 컴퓨터가 켜져 있고 앱이 실행 중일 때만 돕니다.[^awake] 예약을 쓰려면 그 시각에 컴퓨터가 잠들어 있지 않은지, 컴퓨터의 절전 설정을 확인하세요.
+
+::: details 앱의 「Prevent sleep while running」 설정 (눌러서 펼치기)
+
+macOS·Linux의 **Prevent sleep while running** 설정은 대화가 **도는 동안** 컴퓨터가 잠들지 않게 해, 자리를 비워도 대화가 이어지게 합니다.[^sleep] 예약 시각까지 컴퓨터를 깨워 두는 기능은 아닙니다. 그래서 위처럼 컴퓨터의 절전 설정을 따로 확인해야 합니다.
+
+:::
 
 예약은 **사람 없이** 돕니다. 그래서 내 기본 울타리(샌드박스) 범위는 그대로 쓰되, 조직이 막지 않으면 **허락을 묻지 않는 방식**으로 돕니다.[^unattended] 울타리 밖의 일은 물어볼 사람이 없으니 실패한다고 보면 됩니다.
 
@@ -25,11 +31,16 @@
 |---|---|
 | 읽기만 | 파일을 써야 하는 예약은 실패 |
 | 폴더 안 쓰기 | 정리도구처럼 폴더 안에서만 쓰는 일은 돔 |
-| Full access | 묻지 않고 파일·명령·인터넷까지 씀. 위험 |
+| Full access | 묻지 않고 파일·명령·인터넷까지 씀(위험) |
 
-출처: Codex 공식 문서(일부만 옮김, 가운데 줄은 이 가이드의 정리)[^modes]
+출처: Codex 공식 문서(일부만 옮김, 가운데 줄은 이 가이드의 정리)[^modes][^readonly]
 
-4장의 권한 메뉴로 말하면, Ask for approval과 Approve for me는 가운데 줄(폴더 안 쓰기)의 울타리를, Full access는 마지막 줄을 씁니다.[^ask] 다만 예약에서는 Ask for approval이어도 **물어보지 않습니다.** "읽기만"은 메뉴에 따로 보이지 않을 수 있는 설정입니다.
+4장의 권한 메뉴로 보면 이렇습니다.[^ask]
+
+- **Ask for approval**과 **Approve for me**: 가운데 줄(폴더 안 쓰기)의 울타리를 씁니다.
+- **Full access**: 마지막 줄을 씁니다.
+
+다만 예약에서는 Ask for approval이어도 **물어보지 않습니다.**
 
 예약을 만들기 전에 **같은 요청을 평소 대화에서 먼저 돌려 보세요.** 5장처럼 결과를 원본과 맞춰 보고 괜찮을 때 예약으로 옮깁니다. 첫 몇 번의 실행 결과도 꼭 확인합니다. 공식 문서도 같은 순서를 권합니다.[^test]
 
@@ -37,13 +48,15 @@
 
 ## 클라우드는 무엇이 다른가
 
-클라우드 작업은 인터넷 너머의 작업 공간에서 돌아서, 내 컴퓨터가 잠든 동안에도 계속됩니다.[^cloud] 대신 조건이 있습니다.
+클라우드 작업은 인터넷 너머의 작업 공간에서 돌아서, 내 컴퓨터가 잠든 동안에도 계속됩니다.[^cloud]
 
-- 내가 쓸 수 있는 **게시된 환경**(published environment)이 있어야 합니다.[^env]
-- 환경을 만들려면 **GitHub 저장소**를 고르고 연결합니다.[^github]
+정리도구 폴더는 내 컴퓨터에만 있으니 이 가이드는 클라우드를 쓰지 않습니다. 회사에서 GitHub(파일을 인터넷에 올려 두고 바뀐 기록을 함께 관리하는 서비스)로 일한다면, 오래 걸리는 일을 클라우드로 보내고 컴퓨터를 꺼도 된다는 점만 기억해 두세요.
+
+클라우드를 쓰려면 조건이 있습니다.
+
+- 미리 준비해 둔 클라우드 작업 공간, 곧 **게시된 환경**(published environment)이 있어야 합니다.[^env]
+- 그 작업 공간을 만들려면 **GitHub 저장소**를 고르고 연결합니다.[^github]
 - 내 컴퓨터의 파일, 실행 중인 프로그램, 브라우저 로그인은 클라우드로 넘어가지 않습니다.[^not-moved]
-
-정리도구 폴더는 내 컴퓨터에만 있으니 이 가이드는 클라우드를 쓰지 않습니다. 회사에서 GitHub로 일한다면, 오래 걸리는 일을 클라우드로 보내고 컴퓨터를 꺼도 된다는 점만 기억해 두세요.
 
 <Quiz id="ch506-cloud" />
 
@@ -103,4 +116,5 @@
 [^trust]: Codex 공식 문서, 「Codex on mobile」. "Only connect devices you own and trust." https://learn.chatgpt.com/docs/mobile (확인일 2026-11-01)
 [^rollout]: Codex 공식 문서, 「Codex on mobile」. "Use the ChatGPT mobile app with Cloud or a connected Mac or Windows PC. Availability depends on rollout and your workspace settings." https://learn.chatgpt.com/docs/mobile (확인일 2026-11-01)
 [^ask]: Codex 공식 문서, 「Permissions」. "For most work, start with **Ask for approval**. It lets ChatGPT work within the current workspace and pauses before reaching beyond that boundary." / "Changing who reviews a request doesn't expand the sandbox." https://learn.chatgpt.com/docs/permission-modes (확인일 2026-11-01)
-[^no-cli]: Codex 공식 문서, 「Scheduled tasks」. "Codex CLI doesn't provide the Scheduled management interface." https://learn.chatgpt.com/docs/automations (확인일 2026-11-01)
+[^readonly]: "읽기만"은 4장의 권한 메뉴에 따로 보이지 않을 수 있는 설정입니다(이 가이드의 정리).
+[^no-cli]: 터미널(Codex CLI)에는 예약 관리 화면이 없습니다. Codex 공식 문서, 「Scheduled tasks」. "Codex CLI doesn't provide the Scheduled management interface." https://learn.chatgpt.com/docs/automations (확인일 2026-11-01)

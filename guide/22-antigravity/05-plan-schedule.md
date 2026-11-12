@@ -5,7 +5,7 @@
 > **한 줄 요약**: `/plan`은 고치기 전에 계획부터, `/schedule`은 **이 대화 안에서만** 도는 타이머, 대화를 넘어 계속 도는 예약은 **Automations**입니다.
 > `/browser`는 Chrome을 움직여 웹 일을 하고, `/goal`은 다 될 때까지 멈추지 않습니다. 둘 다 사용량을 많이 쓸 수 있습니다.
 
-이 장은 2026년 11월 1일에 확인한 Antigravity 공식 문서를 바탕으로 썼습니다. **이 가이드는 아직 앱 화면으로 실습하지 못했습니다.** 화면 이름이 내 화면과 다르면 화면을 따르세요. 이 가이드는 예약을 실제로 저장하지 않았습니다. 실제 작업 내용이 드러나고 사용량을 쓰기 때문입니다([Claude Code 8장](../20-claude-code/08-parallel-cloud-schedule.md)과 같은 이유).
+이 가이드는 아직 앱 화면으로 실습하지 못했습니다. 화면 이름이 내 화면과 다르면 화면을 따르세요.[^tested]
 
 ## 계획부터 받기 — `/plan`
 
@@ -15,7 +15,7 @@
 /plan 회의록·공부 노트·주간 회고 양식에 '작성일' 칸을 넣으려고 해. 무엇을 바꿔야 하는지 계획만 먼저 보여 줘.
 ```
 
-요구 사항이 아직 흐릿하면 `/grill-me`가 도움이 됩니다. 시작 전에 **한 번에 한 질문씩**, 추천 답과 함께 묻습니다.[^grill] Claude Code 5장에서 배운 "잘 맡기는 법"을 도구가 대신 끌어내 주는 셈입니다.
+요구 사항이 아직 흐릿하면 `/grill-me`가 도움이 됩니다. 시작 전에 **한 번에 한 질문씩**, 추천 답과 함께 묻습니다.[^grill] 내가 무엇을 원하는지 도구가 질문으로 대신 끌어내 주는 셈입니다(Claude Code 5장의 "잘 맡기는 법"과 같은 생각입니다).
 
 <Quiz id="ch605-plan" />
 
@@ -33,21 +33,33 @@ Antigravity에는 예약이 **두 종류** 있습니다.
 
 `/schedule`은 한 번 울리는 타이머나 반복 일정을 만들고, 기다리는 동안 대화를 막지 않습니다.[^schedule] 하지만 그 대화에 속하므로, **매주 금요일 주간 회고**처럼 계속 돌릴 일은 **Automations**를 씁니다.[^scoped]
 
-Automations는 자리를 비운 동안에도 정해 둔 일정에 따라 에이전트에게 메시지를 보냅니다.[^automations] 앱 사이드바의 **Automations**에서 엽니다. 몇 가지를 알아 두세요.
+Automations는 자리를 비운 동안에도 정해 둔 일정에 따라 에이전트에게 메시지를 보냅니다.[^automations] 앱 사이드바의 **Automations**에서 엽니다.
 
-- 실행마다 모델 등급(Flash Lite·Flash·Pro)을 고릅니다. 기본은 Flash입니다.[^tier]
+만드는 법과 시험하는 법은 따로 있습니다.[^run-now]
+
+- **Create with Prompt**: 새 예약을 만드는 법입니다. 에이전트가 설정 과정을 함께 짚어 줍니다.
+- **Run Now**: 이미 만든 예약을 바로 한 번 돌려 시험하는 기능입니다.
+
+예를 들어 Create with Prompt에서 「매주 금요일 오후에 inbox의 회고 메모로 주간 회고를 만들어 notes에 저장해 줘」처럼 말해 보세요.
+
+순서는 이렇게 하면 안전합니다.
+
+1. 같은 요청을 평소 대화에서 먼저 돌려 본다.
+2. 예약을 만든 뒤 Run Now로 한 번 시험한다.
+3. 결과가 괜찮으면 일정을 그대로 둔다.
+
+에이전트가 일하는 동안에는 컴퓨터가 잠들지 않게 막습니다.[^sleep] 하지만 **앱이 꺼져 있거나 컴퓨터가 잠든 동안에도 Automations가 도는지는 공식 문서에 나오지 않습니다.** 앱을 켜 두고 컴퓨터를 깨워 두는 편이 안전합니다(이 가이드의 권고, Claude Code·Codex의 데스크톱 예약과 같습니다).
+
+::: details 자세히 (눌러서 펼치기)
+- 실행마다 모델 등급(Flash Lite·Flash·Pro)을 고릅니다. 기본은 Flash입니다. 처음에는 기본값 그대로 두면 됩니다.[^tier]
 - 정확한 분에 돌지 않습니다. 간격의 10%까지, 최대 15분 흩어져 돕니다.[^jitter]
-- **Run Now**로 바로 한 번 돌려 보거나, **Create with Prompt**로 에이전트와 대화하며 만들 수 있습니다.[^run-now]
-
-에이전트가 일하는 동안에는 컴퓨터가 잠들지 않게 막습니다.[^sleep] 하지만 **앱이 꺼져 있거나 컴퓨터가 잠든 동안에도 Automations가 도는지는 공식 문서에 나오지 않습니다.** Claude Code·Codex의 데스크톱 예약처럼, 앱을 켜 두고 컴퓨터를 깨워 두는 편이 안전합니다(이 가이드의 권고).
-
-예약을 만들기 전에 같은 요청을 평소 대화에서 먼저 돌려 보고, Run Now로 한 번 시험한 뒤 일정을 거세요.
+:::
 
 <Quiz id="ch605-schedule" />
 
 ## 브라우저와 목표 — `/browser`·`/goal`
 
-`/browser`는 웹 일을 **브라우저 담당 서브에이전트**에게 맡깁니다. 이 서브에이전트가 Google Chrome을 움직여 페이지를 열고, 누르고, 화면을 찍습니다.[^browser] 브라우저 세션은 모두 **영상으로 녹화**돼 결과물에 남습니다.[^recorded] 페이지에서 스크립트를 실행하는 동작은 기본으로 허락을 묻습니다.[^js]
+`/browser`는 웹 일을 **브라우저 담당 서브에이전트**에게 맡깁니다. 서브에이전트(Subagent)는 주 에이전트가 일을 나눠 맡기는 보조 에이전트입니다. 이 서브에이전트가 Google Chrome을 움직여 페이지를 열고, 누르고, 화면을 찍습니다.[^browser] 브라우저 세션은 모두 **영상으로 녹화**돼 결과물에 남습니다.[^recorded] 페이지에서 스크립트를 실행하는 동작은 기본으로 허락을 묻습니다.[^js]
 
 `/goal`은 목표를 다 이룰 때까지 중간에 멈추지 않고 일하게 합니다.[^goal] 반복 횟수 상한이 없어서, 끝났다고 판단하거나 내가 멈출 때까지 돕니다.[^no-cap] 그만큼 사용량을 많이 쓸 수 있으니, **"다 됐다"의 기준을 분명히** 적어 주세요. 예를 들면 이렇습니다.
 
@@ -60,6 +72,8 @@ Automations는 자리를 비운 동안에도 정해 둔 일정에 따라 에이�
 <Quiz id="ch605-browser-goal" />
 
 ## 다른 기기에서 이어 보기
+
+정리도구 실습에는 필요 없는 기능입니다. 휴대폰이나 다른 컴퓨터에서 이어 보고 싶을 때만 읽으세요.
 
 앱의 **Settings → Application → Enable Remote Control**을 켜면, 다른 기기의 웹 브라우저에서 내 컴퓨터의 Antigravity를 조종할 수 있습니다.[^remote][^any-browser] 다른 기기에서도 **데스크톱과 같은 Google 계정**으로 로그인합니다.[^same-account]
 
@@ -96,6 +110,7 @@ Automations는 자리를 비운 동안에도 정해 둔 일정에 따라 에이�
 
 다음 장: [6장. 터미널에서 쓰기](06-terminal.md)
 
+[^tested]: 이 장은 2026년 11월 1일에 확인한 Antigravity 공식 문서를 바탕으로 썼습니다. 이 가이드는 아직 앱 화면으로 실습하지 못했습니다. 예약도 실제로 저장하지 않았습니다. 실제 작업 내용이 드러나고 사용량을 쓰기 때문입니다([Claude Code 8장](../20-claude-code/08-parallel-cloud-schedule.md)과 같은 이유).
 [^plan]: Antigravity 공식 문서, 「Plan (/plan)」. "While standard prompts immediately begin modifying files, `/plan` introduces an intentional planning phase that explores the workspace, identifies dependencies, and surfaces architectural decisions for your review." https://antigravity.google/docs/plan (확인일 2026-11-01)
 [^proceed]: Antigravity 공식 문서, 「Plan (/plan)」. "**Proceed**: Click **Proceed** to transition the agent into execution mode." https://antigravity.google/docs/plan (확인일 2026-11-01)
 [^grill]: Antigravity 공식 문서, 「Slash commands overview」. "The agent asks one question at a time and recommends an answer for each." https://antigravity.google/docs/slash-commands (확인일 2026-11-01)

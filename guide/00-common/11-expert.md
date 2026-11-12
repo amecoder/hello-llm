@@ -28,7 +28,7 @@ OpenAI가 사람들이 일에 ChatGPT를 쓰는 모습을 분석한 글에도 �
 
 ## 처음 연습할 일 고르기
 
-가장 크고 중요한 일부터 시작할 필요는 없습니다. 처음에는 이런 일을 고르세요. OpenAI 강좌가 피하라고 한 일(너무 넓은 일, 가끔만 하는 일, 위험이 큰 일, 확인하기 어려운 일)을 이 가이드가 뒤집어 적은 것입니다.[^academy-openai]
+가장 크고 중요한 일부터 시작할 필요는 없습니다. 처음에는 이런 일을 고르세요.[^guide-pick]
 
 - 자주 한다
 - 결과가 분명하다
@@ -48,14 +48,14 @@ OpenAI가 사람들이 일에 ChatGPT를 쓰는 모습을 분석한 글에도 �
 
 ## 맡기기 전에 시험해 보기
 
-"이 일을 AI에게 맡겨도 될까?" 감으로 정하지 말고 시험해 보세요. 방법은 간단합니다. **내가 이미 답을 아는 일**로 시켜 보는 것입니다. Anthropic의 강좌는 이것을 평가(Evals)라고 부릅니다.[^academy-eval] 강좌는 Claude를 예로 들지만, 같은 방법을 다른 AI에도 쓸 수 있습니다(이 가이드의 판단).
+"이 일을 AI에게 맡겨도 될까?" 감으로 정하지 말고 시험해 보세요. 방법은 간단합니다. **내가 이미 답을 아는 일**로 시켜 보는 것입니다. Anthropic의 강좌는 이것을 평가(Evals)라고 부릅니다.[^academy-eval] 강좌는 Claude를 예로 들지만, 같은 방법을 다른 AI에도 쓸 수 있습니다.[^guide-judgment]
 
 1. 자주 하는 일 하나를 고릅니다. 지난달에 쓴 안내 메일, 지난 분기에 만든 정리표 같은 것입니다.
 2. 내가 했던 결과물을 5~10개 모읍니다.
 3. 그때 내가 가지고 있던 자료를 주고, 같은 일을 AI에게 시킵니다.
 4. 내 결과와 나란히 놓고 비교합니다.
 
-예를 들면 이렇게 보내 볼 수 있습니다. 내가 전에 쓴 메일은 아직 보여 주지 마세요(이 가이드의 제안). 그래야 AI가 따라 쓰지 않고 스스로 만든 결과를 볼 수 있습니다.
+예를 들면 이렇게 보내 볼 수 있습니다. 내가 전에 쓴 메일은 아직 보여 주지 마세요.[^guide-judgment] 그래야 AI가 따라 쓰지 않고 스스로 만든 결과를 볼 수 있습니다.
 
 ```
 아래 메모로 동네 독서 모임 회원들에게 보낼 다음 달 안내 메일을 써 줘.
@@ -75,7 +75,13 @@ OpenAI가 사람들이 일에 ChatGPT를 쓰는 모습을 분석한 글에도 �
 
 메뉴를 먼저 고르지 마세요. 지금 앞에 놓인 일이 어떤 모양인지 먼저 보세요. 그러면 쓸 기능은 저절로 정해집니다.[^academy-tabs]
 
-서비스마다 기능 이름은 달라도, 일의 모양에 맞는 기능은 비슷합니다.
+서비스마다 기능 이름은 달라도, 일의 모양에 맞는 기능은 비슷합니다. 아래 표의 기능은 2단계 서비스별 가이드에서 화면과 함께 배웁니다. 지금은 이런 기능이 있다는 것만 알아 두세요.
+
+- **웹 검색**: AI가 인터넷을 찾아보고 답합니다.
+- **심층 리서치·리서치**: AI가 여러 자료를 찾아 읽고 보고서로 정리합니다.
+- **프로젝트**: 한 가지 일에 쓰는 대화·파일·지침을 한 폴더에 모아 둡니다.
+- **Work·Cowork**: 묻고 답하는 대화 대신, AI가 여러 단계를 진행해 완성 파일을 만들어 줍니다.
+- **예약 작업**: 정해 둔 때가 되면 AI가 알아서 일을 합니다.
 
 | 이런 일이면 | ChatGPT | Claude |
 |---|---|---|
@@ -96,12 +102,14 @@ OpenAI가 사람들이 일에 ChatGPT를 쓰는 모습을 분석한 글에도 �
 
 쓰다 보면 같은 말을 되풀이하게 됩니다. 되풀이하는 것을 한 번 적어 두면, 다음부터는 AI가 알고 시작합니다.
 
-담는 곳은 네 가지입니다. 처음부터 다 쓸 필요는 없습니다. 아래 순서로, 필요해질 때 하나씩 더하세요.[^academy-layers]
+예를 들어 대화마다 "존댓말로, 다섯 줄 이내로 써 줘"라고 쓰고 있다면, 이 한 줄을 한 번 적어 두면 됩니다.
 
-1. **모든 대화에 같은 부탁을 한다** → 지침에 적습니다. ChatGPT는 [「사용자 지정 지침」](../11-chatgpt/05-memory.md#사용자-지정-지침-—-늘-지켜-줬으면-하는-것), Claude는 [「지침」](../10-claude/05-memory.md#지침-—-모든-대화에-적용할-규칙)입니다.
-2. **한 가지 일을 계속 이어 간다** → 그 일을 프로젝트로 묶습니다.
-3. **같은 순서를 매번 설명한다** → 그 순서를 다시 쓸 틀로 남깁니다. [8장 「4. 다시 쓸 틀로 만들기」](08-meta-prompting.md#_4-다시-쓸-틀로-만들기)의 틀을 프로젝트 지침에 넣는 데서 시작하세요. 서비스와 요금제가 지원하면 스킬로 만들 수도 있습니다.
-4. **잘 다듬은 틀을 남과 나누고 싶다** → 틀을 문서로 나누거나, 서비스가 주는 공유 기능(플러그인 등)으로 묶습니다. 이런 기능은 서비스와 요금제에 따라 없을 수 있습니다.
+담는 곳은 네 가지입니다. 처음부터 다 쓸 필요는 없습니다. 아래 순서로, 필요해질 때 하나씩 더하세요.[^academy-layers] 이름은 2단계에서 배우니 지금은 "점점 큰 상자로 옮겨 간다"고만 보면 됩니다.
+
+1. **모든 대화에 같은 부탁을 한다** → 지침(모든 대화에 자동으로 붙는 내 부탁 메모)에 적습니다. ChatGPT는 [「사용자 지정 지침」](../11-chatgpt/05-memory.md#사용자-지정-지침-—-늘-지켜-줬으면-하는-것), Claude는 [「지침」](../10-claude/05-memory.md#지침-—-모든-대화에-적용할-규칙)입니다.
+2. **한 가지 일을 계속 이어 간다** → 그 일을 프로젝트(그 일의 대화·파일·지침을 모아 둔 폴더)로 묶습니다.
+3. **같은 순서를 매번 설명한다** → 그 순서를 다시 쓸 틀로 남깁니다. [8장 「4. 다시 쓸 틀로 만들기」](08-meta-prompting.md#_4-다시-쓸-틀로-만들기)의 틀을 프로젝트 지침에 넣는 데서 시작하세요. 서비스와 요금제가 지원하면 스킬(다시 쓸 작업 순서를 서비스에 저장해 두는 기능)로 만들 수도 있습니다.
+4. **잘 다듬은 틀을 남과 나누고 싶다** → 틀을 문서로 나누거나, 서비스가 주는 공유 기능(플러그인 등, 여러 틀을 남에게 나눠 줄 수 있게 묶은 꾸러미)으로 묶습니다. 이런 기능은 서비스와 요금제에 따라 없을 수 있습니다.
 
 순서대로 가면 매번 새로 설명할 일이 조금씩 줄어듭니다.
 
@@ -155,6 +163,8 @@ Anthropic 강좌에 나오는 예는 이렇습니다.[^academy-data] 퇴역 군�
 
 무언가를 배울 때는 답을 바로 받지 말고, 내가 생각하도록 이끌어 달라고 해 보세요. 스스로 답을 찾아가면 푸는 길을 함께 익히게 됩니다.
 
+예를 들어 엑셀의 VLOOKUP을 배우고 싶다고 해 봅시다. VLOOKUP은 한 표의 번호를 보고, 다른 표에서 짝이 되는 값(예: 가격)을 찾아 채워 주는 엑셀 함수입니다. 엑셀을 안 쓴다면 VLOOKUP 자리에 배우고 싶은 것을 넣어 읽으세요.
+
 ```
 엑셀의 VLOOKUP을 배우고 싶어. 답을 바로 알려 주지 말고, 내가 스스로 생각해 보게 질문을 하나씩 던져 줘.
 ```
@@ -180,7 +190,7 @@ AI가 나에게 질문을 던지게 하는 방법은 [5장 「4. 되묻게 하�
 
 결과를 쓰기 전에 확인하는 습관은 [9장 「확인하는 네 가지 습관」](09-safety.md#확인하는-네-가지-습관)에서 배웠습니다. 여기서는 얼마나 꼼꼼히 볼지, 어느 단계에서 볼지 살펴봅니다.
 
-**모든 답을 똑같이 꼼꼼하게 볼 필요는 없습니다.** 일의 무게에 맞춰 확인하세요.[^academy-openai] 표의 마지막 줄은 강좌의 기준이고, 앞의 세 줄은 이 가이드가 고른 일상 예시입니다.
+**모든 답을 똑같이 꼼꼼하게 볼 필요는 없습니다.** 일의 무게에 맞춰 확인하세요.[^academy-openai][^guide-weight]
 
 | 이런 일이라면 | 이만큼 확인한다 |
 |---|---|
@@ -189,7 +199,7 @@ AI가 나에게 질문을 던지게 하는 방법은 [5장 「4. 되묻게 하�
 | 기사·자료 요약 | 원문과 맞는지 대조한다 |
 | 건강·돈·일자리·법적 권리에 영향을 주는 일 | 전문가가 꼼꼼히 검토하거나 정해진 절차를 거친다 |
 
-**마지막에 한 번이 아니라 단계마다 보세요.** 여러 단계로 진행하는 일이라면 다음 단계로 넘어가기 전에 잠깐 멈춥니다.[^academy-openai] 그리고 다음 세 가지를 스스로 물어보세요. 강좌의 점검 틀 CLEAR에서 이 가이드가 셋을 골랐습니다.[^academy-openai]
+**마지막에 한 번이 아니라 단계마다 보세요.** 여러 단계로 진행하는 일이라면 다음 단계로 넘어가기 전에 잠깐 멈춥니다.[^academy-openai] 그리고 다음 세 가지를 스스로 물어보세요.[^guide-clear]
 
 - **사실**: 숫자·이름·날짜·출처가 맞나?
 - **논리**: "~이므로 ~하다"는 연결이 말이 되나?
@@ -217,7 +227,7 @@ AI가 나에게 질문을 던지게 하는 방법은 [5장 「4. 되묻게 하�
 4. 날짜·품목·금액 표를 10줄쯤 지어내 내가 먼저 품목별 합계를 손으로 낸다. 그다음 같은 표를 AI에게 주고 계산 단계를 보여 달라고 해서 두 결과를 맞춰 본다.
 5. 이 장의 VLOOKUP 프롬프트로, 요즘 배우고 싶은 것 하나를 질문을 받으며 익혀 본다.
 
-**이어지는 과제** ([독서 모임 준비하기](practice-kit.md)): 2번을 예시 파일로 했다면, 여기서 과제가 시작됩니다. 2단계 각 장 끝에 다음 단계가 있습니다. 이 과제를 따라가면 2단계를 마칠 때 11월 모임 안내문 패키지가 남습니다.
+**이어지는 과제** ([독서 모임 준비하기](practice-kit.md)): 동네 독서 모임의 총무가 되어 11월 모임을 준비하는 과제 하나를, 이 장부터 2단계(서비스별 가이드) 마지막 장까지 조금씩 이어서 하는 것입니다. 2번을 예시 파일로 했다면, 여기서 과제가 시작됩니다. 다음 단계는 2단계 각 장 끝에 이어집니다. 끝까지 따라가면 11월 모임 안내문과 거기 딸린 자료 묶음(안내문 패키지)이 남습니다.
 
 ## 정리
 
@@ -244,6 +254,10 @@ AI가 나에게 질문을 던지게 하는 방법은 [5장 「4. 되묻게 하�
 
 다음 장: 1단계를 마쳤습니다. [이해도 확인 시험](certificate.md)으로 내 AI 이해 레벨을 확인하거나, 2단계 [ChatGPT](../11-chatgpt/01-getting-started.md)·[Claude](../10-claude/01-getting-started.md) 가이드로 넘어가 보세요.
 
+[^guide-pick]: OpenAI 강좌가 피하라고 한 일(너무 넓은 일, 가끔만 하는 일, 위험이 큰 일, 확인하기 어려운 일)을 이 가이드가 뒤집어 적은 것입니다. 출처는 아래 OpenAI Academy 각주.
+[^guide-judgment]: 강좌는 Claude를 예로 듭니다. 같은 방법을 다른 AI에도 쓸 수 있다는 것은 이 가이드의 판단이고, 전에 쓴 메일을 아직 보여 주지 말라는 것은 이 가이드의 제안입니다.
+[^guide-weight]: 표의 마지막 줄은 OpenAI Academy 강좌의 기준이고, 앞의 세 줄은 이 가이드가 고른 일상 예시입니다.
+[^guide-clear]: OpenAI Academy 강좌의 점검 틀 CLEAR(Complete·Logical·Evidence·Audience·Relevant, 다 담았나·논리가 맞나·근거가 있나·읽는 사람에 맞나·관련 있나)에서 이 가이드가 셋을 골랐습니다. 출처는 아래 OpenAI Academy 각주.
 [^academy-4d]: Claude Academy 「Claude 101」 강의 「Getting better results」. "AI Fluency is the ability to collaborate effectively with AI tools—not just knowing which buttons to click, but developing the judgment to use AI well across different situations." / "Deciding on what work should be done by humans, what work should be done by AI, and how to distribute tasks between them." / "Effectively communicating with AI systems." / "Thoughtfully and critically evaluating AI outputs, processes, behaviors and interactions." / "Using AI responsibly and ethically." / "maintaining transparency, and taking accountability for AI-assisted work." https://academy.claude.com/courses/claude-101/getting-better-results (확인일 2026-10-26)
 [^ways]: OpenAI, 「How workers are unlocking new ways of working」. 자기 직업 밖의 일에서 예시·배경을 더 붙이고 확인을 더 부탁한다는 분석. https://openai.com/index/unlocking-new-ways-of-working (확인일 2026-10-24)
 [^academy-eval]: Claude Academy 「Claude 101」 강의 「Getting better results」. "Evals (short for evaluations) are a way to develop intuition for assessing Claude's outputs on the tasks that matter to you." / "Collect 5-10 examples of a task you do regularly—emails you've written, reports you've created, analyses you've done." / "Include the context you'd naturally have when doing this work." / "Does Claude capture the key information?" / "Is the tone and style appropriate?" / "What's missing or could be improved?" / "But if you can't get there after several refinements, you've learned that this isn't a task you should delegate." / "Just remember, validation builds confidence, but it doesn't eliminate responsibility." https://academy.claude.com/courses/claude-101/getting-better-results (확인일 2026-10-26)

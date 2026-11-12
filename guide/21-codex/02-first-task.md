@@ -35,9 +35,14 @@
 
 **Choose project**를 눌러 `정리도구` 폴더(Claude Code 가이드를 따라 했다면 `~/hello-ai-연습/정리도구`)를 고릅니다. Codex는 고른 폴더의 파일을 읽고 고칠 수 있습니다.[^folder] 메뉴 막대의 「File → Open Folder…」로 열어도 됩니다.
 
-일하는 곳은 **This computer**(내 컴퓨터) 그대로 둡니다. Cloud는 GitHub 저장소를 연결한 사람을 위한 것이고, 내 컴퓨터의 파일은 클라우드로 넘어가지 않습니다.[^cloud-files]
+일하는 곳은 **This computer**(내 컴퓨터) 그대로 두세요. 이 가이드는 Cloud를 쓰지 않습니다. 내 컴퓨터의 파일은 클라우드로 넘어가지 않기 때문입니다.[^cloud-files] Cloud는 6장에서 짧게 소개합니다.
 
-폴더가 **Git 저장소**(바뀐 기록을 남기는 장치)인지도 확인하세요. Codex에서 바뀐 내용을 보는 창은 Git 저장소에서만 열립니다. Git이 아니면 앱이 하나 만들자고 묻습니다.[^review-git] Claude Code 3장을 따라 했다면 이미 Git 저장소입니다. 연습 자료로 새로 시작했다면 **앱이 저장소를 만들자고 물을 때** 따르면 됩니다.[^review-git] Codex에게 대화로 부탁할 수도 있지만, Git 기록을 담는 `.git` 폴더는 보호 폴더라([4장](04-permissions-undo.md)) 허락을 묻거나 막힐 수 있습니다.
+폴더가 **Git 저장소**(바뀐 기록을 남기는 장치)인지도 확인하세요. Codex에서 바뀐 내용을 보는 창은 Git 저장소에서만 열립니다. Git이 아니면 앱이 하나 만들자고 묻습니다.[^review-git]
+
+- Claude Code 3장을 따라 했다면 이미 Git 저장소입니다.
+- 연습 자료로 새로 시작했다면 **앱이 저장소를 만들자고 물을 때** 따르면 됩니다.[^review-git]
+
+Codex에게 대화로 "Git 저장소로 만들어 줘"라고 부탁할 수도 있습니다. 다만 Git 기록이 담기는 `.git` 폴더는 Codex가 마음대로 고치지 못하게 막혀 있습니다. 그래서 허락을 묻거나 중간에 멈출 수 있습니다. 이런 폴더는 [4장](04-permissions-undo.md)에서 자세히 봅니다.
 
 <Quiz id="ch502-open" />
 
@@ -49,7 +54,7 @@ Claude Code 2장과 비슷한 요청을 보냅니다. 이번에는 형식을 따
 inbox/회의-2026-10-27-주간회의.txt 메모를 회의록으로 정리해서 notes/ 폴더에 새 파일로 저장해 줘.
 ```
 
-이 가이드에서 실행해 보니 Codex는 이렇게 일했습니다. 이 실행은 같은 Codex를 터미널([7장](07-terminal.md))에서 돌린 것입니다. 공식 문서는 앱도 고른 폴더에서 `AGENTS.md`와 스킬을 자동으로 찾는다고 설명합니다.[^discovery] 다만 이 가이드가 앱 화면에서 같은 결과를 직접 확인하지는 않았습니다.
+이 가이드에서 실행해 보니 Codex는 이렇게 일했습니다. 이 실행은 앱이 아니라 **터미널**(명령어를 글자로 쳐서 컴퓨터를 다루는 창, [7장](07-terminal.md))에서 같은 Codex를 돌린 것입니다. 공식 문서는 앱도 고른 폴더에서 규칙 파일과 스킬을 자동으로 찾는다고 설명합니다.[^discovery] 다만 이 가이드는 앱 화면에서 같은 결과를 확인하지 않았습니다.
 
 1. 폴더에서 규칙 파일(`AGENTS.md`)과 양식을 찾았습니다. 규칙 파일은 아직 없어서 **양식만** 읽었습니다.
 2. 양식의 칸 순서대로 결정한 것 2개, 할 일 5개, 다음에 논의할 것, 다음 회의를 채웠습니다.
@@ -106,5 +111,5 @@ inbox/회의-2026-10-27-주간회의.txt 메모를 회의록으로 정리해서 
 [^cloud-files]: Codex 공식 문서, 「Codex environments」. "Use **Work in** to choose **This computer** or **Cloud**." / "Your computer's local files, running processes, browser sign-ins, and VPN access aren't automatically transferred to it." https://learn.chatgpt.com/docs/environments/modes (확인일 2026-11-01)
 [^review-git]: Codex 공식 문서, 「Code review」. "The review pane requires a project inside a Git repository. If your project isn't a Git repository yet, the app prompts you to create one." https://learn.chatgpt.com/docs/code-review (확인일 2026-11-01)
 [^review]: Codex 공식 문서, 「Use ChatGPT」. "A polished response can still be incomplete or wrong, so review the details that matter before you use or share it." https://learn.chatgpt.com/docs/use-chatgpt (확인일 2026-11-01)
-[^discovery]: Codex 공식 문서, 「Projects and chats」. "New chats start in the primary folder. Codex also uses that folder as the default for Git operations and automatic discovery of `AGENTS.md`, skills, and `config.toml`." https://learn.chatgpt.com/docs/projects (확인일 2026-11-01)
+[^discovery]: 이 가이드가 앱 화면에서 같은 결과를 직접 확인하지는 않았습니다. Codex 공식 문서, 「Projects and chats」. "New chats start in the primary folder. Codex also uses that folder as the default for Git operations and automatic discovery of `AGENTS.md`, skills, and `config.toml`." https://learn.chatgpt.com/docs/projects (확인일 2026-11-01)
 [^toggle]: Codex 공식 문서, 「ChatGPT desktop app」. "Choose ChatGPT or Codex. In ChatGPT, use the toggle above the composer to select Chat or Work. In Codex, start with New chat." https://learn.chatgpt.com/docs/app (확인일 2026-11-01)

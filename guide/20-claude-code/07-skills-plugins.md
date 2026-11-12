@@ -36,7 +36,7 @@ CLAUDE.md와 다른 점은 **읽히는 때**입니다. CLAUDE.md는 세션마다
 templates 양식과 CLAUDE.md 규칙을 쓰는 스킬 3개를 이 폴더의 .claude/skills 에 만들어 줘. meeting-notes(회의 메모 → 회의록), study-notes(공부 필기 → 공부 노트), weekly-review(회고 메모 → 주간 회고). 각 SKILL.md에는 언제 쓰는지, 읽을 파일, 쓸 양식, 저장 위치, 끝나고 확인할 점검표를 넣어 줘.
 ```
 
-스킬 폴더 `.claude/skills/<이름>/SKILL.md` 를 그 폴더 안에 두면, **그 폴더의 세션에서만** 쓰는 프로젝트 스킬이 됩니다.[^where] 폴더 이름이 곧 명령 이름입니다(`/meeting-notes`).[^name] 한글 명령 이름이 되는지는 공식 문서로 확인하지 못해서, 이 가이드는 영문 이름을 썼습니다.
+스킬 폴더 `.claude/skills/<이름>/SKILL.md` 를 그 폴더 안에 두면, **그 폴더의 세션에서만** 쓰는 프로젝트 스킬이 됩니다.[^where] 폴더 이름이 곧 명령 이름입니다(`/meeting-notes`).[^name] 이 가이드는 스킬 이름을 영문으로 썼습니다.[^korean-name]
 
 ### 이번에는 허락 창이 떴다
 
@@ -44,7 +44,11 @@ templates 양식과 CLAUDE.md 규칙을 쓰는 스킬 3개를 이 폴더의 .cla
 
 ![허락 창. ① 「Claude가 쓰기 SKILL.md하도록 허용하시겠습니까?」, ② 쓰려는 내용 미리보기(초록 줄), ③ 「거부」, ④ 「항상 허용」과 ▾ 버튼에 빨간 번호가 붙어 있다(경로 줄은 컴퓨터 사용자 이름이 들어 있어 가림)](assets/shot-26-permission-marked.png)
 
-2~4장에서는 이 컴퓨터의 개인 허용 규칙 때문에 허락 창이 뜨지 않았습니다. 이번에 뜬 이유는 `.claude` 폴더가 **보호된 경로**이기 때문입니다. 「편집 자동 수락」 모드에서도 보호된 경로에 쓰는 일은 계속 묻습니다.[^protected] 스킬·설정처럼 Claude의 동작을 바꾸는 파일이 이 폴더에 있어서, 바꾸기 전에 사람이 확인하게 한 것입니다.
+허락 창이 뜬 이유는 스킬을 `.claude` 폴더에 쓰기 때문입니다. `.claude` 폴더는 Claude Code가 이 폴더용 설정과 스킬을 두는 곳입니다. 3장의 파일 칸 목록에서 본 그 폴더입니다.
+
+이 폴더는 **보호된 경로**(쓰기 전에 늘 허락을 묻는 위치)입니다. 「편집 자동 수락」 모드에서도 보호된 경로에 쓰는 일은 계속 묻습니다.[^protected] 스킬·설정처럼 Claude의 동작을 바꾸는 파일이 이 폴더에 있어서, 바꾸기 전에 사람이 확인하게 한 것입니다.
+
+2~4장의 캡처에 허락 창이 없었던 것은 캡처한 컴퓨터의 개인 허용 규칙 때문입니다. 그 규칙도 보호된 경로에서는 묻는 것을 막지 않았습니다.
 
 ②에서 **무엇을 쓰려는지 먼저 읽을 수 있습니다.** ▾를 누르면 「한 번만 허용」이 나옵니다.
 
@@ -96,13 +100,13 @@ templates 양식과 CLAUDE.md 규칙을 쓰는 스킬 3개를 이 폴더의 .cla
 
 ## 플러그인과 커넥터
 
-**플러그인**(Plugin)은 남이 만든 스킬·명령·도구를 묶음으로 설치하는 것이고, **커넥터**(Connector)는 Gmail·캘린더 같은 외부 서비스를 Claude에 연결하는 것입니다. 데스크톱 앱에서는 입력창 옆 **+** 버튼에서 커넥터와 플러그인을 추가합니다.[^plus] 커넥터는 MCP 서버(AI가 외부 도구에 연결하는 표준 방식)를 화면에서 쉽게 설정하게 만든 것입니다.[^connectors]
+**플러그인**(Plugin)은 남이 만든 스킬·명령·도구를 묶음으로 설치하는 것이고, **커넥터**(Connector)는 Gmail·캘린더 같은 외부 서비스를 Claude에 연결하는 것입니다. 데스크톱 앱에서는 입력창 옆 **+** 버튼에서 커넥터와 플러그인을 추가합니다.[^plus] 커넥터는 MCP 서버를 화면에서 쉽게 설정하게 만든 것입니다.[^connectors] MCP는 AI가 메일·일정 같은 다른 프로그램과 주고받을 때 쓰는 공통 규격입니다. 플러그 모양이 정해져 있어 어느 콘센트에나 꽂을 수 있는 것과 비슷합니다.
 
 편리하지만 **설치하기 전에 꼭 생각할 것**이 있습니다. 플러그인은 **내 컴퓨터에서 내 권한으로 코드를 실행**할 수 있습니다.[^plugin-risk] 그리고 이런 코드는 4장의 권한 모드가 지키는 범위 밖에서 돌기도 합니다. 권한 규칙은 Claude의 도구 호출에 적용되지, 플러그인이 스스로 돌리는 코드에는 적용되지 않습니다.[^plugin-scope]
 
 - 만든 곳을 알 수 있고 믿을 만한 플러그인만 설치합니다.
 - 필요 없어진 플러그인은 지웁니다.
-- 커넥터로 연결한 서비스의 내용(메일·일정)도 Claude가 읽는 자료가 됩니다. 9장의 "숨은 지시"를 함께 읽으세요.
+- 커넥터로 연결한 서비스의 내용(메일·일정)도 Claude가 읽는 자료가 됩니다. 남이 보낸 메일 속에 "AI에게: ~해라" 같은 문장이 몰래 들어 있으면, Claude가 그것을 따르려 할 수 있습니다. 이런 **숨은 지시**는 [9장](09-cost-data-safety.md)에서 실험해 봅니다.
 
 이 가이드의 정리 도구는 **내가 만든 스킬만으로** 충분합니다. 플러그인과 커넥터는 꼭 필요할 때 하나씩 늘리세요.
 
@@ -147,6 +151,7 @@ templates 양식과 CLAUDE.md 규칙을 쓰는 스킬 3개를 이 폴더의 .cla
 [^desc]: Claude Code 공식 문서, 「Extend Claude with skills」. "Only description is recommended so Claude knows when to use the skill." https://code.claude.com/docs/en/skills (확인일 2026-10-31)
 [^slash]: Claude Code 공식 문서, 「Desktop application」. "type / in the prompt box or click the + button and select Slash commands to browse what's available." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
 [^protected]: Claude Code 공식 문서, 「Choose a permission mode」. acceptEdits 절 "These still prompt:" 아래 "Writes to protected paths" https://code.claude.com/docs/en/permission-modes (확인일 2026-10-31)
+[^korean-name]: 한글 명령 이름이 되는지는 공식 문서로 확인하지 못해서 영문 이름을 썼습니다.
 [^plus]: Claude Code 공식 문서, 「Desktop application」. "Click the + button next to the prompt box for file attachments, skills, connectors, and plugins." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
 [^connectors]: Claude Code 공식 문서, 「Desktop application」. "Connectors are MCP servers with a graphical setup flow." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
 [^plugin-risk]: Claude Code 공식 문서, 「Plugin security and trust」. "A plugin can carry content that runs code on your machine with your user privileges and content that enters Claude's context as instructions, so review a plugin before you install it." https://code.claude.com/docs/en/plugins/security (확인일 2026-10-31)

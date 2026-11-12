@@ -44,21 +44,21 @@
 
 옆 메뉴 위쪽에는 기능 버튼이, 아래쪽에는 대화 목록이 있습니다. 그림의 빨간 번호가 아래 표의 번호입니다.
 
+목록에 나오는 **스레드**(thread)는 대화 하나를 부르는 다른 말입니다. 「고정된 스레드」는 "고정해 둔 대화"라는 뜻입니다.
+
 ![옆 메뉴만 확대한 그림. ① 오른쪽 위 돋보기, ② 「새 채팅」, ③ 「예약」, ④ 「라이브러리」, ⑤ 「플러그인」, ⑥ 「탐색」, ⑦ 「고정된 스레드」, ⑧ 「프로젝트」, ⑨ 「최근」에 빨간 번호가 붙어 있다](assets/shot-01-home-sidebar.png)
 
 | 번호 | 항목 | 하는 일 | 자세히 |
 |---|---|---|---|
 | ① | 돋보기 (「검색」) | 지난 대화를 찾는다 | [3장](03-chats.md) |
 | ② | 「새 채팅」 | 빈 대화를 새로 시작한다 | [3장](03-chats.md) |
-| ③ | 「예약」 | 정해 둔 때에 실행되는 예약 작업을 모아 본다 | [11장](11-expert.md#정해진-때에-알아서-—-예약-작업) |
-| ④ | 「라이브러리」 | 올리거나 만든 파일을 모아 둔 곳(「Space」로 바뀌는 중) | [4장](04-files-images.md#라이브러리-—-올린-파일을-모아-두는-곳) |
+| ③ | 「예약」 | 정해 둔 때에 알아서 하는 일(예: 아침 알림)을 모아 본다 | [11장](11-expert.md#정해진-때에-알아서-—-예약-작업) |
+| ④ | 「라이브러리」 | 올리거나 만든 파일을 모아 둔 곳[^space] | [4장](04-files-images.md#라이브러리-—-올린-파일을-모아-두는-곳) |
 | ⑤ | 「플러그인」 | ChatGPT에 기능을 더하는 확장을 찾는다 | [7장](07-projects-plugins.md) |
 | ⑥ | 「탐색」 | 그 밖의 기능을 둘러본다 | — |
 | ⑦ | 「고정된 스레드」 | 자주 여는 대화를 맨 위에 붙여 둔 목록 | [3장](03-chats.md) |
 | ⑧ | 「프로젝트」 | 주제별로 대화와 파일을 묶어 둔 폴더 | [7장](07-projects-plugins.md) |
 | ⑨ | 「최근」 | 최근 대화 목록 | [3장](03-chats.md) |
-
-**스레드**(thread)는 대화 하나를 부르는 다른 말입니다. 「고정된 스레드」는 "고정해 둔 대화"라는 뜻입니다.
 
 <Quiz id="ch102-sidebar" />
 
@@ -69,7 +69,7 @@
 - **Chat**: 지금까지 알던 ChatGPT입니다. 묻고 답하며 대화합니다. 이 가이드 대부분은 Chat 기준입니다.
 - **Work**: 여러 단계를 거치는 긴 작업을 맡기고, 문서·표·발표 자료·보고서 같은 **완성된 결과물**을 받는 모드입니다.
 
-Work는 웹과 휴대폰에서는 **유료 요금제(Free·Go 제외)** 에서만 쓸 수 있습니다. Free·Go는 컴퓨터 앱에서만 제한적으로 쓸 수 있습니다.[^rn-work] 쓰는 법은 [7장](07-projects-plugins.md)에서 다룹니다.
+쓰는 법은 [7장](07-projects-plugins.md)에서 다룹니다. 웹과 휴대폰에서는 **유료 요금제(Free·Go 제외)** 에서만 쓸 수 있습니다.[^rn-work][^work-desktop]
 
 <Quiz id="ch102-chat-work" />
 
@@ -95,8 +95,10 @@ Work는 웹과 휴대폰에서는 **유료 요금제(Free·Go 제외)** 에서�
 
 입력창 오른쪽에는 **마이크 버튼**(말로 입력)과 **음성 버튼**(목소리로 대화, [9장](09-voice.md))이 있습니다.
 
-> **긴 글을 붙여 넣으면 첨부 파일로 바뀝니다.** 1만 자가 넘는 글을 붙여 넣으면 자동으로 첨부 파일이 됩니다.
-> 입력창 안에 글로 두고 싶으면 「Show in text field」를 누르면 됩니다.[^paste]
+::: details 긴 글을 붙여 넣었더니 첨부 파일이 됐다면 (눌러서 펼치기)
+1만 자가 넘는 글을 붙여 넣으면 자동으로 첨부 파일이 됩니다.
+입력창 안에 글로 두고 싶으면 「Show in text field」(입력창에 글로 보이기)를 누르면 됩니다. 도움말에 영어 이름으로 적힌 버튼입니다.[^paste]
+:::
 
 <Quiz id="ch102-plus" />
 
@@ -108,21 +110,7 @@ Work는 웹과 휴대폰에서는 **유료 요금제(Free·Go 제외)** 에서�
 ![입력창 오른쪽 「추론 수준」을 누른 화면. 작은 창 안에 「Medium」이라는 글자와 좌우로 움직이는 슬라이더가 있는 것을 살펴보세요](assets/shot-03-model-menu-marked.png)
 
 대화 제목과 계정 이름은 예시로 바꾼 화면입니다. ① 「추론 수준」 버튼을 누르면 ② 지금 수준(「Medium」)과 ③ 슬라이더가 나옵니다.
-
-| 수준 | 성격 | 쓸 수 있는 요금제 |
-|---|---|---|
-| Instant(즉시) | 바로 답한다. 가벼운 질문용 | 유료 |
-| Medium(중간) · High | 더 오래 생각한다. 계획·비교·계산용 | Plus 이상 |
-| Extra High · Pro | 가장 깊이 생각한다 | Pro·Business·Enterprise |
-
-출처: OpenAI 도움말[^levels]
-
-알아 둘 점이 두 가지 있습니다.
-
-- **말로 "더 깊이 생각해"라고 해도 수준이 바뀌지 않습니다.** Instant로 둔 채 그렇게 써도 자동으로 올라가지 않습니다. 슬라이더를 직접 옮기세요.[^levels]
-- **무료(Free)·Go 요금제는 슬라이더 대신 「생각하기」를 켭니다.** Go 요금제의 휴대폰 앱에서는 + 메뉴의 「Think harder」를 고릅니다.[^go-think]
-
-<!-- 스크린샷 필요: Free 요금제 웹 화면에서 「생각하기」를 켜는 위치 -->
+무료(Free)·Go 요금제에는 슬라이더 대신 「생각하기」가 있습니다(아래 「쓸 수 있는 요금제」).
 
 **언제 올릴까요?** 계산만이 아닙니다. 짧은 문장 다듬기처럼 단순하거나 부담이 작은 일에는 빠른 수준으로 충분할 수 있습니다. 조건이 여러 개이거나, 선택지를 기준에 맞춰 비교하거나, 내가 쓴 계획에서 빠진 가정을 찾을 때는 수준을 올려 보세요.[^academy-content]
 ```
@@ -130,12 +118,29 @@ Work는 웹과 휴대폰에서는 **유료 요금제(Free·Go 제외)** 에서�
 한 곳을 추천하고, 그곳의 단점을 어떻게 줄일 수 있는지도 알려 줘.
 ```
 
-같은 질문을 수준만 바꿔 물어보세요. 빠른 답과 깊은 답의 차이를 바로 느낄 수 있습니다.
+아래 저축 계산 질문을 한 번은 낮은 수준으로, 한 번은 높은 수준으로 보내 보세요. 빠른 답과 깊은 답의 차이를 바로 느낄 수 있습니다.
 
 ```
 월급 300만 원인 직장인이 3년 안에 2,000만 원을 모으려면 매달 얼마씩 모아야 하는지,
 적금 이자를 생각한 경우와 생각하지 않은 경우로 나눠 계산 과정을 보여 줘.
 ```
+
+### 쓸 수 있는 요금제
+
+| 수준 | 성격 | 쓸 수 있는 요금제 |
+|---|---|---|
+| Instant(즉시) | 바로 답한다. 가벼운 질문용 | 유료 |
+| Medium(중간) · High | 더 오래 생각한다. 계획·비교·계산용 | Plus 이상 |
+| Extra High · Pro | 가장 깊이 생각한다 | Pro·Business·Enterprise |
+
+Pro는 아주 많이 쓰는 사람용 요금제, Business·Enterprise는 회사 단위로 쓰는 요금제입니다([1장](01-getting-started.md)). 출처: OpenAI 도움말[^levels]
+
+알아 둘 점이 두 가지 있습니다.
+
+- **말로 "더 깊이 생각해"라고 해도 수준이 바뀌지 않습니다.** Instant로 둔 채 그렇게 써도 자동으로 올라가지 않습니다. 슬라이더를 직접 옮기세요.[^levels]
+- **무료(Free)·Go 요금제는 슬라이더 대신 「생각하기」를 켭니다.**[^go-think]
+
+<!-- 스크린샷 필요: Free 요금제 웹 화면에서 「생각하기」를 켜는 위치 -->
 
 <Quiz id="ch102-reasoning" />
 
@@ -157,7 +162,7 @@ Work는 웹과 휴대폰에서는 **유료 요금제(Free·Go 제외)** 에서�
 |---|---|---|---|
 | ① | 「일반」 | 화면 언어 (「자동 감지」) | — |
 | ② | 「모양」 | 밝은 화면·어두운 화면, 글자 대비, 강조 색 | — |
-| ③ | 「보안 및 로그인」 | 다중 인증, 로그인된 기기 확인, 계정 PIN(잠긴 대화를 여는 4자리 번호), 락다운 모드 | [8장](08-privacy.md#계정-지키기), [3장](03-chats.md) |
+| ③ | 「보안 및 로그인」 | 다중 인증, 로그인된 기기 확인, 계정 PIN, 락다운 모드 | [8장](08-privacy.md#계정-지키기), [3장](03-chats.md) |
 | ④ | 「보관된 채팅」 | 보관해 둔 대화 보기 | [3장](03-chats.md) |
 | ⑤ | 「자녀 보호」 · 「신뢰할 수 있는 연락처」 | 청소년 자녀 계정 연결, 위기 때 알림을 받을 사람 지정 | [8장](08-privacy.md#가족과-안전을-위한-기능) |
 | ⑥ | 「음성 스타일」 | 음성 대화의 목소리 | [9장](09-voice.md) |
@@ -166,6 +171,15 @@ Work는 웹과 휴대폰에서는 **유료 요금제(Free·Go 제외)** 에서�
 | ⑨ | 「사용량」 | 남은 사용 한도, 크레딧 | [1장](01-getting-started.md#유료로-바꾸기-전에-알아-둘-것) |
 | — | 「플러그인」(그림 아래쪽 「통합」 묶음) | 연결한 앱과 기본 권한 | [7장](07-projects-plugins.md#연결한-앱의-권한-정하기) |
 | ⑩ | 「데이터 관리」[^data-name] | 학습 허용, 공유 링크, 데이터 내보내기 | [8장](08-privacy.md) |
+
+표에서 낯선 말은 이런 뜻입니다. 지금 다 기억하지 않아도 됩니다. 자세한 내용은 표의 각 장에서 다룹니다.
+
+- **다중 인증**: 비밀번호 말고 다른 방법(예: 휴대폰 인증 코드)으로 한 번 더 본인을 확인하는 로그인입니다.
+- **계정 PIN**: 잠긴 대화를 여는 4자리 번호입니다.
+- **락다운 모드**: 웹 검색 같은 바깥 연결 기능을 막는 설정입니다. 민감한 정보를 다루는 사람을 위한 것입니다.
+- **신뢰할 수 있는 연락처**: 위기 때 안부 확인 알림을 받도록 미리 정해 두는 사람입니다.
+- **사용자 지정 지침**: ChatGPT가 대화마다 늘 따를 규칙을 적어 두는 곳입니다. 예를 들어 "답은 짧게"처럼 적습니다.
+- **크레딧**: 요금제 한도를 다 쓴 뒤 Work 같은 기능을 더 쓰려고 따로 사 두는 사용량입니다. 일반 대화만 한다면 필요 없습니다.
 
 화면이 영어로 나오면 「Settings」 → 「General」 → 「Language」에서 한국어를 고르면 됩니다. 언어는 **로그인한 상태에서만** 바꿀 수 있습니다.[^lang]
 「모양」에서 고른 어두운 화면은 **기기마다 따로** 정합니다. 웹에서 바꿔도 휴대폰 앱은 그대로입니다. 앱에서도 한 번 더 고르세요.[^appearance]
@@ -206,8 +220,10 @@ Work는 웹과 휴대폰에서는 **유료 요금제(Free·Go 제외)** 에서�
 [^rn-work]: OpenAI 도움말, 「ChatGPT release notes」 2026-07-09 항목. "ChatGPT Work is an agent for longer, more involved tasks." / "rolling out to paid plans except Free and Go". https://help.openai.com/en/articles/6825453 (확인일 2026-10-23). Free·Go의 데스크톱 제한 이용은 OpenAI, 「플랜 및 가격」 https://openai.com/chatgpt/pricing 의 "데스크톱에서 ChatGPT Work의 제한적 이용" (확인일 2026-10-23)
 [^paste]: OpenAI 도움말, 「ChatGPT release notes」 2026-08-04 항목. "If you paste more than 10k characters…". https://help.openai.com/en/articles/6825453 (확인일 2026-10-23)
 [^levels]: OpenAI 도움말, 모델 메뉴와 생각 수준 안내 문서(문서 제목에 현재 모델 이름이 들어 있어 이 가이드에는 적지 않음). 표 "Plus — Included / Not included / Not included" / "Asking ChatGPT to "think harder"… won't automatically switch". https://help.openai.com/en/articles/20001354 (확인일 2026-10-23)
-[^go-think]: OpenAI 도움말, 「What is ChatGPT Go?」. "On mobile, select Think harder from the + menu." https://help.openai.com/en/articles/11989085 (확인일 2026-10-23)
+[^go-think]: Go 요금제의 휴대폰 앱에서는 + 메뉴의 「Think harder」를 고릅니다. 출처: OpenAI 도움말, 「What is ChatGPT Go?」. "On mobile, select Think harder from the + menu." https://help.openai.com/en/articles/11989085 (확인일 2026-10-23)
 [^lang]: OpenAI 도움말, 「How to change your language setting in ChatGPT」. "you can only update the ChatGPT language setting if you are logged in." https://help.openai.com/en/articles/8357869 (확인일 2026-10-24)
 [^appearance]: OpenAI 도움말, 「Updating your visual experience」. "changing the appearance on the web doesn't automatically change the appearance in the mobile app." 설정 메뉴 이름은 2026-10-24 웹 설정 화면에서 확인. https://help.openai.com/en/articles/11958281 (확인일 2026-10-24)
 [^academy-content]: OpenAI Academy 「Applied AI Foundations」 강좌 본문(로그인·등록 필요). "Use a faster model when the task is simple and/or low-stakes." / "Use a reasoning model when the task has:" "Several constraints" / "A need to compare options" / "Compare options against criteria instead of giving a generic list of pros and cons" / "Review your draft recommendation for missing assumptions" (확인일 2026-10-26)
+[^space]: 「라이브러리」는 「Space」(스페이스)라는 이름으로 바뀌는 중입니다. 자세한 내용은 [4장](04-files-images.md#라이브러리-—-올린-파일을-모아-두는-곳)에 있습니다.
+[^work-desktop]: Free·Go 요금제는 컴퓨터 앱에서만 Work를 제한적으로 쓸 수 있습니다. 출처는 바로 앞 각주의 「플랜 및 가격」입니다.
 [^data-name]: 도움말 문서에는 「데이터 제어」라고 적힌 곳이 있지만, 실제 화면 이름은 「데이터 관리」입니다.

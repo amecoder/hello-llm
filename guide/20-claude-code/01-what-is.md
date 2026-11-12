@@ -2,14 +2,14 @@
 
 <Badge type="tip" text="필수" /> 이 단계를 따라가려면 꼭 읽으세요.
 
-> **한 줄 요약**: Claude Code는 **내 컴퓨터의 폴더를 직접 읽고, 파일을 고치고, 명령을 실행하는** Claude입니다. 채팅처럼 답을 받아 복사해 붙이는 대신, 일을 맡기고 결과를 검토합니다.
-> 쓰려면 **유료 구독**(Pro·Max·Ultra·Team·Enterprise)이 필요합니다. 이 단계는 터미널 없이 쓰는 **데스크톱 앱**부터 시작합니다.
+> **한 줄 요약**: Claude Code는 **내 컴퓨터의 폴더를 직접 읽고, 파일을 고치고, 명령을 실행하는**(컴퓨터에 할 일을 글자로 지시해 돌리는) Claude입니다. 채팅처럼 답을 받아 복사해 붙이는 대신, 일을 맡기고 결과를 검토합니다.
+> 쓰려면 **유료 구독**(Pro·Max·Ultra·Team·Enterprise)이 필요합니다. 이 단계는 터미널(명령어를 글자로 쳐서 컴퓨터를 다루는 창) 없이 쓰는 **데스크톱 앱**부터 시작합니다.
 
 이 장은 2026년 10월 31일에 확인한 Claude Code 공식 문서를 바탕으로 썼습니다. 기능과 메뉴 이름은 자주 바뀝니다.
 
 ## 채팅과 무엇이 다른가
 
-2단계에서 쓴 Claude 채팅은 **묻고 답을 받는** 곳이었습니다. 답에 나온 글을 내가 복사해서 파일에 붙여 넣었습니다.
+2단계에서 쓴 ChatGPT나 Claude 같은 채팅 서비스는 **묻고 답을 받는** 곳이었습니다. 답에 나온 글을 내가 복사해서 파일에 붙여 넣었습니다.
 
 **Claude Code는 내 컴퓨터의 폴더에서 직접 일합니다.** 공식 문서는 Claude Code를 "폴더의 내용을 읽고, 파일을 고치고, 명령을 실행하는" 도구라고 소개합니다.[^overview] 원하는 것을 평소 말로 설명하면, 방법을 계획하고 여러 파일에 걸쳐 작업한 뒤 잘 되는지 확인까지 합니다.[^overview]
 
@@ -24,17 +24,18 @@
 
 이런 방식을 **에이전트**(Agent, 스스로 여러 단계를 진행하는 AI)라고 부릅니다. 공식 문서도 Claude Code를 "에이전트형 코딩 도구"(agentic coding tool)라고 부릅니다.[^overview]
 
-2단계 Claude 가이드의 **Cowork**도 일을 통째로 맡기는 기능이었습니다([2단계 Claude 8장](../10-claude/08-cowork.md)). 데스크톱 앱 안에 채팅(Chat), Cowork, Claude Code(**Code** 탭)가 함께 들어 있습니다.[^linux] 이 단계는 그중 **Code** 탭을 다룹니다.
+Claude 데스크톱 앱 안에는 채팅(Chat), **Cowork**, Claude Code(**Code** 탭)가 함께 들어 있습니다.[^linux] 이 단계는 그중 **Code** 탭을 다룹니다.
+Cowork도 Claude에게 일을 통째로 맡기는 기능입니다. 2단계 Claude 가이드에서 다루며, 읽지 않았어도 이 단계를 따라오는 데 문제없습니다([2단계 Claude 8장](../10-claude/08-cowork.md)).
 
 <Quiz id="ch401-what" />
 
 ## 무엇을 맡길 수 있나
 
-이름은 "코드"지만, 하는 일은 결국 **폴더 안의 파일을 읽고 고치는 것**입니다.[^overview] 공식 문서가 드는 예는 개발자 일입니다.[^overview]
+이름은 "코드"지만, 하는 일은 결국 **폴더 안의 파일을 읽고 고치는 것**입니다.[^overview] 공식 문서가 드는 예는 개발자 일입니다.[^overview] 개발자가 아니라면 이 목록은 훑어보고 넘어가도 됩니다.
 
-- 기능 만들기, 버그 고치기
+- 기능 만들기, 버그(프로그램이 잘못 동작하는 문제) 고치기
 - 버그가 생기면 오류 메시지를 붙여 넣거나 증상을 말로 설명하기
-- 테스트 쓰기, 여러 파일의 형식 오류 고치기, 릴리스 노트(바뀐 점 안내문) 쓰기 같은 반복 작업
+- 테스트(프로그램이 제대로 도는지 확인하는 검사) 쓰기, 여러 파일의 형식 오류(정해진 작성 규칙에 어긋난 곳) 고치기, 릴리스 노트(바뀐 점 안내문) 쓰기 같은 반복 작업
 
 **이 가이드는 코드 대신 메모 파일이 든 폴더로 연습합니다.** 회의 메모·공부 필기·하루 회고처럼 정리 안 된 메모를 넣으면 **내가 정한 형식**의 회의록·공부 노트·주간 회고가 나오는 「내 방식대로 정리해 주는 도구」를 3단계 내내 조금씩 만들어 갑니다. 첫 일은 이런 요청입니다.
 
@@ -64,6 +65,8 @@ Claude Code는 여러 곳에서 씁니다. 어디서 쓰든 **같은 엔진**(�
 
 출처: Claude Code 공식 문서[^platforms]
 
+코드 편집기는 프로그램 글(코드)을 쓰고 고치는 전용 프로그램입니다. 문서에 워드가 있다면 코드에는 VS Code 같은 편집기가 있다고 생각하면 됩니다.
+
 **이 가이드는 데스크톱 앱부터 시작합니다.** 터미널을 쓰고 싶지 않은 사람에게 데스크톱 앱이 같은 엔진을 그래픽 화면으로 준다고 공식 문서도 안내합니다.[^platforms] 데스크톱 앱에는 Claude Code가 들어 있어서, 따로 설치할 프로그램이 없습니다.[^quickstart]
 
 같은 일을 여러 곳에서 섞어 써도 됩니다.[^platforms] 터미널은 10장에서, 웹·휴대폰은 8장에서 다룹니다.
@@ -72,11 +75,10 @@ Claude Code는 여러 곳에서 씁니다. 어디서 쓰든 **같은 엔진**(�
 
 ## 무엇이 필요한가 — 요금제
 
-**Claude Code는 유료 구독에서만 씁니다.** Pro, Max, Ultra, Team, Enterprise 구독이나 Console(API) 계정이 필요하고, **무료 플랜으로는 쓸 수 없습니다.**[^setup] 개인 구독(Pro·Max·Ultra)은 claude.ai 계정으로 로그인합니다.[^auth]
+**Claude Code는 유료 구독에서만 씁니다.** Pro, Max, Ultra, Team, Enterprise 구독이나 Console(API) 계정(개발자가 자기 프로그램에서 Claude를 부를 때 쓰는 계정)이 필요하고, **무료 플랜으로는 쓸 수 없습니다.**[^setup] 개인 구독(Pro·Max·Ultra)은 claude.ai 계정으로 로그인합니다.[^auth]
 
-- 요금제 이름이 바뀌었습니다. **Ultra는 예전 Max 20x, Max는 예전 Max 5x**의 새 이름입니다.[^availability] 옛 글에서 "Max 5x"를 보면 지금의 Max입니다.
-- 요금과 사용 한도는 2단계 Claude 가이드에서 다뤘습니다([2단계 Claude 1장](../10-claude/01-getting-started.md#요금제-한눈에-보기)). 사용량은 데스크톱·터미널 등 **Claude Code를 쓰는 모든 곳이 함께** 씁니다.[^desktop] Team·Enterprise는 채팅·Cowork와도 함께 씁니다.[^costs]
-- 광고된 사용 한도는 **한 사람이 보통으로 쓰는 것**을 전제로 합니다.[^legal] 다른 회사가 만든 서비스가 내 구독 로그인으로 대신 요청을 보내는 방식도 허용되지 않습니다.[^legal]
+- 요금과 사용 한도는 2단계 Claude 가이드에 정리해 두었습니다. ChatGPT 가이드로 2단계를 읽었다면, 구독하기 전에 그 절만 열어 보세요([2단계 Claude 1장](../10-claude/01-getting-started.md#요금제-한눈에-보기)).[^availability] 사용량은 데스크톱·터미널 등 **Claude Code를 쓰는 모든 곳이 함께** 씁니다.[^desktop] Team·Enterprise는 채팅·Cowork와도 함께 씁니다.[^costs]
+- 광고된 사용 한도는 **한 사람이 보통으로 쓰는 것**을 전제로 합니다.[^legal]
 
 어떤 요금제가 맞는지는 써 보며 정해도 됩니다. 사용량을 보는 법은 9장에서 다룹니다.
 
@@ -109,7 +111,7 @@ Claude Code는 여러 곳에서 씁니다. 어디서 쓰든 **같은 엔진**(�
 - Claude Code는 내 컴퓨터의 폴더를 직접 읽고, 파일을 고치고, 명령을 실행하는 에이전트형 도구다.
 - 채팅은 답을 받아 내가 옮기고, Claude Code는 일을 맡기고 내가 검토한다.
 - 데스크톱 앱·터미널·편집기·웹·휴대폰에서 같은 엔진을 쓴다. 이 단계는 데스크톱 앱부터 배운다.
-- Pro·Max·Ultra·Team·Enterprise 구독이 필요하고, 무료 플랜으로는 쓸 수 없다. Ultra는 예전 Max 20x, Max는 예전 Max 5x다.
+- Pro·Max·Ultra·Team·Enterprise 구독이 필요하고, 무료 플랜으로는 쓸 수 없다.
 
 ## 용어 정리
 
@@ -133,5 +135,5 @@ Claude Code는 여러 곳에서 씁니다. 어디서 쓰든 **같은 엔진**(�
 [^desktop]: Claude Code 공식 문서, 「Desktop application」. "Click it to see your plan usage, which is shared across all your Claude Code surfaces." https://code.claude.com/docs/en/desktop (확인일 2026-10-31)
 [^costs]: Claude Code 공식 문서, 「Manage costs effectively」. "The allowance is shared with Claude chat and Cowork" https://code.claude.com/docs/en/costs (확인일 2026-10-31)
 [^auth]: Claude Code 공식 문서, 「Authentication」. "Claude Pro, Max, or Ultra subscription: log in with your claude.ai account." https://code.claude.com/docs/en/authentication (확인일 2026-10-31)
-[^availability]: Claude Code 공식 문서, 「Feature availability」. "Ultra is the new name for the Max 20x plan, and Max is the new name for Max 5x." https://code.claude.com/docs/en/feature-availability (확인일 2026-10-31)
-[^legal]: Claude Code 공식 문서, 「Legal and compliance」. "Advertised usage limits for Pro, Max, and Ultra plans assume ordinary, individual usage of Claude Code and the Agent SDK." / "Anthropic does not permit third-party developers to offer Claude.ai login into their own applications, or to route requests through Free, Pro, Max, or Ultra plan credentials on behalf of their users." https://code.claude.com/docs/en/legal-and-compliance (확인일 2026-10-31)
+[^availability]: 요금제 이름이 바뀌었다. Ultra는 예전 Max 20x, Max는 예전 Max 5x의 새 이름이다. 옛 글에서 "Max 5x"를 보면 지금의 Max다. Claude Code 공식 문서, 「Feature availability」. "Ultra is the new name for the Max 20x plan, and Max is the new name for Max 5x." https://code.claude.com/docs/en/feature-availability (확인일 2026-10-31)
+[^legal]: 다른 회사가 만든 서비스가 내 구독 로그인으로 대신 요청을 보내는 방식도 허용되지 않는다. Claude Code 공식 문서, 「Legal and compliance」. "Advertised usage limits for Pro, Max, and Ultra plans assume ordinary, individual usage of Claude Code and the Agent SDK." / "Anthropic does not permit third-party developers to offer Claude.ai login into their own applications, or to route requests through Free, Pro, Max, or Ultra plan credentials on behalf of their users." https://code.claude.com/docs/en/legal-and-compliance (확인일 2026-10-31)

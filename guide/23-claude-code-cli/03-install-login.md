@@ -8,6 +8,8 @@
 
 ## 붙여 넣기 전에 — 출처부터 확인
 
+설치 명령은 바로 다음 절에 있습니다. 붙이기 전에 한 가지만 확인하세요.
+
 설치 명령은 인터넷에서 받은 프로그램을 내 컴퓨터에서 바로 실행합니다. 편리하지만, 잘못된 사이트의 명령을 붙이면 나쁜 프로그램이 내 권한으로 실행될 수 있습니다.
 
 그래서 **처음 보는 사이트의 설치 명령은 그대로 붙여 넣지 마세요.** 이 강좌의 명령도 마찬가지입니다. 공식 문서 「[Quickstart](https://code.claude.com/docs/en/quickstart)」를 열어 같은 명령인지 눈으로 맞춰 보세요.
@@ -15,13 +17,13 @@
 - **아쉬운 예**: 블로그에서 찾은 설치 명령을 바로 터미널에 붙인다.
 - **나은 예**: 공식 문서를 열어 같은 명령인지 확인하고 붙인다.
 
-이 습관은 다른 프로그램을 설치할 때도 쓸모가 있습니다. 터미널에 붙이는 명령은 어떤 것이든 출처를 먼저 보세요.
+터미널에 붙이는 명령은 어떤 것이든 출처를 먼저 보세요. 다른 프로그램을 설치할 때도 같은 습관이 지켜 줍니다.
 
 <Quiz id="ch803-safe" />
 
 ## 운영체제별 설치 명령
 
-터미널을 열고 내 컴퓨터에 맞는 명령 **하나만** 붙여 넣은 뒤 Enter를 누릅니다.[^install] 공식 문서의 명령입니다. 이 가이드는 이미 설치된 컴퓨터에서 실행해서 설치 과정은 직접 해 보지 않았습니다.
+터미널을 열고 내 컴퓨터에 맞는 명령 **하나만** 붙여 넣은 뒤 Enter를 누릅니다. 공식 문서의 명령입니다.[^install]
 
 맥·리눅스·WSL(Windows 안에서 리눅스를 쓰는 기능)은 이렇게 칩니다.
 
@@ -35,7 +37,14 @@ Windows PowerShell은 이렇게 칩니다.
 irm https://claude.ai/install.ps1 | iex
 ```
 
-두 명령은 같은 일을 합니다. 앞부분이 설치 파일을 받고, `|` 뒤가 받은 내용을 실행합니다. 맥·리눅스는 `curl`이 받고 `bash`가 실행합니다. PowerShell은 `irm`이 받고 `iex`가 실행합니다.[^irm] `|`는 앞 명령의 결과를 뒤 명령으로 넘기는 기호입니다. `-fsSL`은 받는 방식을 정하는 옵션 네 개를 붙여 쓴 것입니다. 뜻은 [명령어 사전](command-reference.md)에 있습니다.
+두 명령은 같은 일을 합니다. 앞부분이 설치 파일을 받고, `|`(세로 막대) 뒤가 받은 내용을 실행합니다. 조각의 뜻을 다 알지 못해도 설치할 수 있습니다.
+
+::: details 자세히 (눌러서 펼치기)
+- `|`는 앞 명령의 결과를 뒤 명령으로 넘기는 기호입니다.
+- 맥·리눅스는 `curl`이 받고 `bash`가 실행합니다.
+- PowerShell은 `irm`이 받고 `iex`가 실행합니다.[^irm]
+- `-fsSL`은 받는 방식을 정하는 옵션 네 개를 붙여 쓴 것입니다. 뜻은 [명령어 사전](command-reference.md)에 있습니다.
+:::
 
 내려받는 동안에는 진행 표시가 없습니다. 아무 일도 없어 보여도 창을 닫지 말고 기다리세요. 끝나면 `Claude Code successfully installed!`라는 문구가 보입니다.[^progress]
 
@@ -46,12 +55,12 @@ irm https://claude.ai/install.ps1 | iex
 
 오류는 화면 언어에 따라 한글로 나올 수 있습니다. 뜻은 같습니다.
 
-Windows라면 두 가지를 더 알아 두세요.
+Windows에서는 관리자 권한으로 실행하지 않아도 됩니다.[^no-admin] 대부분은 위의 한 줄이면 충분합니다.
 
-- 관리자 권한으로 실행하지 않아도 됩니다.[^no-admin]
-- Git이 없어도 그대로 따라올 수 있습니다. 없으면 Claude Code가 PowerShell을 대신 씁니다.[^git-win] Git은 12장에서 설치합니다.
-
-맥의 Homebrew나 Windows의 WinGet 같은 프로그램 관리 도구로도 설치할 수 있습니다.[^brew] 쓰던 도구가 없다면 위의 한 줄이면 충분합니다.
+::: details 자세히 (눌러서 펼치기)
+- **Windows와 Git**: Git(파일의 변경 기록을 남기는 도구)이 없어도 그대로 따라올 수 있습니다. 없으면 Claude Code가 PowerShell을 대신 씁니다.[^git-win] Git은 12장에서 설치합니다.
+- **다른 설치 방법**: 맥의 Homebrew나 Windows의 WinGet 같은 프로그램 관리 도구로도 설치할 수 있습니다.[^brew] 쓰던 도구가 없다면 위의 한 줄을 쓰세요.
+:::
 
 <Quiz id="ch803-install" />
 
@@ -111,7 +120,14 @@ $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
 [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
 ```
 
-맥·리눅스의 `echo` 줄은 설정을 저장하고, `source` 줄은 지금 창에 적용합니다. `>>`는 파일 끝에 덧붙이는 기호입니다. 그래서 설정 파일의 기존 내용은 지워지지 않습니다. 이 줄을 두 번 치면 같은 줄이 두 번 들어가니 한 번만 칩니다. Windows는 터미널을 다시 시작해야 합니다.[^path-apply] 그런 다음 `claude --version`을 다시 쳐 보세요.
+명령의 조각은 이런 뜻입니다.
+
+- **`echo` 줄**: 설정을 파일에 저장합니다. `>>`는 파일 끝에 덧붙이는 기호입니다. 그래서 설정 파일의 기존 내용은 지워지지 않습니다.
+- **`source` 줄**: 저장한 설정을 지금 창에 적용합니다.
+- **한 번만 치기**: 두 번 치면 같은 줄이 두 번 들어갑니다.
+- **Windows**: 두 줄을 친 뒤 터미널을 다시 시작해야 합니다.[^path-apply]
+
+그런 다음 `claude --version`을 다시 쳐 보세요. 번호가 나오면 해결된 것입니다.
 
 그래도 안 되면 공식 문서 「[Troubleshoot installation and login](https://code.claude.com/docs/en/troubleshoot-install)」을 보세요. `claude`가 실행은 된다면 `claude doctor`로 설치 상태를 읽어 볼 수 있습니다. 세션을 열지 않고 진단만 보여 줍니다.[^doctor]
 
@@ -133,7 +149,7 @@ cd $HOME\hello-ai-연습\터미널
 claude
 ```
 
-처음 실행하면 로그인하라는 안내가 나옵니다. 개인 구독자는 claude.ai 계정으로 로그인합니다.[^login] 순서는 이렇습니다.[^login-steps] 이 가이드는 이미 로그인된 컴퓨터에서 실행해서, 아래는 공식 문서의 설명입니다.
+처음 실행하면 로그인하라는 안내가 나옵니다. 개인 구독자는 claude.ai 계정으로 로그인합니다.[^login] 순서는 이렇습니다.[^login-steps]
 
 1. 브라우저가 열리면 로그인합니다.
 2. 브라우저가 안 열리면 터미널에서 `c`를 누릅니다. 로그인 주소가 복사되니 브라우저에 붙여 넣습니다.
@@ -152,7 +168,10 @@ claude
 
 Homebrew나 WinGet으로 깔았다면 자동으로 올라가지 않습니다. 그 도구로 가끔 직접 올려야 합니다.[^manual-update]
 
-**지우기.** 맥·리눅스에서 위의 한 줄로 설치했다면 이 두 줄로 지웁니다.[^uninstall]
+**지우기.** 지우는 방법은 지금 필요 없으니 접어 두었습니다. 나중에 필요할 때 펼쳐 보세요.
+
+::: details 자세히 (눌러서 펼치기)
+맥·리눅스에서 위의 한 줄로 설치했다면 이 두 줄로 지웁니다.[^uninstall]
 
 ```bash
 rm -f ~/.local/bin/claude
@@ -160,6 +179,7 @@ rm -rf ~/.local/share/claude
 ```
 
 `rm`은 휴지통을 거치지 않고 바로 지우는 명령입니다. `-r`은 폴더 안까지 전부, `-f`는 묻지 않고 지우라는 옵션입니다. 글자를 꼭 확인하고 치세요. Windows와 다른 설치 방법은 공식 문서 「[Advanced setup](https://code.claude.com/docs/en/setup)」의 Uninstall 절을 따르세요.
+:::
 
 <Quiz id="ch803-update" />
 
@@ -195,7 +215,7 @@ rm -rf ~/.local/share/claude
 
 다음 장: [4장. 첫 세션](04-first-session.md)
 
-[^install]: Claude Code 공식 문서, 「Quickstart」. "curl -fsSL https://claude.ai/install.sh | bash" / "irm https://claude.ai/install.ps1 | iex" https://code.claude.com/docs/en/quickstart (확인일 2026-11-06)
+[^install]: 이 가이드는 이미 설치·로그인된 컴퓨터에서 실행해서, 설치와 로그인 과정은 직접 해 보지 않았습니다. 이 장의 설치·로그인 순서는 공식 문서의 설명입니다. Claude Code 공식 문서, 「Quickstart」. "curl -fsSL https://claude.ai/install.sh | bash" / "irm https://claude.ai/install.ps1 | iex" https://code.claude.com/docs/en/quickstart (확인일 2026-11-06)
 [^progress]: Claude Code 공식 문서, 「Quickstart」. "The install command shows no progress while it downloads Claude Code." https://code.claude.com/docs/en/quickstart · 「Terminal guide for new users」. "When the installer finishes, you'll see "Claude Code successfully installed!"" https://code.claude.com/docs/en/terminal-guide (확인일 2026-11-06)
 [^wrong-shell]: Claude Code 공식 문서, 「Quickstart」. "If you see `'irm' is not recognized as an internal or external command`, you're in CMD, not PowerShell." https://code.claude.com/docs/en/quickstart · 「Troubleshoot installation and login」. "you ran the macOS/Linux `curl -fsSL ... | bash` installer in Windows PowerShell, where `curl` is an alias for `Invoke-WebRequest` and rejects the `-fsSL` flags" https://code.claude.com/docs/en/troubleshoot-install (확인일 2026-11-06)
 [^no-admin]: Claude Code 공식 문서, 「Advanced setup」. "You do not need to run as Administrator." https://code.claude.com/docs/en/setup (확인일 2026-11-06)

@@ -22,7 +22,7 @@ SDLC(소프트웨어 개발 생애 주기, Software Development Life Cycle)는 *
 
 출처: GitHub 공식 문서(이 가이드의 정리)[^six]
 
-이 가이드는 확인(5장)을 먼저, 리뷰(6장)를 나중에 다룹니다. 리뷰할 때 확인 결과를 함께 보기 위해서입니다. 「운영」은 GitHub에서 감시·부품 관리·보안까지 넓은 뜻이지만, 이 가이드는 이슈로 개선하기(8장)와 안전(9장)까지만 다룹니다.
+표의 장 번호 순서가 조금 다릅니다. 이 가이드는 확인(5장)을 리뷰(6장)보다 먼저 다룹니다. 리뷰할 때 확인 결과를 함께 보기 위해서입니다.[^operate]
 
 **처음부터 모든 단계를 다 쓸 필요는 없습니다.** GitHub도 많은 사람이 저장소 하나와 할 일 몇 개로 시작해서 프로젝트가 자라는 만큼 넓혀 간다고 말합니다.[^start-small] 이 가이드도 작은 웹 페이지 하나로 여섯 단계를 한 바퀴 돌아 봅니다.
 
@@ -57,7 +57,7 @@ AI가 손을 맡아도 사람이 꼭 맡아야 하는 일이 있습니다.
 
 출처: 이 가이드의 정리(근거는 각 장의 각주)
 
-공식 문서도 제안된 코드와 명령이 안전한지 **승인 전에 검토할 책임은 사용자에게** 있다고 적습니다.[^responsible] 또 배포처럼 바깥 시스템에 영향을 주는 행동은 Claude Code의 되감기(체크포인트)로 되돌릴 수 없습니다.[^no-checkpoint] 그래서 바깥으로 나가는 행동일수록 사람이 확인하고 누릅니다.
+공식 문서도 제안된 코드와 명령이 안전한지 **승인 전에 검토할 책임은 사용자에게** 있다고 적습니다.[^responsible] 또 배포처럼 바깥 시스템에 영향을 주는 행동은 Claude Code의 되감기(체크포인트)로 되돌릴 수 없습니다.[^no-checkpoint] 체크포인트는 요청을 보낼 때마다 자동으로 남는 저장 지점입니다. 게임의 저장 지점처럼 Claude가 고친 내 컴퓨터의 파일은 대부분 그 시점으로 되돌릴 수 있습니다(셸 명령이나 다른 세션이 바꾼 파일은 빼고). 하지만 인터넷에 이미 공개한 것은 되돌아오지 않습니다. 그래서 바깥으로 나가는 행동일수록 사람이 확인하고 누릅니다.
 
 <Quiz id="ch701-human" />
 
@@ -66,6 +66,13 @@ AI가 손을 맡아도 사람이 꼭 맡아야 하는 일이 있습니다.
 4단계의 「직접 해 보기」는 장마다 이어지는 하나의 예제로 합니다. **3단계 정리도구가 만든 회의록의 할 일을 모아 보여 주는 웹 페이지**, 이름하여 「모퉁이 카페 할 일 보드」입니다.
 
 GitHub의 공식 입문 시리즈도 작은 웹사이트 하나를 끝까지 따라 만들며 **계획하고, 코드를 쓰고, 변경을 리뷰하고, 실제 웹사이트로 배포**합니다.[^journey] 이 가이드는 같은 순서를 따르되, AI 자리에 3단계에서 익힌 Claude Code를 씁니다.
+
+표에 낯선 말이 몇 개 나옵니다. 지금은 뜻만 가볍게 알아 두세요. 해당 장에서 차근차근 다룹니다.
+
+- **GitHub**(깃허브): 프로젝트 파일과 변경 기록을 인터넷에 올려 두고 함께 일하는 서비스
+- **저장소**(Repository): 프로젝트 파일과 변경 기록을 두는 곳. 프로젝트의 집입니다
+- **PR**(Pull Request, 풀 리퀘스트): "내가 바꾼 것을 합쳐 주세요" 하고 내미는 변경 제안
+- **GitHub Pages**(깃허브 페이지스): 저장소의 파일을 무료로 웹 페이지로 공개해 주는 기능
 
 | 장 | 할 일 보드에서 하는 일 |
 |---|---|
@@ -110,4 +117,5 @@ GitHub의 공식 입문 시리즈도 작은 웹사이트 하나를 끝까지 따
 [^fail]: Claude Code 공식 문서, 「Best practices for Claude Code」. "It's missing information it can't get from reading the repo." / "Claude said it was done and it wasn't quite, usually because it had no way to check its own work." https://code.claude.com/docs/en/best-practices (확인일 2026-11-01)
 [^responsible]: Claude Code 공식 문서, 「Security」. "You're responsible for reviewing proposed code and commands for safety before approval." https://code.claude.com/docs/en/security (확인일 2026-11-01)
 [^no-checkpoint]: Claude Code 공식 문서, 「How Claude Code works」. "Actions that affect remote systems (databases, APIs, deployments) can't be checkpointed." https://code.claude.com/docs/en/how-claude-code-works (확인일 2026-11-01)
+[^operate]: 「운영」은 GitHub에서 감시·부품 관리·보안까지 넓은 뜻입니다. 이 가이드는 이슈로 개선하기(8장)와 안전(9장)까지만 다룹니다.
 [^journey]: GitHub 공식 문서, 「Creating a repository for your project on GitHub」. "By the end of the journey, you'll plan work, write code, review changes, and deploy your code to a live website." https://docs.github.com/en/get-started/start-your-journey/creating-a-repository-for-your-project-on-github (확인일 2026-11-01)

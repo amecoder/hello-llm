@@ -29,6 +29,14 @@
 
 `/exit`로 나와 터미널의 연습 폴더에서 아래를 통째로 붙여 넣습니다. 붙여 넣은 뒤 아직 실행되지 않았으면 Enter를 한 번 더 누르세요.
 
+낯선 칸 이름이 여럿 나오지만 지금 다 알 필요는 없습니다. 큰 덩어리는 셋입니다.
+
+- `permissions`: 7장에서 만든 거부 규칙
+- `hooks`: 이번에 만드는 변경기록 훅
+- `statusLine`: 화면 아래 상태 줄
+
+자세한 뜻은 상자 바로 아래에서 하나씩 풉니다.
+
 ```bash
 cat > .claude/settings.json <<'EOF'
 {
@@ -56,9 +64,12 @@ Windows PowerShell은 `notepad .claude\settings.json`으로 메모장을 엽니�
 
 - `PostToolUse`: Claude가 도구를 쓴 **뒤**라는 뜻입니다. 이미 끝난 일을 되돌리지는 못합니다. 도구를 쓰기 **전**에 끼어들어 막을 수 있는 시점은 `PreToolUse`입니다.[^post]
 - `matcher`: 어떤 도구에 반응할지 정합니다. `Write|Edit`는 파일을 만드는 도구와 고치는 도구입니다. 여기서 `|`는 "또는"이라는 뜻입니다. Claude가 셸 명령으로 바꾼 파일에는 이 훅이 반응하지 않습니다.
-- `command`: 실행할 명령입니다. 지금 날짜·시각과 문장을 `변경기록.txt` 끝에 덧붙입니다.
+- `command`: 실행할 명령입니다. 지금 날짜·시각과 문장을 `변경기록.txt` 끝에 덧붙입니다. 명령을 조각으로 나눠 보면 이렇습니다.
+  - `date`: 지금 날짜와 시각을 찍는 명령입니다.
+  - `'+%F %T 파일이 바뀌었습니다'`: 찍을 모양입니다. `%F` 자리에 날짜(`2026-11-06`), `%T` 자리에 시각(`11:19:11`)이 들어갑니다.
+  - `>> 변경기록.txt`: 결과를 그 파일 끝에 덧붙입니다. 10장의 `>`는 파일을 덮어쓰고, `>>`는 뒤에 이어 씁니다. 파일이 없으면 새로 만듭니다.
 
-덮어쓰는 대신 Claude에게 말로 부탁해도 됩니다.[^ask-claude] `.claude` 폴더는 보호 경로라서 쓰기가 그냥 승인되지 않습니다. 수동 모드에서는 허락 창이 뜨고, 자동 모드에서는 행동을 미리 살피는 별도의 AI가 판단합니다.[^protected] 내 프로젝트처럼 설정이 이미 들어 있는 파일이라면 이 방법이 낫습니다.
+덮어쓰는 대신 Claude에게 말로 부탁해도 됩니다.[^ask-claude] 내 프로젝트처럼 설정이 이미 들어 있는 파일이라면 이 방법이 낫습니다. `.claude` 폴더는 특별히 지키는 곳이라 이때 허락 창이 뜰 수 있습니다.[^protected]
 
 ```text
 .claude/settings.json 에 훅을 추가해 줘. Claude가 Write나 Edit 도구를 쓴 뒤마다 아래 명령이 돌게 해 줘. 이미 있는 내용은 지우지 마.
@@ -107,13 +118,15 @@ notes 폴더에 훅시험.md 를 만들고 "훅 시험" 한 줄만 적어 줘.
 
 ## 남이 준 폴더의 훅
 
+내가 직접 만든 연습 폴더라면 위험이 낮습니다. 조심할 것은 남에게 받은 폴더입니다.
+
 남이 준 폴더에는 남이 적어 둔 훅이 들어 있을 수 있습니다.[^hook-share] `claude -p`로 실행하면 내가 신뢰한다고 답한 적 없는 폴더에서도 그 훅이 실행됩니다.[^p-untrusted] 그러니 그 훅은 내 컴퓨터에서 내 계정으로 실행된다고 보는 편이 안전합니다. 받은 폴더는 Claude를 켜기 **전에** 설정 파일부터 읽어 보세요. 이 권고는 공식 문서의 문장이 아니라 이 가이드의 판단입니다.
 
 ```bash
 cat .claude/settings.json
 ```
 
-`hooks`와 `statusLine` 칸에 무슨 명령이 있는지 봅니다. 뜻을 모르겠으면 그 폴더 밖에서 채팅으로 물어보세요. 설치한 플러그인도 내 권한으로 코드를 실행할 수 있습니다.[^plugin-run] 같은 마음으로 대하면 됩니다.
+`hooks`와 `statusLine` 칸에 무슨 명령이 있는지 봅니다. 뜻을 모르겠으면 그 폴더 밖에서 채팅으로 물어보세요. [9장](09-skills-extensions.md)의 플러그인도 내 권한으로 코드를 실행할 수 있습니다.[^plugin-run] 같은 마음으로 대하면 됩니다.
 
 <Quiz id="ch811-trust" />
 
@@ -188,7 +201,7 @@ cat .claude/settings.json
 [^hook-add]: Claude Code 공식 문서, 「Automate actions with hooks」. "To create a hook, add a `hooks` block to a settings file." https://code.claude.com/docs/en/hooks-guide (확인일 2026-11-06)
 [^post]: Claude Code 공식 문서, 「Automate actions with hooks」. "`PostToolUse` hooks can't undo actions since the tool has already executed." / "Before a tool call executes. Can block it" https://code.claude.com/docs/en/hooks-guide (확인일 2026-11-06)
 [^ask-claude]: Claude Code 공식 문서, 「Automate actions with hooks」. "You can also ask Claude to write the hook for you by describing what you want in the CLI." https://code.claude.com/docs/en/hooks-guide (확인일 2026-11-06)
-[^protected]: Claude Code 공식 문서, 「Choose a permission mode」. "Writes to a small set of paths are never auto-approved" / 표의 `auto` 행: "Routed to the classifier" https://code.claude.com/docs/en/permission-modes (확인일 2026-11-06)
+[^protected]: `.claude` 폴더는 보호 경로라서 쓰기가 그냥 승인되지 않습니다. 수동 모드에서는 허락 창이 뜨고, 자동 모드에서는 행동을 미리 살피는 별도의 AI가 판단합니다. Claude Code 공식 문서, 「Choose a permission mode」. "Writes to a small set of paths are never auto-approved" / 표의 `auto` 행: "Routed to the classifier" https://code.claude.com/docs/en/permission-modes (확인일 2026-11-06)
 [^sibling]: Claude Code 공식 문서, 「Automate actions with hooks」. "If your settings file already has a `hooks` key, add `Notification` as a sibling of the existing event keys rather than replacing the whole object." https://code.claude.com/docs/en/hooks-guide (확인일 2026-11-06)
 [^hooks-menu]: Claude Code 공식 문서, 「Automate actions with hooks」. "Type `/hooks` at the Claude Code prompt to open the hooks browser." / "Run `/hooks` and confirm the hook appears under the correct event" https://code.claude.com/docs/en/hooks-guide (확인일 2026-11-06)
 [^json]: Claude Code 공식 문서, 「Automate actions with hooks」. "Verify your JSON is valid: trailing commas and comments aren't allowed" https://code.claude.com/docs/en/hooks-guide (확인일 2026-11-06)

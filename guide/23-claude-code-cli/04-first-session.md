@@ -4,8 +4,6 @@
 
 > **한 줄 요약**: 일할 폴더로 가서 `claude`를 칩니다. 신뢰 확인 창에서 `Yes`를 고르고, 말로 일을 시킵니다. 멈출 때는 `Esc`, 끝낼 때는 `/exit`입니다.
 
-화면의 폴더 경로와 요금제 이름은 이 강좌에 맞게 바꿔 적었습니다.
-
 **세션**(Session)은 Claude Code를 켜고 끝낼 때까지의 대화 한 묶음입니다. 2장에서 만든 폴더에서 첫 세션을 열어 봅니다.
 
 ## 폴더에서 시작하기
@@ -39,7 +37,7 @@ claude
 
 ![폴더 신뢰 확인 창. ① 처음 커서가 있는 곳은 No, exit입니다. ② 아래 화살표로 Yes, I trust this folder로 옮긴 뒤 Enter를 누릅니다](assets/shot-02-trust-marked.png)
 
-실제 터미널 창을 찍은 그림입니다. 이 장과 뒤의 그림은 리눅스 터미널에서 Claude Code 2.1.319로 찍었습니다. 색과 글꼴은 내 터미널 설정에 따라 다릅니다. 폴더 경로도 연습용 임시 폴더라서 내 화면과 다르고, 요금제 이름은 가렸습니다. 글자 상자는 복사해 쓰기 쉽게 따로 옮긴 것입니다. 다른 실행에서 옮겨 온 곳이 있어서 경로나 파일 이름이 그림과 다를 수 있습니다.
+실제 터미널 창을 찍은 그림입니다. 색과 글꼴은 내 터미널 설정에 따라 다릅니다. 아래 글자 상자는 같은 화면을 글자로 옮긴 것입니다.[^screens]
 
 ```text
  Accessing workspace:
@@ -94,11 +92,11 @@ claude
 위에서부터 읽어 보세요.
 
 - **맨 위 세 줄**: 버전, 지금 모델, 작업 폴더입니다.[^header] 폴더가 내가 생각한 곳인지 꼭 보세요.
-- **Auto mode 안내**: 처음 실행할 때 보이는 알림입니다.
+- **Auto mode 안내**: 처음 실행할 때 보이는 영어 알림입니다. 지금은 읽지 않고 넘어가도 됩니다. 중요한 내용은 바로 아래에서 우리말로 짚습니다.
 - **`❯` 줄**: 입력창입니다. `Try`로 시작하는 글은 예시입니다. 내 글을 치면 사라집니다.
 - **맨 아래 줄**: 왼쪽은 지금의 **권한 모드**입니다. 권한 모드는 Claude가 묻지 않고 해도 되는 일의 범위입니다.[^mode] 오른쪽의 `medium`은 13장에서 다룹니다.
 
-터미널의 `claude`는 **자동 모드**(auto)로 시작합니다. 행동을 미리 살피는 별도의 AI가 위험해 보이는 것을 막습니다. 다만 자동 모드는 허락 창을 줄여 줄 뿐, 안전을 보장하지는 않습니다.[^auto] 자동 모드를 쓸 수 없는 세션은 수동으로 시작합니다. 맨 아래 줄을 기준으로 보세요.
+터미널의 `claude`는 **자동 모드**(auto)로 시작합니다. 행동을 미리 살피는 별도의 AI가 위험해 보이는 것을 막습니다. 다만 자동 모드는 허락 창을 줄여 줄 뿐, 안전을 보장하지는 않습니다.[^auto]
 
 처음에는 Claude가 무엇을 하려는지 눈으로 보는 편이 좋습니다. `Shift + Tab`을 한 번 눌러 수동 모드로 바꿔 보세요.[^shift-tab] 맨 아래 줄이 이렇게 바뀝니다.
 
@@ -106,7 +104,12 @@ claude
   ⏸ manual mode on · ? for shortcuts                  ◐ medium · /effort
 ```
 
-수동 모드는 파일을 고치거나 명령을 실행하기 전에 대부분 먼저 묻습니다. 처음부터 `claude --permission-mode manual`로 시작해도 됩니다.[^manual] 모드는 7장에서 자세히 다룹니다.
+수동 모드는 파일을 고치거나 명령을 실행하기 전에 대부분 먼저 묻습니다.[^manual] 모드는 7장에서 자세히 다룹니다.
+
+::: details 자세히 (눌러서 펼치기)
+- 자동 모드를 쓸 수 없는 세션은 수동으로 시작합니다.[^auto] 지금 어떤 모드인지는 맨 아래 줄을 기준으로 보세요.
+- 처음부터 `claude --permission-mode manual`로 시작해도 됩니다.[^manual]
+:::
 
 <Quiz id="ch804-screen" />
 
@@ -205,7 +208,7 @@ PowerShell에서 한글이 깨지면 `Get-Content -Encoding UTF8 회의록.md`�
 - **터미널**: 커서 앞의 기호가 `%`, `$`, `>`입니다. `cd`, `ls`, `claude`는 여기에 칩니다.
 - **Claude 입력창**: 맨 앞이 `❯`이고 위아래에 줄이 있습니다. 말로 하는 요청과 `/`로 시작하는 명령은 여기에 칩니다.
 
-`/exit`를 터미널에 치면 오류가 납니다. `claude -p`(10장에서 배웁니다)를 입력창에 치면 Claude에게 보내는 말이 됩니다. 뒤의 장에서 "터미널에서" 하라는 명령은, 입력창이 보이면 `/exit`로 나온 뒤에 치세요.
+`/exit`를 터미널에 치면 오류가 납니다. 반대로 `ls`나 `cd` 같은 터미널 명령을 입력창에 치면, 명령으로 실행되지 않고 Claude에게 보내는 말이 됩니다. 뒤의 장에서 "터미널에서" 하라는 명령은, 입력창이 보이면 `/exit`로 나온 뒤에 치세요.
 
 <Quiz id="ch804-exit" />
 
@@ -244,6 +247,7 @@ PowerShell에서 한글이 깨지면 `Get-Content -Encoding UTF8 회의록.md`�
 
 다음 장: [5장. 입력 요령과 명령](05-input-commands.md)
 
+[^screens]: 이 장과 뒤의 그림은 리눅스 터미널에서 Claude Code 2.1.319로 찍었습니다. 폴더 경로는 연습용 임시 폴더라서 내 화면과 다르고, 요금제 이름은 가렸습니다. 화면의 폴더 경로와 요금제 이름은 이 강좌에 맞게 바꿔 적었습니다. 글자 상자는 복사해 쓰기 쉽게 따로 옮긴 것입니다. 다른 실행에서 옮겨 온 곳이 있어서 경로나 파일 이름이 그림과 다를 수 있습니다.
 [^start]: Claude Code 공식 문서, 「Quickstart」. "Open your terminal in any project directory and start Claude Code:" https://code.claude.com/docs/en/quickstart (확인일 2026-11-06)
 [^header]: Claude Code 공식 문서, 「Quickstart」. "The Claude Code prompt appears with the version, current model, and working directory shown above it." https://code.claude.com/docs/en/quickstart (확인일 2026-11-06)
 [^arrows]: Claude Code 공식 문서, 「Terminal guide for new users」. "You can't click on things in the terminal. Use the arrow keys to move around." https://code.claude.com/docs/en/terminal-guide (확인일 2026-11-06)

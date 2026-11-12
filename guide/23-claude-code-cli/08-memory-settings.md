@@ -17,7 +17,7 @@
 쓰지 않을 것도 있습니다.
 
 - 폴더 구조 설명. Claude가 직접 읽어 봅니다.[^practice]
-- 여러 단계로 된 절차. 이런 것은 [9장](09-skills-extensions.md)의 스킬이 맞습니다.[^skill-procedure]
+- 여러 단계로 된 절차. 이런 것은 [9장](09-skills-extensions.md)의 스킬(절차를 적어 두고 이름으로 불러 쓰는 파일)이 맞습니다.[^skill-procedure]
 - 비밀번호나 인증 정보
 
 길이는 파일당 200줄 아래를 목표로 하세요.[^claudemd] 대문자나 "반드시!!"를 쌓을 필요도 없습니다. 강조를 쌓으면 오히려 규칙을 과하게 적용하기 쉽습니다.[^practice]
@@ -52,7 +52,7 @@ EOF
 
 Windows PowerShell은 `mkdir notes` 뒤에 `notepad CLAUDE.md`로 메모장을 엽니다. `cat`으로 시작하는 줄과 `EOF` 줄은 빼고 그 사이만 넣습니다. 새 파일을 만들지 물으면 `예`를 누르고, `Ctrl + S`로 저장하고 닫습니다. 이 방법은 실행해 보지 않았습니다.
 
-새 세션이 규칙을 아는지 터미널에서 확인합니다. 한 번 묻고 끝나는 `claude -p`를 씁니다. 자세한 내용은 [10장](10-headless-automation.md)에서 다룹니다.
+새 세션이 규칙을 아는지 터미널에서 확인합니다. 이번에는 `claude -p`를 씁니다. `-p`를 붙이면 대화 창이 열리지 않습니다. 질문 하나에 답만 터미널에 찍고 바로 끝납니다. 잠깐 확인할 때 편합니다. 자세한 내용은 [10장](10-headless-automation.md)에서 다룹니다.
 
 ```bash
 claude -p "이 폴더의 회의록 규칙이 뭐야? 세 줄로 답해 줘."
@@ -66,7 +66,11 @@ claude -p "이 폴더의 회의록 규칙이 뭐야? 세 줄로 답해 줘."
 
 대화에서 말한 적 없는 규칙을 답했습니다. 파일이 불려 왔다는 뜻입니다. 모든 프로젝트에 쓸 내 습관은 `~/.claude/CLAUDE.md`에 둡니다.[^claudemd]
 
-**`/init`은 언제 쓰나.** `/init`은 `CLAUDE.md` 초안을 자동으로 만드는 명령입니다. 다만 코드를 분석해서 빌드 명령, 테스트 방법, 프로젝트 관례를 찾아 적습니다.[^init] 우리 메모 폴더에는 그런 것이 없으니 직접 쓰는 편이 쉽습니다. 이 가이드에서도 실행해 보지 않았습니다. 나중에 코드 프로젝트를 다룰 때 써 보세요.
+지금 실습에서는 `CLAUDE.md`를 직접 쓰면 됩니다. 자동으로 초안을 만드는 `/init` 명령도 있지만 지금은 쓰지 않습니다.
+
+::: details `/init`은 언제 쓰나요? (눌러서 펼치기)
+`/init`은 `CLAUDE.md` 초안을 자동으로 만드는 명령입니다. 다만 코드를 분석해서 빌드 명령, 테스트 방법, 프로젝트 관례를 찾아 적습니다.[^init] 우리 메모 폴더에는 그런 것이 없으니 직접 쓰는 편이 쉽습니다. 이 가이드에서도 실행해 보지 않았습니다. 나중에 코드 프로젝트를 다룰 때 써 보세요.
+:::
 
 <Quiz id="ch808-make" />
 
@@ -100,7 +104,7 @@ claude -p "이 폴더의 회의록 규칙이 뭐야? 세 줄로 답해 줘."
 | `.claude/settings.json` | 이 폴더에서 일하는 모두 |
 | `.claude/settings.local.json` | 나만, 이 프로젝트에서만 |
 
-같은 설정이 여러 곳에 있으면 표에서 범위가 좁은 쪽이 이깁니다.[^settings] 회사 컴퓨터라면 관리자 설정이 이 셋보다 먼저입니다.
+같은 설정이 여러 곳에 있으면 표에서 범위가 좁은 쪽이 이깁니다.[^settings][^managed] 예를 들어 첫째 줄 파일과 셋째 줄 파일이 서로 다르게 정했다면 셋째 줄(나만, 이 프로젝트에서만)이 이깁니다.
 
 거부 규칙은 예외입니다. 어느 단계에서든 거부된 도구는 다른 단계가 허용할 수 없습니다.[^permissions]
 
@@ -137,6 +141,8 @@ Claude Code는 프로젝트 폴더와 내 홈 폴더의 `~/.claude`에서 지침
 └── projects/                  대화 기록과 자동 메모리
 ```
 
+`skills/`와 `agents/`는 [9장](09-skills-extensions.md)에서 배웁니다. 스킬은 이름으로 불러 쓰는 작업 설명서이고, 서브에이전트는 곁일을 따로 맡는 도우미입니다. 지금은 이런 폴더가 있다는 것만 알면 됩니다.
+
 다 외울 필요는 없습니다. 대부분은 `CLAUDE.md`와 `settings.json`만 고치면 됩니다.[^folder]
 
 <Quiz id="ch808-folder" />
@@ -156,7 +162,7 @@ settings.json 에 적기: "deny": ["Read(./비밀/**)"]
 
 - 틀려도 다시 고치면 되는 일(말투, 형식)은 `CLAUDE.md`.
 - 틀리면 곤란한 일(비밀 파일 읽기)은 거부 규칙.
-- 매번 꼭 일어나야 하는 일은 [11장](11-hooks-statusline.md)의 훅.[^hook]
+- 매번 꼭 일어나야 하는 일은 [11장](11-hooks-statusline.md)의 훅(정해진 순간마다 Claude Code가 자동으로 돌리는 명령).[^hook]
 
 <Quiz id="ch808-enforce" />
 
@@ -197,5 +203,6 @@ settings.json 에 적기: "deny": ["Read(./비밀/**)"]
 [^settings]: Claude Code 공식 문서, 「Settings files and precedence」. "Settings are the JSON keys that change how Claude Code behaves" / "You, in every project on this machine" / "Everyone working in the folder that contains it. In a git repository, commit it so teammates get it" / "You, in this one project only." / "When the same key appears in more than one place, Claude Code uses the value from the highest level that sets it." / "Settings precedence, highest first: managed settings, command line, project local, shared project, user." / "Claude Code watches your settings files and reloads them when they change, so it applies most edits to the running session without a restart" / "Run `/status` inside Claude Code to see which settings sources are active." https://code.claude.com/docs/en/settings (확인일 2026-11-06)
 [^permissions]: Claude Code 공식 문서, 「Configure permissions」. "If a tool is denied at any level, no other level can allow it." / "Instructions in your prompt or `CLAUDE.md` shape what Claude tries to do, but they don't change what Claude Code allows." / "Permission rules are enforced by Claude Code, not by the model." https://code.claude.com/docs/en/permissions (확인일 2026-11-06)
 [^json-rule]: Claude Code 공식 문서, 「Automate actions with hooks」. "Verify your JSON is valid: trailing commas and comments aren't allowed" https://code.claude.com/docs/en/hooks-guide (확인일 2026-11-06)
+[^managed]: 회사 컴퓨터라면 관리자가 정한 설정(managed settings)이 이 셋보다 먼저입니다. 근거는 같은 문서의 "Settings precedence, highest first: managed settings, command line, project local, shared project, user."입니다. https://code.claude.com/docs/en/settings (확인일 2026-11-06)
 [^folder]: Claude Code 공식 문서, 「Explore the .claude directory」. "Claude Code reads instructions, settings, skills, subagents, and memory from your project directory and from `~/.claude` in your home directory." / "Most users only edit `CLAUDE.md` and `settings.json`." https://code.claude.com/docs/en/claude-directory (확인일 2026-11-06)
 [^hook]: Claude Code 공식 문서, 「Output styles」. "For something that has to happen every time, such as formatting after each edit or blocking a command, use a hook." https://code.claude.com/docs/en/output-styles (확인일 2026-11-06)
