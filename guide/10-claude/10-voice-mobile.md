@@ -123,7 +123,7 @@ Claude가 엉뚱한 방향으로 가면 그냥 말을 시작하세요. Claude가
 
 - 음성 대화도 **요금제 사용 한도에 들어갑니다**([1장](01-getting-started.md)).
 - 같은 대화 안에서 글과 말을 오가도 **앞의 내용이 이어집니다.** 인터넷 주소처럼 정확히 쳐야 하는 것은 중간에 글로 입력하면 됩니다.
-- 글 채팅에서 마지막으로 쓴 모델로 시작하고, 대화 중에 바꿀 수 있습니다.[^voice-fable]
+- 글 채팅에서 마지막으로 쓴 모델로 시작하고, 대화 중에 바꿀 수 있습니다. 다만 Claude Fable은 음성 모드에서 아직 쓸 수 없습니다.[^voice-fable]
 - 연결해 둔 도구(Gmail·Google 캘린더 등)도 음성 모드에서 쓸 수 있습니다.[^voice-tools] 도구 연결은 [7장](07-projects-tools.md)에서 다룹니다.
 - 새 화면에서는 Claude가 작업 중인 대화를 포함해 어떤 대화에서든 음성 모드를 쓸 수 있습니다.[^voice][^cowork-voice-old]
 
@@ -296,6 +296,6 @@ Claude가 위치나 캘린더를 처음 쓰려 하면 허락을 묻습니다. �
 [^android-apps]: Anthropic 도움말, 「Use Claude with Android apps」. "This feature is supported on all Claude plans and works with your device's native and third-party apps" / "Reminders: These are exclusively available on Claude for iOS, so Claude can’t create and manage reminders on Android." / "These permissions can be managed at any time in your device settings by going to Settings > Apps > Claude > Permissions." https://support.claude.com/en/articles/11869629 (확인일 2026-10-26)
 [^quick]: Anthropic 도움말, 「Use quick entry with Claude Desktop on Mac」. "Quick entry is available to all Claude users (free, Pro, Max, Team, and Enterprise plans) using Claude Desktop on macOS." / "Instant access: Double-tap the Option key to open Claude from any app." / "Visual context: Capture screenshots or click application windows to share what you're working on." / "The voice dictation shortcut is disabled by default because it takes over your Caps Lock key." / "Claude Desktop needs to be running on your Mac, but it can run in the background." / "Screen recording: Required to capture screenshots and share application windows." / "You can review or change these permissions in System Settings > Privacy & Security." https://support.claude.com/en/articles/12626668 (확인일 2026-10-26)
 [^cowork-voice-old]: 같은 도움말에는 Cowork([8장](08-cowork.md))에서는 받아쓰기만 되고 음성 모드는 안 된다는 문장도 있습니다.
-[^voice-fable]: 다만 Claude Fable은 음성 모드에서 아직 쓸 수 없습니다(음성 모드 도움말, 확인일 2026-10-26).
+[^voice-fable]: Anthropic 도움말, 「Use voice mode」. "Note: Claude Fable is not currently available in voice mode." (확인일 2026-10-26)
 [^voice-tools]: 음성 모드 도움말은 무료 요금제에서 도구를 하나 연결할 수 있다고 적습니다.
 [^voice-settings-name]: 도움말은 「설정」 → 「기능」이라고 안내합니다. 화면에 따라 다를 수 있습니다.

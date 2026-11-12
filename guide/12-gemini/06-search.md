@@ -81,10 +81,10 @@ Gemini의 답은 틀릴 수 있습니다. Google도 **늘 답을 따져 보고, 
 
 ### Deep Think는?
 
-**Deep Think**(딥 싱크)는 **Gemini 4 Argon으로 바뀌는 중**입니다.[^deepthink] 어려운 문제는 [2장](02-screen-tour.md#모델-버튼-—-모델과-사고-수준)의 모델 버튼에서 Argon과 사고 수준 「높음」을 고르면 됩니다(Pro·Ultra).
+**Deep Think**(딥 싱크)는 더 오래 생각하는 기능이었습니다. 지금은 **Gemini 4 Argon으로 바뀌는 중**입니다.[^deepthink] 어려운 문제는 [2장](02-screen-tour.md#모델-버튼-—-모델과-사고-수준)의 모델 버튼에서 Argon과 사고 수준 「높음」을 고르면 됩니다(Pro·Ultra).
 
 ::: details 자세히 (눌러서 펼치기)
-Deep Think는 더 오래 생각하는 기능이었습니다. Google AI Ultra 구독자만 썼습니다.[^deepthink]
+Deep Think는 Google AI Ultra 구독자만 썼습니다.[^deepthink]
 :::
 
 <Quiz id="ch306-deep" />

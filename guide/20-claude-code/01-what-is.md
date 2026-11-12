@@ -77,7 +77,7 @@ Claude Code는 여러 곳에서 씁니다. 어디서 쓰든 **같은 엔진**(�
 
 **Claude Code는 유료 구독에서만 씁니다.** Pro, Max, Ultra, Team, Enterprise 구독이나 Console(API) 계정(개발자가 자기 프로그램에서 Claude를 부를 때 쓰는 계정)이 필요하고, **무료 플랜으로는 쓸 수 없습니다.**[^setup] 개인 구독(Pro·Max·Ultra)은 claude.ai 계정으로 로그인합니다.[^auth]
 
-- 이 가이드는 개인 구독(Pro·Max·Ultra)으로 진행합니다. 요금과 사용 한도는 2단계 Claude 가이드에 정리해 두었습니다. ChatGPT 가이드로 2단계를 읽었다면, 구독하기 전에 그 절만 열어 보세요([2단계 Claude 1장](../10-claude/01-getting-started.md#요금제-한눈에-보기)).[^availability] 사용량은 데스크톱·터미널 등 **Claude Code를 쓰는 모든 곳이 함께** 씁니다.[^desktop] Team·Enterprise는 채팅·Cowork와도 함께 씁니다.[^costs]
+- 요금과 사용 한도는 2단계 Claude 가이드에 정리해 두었습니다. ChatGPT 가이드로 2단계를 읽었다면, 구독하기 전에 그 절만 열어 보세요([2단계 Claude 1장](../10-claude/01-getting-started.md#요금제-한눈에-보기)).[^availability] 사용량은 데스크톱·터미널 등 **Claude Code를 쓰는 모든 곳이 함께** 씁니다.[^desktop] Team·Enterprise는 채팅·Cowork와도 함께 씁니다.[^costs]
 - 광고된 사용 한도는 **한 사람이 보통으로 쓰는 것**을 전제로 합니다.[^legal]
 
 어떤 요금제가 맞는지는 써 보며 정해도 됩니다. 사용량을 보는 법은 9장에서 다룹니다.

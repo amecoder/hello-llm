@@ -4,6 +4,8 @@
 
 > **한 줄 요약**: 터미널은 글자로 컴퓨터에 일을 시키는 창입니다. 이 강좌는 터미널을 한 번도 안 열어 본 사람이 Claude Code를 설치하고, 마지막에는 명령 한 줄로 주간 메모를 정리하는 데까지 갑니다.[^tested]
 
+이 강좌의 실행 결과는 리눅스에서 얻었습니다. macOS·Windows에서는 실행하지 않았고, 그 두 곳은 공식 문서를 근거로 썼습니다.
+
 처음부터 완벽할 필요는 없습니다. 코드를 몰라도 괜찮습니다. 원하는 것을 말로 설명하면 됩니다.[^no-code]
 
 ## 터미널이란
@@ -148,7 +150,7 @@ claude --version
 다음 장: [2장. 터미널 기초](02-shell-basics.md)
 
 [^tested]: 이 강좌는 2026년 11월 6일에 확인한 Claude Code 공식 문서를 바탕으로 썼습니다. 실행 결과는 같은 날 리눅스에서 Claude Code 2.1.318로 실행한 결과입니다. 작성자의 개인 설정이 섞이지 않도록 그 설정을 끄고 돌렸습니다. macOS와 Windows에서는 실행해 보지 않았습니다. 그 두 곳의 내용은 공식 문서를 근거로 썼습니다. 이 안내는 뒤의 장에서 되풀이하지 않습니다. 실행해 보지 않은 기능은 그 자리에서 밝힙니다.
-[^bash-only]: 이 강좌의 스크립트는 맥·리눅스의 bash(맥·리눅스 터미널이 명령을 알아듣는 방식) 기준입니다. Windows PowerShell에서는 그대로 돌지 않습니다. Windows는 저장한 파일 대신 블록을 붙여 넣어 돌립니다. 10장에서 다시 짚습니다.
+[^bash-only]: 이 강좌의 스크립트는 맥·리눅스의 bash(배시) 기준입니다. bash는 셸(터미널에서 명령을 알아듣는 프로그램)의 한 종류입니다. 맥의 기본 셸은 zsh지만, 이 강좌는 스크립트를 `bash 파일이름`처럼 bash로 돌립니다. Windows PowerShell에서는 그대로 돌지 않습니다. Windows는 저장한 파일 대신 블록을 붙여 넣어 돌립니다. 10장에서 다시 짚습니다.
 [^no-code]: Claude Code 공식 문서, 「Terminal guide for new users」. "You don't need to know how to code." https://code.claude.com/docs/en/terminal-guide (확인일 2026-11-06)
 [^cursor]: Claude Code 공식 문서, 「Terminal guide for new users」. "A window will appear with a blinking cursor. This is your terminal, where you type commands." https://code.claude.com/docs/en/terminal-guide (확인일 2026-11-06)
 [^no-click]: Claude Code 공식 문서, 「Terminal guide for new users」. "You can't click on things in the terminal. Use the arrow keys to move around." https://code.claude.com/docs/en/terminal-guide (확인일 2026-11-06)

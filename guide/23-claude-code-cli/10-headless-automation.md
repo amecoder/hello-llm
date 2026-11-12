@@ -196,7 +196,7 @@ foreach ($file in Get-ChildItem inbox/회의-*.txt) {
    ```
 
 4. `--max-turns 1`로 실패시키고 종료 코드를 봅니다.
-5. `주간정리.sh`를 만들어 `bash 주간정리.sh`로 돌립니다. Windows는 「Windows PowerShell에서 돌리려면」 상자를 펼쳐 붙여 넣습니다.
+5. `주간정리.sh`를 만들어 `bash 주간정리.sh`로 돌립니다. Windows는 위의 PowerShell 코드 상자를 붙여 넣습니다.
 
 스스로 물어보세요. 사람 없이 돌아갔나? 결과가 메모와 맞나? 다음 주에 메모가 늘어도 같은 명령이면 되나?
 
