@@ -6,6 +6,7 @@ import { CHATGPT } from './chatgpt.ts'
 import { CLAUDE } from './claude.ts'
 import { GEMINI } from './gemini.ts'
 import { CLAUDE_CODE } from './claude-code.ts'
+import { CLAUDE_CODE_CLI } from './claude-code-cli.ts'
 import { CODEX } from './codex.ts'
 import { ANTIGRAVITY } from './antigravity.ts'
 import { AI_SDLC } from './ai-sdlc.ts'
@@ -98,10 +99,24 @@ const chapters: Record<number, string> = {
   708: "8章. 運用と改善",
   709: "第9章 安全と責任",
   710: "10章. 実習の課題",
+  801: "第1章 ターミナルとClaude Code",
+  802: "第2章 ターミナルの基本",
+  803: "第3章 インストールとログイン",
+  804: "第4章 最初のセッション",
+  805: "第5章 入力のコツとコマンド",
+  806: "第6章 セッションとコンテキスト",
+  807: "第7章 許可と元に戻す操作",
+  808: "第8章 プロジェクトの記憶と設定",
+  809: "第9章 スキルと拡張機能",
+  810: "第10章 1行実行と自動化",
+  811: "第11章 フックと画面のカスタマイズ",
+  812: "第12章 同時作業とリモート",
+  813: "第13章 コスト・安全・トラブル解決",
+  814: "第14章 実習課題とプロのような使い方",
 }
 
 export const ja: Translation = {
   chapters,
-  questions: { ...QUIZ1, ...EXAM, ...CHATGPT, ...CLAUDE, ...GEMINI, ...CLAUDE_CODE, ...CODEX, ...ANTIGRAVITY, ...AI_SDLC },
+  questions: { ...QUIZ1, ...EXAM, ...CHATGPT, ...CLAUDE, ...GEMINI, ...CLAUDE_CODE, ...CLAUDE_CODE_CLI, ...CODEX, ...ANTIGRAVITY, ...AI_SDLC },
   level: { ...LEVEL_BASIC, ...LEVEL_INTERMEDIATE, ...LEVEL_ADVANCED, ...LEVEL_EXPERT },
 }

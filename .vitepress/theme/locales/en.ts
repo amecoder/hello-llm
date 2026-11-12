@@ -162,6 +162,7 @@ export const enContent: Content = {
     claude: 'Stage 2 · Claude',
     gemini: 'Stage 2 · Gemini',
     'claude-code': 'Stage 3 · Claude Code',
+    'claude-code-cli': 'Stage 3 · Claude Code Terminal',
     codex: 'Stage 3 · Codex',
     antigravity: 'Stage 3 · Antigravity',
     'ai-sdlc': 'Stage 4 · AI-SDLC',

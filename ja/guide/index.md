@@ -87,6 +87,10 @@ features:
     details: パソコンのフォルダ内で直接ファイルを読み書きするClaude — ターミナル不要のデスクトップアプリから、自分流に整理してくれるツールを作りながら学ぶ全12章
     link: /ja/guide/20-claude-code/
     linkText: Claude Codeガイドを始める
+  - title: ステップ3 · Claude Code ターミナルガイド
+    details: ターミナルを初めて開く人のための全14章 — 基本コマンドからインストール、許可と取り消し、スキル、コマンド1行で動く週次まとめまで
+    link: /ja/guide/23-claude-code-cli/
+    linkText: ターミナルガイドを始める
   - title: ステップ3 · Codex 使い方ガイド
     details: ChatGPTアプリの中のCodex — Claude Codeで作った整理ツールを移行しながら違いだけを学ぶ全8章
     link: /ja/guide/21-codex/
@@ -126,5 +130,5 @@ features:
 |---|---|---|
 | 1 | [共通ガイド](/ja/guide/00-common/) | どのLLMでも通じる共通の仕組みと使い方 |
 | 2 | [ChatGPT](/ja/guide/11-chatgpt/) · [Claude](/ja/guide/10-claude/) · [Gemini](/ja/guide/12-gemini/) | サービス別の機能と活用法 |
-| 3 | [Claude Code](/ja/guide/20-claude-code/) · [Codex](/ja/guide/21-codex/) · [Antigravity](/ja/guide/22-antigravity/) | 自分のパソコンで動くコーディングAIツール |
+| 3 | [Claude Code](/ja/guide/20-claude-code/) · [Claude Code ターミナル](/ja/guide/23-claude-code-cli/) · [Codex](/ja/guide/21-codex/) · [Antigravity](/ja/guide/22-antigravity/) | 自分のパソコンで動くコーディングAIツール |
 | 4 | [AI-SDLC](/ja/guide/30-ai-sdlc/) | AIと一緒に企画から公開まで — ソフトウェア開発の全工程（SDLC） |

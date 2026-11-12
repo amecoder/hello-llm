@@ -32,11 +32,11 @@ export function stageTitle(stage: { id: StageId; title: string }, lang: Lang): s
 
 // stages whose pages exist under /<lang>/; the rest link to the Korean pages
 export const TRANSLATED_STAGES: Record<Exclude<Lang, 'ko'>, readonly StageId[]> = {
-  en: ['common', 'chatgpt', 'claude', 'gemini', 'claude-code', 'codex', 'antigravity', 'ai-sdlc'],
-  ja: ['common', 'chatgpt', 'claude', 'gemini', 'claude-code', 'codex', 'antigravity', 'ai-sdlc'],
+  en: ['common', 'chatgpt', 'claude', 'gemini', 'claude-code', 'claude-code-cli', 'codex', 'antigravity', 'ai-sdlc'],
+  ja: ['common', 'chatgpt', 'claude', 'gemini', 'claude-code', 'claude-code-cli', 'codex', 'antigravity', 'ai-sdlc'],
   'es': ['common', 'chatgpt', 'claude', 'gemini', 'claude-code', 'codex', 'antigravity', 'ai-sdlc'],
-  'zh-hant': ['common', 'chatgpt', 'claude', 'gemini', 'claude-code', 'codex', 'antigravity', 'ai-sdlc'],
-  'zh-hans': ['common', 'chatgpt', 'claude', 'gemini', 'claude-code', 'codex', 'antigravity', 'ai-sdlc'],
+  'zh-hant': ['common', 'chatgpt', 'claude', 'gemini', 'claude-code', 'claude-code-cli', 'codex', 'antigravity', 'ai-sdlc'],
+  'zh-hans': ['common', 'chatgpt', 'claude', 'gemini', 'claude-code', 'claude-code-cli', 'codex', 'antigravity', 'ai-sdlc'],
 }
 
 // The language menu swaps the locale in the address without knowing whether that page exists.
