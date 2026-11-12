@@ -19,7 +19,7 @@ fixes #이슈번호
 
 이슈 번호는 이슈 제목 옆에 `#2`처럼 붙어 있습니다. 6장에서 PR을 하나 만들었다면 첫 이슈가 1번이 아닐 수 있으니, 꼭 화면에서 확인하세요.
 
-GitHub의 입문 튜토리얼도 계획 단계에서 첫 이슈를 만듭니다. 제목에 만들 기능을 적고, 설명에 만들고 싶은 것을 몇 줄 적습니다.[^first-issue]
+이슈를 쓸 때는 제목에 만들 기능을 적고, 설명에 만들고 싶은 것을 몇 줄 적으면 됩니다.[^first-issue] 예를 들어 제목은 "기한 지난 할 일을 빨간색으로", 설명은 "기한이 오늘보다 앞선 할 일은 글자를 빨간색으로 보여 주면 좋겠다"처럼 씁니다.
 
 <Quiz id="ch708-issue" />
 
@@ -43,7 +43,9 @@ GitHub의 입문 튜토리얼도 계획 단계에서 첫 이슈를 만듭니다.
 
 ## 한 바퀴 더 돌기
 
-한 바퀴가 끝나면, 다음 기능을 **새 이슈로** 만들고 시작할 때 진행 중으로 옮겨 다음 순환을 시작합니다.[^next-cycle] 4단계에서 배운 흐름을 이슈 하나로 다시 돌면 이렇습니다.
+한 바퀴가 끝나면, 다음 기능을 **새 이슈로** 만들어 다음 순환을 시작합니다. 보드를 쓴다면 일을 시작할 때 그 이슈를 진행 중(In Progress)으로 옮깁니다.[^next-cycle] 보드가 없어도 이슈만으로 충분합니다.
+
+앞의 3~7장에서 배운 흐름을 이슈 하나로 다시 돌면 이렇습니다.
 
 1. **계획**: 이슈에 무엇을 바꿀지 적는다. 필요하면 SPEC.md에 확인 기준을 한 줄 더한다(3장).
 2. **만들기**: 새 브랜치에서 계획 모드로 계획을 받고 만든다(4장).
@@ -97,7 +99,7 @@ Claude가 이슈를 읽지 못한다고 하면, 이슈 제목과 내용을 복�
 
 [^issue]: GitHub 공식 문서, 「About issues」. "You can create issues in your repository to plan, discuss, and track work." https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues (확인일 2026-11-01)
 [^close]: GitHub 공식 문서, 「About issues」. "Mentioning an issue in another issue or pull request will create references between them and using keywords, like `fixes:`, in your pull requests will automatically close the associated issues." https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues (확인일 2026-11-01)
-[^first-issue]: GitHub 공식 문서, 「Planning your work」. "In the **Add a title** field, type `Display a list of starred repositories`." https://docs.github.com/en/get-started/start-your-journey/planning-your-work (확인일 2026-11-01)
+[^first-issue]: GitHub의 입문 튜토리얼도 계획 단계에서 이렇게 첫 이슈를 만듭니다. GitHub 공식 문서, 「Planning your work」. "In the **Add a title** field, type `Display a list of starred repositories`." https://docs.github.com/en/get-started/start-your-journey/planning-your-work (확인일 2026-11-01)
 [^labels]: GitHub 공식 문서, 「Managing labels」. "GitHub provides default labels in every new repository." / "`bug` | Indicates an unexpected problem or unintended behavior" / "`documentation` | Indicates a need for improvements or additions to documentation" / "`enhancement` | Indicates new feature requests" https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels (확인일 2026-11-01)
 [^projects]: GitHub 공식 문서, 「About Projects」. "A project is an adaptable table, board, and roadmap that integrates with your issues and pull requests on GitHub to help you plan and track your work effectively at the user or organization level." https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects (확인일 2026-11-01)
 [^board]: GitHub 공식 문서, 「Planning your work」. "The board's columns represent stages of your work. As you make progress, move each item to show its status." https://docs.github.com/en/get-started/start-your-journey/planning-your-work (확인일 2026-11-01)

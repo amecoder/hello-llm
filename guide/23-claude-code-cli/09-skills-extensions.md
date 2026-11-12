@@ -76,9 +76,11 @@ Windows PowerShell은 `mkdir .claude\skills\meeting-notes` 뒤에 `notepad .clau
 
 **서브에이전트**(Subagent)는 특정 종류의 일을 맡는 전문 도우미입니다. 자기만의 맥락 창에서 일하고 요약만 돌려줍니다. 그래서 검색 결과나 로그로 내 대화가 어지러워지지 않습니다.[^sub] 보조 직원에게 자료 조사를 맡기고 결론만 듣는 것과 비슷합니다.
 
-옛날 글에는 `/agents` 화면에서 만들라고 나올 수 있습니다. 지금은 그 마법사가 없어졌습니다. `/agents`를 치면 Claude에게 부탁하거나 파일을 직접 고치라는 안내 글자만 나옵니다.[^sub]
+예를 들어 회의록 다섯 개가 원본 메모와 맞는지 하나씩 대조하는 일을 떠올려 보세요. 내가 직접 시키면 메모와 회의록 열 개의 내용이 내 대화에 줄줄이 쌓입니다. 서브에이전트에게 맡기면 파일은 서브에이전트가 읽고, 내 대화에는 "3번 회의록의 기한이 메모와 다름" 같은 결론 몇 줄만 돌아옵니다.
 
-가장 쉬운 방법은 Claude에게 부탁하는 것입니다.[^sub] "회의록이 원본 메모와 맞는지 대조하는 서브에이전트를 이 프로젝트에 만들어 줘."처럼 말하면 됩니다. 새로 만든 것을 못 찾으면 Claude Code를 재시작해 보세요.[^sub] 이 가이드에서 서브에이전트를 직접 만들어 보지는 않았습니다.
+만드는 가장 쉬운 방법은 Claude에게 부탁하는 것입니다.[^sub] "회의록이 원본 메모와 맞는지 대조하는 서브에이전트를 이 프로젝트에 만들어 줘."처럼 말하면 됩니다. 새로 만든 것을 못 찾으면 Claude Code를 재시작해 보세요.[^sub] 이 가이드에서 서브에이전트를 직접 만들어 보지는 않았습니다.
+
+옛날 글에는 `/agents` 화면에서 만들라고 나올 수 있습니다. 지금은 그 마법사가 없어졌습니다. `/agents`를 치면 Claude에게 부탁하거나 파일을 직접 고치라는 안내 글자만 나옵니다.[^sub]
 
 서브에이전트의 요청도 내 대화와 같은 사용량 한도에 합산됩니다.[^sub] 작은 일이라면 그냥 부탁하는 편이 낫습니다.
 
@@ -86,7 +88,7 @@ Windows PowerShell은 `mkdir .claude\skills\meeting-notes` 뒤에 `notepad .clau
 
 ## MCP
 
-**MCP**(Model Context Protocol)는 Claude Code가 기본 도구 밖의 일을 하게 해 줍니다. 이슈 검색, 데이터베이스 조회, 브라우저 조작 같은 일입니다.[^mcp] Claude에게 바깥 서비스로 가는 연결선을 꽂아 주는 일이라고 보면 됩니다.
+**MCP**(Model Context Protocol)는 Claude Code가 기본 도구 밖의 일을 하게 해 줍니다. 할 일·오류 신고를 모아 둔 목록(이슈 트래커) 검색, 자료를 쌓아 둔 저장소(데이터베이스) 조회, 웹 브라우저 조작 같은 일입니다.[^mcp] Claude에게 바깥 서비스로 가는 연결선을 꽂아 주는 일이라고 보면 됩니다.
 
 명령을 치는 곳이 둘로 나뉩니다. `claude mcp add`는 `claude`를 켜기 전의 터미널(셸)에서 칩니다. `/mcp`는 세션 안에서 이미 추가한 서버를 확인할 때 칩니다.[^mcp] 공식 문서의 예시 서버로 추가, 확인, 삭제를 해 봤습니다.
 
@@ -113,13 +115,15 @@ Removed MCP server "claude-code-docs" from local config
 
 `✔ Connected`가 연결됐다는 표시입니다. 기본 범위 `local`은 나만, 이 프로젝트에서만 쓴다는 뜻입니다.[^mcp]
 
-**믿을 수 있는 서버만 연결하세요.** 바깥 내용을 가져오는 서버는 프롬프트 인젝션 위험에 노출될 수 있습니다.[^mcp-trust] Anthropic이 MCP 서버를 보안 점검해 주는 것도 아닙니다.[^mcp-audit] 누가 만들었는지 모르는 서버는 추가하지 마세요.
+**믿을 수 있는 서버만 연결하세요.** 바깥 내용을 가져오는 서버는 프롬프트 인젝션(글 속에 숨긴 지시로 AI를 조종하려는 수법) 위험에 노출될 수 있습니다.[^mcp-trust] 누가 만들었는지 모르는 서버는 추가하지 마세요.[^mcp-audit]
 
 <Quiz id="ch809-mcp" />
 
 ## 플러그인
 
-**플러그인**(Plugin)은 스킬, 에이전트, 훅, MCP 서버 등을 한 묶음으로 설치하는 폴더입니다. 앞의 것들은 플러그인 없이도 따로 쓸 수 있습니다. 여러 개를 묶어서 쓰고 싶을 때만 필요합니다.[^plugin]
+**플러그인**(Plugin)은 스킬, 에이전트, 훅, MCP 서버 등을 한 묶음으로 설치하는 폴더입니다. 훅은 정해진 순간마다 자동으로 도는 명령인데, [11장](11-hooks-statusline.md)에서 배웁니다. 앞의 것들은 플러그인 없이도 따로 쓸 수 있습니다. 여러 개를 묶어서 쓰고 싶을 때만 필요합니다.[^plugin]
+
+예를 들어 이 장의 회의록 스킬과 대조용 서브에이전트를 플러그인 하나로 묶었다고 해 보세요. 동료는 둘을 하나씩 만들 필요 없이 플러그인 하나만 설치하면 됩니다.
 
 세션 안에서 `/plugin`을 치면 Discover 탭에서 플러그인을 고를 수 있습니다.[^plugin] 설치 명령은 `/plugin install commit-commands@claude-plugins-official` 같은 모양입니다. 세션에서 치면 바로 설치되지 않고 상세 화면이 먼저 열립니다.[^plugin-install] 이 가이드에서는 설치까지 실행해 보지 않았습니다.
 
@@ -178,7 +182,7 @@ Removed MCP server "claude-code-docs" from local config
 [^sub]: Claude Code 공식 문서, 「Create custom subagents」. "Subagents are specialized AI assistants that handle specific types of tasks." / "Use one when a side task would flood your main conversation with search results, logs, or file contents you won't reference again: the subagent does that work in its own context and returns only the summary." / "Running `/agents` prints a reminder to ask Claude or edit `.claude/agents/` and `~/.claude/agents/` directly." / "To create one, ask Claude to write it for you, or write the file yourself." / "If Claude can't find the new subagent, restart Claude Code and try again." / "It also sends its own requests, which count toward the same usage limits as your main conversation." https://code.claude.com/docs/en/sub-agents (확인일 2026-11-06)
 [^mcp]: Claude Code 공식 문서, 「Connect to MCP servers」. "lets Claude Code use tools beyond its built-in set, such as searching an issue tracker, querying a database, or controlling a web browser." / "Run this in your terminal, not inside a `claude` session: you're configuring the server before starting a conversation." / "Inside a `claude` session, use the `/mcp` command to check and manage servers you've already added." / "By default it registers the server at `local` scope: private to you, active only in the current project." https://code.claude.com/docs/en/mcp-quickstart (확인일 2026-11-06)
 [^mcp-trust]: Claude Code 공식 문서, 「Connect Claude Code to tools via MCP」. "Verify you trust each server before connecting it." / "Servers that fetch external content can expose you to prompt injection risk." https://code.claude.com/docs/en/mcp (확인일 2026-11-06)
-[^mcp-audit]: Claude Code 공식 문서, 「Security」. "Anthropic reviews connectors against its listing criteria before adding them to the Anthropic Directory, but does not security-audit or manage any MCP server." https://code.claude.com/docs/en/security (확인일 2026-11-06)
+[^mcp-audit]: Anthropic이 MCP 서버를 보안 점검해 주는 것도 아닙니다. Claude Code 공식 문서, 「Security」. "Anthropic reviews connectors against its listing criteria before adding them to the Anthropic Directory, but does not security-audit or manage any MCP server." https://code.claude.com/docs/en/security (확인일 2026-11-06)
 [^plugin]: Claude Code 공식 문서, 「Plugins overview」. "A Claude Code plugin is a directory of skills, agents, hooks, MCP servers, or other components that Claude Code installs and loads as one unit." / "Skills, subagents, hooks, and MCP servers all work on their own, without a plugin." / "To try a plugin now, run `/plugin` in a Claude Code terminal session and install one from the Discover tab, which lists the plugins from your marketplaces." / "Whatever the tier, a plugin you install can run code with your user privileges." / "An enabled plugin is part of every session, not only the sessions where you use it." https://code.claude.com/docs/en/plugins/overview (확인일 2026-11-06)
 [^plugin-install]: Claude Code 공식 문서, 「Install and manage plugins」. "/plugin install commit-commands@claude-plugins-official" / "In a session, this command doesn't install right away: it opens the `/plugin` panel on that plugin's details so you can review it and choose a scope first." / "A plugin can run hooks and MCP servers, so read the pane before you install." / "The Installed tab in `/plugin` lists your plugins with actions to enable, disable, update, or uninstall each one." https://code.claude.com/docs/en/plugins/install (확인일 2026-11-06)
 [^arguments]: Claude Code 공식 문서, 「Extend Claude with skills」. "All arguments passed when invoking the skill." https://code.claude.com/docs/en/skills (확인일 2026-11-06)

@@ -22,7 +22,9 @@ PR 화면에는 이런 탭이 있습니다.[^tabs]
 
 출처: GitHub 공식 문서(일부만 옮김)[^tabs]
 
-PR을 만들 때는 **무엇을 바꿨고 어떤 문제를 푸는지** 적습니다. 8장의 이슈를 해결하는 PR이라면 이슈와 연결하고, 정해진 단어로 연결하면 PR이 합쳐질 때 이슈가 자동으로 닫힙니다.[^describe]
+PR을 만들 때는 **무엇을 바꿨고 어떤 문제를 푸는지** 적습니다.[^describe]
+
+나중에 8장에서는 **이슈**(할 일이나 버그를 적어 두는 GitHub의 기록)를 씁니다. 이슈를 해결하는 PR이라면 PR 설명에 `fixes #번호` 같은 정해진 단어로 이슈를 적어 연결하세요. 그러면 PR이 합쳐질 때 그 이슈가 자동으로 닫힙니다.[^describe] 지금은 이런 연결이 있다는 것만 알아 두면 됩니다.
 
 **작은 PR이 리뷰하기 쉽고 합치기 안전합니다.** 남에게 리뷰를 부탁하기 전에 먼저 스스로 검토합니다. 바뀐 내용을 읽고, 실수로 바꾼 것이 없는지 보고, 빌드와 테스트가 돌았는지 확인합니다.[^small]
 
@@ -48,7 +50,13 @@ GitHub 튜토리얼은 **혼자 일해도** 합치기 전에 의도적으로 리
 
 출처: GitHub 공식 문서[^decisions]
 
-리뷰의 기준은 3장의 **SPEC.md**입니다. 공식 모범 사례 문서의 예시 프롬프트는 다 만든 뒤 **SPEC.md와 대조해** 모든 요구가 구현됐는지 확인하게 하고, 정확성에 영향을 주는 빈틈만 보고하고 **스타일은 건너뛰라**고 합니다(예시는 하위 에이전트에게 맡기지만, 이 가이드는 새 세션으로 바꿔 씁니다).[^against-spec] 이유도 적혀 있습니다. 문제를 찾으라고 하면 리뷰어는 **늘 무언가를 찾아냅니다.**[^always-finds] 그걸 다 고치다 보면 쓸데없는 군더더기가 생깁니다.
+리뷰의 기준은 3장의 **SPEC.md**입니다. Claude Code 공식 모범 사례 문서는 다 만든 뒤 이렇게 리뷰하라고 예를 듭니다.[^against-spec]
+
+- **SPEC.md와 대조해** 모든 요구가 구현됐는지 본다.
+- 정확성에 영향을 주는 빈틈만 보고한다.
+- 글자 모양·이름 짓기 같은 **스타일은 건너뛴다.**
+
+왜 스타일을 건너뛸까요? 문제를 찾으라고 하면 리뷰어는 **늘 무언가를 찾아냅니다.**[^always-finds] 그걸 다 고치다 보면 쓸데없는 군더더기가 생깁니다. 정확성만 보게 하면 꼭 고칠 것만 남습니다.
 
 ```
 새 세션에서 지금 브랜치의 변경을 SPEC.md와 대조해 리뷰해 줘. 요구가 다 구현됐는지, 확인 기준마다 검사가 있는지 보고, 정확성에 영향을 주는 빈틈만 알려 줘. 스타일은 건너뛰어.
@@ -58,14 +66,20 @@ GitHub 튜토리얼은 **혼자 일해도** 합치기 전에 의도적으로 리
 
 ## AI에게 리뷰받기
 
-Claude Code에는 리뷰 명령 `/code-review`가 있습니다. 작업 중인 세션에서 치면, 내 브랜치의 변경을 읽고 정확성 문제를 찾아 대화로 알려 줍니다.[^local] 사용량은 세션의 나머지와 똑같이 내 요금제에서 계산됩니다.[^usage]
+Claude Code에는 리뷰 명령 `/code-review`가 있습니다. 작업 중인 세션에서 치면, 내 브랜치의 변경을 읽고 정확성 문제를 찾아 대화로 알려 줍니다.[^local] 어느 요금제에서나 쓸 수 있습니다.[^plans]
 
-데스크톱 앱에서는 커밋하기 전에 입력창에 `/code-review`를 쳐서 리뷰를 받을 수 있습니다.[^desktop-review] PR을 연 뒤에는 세션 정보 패널에서 PR과 자동 검사 상태를 볼 수 있습니다. 이 기능은 GitHub CLI(`gh`)가 설치되고 로그인돼 있어야 합니다.[^monitor]
+예를 들어 첫 화면을 다 만든 뒤 입력창에 `/code-review`만 치면 됩니다. 따로 설명을 붙이지 않아도 지금 브랜치의 변경을 봅니다.
 
 **AI 리뷰에는 분명한 한계가 있습니다.**
 
 - AI 리뷰는 버그나 보안 문제를 놓칠 수 있습니다. **발견이 없다고 오류가 없거나 안전하다는 뜻은 아닙니다.**[^miss]
-- GitHub PR에 자동으로 다는 관리형 리뷰도 PR을 승인하거나 막지 않습니다. **합칠지는 사람이 정합니다.**[^decide] 이 관리형 리뷰는 Team·Enterprise 요금제용이고, 개인은 어느 요금제에서나 `/code-review`를 씁니다.[^plans]
+- GitHub PR에 자동으로 리뷰를 다는 관리형 리뷰도 PR을 승인하거나 막지 않습니다. **합칠지는 사람이 정합니다.**[^decide]
+
+::: details 자세히 (눌러서 펼치기)
+- **사용량**: 리뷰도 내 세션 안에서 돌기 때문에, 세션의 나머지와 똑같이 내 요금제 사용량으로 계산됩니다.[^usage]
+- **데스크톱 앱**: 커밋하기 전에 입력창에 `/code-review`를 쳐서 리뷰를 받을 수 있습니다.[^desktop-review] PR을 연 뒤에는 세션 정보 패널에서 PR과 자동 검사 상태를 볼 수 있습니다. 이 기능은 GitHub CLI(`gh`, GitHub을 명령어로 다루는 프로그램)가 설치되고 로그인돼 있어야 합니다.[^monitor]
+- **관리형 리뷰**: GitHub PR에 자동으로 리뷰를 다는 기능은 Team·Enterprise 요금제용입니다. 개인은 어느 요금제에서나 `/code-review`를 씁니다.[^plans]
+:::
 
 3단계에서 "쓴 사람과 확인하는 사람을 나눈다"를 배웠다면, 같은 Claude라도 **새 세션**에서 리뷰하게 하는 편이 낫습니다. 만든 대화의 맥락에 끌려가지 않기 때문입니다.
 
@@ -75,7 +89,7 @@ Claude Code에는 리뷰 명령 `/code-review`가 있습니다. 작업 중인 �
 
 리뷰를 마치고 확인 장치가 통과하면 PR을 **합칩니다**(Merge). GitHub flow의 마지막은 브랜치를 지우는 것입니다. 브랜치를 지워도 **PR과 커밋 기록은 지워지지 않으니** 걱정하지 않아도 됩니다.[^delete]
 
-나중에 사람이 늘어나면 "승인이 있어야 합칠 수 있다" 같은 **보호 규칙**을 걸 수 있습니다. 보호 규칙은 기본으로 강제 덮어쓰기와 브랜치 삭제를 막습니다.[^protect]
+나중에 사람이 늘어나면 "승인이 있어야 합칠 수 있다" 같은 **보호 규칙**을 걸 수 있습니다.[^protect] 혼자 연습하는 지금은 몰라도 됩니다.
 
 <Quiz id="ch706-merge" />
 
@@ -116,7 +130,7 @@ Claude Code에는 리뷰 명령 `/code-review`가 있습니다. 작업 중인 �
 [^risks]: Claude Code 공식 문서, 「Common workflows」. "Review Claude's generated PR before submitting and ask Claude to highlight potential risks or considerations." https://code.claude.com/docs/en/common-workflows (확인일 2026-11-01)
 [^alone]: GitHub 공식 문서, 「Reviewing your proposed changes」. "Even when you work alone, a deliberate review builds a habit that keeps your software projects healthy and makes collaboration easier later." https://docs.github.com/en/get-started/start-your-journey/reviewing-your-proposed-changes (확인일 2026-11-01)
 [^decisions]: GitHub 공식 문서, 「Quickstart for reviewing pull requests」. "**Approve** signals that the changes are ready to merge." / "**Request changes** flags feedback the author must address before merging." https://docs.github.com/en/pull-requests/get-started/reviewing-pull-requests-quickstart (확인일 2026-11-01)
-[^against-spec]: Claude Code 공식 문서, 「Best practices for Claude Code」. "use a subagent to review the rate limiter diff against SPEC.md, check every requirement is implemented and the listed edge cases have tests, report gaps that affect correctness and skip style" https://code.claude.com/docs/en/best-practices (확인일 2026-11-01)
+[^against-spec]: 공식 예시는 이 리뷰를 하위 에이전트(subagent, Claude가 일을 따로 떼어 맡기는 또 다른 Claude)에게 맡기지만, 이 가이드는 새 세션으로 바꿔 씁니다. Claude Code 공식 문서, 「Best practices for Claude Code」. "use a subagent to review the rate limiter diff against SPEC.md, check every requirement is implemented and the listed edge cases have tests, report gaps that affect correctness and skip style" https://code.claude.com/docs/en/best-practices (확인일 2026-11-01)
 [^always-finds]: Claude Code 공식 문서, 「Best practices for Claude Code」. "A reviewer that's asked to find problems will always find *something*." https://code.claude.com/docs/en/best-practices (확인일 2026-11-01)
 [^local]: Claude Code 공식 문서, 「Review locally with /code-review」. "Claude reviews the changes on your branch, looks for correctness bugs, and reports what it found in your conversation." https://code.claude.com/docs/en/code-review-local (확인일 2026-11-01)
 [^usage]: Claude Code 공식 문서, 「Review locally with /code-review」. "The review runs in your own session, so it counts toward your plan's usage or API billing the same way the rest of the session does." https://code.claude.com/docs/en/code-review-local (확인일 2026-11-01)
@@ -126,5 +140,5 @@ Claude Code에는 리뷰 명령 `/code-review`가 있습니다. 작업 중인 �
 [^decide]: Claude Code 공식 문서, 「Code Review」. "A review never approves or blocks the pull request, so the decision to merge stays with your team." https://code.claude.com/docs/en/code-review (확인일 2026-11-01)
 [^plans]: Claude Code 공식 문서, 「Code Review」. "**Plans**: [Team and Enterprise](https://code.claude.com/docs/en/feature-availability.md)" / "Run [`/code-review`](https://code.claude.com/docs/en/code-review-local) in your Claude Code session on any plan, or [compare all the options](#compare-ways-to-get-a-review)." https://code.claude.com/docs/en/code-review (확인일 2026-11-01)
 [^delete]: GitHub 공식 문서, 「GitHub flow」. "Don't worry about losing information. Your pull request and commit history will not be deleted." https://docs.github.com/en/get-started/using-github/github-flow (확인일 2026-11-01)
-[^protect]: GitHub 공식 문서, 「About protected branches」. "By default, each branch protection rule disables force pushes to the matching branches and prevents the matching branches from being deleted." https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches (확인일 2026-11-01)
+[^protect]: 보호 규칙은 기본으로 강제 덮어쓰기(force push, 기록을 억지로 덮어 올리기)와 브랜치 삭제를 막습니다. GitHub 공식 문서, 「About protected branches」. "By default, each branch protection rule disables force pushes to the matching branches and prevents the matching branches from being deleted." https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches (확인일 2026-11-01)
 [^create-pr]: GitHub 공식 문서, 「Quickstart for pull requests」. "then click **New pull request**." / "For the **compare** branch, select the branch that contains your changes." / "Click **Create pull request**." https://docs.github.com/en/pull-requests/get-started/pull-request-quickstart (확인일 2026-11-01)

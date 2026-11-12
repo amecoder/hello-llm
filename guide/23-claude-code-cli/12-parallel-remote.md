@@ -17,7 +17,11 @@ Git은 폴더의 변경 내역을 저장해 두는 프로그램입니다. 저장
 - [7장](07-permissions-undo.md)의 되감기는 Claude의 편집 도구가 고친 파일만 되돌립니다. Bash 명령으로만 바뀐 파일은 추적하지 않습니다. 그런 파일을 되돌리려면 Git 같은 버전 관리를 씁니다.[^git-undo]
 - 다음 절의 worktree는 커밋에서 만들어집니다. 저장소에 커밋이 하나는 있어야 합니다.[^one-commit]
 
-먼저 `git --version`으로 Git이 있는지 봅니다. 번호가 나오면 됩니다. 없다면 이렇게 합니다. Windows는 git-scm.com/downloads/win 에서 설치 프로그램을 받아 설치하고 새 창을 엽니다.[^git-win] 맥과 리눅스는 git-scm.com의 안내를 따릅니다.
+먼저 `git --version`으로 Git이 있는지 봅니다. 번호가 나오면 됩니다. 번호 대신 명령을 찾을 수 없다는 말이 나오면 아래 상자를 펼쳐 설치하세요.
+
+::: details Git이 없을 때 설치하기 (눌러서 펼치기)
+Windows는 git-scm.com/downloads/win 에서 설치 프로그램을 받아 설치하고 새 창을 엽니다.[^git-win] 맥과 리눅스는 git-scm.com의 안내를 따릅니다.
+:::
 
 이제 연습 폴더에서 기록을 시작합니다.
 
@@ -42,9 +46,14 @@ git add .
 git status --short
 ```
 
-한 줄씩 보면 이렇습니다. `git config`는 설정을 정합니다. `git add .`의 `.`은 지금 폴더라는 뜻이고, 폴더의 변경을 다음 기록에 담습니다. `git status --short`는 변경 상태를 짧게 보여 줍니다.
+한 줄씩 보면 이렇습니다.
 
-앞 두 줄은 커밋에 적힐 이름과 이메일입니다. 이 폴더에만 적용됩니다. 나중에 저장소를 공개하면 함께 공개되니, 공개해도 되는 값을 쓰세요. `git add .`는 저장할 파일을 모으고, `git status --short`는 모인 파일을 보여 줍니다. 새 폴더에서 돌렸을 때는 이렇게 나왔습니다.
+- 첫째·둘째 줄(`git config user.…`): 커밋에 적힐 이름과 이메일을 정합니다. 이 폴더에만 적용됩니다. 나중에 저장소를 공개하면 함께 공개되니, 공개해도 되는 값을 쓰세요.
+- 셋째 줄(`git config core.quotePath false`): 한글 파일 이름을 그대로 보여 주게 합니다.
+- `git add .`: 저장할 파일을 모읍니다. `.`은 지금 폴더라는 뜻입니다.
+- `git status --short`: 모인 파일을 짧게 보여 줍니다.
+
+새 폴더에서 돌렸을 때는 이렇게 나왔습니다.
 
 ```text
 A  .claude/skills/meeting-notes/SKILL.md
@@ -56,9 +65,9 @@ A  주간정리.sh
 A  회의록.md
 ```
 
-`core.quotePath false` 줄은 한글 파일 이름을 그대로 보여 주게 합니다. 이 줄이 없으면 이름이 `\355\232…` 같은 숫자로 보여서 `비밀` 폴더가 담겨도 알아보기 어렵습니다. 내 목록은 파일이 더 많을 수 있습니다.
+내 목록은 파일이 더 많을 수 있습니다. 셋째 줄을 빼면 한글 이름이 `\355\232…` 같은 숫자로 보여서 `비밀` 폴더가 담겨도 알아보기 어렵습니다.
 
-여기서 스스로 물어보세요. `비밀` 폴더가 목록에서 빠졌나? 빠졌다면 저장합니다. 보이면 커밋하지 마세요. `.gitignore`의 두 줄을 고친 뒤 `git reset`과 `git add .`를 다시 칩니다.
+여기서 스스로 물어보세요. `비밀` 폴더가 목록에서 빠졌나? 빠졌다면 저장합니다. 보이면 커밋하지 마세요. `.gitignore`의 두 줄을 고친 뒤 `git reset`과 `git add .`를 다시 칩니다. `git reset`은 방금 `git add .`로 모은 파일을 다시 내려놓는 명령입니다. 파일 자체는 지워지지 않으니 안심하세요.
 
 ```bash
 git commit -m "첫 기록"
@@ -102,7 +111,7 @@ worktree 이름과 세션 이름은 다릅니다. 세션에 이름을 붙였다�
 - **새로 받은 사본입니다.**[^wt-fresh] 커밋에 없는 파일은 그 안에 없습니다. 위에서 뺀 `비밀` 폴더도 없습니다. 메모가 안 보이면 커밋했는지 먼저 확인하세요.
 - **남은 작업이 있으면 끝낼 때 보관할지 삭제할지 묻습니다.** 삭제를 고르면 폴더와 가지, 그 안의 작업이 함께 사라집니다. 나중에 돌아오려면 종료할 때 나오는 `claude --worktree <이름> --resume` 명령을 씁니다.[^wt-remove]
 
-worktree의 결과를 본 폴더로 합치는 일은 Git의 가지 합치기입니다. 가지를 합치는 방법은 [4단계 · AI-SDLC 가이드](/guide/30-ai-sdlc/)의 PR 장에서 다룹니다.
+worktree의 결과를 본 폴더로 합치는 일은 Git의 가지 합치기입니다. 이 장에서는 합치지 않습니다. 본 폴더를 건드리지 않고 따로 일해 보는 곳이라는 것만 알면 충분합니다. 합치는 방법이 궁금하면 [4단계 · AI-SDLC 가이드](/guide/30-ai-sdlc/)의 PR 장을 보세요. PR(Pull Request)은 가지의 변경을 본 줄기에 합쳐 달라고 요청하는 일입니다.
 
 <Quiz id="ch812-worktree" />
 
@@ -127,6 +136,13 @@ cd ~/hello-ai-연습/터미널
 claude --worktree study-note
 ```
 
+두 창은 이렇게 서로 다른 폴더에서 일합니다. 앞 절에서 본 대로 worktree는 `.claude/worktrees/<이름>`에 생기기 때문입니다.
+
+```text
+창 1: ~/hello-ai-연습/터미널/.claude/worktrees/memo-fix     회의록 고치기
+창 2: ~/hello-ai-연습/터미널/.claude/worktrees/study-note   공부 노트 정리
+```
+
 창 두 개를 동시에 돌리는 일은 이 가이드에서 실행해 보지 않았습니다. 끝나면 스스로 물어보세요. 두 작업이 서로 파일을 건드리지 않았나? 창을 늘리면 쓰는 양도 늘 수 있습니다. [13장](13-cost-safety-trouble.md)의 `/usage`로 살피면서 꼭 필요할 때만 쓰세요.
 
 <Quiz id="ch812-two-windows" />
@@ -135,7 +151,9 @@ claude --worktree study-note
 
 아래 셋은 이 가이드에서 실행해 보지 않았습니다. 공식 문서가 설명하는 내용만 짧게 옮깁니다. 지금 몰라도 괜찮습니다. 필요해지면 꺼내 보세요.
 
-**`/loop`** 는 세션 안에서 같은 요청을 간격을 두고 다시 실행합니다.[^loop-what]
+**`/loop`** 는 세션 안에서 같은 요청을 간격을 두고 다시 실행합니다.[^loop-what] 예를 들어 한 시간마다 새 메모가 왔는지 확인하게 할 수 있습니다.
+
+::: details `/loop` 쓰는 법과 주의할 점 (눌러서 펼치기)
 
 ```text
 /loop 1h inbox 폴더에 새 메모가 있으면 파일 이름만 알려 줘
@@ -145,7 +163,12 @@ claude --worktree study-note
 - 7일이 지나면 저절로 끝납니다.[^loop-idle]
 - `1h`처럼 간격을 정한 반복은 Esc나 Ctrl+C로 멈추지 않습니다. Claude에게 말로 취소를 부탁합니다.[^loop-esc]
 
-**`/goal`** 은 완료 조건을 정해 두면 단계마다 지시하지 않아도 Claude가 계속 일하게 합니다.[^goal-what] 판정하는 모델은 파일을 직접 열지 않습니다. 그래서 조건은 답에 드러나게 쓰고, 멈출 조건도 넣습니다.[^goal-judge] 턴은 Claude가 한 번 일하고 결과를 받는 한 차례입니다.
+:::
+
+**`/goal`** 은 완료 조건을 정해 두면 단계마다 지시하지 않아도 Claude가 계속 일하게 합니다.[^goal-what]
+
+::: details `/goal` 쓰는 법과 주의할 점 (눌러서 펼치기)
+판정하는 모델은 파일을 직접 열지 않습니다. 그래서 조건은 답에 드러나게 쓰고, 멈출 조건도 넣습니다.[^goal-judge] 턴은 Claude가 한 번 일하고 결과를 받는 한 차례입니다.
 
 ```text
 /goal inbox의 회의 메모마다 notes 폴더에 회의록이 생기고 만든 파일 이름을 답에 모두 적으면 끝. 또는 10턴 후 멈춰.
@@ -153,7 +176,9 @@ claude --worktree study-note
 
 `/goal clear`로 해제합니다.[^goal-state]
 
-**원격 제어**(Remote Control)는 내 컴퓨터에서 돌고 있는 세션을 claude.ai/code나 Claude 휴대폰 앱에 연결합니다. Pro·Max·Ultra·Team·Enterprise 요금제에서 쓰고, API 키([13장](13-cost-safety-trouble.md)에서 설명합니다)로는 쓸 수 없습니다.[^rc-what] 세션에서 `/remote-control`을 칩니다.[^rc-cmd]
+:::
+
+**원격 제어**(Remote Control)는 내 컴퓨터에서 돌고 있는 세션을 claude.ai/code나 Claude 휴대폰 앱에 연결합니다. 세션에서 `/remote-control`을 칩니다.[^rc-cmd] 쓸 수 있는 요금제는 정해져 있습니다.[^rc-what]
 
 클라우드에서 실행되는 것이 **아닙니다.** 일은 내 컴퓨터에서 계속되고, 휴대폰은 그 세션을 보는 창입니다. 그래서 컴퓨터가 켜져 있고 `claude`가 계속 실행 중이어야 합니다.[^rc-window]
 
@@ -208,6 +233,6 @@ claude --worktree study-note
 [^goal-what]: Claude Code 공식 문서, 「Keep Claude working toward a goal」. "The `/goal` command sets a completion condition and Claude keeps working toward it without you prompting each step." https://code.claude.com/docs/en/goal (확인일 2026-11-06)
 [^goal-judge]: Claude Code 공식 문서, 「Keep Claude working toward a goal」. "It doesn't run commands or read files independently, so write the condition as something Claude's own output can demonstrate." / "To bound how long a goal runs, include a turn or time clause in the condition, such as `or stop after 20 turns`." https://code.claude.com/docs/en/goal (확인일 2026-11-06)
 [^goal-state]: Claude Code 공식 문서, 「Keep Claude working toward a goal」. "`stop`, `off`, `reset`, `none`, and `cancel` are accepted as aliases for `clear`." https://code.claude.com/docs/en/goal (확인일 2026-11-06)
-[^rc-what]: Claude Code 공식 문서, 「Continue local sessions from any device with Remote Control」. "Remote Control connects claude.ai/code or the Claude app for iOS and Android to a Claude Code session running on your machine." / "available on Pro, Max, Ultra, Team, and Enterprise plans. API keys are not supported." https://code.claude.com/docs/en/remote-control (확인일 2026-11-06)
+[^rc-what]: Pro·Max·Ultra·Team·Enterprise 요금제에서 쓰고, API 키([13장](13-cost-safety-trouble.md)에서 설명합니다)로는 쓸 수 없습니다. Claude Code 공식 문서, 「Continue local sessions from any device with Remote Control」. "Remote Control connects claude.ai/code or the Claude app for iOS and Android to a Claude Code session running on your machine." / "available on Pro, Max, Ultra, Team, and Enterprise plans. API keys are not supported." https://code.claude.com/docs/en/remote-control (확인일 2026-11-06)
 [^rc-cmd]: Claude Code 공식 문서, 「Continue local sessions from any device with Remote Control」. "If you're already in a Claude Code session and want to continue it remotely, use the `/remote-control` (or `/rc`) command:" https://code.claude.com/docs/en/remote-control (확인일 2026-11-06)
 [^rc-window]: Claude Code 공식 문서, 「Continue local sessions from any device with Remote Control」. "The web and mobile interfaces are a window into that local session, so your computer has to stay on and the `claude` process has to keep running." https://code.claude.com/docs/en/remote-control (확인일 2026-11-06)

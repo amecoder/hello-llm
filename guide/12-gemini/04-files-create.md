@@ -12,19 +12,26 @@
 문서, 표 파일, 사진, 동영상 같은 파일을 올리면 그 내용으로 답을 받을 수 있습니다. 요약을 받거나, 궁금한 점을 묻거나, 분석을 맡길 수 있습니다.[^files]
 입력창 「+」를 누르고 「파일 업로드」를 고르세요. Google Drive에 있는 파일은 「Drive에서 파일 추가」로 가져옵니다([2장](02-screen-tour.md#입력창과-메뉴)).[^files][^screen]
 
-한 번에 올릴 수 있는 양에는 한도가 있습니다.[^files]
+파일은 한 번에 **10개까지** 올릴 수 있습니다. 보통 문서나 사진 몇 개라면 한도를 신경 쓰지 않아도 됩니다.[^files]
 
+::: details 올릴 수 있는 양 (눌러서 펼치기)
 | 항목 | 한도 |
 |---|---|
-| 한 번에 올리는 파일 수 | 10개까지(상황에 따라 다름, 폴더 안 파일도 하나씩 센다) |
+| 한 번에 올리는 파일 수 | 10개까지(상황에 따라 다름) |
 | 동영상 하나 | 2GB까지 |
 | 그 밖의 파일 하나 | 100MB까지 |
 | 동영상 길이 합계 | 5분(Pro·Ultra는 1시간) |
 | 오디오 길이 합계 | 10분(Pro·Ultra는 3시간) |
 
-출처: Google 도움말[^files]
+폴더를 올리면 폴더 안 파일도 하나씩 셉니다. 출처: Google 도움말[^files]
+:::
 
-Drive 파일을 가져오려면 「활동 기록 보관」이 켜져 있고 Google Workspace(Gmail·Drive 같은 Google 앱 묶음)가 Gemini에 연결돼 있어야 합니다([3장](03-chats.md#지난-대화-찾기)).[^files] 연결은 [7장](07-skills-apps.md#연결된-앱-—-gmail·drive·캘린더를-gemini에서)에서 다룹니다.
+Drive에 있는 파일을 가져오려면 미리 켜 둘 것이 두 가지 있습니다.[^files]
+
+- 「활동 기록 보관」(내 대화를 계정에 남겨 두는 설정, [3장](03-chats.md#지난-대화-찾기))
+- Google Workspace(Gmail·Drive 같은 Google 앱 묶음)와 Gemini의 연결([7장](07-skills-apps.md#연결된-앱-—-gmail·drive·캘린더를-gemini에서))
+
+아직 연결하지 않았다면 Drive 파일을 내 컴퓨터에 내려받은 뒤 「파일 업로드」로 올려도 됩니다.
 
 **표 파일을 올리면 차트도 만들 수 있습니다.** 웹에서 표 파일을 올린 뒤 차트를 만들어 달라고 해 보세요. 만든 차트는 확대해 보고 원하는 모양으로 고칠 수 있습니다.[^files]
 
@@ -37,7 +44,11 @@ Drive 파일을 가져오려면 「활동 기록 보관」이 켜져 있고 Goog
 
 - **큰 파일은 일부를 놓칠 수 있습니다.** 더 나은 결과를 원하면 내용이 적은 작은 파일로 나눠 올리세요. 한 번에 읽는 양은 [1장](01-getting-started.md#요금제마다-무엇이-다른가)의 요금제 표를 보세요.
 - **파일 분석에는 시간 단위 한도가 따로 있습니다.** 많이 올리다 한도에 닿으면 시간이 지나 다시 풀릴 때까지 기다리세요.
-- **올린 파일은 Gemini 앱 저장공간을 씁니다.** 이 공간은 Drive 용량과 따로 셉니다. 「파일을 업로드하려면 데이터를 삭제하세요」가 뜨면 공간이 찬 것입니다. 「설정」 → 「활동」에서 지난 활동을 지우면 비워집니다. 동영상·사진이 든 대화가 공간을 더 씁니다.
+- **올린 파일은 Gemini 앱 저장공간을 씁니다.** 이 공간은 Drive 용량과 따로 셉니다.
+
+::: details 저장공간이 찼을 때 (눌러서 펼치기)
+「파일을 업로드하려면 데이터를 삭제하세요」가 뜨면 공간이 찬 것입니다. 「설정」 → 「활동」에서 지난 활동을 지우면 비워집니다. 동영상·사진이 든 대화가 공간을 더 씁니다.[^files]
+:::
 
 파일을 올리기 전에는 그 파일에 다른 사람의 개인정보가 없는지 한 번 보세요([1단계 9장](../00-common/09-safety.md)).
 
@@ -78,7 +89,8 @@ Canvas에서 할 수 있는 일은 이렇습니다.[^canvas]
 - **다른 형식으로 바꿀 수 있습니다.** 만든 문서로 슬라이드, 퀴즈, 인포그래픽(정보를 그림으로 정리한 한 장 자료), 웹페이지, 오디오 오버뷰(문서를 대화 형식 음성으로 들려주는 것) 등을 만들 수 있습니다. 지금은 만 18세 미만은 이 기능을 쓸 수 없습니다.
 - **밖으로 옮길 수 있습니다.** Docs로 내보내거나, 슬라이드는 Google Slides나 PDF로 내보낼 수 있습니다.
 
-앱을 만들면 Canvas 오른쪽 위에서 코드를 직접 보고 고치거나, 「콘솔 표시」로 오류를 볼 수 있습니다.[^canvas] 앱에 글·그림 만들기 같은 AI 기능을 넣으려면 로그인한 만 18세 이상이어야 합니다.[^canvas]
+앱을 만들면 Canvas 오른쪽 위에서 코드(앱을 움직이는 명령문)를 직접 보고 고칠 수 있습니다. 「콘솔 표시」를 누르면 앱이 돌아가며 남긴 오류 기록도 볼 수 있습니다.[^canvas] 처음에는 몰라도 됩니다. 고칠 점은 Gemini에게 말로 부탁하면 됩니다.
+앱에 글·그림 만들기 같은 AI 기능을 넣으려면 로그인한 만 18세 이상이어야 합니다.[^canvas]
 
 **Canvas로 만든 것은 그 대화와 함께 지워집니다**([3장](03-chats.md#고정·이름-바꾸기·지우기)). 오래 쓸 문서는 Docs로 내보내 두세요.
 
@@ -87,9 +99,11 @@ Canvas에서 할 수 있는 일은 이렇습니다.[^canvas]
 ## Canvas 앱을 공유할 때와 받을 때
 
 Canvas로 만든 앱도 공유 링크를 만들 수 있습니다. 이때는 대화를 공유할 때보다 조심해야 합니다.
+내가 앱을 만들지 않더라도, 누군가 "이 링크로 신청하세요" 하며 Canvas 앱을 보낼 수 있습니다. 그래서 받는 쪽 주의점도 알아 두세요.
 
 **여러 사람이 데이터를 나누는 앱은, 링크를 가진 누구나 그 앱의 데이터를 보고 고칠 수 있습니다.**[^canvas][^canvas-safety]
-저장 기능이 있는 앱을 만들면 Gemini가 데이터베이스(자료를 저장해 두는 곳)를 함께 만듭니다. 여러 사람이 데이터를 나누는 앱은 공개 데이터베이스에 저장되어, 링크가 있는 누구나 보고 고칠 수 있습니다.[^canvas-safety]
+저장 기능이 있는 앱을 만들면 Gemini가 데이터베이스(자료를 저장해 두는 곳)를 함께 만듭니다.
+여러 사람이 데이터를 나누는 앱은 공개 데이터베이스에 저장됩니다. 그래서 링크가 있는 누구나 보고 고칠 수 있습니다.[^canvas-safety]
 예를 들어 모임 회원 연락처를 모으는 앱을 만들어 링크를 퍼뜨리면, 링크를 받은 누구나 그 연락처를 볼 수 있습니다. 개인정보를 모으는 앱은 공유하지 마세요.
 
 **남이 보낸 앱은 낯선 메일처럼 의심하세요.** 앱에 넣은 정보는 앱을 만든 사람이 볼 수 있고, 링크를 가진 다른 사람에게도 보일 수 있습니다. Google은 이렇게 안내합니다.[^canvas-safety]
@@ -125,12 +139,12 @@ Canvas로 만든 앱도 공유 링크를 만들 수 있습니다. 이때는 대�
 
 만든 그림은 **대화로 고칠 수 있습니다.** 옆 메뉴 「라이브러리」에서 그림을 열고 아래 「채팅」을 눌러 바꿀 점을 적으세요. 내 사진을 올려 고치거나, 여러 장을 합쳐 새 그림을 만들 수도 있습니다.[^image]
 
-요금제에 따라 달라지는 점도 있습니다.[^image]
+그림을 **만들기만** 하려면 만 13세 이상, **고치기까지** 하려면 만 18세 이상이어야 합니다.[^image][^image-rules]
 
-- **내려받는 크기**: Google AI 요금제가 있으면 2K, 없으면 1K 해상도입니다.
-- **더 정밀한 모델(유료)**: 유료 요금제에서는 **Nano Banana Pro**로 그림을 다시 만들 수 있습니다. 모델을 Pro로 두었을 때 씁니다. 다만 그날 쓸 수 있는 Nano Banana 2 그림 한도를 다 쓰면 Pro로 다시 만들 수 없습니다.
-
-그림을 **만들기만** 하려면 만 13세(나라마다 기준 나이가 다를 수 있음) 이상, **고치기까지** 하려면 만 18세 이상이어야 합니다.[^image] 약관을 어긴 것으로 보이는 그림은 지워질 수 있습니다.[^image]
+::: details 요금제에 따라 달라지는 점 (눌러서 펼치기)
+- **내려받는 크기**: Google AI 요금제가 있으면 2K, 없으면 1K 해상도입니다.[^image]
+- **더 정밀한 모델(유료)**: 유료 요금제에서는 **Nano Banana Pro**로 그림을 다시 만들 수 있습니다. 모델을 Pro로 두었을 때 씁니다. 다만 그날 쓸 수 있는 Nano Banana 2 그림 한도를 다 쓰면 Pro로 다시 만들 수 없습니다.[^image]
+:::
 
 <Quiz id="ch304-image" />
 
@@ -140,6 +154,9 @@ Canvas로 만든 앱도 공유 링크를 만들 수 있습니다. 이때는 대�
 
 **Gemini Omni**(제미나이 옴니)로 대화하듯 동영상을 만들고 고칩니다. 글, 그림, 영상을 섞어 설명할 수 있습니다.[^video]
 개인 계정은 **Google AI 요금제가 있어야** 씁니다.[^video] 입력창 「+」 → 「동영상 만들기」를 누르고 원하는 영상을 적으세요.[^video][^screen]
+그림 만들기처럼 무엇이 어디서 무엇을 하는지 적으면 됩니다. 예를 들어 "바닷가에서 강아지가 공을 쫓아 달리는 영상을 만들어 줘"처럼 써 보세요.
+
+만들 때 알아 둘 점은 이렇습니다.
 
 - **참고 자료를 올릴 수 있습니다.** 동영상 1개와 사진 5장까지 올릴 수 있습니다.[^video]
 - **만드는 데 몇 분 걸립니다.** 만드는 동안 그 대화는 쓸 수 없으니, 새 채팅을 열어 다른 일을 하다 돌아오세요.[^video]
@@ -174,6 +191,12 @@ Canvas로 만든 앱도 공유 링크를 만들 수 있습니다. 이때는 대�
 
 Gemini로 만들거나 고친 이미지·영상·음악에는 **AI가 만들었다는 표시**가 들어갑니다.[^watermark][^music]
 
+표시는 크게 두 가지입니다.
+
+- **숨은 표시**: 눈에 안 보입니다. 대표가 SynthID(신스아이디) 워터마크입니다. 뒤에서 볼 확인 기능이 이 표시를 읽습니다.
+- **보이는 워터마크**: 그림·영상 위에 겹쳐 보이는 표시입니다. 한국에서 무료·Plus·Pro로 만들면 붙습니다. 이 표시를 끄는 설정은 한국에서 **AI Ultra 구독자에게만** 보입니다.[^watermark]
+
+::: details 자세히 (눌러서 펼치기)
 | 표시 | 보이나 | 하는 일 |
 |---|---|---|
 | SynthID(신스아이디) 워터마크 | 안 보임 | Google AI로 만든 것인지 알아보는 숨은 표시 |
@@ -183,6 +206,7 @@ Gemini로 만들거나 고친 이미지·영상·음악에는 **AI가 만들었�
 출처: Google 도움말[^watermark][^verify]
 
 **한국에서는 AI Ultra가 아니면 보이는 워터마크를 끌 수 없습니다.** 워터마크를 끄고 켜는 「미디어 워터마크」 설정이 있지만, 한국에서는 **AI Ultra 구독자에게만** 보입니다.[^watermark] 그래서 무료·Plus·Pro로 만든 그림과 영상, 음악의 영상 화면에는 보이는 워터마크가 붙습니다. 이 설정은 보이는 워터마크만 바꾸고, 숨은 표시(SynthID·Content Credentials)는 그대로 남습니다.[^watermark]
+:::
 
 ### 받은 그림이 AI로 만든 것인지 물어보기
 
@@ -196,9 +220,13 @@ Gemini로 만들거나 고친 이미지·영상·음악에는 **AI가 만들었�
 
 - **Google AI로 만든 것만 알아봅니다.** 숨은 표시가 없다고 나와도, 다른 회사 AI로 만들었을 수 있습니다.
 - **스크린샷은 그림만 꼭 맞게 잘라서** 올리세요. 여러 그림을 한 장에 모아 올리면 정확도가 떨어집니다.
-- **파일은 한 번에 하나**, 100MB 아래여야 합니다. 영상은 90초보다 짧아야 합니다.
-- **확인 횟수에 한도가 있습니다.** 24시간 동안 그림 약 10번, 영상 10번, 소리 10번입니다.
-- **Content Credentials는 "AI가 만들었다"고 단정해 주지 않습니다.** 출처와 이력을 보여 줄 뿐이고, 판단은 내가 합니다.
+- **Content Credentials(만든 과정을 남긴 기록)는 "AI가 만들었다"고 단정해 주지 않습니다.** 출처와 이력을 보여 줄 뿐이고, 판단은 내가 합니다.
+- **파일은 한 번에 하나씩** 확인합니다. 크기와 횟수 한도는 아래 상자에 있습니다.
+
+::: details 확인 기능의 한도 (눌러서 펼치기)
+- 파일은 100MB 아래여야 합니다. 영상은 90초보다 짧아야 합니다.[^verify]
+- 24시간 동안 그림 약 10번, 영상 10번, 소리 10번까지 확인할 수 있습니다.[^verify]
+:::
 
 도구만 믿지 말고 직접도 살펴보세요. 글자가 깨졌는지, 손이나 치아 같은 작은 부분이 이상한지, 그림자가 맞는지 보세요. Google 이미지 검색으로 원본을 찾아보는 것도 방법입니다.[^verify]
 
@@ -241,6 +269,7 @@ Gemini로 만들거나 고친 이미지·영상·음악에는 **AI가 만들었�
 다음 장: [5장. 기억과 맞춤 설정](05-memory.md)
 
 [^screen]: Gemini 웹 화면(Google AI Pro, 한국어)에서 연습용 대화로 직접 확인(대화는 찍은 뒤 삭제). Canvas 문서 창이 대화 안에 열리고 위쪽 버튼은 「변경사항이 저장됨」「이전 버전」「다음 버전」「내보내기」「공유」「전체 화면」「닫기」, 처음 열 때 안내 "직접 또는 Gemini로 수정 — 아무 곳이나 클릭하여 직접 입력하고 수정하거나, 텍스트를 선택하여 Gemini에게 변경을 요청하세요." Canvas 항목은 켜고 끄는 메뉴 항목이고, 켜면 입력창에 「Canvas」 표시가 붙는다. 「이미지」 화면 "템플릿을 사용해 보거나 채팅으로 아이디어를 설명하세요. Nano Banana 모델로 만듭니다.", 입력창 「이미지를 설명하세요」, 「가로세로 비율」, 처음 열 때 안내 창 "Nano Banana 2 사용". 입력창 「+」(「업로드 및 도구」) 메뉴 「파일 업로드」「Drive에서 파일 추가」「업로드 더보기」「이미지 만들기」「동영상 만들기」「음악 만들기」「도구 더보기」 → 「Canvas」. 옆 메뉴 「이미지」「라이브러리」. 「설정」 메뉴에 「미디어 워터마크」는 보이지 않았다(Pro 계정). (확인일 2026-10-31)
+[^image-rules]: 만 13세 기준은 나라마다 다를 수 있습니다. 약관을 어긴 것으로 보이는 그림은 지워질 수 있습니다. 근거는 아래 「Generate & edit images with Gemini Apps」 도움말입니다.
 [^files]: Google 도움말, 「Upload & analyze files in Gemini Apps」(한국어판 「Gemini 앱에서 파일 업로드하고 분석하기」). "You can upload documents, spreadsheets, notebooks, photos, videos, and more to Gemini Apps to get answers, summaries, and insights about your content." / "To add files from your Drive, you need to have Keep Activity on and connect Google Workspace to Gemini Apps." / "Up to 10 files (subject to availability) can be uploaded in the same prompt. When uploading a folder, each file inside will count towards this limit." / "Each video can be up to 2 GB. All other supported file types can be up to 100 MB." / "Total video length can be up to 5 minutes. Upgrade to Google AI Pro or Google AI Ultra to extend total upload length to 1 hour." / "Total audio length can be up to 10 minutes. Upgrade to Google AI Pro or Google AI Ultra to extend total upload length to 3 hours." / "You can ask the Gemini web app to create a chart based on your uploaded spreadsheet(s), zoom in to explore the chart, and customize the chart for your needs." / "This limit is independent from your Google Drive or Google Workspace storage limit." / "Important: Chats or Gems with uploaded files such as videos, photos, or files from Google Drive or NotebookLM take up more storage space in Gemini Apps." / "There are rolling limits for how much you can upload and analyze files in a period of time. After some time, the limit will reset, and you will be able to upload and analyze files again." / "For better results, upload smaller files with less content, or upgrade to Google AI Pro or Google AI Ultra for a larger 1 million token context window." 한국어 화면 이름 「파일을 업로드하려면 데이터를 삭제하세요」「활동」. https://support.google.com/gemini/answer/14903178 (확인일 2026-10-31)
 [^canvas]: Google 도움말, 「Create docs, apps & more with Canvas」(한국어판 「Canvas로 문서, 앱 등 만들기」). "You can collaborate with Gemini in Canvas to create or edit a doc, app, slides, or code. You can also turn your creation into an Audio Overview, quiz, or other format." / "Tip: To have Gemini use a specific format or document type, like a slide deck, include this instruction in your prompt." / "You can use the prompt text box to ask Gemini to make updates to your app or directly edit the code. Changes in Canvas are auto-saved." / "To view your saved versions, at the top, click Previous Version  or Next Version ." / "To open text in a new Google Doc: Click Export to Docs." / "To find errors and logs from the preview, at the top right of the Canvas panel, click Show console ." / "Use the cursor to select the section that you want to edit." / "Important: To add AI to your app, you must be signed in to Gemini Apps and be 18 or over." / "To adjust the tone of text: Click Change tone  and select how casual or formal you want it to be." / "To generate an infographic, click Infographic ." / "Create something based on a Canvas doc Important: For now, this feature isn’t available to users under 18." / "To open slides in Google Slides: Click Export to Slides. You can also choose to export slides as a PDF." / "Anyone with that public link can view and edit data associated with the app." / "Shared links only open in gemini.google.com. You can’t open shared Canvas content in the Gemini mobile app." 한국어 화면 이름 「이전 버전」「다음 버전」「콘솔 표시」「길이 변경」「어조 변경」「Docs로 내보내기」. https://support.google.com/gemini/answer/16047321 (확인일 2026-10-31)
 [^canvas-safety]: Google 도움말, 「Canvas safety & security in Gemini Apps」(한국어판 「Gemini 앱의 Canvas 안전 및 보안」). "When you create an app with Canvas that requires persistent data storage, Gemini Apps creates a firestore database instance for you." / "Anyone with the public link to a multi-user app can view and edit all data associated with the app." / "Any info that you share with the app is visible to the app creator and may be visible to anyone else with the public link." / "Use caution if the app requests access to your device’s camera and microphone." / "If the app will share data between users, the data is in a public database and can be seen or edited by anyone with a public link to the app." / "Be extremely wary of any app that asks you for sensitive info like passwords or payment details." / "Do not download apps created or shared by untrustworthy sources." / "If you get a public link to a Canvas app that you feel is unsafe, you can report unsafe apps through the link at the bottom of the page." https://support.google.com/gemini/answer/16419134 (확인일 2026-10-31)

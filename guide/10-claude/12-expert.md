@@ -7,7 +7,11 @@
 
 이 장은 새 기능을 거의 다루지 않습니다. 앞 장에서 배운 Claude 기능을 언제, 어떻게 꺼내 쓸지가 주제입니다.
 
-무엇을 맡길지 판단하는 법(4D), 맡기기 전에 이미 답을 아는 일로 시험해 보는 법, 배울 때 질문을 받는 법처럼 **어느 AI에나 통하는 방법**은 [1단계 11장 「전문가처럼 쓰기」](../00-common/11-expert.md)에 있습니다. 먼저 읽고 오면 이 장이 쉬워집니다. 이 장은 그 방법을 Claude의 기능과 메뉴에 맞춰 봅니다.
+**어느 AI에나 통하는 방법**은 [1단계 11장 「전문가처럼 쓰기」](../00-common/11-expert.md)에 있습니다. 먼저 읽고 오면 이 장이 쉬워집니다. 이 장은 그 방법을 Claude의 기능과 메뉴에 맞춰 봅니다. 그 장에서 다룬 방법을 짧게 떠올려 보면 이렇습니다.
+
+- **무엇을 맡길지 판단하기(4D)**: 맡기기·설명하기·가려보기·책임지기, 네 가지 힘으로 나눠 봅니다. 영어 머리글자를 따서 4D라고 부릅니다.
+- **맡기기 전에 시험하기**: 이미 답을 아는 일을 먼저 맡겨 보고, 결과가 내 답과 맞는지 봅니다. 예를 들어 내가 이미 답장을 써 둔 메일을 맡겨 보고, 내 답장과 비교해 봅니다.
+- **배울 때 질문받기**: 답을 바로 받지 않고, Claude가 묻는 질문에 답하며 배웁니다.
 
 ## 일에 맞는 도구 고르기
 
@@ -17,7 +21,7 @@
 |---|---|---|
 | 묻고, 다듬고, 같이 생각한다 | 보통 대화 | [1단계](../00-common/) |
 | 간단한 사실, 오늘 일어난 일 | 웹 검색 | [6장](06-search.md#언제-무엇을-쓸까) |
-| 최신 정보 없이 깊이 따진다 | 확장 사고 | [6장](06-search.md#언제-무엇을-쓸까) |
+| 최신 정보 없이 깊이 따진다 | 확장 사고(오래 생각하고 답하기) | [6장](06-search.md#언제-무엇을-쓸까) |
 | 자료를 많이 모아 보고서로 | 리서치(유료) | [6장](06-search.md#언제-무엇을-쓸까) |
 | 한 가지 일을 계속 이어 간다 | 프로젝트 | [7장](07-projects-tools.md#프로젝트-—-자료와-지침을-한곳에) |
 | 문서·표·발표 파일이 필요하다 | 파일 만들기 | [4장](04-files-artifacts.md#파일-만들어-받기-—-excel·word·powerpoint·pdf) |
@@ -55,7 +59,7 @@
 
 ## 표와 숫자 맡기기
 
-[4장 「파일 올리기」](04-files-artifacts.md#파일-올리기)처럼 CSV·TSV 같은 표 파일을 올리면, Claude가 데이터를 분석하고 차트를 그려 줍니다. 차트는 PNG 같은 그림 파일로도 받을 수 있습니다.[^create]
+[4장 「파일 올리기」](04-files-artifacts.md#파일-올리기)처럼 CSV·TSV(CSV와 비슷하지만 쉼표 대신 탭으로 칸을 나눈 파일) 같은 표 파일을 올리면, Claude가 데이터를 분석하고 차트를 그려 줍니다. 차트는 PNG 같은 그림 파일로도 받을 수 있습니다.[^create]
 
 ```
 첨부한 CSV는 지난 석 달 동네 가게의 품목별 판매 기록이야. 품목별 합계를 큰 순서로 표로 만들고, 막대 차트를 PNG 그림으로 만들어 줘.
@@ -68,7 +72,7 @@
 
 ## 더 배우려면 — Claude Academy
 
-**Claude Academy**는 Anthropic이 만든 온라인 강좌 모음입니다. 아래 강좌는 강의 본문을 로그인 없이 열어 볼 수 있습니다(2026-10-26 확인). 본문은 모두 **영어**이고, 강좌 첫 페이지에 걸리는 시간은 적혀 있지 않습니다.[^academy-courses]
+**Claude Academy**는 Anthropic이 만든 온라인 강좌 모음입니다. 아래 강좌는 강의 본문을 로그인 없이 열어 볼 수 있습니다. 본문은 모두 **영어**입니다.[^academy-courses][^academy-time]
 
 | 강좌 | 강의 수 | 이런 분께 | 준비물 |
 |---|---|---|---|
@@ -76,17 +80,17 @@
 | [AI capabilities and limitations](https://academy.claude.com/courses/ai-capabilities-and-limitations) | 13강 + 퀴즈 | AI가 왜 그렇게 답하는지 알고 싶은 분 | 사전 지식 필요 없음 |
 | [Claude 101](https://academy.claude.com/courses/claude-101) | 13강 + 퀴즈 | 일에 Claude를 처음 쓰는 분 | Claude 계정(무료 포함). Cowork·리서치 강의는 유료 요금제 |
 | [Introduction to Claude Cowork](https://academy.claude.com/courses/introduction-to-claude-cowork) | 14강 + 퀴즈 | 파일·앱 사이를 오가며 일하는 분 | 유료 요금제, 폴더를 쓰는 강의는 컴퓨터 앱. 코딩 몰라도 됨 |
-| [Introduction to agent skills](https://academy.claude.com/courses/introduction-to-agent-skills) | 6강 | 스킬 파일을 직접 만들고 싶은 분 | Claude Code(3단계에서 다룰 개발자용 도구) |
 
 - 앞의 두 강좌는 Claude가 아닌 다른 AI로 들어도 됩니다. 두 강좌는 어느 쪽을 먼저 들어도 되게 짜여 있습니다.[^academy-courses]
 - 「AI Fluency」 강좌는 마지막 퀴즈에서 80% 이상 맞히면 **수료 배지**(completion badge)를 계정에 추가할 수 있습니다. 자격증은 아닙니다.[^academy-courses] 이 가이드의 [이해도 확인 시험](../00-common/certificate.md)도 같은 성격의 학습 배지입니다.
-- 「Introduction to agent skills」는 이 가이드의 3단계(코딩 에이전트 도구)를 마친 뒤에 보세요. 모든 내용이 Claude Code 기준입니다.
-
 영어 페이지는 크롬 같은 브라우저의 번역 기능(페이지에서 마우스 오른쪽 버튼 → 「한국어로 번역」)으로 읽을 수 있습니다.
 
 ### 강좌에서 배우는 틀 — 이 가이드와 비교
 
-강좌에는 이 가이드와 같은 내용이 다른 이름으로 나옵니다. 아래 연결을 알아 두면 강좌에서 새 용어를 만났을 때 뜻을 짐작하기 쉽습니다. 강좌에서 쓰는 이름은 영어 원문 그대로 적었습니다.
+강좌에는 이 가이드와 같은 내용이 다른 이름으로 나옵니다. 아래 연결을 알아 두면 강좌에서 새 용어를 만났을 때 뜻을 짐작하기 쉽습니다. 지금 다 읽을 필요는 없습니다. 강좌를 듣다가 낯선 이름이 나오면 펼쳐 보세요.
+
+::: details 강좌 용어와 이 가이드의 절 (눌러서 펼치기)
+강좌에서 쓰는 이름은 영어 원문 그대로 적었습니다.
 
 - **Setting the stage · Defining the task · Specifying rules** (Claude 101): 내 역할과 목표, 할 일, 말투·형식·예시를 정해 부탁합니다.[^academy-stage] [1단계 4장 「좋은 프롬프트의 5요소」](../00-common/04-prompt-basics.md#좋은-프롬프트의-5요소)와 같은 생각입니다.
 - **4D — Delegation · Description · Discernment · Diligence** (Claude 101, AI Fluency): [1단계 11장 「전문가는 무엇이 다른가」](../00-common/11-expert.md#전문가는-무엇이-다른가)를 보세요.
@@ -95,6 +99,11 @@
 - **결과물·자료·나만 아는 사정** (Cowork): 맡길 때 이 셋을 적습니다.[^academy-review] [8장 「맡기는 요령」](08-cowork.md#맡기는-요령)과 같습니다.
 - **결과 검토 세 질문** (Cowork): 원한 결과인가? 사실이 맞나? 지어낸 데는 없나?[^academy-review] [1단계 9장 「확인하는 네 가지 습관」](../00-common/09-safety.md#확인하는-네-가지-습관)을 함께 보세요.
 - **"projects store knowledge, skills perform tasks"** (Claude 101): 프로젝트는 자료, 스킬은 일하는 순서입니다.[^academy-skills-vs] 이 장의 [「반복하는 일은 쌓아 두기」](#반복하는-일은-쌓아-두기)를 보세요.
+:::
+
+::: details 3단계를 마친 뒤에 볼 강좌 (눌러서 펼치기)
+[Introduction to agent skills](https://academy.claude.com/courses/introduction-to-agent-skills)는 6강짜리 강좌입니다. 스킬 파일을 직접 만들고 싶은 분께 맞습니다.[^academy-courses] 모든 내용이 Claude Code(3단계에서 다룰 개발자용 도구) 기준이니, 이 가이드의 3단계(코딩 에이전트 도구)를 마친 뒤에 보세요.
+:::
 
 <Quiz id="ch212-academy" />
 
@@ -135,6 +144,7 @@
 [^academy-stage]: Claude Academy 「Claude 101」 강의 「Your first conversation with Claude」. "One, setting the stage. What is your role and what are your objectives?" / "Two, defining the task. What action do you want Claude to take?" / "Three, specifying rules. Is there a style or tone you want Claude to use? Are there examples that you can attach to show Claude?" https://academy.claude.com/courses/claude-101/your-first-conversation-with-claude (확인일 2026-10-26)
 [^academy-review]: Claude Academy 「Introduction to Claude Cowork」 강의 「Hand Claude Cowork your first task」. "name the deliverable, the inputs, and any nuance" / "Does it meet the actual objective?" / "Are the facts accurate?" / "Does anything sound made up?" https://academy.claude.com/courses/introduction-to-claude-cowork/the-task-loop (확인일 2026-10-26)
 [^academy-courses]: Claude Academy 강좌 첫 페이지. AI Fluency: Framework and foundations "14 lessons · 1 quiz", "Our goal is to make AI Fluency accessible and useful to everyone, no matter what stage of AI expertise you find yourself at." 같은 강좌 강의 「Introduction to AI Fluency」 "you're welcome to work with any language model you prefer." / "No paid subscriptions required to complete course activities", 퀴즈 "A score of 80% or higher passes." https://academy.claude.com/courses/ai-fluency-framework-foundations · AI capabilities and limitations "13 lessons · 1 quiz", "None. This course assumes no technical background and no prior experience with AI tools.", "Anyone who uses, or is about to start using, generative AI in their work or studies and wants to understand why it behaves the way it does.", "The two are designed to be taken in either order" https://academy.claude.com/courses/ai-capabilities-and-limitations · Claude 101 "13 lessons · 1 quiz", "A Claude account on any plan (Free, Pro, Max, Team, or Enterprise)", "A few features covered here require a paid plan to try hands-on: Cowork and Research (Pro, Max, Team, and Enterprise plans)", "Anyone getting started with Claude at work." https://academy.claude.com/courses/claude-101 · Introduction to Claude Cowork "14 lessons · 1 quiz", "Knowledge workers whose day is spent moving information between files, apps, and tools", "A paid Claude plan (Pro, Max, Team, or Enterprise); the Claude desktop app for the lessons that work on folders on your computer", "no coding or command-line experience needed" https://academy.claude.com/courses/introduction-to-claude-cowork · Introduction to agent skills "6 lessons", "Explain what skills are, where they live, and how Claude Code matches them to requests" https://academy.claude.com/courses/introduction-to-agent-skills · 강의 본문은 로그인하지 않은 브라우저에서 열림을 확인 (확인일 2026-10-26)
+[^academy-time]: 강좌 첫 페이지에 걸리는 시간은 적혀 있지 않습니다(확인일 2026-10-26).
 [^when]: Anthropic 도움말, 「When should I use web search, extended thinking, and research?」. "Web search is best for straightforward, factual queries that can be answered with one or two tool calls" / "Extended thinking shines when tackling complex reasoning tasks that don't require recent info from the web" / "Research is optimal for comprehensive information gathering requiring five or more tool calls over 1-3 minutes" https://support.claude.com/en/articles/11095361 (확인일 2026-10-26)
 [^plugins]: Anthropic 도움말, 「Use plugins in Claude」. "Plugins are available to all paid plans (Pro, Max, Team, Enterprise)." / "Each plugin bundles skills, connectors, and sub-agents into a single package" https://support.claude.com/en/articles/13837440 (확인일 2026-10-26)
 [^skills-use]: Anthropic 도움말, 「Use skills in Claude」. "Toggle any skill on or off using the switch next to it. Disabled skills won't be available to Claude." https://support.claude.com/en/articles/12512180 (확인일 2026-10-26)

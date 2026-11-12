@@ -43,7 +43,9 @@ Gemini의 답은 틀릴 수 있습니다. Google도 **늘 답을 따져 보고, 
 
 - ① 「Deep Research」가 켜졌다는 표시입니다. 입력창 안내가 "무엇을 조사하고 싶으신가요?"로 바뀝니다.
 - ② 「소스」를 누르면 ③ 어디서 찾을지 고를 수 있습니다. 「Google 검색」이 처음부터 체크돼 있습니다.
-- ③ 「채팅」은 내 지난 Gemini 대화를 출처로 넣는 항목으로 보입니다(도움말에는 설명이 없습니다). Gmail·Drive를 출처로 쓰려면 Google Workspace가 Gemini에 연결돼 있어야 합니다([7장](07-skills-apps.md#연결된-앱-—-gmail·drive·캘린더를-gemini에서)).[^deep] 「Google 검색」 체크를 빼면 **고른 출처에서만** 찾습니다.[^deep]
+- ③ 「Google 검색」 체크를 빼면 **고른 출처에서만** 찾습니다.[^deep] 처음에는 「Google 검색」만 둔 채로 써도 충분합니다.
+- ③의 Gmail·Drive를 출처로 쓰려면 Google 앱을 Gemini에 연결해 두어야 합니다. 연결하는 법은 [7장](07-skills-apps.md#연결된-앱-—-gmail·drive·캘린더를-gemini에서)에서 배웁니다.[^deep]
+- ③ 「채팅」은 내 지난 Gemini 대화를 출처로 넣는 항목으로 보입니다.[^chat-source]
 - ④ 「파일」로 내 파일을 함께 넣을 수 있습니다.[^deep]
 
 조사할 주제를 적어 보내면 Gemini가 먼저 **조사 계획**을 보여 줍니다.[^deep]
@@ -59,7 +61,7 @@ Gemini의 답은 틀릴 수 있습니다. Google도 **늘 답을 따져 보고, 
 - ③ 오른쪽 패널에서 어떤 단계로 조사하는지, 어떤 웹사이트를 보는지 볼 수 있습니다.[^screen]
 - ④ 멈추고 싶으면 이 버튼을 누릅니다. 「조사를 취소하시겠어요?」가 뜨면 「예, 취소합니다」를 누르세요.[^screen]
 
-**계획을 고치고 싶다면 가능하면 곧바로 「계획 수정」을 누르세요.** 이 가이드가 한 번 해 봤을 때, 「연구 시작」을 누르지 않았는데 조사가 시작됐습니다. 그림의 「연구 시작」 말풍선도 그때 저절로 생긴 것입니다. 도움말에는 「연구 시작」을 눌러야 시작된다고만 적혀 있어, 왜 그랬는지는 확인하지 못했습니다. 이미 시작됐다면 ④로 멈출 수 있습니다.[^screen]
+**계획을 고치고 싶다면 가능하면 곧바로 「계획 수정」을 누르세요.** 「연구 시작」을 누르지 않았는데 조사가 시작된 적이 있기 때문입니다.[^auto-start] 이미 시작됐다면 ④로 멈출 수 있습니다.[^screen]
 
 보고서는 **보통 5~10분** 걸리고, 복잡하면 더 걸립니다. 기다리는 동안 대화를 떠나도 됩니다. 다 되면 알려 줍니다.[^deep]
 
@@ -67,7 +69,7 @@ Gemini의 답은 틀릴 수 있습니다. Google도 **늘 답을 따져 보고, 
 
 - **사용량을 많이 씁니다**([1장](01-getting-started.md#사용-한도-—-5시간·주간·읽는-양)).[^limits] 하루에 할 수 있는 조사 수와 동시에 돌릴 수 있는 조사 수에도 한도가 있습니다. 한도가 가까우면 남은 횟수를 알려 줍니다.[^deep]
 - **지난 보고서는 대화 목록에서 찾습니다.** 「활동 기록 보관」이 켜져 있어야 나중에 찾을 수 있습니다.[^deep]
-- **보고서는 Docs로 내보낼 수 있습니다.**[^deep] 오디오 오버뷰로 바꿀 수도 있습니다([4장](04-files-create.md#canvas-—-문서와-앱을-함께-고치기)).[^deep]
+- **보고서는 Docs로 내보낼 수 있습니다.**[^deep] 오디오 오버뷰(보고서를 대화 형식 음성으로 들려주는 것)로 바꿀 수도 있습니다([4장](04-files-create.md#canvas-—-문서와-앱을-함께-고치기)).[^deep]
 
 보고서도 Gemini가 만든 글입니다. 중요한 숫자는 보고서의 출처 링크를 열어 직접 확인하세요.
 
@@ -79,7 +81,11 @@ Gemini의 답은 틀릴 수 있습니다. Google도 **늘 답을 따져 보고, 
 
 ### Deep Think는?
 
-**Deep Think**(딥 싱크)는 더 오래 생각하는 기능이었지만 **Gemini 4 Argon으로 바뀌는 중**입니다. 게다가 Google AI Ultra 구독자만 썼습니다.[^deepthink] 어려운 문제는 [2장](02-screen-tour.md#모델-버튼-—-모델과-사고-수준)의 모델 버튼에서 Argon과 사고 수준 「높음」을 고르면 됩니다(Pro·Ultra).
+**Deep Think**(딥 싱크)는 **Gemini 4 Argon으로 바뀌는 중**입니다.[^deepthink] 어려운 문제는 [2장](02-screen-tour.md#모델-버튼-—-모델과-사고-수준)의 모델 버튼에서 Argon과 사고 수준 「높음」을 고르면 됩니다(Pro·Ultra).
+
+::: details 자세히 (눌러서 펼치기)
+Deep Think는 더 오래 생각하는 기능이었습니다. Google AI Ultra 구독자만 썼습니다.[^deepthink]
+:::
 
 <Quiz id="ch306-deep" />
 
@@ -88,7 +94,7 @@ Gemini의 답은 틀릴 수 있습니다. Google도 **늘 답을 따져 보고, 
 **노트북**은 한 주제의 자료(소스), 지침, 대화를 한곳에 모아 두는 공간입니다. 그 안에서 대화하면 넣어 둔 자료와 지침, 지난 이야기를 기억하며 이어 갑니다.[^notebook]
 예를 들어 "독서 모임" 노트북에 회칙, 지난 회의록, 모임 일정표를 넣어 두면, 매번 자료를 다시 올리지 않아도 됩니다.
 
-옆 메뉴 「노트북」 아래 「새 노트북」을 누르고 이름을 지은 뒤 질문하세요. 자료는 「소스 추가」로 넣습니다([2장](02-screen-tour.md#옆-메뉴-—-새-채팅과-지난-대화)).[^notebook][^screen]
+옆 메뉴 「노트북」 아래 「새 노트북」을 누르고 이름을 지은 뒤 질문하세요. 자료는 「소스 추가」로 넣습니다([2장](02-screen-tour.md#옆-메뉴-—-새-채팅과-지난-대화)).[^notebook][^screen] 노트북 하나에 자료를 요금제에 따라 최대 600개까지 넣을 수 있습니다.[^notebook]
 
 | 넣을 수 있는 자료 | 예 |
 |---|---|
@@ -99,14 +105,18 @@ Gemini의 답은 틀릴 수 있습니다. Google도 **늘 답을 따져 보고, 
 
 출처: Google 도움말[^notebook]
 
-알아 둘 점이 있습니다.[^notebook]
+꼭 알아 둘 점은 두 가지입니다.[^notebook]
 
-- **노트북 하나에 자료를 최대 600개까지** 넣을 수 있습니다(요금제에 따라 다름).
-- 노트북 안에서도 **웹 검색과 Gemini 도구**를 쓸 수 있습니다.
-- 노트북 이름 바꾸기, 지침 넣기(「노트북 설정」), 고정은 「모든 노트북」에서 노트북의 「더보기」로 합니다.
-- **노트북을 지우면 그 안의 자료와 대화도 함께 지워집니다.**
-- 「활동 기록 보관」이 꺼져 있어도 대화는 되지만, 대화 자동 저장, 지난 대화 기억, 지난 대화 넣기, **Drive 파일을 자료로 넣기** 같은 일부 기능은 쓸 수 없습니다.
-- 점차 열리는 기능이라 아직 안 보일 수 있습니다.
+- **노트북을 지우면 그 안의 자료와 대화도 함께 지워집니다.** 계속 쓸 자료는 노트북 밖에도 따로 보관해 두세요.
+- **점차 열리는 기능이라 아직 안 보일 수 있습니다.** 옆 메뉴에 「노트북」이 없으면 나중에 다시 확인해 보세요.
+
+예를 들어 회의록 PDF 하나를 넣고 "이 회의에서 정한 일을 담당자별로 정리해 줘"라고 물어보세요. 다음 날 같은 노트북에서 다시 물어도 자료를 또 올릴 필요가 없습니다.
+
+::: details 그 밖에 알아 둘 점 (눌러서 펼치기)
+- 노트북 안에서도 **웹 검색과 Gemini 도구**를 쓸 수 있습니다.[^notebook]
+- 노트북 이름 바꾸기, 지침 넣기(「노트북 설정」), 고정은 「모든 노트북」에서 노트북의 「더보기」로 합니다.[^notebook]
+- 「활동 기록 보관」이 꺼져 있어도 대화는 되지만, 대화 자동 저장, 지난 대화 기억, 지난 대화 넣기, **Drive 파일을 자료로 넣기** 같은 일부 기능은 쓸 수 없습니다.[^notebook]
+:::
 
 대화 메뉴의 「노트북에 추가」로 지난 대화를 노트북에 넣을 수도 있습니다([3장](03-chats.md#고정·이름-바꾸기·지우기)). 이것도 「활동 기록 보관」이 켜져 있어야 됩니다.[^notebook][^screen]
 
@@ -128,8 +138,7 @@ Gemini의 답은 틀릴 수 있습니다. Google도 **늘 답을 따져 보고, 
 ```
 
 - 퀴즈를 풀 때는 「힌트」를 보거나, 다 푼 뒤 「더 많은 질문 생성」으로 문제를 더 받을 수 있습니다. 다 풀면 **강점과 더 공부할 부분**을 알려 줍니다.[^study]
-- 플래시카드는 섞기(「셔플 모드」)와 읽어 주기를 쓸 수 있습니다.[^study]
-- 연습 시험(모의고사)으로 도움말에 적힌 시험은 SAT·JEE Main·NEET UG 등이고, 한국 시험은 적혀 있지 않습니다.[^study]
+- 플래시카드는 섞기(「셔플 모드」)와 읽어 주기를 쓸 수 있습니다.[^study][^exams]
 
 **학교 과제에 쓸 때는 학교의 AI 사용 규칙을 먼저 확인하세요.**[^learn] Gemini의 제안은 출발점으로 삼고, 내 생각과 말을 더해 마무리하세요.[^learn]
 
@@ -170,6 +179,9 @@ Gemini의 답은 틀릴 수 있습니다. Google도 **늘 답을 따져 보고, 
 다음 장: [7장. 스킬과 연결된 앱](07-skills-apps.md)
 
 [^screen]: Gemini 웹 화면(Google AI Pro, 한국어)에서 연습용 대화로 직접 확인(대화는 찍은 뒤 삭제). 「Deep Research」를 켜면 입력창 안내 "무엇을 조사하고 싶으신가요?", 「소스」(Google 검색 선택됨)와 「파일」 버튼. 「소스」 메뉴 "하나 이상의 소스를 선택하세요" — 「Google 검색」「Gmail」「Drive」「채팅」「연결된 앱 사용 설정」. 계획 아래 버튼 「계획 수정」「연구 시작」(도움말 한국어판은 「계획서 수정」「조사 시작」). 조사 시작 후 답 "착수할게요. 연구가 완료되면 알려 드릴게요. 그러는 동안 이 대화에서 나가셔도 됩니다.", 진행 카드 "웹사이트 16개 조사 중...", 오른쪽 패널 「생각하는 과정 표시」. 멈춤 버튼을 누르면 「조사를 취소하시겠어요?」 — 「아니요」「예, 취소합니다」. 이 가이드는 「연구 시작」을 누르는 동작 없이 계획을 기다리던 중 조사가 시작되어, 진행 화면을 찍은 뒤 취소했다. 「도구 더보기」의 「가이드 학습」, 옆 메뉴 「노트북」의 「새 노트북」「모든 노트북」, 대화 메뉴의 「노트북에 추가」. (확인일 2026-10-31)
+[^chat-source]: 도움말에는 「채팅」 항목에 대한 설명이 없습니다. 이 가이드가 화면 이름을 보고 짐작한 것입니다.
+[^auto-start]: 이 가이드가 한 번 해 봤을 때, 「연구 시작」을 누르지 않았는데 조사가 시작됐습니다. 그림의 「연구 시작」 말풍선도 그때 저절로 생긴 것입니다. 도움말에는 「연구 시작」을 눌러야 시작된다고만 적혀 있어, 왜 그랬는지는 확인하지 못했습니다(아래 화면 확인 각주).
+[^exams]: 연습 시험(모의고사)으로 도움말에 적힌 시험은 SAT·JEE Main·NEET UG 등이고, 한국 시험은 적혀 있지 않습니다. 근거는 아래 「Create quizzes, flashcards, practice tests & more in Gemini Apps」 도움말입니다.
 [^learn]: Google 도움말, 「Learn in creative ways with generative AI」(한국어판 「생성형 AI를 활용해 창의적으로 학습하기」). "Important: Make sure to check and follow your school’s policy on using Generative AI." / "Use its suggestions as a starting point, then add your own unique voice and ideas to create something truly original." / "Always evaluate responses: While generative AI is a powerful tool, it can make mistakes." / "It’s important to always fact-check information using built-in tools or by double-checking with Google Search." / "Be specific: The more specific your questions, the more helpful the AI's answers will be." https://support.google.com/gemini/answer/15216790 (확인일 2026-10-31)
 [^deep]: Google 도움말, 「Use Deep Research in Gemini Apps」(한국어판 「Gemini 앱에서 Deep Research 사용하기」). "By default, Gemini includes Google Search as a source for your research." / "You can also upload files and add NotebookLM notebooks." / "Be 18 or over." / "Google AI Pro and Google AI Ultra users can generate reports using Pro for even higher quality. All users can use Thinking for their reports." / "In Gemini Apps, there are limits for:" / "Number of research requests you can run at the same time" / "If you’re close to your limit, Gemini Apps notifies you how many research requests are left for the day." / "To update the research plan before you create a report, click Edit plan." / "Click Start research." / "Google Search is included as a source by default. To limit your research to other selected sources, deselect Google Search." / "It usually takes about 5-10 minutes to generate the report since Gemini analyzes many sources. For more complex reports, it may take longer." / "Important: You can only find past research reports if your Keep Activity setting is on." / "To export the report, click Export to Docs ." / "Other Google services, like Gmail and Drive, are only available if the Google Workspace app is connected to Gemini Apps." / "On the right in the Canvas panel, click Create  Audio Overview ." 한국어판에 "Gemini가 주제에 맞는 조사 계획서를 작성합니다." https://support.google.com/gemini/answer/15719111 (확인일 2026-10-31)
 [^limits]: Google 도움말, 「Gemini Apps limits & feature availability」. "This requires Gemini to use multiple, multi-step search queries and several rounds of reasoning sweeps to create a comprehensive report." / "For users without a Google AI plan, some features that require more compute resources, like Deep Research, may be unavailable during periods of high demand." https://support.google.com/gemini/answer/16275805 (확인일 2026-10-31)

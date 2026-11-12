@@ -14,10 +14,8 @@
 
 예를 들어 지난주에 김장 재료를 물어봤다면 "김장"으로 찾아보세요. 검색 칸은 화면 위쪽에 따로 열립니다.[^screen]
 
-**개인 계정은 「활동 기록 보관」이 켜져 있어야 대화 찾기·고정·이름 변경·삭제를 쓸 수 있습니다.**[^recent]
+**개인 계정은 「활동 기록 보관」이 켜져 있어야 대화 찾기·고정·이름 변경·삭제를 쓸 수 있습니다.**[^recent][^work]
 「활동 기록 보관」은 내 대화를 계정에 남겨 두는 설정입니다. 만 18세 이상이면 처음부터 켜져 있습니다. 「설정」 → 「활동」을 누르면 열리는 「Gemini 앱 활동」 페이지에 있습니다. 끄는 법과 끌 때 달라지는 점은 [9장](09-privacy.md#「활동-기록-보관」-켜고-끄기)에서 다룹니다.[^activity]
-
-회사·학교 계정은 관리자가 기록을 관리합니다. 이때는 내가 대화를 지울 수 없습니다.[^recent]
 
 <Quiz id="ch303-find" />
 
@@ -35,7 +33,7 @@
 | 「이름 변경」 | 대화 제목을 바꾼다 |
 | 「삭제」 | 대화를 지운다 |
 | 「대화 공유」 | 공개 링크를 만든다(아래 「대화 공유하기」) |
-| 「노트북에 추가」 | 대화를 노트북에 모은다(노트북은 6장) |
+| 「노트북에 추가」 | 대화를 주제별 묶음(노트북)에 모은다(6장) |
 
 출처: Google 도움말과 실제 화면[^recent][^screen]
 
@@ -84,7 +82,7 @@
 - **내 이름은 붙지 않습니다.** 링크 주소와 공유 페이지에 내 이름이나 계정이 표시되지 않습니다.
 - **링크를 만든 순간 그대로 보입니다.** 그 뒤에 대화를 고치거나 이어 써도 공유 페이지는 바뀌지 않습니다. 고친 내용을 보여 주려면 링크를 새로 만드세요.
 - **만든 결과물도 함께 보입니다.** Canvas 문서, 이미지, 동영상도 공유 페이지에 들어갑니다.
-- **받은 사람이 이어서 대화할 수 있습니다.** 링크를 연 사람이 「이 채팅 계속하기」로 대화를 이어 갈 수 있습니다. 단, Gem으로 만든 대화와 만 18세 미만은 안 됩니다. 또 **내가 Google AI 유료 요금제로 만든 대화라면 받는 사람도 유료 요금제여야** 이어 갈 수 있습니다.
+- **받은 사람이 이어서 대화할 수 있습니다.** 링크를 연 사람이 「이 채팅 계속하기」로 대화를 이어 갈 수 있습니다. 단, Gem(지침을 넣어 만든 나만의 Gemini, [7장](07-skills-apps.md))으로 만든 대화와 만 18세 미만은 안 됩니다. 또 **내가 Google AI 유료 요금제로 만든 대화라면 받는 사람도 유료 요금제여야** 이어 갈 수 있습니다.
 
 ### 공유한 링크 지우기
 
@@ -124,7 +122,7 @@
 ![표 바로 아래 작은 점 세 개(①)를 누르면 열리는 메뉴(②) — 「Sheets로 내보내기」「복사」. 그 아래 ③은 답 전체의 도구 줄이다](assets/shot-11-table-menu-marked.png)
 
 ① 표 아래 점 세 개와 ③ 답 아래 점 세 개는 다른 메뉴입니다. 표만 옮기려면 ①을 누르세요.[^screen]
-「Gmail 초안 작성」은 Gmail 계정이 있어야 합니다. 메일이 바로 보내지는 것이 아니라 **초안**으로 저장되니, 받는 사람과 내용을 확인하고 직접 보내세요.[^export]
+「Gmail 초안 작성」은 Gmail 계정이 있어야 합니다. 메일이 바로 보내지는 것이 아니라 **초안**으로 저장되니, 받는 사람과 내용을 확인하고 직접 보내세요.[^export][^export-terms]
 
 예를 들어 아래처럼 받은 표를 「Sheets로 내보내기」로 옮기면 바로 정렬하고 고칠 수 있습니다.
 
@@ -133,9 +131,7 @@
 다른 앱은 쓰지 말고 이 채팅에 표로 보여 줘.
 ```
 
-둘째 줄을 붙인 이유가 있습니다. 이 가이드가 첫 줄만 보냈을 때 Gemini는 대화 안에 표를 보여 주지 않았습니다. 대신 Google Sheets에 연결하려다 멈췄습니다.[^screen] 표를 먼저 대화 안에서 확인하고 싶다면 둘째 줄처럼 분명히 말해 주세요.
-
-내보낸 문서와 메일은 그 서비스(Docs·Gmail)의 약관과 정책을 따릅니다.[^export]
+둘째 줄은 "표를 이 채팅 안에 먼저 보여 줘"라는 뜻입니다. 표를 대화 안에서 먼저 확인하고 싶다면 이렇게 분명히 말해 주세요.[^sheets-try]
 
 <Quiz id="ch303-export" />
 
@@ -160,13 +156,14 @@
 링크는 웹사이트일 수도 있고, 내가 올린 파일이나 연결해 둔 Gmail·Docs일 수도 있습니다.[^sources]
 **모든 답에 출처가 붙지는 않습니다.** 「출처」 버튼이 없으면 그 답에는 링크가 없다는 뜻입니다.[^sources]
 
-Google도 Gemini가 틀릴 수 있다고 분명히 말합니다.[^accuracy]
+Google도 Gemini가 틀릴 수 있다고 분명히 말합니다. 아래 세 가지는 특히 조심하세요.[^accuracy]
 
-- **의료·법률·돈 문제의 전문가 조언으로 믿지 마세요.**
+- **의료·법률·돈 문제의 전문가 조언으로 믿지 마세요.** 예를 들어 "이 약을 같이 먹어도 돼?"에 대한 답은 의사나 약사에게 다시 확인하세요.
 - **사람에 관한 답은 특히 다시 확인하세요.** 틀린 내용이 나올 수 있습니다.
 - **Gemini가 자기 자신에 대해 하는 설명도 틀릴 수 있습니다.** 예를 들어 "너는 어떻게 학습했어?"나 "출처를 어떻게 다는 거야?"에 대한 답이 실제와 다를 수 있습니다. 기능이 궁금하면 이 가이드나 공식 도움말을 보세요.
 
-틀린 답을 보면 답 아래 「대답이 마음에 들지 않아요」(엄지 아래)를 누르고 무엇이 틀렸는지 적어 주세요.[^accuracy] 다만 의견을 보내면 그 대화가 함께 Google로 갑니다([1장](01-getting-started.md#안-될-때-먼저-해-볼-것)).
+틀린 답을 보면 답 아래 「대답이 마음에 들지 않아요」(엄지 아래)를 누르고 무엇이 틀렸는지 적어 주세요.[^accuracy]
+다만 의견을 보내면 그 대화가 함께 Google로 갑니다([1장](01-getting-started.md#안-될-때-먼저-해-볼-것)).
 
 <Quiz id="ch303-regen" />
 
@@ -207,6 +204,9 @@ Google도 Gemini가 틀릴 수 있다고 분명히 말합니다.[^accuracy]
 다음 장: [4장. 파일과 만들기](04-files-create.md)
 
 [^screen]: Gemini 웹 화면(Google AI Pro, 한국어)에서 연습용 대화로 직접 확인. 옆 메뉴 「채팅 검색」(검색 칸이 화면 위쪽에 열림), 「설정」 메뉴의 「내 공개 링크」. 옆 메뉴 대화의 점 세 개 메뉴 「대화 공유」「고정」「이름 변경」「노트북에 추가」「삭제」. 대화 화면 오른쪽 위 「대화 작업 메뉴 열기」 메뉴 「대화 공유」「고정」「이름 변경」「PDF 다운로드」「Docs로 내보내기」「노트북에 추가」「삭제」. 답 아래 도구 줄 「대답이 마음에 들어요」「대답이 마음에 들지 않아요」「다시 실행」「복사」「옵션 더보기」, 「옵션 더보기」 메뉴 「새 채팅에서 브랜치 생성」「듣기」「Docs로 내보내기」「Gmail 초안 작성」「법적 문제 신고」「사고 단계 표시」. 표 아래 「옵션 더보기」 메뉴 「Sheets로 내보내기」「복사」. 도움말의 「새 채팅에서 분기」「재생성」「공유 및 내보내기」, 답 아래 「공유」는 이 화면에서 보지 못했고 위 이름으로 바뀌어 있었다. "표로 만들어 줘"만 보냈을 때는 「Connecting to Google Sheets」 표시에서 답이 멈췄다. (확인일 2026-10-31)
+[^work]: 회사·학교 계정은 관리자가 기록을 관리합니다. 이때는 내가 대화를 지울 수 없습니다. 근거는 아래 「Find & manage your recent chats in Gemini Apps」 도움말입니다.
+[^sheets-try]: 이 가이드가 첫 줄만 보냈을 때 Gemini는 대화 안에 표를 보여 주지 않았습니다. 대신 Google Sheets에 연결하려다 멈췄습니다(아래 화면 확인 각주).
+[^export-terms]: 내보낸 문서와 메일은 그 서비스(Docs·Gmail)의 약관과 정책을 따릅니다. 근거는 아래 「Export responses from Gemini Apps」 도움말입니다.
 [^recent]: Google 도움말, 「Find & manage your recent chats in Gemini Apps」(한국어판 「Gemini 앱에서 최근 채팅 확인 및 관리하기」). "You can pin, rename, and delete your chats so the important ones are easy to find." / "If you're using Gemini Apps with a personal account, the features below are only available if you have Keep Activity turned on." / "If you’re using Gemini Apps with a work or school account, your Gemini Apps Activity is controlled by your Google Workspace administrator and you can’t delete chats." / "In the text box, enter what you want to search." / "Click Pin. You can find your pinned chat at the top of the “Recent” section." / "On the side panel, hover over the chat you want to rename." / "You can create a new chat that branches off from a specific point in a conversation, then return to the main conversation to continue it." / "Tip: Deleting a branched chat doesn’t delete the original chat. Deleting the original chat doesn’t delete a branched chat." / "Important: When you delete a chat from your pinned and recent chats, it's also deleted from Gemini Apps Activity." / "If you delete a chat in pinned and recent chats, it also deletes any content created in that chat (like Canvas docs and apps) and the related activity from Gemini Apps Activity." 한국어 화면 이름 「더보기」「고정」「고정 해제」「이름 변경」「삭제」「새 채팅에서 분기」. https://support.google.com/gemini/answer/13666746 (확인일 2026-10-31)
 [^activity]: Google 도움말, 「Manage & delete your activity in Gemini Apps」. "If you’re 18 or over, Keep Activity is on by default." 화면 이름 「활동 기록 보관」은 「설정」 → 「활동」으로 열리는 「Gemini 앱 활동」 페이지에서 확인(2026-10-30, `docs/reports/2026-10-30_Gemini-공식-자료.md` 「실제 화면에서 직접 확인」). https://support.google.com/gemini/answer/13278892 (확인일 2026-10-31)
 [^share]: Google 도움말, 「Share your chats from Gemini Apps」(한국어판 「Gemini 앱의 채팅 공유하기」). "Anyone with the link can read the chat, even if you didn’t share the link with them directly." / "To share the link: The g.co/gemini/share link is auto-copied." / "If you upload an image to a chat and then share the chat, the image is available and downloadable from the shared chat." / "We don’t add your name or account to the URL address or the shared chat page." / "If you edit or continue the chat after you create a public link, the content on the shared chat page won’t change." / "The shared chat will include any AI-generated artifacts from the conversation, including Canvas documents, images, and videos." / "Continue the chat with Gemini Apps on their own (except for a chat that was created with Gems or for users under the age of 18)." / "If the chat was created by a user with a Google AI subscription, you can continue it only if you have a Google AI subscription." / "anyone with the link can read the chat, reshare it with others" / "It doesn’t delete the chat from your Gemini Apps activity." / "Tip: To delete all your public links, click Delete all links." / "It doesn't delete any posts with the link that you've made on third-party sites. To delete the post, delete it from the third party site." / "Your links are publicly available for as long as the associated chat is saved in your Gemini Apps Activity." 한국어 화면 이름 「공유」「대화 공유」「이 채팅 계속하기」「내 공개 링크」「모든 링크 삭제」. https://support.google.com/gemini/answer/13743730 (확인일 2026-10-31)

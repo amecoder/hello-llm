@@ -3,7 +3,7 @@
 <Badge type="info" text="선택" /> 필요할 때 읽으세요. 건너뛰어도 뒤 장을 따라갈 수 있습니다.
 
 > **한 줄 요약**: 입력창의 **마이크**는 내 말을 글자로 받아 적고(받아쓰기), **음파 기호**는 Claude와 말로 주고받게 해 줍니다(음성 모드).
-> 휴대폰에서는 위젯·단축어·잠금 화면으로 더 빨리 열 수 있고, 메시지·메일 초안을 앱으로 바로 넘겨받을 수 있습니다.
+> 휴대폰에서는 위젯(홈 화면에 놓는 작은 바로가기 칸)·단축어(여러 동작을 버튼 하나로 묶는 아이폰 기능)·잠금 화면으로 더 빨리 열 수 있고, 메시지·메일 초안을 앱으로 바로 넘겨받을 수 있습니다.
 
 화면은 2026년 10월 웹 기준입니다. 휴대폰 앱과 컴퓨터 앱은 버튼 위치가 조금 다를 수 있고, 설정 메뉴 이름도 화면에 따라 다를 수 있습니다.
 
@@ -26,7 +26,7 @@
 
 ## 받아쓰기 해 보기
 
-이 절은 휴대폰 앱(아이폰·안드로이드)의 받아쓰기를 설명합니다.[^dictation] 컴퓨터 앱의 Cowork에서도 받아쓰기를 쓸 수 있습니다.[^voice]
+이 절은 휴대폰 앱(아이폰·안드로이드)의 받아쓰기를 설명합니다.[^dictation] 컴퓨터 앱의 Cowork([8장](08-cowork.md))에서도 받아쓰기를 쓸 수 있습니다.[^voice]
 
 1. Claude 앱에서 새 채팅을 엽니다.
 2. 입력창 오른쪽의 **마이크**를 누릅니다.
@@ -47,12 +47,17 @@
 
 ### 맥 컴퓨터에서 — 빠른 입력
 
+맥을 쓰지 않는다면 이 부분은 건너뛰어도 됩니다.
+
 맥에서 Claude 데스크톱 앱을 쓴다면 **Option 키를 두 번** 눌러 보세요. 어느 앱을 쓰고 있든 바로 Claude 입력 칸이 열립니다.[^quick] 하던 일을 멈추지 않고 물어볼 수 있습니다.
 
 - 화면 일부를 끌어 스크린샷으로 붙이거나, 앱 창을 눌러 그 내용을 함께 보낼 수 있습니다.[^quick]
-- 받아쓰기 단축키를 켜 두면 Caps Lock을 눌러 말로 입력할 수 있습니다. 처음에는 꺼져 있습니다.[^quick]
 - 무료를 포함한 모든 요금제에서 되지만, 맥 데스크톱 앱에서만 됩니다. 앱이 뒤에서라도 켜져 있어야 합니다.[^quick]
+
+::: details 자세히 (눌러서 펼치기)
+- 받아쓰기 단축키를 켜 두면 Caps Lock을 눌러 말로 입력할 수 있습니다. 처음에는 꺼져 있습니다.[^quick]
 - 맥의 화면 기록 같은 권한이 필요합니다. 「시스템 설정 > 개인정보 보호 및 보안」에서 확인합니다.[^quick]
+:::
 
 낯선 표나 오류 창을 보면서 바로 물어볼 때 편합니다.
 
@@ -118,8 +123,8 @@ Claude가 엉뚱한 방향으로 가면 그냥 말을 시작하세요. Claude가
 
 - 음성 대화도 **요금제 사용 한도에 들어갑니다**([1장](01-getting-started.md)).
 - 같은 대화 안에서 글과 말을 오가도 **앞의 내용이 이어집니다.** 인터넷 주소처럼 정확히 쳐야 하는 것은 중간에 글로 입력하면 됩니다.
-- 글 채팅에서 마지막으로 쓴 모델로 시작하고, 대화 중에 바꿀 수 있습니다. 다만 Claude Fable은 음성 모드에서 아직 쓸 수 없습니다(2026-10-26 확인).
-- 연결해 둔 도구(Gmail·Google 캘린더 등)도 음성 모드에서 쓸 수 있습니다. 음성 모드 도움말은 무료 요금제에서 도구를 하나 연결할 수 있다고 적습니다. 도구 연결은 [7장](07-projects-tools.md)에서 다룹니다.
+- 글 채팅에서 마지막으로 쓴 모델로 시작하고, 대화 중에 바꿀 수 있습니다.[^voice-fable]
+- 연결해 둔 도구(Gmail·Google 캘린더 등)도 음성 모드에서 쓸 수 있습니다.[^voice-tools] 도구 연결은 [7장](07-projects-tools.md)에서 다룹니다.
 - 새 화면에서는 Claude가 작업 중인 대화를 포함해 어떤 대화에서든 음성 모드를 쓸 수 있습니다.[^voice][^cowork-voice-old]
 
 <Quiz id="ch210-voice" />
@@ -162,10 +167,10 @@ Claude의 목소리는 정해진 몇 가지 가운데서만 고릅니다. 누군
 
 ### 아이폰 (iOS 18 이상)
 
-- **「Claude에 물어보기」**(Ask Claude): 앱을 열지 않고 질문합니다. Spotlight 검색, Siri, 공유 메뉴에서 쓸 수 있습니다. 예를 들어 글을 골라 공유 메뉴로 바로 Claude에 보낼 수 있습니다.
-- **위젯**: 홈 화면이나 오늘 보기에 Claude 위젯을 놓으면 새 채팅, 받아쓰기, 사진 찍어 보내기를 버튼 하나로 엽니다.
-- **「Claude로 사진 분석」**(Analyze Photo with Claude): 제어 센터나 잠금 화면에 넣으면 잠금을 풀지 않고도 사진을 찍어 보낼 수 있습니다.
-- **「Open Claude」**: 잠금 화면, 제어 센터, 동작 버튼(Action button)에 넣어 Claude를 바로 엽니다.[^ios][^lock]
+- **「Claude에 물어보기」**(Ask Claude): 앱을 열지 않고 질문합니다. Spotlight 검색(홈 화면 가운데를 아래로 쓸어내리면 나오는 검색 칸), Siri, 공유 메뉴에서 쓸 수 있습니다. 예를 들어 글을 골라 공유 메뉴로 바로 Claude에 보낼 수 있습니다.
+- **위젯**: 홈 화면이나 오늘 보기(홈 화면 맨 왼쪽 화면)에 Claude 위젯을 놓으면 새 채팅, 받아쓰기, 사진 찍어 보내기를 버튼 하나로 엽니다.
+- **「Claude로 사진 분석」**(Analyze Photo with Claude): 제어 센터(화면 오른쪽 위에서 아래로 쓸어내리면 나오는 버튼 모음)나 잠금 화면에 넣으면 잠금을 풀지 않고도 사진을 찍어 보낼 수 있습니다.
+- **「Open Claude」**: 잠금 화면, 제어 센터, 동작 버튼(Action button, 일부 아이폰 옆면에 있는 버튼)에 넣어 Claude를 바로 엽니다.[^ios][^lock]
 
 「Claude에 물어보기」와 단축어는 앱을 열었을 때 보이는 기본 모델을 씁니다.[^ios]
 
@@ -222,7 +227,9 @@ Claude가 위치나 캘린더를 처음 쓰려 하면 허락을 묻습니다. �
 - **아이폰**: 「설정」 → 「Claude」
 - **안드로이드**: 「설정」 → 「앱」 → 「Claude」 → 「권한」[^ios-apps][^android-apps]
 
+::: details 한국에서는 아직 못 쓰는 기능 (눌러서 펼치기)
 건강 데이터를 읽는 기능도 있지만, 시험판이고 Pro·Max 요금제에 미국에서만 됩니다.[^ios-apps]
+:::
 
 <Quiz id="ch210-apps" />
 
@@ -289,4 +296,6 @@ Claude가 위치나 캘린더를 처음 쓰려 하면 허락을 묻습니다. �
 [^android-apps]: Anthropic 도움말, 「Use Claude with Android apps」. "This feature is supported on all Claude plans and works with your device's native and third-party apps" / "Reminders: These are exclusively available on Claude for iOS, so Claude can’t create and manage reminders on Android." / "These permissions can be managed at any time in your device settings by going to Settings > Apps > Claude > Permissions." https://support.claude.com/en/articles/11869629 (확인일 2026-10-26)
 [^quick]: Anthropic 도움말, 「Use quick entry with Claude Desktop on Mac」. "Quick entry is available to all Claude users (free, Pro, Max, Team, and Enterprise plans) using Claude Desktop on macOS." / "Instant access: Double-tap the Option key to open Claude from any app." / "Visual context: Capture screenshots or click application windows to share what you're working on." / "The voice dictation shortcut is disabled by default because it takes over your Caps Lock key." / "Claude Desktop needs to be running on your Mac, but it can run in the background." / "Screen recording: Required to capture screenshots and share application windows." / "You can review or change these permissions in System Settings > Privacy & Security." https://support.claude.com/en/articles/12626668 (확인일 2026-10-26)
 [^cowork-voice-old]: 같은 도움말에는 Cowork([8장](08-cowork.md))에서는 받아쓰기만 되고 음성 모드는 안 된다는 문장도 있습니다.
+[^voice-fable]: 다만 Claude Fable은 음성 모드에서 아직 쓸 수 없습니다(음성 모드 도움말, 확인일 2026-10-26).
+[^voice-tools]: 음성 모드 도움말은 무료 요금제에서 도구를 하나 연결할 수 있다고 적습니다.
 [^voice-settings-name]: 도움말은 「설정」 → 「기능」이라고 안내합니다. 화면에 따라 다를 수 있습니다.

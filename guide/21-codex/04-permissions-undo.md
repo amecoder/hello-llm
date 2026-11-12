@@ -21,7 +21,7 @@
 
 공식 문서는 **대부분의 일은 Ask for approval로 시작하라**고 합니다.[^start] Claude Code의 「수동」보다는 한 걸음 더 맡기는 방식입니다(이 가이드의 비교). 폴더 **안**의 파일은 묻지 않고 고칩니다.
 
-**Approve for me**를 골라도 Codex가 할 수 있는 범위는 넓어지지 않습니다. 바뀌는 것은 "누가 허락하느냐"뿐입니다.[^same-box] 자동 검토는 모델을 한 번 더 부르므로 사용량이 늘 수 있습니다.[^extra]
+**Approve for me**를 골라도 Codex가 할 수 있는 범위는 넓어지지 않습니다. 바뀌는 것은 "누가 허락하느냐"뿐입니다.[^same-box][^extra]
 
 **Full access**는 파일과 인터넷의 경계를 모두 없앱니다. 공식 문서도 정말 전부 맡기고 싶을 때만 쓰라고 합니다.[^full] 메모 정리에는 필요 없습니다.
 
@@ -50,7 +50,12 @@ Codex는 바뀐 내용을 **리뷰 창**(review pane)에서 보여 줍니다. Cl
 
 리뷰 창에는 **Codex가 고친 것만 있는 게 아닙니다.** 내가 직접 고친 것, 아직 기록하지 않은 다른 변경까지 모두 보입니다.[^includes] 그래서 일을 맡기기 전에 지금까지의 변경을 기록(커밋)해 두면, 리뷰 창에 Codex의 변경만 남아 보기 쉽습니다.
 
-리뷰 창 위에서 보기 범위를 고를 수 있습니다. 기본은 아직 기록하지 않은 변경(**Unstaged**)이고, **Last turn**을 고르면 Codex의 마지막 답 한 번에서 바뀐 것만 봅니다.[^views] 처음에는 Last turn이 이해하기 쉽습니다.
+리뷰 창 위에서 보기 범위를 고를 수 있습니다.[^views]
+
+- **Unstaged**(기본): 마지막으로 기록(커밋)한 뒤 아직 기록하지 않은 변경이 모두 보입니다. 내가 고친 것도 들어갑니다.
+- **Last turn**: Codex의 마지막 답 한 번에서 바뀐 것만 보입니다.
+
+처음에는 Last turn이 이해하기 쉽습니다. 방금 맡긴 일의 결과만 보이기 때문입니다.
 
 마음에 안 드는 줄이 있으면 그 줄에 의견을 달 수 있습니다. 줄에 마우스를 올려 **+**를 누르고 의견을 적은 뒤, 입력창에 "줄 의견대로 고쳐 줘"처럼 보내면 됩니다.[^comments]
 
@@ -74,7 +79,7 @@ Claude Code에는 대화를 앞으로 되감는 기능이 있었습니다([Claud
 
 그래서 이 단계에서는 이런 순서를 습관으로 만듭니다.
 
-1. 맡기기 전: 앱의 Git 기능(커밋)으로 지금 상태를 기록한다.[^commit]
+1. 맡기기 전: 지금 상태를 기록(커밋)한다. 앱의 Git 기능으로 해도 되고, 대화로 부탁해도 된다(바로 아래 참고).[^commit]
 2. 맡긴다.
 3. 리뷰 창에서 Last turn으로 바뀐 것만 본다.
 4. 좋으면 다시 기록하고, 아니면 되돌린다.
@@ -121,7 +126,7 @@ Claude Code에는 대화를 앞으로 되감는 기능이 있었습니다([Claud
 [^names]: Codex 공식 문서, 「Sandbox」. "Depending on your configuration, the menu can include **Ask for approval**, **Approve for me** for eligible approval requests, **Full access**, and named or custom permissions profiles." https://learn.chatgpt.com/docs/sandboxing (확인일 2026-11-01)
 [^start]: Codex 공식 문서, 「Permissions」. "For most work, start with **Ask for approval**. It lets ChatGPT work within the current workspace and pauses before reaching beyond that boundary." https://learn.chatgpt.com/docs/permission-modes (확인일 2026-11-01)
 [^same-box]: Codex 공식 문서, 「Permissions」. "Changing who reviews a request doesn't expand the sandbox." https://learn.chatgpt.com/docs/permission-modes (확인일 2026-11-01)
-[^extra]: Codex 공식 문서, 「Agent approvals & security」. "Automatic review uses extra model calls, so it can add to Codex usage." https://learn.chatgpt.com/docs/agent-approvals-security (확인일 2026-11-01)
+[^extra]: 자동 검토는 모델을 한 번 더 부르므로 사용량이 늘 수 있습니다(8장). Codex 공식 문서, 「Agent approvals & security」. "Automatic review uses extra model calls, so it can add to Codex usage." https://learn.chatgpt.com/docs/agent-approvals-security (확인일 2026-11-01)
 [^full]: Codex 공식 문서, 「Sandbox」. "This removes the filesystem and network boundaries and should be used only when you want the agent to act with full access." https://learn.chatgpt.com/docs/sandboxing (확인일 2026-11-01)
 [^check]: Codex 공식 문서, 「Permissions」. "Check the selected mode for the current chat; having a mode available doesn't mean it's selected." https://learn.chatgpt.com/docs/permission-modes (확인일 2026-11-01)
 [^two]: Codex 공식 문서, 「Permissions」. "The **sandbox** defines which files and network resources ChatGPT can access." / "**Approvals** determine when ChatGPT pauses before an action or sends the request to automatic review." https://learn.chatgpt.com/docs/permission-modes (확인일 2026-11-01)

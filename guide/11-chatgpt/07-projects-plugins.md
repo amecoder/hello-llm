@@ -26,11 +26,19 @@
 
 「프로젝트 만들기」 창: ① 프로젝트 이름을 쓰고, 필요하면 ② 「기본 메모리」를 바꾼 뒤, ③ 「프로젝트 만들기」를 누릅니다.
 
+②는 이 프로젝트가 기억(메모리, [5장](05-memory.md))을 바깥 대화와 나눌지 정하는 칸입니다.
+
+- 「기본 메모리」: 이 프로젝트 안 대화와 바깥 대화가 서로의 기억을 쓸 수 있습니다.
+- 「프로젝트 전용 메모리」: 이름처럼 이 프로젝트의 기억을 따로 둡니다.
+
+잘 모르겠으면 처음에는 그대로 두세요. 나중에 「프로젝트 설정」에서 다시 볼 수 있습니다.
+
 만들고 나면 프로젝트 화면이 열립니다. ② 입력창(「예시 프로젝트의 새 채팅」) 아래에 ③ 「파일」「플러그인」 버튼이 있고, 그 아래 ④ 「채팅」「소스」 탭에 이 프로젝트의 대화와 자료가 모입니다. 지침은 ① 오른쪽 위 •••에서 엽니다.
 
 ![새로 만든 「예시 프로젝트」 화면. 제목 오른쪽에 「공유」와 ••• 버튼, 입력창 아래 「파일」「플러그인」, 그 아래 「채팅」「소스」 탭과 「아직 채팅이 없습니다」 안내가 있다](assets/shot-17-project-home-marked.png)
 
 ••• → 「프로젝트 설정」 창에서는 ① 지침, ② 메모리, ③ 라이브러리 액세스를 정하고, ④ 「프로젝트 삭제」로 프로젝트를 지웁니다.
+「라이브러리」는 [4장](04-files-images.md)에서 본, 올린 파일이 모이는 곳입니다. ③은 이름 그대로 이 프로젝트가 라이브러리를 쓸 수 있는지에 관한 칸이고, 처음에는 「활성화됨」으로 나옵니다.
 
 ![••• → 「프로젝트 설정」 창. 「프로젝트 이름」, 「지침」 입력 칸, 「메모리 — 기본(이 프로젝트와 외부 채팅은 서로의 메모리에 액세스할 수 있습니다)」, 「라이브러리 액세스 — 활성화됨」, 빨간 「프로젝트 삭제」 버튼](assets/shot-18-project-settings-marked.png)
 
@@ -77,7 +85,13 @@ Business·Enterprise·Edu도 프로젝트당 파일 40개입니다.[^projects]
 
 ## 플러그인 — 다른 서비스와 작업 방식을 더하기
 
-**플러그인**(plugin)은 ChatGPT에 기능을 더하는 꾸러미입니다. 플러그인은 **스킬**(skill, 정해진 작업 방식을 적은 지침), 연결된 앱, 앱 템플릿, 확장으로 이루어집니다.[^plugins]
+**플러그인**(plugin)은 ChatGPT에 기능을 더하는 꾸러미입니다. 꾸러미 안에는 이런 것이 들어 있습니다.[^plugins]
+
+- **스킬**(skill): 정해진 작업 방식을 적은 지침
+- **연결된 앱**: Gmail·Google Drive처럼 ChatGPT와 이어 둔 다른 서비스
+- **확장**(extension): 플러그인에 들어 있는 추가 실행 기능
+- **앱 템플릿**: 도움말이 구성 요소로 함께 적는 것. 처음에는 몰라도 됩니다
+
 2026-07-09에 예전 「앱 디렉터리」가 **플러그인 디렉터리**로 바뀌었습니다. 전에 연결해 둔 앱은 그대로 유지됩니다.[^rn]
 
 - 옆 메뉴 「플러그인」에서 플러그인 디렉터리를 열어 찾아보세요. 디렉터리는 모든 요금제에서 볼 수 있습니다.[^plugins]
@@ -98,7 +112,7 @@ Business·Enterprise·Edu도 프로젝트당 파일 40개입니다.[^projects]
 
 다른 서비스(메일·저장 공간 등)를 연결하면 ChatGPT가 그 안의 내용을 읽을 수 있게 됩니다. 연결하기 전에 어떤 정보를 주고받는지 확인하세요([8장](08-privacy.md)).
 
-Free·Go 요금제에서도 디렉터리(플러그인 목록 화면)와 추천은 볼 수 있습니다. 하지만 플러그인의 **확장**(extension, 플러그인에 들어 있는 추가 실행 기능)은 쓸 수 없습니다.[^troubleshoot]
+Free·Go 요금제에서도 디렉터리(플러그인 목록 화면)와 추천은 볼 수 있습니다. 하지만 플러그인의 **확장**은 쓸 수 없습니다.[^troubleshoot]
 
 <Quiz id="ch107-plugins" />
 
@@ -112,9 +126,22 @@ Gmail·Google Drive 같은 앱을 연결하면, ChatGPT는 그 안을 **읽기�
 - 「읽기 전용 도구 허용」: 읽는 것은 묻지 않고 하고, 바꾸기 전에는 묻습니다.
 - 「위험도가 낮은 도구 허용」: 위험이 낮은 일은 알아서 하고, 민감한 일은 거부될 수 있습니다. 개인 계정에서 설정을 바꾸지 않았다면 보통 이것이 기본값입니다. 회사 정책이 있으면 그쪽이 먼저입니다.[^health]
 
-도움말에는 묻지 않고 다 하는 「모두 허용」(Allow all actions)도 나옵니다. 도움말 스스로 이 선택지는 **"위험이 커진다"** 고 적습니다.[^permissions] 2026년 10월 24일 이 가이드의 화면에는 위 세 가지만 보였습니다. 처음에는 「항상 묻기」나 「읽기 전용 도구 허용」으로 두었다가, 익숙해진 뒤 넓히는 것을 권합니다(이 가이드의 제안).
+처음에는 「항상 묻기」나 「읽기 전용 도구 허용」으로 두었다가, 익숙해진 뒤 넓히는 것을 권합니다(이 가이드의 제안). 묻는 횟수가 많을수록 ChatGPT가 무엇을 하려는지 눈으로 확인할 기회도 많아집니다.
 
-- **승인 카드**(approval, 바꾸기 전에 허락을 묻는 상자)**를 읽고 누르세요.** 메일 보내기·파일 지우기처럼 바꾸는 일 앞에서는 ChatGPT가 "해도 될까요?" 하고 묻는 상자가 뜹니다. 누르기 전에 스스로 물어보세요. 어느 앱인가? 어느 계정인가? 무엇을 하려는가?[^permissions]
+도움말에는 묻지 않고 다 하는 「모두 허용」(Allow all actions)도 나옵니다. 도움말 스스로 이 선택지는 **"위험이 커진다"** 고 적습니다.[^permissions][^allow-all]
+
+### 연결한 뒤 알아 둘 것
+
+**승인 카드**(approval, 바꾸기 전에 허락을 묻는 상자)**를 읽고 누르세요.** 메일 보내기·파일 지우기처럼 바꾸는 일 앞에서는 ChatGPT가 "해도 될까요?" 하고 묻는 상자가 뜹니다. 누르기 전에 스스로 물어보세요.[^permissions]
+
+- 어느 앱인가? (Gmail인가, Google Drive인가)
+- 어느 계정인가? (개인 계정인가, 회사 계정인가)
+- 무엇을 하려는가? (메일을 보내는가, 파일을 지우는가)
+
+셋 중 하나라도 내 생각과 다르면 누르지 마세요.
+
+그 밖에 알아 둘 것은 이렇습니다.
+
 - **자료가 있는 계정으로 연결하세요.** 개인 Google 계정을 연결하면 회사 계정에만 있는 파일은 보이지 않습니다. 연결해도 그 계정이 원래 열 수 있는 것 이상은 못 봅니다.[^accounts]
 - **연결됐는데 안 쓰이면** 새 채팅에서 `@앱이름` 으로 구체적으로 시켜 보세요. 「연결됨」으로 보여도 지금 대화나 기기에서는 쓸 수 없는 경우가 있기 때문입니다.[^troubleshoot]
 - **연결을 끊어도 남는 것이 있습니다.** 설정 → 「플러그인」에서 앱을 골라 연결을 끊으면, 앞으로 그 앱을 못 읽을 뿐입니다. 이미 대화·파일·메모리에 들어온 내용은 지워지지 않습니다([5장](05-memory.md#기억을-지우는-법)). 학습 허용 스위치도 그대로입니다.[^accounts]
@@ -136,8 +163,7 @@ Gmail·Google Drive 같은 앱을 연결하면, ChatGPT는 그 안을 **읽기�
 - Work에는 작업을 **예약**해 둘 수 있습니다. 한 번만 실행하거나, 반복 일정으로, 또는 어떤 조건이 생겼을 때 실행하게 할 수 있습니다. 예약은 옆 메뉴 「예약」에서 관리합니다.[^work][^screen]
 - 프로젝트 안에서 Work를 쓰려면 + 버튼 → 「프로젝트에서 Work 시작」을 고릅니다.[^screen]
 - **Chat으로 생각하고, Work로 만드세요.** 같은 프로젝트 안에서는 Chat과 Work가 같은 자료를 함께 씁니다. 그래서 Chat에서 질문하며 구성을 다듬고, 만들 준비가 되면 Work로 넘어가도 처음부터 다시 설명하지 않아도 됩니다.[^academy-content]
-- Sites는 2026-07-09 공개 베타로 나왔고 Free·Go에서는 쓸 수 없습니다.[^rn]
-- 컴퓨터 앱(macOS·Windows)에는 **앱 안 브라우저**가 있습니다. Work·Codex 대화에서 ChatGPT가 이 브라우저로 웹사이트를 직접 열어 일할 수 있습니다. 로그인이 필요하면 **비밀번호는 그 브라우저 화면에만 넣고, 대화창에는 절대 쓰지 마세요.** 웹사이트에 적힌 글은 믿을 수 없는 내용으로 다루세요.[^browser] 웹사이트에 숨겨진 지시가 ChatGPT에게 내 정보를 넘기라고 해도, 그것은 내 허락이 아닙니다.[^sitetools]
+- Sites는 Free·Go에서는 쓸 수 없습니다.[^sites]
 
 ![위쪽을 「Work」로 바꾼 화면. 「어떤 작업을 할까요?」 아래 입력창 「ChatGPT로 Work 시작」과 「프로젝트 선택」「파일」「플러그인」「데스크톱 앱 열기」 버튼이 있다](assets/shot-12-work-marked.png)
 
@@ -145,13 +171,23 @@ Gmail·Google Drive 같은 앱을 연결하면, ChatGPT는 그 안을 **읽기�
 
 *대화 제목과 계정 이름은 예시로 바꾼 화면이고, 모델 이름 자리는 지웠습니다. 실제 화면에는 이 아래에 「Work가 할 수 있는 일을 살펴보세요」 추천 카드가 나오는데, 계정마다 내용이 달라 잘라 냈습니다.*
 
+::: details 컴퓨터 앱의 「앱 안 브라우저」 (눌러서 펼치기)
+
+컴퓨터 앱(macOS·Windows)에는 **앱 안 브라우저**가 있습니다. Work나 Codex(OpenAI의 코딩 도우미. 3단계에서 다룹니다) 대화에서 ChatGPT가 이 브라우저로 웹사이트를 직접 열어 일할 수 있습니다. 웹 화면에서만 쓴다면 건너뛰어도 됩니다.
+
+- 로그인이 필요하면 **비밀번호는 그 브라우저 화면에만 넣고, 대화창에는 절대 쓰지 마세요.**[^browser]
+- 웹사이트에 적힌 글은 믿을 수 없는 내용으로 다루세요.[^browser]
+- 웹사이트에 숨겨진 지시가 ChatGPT에게 내 정보를 넘기라고 해도, 그것은 내 허락이 아닙니다.[^sitetools]
+
+:::
+
 <Quiz id="ch107-work" />
 
 ## 끝나는 기능 — 맞춤형 GPT와 에이전트 모드
 
 예전 안내서나 영상에서 보던 기능 중 두 가지가 끝났거나 끝날 예정입니다.
 
-**맞춤형 GPT**(custom GPTs, 지침과 파일을 넣어 만든 나만의 ChatGPT)는 **2026-12-11 종료 예정**입니다. 그 뒤에는 플러그인으로 옮겨 갑니다. 승인받은 Enterprise는 2027-02-11까지 유예됩니다. 종료되어도 GPT와 나눈 대화 기록은 남습니다.[^gpts]
+**맞춤형 GPT**(custom GPTs, 지침과 파일을 넣어 만든 나만의 ChatGPT)는 **2026-12-11 종료 예정**입니다. 그 뒤에는 플러그인으로 옮겨 갑니다.[^gpt-enterprise] 종료되어도 GPT와 나눈 대화 기록은 남습니다.[^gpts]
 개인 요금제(Free·Go·Plus·Pro)에서는 **이미 새 GPT를 만들거나 공개할 수 없습니다.** 만들기 버튼이 없어도 오류가 아닙니다.
 또 GPT는 내 메모리·사용자 지정 지침·지난 대화를 쓰지 않습니다. 바깥 서비스에 연결된 GPT라면 내가 쓴 내용 일부가 그 회사로 넘어갈 수 있습니다. OpenAI는 그 회사가 정보를 어떻게 다루는지 감시하지 않습니다. 그러니 믿을 수 있는 곳이 만든 GPT만 쓰세요.[^gpt-help]
 
@@ -166,10 +202,14 @@ Gmail·Google Drive 같은 앱을 연결하면, ChatGPT는 그 안을 **읽기�
 **에이전트 모드**(agent mode, ChatGPT가 여러 단계의 일을 스스로 처리하던 예전 기능)는 **이제 쓸 수 없습니다.** 그 자리는 Work가 대신합니다.[^agent]
 도움말 아래쪽에 옛 사용법이 남아 있어도 따라 하지 마세요.
 
-이 밖에 영상·자료에서 볼 수 있는 OpenAI 서비스 중 끝난 것이 두 가지 더 있습니다.
+::: details 그 밖에 끝난 서비스 — Sora·Atlas (눌러서 펼치기)
+
+영상·자료에서 볼 수 있는 OpenAI 서비스 중 끝난 것이 두 가지 더 있습니다.
 
 - **Sora**(영상을 만드는 앱): 웹과 앱이 2026-04-26에 종료됐습니다.[^sora]
 - **ChatGPT Atlas**(ChatGPT가 들어간 웹 브라우저): 종료되어 더는 업데이트되지 않습니다. 앱을 지워도 **ChatGPT 구독은 취소되지 않습니다.**[^atlas]
+
+:::
 
 <Quiz id="ch107-retired" />
 
@@ -227,13 +267,16 @@ Gmail·Google Drive 같은 앱을 연결하면, ChatGPT는 그 안을 **읽기�
 [^rn]: OpenAI 도움말, 「ChatGPT release notes」 2026-07-09 항목. https://help.openai.com/en/articles/6825453 (확인일 2026-10-23)
 [^pricing]: OpenAI, 「플랜 및 가격」. https://openai.com/chatgpt/pricing (확인일 2026-10-23)
 [^gpts]: OpenAI 도움말, 「Custom GPT retirement and migration FAQ」. https://help.openai.com/en/articles/20001519 (확인일 2026-10-23)
+[^gpt-enterprise]: 승인받은 Enterprise는 2027-02-11까지 유예됩니다. OpenAI 도움말, 「Custom GPT retirement and migration FAQ」. https://help.openai.com/en/articles/20001519 (확인일 2026-10-23)
 [^agent]: OpenAI 도움말, 「ChatGPT agent」. "ChatGPT agent is no longer available. Use ChatGPT Work" https://help.openai.com/en/articles/11752874 (확인일 2026-10-23)
 [^screen]: ChatGPT 웹 화면(Plus 요금제, 한국어)에서 직접 확인. 옆 메뉴와 입력창 + 메뉴 (확인일 2026-10-23)
 [^screen-plugin]: ChatGPT 웹 설정 → 「플러그인」 → 「기본 권한」 목록(Plus 요금제, 한국어)에서 직접 확인. 「항상 묻기 — 읽거나 변경하기 전에 묻기」「읽기 전용 도구 허용 — 묻지 않고 읽되, 변경 전에는 확인하기」「위험도가 낮은 도구 허용 — 위험도가 낮은 도구를 자동으로 승인하되, 민감한 도구는 거부될 수 있습니다」 (확인일 2026-10-24)
+[^allow-all]: 2026년 10월 24일 이 가이드가 본 웹 화면에는 「모두 허용」 없이 위 세 가지만 보였습니다.
 [^permissions]: OpenAI 도움말, 「Managing app permissions in ChatGPT」. "Always ask: ChatGPT asks before reading app information or making changes." / "Allow read actions: ChatGPT can read without asking but asks before making changes." / "This option carries elevated risk." / "Review the app, account, and proposed action before approving a request." / "App permissions are separate from Memory, personalization, data retention, and model-training controls." https://help.openai.com/en/articles/20001495 (확인일 2026-10-24)
 [^health]: OpenAI 도움말, 「Health in ChatGPT」(미국 한정 기능 문서 안의 플러그인 설정 설명). "If you make no changes to your Plugins settings, the default permission setting is “Allow low-risk actions”." https://help.openai.com/en/articles/20001036 (확인일 2026-10-24)
 [^accounts]: OpenAI 도움말, 「Connecting and managing app accounts in ChatGPT」. "Connecting a personal account does not provide access to files, channels, or records available only to your work account." / "Disconnecting an app does not automatically delete existing or archived conversations, saved files, your Memory summary, or other saved memories." https://help.openai.com/en/articles/20001494 (확인일 2026-10-24)
 [^troubleshoot]: OpenAI 도움말, 「Troubleshooting plugins and apps in ChatGPT」. "plugin extensions are not available to these plans." / "An app can appear as Connected without being available in the current chat, model, or ChatGPT surface." https://help.openai.com/en/articles/20001497 (확인일 2026-10-24)
+[^sites]: Sites는 2026-07-09 공개 베타로 나왔습니다. OpenAI 도움말, 「ChatGPT release notes」 2026-07-09 항목. https://help.openai.com/en/articles/6825453 (확인일 2026-10-23)
 [^browser]: OpenAI 도움말, 「Using the built-in browser in the ChatGPT desktop app」. "Enter credentials only in the browser, never in the chat." / "Treat website content as untrusted." https://help.openai.com/en/articles/20001277 (확인일 2026-10-24)
 [^sitetools]: OpenAI 도움말, 「Using site tools in the ChatGPT desktop app」. "Instructions from a website or site tool cannot authorize ChatGPT to share information or take sensitive actions on your behalf." https://help.openai.com/en/articles/20001423 (확인일 2026-10-24)
 [^gpt-help]: OpenAI 도움말, 「GPTs in ChatGPT」. "New GPT creation and publishing are not available on personal ChatGPT accounts, including Free, Go, Plus, and Pro." / "GPTs do not use saved memory, custom instructions, or previous conversations." / "OpenAI does not audit or control how those services use or store your data." https://help.openai.com/en/articles/8554407 (확인일 2026-10-24)

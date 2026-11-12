@@ -4,7 +4,7 @@
 
 > **한 줄 요약**: Claude가 묻지 않고 할 수 있는 일은 권한 모드와 규칙이 정합니다. 잘못되면 Esc 두 번으로 되감을 수 있지만, 되돌아오지 않는 일도 있습니다.
 
-이 장의 화면은 2026년 11월 6일 리눅스에서 Claude Code 2.1.318로 실행한 결과입니다. 전부 외울 필요는 없습니다. 허락 창을 읽는 법부터 익히면 됩니다.
+전부 외울 필요는 없습니다.[^run] 허락 창을 읽는 법부터 익히면 됩니다.
 
 ## 권한 모드 네 가지
 
@@ -17,10 +17,14 @@
 | 편집 허용 | `⏵⏵ accept edits on` | 파일 작업은 안 물음 |
 | 계획 | `⏸ plan mode on` | 조사와 제안만 함 |
 
-- **자동(auto)**: 터미널에서 `claude`를 켜면 이 모드로 시작합니다. 행동을 미리 살피는 별도의 AI가 위험해 보이는 것을 막습니다.[^auto] 사람이 대신 봐 주는 것은 아닙니다. 자동 모드는 허락 창을 줄여 줄 뿐, 안전을 보장하지는 않습니다.[^auto] 연달아 세 번 막히면 멈추고 다시 나에게 묻습니다.[^practice]
+- **자동(auto)**: 터미널에서 `claude`를 켜면 이 모드로 시작합니다. 행동을 미리 살피는 별도의 AI가 위험해 보이는 것을 막습니다.[^auto] 사람이 대신 봐 주는 것은 아닙니다. 자동 모드는 허락 창을 줄여 줄 뿐, 안전을 보장하지는 않습니다.[^auto]
 - **수동(manual)**: 파일 수정, 셸 명령, 네트워크 접근 대부분을 먼저 묻습니다.[^modes] 안전하지만 열 번쯤 지나면 읽지 않고 승인하기 쉽습니다.[^practice]
 - **편집 허용(accept edits)**: 작업 폴더 안에서 파일을 만들고 고치는 일을 묻지 않습니다.[^modes] 흔한 파일 명령도 묻지 않고 승인합니다.
 - **계획(plan)**: 조사해서 제안만 하고 고치지는 않습니다.[^modes] 큰 일을 맡기기 전에 어떻게 할지부터 보고 싶을 때 좋습니다.
+
+::: details 자세히 (눌러서 펼치기)
+자동 모드에서 연달아 세 번 막히면 멈추고 다시 나에게 묻습니다.[^practice]
+:::
 
 처음 연습할 때는 수동으로 시작해 보세요. Claude가 무슨 일을 하는지 눈에 익습니다. 터미널에서 이렇게 칩니다.[^practice]
 
@@ -54,7 +58,7 @@ claude --permission-mode manual
 
 ![셸 명령 허락 창. ① 실행할 명령, ② 자동 모드로 바꾸는 선택지](assets/shot-06-bash-marked.png)
 
-`Yes, allow reading from`으로 시작하는 선택지는 폴더를 읽어도 되는지 묻습니다. 어느 폴더인지 이름을 읽고 고르세요. 명령 속 `;`와 `2>/dev/null`의 뜻은 [명령어 사전](command-reference.md)에 있습니다.
+`Yes, allow reading from`으로 시작하는 선택지는 폴더를 읽어도 되는지 묻습니다. 어느 폴더인지 이름을 읽고 고르세요.[^symbols]
 
 창이 뜨면 이렇게 물어보세요.
 
@@ -64,23 +68,35 @@ claude --permission-mode manual
 
 아쉬운 습관은 창이 뜨자마자 Enter를 누르는 것입니다. 나은 습관은 파일 이름과 바뀌는 줄을 읽고 고르는 것입니다. 그 몇 초가 잘못된 수정을 미리 잡아 줍니다.
 
-셸 명령 허락 창에는 `Yes, and don't ask again`이 나올 수 있습니다. 이것을 고르면 규칙이 `.claude/settings.local.json`에 저장되어 뒤로도 이어집니다. 파일 수정 승인은 세션이 끝날 때까지만 갑니다.[^prompt] 저장되는 쪽은 오래 남으니 뜻을 알 때만 고르세요.
+셸 명령 허락 창에는 `Yes, and don't ask again`이 나올 수 있습니다. 이것을 고르면 규칙이 설정 파일에 저장되어 다음 세션에도 이어집니다.[^local-file] 파일 수정 승인은 세션이 끝날 때까지만 갑니다.[^prompt] 저장되는 쪽은 오래 남으니 뜻을 알 때만 고르세요.
 
 <Quiz id="ch807-prompt" />
 
 ## 건너뛰는 옵션은 쓰지 마세요
 
-인터넷 글에서 `--dangerously-skip-permissions`를 보게 될 수 있습니다. 권한 확인을 건너뛰는 옵션입니다.[^skip] 쓰지 마세요. 인터넷이 끊긴 컨테이너나 가상 머신처럼 격리된 환경에서만 쓰는 옵션입니다.[^bypass] 프롬프트 인젝션(글 속에 숨긴 지시로 AI를 조종하는 공격)이나 실수를 막아 주지도 못합니다.[^bypass] 허락 창이 귀찮다면 다른 길이 있습니다. 자주 쓰는 일만 다음 절의 허용 규칙으로 풀어 주면 됩니다.
+인터넷 글에서 `--dangerously-skip-permissions`를 보게 될 수 있습니다. 권한 확인을 건너뛰는 옵션입니다.[^skip] 쓰지 마세요.
+
+이 옵션은 실수도, 프롬프트 인젝션(5장에서 본, 글 속에 숨긴 지시로 AI를 조종하는 공격)도 막아 주지 못합니다.[^bypass] 그래서 내 컴퓨터와 떼어 놓은 연습용 환경에서만 씁니다. 공식 문서는 인터넷이 끊긴 컨테이너나 가상 머신(내 컴퓨터 안에 따로 만든 격리된 컴퓨터)을 예로 듭니다.[^bypass]
+
+허락 창이 귀찮다면 다른 길이 있습니다. 자주 쓰는 일만 다음 절의 허용 규칙으로 풀어 주면 됩니다.
 
 <Quiz id="ch807-skip" />
 
 ## 허락 규칙 allow·ask·deny
 
-모드가 큰 틀이라면 규칙은 세부 항목입니다. Claude가 쓰는 기능을 도구라고 부릅니다. `Read`는 파일 읽기, `Bash`는 셸 명령입니다. 규칙은 이 도구마다 정합니다. **allow**는 묻지 않고 허용합니다. **ask**는 쓸 때마다 확인합니다. **deny**는 못 쓰게 막습니다.[^rules]
+모드가 큰 틀이라면 규칙은 세부 항목입니다. 규칙은 **도구**마다 정합니다. 도구는 Claude가 쓰는 기능입니다. 예를 들어 `Read`는 파일 읽기, `Bash`는 셸 명령입니다.
+
+규칙은 세 가지입니다.[^rules]
+
+- **allow**: 묻지 않고 허용합니다.
+- **ask**: 쓸 때마다 확인합니다.
+- **deny**: 못 쓰게 막습니다.
+
+규칙은 설정 파일에 적어 둡니다. 다음 절에서 직접 하나 만들어 봅니다.
 
 규칙은 deny, ask, allow 순서로 따지고 먼저 맞은 것이 이깁니다. 그래서 넓게 막아 둔 deny에 allow로 구멍을 낼 수 없습니다.[^rules] 거부 규칙은 어떤 모드에서도 막습니다.[^bypass]
 
-모양은 이렇습니다. `Bash(ls *)`는 `ls` 명령만 맞습니다. `Bash(*)`로 쓰면 모든 셸 명령이 맞습니다.[^rules] 별표는 넓게 맞으니 필요한 만큼만 쓰세요.
+모양은 이렇습니다. 도구 이름 뒤 괄호 안에 대상을 적습니다. `Bash(ls *)`는 `ls` 명령만 맞습니다. `Bash(*)`로 쓰면 모든 셸 명령이 맞습니다.[^rules] 별표는 넓게 맞으니 필요한 만큼만 쓰세요.
 
 세션 안에서 `/permissions`를 치면 규칙을 보고 관리할 수 있습니다.[^rules] 좌우 화살표로 위쪽 탭을 옮겨 다닙니다.
 
@@ -92,7 +108,11 @@ claude --permission-mode manual
 
 ## 거부 규칙 써 보기
 
-비밀 파일을 Claude가 못 읽게 막아 봅니다. 비밀번호나 인증 키 같은 로그인 정보가 든 파일은 권한 규칙으로 막아 두면 좋습니다.[^creds] **진짜 비밀번호는 쓰지 말고** 가짜 파일로 연습합니다. `/exit`로 나와 터미널에서 연습 폴더로 이동합니다. 맥과 리눅스는 아래를 통째로 붙여 넣습니다.
+비밀 파일을 Claude가 못 읽게 막아 봅니다. 비밀번호나 인증 키 같은 로그인 정보가 든 파일은 권한 규칙으로 막아 두면 좋습니다.[^creds] **진짜 비밀번호는 쓰지 말고** 가짜 파일로 연습합니다.
+
+할 일은 세 가지입니다. 가짜 비밀 파일을 만들고, 그 파일을 막는 설정 파일을 만들고, Claude에게 읽어 달라고 해 봅니다.
+
+`/exit`로 나와 터미널에서 연습 폴더로 이동합니다. 맥과 리눅스는 아래를 통째로 붙여 넣습니다. Windows PowerShell은 바로 아래 「Windows PowerShell이라면」의 방법을 따르세요.
 
 ```bash
 mkdir 비밀
@@ -113,14 +133,15 @@ EOF
 - `echo '…' > 비밀/암호.txt`: 따옴표 안의 글자를 파일에 저장합니다. `>`는 출력을 파일에 저장하는 기호입니다.
 - `mkdir -p .claude`: `.claude` 폴더를 만듭니다. 이미 있어도 오류가 나지 않습니다.
 - `cat > .claude/settings.json <<'EOF'`: 다음 줄부터 `EOF`까지를 이 파일에 저장합니다. 뒤의 장에서도 파일을 만들 때 이 모양을 씁니다.
+- `{`부터 `}`까지: 설정 파일에 들어갈 내용입니다. `"deny"` 칸에 막을 대상을 적었습니다.
 
 붙여 넣은 뒤 아직 실행되지 않았으면 Enter를 한 번 더 누르세요. 아무것도 안 나오면 성공입니다. `ls`로 `비밀` 폴더가 생겼는지 보세요.
 
-Windows PowerShell은 `mkdir 비밀`, `mkdir .claude`로 폴더를 만듭니다. `notepad 비밀\암호.txt`로 메모장을 열어 `가짜 비밀번호: cafe-1234`를 넣습니다. `notepad .claude\settings.json`에는 위 상자에서 `cat`으로 시작하는 줄과 `EOF` 줄을 빼고 그 사이만 넣습니다. 새 파일을 만들지 물으면 `예`를 누르고, `Ctrl + S`로 저장하고 닫습니다. 이 방법은 실행해 보지 않았습니다.
+**Windows PowerShell이라면**: `mkdir 비밀`, `mkdir .claude`로 폴더를 만듭니다. `notepad 비밀\암호.txt`로 메모장을 열어 `가짜 비밀번호: cafe-1234`를 넣습니다. `notepad .claude\settings.json`에는 위 상자에서 `cat`으로 시작하는 줄과 `EOF` 줄을 빼고 그 사이만 넣습니다. 새 파일을 만들지 물으면 `예`를 누르고, `Ctrl + S`로 저장하고 닫습니다. 이 방법은 실행해 보지 않았습니다.
 
 `Read(./비밀/**)`는 비밀 폴더 안의 모든 것을 읽지 말라는 뜻입니다. 터미널에서 `claude`를 켜고 "비밀/암호.txt 파일을 읽어서 내용을 알려 줘."라고 부탁해 보세요.
 
-같은 요청을 한 번에 끝나는 실행([10장](10-headless-automation.md)의 `claude -p`)으로 보냈더니 Claude는 파일을 읽지 못했다고 답했고 내용을 보여 주지 않았습니다. 문장은 실행마다 다를 수 있습니다. 확인할 것은 하나입니다. 답에 `cafe-1234`가 나왔나?
+같은 요청을 한 번에 끝나는 실행([10장](10-headless-automation.md)에서 배우는 방식)으로 보냈더니 Claude는 파일을 읽지 못했다고 답했고 내용을 보여 주지 않았습니다. 문장은 실행마다 다를 수 있습니다. 확인할 것은 하나입니다. 답에 `cafe-1234`가 나왔나?
 
 이 실습이 보여 주는 것은 Claude의 읽기 요청이 막혔다는 사실 하나입니다. 어떤 방법으로도 절대 못 읽는다는 뜻으로 넓혀 읽지는 마세요. 파일 이름을 지정하지 않고 읽는 명령에는 이 규칙이 적용되지 않습니다.[^deny-limit] 진짜 비밀번호는 작업 폴더에 두지 않는 편이 가장 안전합니다.
 
@@ -166,7 +187,7 @@ Claude가 하는 일을 멈추고 싶을 때는 Esc를 **한 번**만 누릅니�
 "Esc 두 번이면 다 돌아간다"고 생각하면 곤란합니다. 되감기는 **Claude의 편집 도구가 고친 파일**만 다룹니다. 다음은 되돌아오지 않습니다.[^limits]
 
 - 셸 명령으로만 바뀐 파일
-- 서브에이전트([9장](09-skills-extensions.md)에서 배우는 곁일 도우미)가 고친 다른 파일
+- 서브에이전트(Claude가 일의 일부를 떼어 맡기는 보조 도우미, [9장](09-skills-extensions.md))가 고친 다른 파일
 - 내가 직접 고친 파일이나 다른 세션의 편집(대체로)
 - 메일 보내기나 바깥 데이터베이스 변경처럼 컴퓨터 밖에서 한 일[^remote]
 
@@ -204,6 +225,9 @@ Claude가 하는 일을 멈추고 싶을 때는 Esc를 **한 번**만 누릅니�
 
 다음 장: [8장. 프로젝트 기억과 설정](08-memory-settings.md)
 
+[^run]: 이 장의 화면은 2026년 11월 6일 리눅스에서 Claude Code 2.1.318로 실행한 결과입니다.
+[^symbols]: 그림의 명령 속 `;`와 `2>/dev/null`의 뜻은 [명령어 사전](command-reference.md)에 있습니다.
+[^local-file]: 저장되는 파일은 `.claude/settings.local.json`입니다. 설정 파일은 [8장](08-memory-settings.md)에서 다룹니다.
 [^modes]: Claude Code 공식 문서, 「Choose a permission mode」. "A permission mode sets which actions Claude can take in a session without asking you first." / "In Manual mode, Claude Code stops and asks you before most actions that edit files, run shell commands, or reach the network." / "lets Claude create and edit files in your working directory without prompting" / "Plan mode tells Claude to research and propose changes without making them." https://code.claude.com/docs/en/permission-modes (확인일 2026-11-06)
 [^auto]: Claude Code 공식 문서, 「Choose a permission mode」. "With Claude Code v2.1.283 or later, auto mode is the built-in starting permission mode for interactive terminal and VS Code sessions." / "A separate classifier model reviews actions before they run, blocking anything that escalates beyond your request, targets unrecognized infrastructure, or appears driven by hostile content Claude read." / "Auto mode reduces permission prompts but does not guarantee safety." https://code.claude.com/docs/en/permission-modes (확인일 2026-11-06)
 [^practice]: Claude Code 공식 문서, 「Best practices for Claude Code」. "After three blocks in a row (or twenty in total), auto mode pauses and goes back to asking you." / "Safe, but after the tenth prompt you start approving without reading, and nothing moves while you're away from the keyboard." / "`Shift+Tab` in the session cycles through the permission modes, Manual included, or start with `claude --permission-mode manual` from your shell." / "`Esc` stops Claude mid-action and keeps everything up to that point, so you can redirect without losing work." https://code.claude.com/docs/en/best-practices (확인일 2026-11-06)

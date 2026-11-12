@@ -40,7 +40,12 @@ mkdir -p .agents/skills
 cp -R .claude/skills/meeting-notes .claude/skills/study-notes .claude/skills/weekly-review .agents/skills/
 ```
 
-이 실습은 허락 방식을 미리 정해 두고 돌리는 터미널 실행(7장)이라, 묻지 못하고 그대로 멈췄습니다. 앱에서 이 지점이 어떻게 보이는지는 이 가이드가 직접 확인하지 못했습니다. 허락을 묻는 화면이 나오면 **무엇을 어디에 쓰는지** 읽고 판단하세요.
+두 줄의 뜻은 이렇습니다.
+
+- `mkdir -p .agents/skills`: `.agents/skills` 폴더를 만듭니다. `mkdir`은 "폴더 만들기", `-p`는 "중간 폴더까지 한 번에 만들고, 이미 있으면 그냥 넘어가기"입니다.
+- `cp -R 원본1 원본2 원본3 .agents/skills/`: 스킬 폴더 세 개를 `.agents/skills/` 안으로 복사합니다. `cp`는 "복사", `-R`은 "폴더 안의 파일까지 통째로"입니다. 원래 폴더는 그대로 남습니다.
+
+이 가이드의 실습은 앱이 아니라 **터미널**에서 돌렸습니다. 허락 방식을 미리 정해 두고 묻지 않게 하는 방식이라, Codex가 물어보지 못하고 그대로 멈췄습니다(이 방식은 7장에서 다룹니다). 앱에서 이 지점이 어떻게 보이는지는 이 가이드가 직접 확인하지 못했습니다. 허락을 묻는 화면이 나오면 **무엇을 어디에 쓰는지** 읽고 판단하세요.
 
 이 가이드는 Codex가 알려 준 명령을 **직접** 실행해서 복사했습니다. macOS 터미널을 열고 `cd ~/hello-ai-연습/정리도구`로 폴더에 들어간 뒤 위의 두 줄을 칩니다. 터미널이 처음이라면 [Claude Code 10장](../20-claude-code/10-terminal.md)을 먼저 보세요.
 
@@ -85,7 +90,7 @@ $weekly-review
 
 처음부터 새 스킬을 만들 때는 기본으로 들어 있는 `$skill-creator`를 부르고, 목표·단계·형식을 설명합니다.[^creator] 공식 문서가 꼽는 좋은 첫 스킬은 주간 보고나 회의 후속 정리처럼 **단계와 형식이 늘 같은 일**입니다.[^first] 정리도구의 세 스킬이 딱 그런 예입니다.
 
-**플러그인**은 스킬과 외부 도구 연결을 함께 묶어 설치하는 꾸러미입니다.[^plugin] ChatGPT와 Codex는 플러그인 목록 하나를 함께 씁니다.[^shared] 플러그인에 든 훅(자동으로 도는 스크립트)은 돌기 전에 검토하고 믿을 만한지 판단하라고 합니다.[^hooks] 처음 보는 플러그인은 [Claude Code 7장](../20-claude-code/07-skills-plugins.md)에서 배운 것처럼 만든 곳과 권한을 먼저 확인하세요.
+이번 실습에는 **플러그인**이 필요 없습니다. 이름과 주의할 점만 알아 두세요. 플러그인은 스킬과 외부 도구 연결을 함께 묶어 설치하는 꾸러미입니다.[^plugin][^shared] 플러그인에 든 훅(자동으로 도는 스크립트)은 돌기 전에 검토하고 믿을 만한지 판단하라고 합니다.[^hooks] 처음 보는 플러그인은 [Claude Code 7장](../20-claude-code/07-skills-plugins.md)에서 배운 것처럼 만든 곳과 권한을 먼저 확인하세요.
 
 <Quiz id="ch505-create" />
 
@@ -128,5 +133,5 @@ $weekly-review
 [^creator]: Codex 공식 문서, 「Skills & Plugins」. "In ChatGPT, start with `@skill-creator`; in Codex, use `$skill-creator`." https://learn.chatgpt.com/docs/skills-and-plugins (확인일 2026-11-01)
 [^first]: Codex 공식 문서, 「Skills & Plugins」. "Good first skills include a weekly update, a campaign brief, a meeting follow-up, or any task where the steps and format should stay consistent." https://learn.chatgpt.com/docs/skills-and-plugins (확인일 2026-11-01)
 [^plugin]: Codex 공식 문서, 「Skills & Plugins」. "A **plugin** is an installable bundle that can include skills and Model Context Protocol (MCP) servers." https://learn.chatgpt.com/docs/skills-and-plugins (확인일 2026-11-01)
-[^shared]: Codex 공식 문서, 「Skills & Plugins」. "ChatGPT and Codex share one universal plugin directory." https://learn.chatgpt.com/docs/skills-and-plugins (확인일 2026-11-01)
+[^shared]: ChatGPT와 Codex는 플러그인 목록 하나를 함께 씁니다. Codex 공식 문서, 「Skills & Plugins」. "ChatGPT and Codex share one universal plugin directory." https://learn.chatgpt.com/docs/skills-and-plugins (확인일 2026-11-01)
 [^hooks]: Codex 공식 문서, 「Plugins」. "Review and trust plugin hooks before they run." https://learn.chatgpt.com/docs/plugins (확인일 2026-11-01)

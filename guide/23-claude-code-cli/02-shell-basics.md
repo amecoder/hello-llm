@@ -68,7 +68,7 @@ ls
 | 리눅스 | `/home/seoyeon` |
 | Windows | `C:\Users\seoyeon` |
 
-**집 폴더**(홈 폴더)는 내 계정의 시작 폴더입니다. 터미널을 열면 보통 여기서 시작합니다. 이 주소를 줄여 쓰는 기호가 `~`(물결표)입니다. 그래서 `~/hello-ai-연습`은 "내 집 폴더 안의 hello-ai-연습 폴더"라는 뜻입니다. 뒤의 장에 나오는 `~/.claude`는 Windows에서 `C:\Users\이름\.claude`입니다.[^win-home]
+**집 폴더**(홈 폴더)는 내 계정의 시작 폴더입니다. 터미널을 열면 보통 여기서 시작합니다. 이 주소를 줄여 쓰는 기호가 `~`(물결표)입니다. 그래서 `~/hello-ai-연습`은 "내 집 폴더 안의 hello-ai-연습 폴더"라는 뜻입니다.[^win-home]
 
 경로를 쓰는 방법은 두 가지입니다.
 
@@ -95,16 +95,16 @@ ls -la ~
 | `-la` | 옵션 | 어떻게 할까: 숨긴 파일까지 자세히 |
 | `~` | 대상 | 어디에 할까: 집 폴더 |
 
-이 예는 맥·리눅스 명령입니다. Windows PowerShell에서는 `ls -Force ~`로 씁니다.
-
 옵션은 명령의 동작을 바꾸는 스위치입니다. 맥·리눅스에는 두 가지 모양이 있습니다.
 
 - **짧은 옵션**: `-` 하나와 글자 하나입니다. `-l`과 `-a`를 붙여 `-la`로 쓸 수 있습니다.
 - **긴 옵션**: `--` 두 개와 낱말입니다. `--version`처럼 뜻이 잘 보입니다.
 
-PowerShell은 `-Force`처럼 `-` 하나에 낱말을 붙입니다. 같은 뜻의 옵션이어도 이름이 다를 수 있습니다. `claude`와 `git`의 옵션은 어느 운영체제에서나 같습니다.
+PowerShell은 `-Force`처럼 `-` 하나에 낱말을 붙입니다. 같은 뜻의 옵션이어도 이름이 다를 수 있습니다. 그래서 위의 `ls -la ~`는 PowerShell에서 `ls -Force ~`로 씁니다. `claude`와 `git`의 옵션은 어느 운영체제에서나 같습니다.
 
-옵션 뒤에 값이 붙기도 합니다. `--max-turns 10`은 "횟수 상한은 10"이라는 뜻입니다. 따옴표로 묶은 부분은 한 덩어리입니다. `claude -p "메모를 요약해 줘"`에서 따옴표 안은 띄어쓰기가 있어도 낱말 하나로 칩니다.
+옵션 뒤에 값이 붙기도 합니다. 예를 들어 `--max-turns 10`은 "횟수 상한은 10"이라는 뜻입니다. 이 옵션은 지금 외우지 않아도 됩니다.
+
+따옴표로 묶은 부분은 한 덩어리입니다. `claude -p "메모를 요약해 줘"`에서 따옴표 안은 띄어쓰기가 있어도 낱말 하나로 칩니다.
 
 모든 명령을 외울 필요는 없습니다. 이 강좌의 명령은 [명령어 사전](command-reference.md)에 모아 두었습니다. 낯선 조각이 보이면 찾아보세요.
 
@@ -146,11 +146,18 @@ cp 메모.txt inbox/
 
 명령을 다 외우고 다 칠 필요는 없습니다. 아래 다섯 가지만 알면 훨씬 편합니다.
 
-**붙여넣기.** 맥은 `Cmd + V`, 리눅스는 `Ctrl + Shift + V`입니다.[^paste] PowerShell은 `Ctrl + V`나 오른쪽 클릭입니다.[^paste-win] 이 페이지의 명령은 복사해서 붙여 넣어도 됩니다. 오타가 줄어듭니다. 붙여 넣은 뒤 아직 실행되지 않았으면 Enter를 한 번 더 누르세요.
+**붙여넣기와 복사하기.** 터미널에서는 평소와 키가 조금 다릅니다. 복사할 때는 터미널의 글자를 마우스로 끌어 고른 뒤 누릅니다.
 
-**복사하기.** 터미널의 글자를 마우스로 끌어 고른 뒤 맥은 `Cmd + C`, 리눅스는 `Ctrl + Shift + C`를 누릅니다. Windows는 고른 상태에서 `Ctrl + C`나 오른쪽 클릭입니다. 프로그램에 따라 조금 다를 수 있습니다.
+| 할 일 | 맥 | 리눅스 | Windows PowerShell |
+|---|---|---|---|
+| 붙여넣기 | `Cmd + V` | `Ctrl + Shift + V`[^paste] | `Ctrl + V`, 오른쪽 클릭[^paste-win] |
+| 복사하기 | `Cmd + C` | `Ctrl + Shift + C` | 고른 뒤 `Ctrl + C`, 오른쪽 클릭 |
 
-**위쪽 화살표.** 방금 친 명령이 다시 나옵니다. 여러 번 누르면 더 예전 명령으로 갑니다. 조금만 고쳐 다시 실행할 때 좋습니다.
+프로그램에 따라 조금 다를 수 있습니다. 이 페이지의 명령은 복사해서 붙여 넣어도 됩니다. 오타가 줄어듭니다. 붙여 넣은 뒤 아직 실행되지 않았으면 Enter를 한 번 더 누르세요.
+
+지금 해 보세요. 위의 `pwd`를 복사해 터미널에 붙여 넣고 Enter를 누릅니다.
+
+**위쪽 화살표.** 방금 친 명령이 다시 나옵니다. 여러 번 누르면 더 예전 명령으로 갑니다. 조금만 고쳐 다시 실행할 때 좋습니다. 방금 친 `pwd`가 다시 나오는지 눌러 보세요.
 
 **Tab.** 이름을 앞부분만 치고 Tab을 누르면 나머지를 채워 줍니다. `cd ~/Doc`까지 치고 Tab을 눌러 보세요. `Documents` 폴더가 없으면 `ls`에 보이는 다른 폴더 이름으로 해 보세요. 긴 한글 파일 이름에서 특히 쓸모가 있습니다. 한글에서 잘 안 채워지면 이름을 복사해 붙여 넣으면 됩니다.
 
@@ -259,4 +266,4 @@ Get-Content -Encoding UTF8 inbox\회의-2026-10-27-주간회의.txt
 
 [^paste]: Claude Code 공식 문서, 「Terminal guide for new users」. "Copy this line, paste it into your terminal (`Cmd + V` on macOS, `Ctrl + Shift + V` on Linux), and press `Enter`:" https://code.claude.com/docs/en/terminal-guide (확인일 2026-11-06)
 [^paste-win]: Claude Code 공식 문서, 「Terminal guide for new users」. "Copy this line, paste it into PowerShell with `Ctrl + V` or right-click, and press `Enter`:" https://code.claude.com/docs/en/terminal-guide (확인일 2026-11-06)
-[^win-home]: Claude Code 공식 문서, 「Settings files and precedence」. "On Windows, `~/.claude` means `%USERPROFILE%\.claude`." https://code.claude.com/docs/en/settings (확인일 2026-11-06)
+[^win-home]: 뒤의 장에 나오는 `~/.claude`는 Windows에서 `C:\Users\이름\.claude`입니다. Claude Code 공식 문서, 「Settings files and precedence」. "On Windows, `~/.claude` means `%USERPROFILE%\.claude`." https://code.claude.com/docs/en/settings (확인일 2026-11-06)
