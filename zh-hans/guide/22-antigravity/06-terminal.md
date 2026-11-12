@@ -1,9 +1,13 @@
 # 第6章 在终端里使用——`agy -p` 和悄悄拒绝
 
-> **一句话总结**：`agy` 是 Antigravity 的终端程序，`agy -p "要做的事"` 运行一次就结束。
-> 在 `-p` 下，需要许可的事会被**悄悄拒绝**。可是**退出码仍是 0（成功）**，所以很容易把空结果误当成成功。
+<Badge type="info" text="选读" /> 需要的时候再读。跳过也能跟上后面的章节。
 
-这一章是根据 2026 年 11 月 1 日确认的 Antigravity 官方文档，以及在 macOS 上运行 `agy` 1.4.12 的结果写的。这本指南是在另一个实践用的 AI 工具里调用并运行了 `agy`。官方 FAQ 说个人套餐不支持这种用法（[第7章](07-safety-choose.md)），所以照着做时，请**直接在终端里**运行 `agy`。**如果你是第一次接触终端，这一章可以跳过。** 终端是什么，在 [Claude Code 第10章](../20-claude-code/10-terminal.md)里讲过了。
+> **一句话总结**：`agy` 是 Antigravity 的终端程序，`agy -p "要做的事"` 运行一次就结束。
+> 在 `-p` 下，需要许可的事会被**悄悄拒绝**。可是**退出码**（程序结束时留下的编号）仍是 **0（成功）**，所以很容易把空结果误当成成功。
+
+**终端**是用文字输入命令来操作电脑的窗口。**如果你是第一次接触终端，这一章可以跳过。** 想多了解终端，请看 [Claude Code 第10章](../20-claude-code/10-terminal.md)（选读）。
+
+本章的结果，是这本指南在 macOS 上实际运行 `agy` 得到的。照着做时，请**直接在终端里**运行 `agy`。[^howrun]
 
 ## 安装并开始
 
@@ -15,10 +19,12 @@ curl -fsSL https://antigravity.google/cli/install.sh | bash
 
 这条命令会直接运行从互联网上下载的安装程序。所以，**请确认和官方文档（antigravity.google/docs）上写的一模一样，再运行。** Windows 用的命令也在官方文档里。
 
-进入整理工具文件夹，输入 `agy`，就会打开对话界面。[^tui] 如果已经在应用里登录过，就不用浏览器，直接登录。[^keyring] 第一次运行时，会确认**是否信任这个文件夹**（Workspace trust）。[^trust]
+进入整理工具文件夹，输入 `agy`，就会打开对话界面。[^tui] 下面第一行的 `cd` 是进入那个文件夹的命令。如果已经在应用里登录过，就不用浏览器，直接登录。[^keyring]
+
+第一次运行时，会问你**是否信任这个文件夹**（Workspace trust，把文件夹登记为可信的步骤）。[^trust] 整理工具文件夹是你自己建的，回答信任就行。这样回答好，应该就能避开后面要讲的一个拒绝陷阱（这本指南的推测）。
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 agy
 ```
 
@@ -41,7 +47,12 @@ agy
 
 ## `agy -p`——问一次就结束
 
-`-p` 是发出一个请求、拿到回答后就结束的方式。因为没有询问的窗口，需要许可的事会按事先定好的规则处理。[^headless] 回答作为正式输出（stdout）输出，进度和错误则走旁路（stderr）。[^stdout]
+`-p` 是发出一个请求、拿到回答后就结束的方式。因为没有询问的窗口，需要许可的事会按事先定好的规则处理。[^headless] 程序输出的文字分成两条路。[^stdout]
+
+- **正式输出**（stdout，标准输出）：回答本身。比如我要的文件列表表格。
+- **旁路**（stderr，标准错误）：进度和错误。比如告知 shell 命令被拒绝的提示。
+
+在终端界面上，两者通常会一起显示。回答和提示混在一起也不用慌。
 
 官方文档说明，工作文件夹内文件的读写自动允许，shell 命令默认是“询问”，所以会被**悄悄拒绝**（soft-deny）。[^policy] 悄悄拒绝不会中断运行，而是以**退出码 0** 结束，只在 stderr 里告知什么被拦住了。[^soft]
 
@@ -51,19 +62,29 @@ agy
 
 这些是在整理工具文件夹里多次运行 `agy -p` 时真实遇到的事。
 
-1. **结果是空的，却显示成功。** 代理想用 shell 命令（`ls`）查看文件夹列表，被拒绝后，**什么也没做出来就结束了。** 退出码是 0。这种事发生了三次。请一定要确认结果文件是不是真的生成了。
-2. **在没有信任的文件夹里，连读写也被拒绝。** 官方文档说工作文件夹内的文件自动允许，但在这本指南的练习文件夹里，写入和读取也被拒绝了。原因看起来是这个文件夹还没有被登记为“信任的文件夹”（这本指南的推测）。打开一次交互式 `agy`，在被问到时回答信任这个文件夹，就会登记。[^trusted]
-3. **解决：一个模式 + 一句话。** 加上 `--mode accept-edits`，并在请求末尾加上“不要用 shell 命令，只读写文件”，就全部成功了。没有使用允许一切的 `--dangerously-skip-permissions`。官方文档也建议使用缩小范围的允许规则。[^skip]
-4. **回答漏掉的文件。** 我请它以只读方式，把 notes 文件夹的文件列表做成表格给我。整理好的文件有 3 个（周会会议记录·临时会议会议记录·周回顾），但表格里**漏掉了临时会议会议记录**，反而放进了空文件 `.gitkeep`。请自己数一数确认的范围。
+1. **结果是空的，却显示成功。** 代理想用 shell 命令（`ls`，在终端里输入的命令）查看文件夹列表，被拒绝了。于是它**什么也没做出来就结束了。** 退出码是 0。这种事发生了三次。
+   - 要做的事：请一定要确认结果文件是不是真的生成了。
+2. **在没有信任的文件夹里，连读写也被拒绝。** 在练习文件夹里，曾经连写入和读取文件都被拒绝。原因看起来是这个文件夹还没有被登记为“信任的文件夹”（这本指南的推测）。[^trusted]
+   - 要做的事：打开一次交互式 `agy`，回答信任这个文件夹。[^trusted]
+3. **解决：一个模式 + 一句话。** 在命令末尾加上 `--mode accept-edits`，并在请求末尾加上“不要用 shell 命令，只读写文件”，就全部成功了。
+   - 不要使用允许一切的 `--dangerously-skip-permissions` 选项。
+   - 这种以 `--` 开头的文字叫作**选项**。加在命令后面，用来改变运行方式。`--mode accept-edits` 的意思是用上面表格里的 `accept-edits` 模式运行。在下面命令的最末尾能看到它。
+4. **回答漏掉的文件。** 我请它以只读方式，把 notes 文件夹的文件列表做成表格给我。整理好的文件有 3 个（周会会议记录·临时会议会议记录·周回顾）。可是表格里**漏掉了临时会议会议记录**，反而放进了空文件 `.gitkeep`。
+   - 要做的事：请自己数一数确认的范围。
+
+::: details 详细说明（点击展开）
+- 第2条：官方文档说工作文件夹内的文件自动允许。可还是被拒绝了，所以像上面那样，推测原因是没有登记为信任的文件夹。[^trusted]
+- 第3条：没有使用允许一切的 `--dangerously-skip-permissions`。官方文档也建议使用缩小范围的允许规则。[^skip]
+:::
 
 实际用的命令是这样的。
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 agy -p "列出 notes 文件夹的文件，并用一行告诉我每个文件是用哪个模板（templates 里的哪一个）写的。不要修改文件。回答要简短，只用表格。不要用 shell 命令，只读取文件。" --mode accept-edits
 ```
 
-结果：[agy -p 输出](/practice/notes/results/antigravity/6장-agy-p-출력.txt)（我电脑里的路径换成了 `~`）
+结果：[agy -p 输出](/practice/zh-hans/notes/results/antigravity/ch6-agy-p-output.txt)（我电脑里的路径换成了 `~`）
 
 | | Claude Code | Codex | Antigravity |
 |---|---|---|---|
@@ -112,6 +133,7 @@ agy -p "列出 notes 文件夹的文件，并用一行告诉我每个文件是�
 
 下一章：[第7章. 费用·数据·安全，以及选择三个工具](07-safety-choose.md)
 
+[^howrun]: 这一章是根据 2026 年 11 月 1 日确认的 Antigravity 官方文档，以及在 macOS 上运行 `agy` 1.4.12 的结果写的。这本指南是在另一个实践用的 AI 工具里调用并运行了 `agy`。官方 FAQ 说个人套餐不支持这种用法（[第7章](07-safety-choose.md)）。
 [^install]: Antigravity 官方文档，《Get started》。"curl -fsSL https://antigravity.google/cli/install.sh | bash" https://antigravity.google/docs/getting-started （确认日期 2026-11-01）
 [^tui]: Antigravity 官方文档，《Get started》。"| `agy` | Launches the interactive TUI in the current directory. |" https://antigravity.google/docs/getting-started （确认日期 2026-11-01）
 [^keyring]: Antigravity 官方文档，《Authenticate》。"If a valid token profile is found, the CLI authenticates your session silently without opening a browser." https://antigravity.google/docs/install （确认日期 2026-11-01）

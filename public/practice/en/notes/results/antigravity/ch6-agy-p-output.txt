@@ -1,0 +1,5 @@
+| File | Template used (`templates/`) | One-line description |
+|---|---|---|
+| [weekly-review-2026-10-27.md](file://~/hello-ai-practice/organizer/notes/weekly-review-2026-10-27.md) | [weekly-review.md](file://~/hello-ai-practice/organizer/templates/weekly-review.md) | A weekly review organized in the 3-section KPT structure: `Went well (Keep)` · `Fell short (Problem)` · `Try next week (Try)`. |
+| [minutes-2026-10-27-weekly.md](file://~/hello-ai-practice/organizer/notes/minutes-2026-10-27-weekly.md) | [minutes.md](file://~/hello-ai-practice/organizer/templates/minutes.md) | Meeting minutes organized in a 4-section structure: `1. Decisions` · `2. Action items` · `3. To discuss next` · `4. Next meeting`. |
+| [.gitkeep](file://~/hello-ai-practice/organizer/notes/.gitkeep) | (no template) | An empty file that keeps the empty folder. |

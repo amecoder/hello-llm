@@ -19,7 +19,8 @@
 | 12 | `numdiff-es.py` | 스페인어용 숫자 대조 — 만·억 단위를 풀어 쓴 금액(300만 원 → 3.000.000)과 달 이름을 맞춰 비교 |
 | 13 | `add-locale.py <저장소> <locale-<언어>.json>` | 새 언어의 설정 블록·검색 문구·화면 문구 등록(`after` 로 메뉴 순서 지정) |
 | 14 | `sync-library.py <저장소> <언어>` · `libmatch.py` | 번역판 프롬프트 모음을 본문 프롬프트와 글자까지 일치 / 일치율 측정 |
-| 15 | `make-hant.py` · `fix-anchors-by-position.ts` | 간체 → 번체(OpenCC s2twp) 변환과 앵커 재연결. 간체를 고친 뒤 다시 돌린다 |
+| 15 | `make-hant.py` · `fix-anchors-by-position.ts` | 간체 → 번체(OpenCC s2twp) 변환과 앵커 재연결. 간체를 고친 뒤 다시 돌린다. 페이지·연습 파일(`public/practice/zh-hant/`)·그림 원본(`.excalidraw`)을 바꾸고, 대만식 단어(只·帳號·視窗·裡·電子郵件·貼上·方案)를 보정한다. 그림 `.svg` 는 excalidraw 스킬로 다시 그린다(2026-11-12) |
+| 16 | `namemap.py` · `prose_pass.py <언어...>` | 연습 파일·폴더의 한국어 이름 → 영어 이름 규칙(`public/practice/<언어>/` 와 번역 페이지가 같은 이름을 쓴다). `map_markdown` 은 코드·링크 안, `prose_pass.py` 는 문장·표·그림 설명 안의 이름을 바꾼다(2026-11-12) |
 | — | `agent-pages.md` | agy 대신 Claude 하위 에이전트에게 페이지 번역을 맡길 때 주는 지시서(LANG·CODE·EXAMPLE 을 바꿔 씀) |
 
 - 번역 규칙(문체·보존할 것·고유명사)은 `rules-<언어>.txt`.

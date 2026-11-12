@@ -1,6 +1,6 @@
 # 第3章 安裝與登入
 
-<Badge type="tip" text="必讀" /> 想跟著這一階段學下去，一定要讀這一章。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
 
 > **一句話總結**：貼上官方文件裡的安裝命令，然後在**新的終端視窗**裡用 `claude --version` 確認。接著在練習資料夾裡執行 `claude`，在瀏覽器裡登入，準備就完成了。
 
@@ -138,14 +138,14 @@ $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
 在新視窗裡移動到第2章的練習資料夾，然後輸入 `claude`。Mac·Linux 這樣輸入。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude
 ```
 
 Windows PowerShell 這樣輸入。
 
 ```powershell
-cd $HOME\hello-ai-연습\터미널
+cd $HOME\hello-ai-practice\terminal
 claude
 ```
 

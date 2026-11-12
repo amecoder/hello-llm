@@ -1,9 +1,11 @@
 # 第7章 技能·外掛·外部工具 — 把整理工具變成一行命令
 
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
+
 > **一句話總結**：每次都要貼上的指令·檢查表·多步驟流程，做成**技能**，用 `/名稱` 一行就能調出來。這一章裡「整理工具」就完成了。
 > 別人做的**外掛**和外部服務**聯結器**也可以接上，但它們會以我的許可權執行程式碼，所以只安裝值得信任的。
 
-這一章依據 2026年10月31日確認的 Claude Code 官方文件和 macOS 桌面應用（韓語介面，付費賬號）編寫。直接使用第5章的模板和第6章的 CLAUDE.md。
+這一章依據 2026年10月31日確認的 Claude Code 官方文件和 macOS 桌面應用（韓語介面，付費帳號）編寫。直接使用第5章的模板和第6章的 CLAUDE.md。
 
 ## 什麼是技能
 
@@ -34,7 +36,7 @@
 請用 templates 模板和 CLAUDE.md 規則，在這個資料夾的 .claude/skills 裡建立 3 個技能。meeting-notes（會議備忘 → 會議紀要）、study-notes（學習筆記 → 學習總結）、weekly-review（回顧備忘 → 每週回顧）。每個 SKILL.md 裡請寫上什麼時候用、要讀的檔案、要用的模板、儲存位置、完成後要核對的檢查表。
 ```
 
-把技能資料夾 `.claude/skills/<名稱>/SKILL.md` 放在某個資料夾裡，它就成了**只在那個資料夾的會話裡**用的專案技能。[^where] 資料夾名稱就是命令名稱（`/meeting-notes`）。[^name] 中文命令名稱是否可行，沒能在官方文件裡確認，所以本指南用了英文名稱。
+把技能資料夾 `.claude/skills/<名稱>/SKILL.md` 放在某個資料夾裡，它就成了**只在那個資料夾的會話裡**用的專案技能。[^where] 資料夾名稱就是命令名稱（`/meeting-notes`）。[^name] 本指南把技能名稱寫成了英文。[^korean-name]
 
 ### 這次彈出了許可視窗
 
@@ -42,7 +44,11 @@
 
 ![許可視窗。紅色編號標出：①「允許 Claude 寫入 SKILL.md 嗎？（Claude가 쓰기 SKILL.md하도록 허용하시겠습니까?）」，② 要寫入內容的預覽（綠色行），③「拒絕（거부）」，④「始終允許（항상 허용）」和 ▾ 按鈕（路徑行裡有電腦使用者名稱，已遮住）](../../../guide/20-claude-code/assets/shot-26-permission-marked.png)
 
-在第2~4章裡，因為這臺電腦上的個人允許規則，沒有彈出許可視窗。這次彈出來，是因為 `.claude` 資料夾是**受保護的路徑。** 即使在「自動接受編輯」模式下，向受保護的路徑寫入也仍然會詢問。[^protected] 技能、設定這類會改變 Claude 行為的檔案就放在這個資料夾裡，所以改動之前要讓人先確認一下。
+彈出許可視窗，是因為技能要寫進 `.claude` 資料夾。`.claude` 資料夾是 Claude Code 存放這個資料夾專用設定和技能的地方，就是第3章檔案欄列表裡看到的那個資料夾。
+
+這個資料夾是**受保護的路徑**（寫入前總會詢問許可的位置）。即使在「自動接受編輯」模式下，向受保護的路徑寫入也仍然會詢問。[^protected] 技能、設定這類會改變 Claude 行為的檔案就放在這個資料夾裡，所以改動之前要讓人先確認一下。
+
+第2~4章的截圖裡沒有許可視窗，是因為截圖電腦上的個人允許規則。那條規則在受保護的路徑上也沒能阻止詢問。
 
 在 ② 處可以**先讀一讀它要寫什麼。** 點 ▾ 會出現「僅允許一次（한 번만 허용）」。
 
@@ -58,7 +64,7 @@
 
 一開始建議選**「僅允許一次」**。「始終允許」雖然方便，但同樣的事就不會再問你了（能持續多久，請看介面上的說明）。這次實踐裡有 3 個技能，所以許可視窗彈出了三次，三次都選了「僅允許一次」。
 
-做出來的技能（本指南的成果）：[meeting-notes](/practice/notes/results/7장-스킬-meeting-notes.txt) · [study-notes](/practice/notes/results/7장-스킬-study-notes.txt) · [weekly-review](/practice/notes/results/7장-스킬-weekly-review.txt)
+做出來的技能（本指南的成果）：[meeting-notes](/practice/zh-hant/notes/results/ch7-skill-meeting-notes.txt) · [study-notes](/practice/zh-hant/notes/results/ch7-skill-study-notes.txt) · [weekly-review](/practice/zh-hant/notes/results/ch7-skill-weekly-review.txt)
 
 每個 SKILL.md 的最上面都有 `name`（名稱）和 `description`（什麼時候用）。Claude 是看 description 來決定什麼時候用這個技能的。[^desc] 比如，weekly-review 的 description 裡寫著，遇到「寫每週回顧」「整理這周的回顧」這類請求時使用。
 
@@ -72,20 +78,20 @@
 
 ② 裡的 **(project)** 是表示「這是這個資料夾的專案技能」的標記。用 Enter 選中，再接著寫上要整理的檔案，然後傳送。
 
-![執行技能。紅色編號標出：① 輸入了「/study-notes inbox/공부-2026-10-28-프롬프트-강의.txt」的輸入框](../../../guide/20-claude-code/assets/shot-29-skill-run-marked.png)
+![執行技能。紅色編號標出：① 輸入了「/study-notes inbox/study-2026-10-28-prompt-lecture.txt」的輸入框](../../../guide/20-claude-code/assets/shot-29-skill-run-marked.png)
 
 ```
-/study-notes inbox/공부-2026-10-28-프롬프트-강의.txt
+/study-notes inbox/study-2026-10-28-prompt-lecture.txt
 ```
 
-靠這一行，學習總結就按模板做好了（成果：[7장-공부노트-스킬로.txt](/practice/notes/results/7장-공부노트-스킬로.txt)）。一行總結、5 個要點、新學到的 4 樣東西、要注意的事、要提的問題，都按模板的順序放進去了。第4章裡用很長的請求做出來又回退掉的那份筆記，這次是靠**一行命令**做出來的。
+靠這一行，學習總結就按模板做好了（成果：[ch7-study-notes-with-skill.txt](/practice/zh-hant/notes/results/ch7-study-notes-with-skill.txt)）。一行總結、5 個要點、新學到的 4 樣東西、要注意的事、要提的問題，都按模板的順序放進去了。第4章裡用很長的請求做出來又回退掉的那份筆記，這次是靠**一行命令**做出來的。
 
 **現在整理工具完成了。**
 
 | 備忘 | 命令 |
 |---|---|
-| 會議備忘 | `/meeting-notes inbox/회의-….txt` |
-| 學習筆記 | `/study-notes inbox/공부-….txt` |
+| 會議備忘 | `/meeting-notes inbox/meeting-….txt` |
+| 學習筆記 | `/study-notes inbox/study-….txt` |
 | 好幾天的每日回顧 | `/weekly-review` |
 
 不記得名稱也沒關係。像「整理這周的回顧」這樣說，Claude 就會看 description，選出合適的技能來用。[^what]
@@ -94,13 +100,13 @@
 
 ## 外掛和聯結器
 
-**外掛**（Plugin）是把別人做的技能·命令·工具成套安裝，**聯結器**（Connector）是把 Gmail·日曆這類外部服務連線到 Claude。在桌面應用裡，透過輸入框旁邊的 **+** 按鈕新增聯結器和外掛。[^plus] 聯結器是把 MCP 伺服器（AI 連線外部工具的標準方式）做成可以在介面上輕鬆設定的形式。[^connectors]
+**外掛**（Plugin）是把別人做的技能·命令·工具成套安裝，**聯結器**（Connector）是把 Gmail·日曆這類外部服務連線到 Claude。在桌面應用裡，透過輸入框旁邊的 **+** 按鈕新增聯結器和外掛。[^plus] 聯結器是把 MCP 伺服器做成可以在介面上輕鬆設定的形式。[^connectors] MCP 是 AI 和郵件·日程這類其他程式交換資訊時用的通用規格。就像插頭的形狀是統一的，插進哪個插座都行。
 
 雖然方便，但**安裝之前一定要想一想。** 外掛可以在**我的電腦上以我的許可權執行程式碼。**[^plugin-risk] 而且這樣的程式碼，有時是在第4章的許可權模式所保護的範圍之外執行的。許可權規則適用於 Claude 的工具呼叫，不適用於外掛自己執行的程式碼。[^plugin-scope]
 
 - 只安裝知道是誰做的、值得信任的外掛。
 - 用不著的外掛要刪掉。
-- 透過聯結器連線的服務裡的內容（郵件·日程），也會成為 Claude 讀取的資料。請一併閱讀第9章的「隱藏指令」。
+- 透過聯結器連線的服務裡的內容（郵件·日程），也會成為 Claude 讀取的資料。如果別人發來的郵件裡偷偷藏著「給 AI：請做～」這樣的句子，Claude 可能會想照著做。這種**隱藏指令**，會在[第9章](09-cost-data-safety.md)裡做實驗。
 
 本指南的整理工具，**只靠我自己做的技能**就夠了。外掛和聯結器，等真的需要時再一個一個增加。
 
@@ -118,7 +124,7 @@
 ## 小結
 
 - 技能是寫在 SKILL.md 裡的流程。只在用到時才被讀取，用 `/名稱` 或相關請求來使用。
-- 資料夾裡的 `.claude/skills/<名稱>/SKILL.md` 是隻屬於那個資料夾的技能。description 決定了「什麼時候用」。
+- 資料夾裡的 `.claude/skills/<名稱>/SKILL.md` 是只屬於那個資料夾的技能。description 決定了「什麼時候用」。
 - `.claude` 資料夾是受保護的路徑，寫入前會詢問許可。一開始選「僅允許一次」。
 - 整理工具完成：`/meeting-notes`、`/study-notes`、`/weekly-review`。
 - 外掛可以用我的許可權執行程式碼。只安裝值得信任的，而且只在需要時安裝。
@@ -138,14 +144,15 @@
 
 下一章：[第8章. 同時做多件事·雲端·定時](08-parallel-cloud-schedule.md)
 
-[^what]: Claude Code 官方文件，《Extend Claude with skills》。"Create a SKILL.md file with instructions, and Claude adds it to its toolkit. Claude uses skills when relevant, or you can invoke one directly with /skill-name." https://code.claude.com/docs/en/skills（確認日期 2026-10-31）
-[^when]: Claude Code 官方文件，《Extend Claude with skills》。"Create a skill when you keep pasting the same instructions, checklist, or multi-step procedure into chat, or when a section of CLAUDE.md has grown into a procedure rather than a fact. Unlike CLAUDE.md content, a skill's body loads only when it's used, so long reference material costs almost nothing until you need it." https://code.claude.com/docs/en/skills（確認日期 2026-10-31）
-[^where]: Claude Code 官方文件，《Extend Claude with skills》。位置表的 Project 行："`.claude/skills/<skill-name>/SKILL.md`" https://code.claude.com/docs/en/skills（確認日期 2026-10-31）
-[^name]: Claude Code 官方文件，《Extend Claude with skills》。"The directory name, or the frontmatter name when you set one, becomes the command you type, and the description helps Claude decide when to load the skill automatically." https://code.claude.com/docs/en/skills（確認日期 2026-10-31）
-[^desc]: Claude Code 官方文件，《Extend Claude with skills》。"Only description is recommended so Claude knows when to use the skill." https://code.claude.com/docs/en/skills（確認日期 2026-10-31）
-[^slash]: Claude Code 官方文件，《Desktop application》。"type / in the prompt box or click the + button and select Slash commands to browse what's available." https://code.claude.com/docs/en/desktop（確認日期 2026-10-31）
-[^protected]: Claude Code 官方文件，《Choose a permission mode》。acceptEdits 一節 "These still prompt:" 下面的 "Writes to protected paths" https://code.claude.com/docs/en/permission-modes（確認日期 2026-10-31）
-[^plus]: Claude Code 官方文件，《Desktop application》。"Click the + button next to the prompt box for file attachments, skills, connectors, and plugins." https://code.claude.com/docs/en/desktop（確認日期 2026-10-31）
-[^connectors]: Claude Code 官方文件，《Desktop application》。"Connectors are MCP servers with a graphical setup flow." https://code.claude.com/docs/en/desktop（確認日期 2026-10-31）
-[^plugin-risk]: Claude Code 官方文件，《Plugin security and trust》。"A plugin can carry content that runs code on your machine with your user privileges and content that enters Claude's context as instructions, so review a plugin before you install it." https://code.claude.com/docs/en/plugins/security（確認日期 2026-10-31）
-[^plugin-scope]: Claude Code 官方文件，《Plugin security and trust》。"Claude Code's permission rules and sandbox cover the tool calls Claude makes, not the code a plugin runs by itself" https://code.claude.com/docs/en/plugins/security（確認日期 2026-10-31）
+[^what]: Claude Code 官方文件，《Extend Claude with skills》。"Create a SKILL.md file with instructions, and Claude adds it to its toolkit. Claude uses skills when relevant, or you can invoke one directly with /skill-name." https://code.claude.com/docs/en/skills （確認日期 2026-10-31）
+[^when]: Claude Code 官方文件，《Extend Claude with skills》。"Create a skill when you keep pasting the same instructions, checklist, or multi-step procedure into chat, or when a section of CLAUDE.md has grown into a procedure rather than a fact. Unlike CLAUDE.md content, a skill's body loads only when it's used, so long reference material costs almost nothing until you need it." https://code.claude.com/docs/en/skills （確認日期 2026-10-31）
+[^where]: Claude Code 官方文件，《Extend Claude with skills》。位置表的 Project 行："`.claude/skills/<skill-name>/SKILL.md`" https://code.claude.com/docs/en/skills （確認日期 2026-10-31）
+[^name]: Claude Code 官方文件，《Extend Claude with skills》。"The directory name, or the frontmatter name when you set one, becomes the command you type, and the description helps Claude decide when to load the skill automatically." https://code.claude.com/docs/en/skills （確認日期 2026-10-31）
+[^desc]: Claude Code 官方文件，《Extend Claude with skills》。"Only description is recommended so Claude knows when to use the skill." https://code.claude.com/docs/en/skills （確認日期 2026-10-31）
+[^slash]: Claude Code 官方文件，《Desktop application》。"type / in the prompt box or click the + button and select Slash commands to browse what's available." https://code.claude.com/docs/en/desktop （確認日期 2026-10-31）
+[^protected]: Claude Code 官方文件，《Choose a permission mode》。acceptEdits 一節 "These still prompt:" 下面的 "Writes to protected paths" https://code.claude.com/docs/en/permission-modes （確認日期 2026-10-31）
+[^korean-name]: 中文命令名稱是否可行，沒能在官方文件裡確認，所以用了英文名稱。
+[^plus]: Claude Code 官方文件，《Desktop application》。"Click the + button next to the prompt box for file attachments, skills, connectors, and plugins." https://code.claude.com/docs/en/desktop （確認日期 2026-10-31）
+[^connectors]: Claude Code 官方文件，《Desktop application》。"Connectors are MCP servers with a graphical setup flow." https://code.claude.com/docs/en/desktop （確認日期 2026-10-31）
+[^plugin-risk]: Claude Code 官方文件，《Plugin security and trust》。"A plugin can carry content that runs code on your machine with your user privileges and content that enters Claude's context as instructions, so review a plugin before you install it." https://code.claude.com/docs/en/plugins/security （確認日期 2026-10-31）
+[^plugin-scope]: Claude Code 官方文件，《Plugin security and trust》。"Claude Code's permission rules and sandbox cover the tool calls Claude makes, not the code a plugin runs by itself" https://code.claude.com/docs/en/plugins/security （確認日期 2026-10-31）

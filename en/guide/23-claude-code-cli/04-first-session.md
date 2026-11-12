@@ -1,6 +1,6 @@
 # Chapter 4. Your First Session
 
-<Badge type="tip" text="Required" /> Be sure to read this to follow this step.
+<Badge type="tip" text="Required" /> Read this to follow this stage.
 
 > **One-line summary**: Go to the folder you want to work in and type `claude`. Choose `Yes` in the trust check window, then tell it what to do in words. To stop, press `Esc`. To finish, type `/exit`.
 
@@ -13,14 +13,14 @@ First, move to the folder you want to work in. Then type `claude`.[^start]
 On Mac and Linux, type this.
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude
 ```
 
 In Windows PowerShell, type this.
 
 ```powershell
-cd $HOME\hello-ai-연습\터미널
+cd $HOME\hello-ai-practice\terminal
 claude
 ```
 
@@ -42,7 +42,7 @@ This is a picture of a real terminal window. Colors and fonts depend on your ter
 ```text
  Accessing workspace:
 
- ~/hello-ai-연습/터미널
+ ~/hello-ai-practice/terminal
 
  Quick safety check: Is this a project you created or one you trust? (Like your own code, a
  well-known open source project, or work from your team). If not, take a moment to review what's in
@@ -75,7 +75,7 @@ When you choose `Yes`, a screen like this appears.
 ```text
  ▐▛███▛█   Claude Code v2.1.318
 ▝▜██████▀  Opus 5.5 · Claude plan name
- ▝▝   ▝▝   ~/hello-ai-연습/터미널
+ ▝▝   ▝▝   ~/hello-ai-practice/terminal
 
 ▎ Auto mode is now Claude Code's default permission mode.
 ▎ Auto mode lets Claude handle permission prompts automatically. Claude checks each tool call for
@@ -118,7 +118,7 @@ In manual mode, it asks first before most file edits or commands.[^manual] Modes
 Now let's give it a task. Just write the way you would talk to a coworker.[^colleague] Put this sentence in the input box and press Enter.
 
 ```text
-Read the meeting notes in inbox and save them as 회의록.md. Answer in one line.
+Read the meeting notes in inbox and save them as minutes.md. Answer in one line.
 ```
 
 `.md` is a Markdown file. It is a plain text file you can open even in Notepad.
@@ -133,7 +133,7 @@ In manual mode, Claude reads the notes, shows the file contents, and then asks l
 ![Permission prompt before creating a file. This picture was taken while creating a different file. ① The name of the file to create, ② the choices. Option 1, Yes, allows it just this once](../../../guide/23-claude-code-cli/assets/shot-04-create-marked.png)
 
 ```text
- Do you want to create 회의록.md?
+ Do you want to create minutes.md?
  ❯ 1. Yes
    2. Yes, and switch to accept edits (auto-approve file edits and common file commands) for this
       session (shift+tab)
@@ -147,13 +147,13 @@ Skim the contents and press Enter on `1. Yes`.[^yes] Option 2 changes things so 
 When it finishes, it answers something like this.
 
 ```text
-● I organized it into 회의록.md. The notes say 10/27 (Mon) and 11/3 (Mon), but on the 2026 calendar
+● I organized it into minutes.md. The notes say 10/27 (Mon) and 11/3 (Mon), but on the 2026 calendar
   those are Tuesdays, so I marked them in the file as needing a check.
 ```
 
 Do not be surprised if it mentions the days of the week. The days in the practice notes are made up, so they do not match the calendar. Claude noticed that. The wording of the answer can differ each time you run it. A suggestion for your next request may also appear faintly in the input box. You do not have to use it.
 
-The result made from the same notes is in [4장-회의록.txt](/practice/cli/results/4장-회의록.txt). Compare it with your result. They do not have to be identical.
+The result made from the same notes is in [ch4-minutes.txt](/practice/en/cli/results/ch4-minutes.txt). Compare it with your result. They do not have to be identical.
 
 <Quiz id="ch804-first" />
 
@@ -162,7 +162,7 @@ The result made from the same notes is in [4장-회의록.txt](/practice/cli/res
 A session is a conversation. You can give the next task building on the previous one. This time, let's edit the file.
 
 ```text
-Add one line that says "Draft" at the very top of 회의록.md. Answer in one line.
+Add one line that says "Draft" at the very top of minutes.md. Answer in one line.
 ```
 
 This time, it shows the lines that will change and asks. Lines with `+` are the new lines that will go in.
@@ -174,7 +174,7 @@ This time, it shows the lines that will change and asks. Lines with `+` are the 
  4  - **Date:** 10/27 (Mon)
 ```
 
-Below that, it asks `Do you want to make this edit to 회의록.md?`. What the changed lines look like depends on your meeting minutes.
+Below that, it asks `Do you want to make this edit to minutes.md?`. What the changed lines look like depends on your meeting minutes.
 
 Read the permission prompt before you choose. It is your chance to check that it matches what you asked for.
 
@@ -196,10 +196,10 @@ You return to the terminal prompt. Now you are outside Claude Code. Check whethe
 
 ```bash
 ls
-cat 회의록.md
+cat minutes.md
 ```
 
-If Korean text looks garbled in PowerShell, view it with `Get-Content -Encoding UTF8 회의록.md`.
+If Korean text looks garbled in PowerShell, view it with `Get-Content -Encoding UTF8 minutes.md`.
 
 Pressing `Ctrl + D` twice in an empty input box also ends it.[^ctrl-d] At first, typing `/exit` in text is the least confusing. How to continue a finished conversation is covered in Chapter 6.
 

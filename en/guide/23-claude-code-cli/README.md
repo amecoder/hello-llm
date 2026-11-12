@@ -17,7 +17,7 @@ It is fine if you have never opened a terminal. You do not need to know how to c
 | 7 | Required | [Permissions and Undo](07-permissions-undo.md) | Permission modes, permission prompts, rewinding, deny rules |
 | 8 | Required | [Project Memory and Settings](08-memory-settings.md) | CLAUDE.md, settings files |
 | 9 | Required | [Skills and Extensions](09-skills-extensions.md) | Making skills, plugins, MCP, subagents |
-| 10 | Required | [One-Line Runs and Automation](10-headless-automation.md) | `claude -p`, allowing in advance, `주간정리.sh` |
+| 10 | Required | [One-Line Runs and Automation](10-headless-automation.md) | `claude -p`, allowing in advance, `weekly-summary.sh` |
 | 11 | Required | [Hooks and Customizing the Screen](11-hooks-statusline.md) | A change-log hook, the status line, output styles |
 | 12 | Required | [Parallel Work and Remote](12-parallel-remote.md) | Your first Git record, worktree, `/loop`, `/goal`, remote control |
 | 13 | Required | [Cost, Safety, and Troubleshooting](13-cost-safety-trouble.md) | Usage, models, sandbox, data, handling errors |
@@ -27,22 +27,22 @@ If you see an unfamiliar command, look it up in the [Command Reference](command-
 
 ## Practice Files
 
-You will practice in the `~/hello-ai-연습/터미널` folder with the notes below. **All of them are fictional** (one week in the life of Seoyeon, a staff member at a small cafe called "Corner Cafe").
+You will practice in the `~/hello-ai-practice/terminal` folder with the notes below. **All of them are fictional** (one week in the life of Seoyeon, a staff member at a small cafe called "Corner Cafe").
 In Chapter 2, you put in only the weekly meeting notes. The ad-hoc meeting notes go in during Chapter 13.
 
 | File | Contents |
 |---|---|
-| [회의-2026-10-27-주간회의.txt](/practice/notes/inbox/회의-2026-10-27-주간회의.txt) | Jumbled weekly meeting notes |
-| [회의-2026-10-29-임시회의.txt](/practice/notes/inbox/회의-2026-10-29-임시회의.txt) | Notes with a hidden instruction (for the Chapter 13 safety experiment) |
+| [meeting-2026-10-27-weekly.txt](/practice/en/notes/inbox/meeting-2026-10-27-weekly.txt) | Jumbled weekly meeting notes |
+| [meeting-2026-10-29-adhoc.txt](/practice/en/notes/inbox/meeting-2026-10-29-adhoc.txt) | Notes with a hidden instruction (for the Chapter 13 safety experiment) |
 
 This guide also shares the **results** it made from actual runs. Compare them with your own results. Even with the same request, the shape will differ a little each time.
 
 | Chapter | Result |
 |---|---|
-| 4 | [Meeting minutes](/practice/cli/results/4장-회의록.txt) |
-| 8 | [CLAUDE.md](/practice/cli/results/8장-CLAUDE.md.txt) |
-| 9 | [The meeting-notes skill](/practice/cli/results/9장-스킬-meeting-notes.txt) |
-| 10 | [주간정리.sh](/practice/cli/results/10장-주간정리.sh.txt) · [Meeting minutes made by the script](/practice/cli/results/10장-회의록-스크립트로.txt) |
-| 11 | [Settings file](/practice/cli/results/11장-settings.json.txt) |
+| 4 | [Meeting minutes](/practice/en/cli/results/ch4-minutes.txt) |
+| 8 | [CLAUDE.md](/practice/en/cli/results/ch8-CLAUDE.md.txt) |
+| 9 | [The meeting-notes skill](/practice/en/cli/results/ch9-skill-meeting-notes.txt) |
+| 10 | [weekly-summary.sh](/practice/en/cli/results/ch10-weekly-summary.sh.txt) · [Meeting minutes made by the script](/practice/en/cli/results/ch10-minutes-by-script.txt) |
+| 11 | [Settings file](/practice/en/cli/results/ch11-settings.json.txt) |
 
 If you would rather not use the terminal, see the [Claude Code App Guide](/en/guide/20-claude-code/). It organizes the same cafe notes with the desktop app. Accounts, pricing plans, and chat features are explained in [Step 2 · Claude Guide](/en/guide/10-claude/).

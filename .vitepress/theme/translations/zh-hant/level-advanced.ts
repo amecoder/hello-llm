@@ -80,7 +80,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
       "模型學習時讀過的網際網路文字全部，總是一起放進去",
       "只放模型寫的回答，傳送的輸入另外計算",
     ],
-    explain: "Anthropic 的文件說明，系統提示詞、所有訊息（包括工具結果、圖片、文件）、工具定義，以及這一輪的輸出（包括思考過程），全都算在上下文窗口裡。",
+    explain: "Anthropic 的文件說明，系統提示詞、所有訊息（包括工具結果、圖片、文件）、工具定義，以及這一輪的輸出（包括思考過程），全都算在上下文視窗裡。",
   },
   "advanced-s1-context-rot": {
     prompt: "對於「上下文視窗（context window，模型一次能看到的文字量）很大，所以儘量多放資料」這種想法，官方文件是怎麼說的？",
@@ -390,7 +390,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
       "生成多條不同解法，選出出現次數最多的答案",
       "把解法給使用者看，讓使用者挑自己喜歡的答案",
     ],
-    explain: "Wang 等人沒有隻跟隨一個解法，而是抽取出多條不同的推理路徑，選出最一致（出現最多）的答案，從而在 GSM8K（小學水平數學應用題測試）等上提高了準確率。",
+    explain: "Wang 等人沒有只跟隨一個解法，而是抽取出多條不同的推理路徑，選出最一致（出現最多）的答案，從而在 GSM8K（小學水平數學應用題測試）等上提高了準確率。",
   },
   "advanced-s4-thinking-tokens": {
     prompt: "關於推理模型（reasoning model，回答前先寫很長思考過程的模型）使用的思考 token（thinking token），哪種說法是對的？",
@@ -585,7 +585,7 @@ export const LEVEL_ADVANCED: Record<string, QuestionText> = {
   "advanced-s5-mcp-primitives": {
     prompt: "做一個面向公司內部資料庫的 MCP 伺服器（MCP server，為 AI 應用提供功能和資料的程式）時，MCP 規定伺服器的三種基本提供要素是哪一組？",
     choices: [
-      "使用者名稱（賬號）、密碼（認證）、支付方式（費用）",
+      "使用者名稱（帳號）、密碼（認證）、支付方式（費用）",
       "溫度（隨機性）、top-p（候選範圍）、最大輸出長度（回答限額）",
       "預訓練（最初的學習）、微調（額外學習）、強化學習",
       "工具（執行功能）、資源（參考資料）、提示詞（可重複使用的模板）",

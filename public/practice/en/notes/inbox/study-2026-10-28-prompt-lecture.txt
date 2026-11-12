@@ -1,0 +1,15 @@
+10/28 notes I took during an AI prompt lecture (1 hour)
+
+prompt = a request you make to the AI
+how to write good ones?? the instructor gave 5 tips
+1 give it a role - like "you are a cafe marketer"
+2 context - who will read it, why you need it
+3 set the format - as a table, in 3 lines, etc.
+4 show examples (called few-shot)
+5 don't ask for everything at once, split it up
+
+words I didn't know: token? -> small pieces that text is cut into. length limits are set by these
+hallucination = a convincing lie. always check numbers names dates!!
+
+to ask: how many examples is best?
+to try: when writing insta posts, put in role+format

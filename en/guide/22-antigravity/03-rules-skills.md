@@ -1,9 +1,18 @@
 # Chapter 3. Rules and Skills — No Moving Needed
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **In one line**: Antigravity reads **`AGENTS.md`** in your folder as an always-on rule, and automatically picks skills from **`.agents/skills`**. The files you made in the Codex chapters work **as they are**.
 > You will verify this with the same memo: once with `AGENTS.md` moved out of the way, and once after putting it back.
 
-This chapter is based on the Antigravity official docs checked on November 1, 2026, and the results of running Antigravity CLI `agy` 1.4.12 for this guide. For our hands-on test, this guide ran `agy` from inside another AI tool. Because the official FAQ does not support this kind of use on individual plans ([Chapter 7](07-safety-choose.md)), run it directly in the app or terminal when you follow along. The app and CLI use the same agent ([Chapter 1](01-what-is.md)). What rule files and skills are was covered in [Claude Code Chapters 6 and 7](../20-claude-code/06-claude-md.md).
+First, let's go over two words.
+
+- A **rule file** is a file that lists the promises the AI keeps every time it works in this folder.
+- A **skill** is a bundle of instructions that writes down the steps for a task you do often.
+
+You can find a more detailed explanation in [Claude Code Chapters 6 and 7](../20-claude-code/06-claude-md.md) (optional).
+
+The results in this chapter come from this guide running the terminal program `agy` itself. The app and CLI use the same agent ([Chapter 1](01-what-is.md)), so you can follow along in the app too.[^howrun]
 
 ## Where Antigravity Looks
 
@@ -20,7 +29,7 @@ Source: Antigravity official docs (excerpted)[^where][^global][^global-skill]
 
 `CLAUDE.md` is not on the list of rule files.[^names] If you have rules that you only kept in Claude Code, write them in `AGENTS.md` too (for the same reason as in Codex Chapter 3).
 
-You write `AGENTS.md` without any header settings at the top, and **its entire content stays turned on at all times.**[^always] Edited rules and skills apply right away starting from your next message.[^reread]
+You write `AGENTS.md` as is, without adding any settings lines at the very top of the file. And **its entire content stays turned on at all times** (`always_on`).[^always] Edited rules and skills apply right away starting from your next message.[^reread]
 
 <Quiz id="ch603-where" />
 
@@ -28,10 +37,10 @@ You write `AGENTS.md` without any header settings at the top, and **its entire c
 
 `AGENTS.md` has the rule we added in Codex Chapter 3: "Put a 'Check against the original (원본과 대조할 것)' section at the very bottom of the organized file." Because this rule is only in `AGENTS.md`, checking whether the result has that section tells you whether `AGENTS.md` was read.
 
-During a review of the Codex chapters, it was pointed out that using different memos before and after is not a strict comparison. So this time, we ran it twice with **the exact same memo and the exact same request**.
+We ran it twice with **the exact same memo and the exact same request**. The conditions must be the same to know whether a difference comes from `AGENTS.md`.[^same-memo]
 
 ```
-Organize the memo inbox/회의-2026-10-27-주간회의.txt into meeting notes and save it as a new file in the notes/ folder.
+Organize the memo inbox/meeting-2026-10-27-weekly.txt into meeting notes and save it as a new file in the notes/ folder.
 ```
 
 | Run | "Check against the original" section |
@@ -41,18 +50,22 @@ Organize the memo inbox/회의-2026-10-27-주간회의.txt into meeting notes an
 
 Source: Practice results from this guide (2026-11-01, 1 run each)
 
-Results: [Without AGENTS.md](/practice/notes/results/antigravity/3장-회의록-AGENTS없이.txt) · [With AGENTS.md](/practice/notes/results/antigravity/3장-회의록-AGENTS있을때.txt)
+Results: [Without AGENTS.md](/practice/en/notes/results/antigravity/ch3-minutes-without-AGENTS.txt) · [With AGENTS.md](/practice/en/notes/results/antigravity/ch3-minutes-with-AGENTS.txt)
 
 Looking at the run logs makes the difference even clearer.
 
 - **When `AGENTS.md` was missing**: The agent searched for and opened `AGENTS.md`, `CLAUDE.md`, and `GEMINI.md` on its own.
 - **When `AGENTS.md` was present**: It followed the new rule without opening that file separately. That is likely because the file was already loaded from the start as an always-on rule.
 
-In both runs, the agent **opened and read `CLAUDE.md` on its own.** It was not loaded automatically as a rule file, but this suggests the agent can read it as reference material if it is in the folder. This computer also had a personal rule file (`~/.gemini/GEMINI.md`) loaded during the run, so we cannot tell for sure whether that influenced this behavior. Each test was run once.
+In both runs, the agent **opened and read `CLAUDE.md` on its own.** It was not loaded automatically as a rule file. This suggests the agent can read it as reference material if it is in the folder.
 
-Even with the same memo, there was one more difference in the results. Codex fixed the day of the week in the memo to match the 2026 calendar, whereas Antigravity kept the day of the week written in the memo (`10/27(Mon)`). The days of the week in the practice memos were made up for the story and do not match the real calendar. Different tools make different calls like this, so always check dates against your original.
+However, these results come from **running each test only once**. Also, this computer had a personal rule file (`~/.gemini/GEMINI.md`) that was loaded during the runs. So we cannot tell whether reading `CLAUDE.md` was influenced by it. Read this as what we saw in this practice, not as a firm rule.
 
 There was also one wrong date. In the meeting notes created with `AGENTS.md` present, the deadline for researching mulled wine cost was written as `10/30(Fri)` instead of `10/31(Fri)` (the memo says "by Friday"). **Even when the rule section is followed, dates can still be wrong.** Do not let the "Check against the original" section make you let your guard down—check it against the original yourself.
+
+::: details More details (click to expand)
+- Even with the same memo, there was one more difference in the results. Codex fixed the day of the week in the memo to match the 2026 calendar, whereas Antigravity kept the day of the week written in the memo (`10/27(Mon)`). The days of the week in the practice memos were made up for the story and do not match the real calendar. Different tools make different calls like this, so always check dates against your original.
+:::
 
 <Quiz id="ch603-test" />
 
@@ -70,7 +83,7 @@ To call a skill yourself, type `/skill-name` in the app message box.[^slash] Thi
 
 In this guide, we ran it in the terminal by naming the skill: "Organize this week's review using the weekly-review skill." The agent read `.agents/skills/weekly-review/SKILL.md` and created a weekly review from the three review memos.
 
-Result: [Weekly review made with the skill](/practice/notes/results/antigravity/3장-주간회고-스킬로.txt)
+Result: [Weekly review made with the skill](/practice/en/notes/results/antigravity/ch3-weekly-review-with-skill.txt)
 
 **All eight** facts to check against the original memos were included: 12 likes, the 6,000-won pricing error, 4 sets, 11 in total, 3 Instagram posts, 1,800-won mulled wine, the light bulb, and 2 hours spent writing captions. In the review Codex made with the exact same skill, 3 facts were missing ([Codex Chapter 5](../21-codex/05-skills.md)). This shows how results can differ from tool to tool even with the same instructions.
 
@@ -80,11 +93,15 @@ The result also has `(Not in memo)` marked in several places. That does not mean
 
 ## Conditional Rules and Saving What It Learns
 
-When you have many rules, you can split them into files inside the `.agents/rules/` folder. At the very top of each of these files, you must write when it should turn on (`trigger`). If you leave this out or write it wrong, **the rule is silently discarded.**[^trigger] When you only have a few lines of rules like in our organizer folder, a single `AGENTS.md` file is enough.
+When you have many rules, you can split them into files inside the `.agents/rules/` folder. In the settings lines at the very top of each of these files, you must write when it should turn on (`trigger`). If you leave this out or write it wrong, **the rule is silently discarded.**[^trigger]
+
+The value must be exact, down to the spelling. For example, the value for always-on is `always_on`, in lowercase with an underscore. If you write it run together like `alwaysOn`, it is not recognized and is discarded.[^trigger][^always] When you only have a few lines of rules like in our organizer folder, a single `AGENTS.md` file is enough.
 
 Use rules for "things to always follow" and skills for "multi-step tasks."[^rule-skill] For example, "Write dates like 10/27(Mon)" is a rule, while "Gather three review memos to make a weekly review" is a skill.
 
-If you want to save something you corrected during a conversation as a rule or skill, use `/learn`. The agent proposes what to change and writes the file **only after you approve it**.[^learn]
+If you want to save something you corrected during a conversation as a rule or skill, type `/learn` in the message box. The agent proposes what to change and writes the file **only after you approve it**.[^learn]
+
+For example, say you once corrected it during a conversation: "Write dates like 10/27(Mon)." If you then type `/learn`, the agent proposes saving this as a rule. It is written to the file only after you read it and approve.
 
 <Quiz id="ch603-rules" />
 
@@ -116,6 +133,8 @@ If you want to save something you corrected during a conversation as a rule or s
 
 Next chapter: [Chapter 4. Permissions and Undo](04-permissions-undo.md)
 
+[^howrun]: This chapter is based on the Antigravity official docs checked on November 1, 2026, and the results of running Antigravity CLI `agy` 1.4.12 for this guide. For our hands-on test, this guide ran `agy` from inside another AI tool. Because the official FAQ does not support this kind of use on individual plans ([Chapter 7](07-safety-choose.md)), run it directly in the app or terminal when you follow along.
+[^same-memo]: During a review of the Codex chapters, it was pointed out that using different memos before and after is not a strict comparison. So this time, we ran it twice with the same memo.
 [^where]: Antigravity official docs, "Customization discovery". "**Workspace**: the `.agents/` folder in your project, plus `AGENTS.md` and `GEMINI.md` files." / "| [Rules](https://antigravity.google/docs/rules) | `rules/*.md`, `AGENTS.md`, `GEMINI.md` |" / "| [Skills](https://antigravity.google/docs/skills) | `skills/<name>/SKILL.md` |" https://antigravity.google/docs/customization-discovery (checked on 2026-11-01)
 [^global]: Antigravity official docs, "Rules". "**Standalone global files** (no frontmatter needed, always active): `~/.gemini/AGENTS.md`, `~/.gemini/GEMINI.md`, `~/.gemini/config/AGENTS.md`, or `~/.gemini/config/GEMINI.md`" https://antigravity.google/docs/rules (checked on 2026-11-01)
 [^global-skill]: Antigravity official docs, "Customization discovery". "To use a personal skill in both the Antigravity App and the Antigravity CLI, put it in `~/.gemini/config/skills/`." https://antigravity.google/docs/customization-discovery (checked on 2026-11-01)

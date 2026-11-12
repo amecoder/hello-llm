@@ -1,5 +1,7 @@
 # Chapter 3. Managing Conversations — Finding, Organizing, Sharing, and Hiding
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **In short**: As your chats pile up, find them with **Search**, and **archive** or **delete** the ones you don't use.
 > Use a **shared link** to show a chat to someone else, **Temporary Chat** when you don't want to leave a record, and **Locked Chat** for conversations you don't want someone next to you to see.
 
@@ -16,7 +18,7 @@ The same rule applies in ChatGPT. When moving a long conversation, ask for a han
 I want to continue this conversation in a new chat. Please list what we've decided so far, my preferences, and what's left to do by category.
 ```
 
-::: details What the reply roughly looks like (example — click to expand)
+::: details What the reply roughly looks like (example — click to expand) (click to expand)
 This is an example created for this guide. Actual replies vary by service and situation.
 
 If you were planning a family trip, it might look like this.
@@ -72,11 +74,10 @@ The menu includes "Rename (이름 변경)", "Pin (고정)", "Share (공유)", "A
 | Confirmation popup | Archived right away without one | — |
 | In chat search | **Shows up** | Does not show up |
 | Undoing it | Undo with "Unarchive (보관 취소)" | **Cannot be undone** (even customer support cannot recover it) |
-| On company servers | Stays | Scheduled for permanent deletion within 30 days |
 
 Source: OpenAI Help Center[^delete]
 
-Think of **Archive** as putting a chat into a drawer, and **Delete** as throwing it away. If you are not sure, archive it first. You can undo an archive, but you cannot undo a deletion.
+Think of **Archive** as putting a chat into a drawer, and **Delete** as throwing it away. If you are not sure, archive it first. You can undo an archive, but you cannot undo a deletion.[^delete-server]
 You can bring back archived chats from Settings → "Archived chats (보관된 채팅)".
 
 If a chat is missing from the sidebar, that does not necessarily mean it was deleted.[^mobile] First check that you are logged in to the same account ([Chapter 1](01-getting-started.md#sign-up-and-log-in)), then try finding it with chat search. Archived chats still show up in search.
@@ -117,22 +118,27 @@ The first time you turn it on, an info prompt may appear first.
 
 ![Temporary Chat screen. In the center is the title "Temporary Chat (임시 채팅)" and the note "This chat may reference memories, plugins, and custom instructions, but it won't appear in history." Clicking "Personalized (개인화됨)" at the top right opens a menu to choose between "Personalized (개인화됨)" and "Unpersonalized (개인화되지 않음)"](../../../guide/11-chatgpt/assets/shot-19-temporary-personal-marked.png)
 
+Clicking ① the "Personalized (개인화됨)" button at the top right opens a menu where you choose between ② "Personalized (개인화됨)" and ③ "Unpersonalized (개인화되지 않음)". ④ is the note saying the chat will not stay in your history.
+
 Temporary Chat has three main traits.
 
 - **It does not stay in your history** (text ④ in the image). It does not appear in your sidebar chat list. However, **OpenAI may keep a copy for up to 30 days for safety purposes**.
 - **It is not used for training.** This conversation is not used to train and improve the AI.
 - **It does not create new memories.** Nothing you say in a Temporary Chat is newly saved to Memory ([Chapter 5](05-memory.md)).
 
-With the **"Personalized (개인화됨)"** button at the top right (① in the image), you choose whether this chat uses your already saved memories, custom instructions, and plugins.[^temp][^screen-temp]
+With the **"Personalized (개인화됨)"** button at the top right (① in the image), you choose whether this chat also uses the things ChatGPT usually refers to about you.[^temp][^screen-temp]
+
+- **Memory**: What ChatGPT has remembered about you (e.g., "has two kids"). You will learn about it in [Chapter 5](05-memory.md).
+- **Custom instructions**: Rules you have written for it to always follow, like "Keep answers short." You will also learn about these in [Chapter 5](05-memory.md).
+- **Plugins**: Connections between ChatGPT and other services that add features. You will learn about them in [Chapter 7](07-projects-plugins.md).
+
 
 | Choice | Meaning |
 |---|---|
 | ② "Personalized (개인화됨)" (default) | Replies using your saved memories, plugins, and custom instructions |
 | ③ "Unpersonalized (개인화되지 않음)" | Replies without using your memories, plugins, or custom instructions (limited information may still be used for safety) |
 
-**You must choose before sending your first message.** You cannot change this after the conversation starts.[^temp] This option did not exist in the past. If your screen looks different from this guide, follow what is on your screen.
-
-> **Some features are unavailable in Temporary Chat.** On the October 2026 web screen, the + menu in Temporary Chat had "Create image (이미지 생성)" grayed out and did not include "Deep research (심층 리서치)". "Add photos & files (사진 및 파일 추가)" and "Web search (웹 검색)" were available.
+**You must choose before sending your first message.** You cannot change this after the conversation starts.[^temp][^temp-history]
 
 Here are a few things to keep in mind.
 
@@ -140,6 +146,10 @@ Here are a few things to keep in mind.
 - Files uploaded in Temporary Chat are not saved to your "Library (라이브러리)".[^library]
 - You can also save it as a regular chat later. If you do, it follows your account's training settings just like a regular chat.[^temp]
 - If you want a fresh answer without any information about you, choose "Unpersonalized (개인화되지 않음)" before you start.
+
+::: details Some features are unavailable in Temporary Chat (click to expand)
+On the October 2026 web screen, the + menu in Temporary Chat had "Create image (이미지 생성)" grayed out and did not include "Deep research (심층 리서치)". "Add photos & files (사진 및 파일 추가)" and "Web search (웹 검색)" were available.
+:::
 
 <Quiz id="ch103-temporary" />
 
@@ -151,7 +161,7 @@ If you share a computer with family and want to keep a health consultation chat 
 2. Locked chats are gathered under "Projects (프로젝트)" → "Locked chats (잠긴 대화)".
 3. To open them, enter your **4-digit account PIN** (a numeric passcode you set). On a phone, you can also use biometrics like Face ID.
 
-You set your account PIN in Settings → "Security (보안 및 로그인)".[^lock] On the mobile app, it locks again after 1 minute. That happens when you leave the locked chat for 1 minute or when the app stays in the background for 1 minute.
+You set your account PIN in Settings → "Security (보안 및 로그인)".[^lock][^lock-mobile]
 
 <!-- Screenshot needed: Screen asking for a PIN under sidebar "Projects" → "Locked chats" (web) -->
 
@@ -206,4 +216,7 @@ Next chapter: [Chapter 4. Working with Files, Photos, and Creating Images](04-fi
 [^mobile]: OpenAI Help Center, "Troubleshooting the ChatGPT mobile app". "A chat missing from the sidebar hasn't necessarily been deleted." https://help.openai.com/en/articles/7910461 (checked on 2026-10-24)
 [^rn-lock]: OpenAI Help Center, "ChatGPT release notes" entry for 2026-10-20. "Open them with your 4-digit account PIN". https://help.openai.com/en/articles/6825453 (checked on 2026-10-23)
 [^lock]: OpenAI Help Center, "Using locked chats in ChatGPT". "You can find your locked chats under Projects > Locked chats." / "It does not: create end-to-end encryption or a separate encrypted vault" / "Resetting your account PIN permanently deletes all locked chats" / "Access ends automatically after 1 minute away" / "The Lock chat option is unavailable for some conversation types". https://help.openai.com/en/articles/20001411 (checked on 2026-10-23)
+[^delete-server]: Archived chats stay on the company's servers as they are. Deleted chats are scheduled for permanent deletion from the company's servers within 30 days. The source is "Deleting and archiving chats in ChatGPT" above.
+[^temp-history]: This option did not exist in the past. If your screen looks different from this guide, follow what is on your screen.
+[^lock-mobile]: On the mobile app, it locks again after 1 minute. That happens when you leave the locked chat for 1 minute, or when you switch to another app and do not use the ChatGPT app for 1 minute. The source is "Using locked chats in ChatGPT" above.
 [^screen-menu]: Verified directly on the sidebar chat "Chat actions (채팅 액션)" (•••) menu and the "Delete (삭제)" confirmation window. The chat used for the screenshot was deleted after capturing (checked on 2026-10-28, Plus account web screen)

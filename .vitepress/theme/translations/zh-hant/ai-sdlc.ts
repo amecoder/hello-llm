@@ -6,9 +6,9 @@ export const AI_SDLC: Record<string, QuestionText> = {
     prompt: "關於 GitHub 所說的 SDLC，哪種說法是對的？",
     choices: [
       "必須從一開始就把計劃、開發、評審、驗證、部署、運維全部備齊，才能開始",
-      "部署階段是隻有會親自操作伺服器的開發者才做的事，所以普通人只做到計劃和開發，其餘都要跳過",
+      "部署階段是只有會親自操作伺服器的開發者才做的事，所以普通人只做到計劃和開發，其餘都要跳過",
       "可以從一個倉庫和幾件待辦事項開始，隨著專案成長再逐步擴充套件",
-      "SDLC 是隻有大公司才用的詞，所以不適用於小網頁",
+      "SDLC 是只有大公司才用的詞，所以不適用於小網頁",
     ],
     explain: "GitHub 說，不需要一下子用上所有階段，很多人是從一個倉庫和幾個議題開始，再逐步擴大的。",
   },
@@ -37,20 +37,20 @@ export const AI_SDLC: Record<string, QuestionText> = {
     choices: [
       "Git 是追蹤檔案變更的裝置，GitHub 是把這些記錄放到網上並用於協作的服務",
       "Git 和 GitHub 是同一個程式的不同名字，裝一個就會自動有另一個，功能也完全相同",
-      "GitHub 是隻在我電腦上用的程式，Git 是網路服務",
+      "GitHub 是只在我電腦上用的程式，Git 是網路服務",
       "Git 是寫文件的程式，GitHub 是畫畫的程式",
     ],
     explain: "Git 是版本管理系統，GitHub 是把 Git 倉庫放到網上，並加上計劃與協作工具的服務。",
   },
   "ch702-visibility": {
-    prompt: "用免費賬號，以後想釋出到 GitHub Pages。倉庫該怎麼建立？",
+    prompt: "用免費帳號，以後想釋出到 GitHub Pages。倉庫該怎麼建立？",
     choices: [
       "建立成私有（Private）",
       "建立成公開（Public）",
       "不帶 README 建立",
       "必須加上許可證再建立",
     ],
-    explain: "免費賬號只有公開倉庫才能使用 GitHub Pages。所以教程也讓你選 Public。",
+    explain: "免費帳號只有公開倉庫才能使用 GitHub Pages。所以教程也讓你選 Public。",
   },
   "ch702-files": {
     prompt: "關於 .gitignore，哪種說法是對的？",
@@ -233,14 +233,14 @@ export const AI_SDLC: Record<string, QuestionText> = {
     explain: "GitHub flow 的最後一步是刪除分支。即使刪掉分支，PR 和提交記錄仍然保留。",
   },
   "ch707-pages": {
-    prompt: "關於免費賬號的 GitHub Pages，哪種說法是對的？",
+    prompt: "關於免費帳號的 GitHub Pages，哪種說法是對的？",
     choices: [
       "可以在公開倉庫裡使用，網站會在網際網路上公開",
       "只能在私有倉庫裡使用，網站也是私有的",
       "只有登入的人才能看到網站",
       "可以在網站上加上註冊和付款功能，當作經營店鋪的免費網店來用",
     ],
-    explain: "免費賬號只能在公開倉庫裡使用 Pages，Pages 網站會在網際網路上公開。敏感資料要在釋出前刪掉。",
+    explain: "免費帳號只能在公開倉庫裡使用 Pages，Pages 網站會在網際網路上公開。敏感資料要在釋出前刪掉。",
   },
   "ch707-ways": {
     prompt: "像待辦看板這種不需要處理構建過程的頁面，官方文件建議用哪種釋出方式？",
@@ -265,7 +265,7 @@ export const AI_SDLC: Record<string, QuestionText> = {
   "ch707-undo": {
     prompt: "為什麼不能用 Claude Code 的回退（檢查點）來撤銷部署？",
     choices: [
-      "檢查點是隻有付費套餐才能用的功能，所以免費部署的網站用不了",
+      "檢查點是只有付費套餐才能用的功能，所以免費部署的網站用不了",
       "因為像部署這樣影響外部系統的行為，檢查點不負責處理",
       "因為部署不會留在 Git 記錄裡",
       "因為回退一週只能用一次",

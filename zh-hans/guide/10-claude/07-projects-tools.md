@@ -1,9 +1,11 @@
 # 第7章 项目·连接器·技能 — 把资料和工具接到 Claude 上
 
+<Badge type="info" text="选读" /> 需要的时候再读。跳过也能跟上后面的章节。
+
 > **一句话总结**：用在同一件事上的资料和指令，请归拢到**项目**里。邮件、日历这类其他应用，用**连接器**接上；
 > 每次都要用同样方式去做的事，放进**技能**。把这三样按工作打包在一起的，就是**插件**。
 
-界面以 2026年10月的网页版为准。把聊天和 Cowork 合在一起的新界面正在陆续推送，所以菜单位置和名称可能因界面而异。
+界面以 2026年10月的网页版为准。把聊天和 Cowork（把工作整个交给 Claude 去做的功能，[第8章](08-cowork.md)）合在一起的新界面正在陆续推送，所以菜单位置和名称可能因界面而异。
 这一章的截图是免费套餐的网页界面。菜单名称按截图里看到的名称来写。帮助文档里出现的其他名称，集中放在脚注里。
 
 这一章用到的是侧边菜单里的两处：「项目（프로젝트）」和「自定义（사용자 지정）」（Customize）。[^screen] 在下面的截图里，分别标为 ③·④。
@@ -49,22 +51,29 @@
 
 ### 资料变多时 — RAG
 
-在付费套餐里，当知识变多、接近上限时，会自动切换成 **RAG**（Retrieval Augmented Generation，不是读全部资料，而是只找出需要的部分来读的方式）。这样能放进去的量最多会增加到 10 倍。不需要另外打开或关闭。[^rag]
 资料很多时，可以这样做：把文件名起得容易辨认，提问时指明文档名称。这样 Claude 就能缩小该去哪里找。[^rag]
 
 ```
 从「2026年第3季度销售报告」文件里，只把各地区的销售额提取成表格。
 ```
 
+在付费套餐里，当知识接近上限时，会自动切换成**只找出需要的部分来读的方式**（RAG，Retrieval Augmented Generation）。不需要另外打开或关闭。[^rag]
+
+::: details 详细说明（点击展开）
+切换成 RAG 后，项目里能放进去的量最多会增加到 10 倍。[^rag]
+:::
+
 ### 整理时
 
 - **先从一件事开始。** 比起一个装下所有事情的项目，更建议先从「周报」这样范围窄的项目开始。资料可以边用边补充。[^academy-projects]
 - **过期的资料偶尔换一换。** 项目知识里如果留着旧资料，答案也可能是旧的内容。偶尔浏览一下知识列表，改一改。[^academy-projects]
+
+::: details 其他要知道的事（点击展开）
 - 加上**星标**，就能在侧边菜单里很快找到。[^projects-how]
 - 结束的项目可以**归档**。归档的项目不能直接删除。要先「取消归档（보관 해제）」再删。[^projects-how]
 - 和别人共享项目的功能，只有 Team·Enterprise（公司套餐）才有。[^projects]
-
-> **新版项目（测试版）**：把一个项目当作一场对话来用的新方式，正在从一部分用户开始推送。迁移过去后，指令·文件·对话记录都原样带过去。[^projects] 这还是只对一部分人开放的功能，所以这一章按现在的项目来讲。
+- **新版项目（测试版）**：把一个项目当作一场对话来用的新方式，正在从一部分用户开始推送。迁移过去后，指令·文件·对话记录都原样带过去。[^projects] 这还是只对一部分人开放的功能，所以这一章按现在的项目来讲。
+:::
 
 ### 把要反复使用的模板放进指令
 
@@ -77,7 +86,7 @@
 - 备忘里没有的内容不要编造，请标上[需核实]
 ```
 
-::: details 得到的答案大致是这样（示例 — 点击展开）
+::: details 得到的答案大致是这样（示例 — 点击展开）（点击展开）
 这是本指南做的示例。实际的答案会因服务和每次情况而不同。
 
 比如，这周的备忘是“报价单发给了两家。正在更换网站照片。下周与客户开会”，就会得到这样的答案。
@@ -186,7 +195,8 @@
 
 ### 连接器很多时 — 「工具访问」
 
-每个连接器都会占用对话的空间。所以打开得越多，真正用来做事的空间就越少。[^tools]
+Claude 在一场对话里一次能读的文字量是有上限的（[第1阶段第1章](../00-common/01-what-is-llm.md)里的上下文窗口）。这一章把它叫做**对话空间**。
+每个连接器都会占用这个对话空间。所以打开得越多，真正用来做事的空间就越少。[^tools]
 在「+」→「连接器」→「工具访问（도구 액세스）」里，可以选择加载的方式。[^tools]
 
 | 选项 | 适合的情况 |
@@ -207,6 +217,7 @@
 
 **技能**（skill）是让某件事每次都用同样方式去做的指令和资料的组合。[^skills]
 比如，把“公司报告按这个顺序、用这种字体”这条规则做成技能放进去，以后每次做报告，都会按那个方式来。
+自己动手做的方法，可以在下面的「做我的技能」里跟着做一遍。
 
 技能在 Free·Pro·Max·Team·Enterprise 里都能用。不过，**必须打开创建文件的功能。** 请在设置 →「功能（기능）」里，打开「代码执行与文件生成（코드 실행 및 파일 생성）」。[^create-name][^skills][^skills-use]
 
@@ -214,7 +225,7 @@
 
 - Anthropic 放好的**默认技能**（制作 Excel·Word·PowerPoint·PDF）不用叫它，会自动被用上。[^skills-use] 在[第4章](04-files-artifacts.md)里创建文件时用到的，就是这些。
 - 打开和关闭技能的地方，是侧边菜单「自定义」→「Skills」标签页。[^screen] 关掉的技能，Claude 不会使用。[^skills-use]
-- 简单的技能不用写代码，只用文字就能做出来。[^skills] 做好的技能文件夹，打成 ZIP 上传。帮助文档里写作「+ 创建技能」→「上传技能」。[^skills-use] 在这一章的界面里，「自定义」的右上角有「+ 添加（추가）」按钮。[^screen]
+- 简单的技能不用写代码，只用文字就能做出来。[^skills] 技能就是一个装着指令文字和资料文件的文件夹。把这个文件夹打成 **ZIP 文件**（把多个文件合成一个的压缩文件），用「上传技能」传上去。[^skills-use][^skill-upload-name] 在这一章的界面里，「自定义」的右上角有「+ 添加（추가）」按钮。[^screen] 不需要自己动手建文件夹。像下面这样请 Claude 帮你做就行。
 - 从技能列表里安装的技能，内容不能修改。[^directory]
 
 如果觉得技能没有被用上，请点名拜托它。[^skills-use]
@@ -223,7 +234,11 @@
 用我的「公司报告模板」技能，把这份备忘做成演示资料。
 ```
 
-如果我做的技能总是用不上，请修改技能的**说明**（description）。Claude 是看这段说明来决定什么时候用这个技能的。[^skills-make] 说明里请具体写明什么时候用这个技能。[^skills-make] 把我平时拜托时用的话写进去也不错，比如“整理会议纪要”“总结会议内容”（本指南的建议）。说明最多可以写 200 个字符。[^skills-make]
+如果我做的技能总是用不上，请修改技能的**说明**（description）。Claude 是看这段说明来决定什么时候用这个技能的。[^skills-make]
+
+- 请具体写明什么时候用这个技能。[^skills-make]
+- 把我平时拜托时用的话写进去，比如“整理会议纪要”“总结会议内容”（本指南的建议）。
+- 说明最多可以写 200 个字符。[^skills-make]
 
 ### 做我的技能 — 用说的来拜托
 
@@ -256,7 +271,7 @@ Claude 会问几个问题。比如这个技能做什么、好的结果是什么�
 ### 要小心的地方
 
 - **只安装来自可信之处的技能。** 技能最大的风险，是用隐藏指令操纵 Claude 的**提示词注入**，以及把资料偷偷送出去的**数据泄露**。[^skills-use] 提示词注入，你在[第1阶段第9章](../00-common/09-safety.md#_4-隐藏指令——提示词注入)里学过。
-- 还有**用屏幕录制来做技能**。把我做事的过程录下来，Claude 就能据此做出技能。只有 Pro·Max·Team 的 Mac 应用 Cowork 里可以，录制最长 10 分钟左右。[^skills-make] 录制期间，请不要出现密码或敏感的界面。
+- 还有**用屏幕录制来做技能**。把我做事的过程录下来，Claude 就能据此做出技能。只有 Pro·Max·Team 的 Mac 应用 Cowork（[第8章](08-cowork.md)里要学的、把工作整个交给它做的功能）里可以，录制最长 10 分钟左右。[^skills-make] 录制期间，请不要出现密码或敏感的界面。
 
 <Quiz id="ch207-skills" />
 
@@ -275,7 +290,7 @@ Claude 会问几个问题。比如这个技能做什么、好的结果是什么�
 2. ①「插件（플러그인）」标签页 → ②「探索（탐색）」里选好插件，点「添加（추가）」。[^screen][^discover-name]
 3. 在对话或 Cowork 里输入 `/` 或点「+」，就能看到插件里包含的技能。选一个来用。[^plugins]
 
-拿到的插件，装的是通常的做事方式。我的工作的模板和顺序可能不一样。[^academy-plugins] 在查看已放入插件的界面里，点右上角的「定制（커스터마이징）」（Customize），就会打开修改这个插件的 Cowork 任务。点「开始吧（시작하기）」（Let's go），和 Claude 一起修改就行。[^plugins] 菜单名称可能因界面而异。请拿出我实际在用的例子来拜托它。
+拿到的插件，装的是通常的做事方式。我的工作的模板和顺序可能不一样。[^academy-plugins] 在查看已放入插件的界面里，点右上角的「定制（커스터마이징）」（Customize），就会打开修改这个插件的 Cowork 任务（交给 Claude 的一件工作）。点「开始吧（시작하기）」（Let's go），和 Claude 一起修改就行。[^plugins] 菜单名称可能因界面而异。请拿出我实际在用的例子来拜托它。
 
 ```
 我上传了我们团队上个月发出的三份报价单。请修改这个插件的报价单技能，让它遵循这个模板和语气。
@@ -315,7 +330,7 @@ Claude 会问几个问题。比如这个技能做什么、好的结果是什么�
 
 <YouTube id="kS1MJFZWMq4" title="Creating custom Skills with Claude" />
 
-第一个视频把项目介绍为“一场对话”。如果我的界面和视频不一样，请以这一章的说明为准。
+第一个视频介绍的是先向一部分用户开放的新方式，也就是把一个项目当作“一场对话”来用的样子。如果我的界面和视频不一样，请以这一章的说明为准。
 
 ## 亲手试一试
 
@@ -357,32 +372,33 @@ Claude 会问几个问题。比如这个技能做什么、好的结果是什么�
 下一章：[第8章. Cowork — 把整件事交给它](08-cowork.md)
 
 [^screen]: 在 Claude 网页界面（免费套餐，韩语）中亲自确认。侧边菜单「项目（프로젝트）」·「自定义（사용자 지정）」 /「项目」界面的「新建项目（새 프로젝트）」和「示例项目（예제 프로젝트）」标记 /「+」菜单里的「Skills」·「添加连接器（커넥터 추가）」·「添加插件（플러그인 추가）」 /「自定义」界面的「Skills」·「连接器（커넥터）」·「插件（플러그인）」标签页，「我的项目（내 항목）」·「探索（탐색）」，「+ 添加（추가）」，「试用（체험）」（确认日期 2026-10-26）
-[^projects]: Anthropic 帮助文档，《What are projects?》。"Projects allow you to create self-contained workspaces with their own chat histories and knowledge bases." / "For users on Team and Enterprise plans, projects can be shared with other members of your organization" / "Nothing is lost or deleted in the move." https://support.claude.com/en/articles/9517075（确认日期 2026-10-26）
-[^projects-how]: Anthropic 帮助文档，《How can I create and manage projects?》。"Free users can create a maximum of five projects." / "Click "+ New Project" in the upper right corner." / "Give your project a name and description (note that Claude will not have access to these details)." / "Anything you upload to this space will be used across all of your chats within that project." / "Claude will use these instructions for all the chats within the project." / "Note: Context is not shared across chats within a project unless the information is added into the project knowledge base." / "While working in a project, Claude uses the project's memory alongside your memory from chats outside of projects, but not memory from other projects." / "There is no way to delete archived projects at this time (you must unarchive it first)." https://support.claude.com/en/articles/9519177（确认日期 2026-10-26）
-[^personal]: Anthropic 帮助文档，《Understanding Claude's personalization features》。"These instructions only apply to chats within that project." https://support.claude.com/en/articles/10185728（确认日期 2026-10-26）
-[^rag]: Anthropic 帮助文档，《Retrieval augmented generation (RAG) for projects》。"RAG for projects is available on paid plans (Pro, Max, Team, and Enterprise)." / "When your project knowledge approaches the context window limit, Claude will automatically enable RAG mode to expand your project's capacity by up to 10x while maintaining quality responses." / "When asking questions, you can reference specific documents by name to help Claude focus its search." https://support.claude.com/en/articles/11473015（确认日期 2026-10-26）
-[^connectors]: Anthropic 帮助文档，《Use connectors to extend Claude's capabilities》。"Connectors let Claude access your apps and services, retrieve your data, and take actions within connected services." / "Web connectors are available for all users on Claude, Cowork, Claude Desktop, and Claude Mobile (iOS and Android)." / "If someone can't access a specific file, channel, or record in the source system, the connector can't reach it from Claude either." / "Only connect services you trust and need for your workflows." / "Installing connectors on mobile is currently in beta—Claude Desktop and web remain the primary path for custom connectors." / "Free users are limited to one custom connector." https://support.claude.com/en/articles/11176164（确认日期 2026-10-26）
-[^suggest]: Anthropic 帮助文档，《How Claude suggests connected apps》。"Your data from that app isn’t used to train Claude’s models, and the connected app can’t see your other conversations." / "Claude doesn’t silently default to one over the other; you choose which app to use, and Claude proceeds from there." / "There are no sponsored rankings, no paid placements, and no advertising." / "Before Claude books, buys, or reserves something on your behalf, it checks with you first." https://support.claude.com/en/articles/14730684（确认日期 2026-10-26）
-[^google]: Anthropic 帮助文档，《Use Google Workspace connectors》。"By default, Claude asks for your approval before each of these actions." / "Asking for a generic "doc" or "deck" without naming Google creates a local file instead." / "Attachment content is not directly accessible through Gmail (metadata only)." / "This data is retained with its associated chat, so you can delete any retrieved data by deleting the chat." https://support.claude.com/en/articles/10166901（确认日期 2026-10-26）
-[^m365]: Anthropic 帮助文档，《Connect to Microsoft 365》。"The Microsoft 365 connector is available on all Claude plans: Free, Pro, Max, Team, and Enterprise." / "Personal Microsoft accounts (such as @outlook.com, @hotmail.com, or @live.com) can't be used." / "In every tenant, a Microsoft Entra Global Administrator also needs to grant a one-time consent." https://support.claude.com/en/articles/15183774（确认日期 2026-10-26）
-[^interactive]: Anthropic 帮助文档，《Use interactive connectors in Claude》。"You can check off tasks, update statuses, and keep chatting with Claude—all in one place." / "Individual users: You can disable specific connector tools via the "Search and tools" menu in your conversation." https://support.claude.com/en/articles/13454812（确认日期 2026-10-26）
-[^custom]: Anthropic 帮助文档，《Get started with custom connectors using remote MCP》。"only click "Allow always" when using a server and tool that you trust to run unsupervised." https://support.claude.com/en/articles/11175166（确认日期 2026-10-26）
-[^tools]: Anthropic 帮助文档，《Manage Claude’s tool access》。"Each connector takes up space in a conversation." / "Best for: Fewer than 10 connectors you use constantly." / "Trade-off: Claude may take an extra step to find the right connector before using it." / "Your selection only applies to that conversation. You can change it at any time." https://support.claude.com/en/articles/13730515（确认日期 2026-10-26）
-[^research]: Anthropic 帮助文档，《Use research on Claude》。"During research, Claude can use tools from your connectors automatically, without asking for approval each time." https://support.claude.com/en/articles/11088861（确认日期 2026-10-26）
-[^skills]: Anthropic 帮助文档，《What are skills?》。"Skills are available for users on Free, Pro, Max, Team, and Enterprise plans. This feature requires code execution to be enabled." / "Anyone can create skills by writing instructions in Markdown—no coding required for simple skills" / "Custom instructions apply broadly to all your conversations. Skills are task-specific and only load when relevant" / "Projects provide static background knowledge that's always loaded when you start chats within them." / "MCP connections give Claude access to tools, while skills teach Claude how to use those tools effectively." / "Claude determines which skills are relevant and loads the information it needs to complete that task, helping to prevent context window overload." https://support.claude.com/en/articles/12512176（确认日期 2026-10-26）
-[^skills-use]: Anthropic 帮助文档，《Use skills in Claude》。"Navigate to Settings > Capabilities and ensure that Code execution and file creation (called Create and edit files in the updated Settings layout) is enabled." / "You don't need to explicitly invoke them—Claude determines when each skill is needed based on your request." / "Toggle any skill on or off using the switch next to it. Disabled skills won't be available to Claude." / "Upload a ZIP file containing your skill folder." / "Try being more explicit in your request (e.g., "Use my brand guidelines skill to create a presentation")." / "The most significant risks are prompt injection, which allows Claude to be manipulated to execute unintended actions, and data exfiltration" https://support.claude.com/en/articles/12512180（确认日期 2026-10-26）
-[^skills-make]: Anthropic 帮助文档，《How to create custom skills》。"Recording a skill is available on Pro, Max, and Team plans, in Cowork in Claude for Mac." / "A recording can run for about 10 minutes." / "This is critical—Claude uses this to determine when to invoke your skill (200 characters maximum)." / "Write clear descriptions: Claude uses descriptions to decide when to invoke your skill. Be specific about when it applies." / "Iterate on the description if Claude isn't using it when expected." / "When you're iterating on a skill with Claude in chat, you can edit the skill files directly where they open beside the conversation. Highlight the text you want changed, click "Edit with Claude," and type your request." https://support.claude.com/en/articles/12512198（确认日期 2026-10-26）
-[^directory]: Anthropic 帮助文档，《Browse skills, connectors, and plugins in one directory》。"Our unified directory brings skills, connectors, and plugins together in one place" / "Skills you install from the directory are view-only." https://support.claude.com/en/articles/14328846（确认日期 2026-10-26）
-[^plugins]: Anthropic 帮助文档，《Use plugins in Claude》。"Plugins are available to all paid plans (Pro, Max, Team, Enterprise)." / "Each plugin bundles skills, connectors, and sub-agents into a single package" / "Claude includes a growing library of plugins for common knowledge work—including sales, finance, legal, marketing, HR, engineering, design, operations, data analysis, and more." / "Select the plugin you want, then click "Add."" / "Type "/" or click the "+" button to see the available skills from your plugins, in chat and in Cowork." / "You can add and use plugins in chat on the web, the Chat tab in Claude Desktop, and Claude Cowork." / "Hooks and sub-agents run in Cowork and Claude Code, not in chat, so they appear grayed out in chat." / "Only install plugins from sources you trust." / "This opens a new Cowork task with a prompt asking Claude to customize the plugin you chose." / "Click “Let's go” to start working with Claude to adjust the plugin's Skills and connectors to match how you work." 韩语版帮助文档写作「커스터마이징」→「시작하기」。 https://support.claude.com/en/articles/13837440（确认日期 2026-10-26）
-[^academy-projects]: Claude Academy《Claude 101》课程《Introduction to projects》。"Simply upload it during the conversation and it stays separate from your project knowledge. It's a perfect way to share context or examples without cluttering the knowledge base." / "Begin with a specific use case rather than trying to create one project for everything. You can always add more content as you go." / "Outdated documents can lead to outdated responses. Review and update your project knowledge periodically." https://academy.claude.com/courses/claude-101/introduction-to-projects（确认日期 2026-10-26）
-[^academy-connect]: Claude Academy《Claude 101》课程《Connecting your tools》。"Return to Claude and try a simple request, like "Can you access my [tool name]?"" https://academy.claude.com/courses/claude-101/connecting-your-tools（确认日期 2026-10-26）
-[^academy-layers]: Claude Academy《Introduction to Claude Cowork》课程《Get better results faster》。"If you find you're explaining the same workflows to Claude multiple times, those will be the right opportunities for your first skills." https://academy.claude.com/courses/introduction-to-claude-cowork/research-analysis-at-scale（确认日期 2026-10-26）
-[^academy-skills]: Claude Academy《Claude 101》课程《Working with skills》。"The easiest way to create a custom Skill is through conversation with Claude itself." / "Claude will interview you about your workflow, asking things like: What should this skill do? What makes good output for this type of work? Can you give examples of when you'd use this skill?" / "Templates, style guides, brand assets, or examples of work you're proud of all help Claude understand exactly what you're looking for." / "projects store knowledge, skills perform tasks" https://academy.claude.com/courses/claude-101/working-with-skills（确认日期 2026-10-26）
-[^academy-plugins]: Claude Academy《Introduction to Claude Cowork》课程《Plugins: Encode your team's expertise》。"A plugin from the marketplace is a strong default, not a final answer." / "The more you shape it to your team's actual work, the more leverage it produces." https://academy.claude.com/courses/introduction-to-claude-cowork/plugins-cowork-as-a-specialist（确认日期 2026-10-26）
+[^projects]: Anthropic 帮助文档，《What are projects?》。"Projects allow you to create self-contained workspaces with their own chat histories and knowledge bases." / "For users on Team and Enterprise plans, projects can be shared with other members of your organization" / "Nothing is lost or deleted in the move." https://support.claude.com/en/articles/9517075 （确认日期 2026-10-26）
+[^projects-how]: Anthropic 帮助文档，《How can I create and manage projects?》。"Free users can create a maximum of five projects." / "Click "+ New Project" in the upper right corner." / "Give your project a name and description (note that Claude will not have access to these details)." / "Anything you upload to this space will be used across all of your chats within that project." / "Claude will use these instructions for all the chats within the project." / "Note: Context is not shared across chats within a project unless the information is added into the project knowledge base." / "While working in a project, Claude uses the project's memory alongside your memory from chats outside of projects, but not memory from other projects." / "There is no way to delete archived projects at this time (you must unarchive it first)." https://support.claude.com/en/articles/9519177 （确认日期 2026-10-26）
+[^personal]: Anthropic 帮助文档，《Understanding Claude's personalization features》。"These instructions only apply to chats within that project." https://support.claude.com/en/articles/10185728 （确认日期 2026-10-26）
+[^rag]: Anthropic 帮助文档，《Retrieval augmented generation (RAG) for projects》。"RAG for projects is available on paid plans (Pro, Max, Team, and Enterprise)." / "When your project knowledge approaches the context window limit, Claude will automatically enable RAG mode to expand your project's capacity by up to 10x while maintaining quality responses." / "When asking questions, you can reference specific documents by name to help Claude focus its search." https://support.claude.com/en/articles/11473015 （确认日期 2026-10-26）
+[^connectors]: Anthropic 帮助文档，《Use connectors to extend Claude's capabilities》。"Connectors let Claude access your apps and services, retrieve your data, and take actions within connected services." / "Web connectors are available for all users on Claude, Cowork, Claude Desktop, and Claude Mobile (iOS and Android)." / "If someone can't access a specific file, channel, or record in the source system, the connector can't reach it from Claude either." / "Only connect services you trust and need for your workflows." / "Installing connectors on mobile is currently in beta—Claude Desktop and web remain the primary path for custom connectors." / "Free users are limited to one custom connector." https://support.claude.com/en/articles/11176164 （确认日期 2026-10-26）
+[^suggest]: Anthropic 帮助文档，《How Claude suggests connected apps》。"Your data from that app isn’t used to train Claude’s models, and the connected app can’t see your other conversations." / "Claude doesn’t silently default to one over the other; you choose which app to use, and Claude proceeds from there." / "There are no sponsored rankings, no paid placements, and no advertising." / "Before Claude books, buys, or reserves something on your behalf, it checks with you first." https://support.claude.com/en/articles/14730684 （确认日期 2026-10-26）
+[^google]: Anthropic 帮助文档，《Use Google Workspace connectors》。"By default, Claude asks for your approval before each of these actions." / "Asking for a generic "doc" or "deck" without naming Google creates a local file instead." / "Attachment content is not directly accessible through Gmail (metadata only)." / "This data is retained with its associated chat, so you can delete any retrieved data by deleting the chat." https://support.claude.com/en/articles/10166901 （确认日期 2026-10-26）
+[^m365]: Anthropic 帮助文档，《Connect to Microsoft 365》。"The Microsoft 365 connector is available on all Claude plans: Free, Pro, Max, Team, and Enterprise." / "Personal Microsoft accounts (such as @outlook.com, @hotmail.com, or @live.com) can't be used." / "In every tenant, a Microsoft Entra Global Administrator also needs to grant a one-time consent." https://support.claude.com/en/articles/15183774 （确认日期 2026-10-26）
+[^interactive]: Anthropic 帮助文档，《Use interactive connectors in Claude》。"You can check off tasks, update statuses, and keep chatting with Claude—all in one place." / "Individual users: You can disable specific connector tools via the "Search and tools" menu in your conversation." https://support.claude.com/en/articles/13454812 （确认日期 2026-10-26）
+[^custom]: Anthropic 帮助文档，《Get started with custom connectors using remote MCP》。"only click "Allow always" when using a server and tool that you trust to run unsupervised." https://support.claude.com/en/articles/11175166 （确认日期 2026-10-26）
+[^tools]: Anthropic 帮助文档，《Manage Claude’s tool access》。"Each connector takes up space in a conversation." / "Best for: Fewer than 10 connectors you use constantly." / "Trade-off: Claude may take an extra step to find the right connector before using it." / "Your selection only applies to that conversation. You can change it at any time." https://support.claude.com/en/articles/13730515 （确认日期 2026-10-26）
+[^research]: Anthropic 帮助文档，《Use research on Claude》。"During research, Claude can use tools from your connectors automatically, without asking for approval each time." https://support.claude.com/en/articles/11088861 （确认日期 2026-10-26）
+[^skills]: Anthropic 帮助文档，《What are skills?》。"Skills are available for users on Free, Pro, Max, Team, and Enterprise plans. This feature requires code execution to be enabled." / "Anyone can create skills by writing instructions in Markdown—no coding required for simple skills" / "Custom instructions apply broadly to all your conversations. Skills are task-specific and only load when relevant" / "Projects provide static background knowledge that's always loaded when you start chats within them." / "MCP connections give Claude access to tools, while skills teach Claude how to use those tools effectively." / "Claude determines which skills are relevant and loads the information it needs to complete that task, helping to prevent context window overload." https://support.claude.com/en/articles/12512176 （确认日期 2026-10-26）
+[^skills-use]: Anthropic 帮助文档，《Use skills in Claude》。"Navigate to Settings > Capabilities and ensure that Code execution and file creation (called Create and edit files in the updated Settings layout) is enabled." / "You don't need to explicitly invoke them—Claude determines when each skill is needed based on your request." / "Toggle any skill on or off using the switch next to it. Disabled skills won't be available to Claude." / "Upload a ZIP file containing your skill folder." / "Try being more explicit in your request (e.g., "Use my brand guidelines skill to create a presentation")." / "The most significant risks are prompt injection, which allows Claude to be manipulated to execute unintended actions, and data exfiltration" https://support.claude.com/en/articles/12512180 （确认日期 2026-10-26）
+[^skills-make]: Anthropic 帮助文档，《How to create custom skills》。"Recording a skill is available on Pro, Max, and Team plans, in Cowork in Claude for Mac." / "A recording can run for about 10 minutes." / "This is critical—Claude uses this to determine when to invoke your skill (200 characters maximum)." / "Write clear descriptions: Claude uses descriptions to decide when to invoke your skill. Be specific about when it applies." / "Iterate on the description if Claude isn't using it when expected." / "When you're iterating on a skill with Claude in chat, you can edit the skill files directly where they open beside the conversation. Highlight the text you want changed, click "Edit with Claude," and type your request." https://support.claude.com/en/articles/12512198 （确认日期 2026-10-26）
+[^directory]: Anthropic 帮助文档，《Browse skills, connectors, and plugins in one directory》。"Our unified directory brings skills, connectors, and plugins together in one place" / "Skills you install from the directory are view-only." https://support.claude.com/en/articles/14328846 （确认日期 2026-10-26）
+[^plugins]: Anthropic 帮助文档，《Use plugins in Claude》。"Plugins are available to all paid plans (Pro, Max, Team, Enterprise)." / "Each plugin bundles skills, connectors, and sub-agents into a single package" / "Claude includes a growing library of plugins for common knowledge work—including sales, finance, legal, marketing, HR, engineering, design, operations, data analysis, and more." / "Select the plugin you want, then click "Add."" / "Type "/" or click the "+" button to see the available skills from your plugins, in chat and in Cowork." / "You can add and use plugins in chat on the web, the Chat tab in Claude Desktop, and Claude Cowork." / "Hooks and sub-agents run in Cowork and Claude Code, not in chat, so they appear grayed out in chat." / "Only install plugins from sources you trust." / "This opens a new Cowork task with a prompt asking Claude to customize the plugin you chose." / "Click “Let's go” to start working with Claude to adjust the plugin's Skills and connectors to match how you work." 韩语版帮助文档写作「커스터마이징」→「시작하기」。 https://support.claude.com/en/articles/13837440 （确认日期 2026-10-26）
+[^academy-projects]: Claude Academy《Claude 101》课程《Introduction to projects》。"Simply upload it during the conversation and it stays separate from your project knowledge. It's a perfect way to share context or examples without cluttering the knowledge base." / "Begin with a specific use case rather than trying to create one project for everything. You can always add more content as you go." / "Outdated documents can lead to outdated responses. Review and update your project knowledge periodically." https://academy.claude.com/courses/claude-101/introduction-to-projects （确认日期 2026-10-26）
+[^academy-connect]: Claude Academy《Claude 101》课程《Connecting your tools》。"Return to Claude and try a simple request, like "Can you access my [tool name]?"" https://academy.claude.com/courses/claude-101/connecting-your-tools （确认日期 2026-10-26）
+[^academy-layers]: Claude Academy《Introduction to Claude Cowork》课程《Get better results faster》。"If you find you're explaining the same workflows to Claude multiple times, those will be the right opportunities for your first skills." https://academy.claude.com/courses/introduction-to-claude-cowork/research-analysis-at-scale （确认日期 2026-10-26）
+[^academy-skills]: Claude Academy《Claude 101》课程《Working with skills》。"The easiest way to create a custom Skill is through conversation with Claude itself." / "Claude will interview you about your workflow, asking things like: What should this skill do? What makes good output for this type of work? Can you give examples of when you'd use this skill?" / "Templates, style guides, brand assets, or examples of work you're proud of all help Claude understand exactly what you're looking for." / "projects store knowledge, skills perform tasks" https://academy.claude.com/courses/claude-101/working-with-skills （确认日期 2026-10-26）
+[^academy-plugins]: Claude Academy《Introduction to Claude Cowork》课程《Plugins: Encode your team's expertise》。"A plugin from the marketplace is a strong default, not a final answer." / "The more you shape it to your team's actual work, the more leverage it produces." https://academy.claude.com/courses/introduction-to-claude-cowork/plugins-cowork-as-a-specialist （确认日期 2026-10-26）
 [^projects-limit]: 可能与价格页面的说明不同，请在你自己的界面上确认。
 [^new-project-name]: 在帮助文档里写作「+ 새 프로젝트」（+ 新建项目）。
 [^project-instr-free]: 免费套餐能否使用项目指令，各份文档的写法不一样。
 [^connector-name]: 在帮助文档里写作「커넥터」→「커넥터 관리」（连接器 → 管理连接器），并且说输入 `/` 也可以。
 [^create-name]: 在新设置界面里，名称是「파일 생성 및 편집」（创建和编辑文件）。
 [^discover-name]: 在帮助文档里写作「발견」标签页（发现）。
+[^skill-upload-name]: 在帮助文档里写作「+ 创建技能」→「上传技能」。
 [^screen-connectors]: 亲自确认输入框「+」→「添加连接器」的子菜单。条目为「커넥터 둘러보기」「커스텀 커넥터 추가」（灰色显示）（确认日期 2026-10-28，网页，免费（Free）套餐）

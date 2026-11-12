@@ -1,9 +1,11 @@
 # Chapter 4. Approving and Undoing — Permission Modes, Rewind, and Git History
 
-> **One-line summary**: **Permission modes** set the range of things Claude can do without asking. If you don't like the result, **Rewind** (`/rewind`) takes you back one request.
-> Some things cannot be undone by Rewind. So save important states once more in **Git history (as a commit)**.
+<Badge type="tip" text="Required" /> Read this to follow this stage.
 
-This chapter is based on the Claude Code official docs and the macOS desktop app (Korean UI, paid account) checked on October 31, 2026. You will keep using the **organizer** (`정리도구`) folder from Chapter 3 (with Git turned on).
+> **One-line summary**: **Permission modes** set the range of things Claude can do without asking. If you don't like the result, **Rewind** (`/rewind`) takes you back one request.
+> Some things cannot be undone by Rewind. So save important states once more in **Git history (as a commit, which saves the current state as one record)**.
+
+This chapter is based on the Claude Code official docs and the macOS desktop app (Korean UI, paid account) checked on October 31, 2026. You will keep using the **organizer** (`organizer`) folder from Chapter 3 (with Git turned on).
 
 ## Choosing a Permission Mode
 
@@ -32,15 +34,13 @@ Each mode **trades off convenience against how closely you watch.**[^tradeoff]
 
 ## Why to Be Careful with "Accept edits", "Auto", and "Bypass permissions"
 
-**Accept edits** does not just edit files. It also runs **file deletion commands** (`rm`) without asking. However, this only applies inside your working folder.[^accept] That is why Chapter 2 told you to pick a small practice folder. When the folder is small, any mistake stays small. Still, commands that wipe out critical paths (for example, `rm -rf ~`, which deletes your entire home folder) are never auto-approved in any mode.[^critical]
+**Accept edits** does not just edit files. It also runs **file deletion commands** (`rm`) without asking. However, this only applies inside your working folder.[^accept] That is why Chapter 2 told you to pick a small practice folder. When the folder is small, any mistake stays small. Still, very dangerous delete commands are never auto-approved in any mode.[^critical] For example, `rm -rf ~` is a command that wipes out your whole home folder (the folder that holds all of your account's files, like your documents and photos).
 
-**Auto** cuts down on prompts a lot, but the official docs state this clearly: Auto mode only reduces permission prompts and **does not guarantee safety.**[^auto] Use it for tasks where you trust the general direction, not as a substitute for your own review on sensitive work.[^auto]
+**Auto** cuts down on prompts a lot. In exchange, a **checker** works in the background. The checker is a separate safeguard that looks at whether a command matches your request before Claude runs it.[^modes] Even so, the official docs state this clearly: Auto mode only reduces permission prompts and **does not guarantee safety.**[^auto] Use it for tasks where you trust the general direction, not as a substitute for your own review on sensitive work.[^auto]
 
-**Bypass permissions** appears grayed out in the menu and must be turned on separately in Settings.[^modes] The official docs say to use this mode **only inside isolated containers or virtual machines.**[^modes] Everyday users have no reason to turn it on.
+**Bypass permissions** appears grayed out in the menu and must be turned on separately in Settings.[^modes] The official docs say to use this mode **only inside isolated containers or virtual machines.**[^modes] Both mean a safe environment kept separate from your computer. Everyday users have no reason to turn it on.
 
-::: details If permission prompts don't appear in "Manual" mode
-As we saw in Chapter 2, if you already set allow rules in the terminal version of Claude Code, the desktop app uses those same settings.[^same-settings] The screenshots in this guide were taken on a computer like that, so permission prompts did not pop up. On a screen where permission prompts do appear, Claude shows what will change and lets you approve or reject each change.[^modes]
-:::
+Permission prompts may not appear even in "Manual" mode. It is not broken. As we saw in Chapter 2, this is because if you already set allow rules in the terminal version of Claude Code, the desktop app uses those same settings.[^same-settings] The screenshots in this guide were also taken on a computer like that, so there are no permission prompts. On a screen where permission prompts do appear, Claude shows what will change and lets you approve or reject each change.[^modes]
 
 <Quiz id="ch404-auto" />
 
@@ -54,9 +54,9 @@ Let's try it out. In a new session, we asked Claude to organize study notes.
 Organize the study notes in inbox into a clean study guide. Split it into four parts: Key Points / Unfamiliar Terms / Questions to Ask / Things to Try, and save it as a new file in the notes folder. Do not change the original memo.
 ```
 
-The study guide was created (result: [4장-공부노트-2026-10-28.txt](/practice/notes/results/4장-공부노트-2026-10-28.txt)). Let's undo this note as if it never happened.
+The study guide was created (result: [ch4-study-notes-2026-10-28.txt](/practice/en/notes/results/ch4-study-notes-2026-10-28.txt)). Let's undo this note as if it never happened.
 
-1. Type `/rewind` in the input box. When the suggestion "Rewind session to a previous message (세션을 이전 메시지로 되돌리기)" appears, press **Enter**, then press **Enter** once more to run it.
+1. Type `/rewind` in the input box. When the suggestion "Rewind session to a previous message (세션을 이전 메시지로 되돌리기)" appears, press **Enter**, then press **Enter** once more to run it. It is fine if the names or order on your screen are a little different. Pick the one with a similar name.
 2. The **Rewind (되감기)** window lists the requests you sent. Click the request you want to go back to.
 
 ![Rewind window. Under "Restore session to a previous message (세션을 이전 메시지로 복원합니다)", red number ① marks the list of requests you sent](../../../guide/20-claude-code/assets/shot-13-rewind-marked.png)
@@ -95,12 +95,15 @@ Here is when each option is useful:
 
 Rewind is not magic. Item ③ in the confirmation window tells you its limits:
 
-- **Files changed by shell commands**: If Claude changed a file only by running a command instead of using its file-editing tool, that file is not tracked.[^limits-bash]
+- **Files changed by shell commands**: Claude usually edits files with its file-editing feature. Sometimes it changes files by running commands instead. Files changed only by commands like this are not tracked.[^limits-bash] A shell is a program that takes commands and runs them.
 - **Files you edited yourself, or files edited in another session**: These are normally not tracked. Only files edited in the current session are tracked.[^limits-external]
 - **Commits**: Your Git history stays as it is (as stated in the confirmation window).
-- **Old checkpoints**: Checkpoints are kept for up to the 100 most recent ones per session, and by default they are cleaned up after about 30 days.[^retention]
 
 For cases like these, the official docs tell you to **revert using version control such as Git.**[^limits-bash] That is why Git history in the next section is your second safety net.
+
+::: details Old checkpoints also disappear (click to expand)
+Checkpoints are kept for up to the 100 most recent ones per session, and by default they are cleaned up after about 30 days.[^retention]
+:::
 
 <Quiz id="ch404-limits" />
 

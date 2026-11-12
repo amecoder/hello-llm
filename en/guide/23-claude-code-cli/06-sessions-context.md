@@ -1,6 +1,6 @@
 # Chapter 6. Sessions and Context
 
-<Badge type="tip" text="Required" /> Be sure to read this to follow this stage.
+<Badge type="tip" text="Required" /> Read this to follow this stage.
 
 > **One-line summary**: Conversations are saved per folder, so you can reopen them anytime. When a conversation gets long, shrink it with `/compact`. When you move on to something else, clear it with `/clear`.
 
@@ -13,7 +13,7 @@ A **session** is a conversation saved and tied to a project folder.[^session-nam
 The key words here are "tied to a folder." The default list shows only the conversations from that folder. So for every command in this chapter, you first move to the practice folder in the terminal.
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 ```
 
 When you start a fresh `claude`, Claude doesn't know your past conversations. That's because a new session starts without the earlier conversation.[^fresh] To pick up yesterday's discussion, you have to open the past session yourself.
@@ -111,7 +111,7 @@ If you're unsure which of the two to use, ask yourself this.
 - Am I continuing the same work? Then `/compact`.
 - Am I moving on to other work? Then `/clear`.
 
-::: details More (click to expand)
+::: details More details (click to expand)
 If you use `/clear`, you may end up with two sessions with the same name. In that case, `claude -r name` shows a list of sessions with that name. Pick one by looking at the time and size.
 :::
 
@@ -140,7 +140,7 @@ So build these habits.
 
 You'll try a way to block reading entirely in [Chapter 7](07-permissions-undo.md).
 
-::: details More (click to expand)
+::: details More details (click to expand)
 - There's also a `claude purge` command that deletes the history for one project.[^purge] It's hard to undo, so don't run it just for practice. This guide didn't run it either.
 - The retention period on the server side is covered in [Chapter 13](13-cost-safety-trouble.md).
 :::
@@ -149,12 +149,12 @@ You'll try a way to block reading entirely in [Chapter 7](07-permissions-undo.md
 
 ## Try It Yourself
 
-Try this in the practice folder `~/hello-ai-연습/터미널`.
+Try this in the practice folder `~/hello-ai-practice/terminal`.
 
 1. Start `claude` and ask this.
 
    ```text
-   @inbox/회의-2026-10-27-주간회의.txt Tell me in two lines what was decided in this memo.
+   @inbox/meeting-2026-10-27-weekly.txt Tell me in two lines what was decided in this memo.
    ```
 
 2. Name it with `/rename weekly-meeting-notes` and leave with `/exit`.

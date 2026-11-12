@@ -1,5 +1,7 @@
 # 第9章 プライバシーと安全 — 何が保存され、誰が見て、どう削除するか
 
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
 > **一言まとめ**: Geminiの会話は、「アクティビティを保存（활동 기록 보관）」がオンになっていると**アカウントに18か月**残り、一部は**人が読み、AIの学習にも使われます。**
 > 残したくない会話は**一時チャット**で行い、機密は最初から入力しないでください。履歴は、「設定」 → 「アクティビティ」でオフにしたり削除したりします。
 
@@ -14,7 +16,7 @@
 - **連携したアプリから来る情報**: Gmailのような連携アプリ、検索・YouTubeの履歴、Chromeで見ていたページのアドレス（[第7章](07-skills-apps.md#連携アプリ-—-gmail・drive・カレンダーをgeminiで)）
 - **その他のもの**: 音声会話（Live）の録音、フィードバック、位置情報など
 
-**位置情報は常に集めます。** 質問に合った回答をするためです。ただし、端末で許可した**正確な位置**は、「Geminiアプリのアクティビティ（Gemini 앱 활동）」の履歴には保存しません。[^hub]
+**位置情報は常に集めます。** 質問に合った回答をするためです。[^hub][^precise]
 
 **チャットの内容を使って広告を表示することはない**と、Googleは明記しています。変わるときは、はっきり知らせるとしています。[^hub]
 
@@ -23,14 +25,21 @@
 ## 人が読むのか？ AIの学習に使われるのか？
 
 **一部は人が読みます。** 人間のレビュアー（Googleと契約した外部業者の社員を含む）が、Geminiの回答が不正確だったり有害だったりしないかを評価し、よりよい回答を提案します。[^hub]
-会話は、レビュアーに送る前に自分のアカウントから切り離されます。それでも、Googleは次のように案内しています。[^hub]
+会話は、レビュアーに送る前に自分のアカウントから切り離されます。[^hub]
+たとえば、会社の売上報告書を貼り付けて要約を頼んだなら、名札は外されていても、その報告書の内容をレビュアーが読めるということです。
+そのため、Googleは次のように案内しています。[^hub]
 
 > レビュアーに見られたり、サービスの改善に使われたりしては困る**機密情報は、入力しないでください。**
 
 **学習にも使われます。** 「アクティビティを保存」がオンになっていると、自分のアクティビティが**生成AIモデルの学習を含むサービスの改善**に使われ、その過程に人間のレビュアーが加わります。[^hub]
 今後の会話がサービス改善のためにレビューされないようにする方法として、ヘルプが案内しているのは**「アクティビティを保存」をオフにすること**です。[^hub]
 
-ただし、履歴をオフにしたり一時チャットを使ったりしても、**回答を返し、ユーザーとGoogleを守る作業**には、会話が引き続き使われます。このときも、人間のレビュアーが加わることがあります。[^hub]
+では、オフにすれば完全に安全でしょうか？ まとめると次のとおりです。
+
+- **オフにすると**、今後の会話がAIの学習などのサービス改善に使われません。
+- **それでも**、履歴をオフにしたり一時チャットを使ったりした会話も、**回答を返し、ユーザーとGoogleを守る作業**には引き続き使われます。このときも、人間のレビュアーが加わることがあります。[^hub]
+
+オフにするのは学習を防ぐ方法であって、人の目を完全に防ぐ方法ではありません。下の表で、ひと目で比べてみてください。
 
 | | 「アクティビティを保存」オン | オフ、または一時チャット |
 |---|---|---|
@@ -98,10 +107,11 @@
 
 ### ダウンロードする
 
-自分のGeminiの履歴を、ファイルで受け取っておけます。**Googleテイクアウト**（`takeout.google.com`）で、Geminiに使っているアカウントでログインしてから、「すべて選択解除（모두 선택 해제）」を押し、Geminiの項目だけを選びます。[^download]
+自分のGeminiの履歴を、ファイルで受け取っておけます。**ダウンロードしても、Googleのサーバーにある履歴は削除されません。** 削除するには、上で見たように別に削除します。[^download]
 
-- メールで受け取るダウンロードリンクは、**7日間**開けます。[^download]
-- **ダウンロードしても、Googleのサーバーにある履歴は削除されません。** 削除するには、上で見たように別に削除します。[^download]
+1. **Googleテイクアウト**（`takeout.google.com`、Googleサービスの自分のデータをダウンロードする場所）を開きます。
+2. Geminiに使っているアカウントでログインします。
+3. 「すべて選択解除（모두 선택 해제）」を押し、Geminiの項目だけを選びます。[^download][^link7]
 
 <Quiz id="ch309-delete" />
 
@@ -109,8 +119,12 @@
 
 ### 利用ルール
 
-Googleは、Geminiで作ってはいけないものを定めています。児童の性的搾取に関するもの、実在の人物の性的な画像、スパム・詐欺、危険または違法な活動、憎悪・嫌がらせ、人をだます偽のコンテンツなどです。[^guidelines]
+Googleは、Geminiで作ってはいけないものを定めています。スパム・詐欺、憎悪・嫌がらせのように、他人を傷つけることです。[^guidelines]
 違反すると、警告から一部の機能の制限、**Geminiの利用停止、他のGoogleサービスの利用停止**まで受けることがあります。[^guidelines]
+
+::: details 禁止事項の一覧（クリックして開く）
+児童の性的搾取に関するもの、実在の人物の性的な画像、スパム・詐欺、危険または違法な活動、憎悪・嫌がらせ、人をだます偽のコンテンツなどです。[^guidelines]
+:::
 
 ### 回答をそのまま信じない
 
@@ -120,8 +134,8 @@ Geminiは人間ではありません。自分で考えたり感情を感じた�
 
 ### 子どもと会社のアカウント
 
-- **満13歳未満**（国によって異なります）の子どもは、親が**Family Link**（家族管理アプリ）で許可して初めて、Geminiを使えます。[^child]
 - **会社・学校のアカウント**は、ルールが異なります。会社が使っているGoogle Workspaceのグレードによっては、会話とアップロードしたファイルを人間がレビューせず、AIの学習にも使わない場合があります。「アクティビティを保存」は、管理者だけがオフにできます。[^work] 会社のアカウントなら、会社のAI利用ルールをまず確認してください。
+- **満13歳未満**（国によって異なります）の子どもは、親が**Family Link**（家族管理アプリ）で許可して初めて、Geminiを使えます。[^child]
 
 <Quiz id="ch309-rules" />
 
@@ -159,6 +173,8 @@ Geminiは人間ではありません。自分で考えたり感情を感じた�
 次の章: [第10章 音声とスマホ](10-voice-mobile.md)
 
 [^report]: Gemini Web画面（Google AI Pro、韓国語）で確認。「설정」 → 「활동」を押すと、新しいタブにmyactivity.google.comの「Gemini 앱 활동」が開き、設定名 「활동 기록 보관」、状態表示 「사용」、説明 "이 설정이 사용 중지되어 있어도 Google은 사용자에게 대답하고 Gemini를 안전하게 유지하기 위해 72시간 동안 채팅을 저장합니다."、自動削除ボタン 「18개월이 지난 활동 삭제」。(確認日 2026-10-30、`docs/reports/2026-10-30_Gemini-공식-자료.md`の「실제 화면에서 직접 확인」の節。このページには実際の会話履歴が表示されるため、キャプチャしていない)
+[^precise]: ただし、端末で許可した**正確な位置**は、「Geminiアプリのアクティビティ（Gemini 앱 활동）」の履歴には保存しません。出典は下の「Gemini Apps Privacy Hub」です。
+[^link7]: メールで受け取るダウンロードリンクは、**7日間**開けます。出典は下の「Download your Gemini Apps data」のヘルプです。
 [^hub]: Googleヘルプ「Gemini Apps Privacy Hub」（韓国語版「Gemini 앱 개인 정보 보호 허브」）。"What you say to Gemini Apps (like the prompts you submit or speak, and tasks you ask Gemini to do for you)" / "What you share with Gemini Apps (like files, videos, screens you ask about, photos, imported chats, and page content you share from your browser)" / "Information from your Connected Apps (including third-party services such as Model Context Protocol server tools) and other Google services you use with Gemini Apps (such as your Search or YouTube history, or your page context and URL from Chrome)" / "Your saved activity also includes audio, Gemini Live videos and screenshares, feedback, info from websites you visit with Gemini, product usage, and location info" / "Location data is always collected if you use Gemini Apps so that they can provide you with a response that is relevant to your query." / "Precise location that is processed with your permission from your device or browser is not stored in your Gemini Apps Activity." / "Your Gemini Apps chats are not being used to show you ads. If this changes, we will clearly communicate it to you." / "Reviewers assess if Gemini Apps’ responses were low-quality, inaccurate, or harmful. They also suggest better responses." / "Chats are disconnected from your account before being sent to service providers." / "Please don’t enter confidential information that you wouldn’t want a reviewer to see or Google to use to improve our services, including machine-learning technologies." / "Google uses your activity to provide, develop, and improve its services (including training generative AI models), as well as to protect Google, its users, and the public with the help of human reviewers." / "To stop your future chats from being reviewed to improve Google services, turn off your Keep Activity setting." / "Even if your Keep Activity setting is off or you use temporary chats, Google still uses your chats to respond to you and help protect Google, our users, and the public, including with help from human reviewers." / "You can change your auto-delete setting in Gemini Apps Activity from the default of 18 months to 3 months, 36 months, or indefinite." / "Temporary chats and chats you have when Keep Activity is off are retained with your account for 72 hours and used to:" / "Temporary chats are not used to train Google’s AI models." / "If Keep Activity is off and you choose to submit feedback, Google collects and uses the following data to help maintain and improve Gemini Apps:" / "Your Gemini Live audio, video and screenshares are not used to improve Google services by default." / "Chats reviewed by human reviewers (and related data like your language, device type, location info, or feedback) are not deleted when you delete your activity. Instead, they are retained for up to three years." / "Disconnecting an app or deleting data in a connected app doesn’t delete any data from Gemini Apps Activity." / "LLM experiences (Gemini Apps included) can hallucinate and present inaccurate information as factual." / "Don’t rely on Gemini Apps for diagnosis, treatment, medical advice, or legal, financial, or other professional help. Its output is for informational purposes only." https://support.google.com/gemini/answer/13594961 (確認日 2026-10-31)
 [^activity]: Googleヘルプ「Manage & delete your activity in Gemini Apps」（韓国語版「Gemini 앱에서 활동 관리 및 삭제하기」）。"If you’re 18 or over, Keep Activity is on by default." / "Even when Keep Activity is off, your conversations will be saved with your account for up to 72 hours to allow Google to provide the service and process any feedback." / "Near the top, click On  Turn off or Turn off and delete activity." / "You can also go to myactivity.google.com/product/gemini." / "All your Gemini Apps activity: Above your activity, click Delete   All time." / "The last hour or day: Above your activity, click Delete   Last hour or Last day." / "A specific time period: Above your activity, click Delete   Custom range." / "If a shared chat is deleted, it doesn’t delete the related public link." / "Choose how long your Gemini Apps activity is kept (3, 18, or 36 months) or select Don’t auto-delete activity." 韓国語版の名前 「사용 중지」「사용 중지 및 활동 삭제」「삭제」「전체 기간」「지난 1시간」「지난 1일」「사용자설정 범위」「자동 삭제 안함」。https://support.google.com/gemini/answer/13278892 (確認日 2026-10-31)
 [^download]: Googleヘルプ「Download your Gemini Apps data」（韓国語版「Gemini 앱 데이터 다운로드하기」）。"Important: If you download your Gemini Apps activity, it doesn’t delete it from Google’s servers." / "Make sure to sign in to the same Google Account that you use for Gemini Apps." / "Under "Select data to include," select Deselect all." / "Send download link via email: We'll email you a link to download your Google data archive. This link is active for 7 days." 韓国語版の名前 「모두 선택 해제」。https://support.google.com/gemini/answer/16920332 (確認日 2026-10-31)

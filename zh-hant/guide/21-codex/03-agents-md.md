@@ -1,5 +1,7 @@
 # 第3章 規則檔案 AGENTS.md——把 CLAUDE.md 搬到 Codex
 
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
+
 > **一句話總結**：Codex 在開始工作之前會讀取 **`AGENTS.md`**。Claude Code 的 `CLAUDE.md`，Codex 如果不做處理就不會讀。
 > 把整理工具資料夾的規則搬到 `AGENTS.md`，然後在新對話裡測試，**不用說出規則**它是否也會遵守。
 
@@ -25,7 +27,7 @@ CLAUDE.md 是 Claude Code 讀取的規則檔案。請把同樣的規則搬到 AG
 
 Codex 把 `CLAUDE.md` 的五條規則原樣搬了過來，並把新規則作為第 6 條加了上去。然後它報告說"已驗證，除了新增的規則，內容與原文完全一致"。
 
-結果：[AGENTS.md](/practice/notes/results/codex/3장-AGENTS.md.txt)
+結果：[AGENTS.md](/practice/zh-hant/notes/results/codex/ch3-AGENTS.md.txt)
 
 沒有刪除 `CLAUDE.md` 是有原因的。這是為了讓同一個資料夾在 Claude Code 裡也能繼續使用。代價是**兩個檔案要一起修改**。如果只改一邊，兩個工具就會按不同的規則工作。
 
@@ -36,7 +38,7 @@ Codex 把 `CLAUDE.md` 的五條規則原樣搬了過來，並把新規則作為�
 開啟一個新對話，不提規則，只請它整理學習筆記。
 
 ```
-把 inbox/공부-2026-10-28-프롬프트-강의.txt 整理成學習筆記，儲存到 notes/ 裡。
+把 inbox/study-2026-10-28-prompt-lecture.txt 整理成學習筆記，儲存到 notes/ 裡。
 ```
 
 結果的最下面多了新規則的那一節。
@@ -49,7 +51,7 @@ Codex 把 `CLAUDE.md` 的五條規則原樣搬了過來，並把新規則作為�
 - 講師介紹的寫提示詞的方法：5 種。
 ```
 
-結果：[只靠規則寫出的學習筆記](/practice/notes/results/codex/3장-공부노트-규칙확인.txt)
+結果：[只靠規則寫出的學習筆記](/practice/zh-hant/notes/results/codex/ch3-study-notes-rule-check.txt)
 
 | 什麼時候生成的檔案 | 「與原件核對」一節 |
 |---|---|
@@ -58,7 +60,17 @@ Codex 把 `CLAUDE.md` 的五條規則原樣搬了過來，並把新規則作為�
 
 來源：本指南的實操結果（2026-11-01，各 1 次）
 
-新規則只在 `AGENTS.md` 裡有，所以可以認為 Codex 讀了那個檔案並照做了。不過這只是**各做一次的結果**，而且前後的筆記種類（會議紀要、學習筆記）也不同。模板的檢查清單裡也有"和原始筆記核對過一次"這樣類似的專案。想更確定的話，請用**同一份筆記**，沒有 `AGENTS.md` 跑一次，有 `AGENTS.md` 跑一次，比較一下。這不保證它每次都遵守，所以每次看結果時都要確認。
+新規則只在 `AGENTS.md` 裡有，所以可以認為 Codex 讀了那個檔案並照做了。這不保證它每次都遵守，所以每次看結果時都要確認。
+
+::: details 這個實驗的侷限（點選展開）
+
+- 這只是**各做一次的結果**。
+- 前後的筆記種類（會議紀要、學習筆記）不同。
+- 模板的檢查清單裡也有"和原始筆記核對過一次"這樣類似的專案。
+
+想更確定的話，請用**同一份筆記**，沒有 `AGENTS.md` 跑一次，有 `AGENTS.md` 跑一次，比較一下。
+
+:::
 
 <Quiz id="ch503-test" />
 
@@ -73,7 +85,11 @@ Codex 把 `CLAUDE.md` 的五條規則原樣搬了過來，並把新規則作為�
 
 來源：Codex 官方文件（只摘錄了一部分）[^chain]
 
-兩個都有的話，會**連起來**讀取，離當前資料夾更近的檔案排在後面，優先於前面的指令。[^override] 合併後的大小達到預設的 32KiB，後面的就不再追加了。[^limit] 換成韓語大約是 1 萬字出頭。規則請保持簡短。
+兩個都有的話，會**連起來**當成一個來讀。這時離當前資料夾更近的檔案排在後面，排在後面的指令優先於前面的指令。[^override]
+
+比如，`~/.codex/AGENTS.md` 裡寫著"用韓語回答"，整理工具資料夾的 `AGENTS.md` 裡寫著"用英語回答"。整理工具資料夾的檔案排在後面，所以在這個資料夾裡，"用英語回答"勝出。
+
+能連起來的量是有上限的。合併後的大小達到預設的 32KiB（KiB，檔案大小的單位）時，後面的就不再追加了。[^limit] 換成韓語大約是 1 萬字出頭。規則請保持簡短。
 
 如果改了規則卻好像沒有生效，請**開始一個新對話**，或者重新啟動 Codex。Codex 每次開始執行時都會重新讀取規則。[^restart]
 
@@ -83,11 +99,15 @@ Codex 把 `CLAUDE.md` 的五條規則原樣搬了過來，並把新規則作為�
 
 ## 匯入（Import）和記憶
 
-**匯入**是把其他智慧體的設定一次性搬過來的功能。在應用裡，可以從 Claude Code、Claude Cowork、Cursor 匯入。[^import-from] 從應用設定裡的 **Import** 選單開始。如果沒有這個選單，就在 **General** 裡找 **Import other agent setup**。[^import-menu]
+也有一次性完成本章手動做的這些事的功能。**匯入**是把其他智慧體的設定一次性搬過來的功能。在應用裡，可以從 Claude Code、Claude Cowork、Cursor 匯入。[^import-from] 從應用設定裡的 **Import** 選單開始。[^import-menu]
 
 ![ChatGPT 應用的 Settings → Import 介面：「Import from another AI app」下面有 Claude Code、Claude Cowork、Cursor，每個都有 Import 按鈕](../../../guide/21-codex/assets/shot-02-import.png)
 
 在本指南的介面（2026-11-01）中，設定左側列表裡有 **Import**，在這臺電腦上找到的 Claude Code、Claude Cowork、Cursor 各自帶著 **Import** 按鈕顯示出來。本指南沒有點這些按鈕。
+
+本指南**沒有執行**匯入。因為匯入不只檢視一個資料夾，還會一併檢視我電腦上的個人設定。[^import-scope] 而且它會把規則檔案、技能、斜槓命令、設定檔案換成 Codex 這邊對應的東西，一次性搬過去。比如 `CLAUDE.md` 會變成 `AGENTS.md`。[^import-map] 因為一次會搬很多東西，如果想一個一個親眼看看搬了什麼，像本章這樣手動搬會更好。
+
+::: details 匯入會搬什麼、要檢查什麼（點選展開）
 
 | Claude Code 這邊 | 到了 Codex 變成 |
 |---|---|
@@ -98,9 +118,17 @@ Codex 把 `CLAUDE.md` 的五條規則原樣搬了過來，並把新規則作為�
 
 來源：Codex 官方文件（只摘錄了一部分）[^import-map]
 
-匯入之後，原來的設定不會被更改或刪除。[^import-keep] 不過官方文件說，匯入之後一定要檢查**技能的許可權限制、鉤子（hook）、使用引數的命令**。[^import-review]
+`settings.json` 和 `config.toml` 是記錄各個工具設定的檔案。只是名字不同，作用是一樣的。
 
-本指南**沒有執行**匯入。因為匯入不只檢視一個資料夾，還會一併檢視我電腦上的個人設定。[^import-scope] 如果想親眼看看搬了什麼，像本章這樣手動搬會更好。
+匯入之後，原來的設定不會被更改或刪除。[^import-keep] 不過官方文件說，匯入之後一定要檢查這些東西。[^import-review]
+
+- 限制了技能能用的工具或許可權的部分
+- 鉤子（hook，到了規定的時候自動執行的指令碼）
+- 往空格裡填值來用的命令（使用引數的命令）
+
+如果設定裡沒有 **Import** 選單，就在 **General** 裡找 **Import other agent setup**。[^import-menu]
+
+:::
 
 **記憶**（Memories）是把以前工作的上下文帶到下一次工作裡的功能。[^memory] 我電腦上的 Codex 記憶預設是關閉的。[^memory-off] 官方文件只把記憶看作"輔助回想"，說一定要遵守的規則不要交給記憶。[^memory-rules] 它說**一定要遵守的規則要寫在 `AGENTS.md` 裡**。[^memory-agents]
 

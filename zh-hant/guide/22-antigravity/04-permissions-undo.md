@@ -1,9 +1,13 @@
 # 第4章 許可權與撤銷——四種預設，丟棄要小心
 
-> **一句話總結**：應用的許可權用**四個預設**（Request Review、Default、Auto、Turbo）來選。剛開始請從 **Request Review** 或 **Default** 用起。
-> Review 窗口裡的**丟棄會不經確認直接生效**。終端裡有 `/rewind`，但最可靠的安全網仍然是 Git 記錄。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
 
-本章依據 2026年11月1日確認的 Antigravity 官方文件寫成。**本指南還沒有在應用介面上實際練習過。** 和你的介面不同時，以你的介面為準。為什麼需要許可權，在 [Claude Code 第4章](../20-claude-code/04-permissions-undo.md)裡講過。本章以個人 Google 賬號為準，公司、企業賬號的許可權介面不同。[^business]
+> **一句話總結**：應用的許可權用**四個預設**（Request Review、Default、Auto、Turbo）來選。剛開始請從 **Request Review** 或 **Default** 用起。
+> Review 視窗裡的**丟棄會不經確認直接生效**。終端裡有 `/rewind`，但最可靠的安全網仍然是 Git 記錄。
+
+**許可權**是智慧體不經我許可就可以做的事情的範圍。比如"改資料夾裡的檔案不用問，安裝程式一定要問"這樣的約定。為什麼需要許可權，在 [Claude Code 第4章](../20-claude-code/04-permissions-undo.md)裡講得更詳細（選讀）。
+
+本指南還沒有在應用介面上實際練習過。和你的介面不同時，以你的介面為準。本章以個人 Google 帳號為準。[^tested]
 
 ## 四種許可權預設
 
@@ -24,19 +28,32 @@
 - 單個專案：**Settings → Projects**
 - 當前對話：輸入框裡的許可權選擇器
 
-專案預設跟隨全域性設定（**Inherit Global**），也可以給每個專案單獨設定。[^inherit] 意思是，信得過的專案可以放寬，信不過的資料夾可以收緊。[^per-project] 個人賬號一開始用的是哪個預設，官方文件裡沒有寫。開啟應用後請先確認一下。
+專案預設跟隨全域性設定（**Inherit Global**），也可以給每個專案單獨設定。[^inherit] 意思是，信得過的專案可以放寬，信不過的資料夾可以收緊。[^per-project] 個人帳號一開始用的是哪個預設，官方文件裡沒有寫。開啟應用後請先確認一下。
 
 <Quiz id="ch604-presets" />
 
 ## 圍欄與預設規則
 
-應用裡有**終端圍欄**（沙箱），官方文件說它**預設是開著的**。[^sandbox] 不過各預設不一樣。Default、Auto 裡是開的，Request Review、Turbo 裡是關的。[^by-preset] 圍欄內的命令只能用工作資料夾和臨時資料夾，**不能上網。**[^no-net] `~/.ssh` 或 `.env` 這類敏感檔案也被擋住。[^sensitive]
+應用裡有**終端圍欄**（沙箱，Sandbox）。這是把智慧體執行的命令能碰到的範圍擋起來的裝置。官方文件說它**預設是開著的**。[^sandbox]
+
+不過各預設不一樣。[^by-preset]
+
+- **開**：Default、Auto
+- **關**：Request Review、Turbo
+
+圍欄開著時，命令會被這樣限制。
+
+- 只能用工作資料夾和臨時資料夾。
+- **不能上網。**[^no-net]
+- `~/.ssh` 或 `.env` 這類敏感檔案（裝著密碼、金鑰的檔案）也被擋住。[^sensitive]
+
+比如在 Default 下，智慧體想用一條從網上下載東西的命令，就得走出圍欄。這時應用會自己判斷這條命令。安全、能撤回的命令不問就繼續；有風險或撤不回的命令會停下來，徵求我的許可。[^presets]
 
 不管哪個預設，也有一些預設規則。
 
 - 專案資料夾**內**的檔案讀寫不會詢問。**外面**的檔案需要許可。[^files]
 - 讀取和操作網頁，預設是"詢問"。[^web]
-- 規則衝突時，按 拒絕（Deny）> 詢問（Ask）> 允許（Allow）的順序決定。[^order]
+- 規則衝突時，按 拒絕（Deny）> 詢問（Ask）> 允許（Allow）的順序決定。[^order] 比如同時定了"允許讀取網頁"和"攔截這個網站"，那在這個網站上就是攔截勝出。現在不用急著定規則。
 
 對話中給過的許可可能會保留下來，所以智慧體會漸漸學會哪些動作是可以信任的。[^persist] 雖然方便，但請記住自己許可過什麼。
 
@@ -46,18 +63,25 @@
 
 ## 撤銷
 
-**請小心 Review 視窗的丟棄。**「Discard unstaged changes」會**不經確認直接**生效，甚至把沒有記錄過的新檔案也刪掉。[^discard] 預設視圖裡也包含我自己改的內容（[第2章](02-first-task.md)），所以丟棄之前一定要看一下里面有什麼。
+**請小心 Review 視窗的丟棄。**「Discard unstaged changes」是丟棄還沒用 `git add` 放進待記錄清單的改動的按鈕。這個按鈕會**不經確認直接**生效，甚至把從沒記錄過的新檔案也刪掉。[^discard]
 
-終端裡有 `/rewind`（或 `/undo`），能把對話退回到之前穩定的狀態。[^rewind] 名字和 Claude Code 的回退很像，但官方文件只說它撤銷的是"對話"。是否連檔案也一起撤銷，文件裡沒有寫。
+預設視圖裡也包含我自己改的內容（[第2章](02-first-task.md)）。所以按下這個按鈕，不只是智慧體改的，連我改的內容也可能消失。丟棄之前一定要看一下裡面有什麼。
 
-應用裡似乎也有撤銷功能。官方更新記錄裡提到，"Confirm Undo"確認視窗多了一個只撤銷對話的選項。[^undo] 不過**沒有找到講解用法的文件**，本指南也沒能在應用裡確認。
-
-所以在這一階段，也沿用 Codex 第4章的同一個習慣。
+最可靠的撤銷是 **Git 記錄**。在這一階段，也沿用 Codex 第4章的同一個習慣。
 
 1. 交代任務之前：用 Git 把當前狀態記錄下來。
 2. 交代任務。
 3. 在 Review 視窗用 Agent Edits，只看改動的部分。
 4. 滿意就再記錄一次，不滿意就撤回。
+
+不會 Git 命令也沒關係。請智慧體"把現在的狀態用 Git 記錄下來"就行（這是在 Claude Code 裡確認過的方法。在 Antigravity 裡，本指南還沒有確認）。
+
+還有別的撤銷功能，但還沒確認它們會不會連檔案也一起撤銷。
+
+::: details 詳細說明（點選展開）
+- 終端裡有 `/rewind`（或 `/undo`），能把對話退回到之前穩定的狀態。[^rewind] 名字和 Claude Code 的回退很像，但官方文件只說它撤銷的是"對話"。是否連檔案也一起撤銷，文件裡沒有寫。
+- 應用裡似乎也有撤銷功能。官方更新記錄裡提到，"Confirm Undo"確認視窗多了一個只撤銷對話的選項。[^undo] 不過**沒有找到講解用法的文件**，本指南也沒能在應用裡確認。
+:::
 
 <Quiz id="ch604-undo" />
 
@@ -90,6 +114,7 @@
 
 下一章：[第5章. 計劃、定時、瀏覽器、目標](05-plan-schedule.md)
 
+[^tested]: 本章依據 2026年11月1日確認的 Antigravity 官方文件寫成。本指南還沒有在應用介面上實際練習過。公司、企業帳號的許可權介面不同。[^business]
 [^business]: Antigravity 官方文件，「Agent settings」。"Business and enterprise accounts use the following settings instead of the permission presets above." https://antigravity.google/docs/agent-settings （確認日期 2026-11-01）
 [^presets]: Antigravity 官方文件，「Agent settings」。"**Request Review** (_“Every command requires approval.”_): The sandbox is off and every terminal command requires approval." / "**Default** (_“Ask before sensitive operations.”_): Commands run without prompting inside the [Terminal sandbox](https://antigravity.google/docs/sandbox); running outside the sandbox requires approval." / "When a command needs to run outside the sandbox, Antigravity automatically evaluates it so safe, reversible commands proceed without prompting while risky or irreversible actions still pause for your approval." https://antigravity.google/docs/agent-settings （確認日期 2026-11-01）
 [^turbo]: Antigravity 官方文件，「Agent settings」。"**Turbo** (_“Run all commands without restrictions.”_): All commands run without prompting with no isolation or restrictions, and the agent has full read and write access to your filesystem." https://antigravity.google/docs/agent-settings （確認日期 2026-11-01）

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "deny": ["Read(./secret/**)"]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          { "type": "command", "command": "date '+%F %T 檔案已被修改' >> changelog.txt" }
+        ]
+      }
+    ]
+  },
+  "statusLine": { "type": "command", "command": "echo 街角咖啡館 整理中" }
+}

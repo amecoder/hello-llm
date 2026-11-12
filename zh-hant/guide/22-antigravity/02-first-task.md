@@ -1,16 +1,18 @@
 # 第2章 安裝應用與第一次整理——把資料夾開啟為專案
 
-> **一句話總結**：安裝 Antigravity 應用，用 Google 賬號登入，然後把整理工具資料夾作為**專案**開啟。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
+
+> **一句話總結**：安裝 Antigravity 應用，用 Google 帳號登入，然後把整理工具資料夾作為**專案**開啟。
 > 一開始用 **Planning mode**（先做計劃）來交代任務，讀完計劃後點 **Proceed** 繼續。
 
-本章依據 2026年11月1日確認的 Antigravity 官方文件寫成。**本指南還沒有在應用介面上實際練習過。** 介面名稱原樣寫了官方文件裡的英文名稱，和你的介面不同時，以你的介面為準。實際執行結果在第3章（用終端執行）裡。
+本指南還沒有在應用介面上實際練習過。介面上的按鈕名稱，原樣寫了官方文件裡的英文名稱。和你的介面有點不一樣也沒關係。找一個名稱相近的按鈕，跟著做就行。實際執行的結果在第3章（用終端執行）裡。[^tested]
 
 ## 安裝並登入
 
 1. 在 [antigravity.google/download](https://antigravity.google/download) 下載適合你電腦的安裝檔案。如果是 macOS，開啟 `Antigravity.dmg`，把它拖進 **Applications** 資料夾。[^dmg]
-2. 開啟應用，點 **Sign in**。瀏覽器開啟後，用個人 Google 賬號登入。[^signin]
+2. 開啟應用，點 **Sign in**。瀏覽器開啟後，用個人 Google 帳號登入。[^signin]
 
-用量和可用的模型，由登入賬號的套餐（免費、Pro、Ultra）決定（[第1章](01-what-is.md)）。
+用量和可用的模型，由登入帳號的方案（免費、Pro、Ultra）決定（[第1章](01-what-is.md)）。
 
 <Quiz id="ch602-install" />
 
@@ -30,9 +32,14 @@ Antigravity 應用裡的智慧體（Agent），在**專案**（Projects）裡幹
 
 出處：Antigravity 官方文件[^modes]
 
-整理工具用 **Local mode** 就夠了。New worktree mode 只能在 Git 倉庫裡使用。[^worktree]
+整理工具請選 **Local mode**。它直接在當前資料夾裡工作，所以結果檔案馬上就能找到。
 
-新專案一開始用 **Inherit Global** 許可權，可以讀寫專案資料夾裡的全部內容。[^inherit] 許可權在第4章講。
+許可權（智慧體可以做什麼）在第4章講。現在不用改設定。
+
+::: details 詳細說明（點選展開）
+- New worktree mode 只能在 Git 倉庫裡使用。想讓複雜的工作和當前資料夾分開進行時用它。[^worktree]
+- 新專案一開始用 **Inherit Global** 許可權。這是可以讀寫專案資料夾裡全部內容的狀態。[^inherit]
+:::
 
 <Quiz id="ch602-project" />
 
@@ -49,9 +56,13 @@ Antigravity 應用裡的智慧體（Agent），在**專案**（Projects）裡幹
 
 剛開始，建議用 **Planning mode**。計劃書（Implementation plan）出來後讀一讀，沒問題就點對話裡或計劃書上方的 **Proceed**，繼續往下做。[^proceed] 它和 Claude Code 第5章的「計劃（계획）」模式、Codex 第4章的 `/plan` 起同樣的作用。
 
-在設定的 **Agent** 標籤頁裡，可以選擇審閱方式。**Request review** 會在做出計劃或改動內容時停下來，等我批准。[^review-mode] 相反，Always proceed 則不會停下，直接執行。[^always] 剛開始，Request review 比較安全。
-
 任務完成後，智慧體會生成**整理報告**（Walkthrough），概括改了什麼。[^walkthrough]
+
+剛開始，設成 **Request review**（等我批准的方式）比較安全。智慧體做出計劃後會停下來，一直等到我點 Proceed。[^review-mode] 審閱方式在設定的 **Agent** 標籤頁裡選擇。[^review-mode]
+
+::: details 詳細說明（點選展開）
+另一頭的 Always proceed 不會停下，直接執行。[^always] 用熟之前最好不要選它。
+:::
 
 <Quiz id="ch602-plan" />
 
@@ -60,7 +71,7 @@ Antigravity 應用裡的智慧體（Agent），在**專案**（Projects）裡幹
 傳送和前面兩個工具一樣的請求。
 
 ```
-把 inbox/회의-2026-10-27-주간회의.txt 這份筆記整理成會議記錄，作為新檔案儲存到 notes/ 資料夾裡。
+把 inbox/meeting-2026-10-27-weekly.txt 這份筆記整理成會議記錄，作為新檔案儲存到 notes/ 資料夾裡。
 ```
 
 想指定檔案的話，也可以輸入 `@` 來選。指定檔案並不會把內容貼上進去，而是把檔案路徑傳給智慧體，需要時它再去讀那個檔案。[^mention]
@@ -75,7 +86,12 @@ Antigravity 應用裡的智慧體（Agent），在**專案**（Projects）裡幹
 
 應用的 **Review** 視窗會顯示專案 Git 倉庫裡的改動。[^review] 預設檢視是所有還沒有記錄的改動（**Uncommitted**），所以我自己改的內容也會一起顯示。選 **Agent Edits**，就只看這次對話裡智慧體改過的檔案。[^views]
 
-Review 視窗顯示的是 Git 倉庫裡的改動，所以把整理工具資料夾也做成 Git 倉庫會比較方便。如果你跟著 Claude Code 第3章或 Codex 第2章做過，它已經是 Git 倉庫了。在不是 Git 的資料夾裡，Review 視窗是什麼樣子，官方文件裡沒有寫。
+**Git** 是把檔案什麼時候、怎樣改動的記錄下來的工具。Review 視窗會把這些記錄和現在的檔案對比後顯示出來。所以把整理工具資料夾也做成 Git 倉庫（開啟了 Git 記錄的資料夾）會比較方便。
+
+- 如果你跟著 Claude Code 第3章或 Codex 第2章做過，它已經是 Git 倉庫了。
+- 如果還不是，也不需要懂 Git 命令。拜託智慧體「給這個資料夾開啟改動記錄（Git）」的方法，寫在 [Claude Code 第3章](../20-claude-code/03-screen-tour.md)裡（選讀）。這是在 Claude Code 裡確認過的方法，在 Antigravity 裡是否同樣可行，本指南沒能確認。
+
+在不是 Git 的資料夾裡，Review 視窗是什麼樣子，官方文件裡沒有寫。
 
 <Quiz id="ch602-review" />
 
@@ -84,13 +100,13 @@ Review 視窗顯示的是 Git 倉庫裡的改動，所以把整理工具資料�
 1. 安裝應用並登入。
 2. 用 New Project → Add Folder 開啟整理工具資料夾。
 3. 用 Planning mode 傳送上面的請求，讀完計劃後點 Proceed。
-4. 把生成的會議記錄和原始筆記對一對，並在 Review 窗口裡檢視改動過的檔案。
+4. 把生成的會議記錄和原始筆記對一對，並在 Review 視窗裡檢視改動過的檔案。
 
 **連續任務**：第3章要測試，不用搬運規則（`AGENTS.md`）和技能，它是否也會遵守。
 
 ## 小結
 
-- 應用：Sign in → 用個人 Google 賬號登入。
+- 應用：Sign in → 用個人 Google 帳號登入。
 - 用 New Project → Add Folder 把資料夾開啟為專案。普通資料夾也行。
 - 剛開始，用 Planning mode 和 Request review，讀完計劃再 Proceed。
 - Review 視窗顯示 Git 改動。用 Agent Edits 可以只看智慧體的改動。
@@ -108,6 +124,7 @@ Review 視窗顯示的是 Git 倉庫裡的改動，所以把整理工具資料�
 
 下一章：[第3章. 規則與技能——不用搬運也行](03-rules-skills.md)
 
+[^tested]: 本章依據 2026年11月1日確認的 Antigravity 官方文件寫成。本指南還沒有在應用介面上實際練習過。
 [^dmg]: Antigravity 官方文件，「Get started」。"Open the downloaded `Antigravity.dmg` disk image and drag **Antigravity** into your **Applications** folder." https://antigravity.google/docs/getting-started （確認日期 2026-11-01）
 [^signin]: Antigravity 官方文件，「Authenticate」。"Click **Sign in** to open the browser authentication flow." / "Complete the browser-based OAuth flow using your personal Google Account (Free, Pro, or Ultra plan)." https://antigravity.google/docs/install （確認日期 2026-11-01）
 [^projects]: Antigravity 官方文件，「Get started」。"Agents operate within **Projects**, which define the repository boundaries, file scopes, and security permissions for your workspaces." https://antigravity.google/docs/getting-started （確認日期 2026-11-01）

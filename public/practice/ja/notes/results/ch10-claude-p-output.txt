@@ -1,0 +1,13 @@
+$ cd ~/hello-ai-practice/organizer
+$ claude -p "notesフォルダのファイルの一覧を見せて、それぞれのファイルがどの様式（templatesのどれか）で書かれているかを1行ずつ教えて。ファイルは直さないで。答えは短く、表だけで。"
+
+`notes/`にはファイルが4つあります。各ファイルのタイトルと冒頭の欄を`templates/`の様式と見比べて、どの様式かを判断しました。ファイルはひとつも直していません。
+
+| notesのファイル | 使われた様式 |
+|---|---|
+| `study-2026-10-28-prompt-lecture.md` | `templates/study-notes.md` |
+| `weekly-review-2026-10-27.md` | `templates/weekly-review.md` |
+| `minutes-2026-10-27-weekly.md` | `templates/minutes.md` |
+| `minutes-2026-10-29-adhoc.md` | `templates/minutes.md` |
+
+確認した範囲: 4/4 (各ファイルの先頭15行だけを比べました)

@@ -1,7 +1,9 @@
 # 第10章 語音與手機——開口提問，在手機上更快
 
+<Badge type="info" text="選讀" /> 需要的時候再讀。跳過也能跟上後面的章節。
+
 > **一句話總結**：輸入框裡的**麥克風**，會把你說的話記成文字（聽寫）；**聲波符號**，讓你和 Claude 用說話的方式交流（語音模式）。
-> 在手機上，用小元件、快捷指令、鎖屏介面能更快地開啟它，還可以把訊息、郵件草稿直接交給對應的應用。
+> 在手機上，用小元件（放在主螢幕上的小快捷方塊）、快捷指令（把多個動作合成一個按鈕的 iPhone 功能）、鎖屏介面能更快地開啟它，還可以把訊息、郵件草稿直接交給對應的應用。
 
 畫面以 2026年10月的網頁版為準。手機應用和電腦應用的按鈕位置略有不同，設定選單的名稱也可能因畫面而異。
 
@@ -18,13 +20,13 @@
 
 如果準確的句子很重要，請用**聽寫**。我的問題和回答都會以文字留下，可以再讀。需要來回交談時，請用**語音模式**。
 
-這兩個功能，免費套餐也能用。[^dictation][^voice]
+這兩個功能，免費方案也能用。[^dictation][^voice]
 
 <Quiz id="ch210-difference" />
 
 ## 試試聽寫
 
-這一節講手機應用（iPhone、安卓）的聽寫。[^dictation] 電腦應用的 Cowork 裡也可以用聽寫。[^voice]
+這一節講手機應用（iPhone、安卓）的聽寫。[^dictation] 電腦應用的 Cowork（[第8章](08-cowork.md)）裡也可以用聽寫。[^voice]
 
 1. 在 Claude 應用裡開啟一個新聊天。
 2. 點輸入框右側的**麥克風**。
@@ -41,16 +43,21 @@
 
 聽寫支援包括韓語在內的12種語言。英語以外的語言還是測試版（beta）。想換語言，點右上角的首字母，選「語音輸入語言（음성 입력 언어）」。[^dictation]
 
-人名、地名可能會被記錯。傳送之後，請讀一遍聊天窗口裡記下來的我的問題。[^dictation]
+人名、地名可能會被記錯。傳送之後，請讀一遍聊天視窗裡記下來的我的問題。[^dictation]
 
 ### 在 Mac 電腦上——快速輸入
+
+如果你不用 Mac，可以跳過這一部分。
 
 如果在 Mac 上用 Claude 桌面應用，請試試**連按兩下 Option 鍵**。不管你正在用哪個應用，Claude 的輸入框都會馬上開啟。[^quick] 不用中斷手頭的事就能提問。
 
 - 可以拖選螢幕的一部分，作為截圖貼進去，也可以點應用視窗，把裡面的內容一起發過去。[^quick]
+- 包括免費方案在內的所有方案都可以用，但只限 Mac 桌面應用。應用即使在後臺，也必須處於開啟狀態。[^quick]
+
+::: details 詳細說明（點選展開）
 - 開啟聽寫快捷鍵後，按 Caps Lock 就能用說話來輸入。一開始它是關著的。[^quick]
-- 包括免費套餐在內的所有套餐都可以用，但只限 Mac 桌面應用。應用即使在後臺，也必須處於開啟狀態。[^quick]
 - 需要 Mac 的螢幕錄製之類的許可權。在「系統設定 > 隱私與安全性（시스템 설정 > 개인정보 보호 및 보안）」裡確認。[^quick]
+:::
 
 看著陌生的表格或錯誤視窗，想馬上提問時，很方便。
 
@@ -70,7 +77,7 @@
 
 ![Claude 網頁首頁。紅色編號 ①～⑩ 中，⑧ 指向輸入框右下角的麥克風（聽寫）和聲波符號（語音模式）](../../../guide/10-claude/assets/shot-01-home-marked.png)
 
-這是把名字、對話標題換成示例後的畫面（免費套餐）。這一章用到的編號只有 ⑧ 一個。其餘的編號，在[第2章](02-screen-tour.md)裡說明。
+這是把名字、對話標題換成示例後的畫面（免費方案）。這一章用到的編號只有 ⑧ 一個。其餘的編號，在[第2章](02-screen-tour.md)裡說明。
 
 1. 開啟一個新聊天。
 2. 點聊天視窗右下角的**聲波符號**。
@@ -99,7 +106,7 @@
 我回答之後，請簡短地說一個好的地方、一個要改的地方，然後進入下一個問題。
 ```
 
-::: details 拿到的回答大致是這樣（示例——點選展開）
+::: details 拿到的回答大致是這樣（示例——點選展開）（點選展開）
 這是本指南做的示例。實際的回答會因服務和每次的情況而不同。
 
 > 好的，我們開始面試。第一個問題。請您簡單做一下自我介紹，可以嗎？
@@ -108,16 +115,16 @@
 
 > 好的地方是，您一開始就清楚地說了應聘的理由。要改的地方是，經歷的故事稍微有點長。請只挑一個例子，簡短地說一說。那麼，第二個問題。工作中最有成就感的時刻是什麼時候？
 
-**請確認有沒有拿對**：它是一次只問一個問題嗎？我回答之後，它是隻簡短地說一個好的地方、一個要改的地方嗎？它有沒有一下子甩出一整串問題？
+**請確認有沒有拿對**：它是一次只問一個問題嗎？我回答之後，它是只簡短地說一個好的地方、一個要改的地方嗎？它有沒有一下子甩出一整串問題？
 
 :::
 
 ### 需要知道的幾點
 
-- 語音對話也**計入套餐的用量限額**（[第1章](01-getting-started.md)）。
+- 語音對話也**計入方案的用量限額**（[第1章](01-getting-started.md)）。
 - 在同一個對話裡，文字和說話來回切換，**前面的內容也是接著的。** 像網址這樣要準確輸入的東西，中途用文字輸入就行。
-- 它從文字聊天裡最後用的模型開始，對話中可以更換。不過 Claude Fable 目前還不能在語音模式中使用（2026-10-26 確認）。
-- 已連線的工具（Gmail、Google 日曆等）在語音模式裡也能用。語音模式的幫助文件寫道，免費套餐可以連線一個工具。工具連線在[第7章](07-projects-tools.md)講。
+- 它從文字聊天裡最後用的模型開始，對話中可以更換。不過 Claude Fable 目前還不能在語音模式中使用。[^voice-fable]
+- 已連線的工具（Gmail、Google 日曆等）在語音模式裡也能用。[^voice-tools] 工具連線在[第7章](07-projects-tools.md)講。
 - 在新畫面裡，包括 Claude 正在做任務的對話在內，任何對話都可以使用語音模式。[^voice][^cowork-voice-old]
 
 <Quiz id="ch210-voice" />
@@ -133,7 +140,7 @@ Claude 的聲音，只能在固定的幾種裡選。這是為了防止模仿或�
 
 ![「設定」→「通用」畫面。① 左側選單，②「顯示模式（화면 모드）」裡的「主題（테마）」，③「語音」裡的「語言」（韓語）上標有紅色編號](../../../guide/10-claude/assets/shot-09-settings-general-marked.png)
 
-這是免費套餐的畫面。**紅色編號和下面列表的編號指的是同一個地方。**
+這是免費方案的畫面。**紅色編號和下面列表的編號指的是同一個地方。**
 
 - ① 左側選單裡選中了「通用」。
 - ②「主題」：把畫面切換成亮色、暗色。和語音無關。
@@ -160,10 +167,10 @@ Claude 的聲音，只能在固定的幾種裡選。這是為了防止模仿或�
 
 ### iPhone（iOS 18 及以上）
 
-- **「向 Claude 提問」**（Ask Claude）：不用開啟應用就能提問。可以在 Spotlight 搜尋、Siri、分享選單裡使用。比如選中一段文字，透過分享選單直接發給 Claude。
-- **小元件**：把 Claude 小元件放在主螢幕或今日視圖裡，一個按鈕就能開啟新聊天、聽寫、拍照發送。
-- **「用 Claude 分析照片」**（Analyze Photo with Claude）：放進控制中心或鎖屏介面，不用解鎖就能拍照發送。
-- **「Open Claude」**：放進鎖屏介面、控制中心、操作按鈕（Action button），直接開啟 Claude。[^ios][^lock]
+- **「向 Claude 提問」**（Ask Claude）：不用開啟應用就能提問。可以在 Spotlight 搜尋（在主螢幕中間往下滑出現的搜尋欄）、Siri、分享選單裡使用。比如選中一段文字，透過分享選單直接發給 Claude。
+- **小元件**：把 Claude 小元件放在主螢幕或今日檢視（主螢幕最左邊的那一屏）裡，一個按鈕就能開啟新聊天、聽寫、拍照發送。
+- **「用 Claude 分析照片」**（Analyze Photo with Claude）：放進控制中心（從螢幕右上角往下滑出現的按鈕集合）或鎖屏介面，不用解鎖就能拍照發送。
+- **「Open Claude」**：放進鎖屏介面、控制中心、操作按鈕（Action button，部分 iPhone 側面的按鈕），直接開啟 Claude。[^ios][^lock]
 
 「向 Claude 提問」和快捷指令，使用的是開啟應用時顯示的預設模型。[^ios]
 
@@ -179,7 +186,7 @@ Claude 的聲音，只能在固定的幾種裡選。這是為了防止模仿或�
 
 之後在任何應用裡，選中文字，點分享按鈕，選「用 Claude 做摘要」就行了。
 
-<!-- 需要截圖：iPhone 快捷指令應用里加入「向 Claude 提問」動作的畫面 -->
+<!-- 需要截圖：iPhone 快捷指令應用裡加入「向 Claude 提問」動作的畫面 -->
 
 ### 安卓（Android 8.0 及以上）
 
@@ -193,7 +200,7 @@ Claude 的聲音，只能在固定的幾種裡選。這是為了防止模仿或�
 
 ## 和手機應用連線——訊息、郵件、日曆、地圖
 
-手機應用裡的 Claude，可以和手機裡的其他應用連線來幫忙做事。所有套餐都可以。[^ios-apps][^android-apps]
+手機應用裡的 Claude，可以和手機裡的其他應用連線來幫忙做事。所有方案都可以。[^ios-apps][^android-apps]
 
 | | iPhone | 安卓 |
 |---|---|---|
@@ -220,7 +227,9 @@ Claude 第一次要用位置或日曆時，會徵求你的同意。在允許一�
 - **iPhone**：「設定」→「Claude」
 - **安卓**：「設定」→「應用」→「Claude」→「許可權」[^ios-apps][^android-apps]
 
-也有讀取健康資料的功能，但它是測試版，只限 Pro、Max 套餐，而且只在美國可用。[^ios-apps]
+::: details 在韓國還不能用的功能（點選展開）
+也有讀取健康資料的功能，但它是測試版，只限 Pro、Max 方案，而且只在美國可用。[^ios-apps]
+:::
 
 <Quiz id="ch210-apps" />
 
@@ -276,7 +285,7 @@ Claude 第一次要用位置或日曆時，會徵求你的同意。在允許一�
 
 ---
 
-[^screen]: 在 Claude 網頁畫面（免費套餐，韓文介面）上親自確認。「設定（설정）」→「通用（일반）」→「語音（음성）」裡有「語言（언어）」「風格（스타일）」「速度（속도）」。（確認日期 2026-10-26）
+[^screen]: 在 Claude 網頁畫面（免費方案，韓文介面）上親自確認。「設定（설정）」→「通用（일반）」→「語音（음성）」裡有「語言（언어）」「風格（스타일）」「速度（속도）」。（確認日期 2026-10-26）
 [^dictation]: Anthropic 幫助文件，「Use dictation on Claude Mobile」。 "Dictation is available to all Claude users (Free, Pro, Max, Team, and Enterprise plans). Support for languages other than English is in beta." / "Dictation allows you to speak your prompts instead of typing them when using Claude for iOS or Android." / "Tap the microphone icon on the right side of the chat input field." / "Your prompt will automatically appear as text in the chat window." / "We will not retain a copy of your speech input or use it for training our generative models." https://support.claude.com/en/articles/10065434 （確認日期 2026-10-26）
 [^voice]: Anthropic 幫助文件，「Use voice mode」。 "but is built to work best from your phone." / "Tap the sound wave symbol in the lower right corner of the chat window to activate voice mode:" / "Tap the voice mode icon (sound wave symbol next to the microphone icon) in the text input field:" / "Note: Voice conversations count toward your regular usage limits based on your subscription plan." / "In hands-free mode, Claude listens continuously and responds to natural pauses in your speech." / "On the web and desktop: Go to Settings > Capabilities and scroll down to Voice settings." / "When you turn on voice mode, it starts with the model you last used in text chat" / "Note: Claude Fable is not currently available in voice mode." / "Your previous context carries over, so you don't lose anything when you switch." / "On the Free plan you can connect one tool, and paid plans can connect more." / "This prevents voice cloning or impersonation." / "Changing your app's display language doesn't change your voice language, so set it here." / "Textual transcripts of your audio conversations are saved in your chat history just like text conversations." / "In the new Claude experience, voice mode works in any conversation, including ones where Claude is working on a task." / "In Claude Cowork and Claude Code, dictation is available but voice mode isn't." https://support.claude.com/en/articles/11101966 （確認日期 2026-10-26）
 [^dictation-privacy]: Anthropic 隱私中心，「What personal data is collected when using dictation on the Claude mobile apps?」。 "If you have allowed us to use your chats or coding sessions to improve Claude, the transcribed text may be used in accordance with your privacy settings." https://privacy.claude.com/en/articles/10067979 （確認日期 2026-10-26）
@@ -287,5 +296,7 @@ Claude 第一次要用位置或日曆時，會徵求你的同意。在允許一�
 [^android-apps]: Anthropic 幫助文件，「Use Claude with Android apps」。 "This feature is supported on all Claude plans and works with your device's native and third-party apps" / "Reminders: These are exclusively available on Claude for iOS, so Claude can’t create and manage reminders on Android." / "These permissions can be managed at any time in your device settings by going to Settings > Apps > Claude > Permissions." https://support.claude.com/en/articles/11869629 （確認日期 2026-10-26）
 [^quick]: Anthropic 幫助文件，「Use quick entry with Claude Desktop on Mac」。 "Quick entry is available to all Claude users (free, Pro, Max, Team, and Enterprise plans) using Claude Desktop on macOS." / "Instant access: Double-tap the Option key to open Claude from any app." / "Visual context: Capture screenshots or click application windows to share what you're working on." / "The voice dictation shortcut is disabled by default because it takes over your Caps Lock key." / "Claude Desktop needs to be running on your Mac, but it can run in the background." / "Screen recording: Required to capture screenshots and share application windows." / "You can review or change these permissions in System Settings > Privacy & Security." https://support.claude.com/en/articles/12626668 （確認日期 2026-10-26）
 [^cowork-voice-old]: 同一份幫助文件裡還有一句話說，在 Cowork（[第8章](08-cowork.md)）裡只能聽寫，不能用語音模式。
+[^voice-fable]: Anthropic 幫助文件，「Use voice mode」。 "Note: Claude Fable is not currently available in voice mode." （確認日期 2026-10-26）
+[^voice-tools]: 語音模式的幫助文件寫道，免費方案可以連線一個工具。
 [^voice-settings-name]: 幫助文件寫的是「設定」→「功能（기능）」。依畫面不同，可能有差異。
 

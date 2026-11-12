@@ -1,6 +1,6 @@
 # 第3章 安装与登录
 
-<Badge type="tip" text="必读" /> 想跟着这一阶段学下去，一定要读这一章。
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
 
 > **一句话总结**：粘贴官方文档里的安装命令，然后在**新的终端窗口**里用 `claude --version` 确认。接着在练习文件夹里运行 `claude`，在浏览器里登录，准备就完成了。
 
@@ -138,14 +138,14 @@ $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
 在新窗口里移动到第2章的练习文件夹，然后输入 `claude`。Mac·Linux 这样输入。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude
 ```
 
 Windows PowerShell 这样输入。
 
 ```powershell
-cd $HOME\hello-ai-연습\터미널
+cd $HOME\hello-ai-practice\terminal
 claude
 ```
 

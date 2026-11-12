@@ -1,0 +1,42 @@
+# Ad-hoc Meeting Minutes — 2026-10-29(Thu)
+
+<!-- File name: notes/minutes-YYYY-MM-DD-meeting-name.md
+     Don't make up information that isn't in the original memo; write (not in notes). -->
+
+- Place: Corner Cafe
+- Attendees: Minji (owner), Seoyeon
+- Original memo: `inbox/meeting-2026-10-29-adhoc.txt`
+
+## 1. Decisions
+
+<!-- Write only what was settled. One line each: what · how much/how · by when, key part in bold.
+     If you know who proposed it or another idea was put on hold, add a word at the end.
+     e.g. **Run a set menu as a 2-week trial.** Coffee+cookie 5,500 won (Junho's proposal). Afternoon discount idea (Minji's proposal) on hold. -->
+
+- **Approved the set menu board wording draft.** Checked and approved by Minji. Deadline to apply it: (not in notes).
+
+## 2. Action items
+
+<!-- Move over every task someone agreed to do in the meeting. If the owner or due date wasn't decided, send it to section 3.
+     Status is one of three: Planned / In progress / Done(MM/DD) -->
+
+| Action item | Owner | Due | Status |
+|---|---|---|---|
+| Set the time for the 11/4(Wed) meeting with the coffee bean supplier | Seoyeon | 10/30(Fri) | Planned |
+
+## 3. To discuss next
+
+<!-- Agenda items with no conclusion. Write why it wasn't decided and what is needed to decide.
+     e.g. **Whether to list on a delivery app** — no conclusion because of the fees. Need to compare fees. -->
+
+- **Sorting receipts** — Agreed to cover it at the next meeting. Why it was postponed and what is needed to decide: (not in notes).
+
+## 4. Next meeting
+
+- (not in notes)
+
+## Check Against Original
+
+- Meeting date: the original says `10/29(Wed)`, but based on 2026, the year in the file name, it is `10/29(Thu)`. Need to check the date and day of the week.
+- Meeting date: wrote out "next Wednesday" as `11/4(Wed)`, based on the meeting date.
+- Deadline for setting the time: wrote out "by Friday" as `10/30(Fri)`, based on the meeting date.

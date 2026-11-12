@@ -1,5 +1,7 @@
 # Chapter 2. Exploring the Screen — Where Everything Is
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: On the Claude screen, you only need to know four places: the **left sidebar** (past chats), the **center message box** (where you ask questions and the "+" button),
 > the **model menu below the message box** (model and effort), and **your name at the bottom left** (settings). At first, just using the message box is enough.
 
@@ -7,19 +9,21 @@ The screen shown here is based on the web version as of October 2026, and the sc
 
 ## The New Claude Screen vs. the Old Screen
 
-Claude is currently **changing its screen**. On the new screen, regular chats and **Cowork** ([Chapter 8](08-cowork.md)), where you hand off whole multi-step tasks, are **combined into a single conversation.** You do not need to pick a mode before you start.[^new]
-
-This guide is based on the **new screen**. The account used for the screenshots in this guide has the new screen. Compare the home screen image below with your own screen.
+This guide is based on Claude's **new screen**. The account used for the screenshots also has the new screen. Compare the home screen image below with your own screen.
 
 ![Full home screen after logging in. Red numbers ①–⑩. Top of the left sidebar ① "New chat (새로 만들기)", "Search (검색)", "Projects (프로젝트)", "Artifacts (아티팩트)", "Customize (사용자 지정)", ② "Starred (고정됨)" and "Recents (최근 항목)" chat lists, center ③ message box "How can I help you today? (오늘 어떤 도움을 드릴까요?)", ④ "+", below the message box ⑤ "Project (프로젝트)", ⑥ "Sonnet 5.5 Medium (Sonnet 5.5 중간)", ⑦ "Manual (수동)", right of the message box ⑧ microphone and sound wave icons, top right ⑨ ghost icon, bottom left ⑩ "Hana Kim · Free (김하나 · Free)". There is no "Chat" or "Cowork" selector and no web search toggle around the message box.](../../../guide/10-claude/assets/shot-01-home-marked.png)
 
 Names and chat titles in this screenshot have been replaced with examples (free plan). **The red numbers match the numbers in the table in the "Sidebar" section below.**
 
-- ③ There is no "Chat" or "Cowork" selector anywhere around the message box.[^screen]
-- There is no switch to turn web search on or off either.[^screen]
+On the new screen, regular chats and **Cowork** (a feature where you hand Claude a whole multi-step task, [Chapter 8](08-cowork.md)) are usually **combined into a single conversation.** So you do not need to pick a mode before you start. Just type in the message box.[^new]
+
+There are three things to notice in the picture.
+
+- ③ There is no mode selector such as "Chat" or "Cowork" around the message box.[^screen]
+- There is no switch to turn web search on or off either. Claude searches the web on its own when needed.[^screen][^new]
 - ② Past chats are all in one list under "Recents (최근 항목)".[^screen]
 
-If your screen looks very different from the picture, open the box below.
+Claude is currently changing its screen step by step. So your screen may look different from the picture. If it looks very different, open the box below.
 
 ::: details If you are using the old screen (click to expand)
 
@@ -58,7 +62,7 @@ Here is what each number in the home screen picture above points to.[^screen]
 | ④ | Bottom left of message box | "+" | Add files, connectors, and more |
 | ⑤ | Below message box, left | "Project (프로젝트)" | Choose a project ([Chapter 7](07-projects-tools.md)) |
 | ⑥ | Below message box, right | "Sonnet 5.5 Medium (Sonnet 5.5 중간)" | Model and effort menu |
-| ⑦ | Next to ⑥ | "Manual (수동)" | Permission mode |
+| ⑦ | Next to ⑥ | "Manual (수동)" | Permission mode (whether to ask first) |
 | ⑧ | Right of message box | Microphone and sound wave icons | Dictation, voice mode ([Chapter 10](10-voice-mobile.md)) |
 | ⑨ | Top right | Ghost icon | Incognito mode ([Chapter 3](03-chats.md)) |
 | ⑩ | Bottom left | "Hana Kim · Free (김하나 · Free)" | Account menu (Settings, Language, "Get help") |
@@ -94,7 +98,8 @@ At first, knowing just ① is enough.
 
 **"Research"** (리서치), which investigates a topic at length and gives you a report, is also in the "+" menu. You can also type `/deep-research` in the message box ([Chapter 6](06-search.md)).[^new] Because Research is available on paid plans and up, it did not appear in the free account menu above.[^pricing][^screen]
 
-Below the message box, ⑦ "Manual (수동)" is the **permission mode**. It sets how much Claude works on its own. It is visible on free accounts too.[^screen]
+Below the message box, ⑦ "Manual (수동)" is the **permission mode**. It is visible on free accounts too.[^screen]
+Claude does more than write answers. While working, it may use a new tool or open a new website. The permission mode sets whether Claude asks you first at those moments, and how much it works on its own.
 
 !["Permission mode (권한 모드)" menu opened by clicking ⑦ "Manual (수동)". Red numbers mark the descriptions for ① "Manual (수동)" (with a checkmark) and ② "Auto (자동)".](../../../guide/10-claude/assets/shot-04-permission-marked.png)
 
@@ -139,7 +144,7 @@ You can change these settings at any time during a chat. The change applies **st
 
 Claude has several models of different sizes and personalities. Click the model name to switch, and look under "More models" (더 많은 모델) for models not in the main list.[^model]
 
-Model names change often. Several new models came out in 2026 alone.[^rn] So this guide refers to models by their **role**. Here are the names and availability by plan as of October 26, 2026.
+Model names change often. Several new models came out in 2026 alone.[^rn] So this guide refers to models by their **role**. Here are the names for each role and availability by plan (as of October 26, 2026).
 
 | Role | Name (family) | Free | Pro | Max |
 |---|---|---|---|---|
@@ -150,8 +155,12 @@ Model names change often. Several new models came out in 2026 alone.[^rn] So thi
 
 Source: Anthropic pricing page and Help Center[^pricing][^fable][^rn]
 
-**Usage credits** (사용 크레딧) are pay-as-you-go usage separate from your plan's limit. On Pro, the highest-performing model is not included in your plan limit, so it uses these credits from the very start.[^fable]
-On Max, "up to 50%" does not mean you get extra limit. It means you **share the same weekly limit** with other models, and you can spend up to half of it on the highest-performing model.[^fable]
+Check for yourself what you can choose on your account right now. Just click ⑥, the model name below the message box. On a free account, you can only choose Sonnet and Haiku.[^screen]
+
+The "usage credits" and "50%" in the Fable row are about paid plans. If you are on the free plan, you can skip this.
+
+- **Usage credits** (사용 크레딧) are pay-as-you-go usage separate from your plan's limit. On Pro, the highest-performing model is not included in your plan limit, so it uses these credits from the very start.[^fable]
+- On Max, "up to 50%" does not mean you get extra limit. It means you **share the same weekly limit** with other models, and you can spend up to half of it on the highest-performing model.[^fable]
 
 Models also get removed from the list over time. Historically, Anthropic has retired most models about a year after release.[^persona] If a new model replaces an old one and its tone feels unfamiliar, show Claude a few past chats you liked and ask it like this.[^persona]
 
@@ -191,8 +200,11 @@ Each model marks its recommended effort level. On this screen, it is "Recommende
 ### Thinking — Should It Reason Before Replying?
 
 When you turn on **Thinking** (생각), Claude breaks down the problem, plans an approach, and weighs different paths before replying.[^model] This is also called **extended thinking** (확장 사고).[^start]
-Here is how the Help Center says to turn it on or off: click the model name, hover over "Effort", and flip the "Thinking" (사고, or "Extended" (확장)) toggle on or off.[^model]
-This toggle may appear depending on your plan and model. It did not appear in the free account menu used for this guide.[^screen] If you do not see the toggle, just read through this section for reference.
+
+First, check whether your screen has the toggle. This toggle may appear depending on your plan and model. It did not appear in the free account menu used for this guide.[^screen]
+It is fine if there is no toggle. Changing "Effort" above is enough to adjust how carefully Claude writes its reply. In this section, just learn what "Thinking" is.
+
+If you have the toggle, here is how to turn it on or off: click the model name, hover over "Effort", and flip the "Thinking" (사고, or "Extended" (확장)) toggle on or off.[^model]
 Thinking and Effort are **separate settings**. You can use any combination of the two.[^model] On some newer models, Thinking cannot be turned off.[^model]
 
 When Thinking is on, you will see a "Thinking (사고)" indicator counting time while Claude prepares its answer. Click the "Thinking" section above the reply to read a summary of how Claude thought through the problem.[^model]
@@ -210,7 +222,7 @@ Try asking the same question while changing only the Effort level. You will imme
 Show me step by step how much an office worker earning 3 million KRW a month needs to save each month to gather 20 million KRW in 3 years, split into two cases: without savings interest and with savings interest.
 ```
 
-::: details The reply will look roughly like this (example — click to expand)
+::: details The reply will look roughly like this (example — click to expand) (click to expand)
 This is an example created for this guide. Actual replies vary depending on the service and when you ask.
 
 > **1. Without considering interest**
@@ -234,17 +246,21 @@ This is an example created for this guide. Actual replies vary depending on the 
 
 ## Notice That the Model Switched During a Chat
 
-Sometimes you may see a **notice saying "the model switched"**. Several models, including the highest-performing model, automatically run safety checks on questions. If Claude judges a request to fall into a very narrow high-risk area, it hands the question off to another model to answer.[^switch]
-Handing off like this is called a **fallback** (passing to a backup model). Targets include offensive hacking techniques or biological risks like viruses and toxins.[^switch] Most questions are unaffected.
+Sometimes you may see a **notice saying "the model switched"**. This is rare. Most questions are unaffected.[^switch]
+Several models automatically run safety checks on questions. If Claude judges a request to fall into a very narrow high-risk area, it hands the question off to another model to answer. Handing off like this is called a **fallback** (passing to a backup model).[^switch]
 
 Here is what happens when the model switches.[^switch]
 
 - **A notice appears, and the reply is labeled with the name of the model that answered.** Automatic switching is turned on by default.
 - **It stays on the switched model for the rest of that conversation.** You can switch it back to the original model yourself. However, if the flagged content remains in the chat, it may switch again. Try editing your earlier message and sending it again.
-- **It can also switch because of content you did not type yourself.** The safety check looks at memory, connected apps, web search results, and uploaded files together.
 
-If you do not want automatic switching, go to Settings → "Capabilities (기능)" and turn off "Switch models when a message is flagged (메시지가 플래그 지정되면 모델 전환)".[^screen] If you turn it off, the conversation pauses instead of switching models, and you choose what to do yourself.[^switch]
-If your question is harmless and you think it was flagged by mistake, let them know using "Send feedback" (피드백 보내기).[^switch]
+If you do not want automatic switching, go to Settings → "Capabilities (기능)" and turn off "Switch models when a message is flagged (메시지가 플래그 지정되면 모델 전환)".[^screen] "Flagged" means the message was caught by the safety check. If you turn it off, the conversation pauses instead of switching models, and you choose what to do yourself.[^switch]
+
+::: details What kinds of questions get flagged (click to expand)
+- Targets include offensive hacking techniques or biological risks like viruses and toxins. The highest-performing model is also among the models that run these checks.[^switch]
+- **It can also switch because of content you did not type yourself.** The safety check looks at memory, connected apps, web search results, and uploaded files together.[^switch]
+- If your question is harmless and you think it was flagged by mistake, let them know using "Send feedback" (피드백 보내기).[^switch]
+:::
 
 <Quiz id="ch202-fallback" />
 

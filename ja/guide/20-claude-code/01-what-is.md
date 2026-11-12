@@ -1,13 +1,15 @@
 # 1章. Claude Codeとは何か、どこで使うか — チャットとの違い、使う場所、料金プラン
 
-> **一言まとめ**: Claude Codeは、**自分のパソコンのフォルダを直接読み、ファイルを直し、コマンドを実行する** Claudeです。チャットのように答えをコピーして貼り付ける代わりに、仕事を任せて結果を確認します。
-> 使うには **有料サブスクリプション**（Pro・Max・Ultra・Team・Enterprise）が必要です。この段階は、ターミナルなしで使える **デスクトップアプリ** から始めます。
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
+> **一言まとめ**: Claude Codeは、**自分のパソコンのフォルダを直接読み、ファイルを直し、コマンドを実行する**（パソコンにやることを文字で指示して動かす）Claudeです。チャットのように答えをコピーして貼り付ける代わりに、仕事を任せて結果を確認します。
+> 使うには **有料サブスクリプション**（Pro・Max・Ultra・Team・Enterprise）が必要です。この段階は、ターミナル（コマンドを文字で打ってパソコンを操作するウィンドウ）なしで使える **デスクトップアプリ** から始めます。
 
 この章は、2026年10月31日に確認したClaude Codeの公式ドキュメントをもとに書きました。機能やメニューの名前はよく変わります。
 
 ## チャットと何が違うか
 
-ステップ2で使ったClaudeのチャットは、**質問して答えをもらう** 場所でした。答えに出てきた文章を、自分でコピーしてファイルに貼り付けていました。
+ステップ2で使ったChatGPTやClaudeのようなチャットサービスは、**質問して答えをもらう** 場所でした。答えに出てきた文章を、自分でコピーしてファイルに貼り付けていました。
 
 **Claude Codeは、自分のパソコンのフォルダで直接作業します。** 公式ドキュメントは、Claude Codeを「フォルダの内容を読み、ファイルを直し、コマンドを実行する」ツールだと紹介しています。[^overview] やりたいことをふだんの言葉で説明すると、進め方を計画し、複数のファイルにまたがって作業し、うまく動くかの確認までしてくれます。[^overview]
 
@@ -22,17 +24,18 @@
 
 このような方式を **エージェント**（Agent、自分で複数のステップを進めていくAI）と呼びます。公式ドキュメントも、Claude Codeを「エージェント型のコーディングツール」（agentic coding tool）と呼んでいます。[^overview]
 
-ステップ2のClaudeガイドの **Cowork** も、仕事をまるごと任せる機能でした（[ステップ2 Claude 第8章](../10-claude/08-cowork.md)）。デスクトップアプリの中に、チャット（Chat）、Cowork、Claude Code（**Code** タブ）がまとめて入っています。[^linux] この段階では、その中の **Code** タブを扱います。
+Claudeのデスクトップアプリの中には、チャット（Chat）、**Cowork**、Claude Code（**Code** タブ）がまとめて入っています。[^linux] この段階では、その中の **Code** タブを扱います。
+Coworkも、Claudeに仕事をまるごと任せる機能です。ステップ2のClaudeガイドで扱っていますが、読んでいなくてもこの段階を進めるのに問題はありません（[ステップ2 Claude 第8章](../10-claude/08-cowork.md)）。
 
 <Quiz id="ch401-what" />
 
 ## 何を任せられるか
 
-名前は「コード」ですが、やっていることは結局、**フォルダの中のファイルを読んで直すこと**です。[^overview] 公式ドキュメントが挙げる例は、開発者の仕事です。[^overview]
+名前は「コード」ですが、やっていることは結局、**フォルダの中のファイルを読んで直すこと**です。[^overview] 公式ドキュメントが挙げる例は、開発者の仕事です。[^overview] 開発者でなければ、このリストはざっと見て先に進んでもかまいません。
 
-- 機能を作る、バグを直す
+- 機能を作る、バグ（プログラムが正しく動かない問題）を直す
 - バグが出たら、エラーメッセージを貼り付けるか、症状を言葉で説明する
-- テストを書く、複数のファイルの書式エラーを直す、リリースノート（変更点のお知らせ）を書く、といった繰り返し作業
+- テスト（プログラムがきちんと動くかを確かめる検査）を書く、複数のファイルの書式エラー（決められた書き方のルールから外れたところ）を直す、リリースノート（変更点のお知らせ）を書く、といった繰り返し作業
 
 **このガイドでは、コードの代わりにメモのファイルが入ったフォルダで練習します。** 会議のメモ・勉強のノート・1日の振り返りのような整理されていないメモを入れると、**自分で決めた形式** の議事録・勉強ノート・週次の振り返りが出てくる「自分のやり方で整理してくれるツール」を、ステップ3を通して少しずつ作っていきます。最初の仕事は、こんな依頼です。
 
@@ -62,6 +65,8 @@ Claude Codeはいろいろな場所で使えます。どこで使っても **同
 
 出典: Claude Code公式ドキュメント[^platforms]
 
+コードエディタは、プログラムの文章（コード）を書いたり直したりするための専用プログラムです。文書にWordがあるように、コードにはVS Codeのようなエディタがある、と考えてください。
+
 **このガイドはデスクトップアプリから始めます。** ターミナルを使いたくない人のために、デスクトップアプリが同じエンジンをグラフィカルな画面で提供すると、公式ドキュメントも案内しています。[^platforms] デスクトップアプリにはClaude Codeが入っているので、別にインストールするプログラムはありません。[^quickstart]
 
 同じ仕事を、複数の場所を混ぜて使ってもかまいません。[^platforms] ターミナルは10章で、ウェブとスマートフォンは8章で扱います。
@@ -70,11 +75,10 @@ Claude Codeはいろいろな場所で使えます。どこで使っても **同
 
 ## 何が必要か — 料金プラン
 
-**Claude Codeは、有料サブスクリプションでだけ使えます。** Pro、Max、Ultra、Team、Enterpriseのサブスクリプションか、Console（API）アカウントが必要で、**無料プランでは使えません。**[^setup] 個人のサブスクリプション（Pro・Max・Ultra）は、claude.aiのアカウントでログインします。[^auth]
+**Claude Codeは、有料サブスクリプションでだけ使えます。** Pro、Max、Ultra、Team、Enterpriseのサブスクリプションか、Console（API）アカウント（開発者が自分のプログラムからClaudeを呼び出すときに使うアカウント）が必要で、**無料プランでは使えません。**[^setup] 個人のサブスクリプション（Pro・Max・Ultra）は、claude.aiのアカウントでログインします。[^auth]
 
-- プランの名前が変わりました。**Ultraは以前のMax 20x、Maxは以前のMax 5x** の新しい名前です。[^availability] 古い記事で「Max 5x」を見かけたら、今のMaxのことです。
-- 料金と使用の上限は、ステップ2のClaudeガイドで扱いました（[ステップ2 Claude 第1章](../10-claude/01-getting-started.md#料金プランを一目で見る)）。使用量は、デスクトップやターミナルなど **Claude Codeを使うすべての場所で共通して** 使います。[^desktop] Team・Enterpriseは、チャットやCoworkとも共通です。[^costs]
-- 公表されている使用上限は、**1人がふつうに使うこと** を前提にしています。[^legal] 別の会社が作ったサービスが、自分のサブスクリプションのログインを使って代わりにリクエストを送る方式も、認められていません。[^legal]
+- 料金と使用の上限は、ステップ2のClaudeガイドにまとめてあります。ステップ2をChatGPTガイドで読んだなら、サブスクリプションに入る前にその節だけ開いてみてください（[ステップ2 Claude 第1章](../10-claude/01-getting-started.md#料金プランを一目で見る)）。[^availability]使用量は、デスクトップやターミナルなど **Claude Codeを使うすべての場所で共通して** 使います。[^desktop] Team・Enterpriseは、チャットやCoworkとも共通です。[^costs]
+- 公表されている使用上限は、**1人がふつうに使うこと** を前提にしています。[^legal]
 
 どのプランが合うかは、使ってみながら決めてもかまいません。使用量の見方は9章で扱います。
 
@@ -107,7 +111,7 @@ Claude Codeはいろいろな場所で使えます。どこで使っても **同
 - Claude Codeは、自分のパソコンのフォルダを直接読み、ファイルを直し、コマンドを実行するエージェント型のツールである。
 - チャットは答えをもらって自分が移し、Claude Codeは仕事を任せて自分が確認する。
 - デスクトップアプリ・ターミナル・エディタ・ウェブ・スマートフォンで、同じエンジンを使う。この段階はデスクトップアプリから学ぶ。
-- Pro・Max・Ultra・Team・Enterpriseのサブスクリプションが必要で、無料プランでは使えない。Ultraは以前のMax 20x、Maxは以前のMax 5xである。
+- Pro・Max・Ultra・Team・Enterpriseのサブスクリプションが必要で、無料プランでは使えない。
 
 ## 用語まとめ
 | 用語 | 読み方 | 一言でいうと |
@@ -130,5 +134,5 @@ Claude Codeはいろいろな場所で使えます。どこで使っても **同
 [^desktop]: Claude Code公式ドキュメント、「Desktop application」。"Click it to see your plan usage, which is shared across all your Claude Code surfaces." https://code.claude.com/docs/en/desktop （確認日 2026-10-31）
 [^costs]: Claude Code公式ドキュメント、「Manage costs effectively」。"The allowance is shared with Claude chat and Cowork" https://code.claude.com/docs/en/costs （確認日 2026-10-31）
 [^auth]: Claude Code公式ドキュメント、「Authentication」。"Claude Pro, Max, or Ultra subscription: log in with your claude.ai account." https://code.claude.com/docs/en/authentication （確認日 2026-10-31）
-[^availability]: Claude Code公式ドキュメント、「Feature availability」。"Ultra is the new name for the Max 20x plan, and Max is the new name for Max 5x." https://code.claude.com/docs/en/feature-availability （確認日 2026-10-31）
-[^legal]: Claude Code公式ドキュメント、「Legal and compliance」。"Advertised usage limits for Pro, Max, and Ultra plans assume ordinary, individual usage of Claude Code and the Agent SDK." / "Anthropic does not permit third-party developers to offer Claude.ai login into their own applications, or to route requests through Free, Pro, Max, or Ultra plan credentials on behalf of their users." https://code.claude.com/docs/en/legal-and-compliance （確認日 2026-10-31）
+[^availability]: プランの名前が変わった。Ultraは以前のMax 20x、Maxは以前のMax 5xの新しい名前である。古い記事で「Max 5x」を見かけたら、今のMaxのことである。Claude Code公式ドキュメント、「Feature availability」。"Ultra is the new name for the Max 20x plan, and Max is the new name for Max 5x." https://code.claude.com/docs/en/feature-availability （確認日 2026-10-31）
+[^legal]: 別の会社が作ったサービスが、自分のサブスクリプションのログインを使って代わりにリクエストを送る方式も、認められていない。Claude Code公式ドキュメント、「Legal and compliance」。"Advertised usage limits for Pro, Max, and Ultra plans assume ordinary, individual usage of Claude Code and the Agent SDK." / "Anthropic does not permit third-party developers to offer Claude.ai login into their own applications, or to route requests through Free, Pro, Max, or Ultra plan credentials on behalf of their users." https://code.claude.com/docs/en/legal-and-compliance （確認日 2026-10-31）

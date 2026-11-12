@@ -1,6 +1,6 @@
 # 第11章 钩子与界面定制
 
-<Badge type="tip" text="必读" /> 要跟上这个阶段，请一定读完。
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
 
 > **一句话总结**：钩子（Hook）是在固定时刻由 **Claude Code 亲自**运行的命令。它不交给 AI 去判断，所以用在必须发生的事情上。
 
@@ -14,7 +14,7 @@
 
 和[第8章](08-memory-settings.md)的 CLAUDE.md 放在一起比较，就能看出区别。
 
-- **不太好的例子**：在 CLAUDE.md 里写上"修改文件后，在 변경기록.txt 里记一行"。负责遵守的是 Claude。它可能会漏掉。
+- **不太好的例子**：在 CLAUDE.md 里写上"修改文件后，在 changelog.txt 里记一行"。负责遵守的是 Claude。它可能会漏掉。
 - **更好的例子**：把同样的事做成钩子。负责遵守的是 Claude Code。每次修改文件后，命令都会运行。
 
 每次都必须发生的事，就用钩子。[^every-time] 不过也不用把规则全都搬到钩子里。语气、文档格式这类规则，用 CLAUDE.md 就够了。钩子只用在"漏掉就麻烦的事"上。
@@ -41,14 +41,14 @@
 cat > .claude/settings.json <<'EOF'
 {
   "permissions": {
-    "deny": ["Read(./비밀/**)"]
+    "deny": ["Read(./secret/**)"]
   },
   "hooks": {
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
         "hooks": [
-          { "type": "command", "command": "date '+%F %T 文件已被修改' >> 변경기록.txt" }
+          { "type": "command", "command": "date '+%F %T 文件已被修改' >> changelog.txt" }
         ]
       }
     ]
@@ -64,16 +64,16 @@ Windows PowerShell 用 `notepad .claude\settings.json` 打开记事本。删掉�
 
 - `PostToolUse`：表示 Claude 使用工具**之后**。已经完成的事无法撤回。能在使用工具**之前**插进去阻止的时间点是 `PreToolUse`。[^post]
 - `matcher`：决定对哪些工具做出反应。`Write|Edit` 是创建文件的工具和修改文件的工具。这里的 `|` 是"或者"的意思。Claude 用 Shell 命令改动的文件，这个钩子不会做出反应。
-- `command`：要运行的命令。把当前的日期、时间和一句话追加到 `변경기록.txt`（变更记录.txt）的末尾。把命令拆开来看是这样的。
+- `command`：要运行的命令。把当前的日期、时间和一句话追加到 `changelog.txt`（变更记录.txt）的末尾。把命令拆开来看是这样的。
   - `date`：打印当前日期和时间的命令。
   - `'+%F %T 文件已被修改'`：要打印的格式。`%F` 的位置填日期（`2026-11-06`），`%T` 的位置填时间（`11:19:11`）。
-  - `>> 변경기록.txt`：把结果追加到那个文件的末尾。第10章的 `>` 会覆盖文件，`>>` 是接在后面写。如果文件不存在，就新建一个。
+  - `>> changelog.txt`：把结果追加到那个文件的末尾。第10章的 `>` 会覆盖文件，`>>` 是接在后面写。如果文件不存在，就新建一个。
 
 不覆盖文件，也可以用语言请 Claude 帮忙。[^ask-claude] 如果是像你自己的项目那样已经写有设置的文件，这个方法更好。`.claude` 文件夹是特别保护的地方，这时可能会弹出许可窗口。[^protected]
 
 ```text
 请在 .claude/settings.json 里添加一个钩子。让 Claude 每次使用 Write 或 Edit 工具之后都运行下面的命令。不要删掉已有的内容。
-date '+%F %T 文件已被修改' >> 변경기록.txt
+date '+%F %T 文件已被修改' >> changelog.txt
 ```
 
 如果已经有 `hooks` 项，不要整个替换，而是在里面再加一个。[^sibling] 在 Windows 上我们没有运行过这个钩子。`date` 命令是 bash 格式，可能无法直接运行。这种时候，请 Claude 把它换成适合你环境的命令。
@@ -81,16 +81,16 @@ date '+%F %T 文件已被修改' >> 변경기록.txt
 现在来测试。启动 `claude`，发送下面的内容。
 
 ```text
-在 notes 文件夹里新建 훅시험.md，只写一行"钩子测试"。
+在 notes 文件夹里新建 hook-test.md，只写一行"钩子测试"。
 ```
 
-完成后输入 `! cat 변경기록.txt`。实际运行时，留下了这样一行。
+完成后输入 `! cat changelog.txt`。实际运行时，留下了这样一行。
 
 ```text
 2026-11-06 11:19:11 文件已被修改
 ```
 
-完整的设置文件可以在 [11장-settings.json.txt](/practice/cli/results/11장-settings.json.txt) 里查看。
+完整的设置文件可以在 [ch11-settings.json.txt](/practice/zh-hans/cli/results/ch11-settings.json.txt) 里查看。
 
 <Quiz id="ch811-log" />
 
@@ -105,7 +105,7 @@ date '+%F %T 文件已被修改' >> 변경기록.txt
   This menu is read-only. To add or change a hook, edit settings.json or ask Claude. Learn more
 
     PostToolUse  after tool execution
-  ❯ [Project] date '+%F %T 文件已被修改' >> 변경기록.txt   Write|Edit · command
+  ❯ [Project] date '+%F %T 文件已被修改' >> changelog.txt   Write|Edit · command
 
     All events
 
@@ -169,9 +169,9 @@ cat .claude/settings.json
 1. 用 `/exit` 退出，在终端里粘贴设置代码框。
 2. 启动 `claude`，看看输入框下面有没有显示 `街角咖啡馆 整理中`。
 3. 输入 `/hooks`，确认它出现在 `PostToolUse` 下面，然后按 Esc 关闭。
-4. 发送钩子测试的请求后，用 `! cat 변경기록.txt` 看看是不是多了一行。
+4. 发送钩子测试的请求后，用 `! cat changelog.txt` 看看是不是多了一行。
 
-问问自己：钩子真的运行了吗？不要看 Claude 的回答，而是亲自打开 `변경기록.txt` 再回答。
+问问自己：钩子真的运行了吗？不要看 Claude 的回答，而是亲自打开 `changelog.txt` 再回答。
 
 ## 小结
 

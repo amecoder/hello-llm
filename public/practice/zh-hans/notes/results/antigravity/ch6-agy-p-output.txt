@@ -1,0 +1,5 @@
+| 文件 | 使用的模板 (`templates/`) | 一句话说明 |
+|---|---|---|
+| [weekly-review-2026-10-27.md](file://~/hello-ai-practice/organizer/notes/weekly-review-2026-10-27.md) | [weekly-review.md](file://~/hello-ai-practice/organizer/templates/weekly-review.md) | 按 `做得好的 (Keep)` · `可惜的 (Problem)` · `下周要做的 (Try)` 这 KPT 3 栏结构整理的每周回顾。 |
+| [minutes-2026-10-27-weekly.md](file://~/hello-ai-practice/organizer/notes/minutes-2026-10-27-weekly.md) | [minutes.md](file://~/hello-ai-practice/organizer/templates/minutes.md) | 按 `1. 决定的事` · `2. 待办事项` · `3. 下次要讨论的事` · `4. 下次会议` 这 4 栏结构整理的会议纪要。 |
+| [.gitkeep](file://~/hello-ai-practice/organizer/notes/.gitkeep) | （没有模板） | 为了保留空文件夹而放的空文件。 |

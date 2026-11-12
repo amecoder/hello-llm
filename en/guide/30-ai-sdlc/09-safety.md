@@ -1,5 +1,7 @@
 # Chapter 9. Safety and Responsibility — Secrets, Publishing, and Licenses
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **In One Line**: **Never upload secrets** like passwords or API keys to a repository. Once you commit a secret, it stays in the Git history even after you delete the file.
 > If a secret leaks, your very first step is to **change that secret (revoke and rotate it)**—not to erase the history.
 
@@ -29,7 +31,13 @@ Here are common ways secrets leak:[^paths]
 
 Source: Summary by this guide (see footnotes for basis)
 
-**1. Keep it out.** Put any file containing secrets into `.gitignore` from the very start (Chapter 2). The order matters: if you already committed a file, simply adding it to the list will not make Git ignore it. To stop Claude Code's file tools from reading a file like `.env`, add a `Read` deny rule (for example, `Read(./.env)`).[^deny] However, this rule does not block commands that read files without naming them, or other programs that open files on their own.[^deny-limit] So the safest approach is to keep secret files outside your repository folder altogether. We covered where to put permission rules in [Claude Code, Chapter 4](../20-claude-code/04-permissions-undo.md). If an automated workflow needs a secret, store it in GitHub Secrets rather than in a repository file.[^actions-secret][^gh-secrets]
+**1. Keep it out.** There are three things to do. Do them in order, from the top.
+
+- **Add it to `.gitignore` first**: Put any file containing secrets into `.gitignore` (the list of files Git ignores) from the very start (Chapter 2). The order matters. If you already committed a file, simply adding it to the list will not make Git ignore it.
+- **Stop Claude from reading it**: Add a `Read` deny rule to Claude Code's permission rules (settings that decide what Claude is allowed to do). For example, if you write `Read(./.env)`, Claude's file tools cannot read `.env`.[^deny] If it is hard to write it yourself, try asking Claude: "Add a `Read(./.env)` deny rule to the permission rules so you can't read `.env`." We covered permissions in [Claude Code, Chapter 4](../20-claude-code/04-permissions-undo.md).
+- **Keep it outside the repository**: Even deny rules are not perfect. They do not block commands that read files without naming them, or other programs that open files on their own.[^deny-limit] So the safest approach is to keep secret files outside your repository folder altogether.
+
+Even when an automated workflow (GitHub Actions, Chapter 5) needs a secret, do not write it in a repository file. Instead, store it in GitHub **Secrets** (a place in the repository settings where you keep secrets separately).[^actions-secret][^gh-secrets] The to-do board does not need any secrets, so for now just know that this place exists.
 
 **2. Get blocked.** GitHub's **push protection** blocks pushes containing secrets **before** they reach your repository.[^push] On your account, protection that stops you from pushing secrets to public repositories is turned on by default.[^push] Still, treat this as a last safety net. It is not guaranteed to catch every kind of secret, so always follow Step 1 first.
 
@@ -51,17 +59,25 @@ Anyone can view a public repository and a Pages site (Chapters 2 and 7). Check t
 
 If you do not choose a **license**, default copyright laws apply. That means other people cannot copy, distribute, or modify your code (Chapter 2). If you want to let others use your work, pick a license.
 
-As for **rights to AI-generated code**, this guide did not find an official legal answer. What we did verify is this clause in the Anthropic Consumer Terms of Service, which applies to personal Claude accounts (Codex and Antigravity follow their own companies' terms). Provided you follow the terms, Anthropic assigns to you all of its rights—**"if any"**—in the Outputs.[^outputs] This does not answer whether AI-generated code gets copyright protection in the first place. If you are using it for something important, check with a professional.
+As for **rights to AI-generated code**, this guide did not find an official legal answer. The terms for personal Claude accounts only say that the company passes its rights to you "if any."[^outputs] They do not answer whether AI-generated code gets copyright protection. If you are using it for something important, check with a professional.
 
-Also check **whether your data is used for training**. The Claude Code docs state that on Free, Pro, Max, and Ultra accounts, when the relevant setting is turned on, Anthropic trains new models using data that includes your Claude Code usage.[^training] We covered where to check this setting in [Stage 2, Claude Chapter 9](../10-claude/09-privacy.md).
+::: details More details: The terms clause we checked (click to expand)
+What we did verify is this clause in the Anthropic Consumer Terms of Service, which applies to personal Claude accounts (Codex and Antigravity follow their own companies' terms). Provided you follow the terms, Anthropic assigns to you all of its rights—**"if any"**—in the Outputs.[^outputs] This does not answer whether AI-generated code gets copyright protection in the first place.
+:::
+
+Also check **whether your data is used for training**. The official docs state that on Claude Free, Pro, Max, and Ultra accounts, when the training setting is turned on, your work in Claude Code is also used to train new models.[^training] Where to check this setting is in [Chapter 9](../10-claude/09-privacy.md) of the Stage 2 Claude guide. If you chose the ChatGPT guide in Stage 2, you only need to read this one chapter of the Claude guide, Chapter 9 "Privacy and Safety."
 
 <Quiz id="ch709-license" />
 
 ## Watch the Parts Made by Others
 
-Software often relies on parts (packages) brought in from many places, and security flaws can slip in through those parts without you knowing.[^deps] GitHub's **Dependabot** warns you if a part you use has a known vulnerability.
+Software often relies on parts (packages) brought in from many places. Security flaws can slip in through those parts without you knowing.[^deps]
 
-If your page barely uses outside parts—like our to-do board—you have less to worry about. Still, if Claude asks to install a new part, **ask what it is installing and why** before you approve it (the same question you ask when checking a plan in Chapter 4).
+If your page barely uses outside parts—like our to-do board—you have less to worry about. There is just one thing to remember. If Claude asks to install a new part, **ask what it is installing and why** before you approve it (the same question you ask when checking a plan in Chapter 4).
+
+::: details More details: When you use more parts (click to expand)
+GitHub's **Dependabot** warns you if a part you use has a known vulnerability (security flaw).
+:::
 
 <Quiz id="ch709-deps" />
 

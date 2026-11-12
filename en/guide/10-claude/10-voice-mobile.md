@@ -1,7 +1,9 @@
 # Chapter 10. Voice and Phone — Ask Out Loud, Faster on Your Phone
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: The **microphone** in the input box types out what you say (dictation), while the **sound wave icon** lets you talk back and forth with Claude (voice mode).
-> On your phone, you can open Claude faster with widgets, shortcuts, and the Lock Screen, and pass message or email drafts straight to your apps.
+> On your phone, you can open Claude faster with widgets (small shortcut tiles you place on your Home Screen), shortcuts (an iPhone feature that bundles several actions into one button), and the Lock Screen, and pass message or email drafts straight to your apps.
 
 Screenshots reflect the web version as of October 2026. Button locations and settings menu names may differ slightly on the phone app, desktop app, or across different screens.
 
@@ -24,7 +26,7 @@ Both features are available on the free plan.[^dictation][^voice]
 
 ## Try Dictation
 
-This section explains dictation on the phone app (iPhone and Android).[^dictation] You can also use dictation in Cowork on the desktop app.[^voice]
+This section explains dictation on the phone app (iPhone and Android).[^dictation] You can also use dictation in Cowork ([Chapter 8](08-cowork.md)) on the desktop app.[^voice]
 
 1. Open a new chat in the Claude app.
 2. Tap the **microphone** on the right side of the input box.
@@ -45,12 +47,17 @@ Names of people or places may be transcribed wrong. After sending, read over you
 
 ### On a Mac — Quick Entry
 
+If you do not use a Mac, you can skip this part.
+
 If you use the Claude desktop app on a Mac, try **double-tapping the Option key**. A Claude input box opens right away, no matter what app you are using.[^quick] You can ask a question without stopping your work.
 
 - Drag across part of your screen to attach a screenshot, or click an app window to send its contents along.[^quick]
-- If you turn on the dictation shortcut, you can press Caps Lock to speak your input. It is turned off by default.[^quick]
 - It works on every plan, including free, but only on the Mac desktop app. The app must be running, at least in the background.[^quick]
+
+::: details More details (click to expand)
+- If you turn on the dictation shortcut, you can press Caps Lock to speak your input. It is turned off by default.[^quick]
 - Mac permissions such as Screen Recording are required. Check them in System Settings > Privacy & Security (시스템 설정 > 개인정보 보호 및 보안).[^quick]
+:::
 
 This is handy when you want to ask right away while looking at an unfamiliar table or error window.
 
@@ -99,7 +106,7 @@ I have a job interview next week. Act as the interviewer and ask me questions on
 After I answer, briefly tell me one thing I did well and one thing to improve, then move to the next question.
 ```
 
-::: details The reply will sound roughly like this (example — click to expand)
+::: details The reply will sound roughly like this (example — click to expand) (click to expand)
 This example was written for this guide. Actual replies vary depending on the service and the moment.
 
 > Sure, let's start the interview. First question: could you briefly introduce yourself?
@@ -116,8 +123,8 @@ After you answer, it continues like this:
 
 - Voice conversations also **count toward your plan's usage limit** ([Chapter 1](01-getting-started.md)).
 - Even if you switch between text and voice in the same conversation, **your earlier context carries over.** For things that need exact typing, like web addresses, you can type them in the middle of the chat.
-- Voice mode starts with the model you last used in text chat, and you can switch models during the conversation. However, Claude Fable is not yet available in voice mode (checked on 2026-10-26).
-- Connected tools (such as Gmail or Google Calendar) also work in voice mode. The voice mode help page notes that you can connect one tool on the free plan. Connecting tools is covered in [Chapter 7](07-projects-tools.md).
+- Voice mode starts with the model you last used in text chat, and you can switch models during the conversation. However, Claude Fable is not yet available in voice mode.[^voice-fable]
+- Connected tools (such as Gmail or Google Calendar) also work in voice mode.[^voice-tools] Connecting tools is covered in [Chapter 7](07-projects-tools.md).
 - In the new interface, you can use voice mode in any conversation, including ones where Claude is working on a task.[^voice][^cowork-voice-old]
 
 <Quiz id="ch210-voice" />
@@ -160,10 +167,10 @@ You can call up Claude without hunting for the app. All of these **count toward 
 
 ### iPhone (iOS 18 and above)
 
-- **Ask Claude (Claude에 물어보기)**: Ask a question without opening the app. You can use it from Spotlight search, Siri, and the Share menu. For example, you can select text and send it straight to Claude through the Share menu.
-- **Widget**: Place the Claude widget on your Home Screen or Today View to open a new chat, start dictation, or take and send a photo with a single tap.
-- **Analyze Photo with Claude (Claude로 사진 분석)**: Add it to Control Center or the Lock Screen to take and send a photo without unlocking your phone.
-- **Open Claude**: Add it to the Lock Screen, Control Center, or the Action button to open Claude right away.[^ios][^lock]
+- **Ask Claude (Claude에 물어보기)**: Ask a question without opening the app. You can use it from Spotlight search (the search box that appears when you swipe down from the middle of the Home Screen), Siri, and the Share menu. For example, you can select text and send it straight to Claude through the Share menu.
+- **Widget**: Place the Claude widget on your Home Screen or Today View (the screen at the far left of your Home Screen) to open a new chat, start dictation, or take and send a photo with a single tap.
+- **Analyze Photo with Claude (Claude로 사진 분석)**: Add it to Control Center (the set of buttons that appears when you swipe down from the top right of the screen) or the Lock Screen to take and send a photo without unlocking your phone.
+- **Open Claude**: Add it to the Lock Screen, Control Center, or the Action button (a button on the side of some iPhones) to open Claude right away.[^ios][^lock]
 
 Ask Claude and Shortcuts use the default model shown when you open the app.[^ios]
 
@@ -220,7 +227,9 @@ The first time Claude tries to use your location or calendar, it asks for permis
 - **iPhone**: Settings (설정) → Claude
 - **Android**: Settings (설정) → Apps (앱) → Claude → Permissions (권한)[^ios-apps][^android-apps]
 
+::: details Features not yet available in Korea (click to expand)
 There is also a feature that reads health data, but it is in beta, requires a Pro or Max plan, and is available in the US only.[^ios-apps]
+:::
 
 <Quiz id="ch210-apps" />
 
@@ -287,4 +296,6 @@ Next chapter: [Chapter 11. Hands-on Practice](11-practice.md)
 [^android-apps]: Anthropic Help Center, "Use Claude with Android apps". "This feature is supported on all Claude plans and works with your device's native and third-party apps" / "Reminders: These are exclusively available on Claude for iOS, so Claude can’t create and manage reminders on Android." / "These permissions can be managed at any time in your device settings by going to Settings > Apps > Claude > Permissions." https://support.claude.com/en/articles/11869629 (checked on 2026-10-26)
 [^quick]: Anthropic Help Center, "Use quick entry with Claude Desktop on Mac". "Quick entry is available to all Claude users (free, Pro, Max, Team, and Enterprise plans) using Claude Desktop on macOS." / "Instant access: Double-tap the Option key to open Claude from any app." / "Visual context: Capture screenshots or click application windows to share what you're working on." / "The voice dictation shortcut is disabled by default because it takes over your Caps Lock key." / "Claude Desktop needs to be running on your Mac, but it can run in the background." / "Screen recording: Required to capture screenshots and share application windows." / "You can review or change these permissions in System Settings > Privacy & Security." https://support.claude.com/en/articles/12626668 (checked on 2026-10-26)
 [^cowork-voice-old]: The same help article also includes a line stating that in Cowork ([Chapter 8](08-cowork.md)), dictation is available but voice mode is not.
+[^voice-fable]: Anthropic Help Center, "Use voice mode". "Note: Claude Fable is not currently available in voice mode." (checked on 2026-10-26)
+[^voice-tools]: The voice mode help page notes that you can connect one tool on the free plan.
 [^voice-settings-name]: The help article points to Settings > Capabilities (기능). This may vary depending on your screen.

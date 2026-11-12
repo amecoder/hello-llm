@@ -1,5 +1,7 @@
 # Chapter 6. Scheduled Tasks, Cloud, and Mobile — Run on Time, Even While You're Away
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: Run weekly routines with **Scheduled** tasks. A scheduled task that uses your local folder needs **your computer turned on and the app running**.
 > Cloud tasks are for people with a GitHub repository, and your phone acts like a remote control for your computer.
 
@@ -9,13 +11,19 @@ This chapter is based on the Codex official docs checked on November 1, 2026. Th
 
 Scheduled tasks let you set up recurring work to run in the background.[^schedule] You can view all your scheduled tasks and their run history under **Scheduled** in the app sidebar.[^inbox]
 
-You create scheduled tasks in the desktop app or on the web. The terminal (Codex CLI) does not have a screen to manage scheduled tasks.[^no-cli] You create scheduled tasks through chat as well.[^chat-create] Inside a scheduled task, you can also call a skill using `$skill-name`.[^skill] Using the skill from Chapter 5, you can ask like this:
+You create scheduled tasks in the desktop app or on the web, through chat as usual.[^chat-create][^no-cli] Inside a scheduled task, you can also call a skill using `$skill-name`.[^skill] Using the skill from Chapter 5, you can ask like this:
 
 ```
 Every Friday at 6 PM, use $weekly-review to create this week's weekly review in the notes folder.
 ```
 
-**There is a condition.** A scheduled task that uses a folder on your computer only runs when your computer is on and the app is running.[^awake] On macOS and Linux, the **Prevent sleep while running** setting keeps your computer from going to sleep **while** a chat is running, so it continues even if you step away.[^sleep] It does not keep your computer awake until the scheduled time, so check your computer's power and sleep settings separately if you plan to use scheduled tasks.
+**There is a condition.** A scheduled task that uses a folder on your computer only runs when your computer is on and the app is running.[^awake] If you plan to use scheduled tasks, check your computer's power and sleep settings to make sure it is not asleep at that time.
+
+::: details The app's "Prevent sleep while running" setting (click to expand)
+
+On macOS and Linux, the **Prevent sleep while running** setting keeps your computer from going to sleep **while** a chat is running, so it continues even if you step away.[^sleep] It does not keep your computer awake until the scheduled time. That is why you need to check your computer's power and sleep settings separately, as above.
+
+:::
 
 Scheduled tasks run **unattended** (without a person watching). Because of this, they keep your default boundary (sandbox) range, but run **without asking for permission** unless your organization blocks it.[^unattended] Since no one is there to answer prompts, any action outside the boundary will fail.
 
@@ -23,11 +31,16 @@ Scheduled tasks run **unattended** (without a person watching). Because of this,
 |---|---|
 | Read-only | Scheduled tasks that need to write files fail |
 | Write inside folder | Tasks that only write inside the folder, like the organizer tool, will run |
-| Full access | Uses files, commands, and the internet without asking. Risky |
+| Full access | Uses files, commands, and the internet without asking (risky) |
 
-Source: Codex official docs (excerpted; the middle row is this guide's summary)[^modes]
+Source: Codex official docs (excerpted; the middle row is this guide's summary)[^modes][^readonly]
 
-In terms of the permission menu from Chapter 4, **Ask for approval** and **Approve for me** use the middle row's boundary (write inside folder), while **Full access** uses the last row.[^ask] However, in a scheduled task, even **Ask for approval** **will not ask you.** "Read-only" is a setting that might not appear separately in the menu.
+Here is how it maps to the permission menu from Chapter 4.[^ask]
+
+- **Ask for approval** and **Approve for me**: Use the middle row's boundary (write inside folder).
+- **Full access**: Uses the last row.
+
+However, in a scheduled task, even **Ask for approval** **will not ask you.**
 
 Before you create a scheduled task, **run the same request in a regular chat first.** Just like in Chapter 5, check the result against your original files, and move it to a schedule only when it looks good. Make sure to check the results of the first few runs as well. The official docs recommend this exact order.[^test]
 
@@ -35,13 +48,15 @@ Before you create a scheduled task, **run the same request in a regular chat fir
 
 ## How Is the Cloud Different?
 
-Cloud tasks run in a workspace over the internet, so they keep working even while your computer is asleep.[^cloud] In return, there are conditions.
+Cloud tasks run in a workspace over the internet, so they keep working even while your computer is asleep.[^cloud]
 
-- You must have a **published environment** that you can access.[^env]
-- To set up an environment, you choose and connect a **GitHub repository**.[^github]
+Since the organizer folder only exists on your computer, this guide does not use the cloud. If your company works with GitHub (a service where you keep files online and manage their change history together), just remember that you can send long-running tasks to the cloud and turn off your computer.
+
+There are conditions for using the cloud.
+
+- You must have a cloud workspace prepared in advance, that is, a **published environment**.[^env]
+- To set up that workspace, you choose and connect a **GitHub repository**.[^github]
 - Your computer's local files, running programs, and browser sign-ins do not transfer to the cloud.[^not-moved]
-
-Since the organizer folder only exists on your computer, this guide does not use the cloud. If your company works with GitHub, just remember that you can send long-running tasks to the cloud and turn off your computer.
 
 <Quiz id="ch506-cloud" />
 
@@ -101,4 +116,5 @@ Next chapter: [Chapter 7. Using It in the Terminal](07-terminal.md)
 [^trust]: Codex official docs, "Codex on mobile". "Only connect devices you own and trust." https://learn.chatgpt.com/docs/mobile (checked on 2026-11-01)
 [^rollout]: Codex official docs, "Codex on mobile". "Use the ChatGPT mobile app with Cloud or a connected Mac or Windows PC. Availability depends on rollout and your workspace settings." https://learn.chatgpt.com/docs/mobile (checked on 2026-11-01)
 [^ask]: Codex official docs, "Permissions". "For most work, start with **Ask for approval**. It lets ChatGPT work within the current workspace and pauses before reaching beyond that boundary." / "Changing who reviews a request doesn't expand the sandbox." https://learn.chatgpt.com/docs/permission-modes (checked on 2026-11-01)
-[^no-cli]: Codex official docs, "Scheduled tasks". "Codex CLI doesn't provide the Scheduled management interface." https://learn.chatgpt.com/docs/automations (checked on 2026-11-01)
+[^readonly]: "Read-only" is a setting that might not appear separately in the permission menu from Chapter 4 (this guide's summary).
+[^no-cli]: The terminal (Codex CLI) does not have a screen to manage scheduled tasks. Codex official docs, "Scheduled tasks". "Codex CLI doesn't provide the Scheduled management interface." https://learn.chatgpt.com/docs/automations (checked on 2026-11-01)

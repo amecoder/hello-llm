@@ -1,0 +1,123 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 300,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "ひとまとめに書いた依頼",
+    "fontSize": 20,
+    "strokeColor": "#1e1e1e"
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "blob",
+   "x": 0,
+   "y": 50,
+   "width": 300,
+   "height": 300,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "下の議事録を要約して\nチームリーダーに送るから\n3行にして\n議事録：今日の会議では\n新製品の発売日を...\n...（長い議事録）...\nあ、それと決定事項は\n別に示して",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 440,
+   "y": 0,
+   "width": 320,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "枠を分けた依頼",
+    "fontSize": 20,
+    "strokeColor": "#1e1e1e"
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "b1",
+   "x": 440,
+   "y": 50,
+   "width": 320,
+   "height": 60,
+   "backgroundColor": "#a5d8ff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "<context> 状況\nチームリーダーに送る要約",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "b2",
+   "x": 440,
+   "y": 125,
+   "width": 320,
+   "height": 75,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "<document> 資料\n（長い議事録）",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "b3",
+   "x": 440,
+   "y": 215,
+   "width": 320,
+   "height": 60,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "<instructions> やること\n3行要約 + 決定事項を示す",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "b4",
+   "x": 440,
+   "y": 290,
+   "width": 320,
+   "height": 60,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "<format> 答えの形\n要約3行 + 決定事項の表",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 310,
+   "y": 195,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     118,
+     0
+    ]
+   ],
+   "width": 118,
+   "height": 0,
+   "label": {
+    "text": "整理",
+    "fontSize": 18
+   }
+  }
+ ]
+}

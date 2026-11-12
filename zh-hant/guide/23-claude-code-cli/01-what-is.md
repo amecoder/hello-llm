@@ -1,6 +1,6 @@
 # 第1章 終端與 Claude Code
 
-<Badge type="tip" text="必讀" /> 想跟著這一階段學下去，一定要讀這一章。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
 
 > **一句話總結**：終端是用文字讓電腦幹活的視窗。本課程會帶一個從沒開啟過終端的人安裝 Claude Code，最後做到用一行命令整理每週的筆記。[^tested]
 
@@ -35,7 +35,7 @@ Claude Code 是在終端裡執行的**代理型助手**。[^agentic] 代理（Ag
 Claude Code 會自己讀需要的檔案。[^reads] 它也能讀取並整理已有的檔案。[^organize] 所以你可以這樣說。
 
 ```text
-讀一下 inbox 裡的會議筆記，儲存成 회의록.md。回答只要一行。
+讀一下 inbox 裡的會議筆記，儲存成 minutes.md。回答只要一行。
 ```
 
 現在不用輸入。第4章再做。
@@ -62,7 +62,7 @@ Windows 有 PowerShell 和 CMD 兩種視窗。它們用的命令不同，所以�
 
 需要三樣東西。
 
-1. **付費帳號**：免費的 claude.ai 套餐裡不包含 Claude Code。[^free] 需要有 Pro、Max 這樣的付費帳號。[^paid]
+1. **付費帳號**：免費的 claude.ai 方案裡不包含 Claude Code。[^free] 需要有 Pro、Max 這樣的付費帳號。[^paid]
 2. **合適的電腦**：Mac、Windows、Linux 都可以。作業系統版本和記憶體要求寫在下面的框裡。
 3. **網路連線**：必須有。[^ram]
 
@@ -83,7 +83,7 @@ Windows 有 PowerShell 和 CMD 兩種視窗。它們用的命令不同，所以�
 
 我們用小咖啡館「街角咖啡館」員工瑞妍的筆記來練習。把亂糟糟的會議筆記放進資料夾。執行一個指令碼（script，按順序寫好命令的檔案）。筆記就會一份一份整理成會議記錄。
 
-想先看看的話，可以開啟[完成的指令碼](/practice/cli/results/10장-주간정리.sh.txt)和[這個指令碼做出的會議記錄](/practice/cli/results/10장-회의록-스크립트로.txt)。現在看不懂也沒關係。
+想先看看的話，可以開啟[完成的指令碼](/practice/zh-hant/cli/results/ch10-weekly-summary.sh.txt)和[這個指令碼做出的會議記錄](/practice/zh-hant/cli/results/ch10-minutes-by-script.txt)。現在看不懂也沒關係。
 
 之所以能這樣做，是因為 Claude Code 有一種**回答一次就結束的執行方式**。[^oneshot] 不用來回對話。用一行把要做的事交給它，它回答後就自己結束。這種方式在第10章學。
 
@@ -131,7 +131,7 @@ claude --version
 
 - 終端是用文字輸入命令來操作電腦的視窗。它本來就裝在電腦裡。
 - Claude Code 是自己讀取和建立資料夾裡檔案的代理型助手。
-- 需要付費帳號。免費套餐裡沒有。
+- 需要付費帳號。免費方案裡沒有。
 - Windows 的命令以 PowerShell 為準。確認有沒有看到 `PS`。
 - 本課程的目標是用一行命令執行的每週整理。覺得終端有負擔，也可以去看應用指南。
 

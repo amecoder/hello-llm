@@ -1,5 +1,7 @@
 # Chapter 6. Search and Deep Research — Getting Latest Information with Sources
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: Ask about things that happened today or change often using **Web Search**, and ask big questions that need comparing multiple sources using
 > **Deep Research**. Either way, opening and checking the attached sources yourself is part of the process.
 
@@ -10,9 +12,9 @@ The screens shown here are based on the web version (Plus plan) as of October 20
 AI only knows information up to the point it was trained. So if you just ask about recent events like "this week's weather" or "the policy announced yesterday," it is easy to get wrong answers.
 **Web search** is a feature that lets ChatGPT find and read the latest materials on the internet before answering.
 
-Web search is available on all plans, including Free. You can even use it when you are not logged in.
 ChatGPT will also search **automatically** when it decides it needs to.[^search]
 If you want to make sure it searches, click the **+ button on the left of the message box → "Web search (웹 검색)"** before asking your question.[^screen]
+You can use it on the Free plan too.[^search-login]
 
 ![Menu that opens when clicking the ① + button in the message box. Look at red numbers ⑤ "Web search (웹 검색)" and ⑦ "Deep research (심층 리서치)"](../../../guide/11-chatgpt/assets/shot-02-plus-menu-marked.png)
 
@@ -36,7 +38,11 @@ Answers from web search have **citations** (labels showing where the information
 
 ![Screen asking "Tell me the opening hours of the National Museum of Korea" using web search in a temporary chat. Small source tags like "National Museum of Korea +1" are attached at the end of sentences, and buttons for Copy, Read aloud, Regenerate, and More actions are below the answer](../../../guide/11-chatgpt/assets/shot-15-web-search-marked.png)
 
-*The chat titles and account name in this screen have been replaced with examples.* ① The small name tag at the end of the sentence is the source tag. ③ Below the answer are buttons for Copy, Read aloud, Regenerate, and More. On the web screen on October 23, 2026, clicking this source tag **opened the original webpage in a new tab.** ② In the second paragraph, seeing bold symbols as raw text like `**금요일(10월 23일)**` (Friday, October 23) is a case where the Markdown symbols we saw in [Stage 1, Chapter 7](../00-common/07-structured-prompts.md) are showing through.
+*The chat titles and account name in this screen have been replaced with examples.*
+
+- ① The small name tag at the end of the sentence is the source tag. Clicking it **opens the original webpage in a new tab** (web screen on October 23, 2026).
+- ② This is where asterisks (`**`) show up as raw text. It has nothing to do with sources, so you do not need to worry about it.[^stars]
+- ③ Below the answer are buttons for Copy, Read aloud, Regenerate, and More.
 
 However, OpenAI also states that search results and citations **can be incomplete, outdated, or wrong**.[^search]
 Just having a link attached does not mean it has been verified. As you learned in [Stage 1, Chapter 9](../00-common/09-safety.md), open the link yourself and check numbers, dates, and names against the original text.
@@ -62,25 +68,27 @@ Attach which page you got each piece of information from.
 
 When you ask a question where "near me" matters, like restaurants or clinics, your location is used.
 ChatGPT guesses your **general location** from your internet address (IP address, a number assigned to every device connected to the internet).
+For example, if you ask "Tell me a pharmacy open near me," this general location is used.
+
 You have to turn on a separate setting to share your device's exact location. It is turned off by default ("Settings (설정)" → "Data controls (데이터 관리)" → "Location (위치)").[^search][^screen]
 
 ChatGPT also rewrites your question into search terms and sends them to an outside search company. When it does this, it does not send your IP address or account information along with them.[^search]
-However, if Memory is turned on, it may tailor those search terms to you. The "Personalization (개인 맞춤 설정)" screen says so ([Chapter 5](05-memory.md)).[^screen]
+However, if Memory ([Chapter 5](05-memory.md)) is turned on, it may tailor those search terms to you.[^screen]
 
 <Quiz id="ch106-location" />
 
 ## When Shopping — Let It Compare, Check Prices Yourself
 
-When you ask about buying something, the answer may show **product cards** (product listings with photos, prices, and sellers). If you select one or more products and click "Research", **shopping research** begins.
+When you ask about buying something, the answer may show **product cards** (product listings with photos, prices, and sellers). If you select one or more products and click the "Research" button, **shopping research** begins.
 ChatGPT asks follow-up questions about brands you like, size, and what matters most to you. Then after a few minutes, it gives you a **buyer’s guide** with what to look for, recommended products, and a comparison table.[^shop-research]
-The help docs do not say whether this feature also appears on the Korean screen. We could not confirm it while writing this guide either.
+It is fine if product cards do not appear. Just ask it to compare directly, as shown below.[^shop-korea]
 
 ```
 I'm looking for a commuter backpack. My budget is 100,000 won, it needs to fit a 15-inch laptop, and I'll use it on rainy days too.
 Pick just three, show them in a comparison table, and attach links so I can check the price at each store myself.
 ```
 
-::: details What the answer roughly looks like (Example — click to expand)
+::: details What the answer roughly looks like (Example — click to expand) (click to expand)
 This is an example created for this guide. Actual answers vary by service and time.
 
 > Here are three options that match your conditions (under 100,000 won, 15-inch laptop, rainy days).
@@ -103,9 +111,12 @@ Here are things to keep in mind.
 - **Does my chat go to the store?** Conversations you have in shopping research are not shared with retailers.[^shop-research]
 - **The first price shown** — This is the price from the first seller listed. It may not be the lowest price.[^shop]
 - **Labels like "Best value (가성비)" and review summaries** — These are generated by ChatGPT and are not guarantees. OpenAI does not verify reviews either.[^shop]
-- **"Try on" (입어 보기)** — This feature lets you try clothes or accessories on your own photo. It does not guarantee actual size or fit. Uploaded photos are saved for next time, so delete them in Settings if you want them removed.[^shop]
 
 **Before paying, check the final price, taxes, shipping fees, stock, size, and return policy directly on the seller's website.**[^shop-research] Prices and stock change often, so they may differ from what ChatGPT showed you.
+
+::: details "Try on" — trying clothes on your own photo (click to expand)
+**"Try on" (입어 보기)** is a feature that lets you try clothes or accessories on your own photo. It does not guarantee actual size or fit. Uploaded photos are saved for next time, so delete them in Settings if you want them removed.[^shop]
+:::
 
 <Quiz id="ch106-shopping" />
 
@@ -124,7 +135,17 @@ Use web search for quick facts. Use deep research when you need depth and thorou
 Start in one of the following ways.[^dr][^screen]
 
 - Message box **+ button → "Deep research (심층 리서치)"**
-- Type `/Deepresearch` in the message box
+- Type `/Deepresearch` in the message box — a short command that starts with a slash (/). It is a shortcut for choosing a feature by typing instead of opening a menu.
+
+For example, try sending this. The images below show the screens when we actually sent this question.
+
+```
+Write a report comparing delivery app fees that a neighborhood side-dish shop can use.
+- Target reader: Owner running a single shop
+- What to compare: Brokerage fees, payment processing fees, advertising costs
+- Format: A one-line conclusion at the very top, then a comparison table, and a list of sources at the end
+- Prioritize 2026 sources, and mark any source without a date separately
+```
 
 ### How It Works
 
@@ -133,9 +154,9 @@ Start in one of the following ways.[^dr][^screen]
 3. **Step in while it researches** — While it is running, you can change direction or tell it things to add.
 4. **Get a report with citations** — You can download it in Markdown, Word, or PDF format.[^dr]
 
-> **You cannot use deep research in a temporary chat.** On the October 2026 web screen, "Deep research" was not in the + menu of a temporary chat. "Create image (이미지 생성)" was also grayed out and disabled. Start deep research in a regular chat.
+> **You cannot use deep research in a temporary chat.** Start deep research in a regular chat.[^temp-dr]
 
-Below is the screen when we actually sent the delivery app fee example that appears later in this section. **The red numbers match the numbers in the list below each image.**
+Below is the screen when we actually sent the delivery app fee example above. **The red numbers match the numbers in the list below each image.**
 
 ![Research plan card shown right after sending a deep research request. ① Five steps to research, ② "Edit (편집)" button, ③ "Cancel (취소)" and "Start (시작)" button with a countdown number](../../../guide/11-chatgpt/assets/shot-20-dr-plan-marked.png)
 
@@ -161,7 +182,7 @@ You can leave the research running and do other work. This example took about 6 
 - ③ Download button, and ④ Expand view button.
 - ⑤ The small numbers at the end of sentences are citations. Follow the numbers to open the sources.[^screen-dr]
 
-In the first paragraph of the report, there is a spot where asterisks show up as raw text like `**배달의민족·쿠팡이츠가…**` (Baedal Minjok and Coupang Eats...). That is the bold formatting symbol showing through ([Stage 1, Chapter 7](../00-common/07-structured-prompts.md)).
+In the first paragraph of the report, there is a spot where asterisks show up as raw text. It is the same case as ② in the image in the earlier "The Habit of Checking Sources" section.[^stars]
 
 When you click the ① Download button in the image below (③ in the image above), the ② menu shows "Copy contents (내용 복사)", "Export to Markdown (마크다운으로 내보내기)", "Export to Word (Word로 내보내기)", and "Export to PDF (PDF로 내보내기)".[^screen-dr]
 
@@ -169,17 +190,11 @@ When you click the ① Download button in the image below (③ in the image abov
 
 Because this research was done in a regular chat, the conversation stays in your chat list. If you do not want to keep it, delete it using the method in [Chapter 3](03-chats.md) after you finish reading.
 
-You can also have it research only specific websites or look at them first. You set this in the message box under Sites → Manage sites. However, this name comes from the help docs, and we have not yet confirmed the Korean screen label.[^dr]
-
-```
-Write a report comparing delivery app fees that a neighborhood side-dish shop can use.
-- Target reader: Owner running a single shop
-- What to compare: Brokerage fees, payment processing fees, advertising costs
-- Format: A one-line conclusion at the very top, then a comparison table, and a list of sources at the end
-- Prioritize 2026 sources, and mark any source without a date separately
-```
-
 Just like search results, open the sources to verify the report. The longer and more convincing a report looks, the easier it is to skip checking. Start by checking the numbers used in the conclusion.
+
+::: details To have it research only specific websites (click to expand)
+You can also have it research only specific websites or look at them first. You set this in the message box under Sites → Manage sites. However, this name comes from the help docs, and we have not yet confirmed the Korean screen label.[^dr]
+:::
 
 <Quiz id="ch106-deep-research" />
 
@@ -226,6 +241,10 @@ Exact counts are not listed in the help docs and change often. That is why we di
 Next chapter: [Chapter 7. Projects, Plugins, and Work](07-projects-plugins.md)
 
 [^search]: OpenAI Help Center, "Searching the web with ChatGPT". https://help.openai.com/en/articles/9237897 (checked on 2026-10-23)
+[^search-login]: Web search is available on all plans, including Free. You can even use it when you are not logged in. The source is "Searching the web with ChatGPT" just above.
+[^stars]: This is a case where the Markdown symbol for bold text (`**`) shows through as is. Examples are `**금요일(10월 23일)**` (Friday, October 23) in the second paragraph of the image and `**배달의민족·쿠팡이츠가…**` (Baedal Minjok and Coupang Eats...) in the first paragraph of the deep research report. Markdown was covered in [Stage 1, Chapter 7](../00-common/07-structured-prompts.md).
+[^shop-korea]: The help docs do not say whether this feature also appears on the Korean screen. We could not confirm it while writing this guide either.
+[^temp-dr]: On the October 2026 web screen, "Deep research" was not in the + menu of a temporary chat. "Create image (이미지 생성)" was also grayed out and disabled.
 [^find]: OpenAI Help Center, "Finding your chats, projects, and files in ChatGPT". https://help.openai.com/en/articles/10056348 (checked on 2026-10-23)
 [^dr]: OpenAI Help Center, "Deep research in ChatGPT". https://help.openai.com/en/articles/10500283 (checked on 2026-10-23)
 [^shop]: OpenAI Help Center, "Shopping with ChatGPT Search". "Product results are selected independently by ChatGPT and are not ads" / "may not be the lowest available price" / "They’re not guarantees or verified statements" / "Reviews and ratings are not verified by OpenAI." / "Your reference photos are saved for future try-ons" / "do not guarantee fit or size". https://help.openai.com/en/articles/11128490 (checked on 2026-10-24)

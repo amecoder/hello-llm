@@ -1,6 +1,6 @@
 # Chapter 5. Input Tips and Commands
 
-<Badge type="tip" text="Required" /> Be sure to read this to follow this stage.
+<Badge type="tip" text="Required" /> Read this to follow this stage.
 
 > **One-line summary**: A single character at the very start of the input box changes its meaning. `@` points to a file, `!` runs a terminal command right away, and `/` is a command. To start a new line, use `Ctrl + J`.
 
@@ -38,13 +38,13 @@ Type up to `@inbox` and you'll see candidates like this.
 ❯ @inbox
 ────────────────────────────────────────────────────────────
     + inbox/
-    + inbox/회의-2026-10-27-주간회의.txt
+    + inbox/meeting-2026-10-27-weekly.txt
 ```
 
 Choose with the up and down arrows. When `❯` is on the line you want, press `Tab` to insert it.
 
 - **Weaker example**: `Pull the to-dos out of that meeting memo` — if there are several memos, Claude can't tell which one.
-- **Better example**: `Pull only the to-dos out of @inbox/회의-2026-10-27-주간회의.txt` — this narrows it to one file.
+- **Better example**: `Pull only the to-dos out of @inbox/meeting-2026-10-27-weekly.txt` — this narrows it to one file.
 
 You don't have to type the whole long name, so you make fewer typos. You can also see right away in the candidate list whether it's the file you meant.
 
@@ -57,9 +57,9 @@ Sometimes you want to use a terminal command without closing the session. Put `!
 ```text
 ! ls
   ⎿  inbox
-     회의록.md
+     minutes.md
 
-● The current folder contains inbox and 회의록.md. What can I help you with?
+● The current folder contains inbox and minutes.md. What can I help you with?
 ```
 
 To leave shell mode, empty the input box and press `Esc` or Backspace.[^bang-exit]
@@ -154,7 +154,7 @@ The one to remember is `Esc`. If you type a message and press Enter while Claude
 
 If nothing is running, pressing `Ctrl + C` twice closes Claude Code. Don't be alarmed. Just start it again with `claude`.
 
-::: details More (click to expand)
+::: details More details (click to expand)
 `Ctrl + Z` is not undo. On Mac and Linux, pressing it pauses Claude Code and drops you back to the terminal. Don't be alarmed if the screen disappears. Type `fg` in the terminal to get back.[^suspend]
 :::
 

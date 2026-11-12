@@ -1,5 +1,7 @@
 # Chapter 1. Building with AI — SDLC at a Glance
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: Software reaches the world through **Plan → Create → Review → Test → Deploy → Operate**. This flow is called the SDLC.
 > AI acts as your hands at each stage, but **deciding what to build and checking the results is your job**. Stage 4 teaches you how to divide this work.
 
@@ -20,7 +22,7 @@ The SDLC (Software Development Life Cycle) describes the stages a project moves 
 
 Source: GitHub official docs (summarized by this guide)[^six]
 
-This guide covers Test (Chapter 5) first and Review (Chapter 6) second. That way, you can look at the test results while reviewing. On GitHub, "Operate" covers a wide range from monitoring and dependency management to security, but this guide covers only improving through issues (Chapter 8) and safety (Chapter 9).
+The order of chapter numbers in the table is a little different. This guide covers Test (Chapter 5) before Review (Chapter 6). That way, you can look at the test results while reviewing.[^operate]
 
 **You do not need to use every stage from day one.** GitHub also notes that many people start with one repository and a few tasks, then expand as their project grows.[^start-small] In this guide, you will also go through all six stages once with a single small web page.
 
@@ -55,7 +57,7 @@ Even when AI acts as your hands, there are jobs that you must handle yourself.
 
 Source: Summarized by this guide (see footnotes in each chapter for sources)
 
-The official docs also state that **you are responsible for reviewing proposed code and commands for safety before approval**.[^responsible] Also, actions that affect outside systems—like deployment—cannot be undone with Claude Code's rewind (checkpoints).[^no-checkpoint] So the more an action reaches the outside world, the more important it is that you check it and press the button yourself.
+The official docs also state that **you are responsible for reviewing proposed code and commands for safety before approval**.[^responsible] Also, actions that affect outside systems—like deployment—cannot be undone with Claude Code's rewind (checkpoints).[^no-checkpoint] A checkpoint is a save point that is created automatically every time you send a request. Like a save point in a game, most files on your computer that Claude changed can be rolled back to that moment (except files changed by shell commands or other sessions). But something you have already published on the internet does not come back. So the more an action reaches the outside world, the more important it is that you check it and press the button yourself.
 
 <Quiz id="ch701-human" />
 
@@ -64,6 +66,13 @@ The official docs also state that **you are responsible for reviewing proposed c
 The "Try It Yourself" sections in Stage 4 follow a single example across every chapter. You will build **a web page that collects and displays the action items from the meeting notes created by your Stage 3 organizer tool**, called the "Corner Cafe To-Do Board".
 
 GitHub's official getting-started series also follows one small website from start to finish as you **plan work, write code, review changes, and deploy to a live website**.[^journey] This guide follows the same order, using Claude Code from Stage 3 in the AI role.
+
+A few unfamiliar words appear in the table. For now, just get a light sense of what they mean. Each chapter covers them step by step.
+
+- **GitHub**: a service where you put project files and change history on the internet and work together
+- **Repository**: the place that holds project files and change history. It is the project's home
+- **PR** (Pull Request): a change proposal you put forward saying "Please merge in what I changed"
+- **GitHub Pages**: a feature that publishes the files in a repository as a web page for free
 
 | Chapter | What you do on the To-Do Board |
 |---|---|
@@ -108,4 +117,5 @@ Next chapter: [Chapter 2. Creating a GitHub Repository](02-repository.md)
 [^fail]: Claude Code official docs, "Best practices for Claude Code". "It's missing information it can't get from reading the repo." / "Claude said it was done and it wasn't quite, usually because it had no way to check its own work." https://code.claude.com/docs/en/best-practices (checked on 2026-11-01)
 [^responsible]: Claude Code official docs, "Security". "You're responsible for reviewing proposed code and commands for safety before approval." https://code.claude.com/docs/en/security (checked on 2026-11-01)
 [^no-checkpoint]: Claude Code official docs, "How Claude Code works". "Actions that affect remote systems (databases, APIs, deployments) can't be checkpointed." https://code.claude.com/docs/en/how-claude-code-works (checked on 2026-11-01)
+[^operate]: On GitHub, "Operate" covers a wide range from monitoring and dependency management to security. This guide covers only improving through issues (Chapter 8) and safety (Chapter 9).
 [^journey]: GitHub official docs, "Creating a repository for your project on GitHub". "By the end of the journey, you'll plan work, write code, review changes, and deploy your code to a live website." https://docs.github.com/en/get-started/start-your-journey/creating-a-repository-for-your-project-on-github (checked on 2026-11-01)

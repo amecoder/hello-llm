@@ -1,9 +1,11 @@
 # 第3章 熟悉界面 — 标题栏、改动内容、文件、会话信息
 
-> **一句话总结**：Code 标签页是一个**在对话栏旁边再打开多个栏（窗格）**来使用的界面。通过会话标题栏的按钮，打开**改动内容、文件、终端、浏览器**栏，并在会话信息栏里用数字查看改了什么。
-> 要查看改动内容，文件夹里必须打开**变更记录（Git）**。这一章会请 Claude 帮你打开它。
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
 
-这一章依据2026年10月31日确认的 Claude Code 官方文档和 macOS 桌面应用（韩语界面，付费账号）编写。它会直接使用第2章里创建的**整理工具（정리도구）**文件夹和会议纪要。
+> **一句话总结**：Code 标签页是一个**在对话栏旁边再打开多个栏（窗格）**来使用的界面。通过会话标题栏的按钮，打开**改动内容、文件、终端、浏览器**栏，并在会话信息栏里用数字查看改了什么。
+> 要查看改动内容，文件夹里必须打开**变更记录（Git，把文件在什么时候、怎样被改动记录下来的工具）**。这一章会请 Claude 帮你打开它。
+
+这一章依据2026年10月31日确认的 Claude Code 官方文档和 macOS 桌面应用（韩语界面，付费账号）编写。它会直接使用第2章里创建的**整理工具（organizer）**文件夹和会议纪要。
 
 ## 布局一览
 
@@ -56,13 +58,19 @@ Code 标签页是一个可以**按自己的想法排列各个栏**的界面，�
 
 **Git** 是记录文件在什么时候、怎样被改动的工具。更改栏会把这份记录和现在的文件做比较后展示出来。所以在没有记录的普通文件夹里，就没有东西可以展示。
 
+### 打开 Git
+
 不需要懂 Git 命令。**请 Claude 帮你打开就行。**
 
 ```
 听说要看改动内容，需要 Git 仓库。请在这个文件夹里打开变更记录（Git），并把现有的文件留作第一条记录。请用简单的话告诉我你做了什么。
 ```
 
+如果电脑上没有 Git，请到官方网站（git-scm.com）安装。[^git]
+
 在本指南里，Claude 在文件夹中打开了 Git，并把5份备忘和会议纪要留作**第一条记录**。随后，更改栏显示出「没有可显示的更改（표시할 변경 사항이 없습니다）」。意思是第一条记录之后还没有改动过任何东西。
+
+### 读懂改动的行
 
 接下来，试着让它稍微改一下会议纪要。这个请求是依据复盘备忘，给每项待办事项加上进度状态。
 
@@ -72,7 +80,9 @@ Code 标签页是一个可以**按自己的想法排列各个栏**的界面，�
 
 ![改动内容栏。红色编号标在：① 改动的行数「+7 −7」，② 被删除的行（红色），③ 新增的行（绿色，有「状态」列和「完成(10/31)」等），④ 被改动的文件列表](../../../guide/20-claude-code/assets/shot-08-diff-marked.png)
 
-**红色的行是被删除的行，绿色的行是新增的行。** `+7 −7` 的意思是新增了7行、删除了7行。表格的一行末尾加了一列之后，Git 会把那一行算作“删掉再重新写的”。所以待办事项表的7行，会各以红色和绿色出现一次。
+**红色的行是被删除的行，绿色的行是新增的行。** `+7 −7` 的意思是新增了7行、删除了7行。
+
+表格的一行末尾加了一列之后，Git 会把那一行算作“删掉再重新写的”。所以待办事项表的7行，会各以红色和绿色出现一次。
 
 多亏这一栏，你可以**用眼睛确认“其他部分不要改”有没有被遵守**。除了表格，如果没有其他行显示成红色或绿色，就说明遵守了。
 
@@ -80,11 +90,11 @@ Code 标签页是一个可以**按自己的想法排列各个栏**的界面，�
 在本指南的练习里，Claude 先说明了一项判断。复盘里没有单独写俊浩的拍照，但是帖子3次都发出去了，所以它写成了“进行中”。它还补充说，想要严格一点，改成“需确认”就行。看到这样的说明，请再确认一下这个判断是否符合我的标准。如果和标准不同，用一句话请它改一下就行。
 :::
 
-::: warning Git 记录里留下的名字
-Git 会在每条记录里一并留下**这台电脑的 Git 设置里写的姓名和邮箱**。如果是公司电脑，可能会放进公司账号。在把记录界面给别人看，或把文件夹上传之前，请先确认。如果电脑上没有 Git，请到官方网站（git-scm.com）安装。[^git]
-:::
-
 更改栏也可以用快捷键 **Cmd+Shift+D** 打开和关闭。[^keys]
+
+::: warning Git 记录里留下的名字
+Git 会在每条记录里一并留下**这台电脑的 Git 设置里写的姓名和邮箱**。如果是公司电脑，可能会放进公司账号。在把记录界面给别人看，或把文件夹上传之前，请先确认。
+:::
 
 <Quiz id="ch403-changes" />
 
@@ -103,9 +113,11 @@ Git 会在每条记录里一并留下**这台电脑的 Git 设置里写的姓名
 
 出处：卡片名称来自本指南的界面确认（2026-10-31），作用来自官方文档[^rail][^diff]
 
+环境卡片里的「main」，是现在正在工作的记录分支（branch）的名字。现在不用在意它。
+
 **上下文**（Context）就是你在第1阶段学到的“AI 一次能看到的量”（[第1阶段第1章](../00-common/01-what-is-llm.md#_3-一次能看的量有限——-上下文窗口)）。装满之后，Claude 会**自动把到目前为止的对话做成摘要，然后接着工作。**[^context] 本指南建议这样做：与其把新工作接在数字已经涨得很高的会话后面，不如在新会话里开始新工作，这样更清爽。
 
-④ 的「提交更改（변경 사항 커밋）」是把改动的内容作为新记录留在 Git 里的按钮。记录和撤销，在[第4章](04-permissions-undo.md)里讲。
+④ 的「提交更改（변경 사항 커밋）」是把改动的内容作为新记录留在 Git 里的按钮。提交（Commit）就是“留下一条记录”的意思。现在不用点它。记录和撤销，在[第4章](04-permissions-undo.md)里讲。
 
 <Quiz id="ch403-rail" />
 
@@ -125,12 +137,13 @@ Claude 生成的文件，**不用打开 Finder 或资源管理器，在应用里
 
 ## 终端、浏览器栏和快捷键
 
-剩下的两个栏，只简单了解一下。
+剩下的两个栏，知道名字就够了。不需要记住。
 
 - **终端**（④）：直接输入命令并执行的栏。它在和 Claude 相同的文件夹里打开。[^terminal] 这个阶段可以不用。终端在第10章里讲。
 - **浏览器**（⑥）：在应用里打开网页的栏。[^arrange]
 
-常用快捷键（macOS）如下。[^keys]
+::: details 常用快捷键（macOS）（点击展开）
+不知道快捷键也没关系。用熟了会更方便。[^keys]
 
 | 快捷键 | 作用 |
 |---|---|
@@ -142,6 +155,7 @@ Claude 生成的文件，**不用打开 Finder 或资源管理器，在应用里
 | Cmd+Shift+M | 打开权限模式菜单 |
 
 出处：Claude Code 官方文档[^keys]
+:::
 
 ## 亲自试一试
 
@@ -150,7 +164,7 @@ Claude 生成的文件，**不用打开 Finder 或资源管理器，在应用里
 3. 打开 ③ 会话信息栏，看上下文数字和改动的行数。
 4. 在 ⑦ 文件栏里打开会议纪要，确认状态列和复盘备忘是否一致（灯泡、文案、成本是完成，Instagram 是进行中）。
 
-**连续任务**：把本指南的结果（[3장-회의록-상태칸.txt](/practice/notes/results/3장-회의록-상태칸.txt)）和我的结果比一比。表格的样子即使不同，只要状态值和复盘一致，就算做得好。
+**连续任务**：把本指南的结果（[ch3-minutes-status-column.txt](/practice/zh-hans/notes/results/ch3-minutes-status-column.txt)）和我的结果比一比。表格的样子即使不同，只要状态值和复盘一致，就算做得好。
 
 ## 小结
 
@@ -175,12 +189,12 @@ Claude 生成的文件，**不用打开 Finder 或资源管理器，在应用里
 
 下一章：[第4章. 允许与撤销](04-permissions-undo.md)
 
-[^arrange]: Claude Code 官方文档，「Desktop application」。"The Code tab is built around panes you can arrange in any layout: chat, diff, browser, terminal, file, plan, tasks, and subagent" / "Drag a pane by its header to reposition it, or drag a pane edge to resize it." / "To open another pane, click its icon button in the session's title bar. Hover to see each button's name, such as Terminal, Changes for the diff view, Browser, and Files." / "When the window is narrow: buttons that don't fit move into the menu" https://code.claude.com/docs/en/desktop（确认日期 2026-10-31）
-[^sessions]: Claude Code 官方文档，「Desktop application」。"Each session is an independent conversation with its own context and changes." / "To rename a session, open it and click the session title in the title bar." https://code.claude.com/docs/en/desktop（确认日期 2026-10-31）
-[^rail]: Claude Code 官方文档，「Desktop application」。"The session details panel is a set of cards beside the chat that show where the session runs, what it changed, what it's running, and its context usage." https://code.claude.com/docs/en/desktop（确认日期 2026-10-31）
-[^diff]: Claude Code 官方文档，「Desktop application」。"To open the diff view, click the line counts, such as +12 -1, in the Changes card of the session details panel." https://code.claude.com/docs/en/desktop（确认日期 2026-10-31）
-[^context]: Claude Code 官方文档，「Desktop application」。"When context fills up, Claude automatically summarizes the conversation and continues working." https://code.claude.com/docs/en/desktop（确认日期 2026-10-31）
-[^files]: Claude Code 官方文档，「Desktop application」。"To open a file Claude mentions, click its path in the chat." / "Local sessions: you can edit files inside the session's working directory" / "By default, your edits in the file pane save on their own" https://code.claude.com/docs/en/desktop（确认日期 2026-10-31）
-[^terminal]: Claude Code 官方文档，「Desktop application」。"The terminal opens in your session's working directory and shares the same environment as Claude" https://code.claude.com/docs/en/desktop（确认日期 2026-10-31）
-[^keys]: Claude Code 官方文档，「Desktop application」快捷键表。"Toggle diff pane" / "Toggle Browser pane" / "Toggle terminal pane" / "Close focused pane" / "Stop Claude's response" / "Open permission mode menu" https://code.claude.com/docs/en/desktop（确认日期 2026-10-31）
-[^git]: Claude Code 官方文档，「Desktop application」故障排除。"install Git" — 官方文档在需要 Git 的功能（worktree）处指引安装 Git。更改栏要求有 Git 仓库一事，来自本指南的界面确认（2026-10-31）。https://code.claude.com/docs/en/desktop（确认日期 2026-10-31）
+[^arrange]: Claude Code 官方文档，「Desktop application」。"The Code tab is built around panes you can arrange in any layout: chat, diff, browser, terminal, file, plan, tasks, and subagent" / "Drag a pane by its header to reposition it, or drag a pane edge to resize it." / "To open another pane, click its icon button in the session's title bar. Hover to see each button's name, such as Terminal, Changes for the diff view, Browser, and Files." / "When the window is narrow: buttons that don't fit move into the menu" https://code.claude.com/docs/en/desktop （确认日期 2026-10-31）
+[^sessions]: Claude Code 官方文档，「Desktop application」。"Each session is an independent conversation with its own context and changes." / "To rename a session, open it and click the session title in the title bar." https://code.claude.com/docs/en/desktop （确认日期 2026-10-31）
+[^rail]: Claude Code 官方文档，「Desktop application」。"The session details panel is a set of cards beside the chat that show where the session runs, what it changed, what it's running, and its context usage." https://code.claude.com/docs/en/desktop （确认日期 2026-10-31）
+[^diff]: Claude Code 官方文档，「Desktop application」。"To open the diff view, click the line counts, such as +12 -1, in the Changes card of the session details panel." https://code.claude.com/docs/en/desktop （确认日期 2026-10-31）
+[^context]: Claude Code 官方文档，「Desktop application」。"When context fills up, Claude automatically summarizes the conversation and continues working." https://code.claude.com/docs/en/desktop （确认日期 2026-10-31）
+[^files]: Claude Code 官方文档，「Desktop application」。"To open a file Claude mentions, click its path in the chat." / "Local sessions: you can edit files inside the session's working directory" / "By default, your edits in the file pane save on their own" https://code.claude.com/docs/en/desktop （确认日期 2026-10-31）
+[^terminal]: Claude Code 官方文档，「Desktop application」。"The terminal opens in your session's working directory and shares the same environment as Claude" https://code.claude.com/docs/en/desktop （确认日期 2026-10-31）
+[^keys]: Claude Code 官方文档，「Desktop application」快捷键表。"Toggle diff pane" / "Toggle Browser pane" / "Toggle terminal pane" / "Close focused pane" / "Stop Claude's response" / "Open permission mode menu" https://code.claude.com/docs/en/desktop （确认日期 2026-10-31）
+[^git]: Claude Code 官方文档，「Desktop application」故障排除。"install Git" — 官方文档在需要 Git 的功能（worktree）处指引安装 Git。更改栏要求有 Git 仓库一事，来自本指南的界面确认（2026-10-31）。https://code.claude.com/docs/en/desktop （确认日期 2026-10-31）

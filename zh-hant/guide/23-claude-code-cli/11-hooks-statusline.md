@@ -1,6 +1,6 @@
 # 第11章 鉤子與介面定製
 
-<Badge type="tip" text="必讀" /> 要跟上這個階段，請一定讀完。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
 
 > **一句話總結**：鉤子（Hook）是在固定時刻由 **Claude Code 親自**執行的命令。它不交給 AI 去判斷，所以用在必須發生的事情上。
 
@@ -14,7 +14,7 @@
 
 和[第8章](08-memory-settings.md)的 CLAUDE.md 放在一起比較，就能看出區別。
 
-- **不太好的例子**：在 CLAUDE.md 裡寫上"修改檔案後，在 변경기록.txt 裡記一行"。負責遵守的是 Claude。它可能會漏掉。
+- **不太好的例子**：在 CLAUDE.md 裡寫上"修改檔案後，在 changelog.txt 裡記一行"。負責遵守的是 Claude。它可能會漏掉。
 - **更好的例子**：把同樣的事做成鉤子。負責遵守的是 Claude Code。每次修改檔案後，命令都會執行。
 
 每次都必須發生的事，就用鉤子。[^every-time] 不過也不用把規則全都搬到鉤子裡。語氣、文件格式這類規則，用 CLAUDE.md 就夠了。鉤子只用在"漏掉就麻煩的事"上。
@@ -23,11 +23,11 @@
 
 ## 製作變更記錄鉤子
 
-鉤子是在設定檔案里加上 `hooks` 這一項來製作的。[^hook-add] 本章把它放進專案設定檔案 `.claude/settings.json`。就是放著[第7章](07-permissions-undo.md)拒絕規則的那個檔案。
+鉤子是在設定檔案裡加上 `hooks` 這一項來製作的。[^hook-add] 本章把它放進專案設定檔案 `.claude/settings.json`。就是放著[第7章](07-permissions-undo.md)拒絕規則的那個檔案。
 
 手動修改的話，很容易因為一個逗號出錯。所以我們一次性覆蓋整個檔案。第7章的拒絕規則也原樣包含在下面的內容裡，不會消失。
 
-用 `/exit` 退出，在終端的練習資料夾裡把下面整段貼上進去。粘貼後如果還沒執行，就再按一次 Enter。
+用 `/exit` 退出，在終端的練習資料夾裡把下面整段貼上進去。貼上後如果還沒執行，就再按一次 Enter。
 
 會出現好幾個陌生的專案名，但現在不用全都懂。大塊只有三個。
 
@@ -41,14 +41,14 @@
 cat > .claude/settings.json <<'EOF'
 {
   "permissions": {
-    "deny": ["Read(./비밀/**)"]
+    "deny": ["Read(./secret/**)"]
   },
   "hooks": {
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
         "hooks": [
-          { "type": "command", "command": "date '+%F %T 檔案已被修改' >> 변경기록.txt" }
+          { "type": "command", "command": "date '+%F %T 檔案已被修改' >> changelog.txt" }
         ]
       }
     ]
@@ -64,16 +64,16 @@ Windows PowerShell 用 `notepad .claude\settings.json` 開啟記事本。刪掉�
 
 - `PostToolUse`：表示 Claude 使用工具**之後**。已經完成的事無法撤回。能在使用工具**之前**插進去阻止的時間點是 `PreToolUse`。[^post]
 - `matcher`：決定對哪些工具做出反應。`Write|Edit` 是建立檔案的工具和修改檔案的工具。這裡的 `|` 是"或者"的意思。Claude 用 Shell 命令改動的檔案，這個鉤子不會做出反應。
-- `command`：要執行的命令。把當前的日期、時間和一句話追加到 `변경기록.txt`（變更記錄.txt）的末尾。把命令拆開來看是這樣的。
+- `command`：要執行的命令。把當前的日期、時間和一句話追加到 `changelog.txt`（變更記錄.txt）的末尾。把命令拆開來看是這樣的。
   - `date`：列印當前日期和時間的命令。
   - `'+%F %T 檔案已被修改'`：要列印的格式。`%F` 的位置填日期（`2026-11-06`），`%T` 的位置填時間（`11:19:11`）。
-  - `>> 변경기록.txt`：把結果追加到那個檔案的末尾。第10章的 `>` 會覆蓋檔案，`>>` 是接在後面寫。如果檔案不存在，就新建一個。
+  - `>> changelog.txt`：把結果追加到那個檔案的末尾。第10章的 `>` 會覆蓋檔案，`>>` 是接在後面寫。如果檔案不存在，就新建一個。
 
 不覆蓋檔案，也可以用語言請 Claude 幫忙。[^ask-claude] 如果是像你自己的專案那樣已經寫有設定的檔案，這個方法更好。`.claude` 資料夾是特別保護的地方，這時可能會彈出許可視窗。[^protected]
 
 ```text
 請在 .claude/settings.json 裡新增一個鉤子。讓 Claude 每次使用 Write 或 Edit 工具之後都執行下面的命令。不要刪掉已有的內容。
-date '+%F %T 檔案已被修改' >> 변경기록.txt
+date '+%F %T 檔案已被修改' >> changelog.txt
 ```
 
 如果已經有 `hooks` 項，不要整個替換，而是在裡面再加一個。[^sibling] 在 Windows 上我們沒有執行過這個鉤子。`date` 命令是 bash 格式，可能無法直接執行。這種時候，請 Claude 把它換成適合你環境的命令。
@@ -81,16 +81,16 @@ date '+%F %T 檔案已被修改' >> 변경기록.txt
 現在來測試。啟動 `claude`，傳送下面的內容。
 
 ```text
-在 notes 資料夾裡新建 훅시험.md，只寫一行"鉤子測試"。
+在 notes 資料夾裡新建 hook-test.md，只寫一行"鉤子測試"。
 ```
 
-完成後輸入 `! cat 변경기록.txt`。實際執行時，留下了這樣一行。
+完成後輸入 `! cat changelog.txt`。實際執行時，留下了這樣一行。
 
 ```text
 2026-11-06 11:19:11 檔案已被修改
 ```
 
-完整的設定檔案可以在 [11장-settings.json.txt](/practice/cli/results/11장-settings.json.txt) 裡檢視。
+完整的設定檔案可以在 [ch11-settings.json.txt](/practice/zh-hant/cli/results/ch11-settings.json.txt) 裡檢視。
 
 <Quiz id="ch811-log" />
 
@@ -105,7 +105,7 @@ date '+%F %T 檔案已被修改' >> 변경기록.txt
   This menu is read-only. To add or change a hook, edit settings.json or ask Claude. Learn more
 
     PostToolUse  after tool execution
-  ❯ [Project] date '+%F %T 檔案已被修改' >> 변경기록.txt   Write|Edit · command
+  ❯ [Project] date '+%F %T 檔案已被修改' >> changelog.txt   Write|Edit · command
 
     All events
 
@@ -132,7 +132,7 @@ cat .claude/settings.json
 
 ## 狀態列
 
-狀態列（Status line）是在 Claude Code 介面底部，顯示你指定的 Shell 指令碼輸出的那一行。[^status-what] 在設定檔案里加上 `statusLine` 項就行。[^status-set] 前面覆蓋的設定裡已經有下面這一行了。不用另外修改。
+狀態列（Status line）是在 Claude Code 介面底部，顯示你指定的 Shell 指令碼輸出的那一行。[^status-what] 在設定檔案裡加上 `statusLine` 項就行。[^status-set] 前面覆蓋的設定裡已經有下面這一行了。不用另外修改。
 
 ```json
 "statusLine": { "type": "command", "command": "echo 街角咖啡館 整理中" }
@@ -169,9 +169,9 @@ cat .claude/settings.json
 1. 用 `/exit` 退出，在終端裡貼上設定程式碼框。
 2. 啟動 `claude`，看看輸入框下面有沒有顯示 `街角咖啡館 整理中`。
 3. 輸入 `/hooks`，確認它出現在 `PostToolUse` 下面，然後按 Esc 關閉。
-4. 傳送鉤子測試的請求後，用 `! cat 변경기록.txt` 看看是不是多了一行。
+4. 傳送鉤子測試的請求後，用 `! cat changelog.txt` 看看是不是多了一行。
 
-問問自己：鉤子真的運行了嗎？不要看 Claude 的回答，而是親自開啟 `변경기록.txt` 再回答。
+問問自己：鉤子真的運行了嗎？不要看 Claude 的回答，而是親自開啟 `changelog.txt` 再回答。
 
 ## 小結
 

@@ -1,6 +1,6 @@
 # Chapter 3. Installing and Logging In
 
-<Badge type="tip" text="Required" /> Be sure to read this to follow this step.
+<Badge type="tip" text="Required" /> Read this to follow this stage.
 
 > **One-line summary**: Paste the install command from the official documentation, then check it with `claude --version` in a **new terminal window**. Then run `claude` in your practice folder and log in through your browser, and you are ready.
 
@@ -138,14 +138,14 @@ If it still does not work, see the official "[Troubleshoot installation and logi
 In a new window, move to the practice folder from Chapter 2 and type `claude`. On Mac and Linux, type this.
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude
 ```
 
 In Windows PowerShell, type this.
 
 ```powershell
-cd $HOME\hello-ai-연습\터미널
+cd $HOME\hello-ai-practice\terminal
 claude
 ```
 

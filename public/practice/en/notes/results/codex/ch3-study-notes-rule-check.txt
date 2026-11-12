@@ -1,0 +1,50 @@
+# Prompt Lecture — 10/28(Wed)
+
+- Source: AI prompt lecture
+- Length: 1 hour
+- Original memo: `inbox/study-2026-10-28-prompt-lecture.txt`
+
+## 1. One-line summary
+
+A prompt is a request you make to the AI, and you can make it more specific with five methods: give it a role, context, format, and examples, and split the work into separate requests.
+
+## 2. Key points
+
+1. Set a role — tell the AI from what position to answer. For example, ask "You are a cafe marketer."
+2. Explain the context — say who will read it and why you need it.
+3. Set the output format — specify the shape of the answer you want, like a table or a three-line summary.
+4. Give examples — showing an example of the result you want is called few-shot.
+5. Split the work — rather than handing over several tasks at once, ask for them separately.
+
+## 3. New words
+
+| Term | Meaning |
+|---|---|
+| Prompt | A request you make to the AI. |
+| few-shot | Showing examples when you make a request. |
+| Token | Small pieces that text is cut into. The memo explains that the AI's length limit is set in this unit. |
+| Hallucination | When the AI says something that sounds convincing but isn't true. |
+
+## 4. Watch out for
+
+- AI answers can be wrong even when they sound convincing, so always check numbers, names, and dates.
+
+## 5. Questions to ask
+
+- How many examples is it best to give?
+
+## 6. Things to try
+
+| Action item | Owner | Due |
+|---|---|---|
+| When writing Instagram posts, try putting a role and output format in the request to the AI | (not in notes) | (not in notes) |
+
+## 7. What happened when I tried
+
+- (not in notes)
+
+## Check Against Original
+
+- Lecture date: 10/28 (Wed). The original says 10/28, and the year 2026 was taken from the file name.
+- Lecture length: 1 hour.
+- Prompt-writing methods introduced by the instructor: 5.

@@ -1,0 +1,7 @@
+# Corner Cafe memo organizing rules
+
+- Write answers in Korean.
+- Write meeting notes with only three sections: decisions, to-dos, next meeting.
+- Write to-dos as a table. The columns are owner, to-do, deadline.
+- Don't make up anything that isn't in the memo.
+- Save organized files in the notes folder.

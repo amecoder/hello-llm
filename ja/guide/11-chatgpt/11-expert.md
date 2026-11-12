@@ -1,5 +1,7 @@
 # 第11章 専門家のように使う — 初心者を越えて、仕事に合わせて使いこなす
 
+<Badge type="warning" text="発展" /> 前の章を身につけたあと、もっと上手に使いたいときに読んでください。
+
 > **一言まとめ**: 専門家とは、新しい機能をたくさん知っている人ではなく、**仕事を任せるように伝え、仕事に合った道具を選び、繰り返す作業は型にして、結果を確認してから使う**人です。
 > この章では、第1〜10章で学んだ機能を**組み合わせる方法**と、まだ扱っていない予約タスク・データ分析・勉強モードを紹介します。
 
@@ -7,21 +9,21 @@
 
 ## 専門家は何が違うのか
 
-[ステップ1 第3章「同じ道具、違う結果」](../00-common/03-why-learn.md#同じ道具、違う結果)で、同じAIでも使い方によって結果が変わると学びました。OpenAIが会社でのChatGPTの使われ方を調べたレポートにも、似た点が見られます。効果が大きそうな場面でも、推論・ディープリサーチ・プロジェクト・カスタム指示のような**高度な機能はあまり使われていません**。[^adopt]
+[ステップ1 第3章「同じ道具、違う結果」](../00-common/03-why-learn.md#同じ道具、違う結果)で、同じAIでも使い方によって結果が変わると学びました。何を任せるかを判断する方法、任せる前に試す方法、仕事の重さに見合うだけ確認する方法のように、**どのAIにも通じるやり方**は[ステップ1 第11章「専門家のように使う」](../00-common/11-expert.md)にあります。この章では、そのやり方をChatGPTの機能に当てはめてみます。
 
-何を任せるかを判断する方法、任せる前に試す方法、仕事の重さに見合うだけ確認する方法のように、**どのAIにも通じるやり方**は[ステップ1 第11章「専門家のように使う」](../00-common/11-expert.md)にあります。この章では、そのやり方をChatGPTの機能に当てはめてみます。この章で扱うものを、先に一目で見ておきましょう。
+OpenAIが会社でのChatGPTの使われ方を調べたレポートも、同じ点を指摘しています。効果が大きそうな場面でも、推論・ディープリサーチ・プロジェクト・カスタム指示のような**高度な機能はあまり使われていません**。[^adopt] この章で扱うものを、先に一目で見ておきましょう。
 
 | 要素 | 一言の説明 | 詳しく見る |
 |---|---|---|
-| 任せるように伝える | やること・対象・目的・形を伝え、最初の答えを見ながら直していく | [ステップ1 第4章「よいプロンプトの5つの要素」](../00-common/04-prompt-basics.md#良いプロンプトの5つの要素)、[ステップ1 第6章「直してほしいと上手に伝える方法」](../00-common/06-conversation.md#上手に直してもらう言い方) |
-| 道具を選ぶ | 検索・ディープリサーチ・Work・推論レベルのうち、仕事に合ったものを使う | [第6章「ディープリサーチ — レポートを任せる」](06-search.md#ディープリサーチ-—-レポートを任せる)、[第7章「ChatとWorkの違い」](07-projects-plugins.md#chatとworkの違い) |
-| 資料をためておく | 同じ仕事のファイル・指示・うまくいった答えを一か所に集める | [第7章「プロジェクト — 会話・ファイル・指示を一つのフォルダに」](07-projects-plugins.md#プロジェクト-—-会話・ファイル・指示を1つのフォルダーに) |
-| 型を作る | 繰り返す依頼を、指示・テンプレート・スキルとして残す | [ステップ1 第8章「4. 再利用する型にする」](../00-common/08-meta-prompting.md#_4-使い回すひな形にする) |
-| 予約タスク | 決まった時間に、ChatGPTが自分で実行するようにする | [この章「決まった時間に自動で — 予約タスク」](#決まった時間に自動で-—-予約タスク) |
-| データ分析 | 表と数字を計算し、グラフでもらう | [この章「表と数字を任せる — データ分析」](#表と数字を任せる-—-データ分析) |
-| 勉強モード | 答えの代わりに質問で理解を助けてもらう | [この章「学ぶために使う — 勉強モード」](#学ぶために使う-—-勉強モード) |
-| 答えの形 | 話し方・表・図の量を自分の仕事に合わせる | [第5章「話し方を決める」](05-memory.md#話し方を決める-—-基本のスタイルとトーン、温かさ、自分の文体を参照) |
-| 確認する | 成果物の種類ごとに見る場所を決めておき、確認する | [ステップ1 第9章「確認する4つの習慣」](../00-common/09-safety.md#確認する4つの習慣) |
+| 任せるように伝える | やること・対象・目的・形を伝え、最初の答えを見ながら直していく | [ステップ1 第4章](../00-common/04-prompt-basics.md#良いプロンプトの5つの要素) · [第6章](../00-common/06-conversation.md#上手に直してもらう言い方) |
+| 道具を選ぶ | 検索・ディープリサーチ・Work・推論レベルのうち、仕事に合ったものを使う | [第6章](06-search.md#ディープリサーチ-—-レポートを任せる) · [第7章](07-projects-plugins.md#chatとworkの違い) |
+| 資料をためておく | 同じ仕事のファイル・指示・うまくいった答えを一か所に集める | [第7章](07-projects-plugins.md#プロジェクト-—-会話・ファイル・指示を1つのフォルダーに) |
+| 型を作る | 繰り返す依頼を、指示・テンプレート・スキルとして残す | [ステップ1 第8章](../00-common/08-meta-prompting.md#_4-使い回すひな形にする) |
+| 予約タスク | 決まった時間に、ChatGPTが自分で実行するようにする | [この章](#決まった時間に自動で-—-予約タスク) |
+| データ分析 | 表と数字を計算し、グラフでもらう | [この章](#表と数字を任せる-—-データ分析) |
+| 勉強モード | 答えの代わりに質問で理解を助けてもらう | [この章](#学ぶために使う-—-勉強モード) |
+| 答えの形 | 話し方・表・図の量を自分の仕事に合わせる | [第5章](05-memory.md#話し方を決める-—-基本のスタイルとトーン、温かさ、自分の文体を参照) |
+| 確認する | 成果物の種類ごとに見る場所を決めておき、確認する | [ステップ1 第9章](../00-common/09-safety.md#確認する4つの習慣) |
 
 <Quiz id="ch111-difference" />
 
@@ -43,7 +45,7 @@
 形: 項目別の表を1つと、3行の要約。
 ```
 
-::: details もらえる答えはだいたいこんな感じです（例 — 押して開く）
+::: details もらえる答えはだいたいこんな感じです（例 — 押して開く）（クリックして開く）
 このガイドが作った例です。実際の答えは、サービスやそのときによって異なります。
 
 > | 項目 | 今月の金額 |
@@ -64,9 +66,12 @@
 
 :::
 
-**分けるか、まとめるか？** OpenAIヘルプは、複雑な仕事を小さな依頼に分けるよう勧めています（[ステップ1 第5章「3. 段階に分ける」](../00-common/05-prompt-patterns.md#_3-段階を分ける-—-プロンプトチェイニング)）。[^prompt] Academyの資料は、互いに関係する文脈と指示を一つの依頼にまとめてもよいと説明しています。ただし、情報が多すぎると答えがぼやけることがあると付け加えています。[^aprompt]
+**分けるか、まとめるか？** 状況に合わせて選べば大丈夫です。[^split][^prompt][^aprompt]
 
-途中の結果を見て次の方向を決める必要があるなら、分けましょう。目標が一つにはっきりしているなら、5行を一つの依頼にまとめましょう。どちらの場合も、本当に必要な資料だけをつければOKです。
+- 途中の結果を見て次の方向を決める必要があるなら、分けましょう（[ステップ1 第5章「3. 段階に分ける」](../00-common/05-prompt-patterns.md#_3-段階を分ける-—-プロンプトチェイニング)）。
+- 目標が一つにはっきりしているなら、5行を一つの依頼にまとめましょう。
+
+どちらの場合も、本当に必要な資料だけをつければOKです。情報が多すぎると、答えがぼやけることがあります。
 
 **複数の段階が必要な仕事は、止まる場所を決めてください。** 最初から完成版を頼まずに、どこで自分が選んだり確認したりするかを先に決めてみましょう。段階が小さければ、ChatGPTが誤解したときに早く気づけます。全部作り終えたあとで、最初から直さなくてもすみます。[^academy-content]
 ```
@@ -104,7 +109,9 @@
 
 ### Word・PowerPointの中で使う
 
-Word・Excel・PowerPointは、**ChatGPT追加機能**（add-in、プログラムの中に組み込んで使う小さな機能）を一つ共有して使います。Microsoftのマーケットプレイスで「ChatGPT」をインストールしてみてください。文書の横のウィンドウで、そのまま修正できます。[^word][^ppt]
+ChatGPTの画面ではなく、**Word・PowerPointのプログラムの中で**使う道具です。これらのプログラムを使わないなら、読み飛ばしてもかまいません。
+
+Word・Excel・PowerPointは、**ChatGPT追加機能**（add-in、プログラムの中に組み込んで使う小さな機能）を一つ共有して使います。**Microsoftのマーケットプレイス**（Word・PowerPointに組み込む追加機能を探してインストールする場所）で「ChatGPT」をインストールしてみてください。文書の横のウィンドウで、そのまま修正できます。[^word][^ppt] 会社のパソコンでインストールする場所が見つからなければ、会社のIT担当者に聞いてみてください。
 
 - Word用は、**無料（Free）を含むすべてのプラン**で使えます。PowerPoint用は、FreeとGoで限定的に使えます。会社のアカウントなら、管理者が許可しないと表示されません。[^word][^ppt]
 - 追加機能の中の会話は、ChatGPTの会話履歴とは別です。メモリとスキルも引き継がれません。[^word]
@@ -146,6 +153,8 @@ Word・Excel・PowerPointは、**ChatGPT追加機能**（add-in、プログラ�
 | スキル（skill） | 指示・例を入れておいた、再利用して共有できる作業方法 | ヘルプによるとBusiness・Enterprise・Eduなど会社・学校向けのプラン |
 | プラグイン（plugin） | スキルとアプリ連携をまとめたセット | [第7章「プラグイン」](07-projects-plugins.md#プラグイン-—-他のサービスや作業のやり方を加える) |
 
+> テンプレートは有料プランのWorkで、スキルは主に会社・学校向けのプランで使います。当てはまらないなら、ここから下は読むだけにして、上のようにプロジェクトの指示に型を入れることから始めてみましょう。
+
 **テンプレートは、WebのWorkで作ります。** 入力欄に `@Template-Creator` と入力してください。参考にするファイルを一つ（Word・Excel・PowerPointのファイル、またはGoogleドキュメントのリンク）貼り付けます。そして、残すもの、変えるもの、毎回入れる情報を説明すればOKです。できたら「インストール（설치）」を押してください。[^docs]
 ```
 @Template-Creator 添付した週報のファイルでテンプレートを作ってください。
@@ -154,7 +163,7 @@ Word・Excel・PowerPointは、**ChatGPT追加機能**（add-in、プログラ�
 毎回入れる情報: その週の業務メモ。
 ```
 
-作ったテンプレートを使うときは、入力欄に `@Documents`・`@Spreadsheets`・`@Presentations` のどれかを入力してください。テンプレートギャラリーが開いたら、「Use template」を選びます。選ぶだけでは作業は始まりません。続けて、今回の内容を書いて送る必要があります。[^docs]
+作ったテンプレートを使うときは、入力欄に `@Documents`（文書）・`@Spreadsheets`（表）・`@Presentations`（プレゼン資料）のどれかを入力してください。テンプレートギャラリー（作ったテンプレートをまとめて見せる画面）が開いたら、「Use template」（テンプレートを使う）を選びます。選ぶだけでは作業は始まりません。続けて、今回の内容を書いて送る必要があります。[^docs]
 
 プロジェクトの指示を書くときは、下のコツを参考にしてみてください。もとはOpenAIが、カスタムGPTの指示に勧めているコツです。[^gpt-make] プロジェクトの指示にも通じると見るのは、このガイドの解釈です。
 
@@ -181,13 +190,21 @@ Word・Excel・PowerPointは、**ChatGPT追加機能**（add-in、プログラ�
 
 作ったタスクは、横のメニューの「予約（예약）」で見たり、直したり、一時停止したり、削除したりできます。[^tasks][^scheduled-name] 設定→「通知（알림）」→「タスクの管理（작업 관리）」からも開けますし、会話の•••（その他）→「予約タスクを表示（예약 작업 보기）」からも開けます。[^tasks]
 
-通知をどう受け取るかは、設定→「通知」でプッシュかメールかを選んでください。スマホにプッシュ通知を受け取るには、スマホアプリでタスクを作ればOKです。[^tasks]
+通知をどう受け取るかは、設定→「通知」でプッシュ（スマホの画面の上に出る通知）かメールかを選んでください。スマホにプッシュ通知を受け取るには、スマホアプリでタスクを作ればOKです。[^tasks]
 
 ![横のメニューの「予約（예약）」画面。上に「タスクを予約（작업 예약하기）」の入力欄、その下に作ったタスクが一行（一時停止・編集・•••のボタン）、その下に「おすすめ（추천）」のタスク一覧がある](../../../guide/11-chatgpt/assets/shot-29-scheduled.png)
 
 *タスク名は、例として書き換えた画面です。タスクの行の左に一時停止、右に編集と•••のボタンがあります。*[^screen-scheduled] 上の「タスクを予約」欄に、頼みごとをそのまま書いて作ることもできます。
 
-同時にオンにしておけるタスクの数は、プランごとに違います。FreeとGoは3個、Plusは5個、BusinessとEduは10個、ProとEnterpriseは15個で、この数字は変わることがあります（確認日 2026-10-24）。Freeでは、1日1回までしか実行されません。時間も、朝・午後・夜のように大まかにしか決められません。上の例のように正確な時刻を決めたり、毎時間実行したりするには、有料プランが必要です。[^tasks] 新しいメールが来たら反応するような**アプリイベントのタスク**は、Workで作ります。FreeとGoでは使えません。[^tasks]
+無料（Free）プランでは、1日1回までしか実行されず、上の例のように正確な時刻は決められません。[^tasks]
+
+::: details プランごとのタスク数と実行の条件（クリックして開く）
+
+- 同時にオンにしておけるタスクの数: FreeとGoは3個、Plusは5個、BusinessとEduは10個、ProとEnterpriseは15個。この数字は変わることがあります（確認日 2026-10-24）。[^tasks]
+- Freeでは、時間を朝・午後・夜のように大まかにしか決められません。正確な時刻を決めたり、毎時間実行したりするには、有料プランが必要です。[^tasks]
+- 新しいメールが来たら反応するような**アプリイベントのタスク**は、Workで作ります。FreeとGoでは使えません。[^tasks]
+
+:::
 
 注意する点もあります。[^tasks]
 - **プロジェクトの中で作ったタスクは、そのプロジェクトのファイルを読めません。** ファイルの内容が必要なら、指示文に直接書いてください。
@@ -332,7 +349,13 @@ Webでオンにするには、入力欄に `@study` と入力して、候補の�
 
 ### 講座で学ぶ枠組み — このガイドと比べる
 
-3つの講座には、このガイドと同じ内容が別の名前で出てきます。下の対応を知っておくと、講座で新しい用語に出会ったときに意味を推測しやすくなります。講座で使われている名前は、英語の原文のまま書きました。[^academy-content]
+3つの講座には、このガイドと同じ内容が別の名前で出てきます。たとえば講座の**CLEAR**は、答えをもらったあと「全部答えたか？ 筋が通っているか？」のように自分に問いかける確認の質問です。このガイドの確認の習慣と同じ考え方です。[^academy-content]
+
+講座を受けるつもりがないなら、下の枠は読み飛ばしてもかまいません。講座を受けるときに開いてみると、講座の用語がこのガイドのどの章と対応しているかが分かります。
+
+::: details 講座の用語とこのガイドの章の対応（クリックして開く）
+
+講座で使われている名前は、英語の原文のまま書きました。
 
 - **Task・Context・Expectation**（AI Foundations）: やること、背景（誰のための仕事か、なぜ必要か）、答えの形（形式・長さ・話し方）を決めて頼みます。[ステップ1 第4章「よいプロンプトの5つの要素」](../00-common/04-prompt-basics.md#良いプロンプトの5つの要素)と同じ考え方です。
 - **CLEAR**（AI Foundations）: 答えをもらったら、自分に問いかけます。全部答えたか（Complete）？ 筋が通っているか（Logical）？ 根拠があるか（Evidence）？ 読む人に合っているか（Audience）？ テーマから外れていないか（Relevant）？ [ステップ1 第9章「確認する4つの習慣」](../00-common/09-safety.md#確認する4つの習慣)と[ステップ1 第11章「仕事の重さに見合うだけ確認する」](../00-common/11-expert.md#仕事の重さに応じて確認する)を一緒に見てください。
@@ -341,6 +364,8 @@ Webでオンにするには、入力欄に `@study` と入力して、候補の�
 - **ワークフローノート**（Applied AI Foundations）: 長い作業をしていると、ChatGPTが最初の目標や条件を見失うことがあります。そこで、目標、決めた内容、守る条件、確認するポイントを、短いメモ一つに書いておきます。次の段階でこのメモをもう一度見せれば、先に決めた内容を引き継いで進められます。このメモを[第7章「プロジェクト」](07-projects-plugins.md#プロジェクト-—-会話・ファイル・指示を1つのフォルダーに)のファイルとして置いて、直すたびに更新しておくのは、このガイドの提案です。
 - **エージェントに仕事を任せる**（Agents and Workflows）: 何を作るか、どの資料を使うか、してはいけないこと（送らない、日付や担当者をでっち上げないなど）、結果の形、自分が確認することを、あらかじめ書いておきます。この章の[「仕事を任せる5行」](#仕事を任せる5行-—-結果・資料・残すもの・確認基準・形)とほぼ同じです。
 - **機能を選ぶルール**（Agents and Workflows）: 多くの場合は、明確なプロンプトが一つあれば十分です。ほかのサービスの資料が必要ならプラグイン、同じ仕事が繰り返されるならスキル、同じ確認を決まった時間にもう一度するなら予約タスクを使います。[「繰り返す仕事は型にする」](#繰り返す仕事は型にする-—-指示・テンプレート・スキル)と[「決まった時間に自動で」](#決まった時間に自動で-—-予約タスク)を見てください。
+
+:::
 
 講座には、自分でやってみる活動がたくさんあります。横のタブにChatGPTを開いておけば、受講しながらすぐに真似できます。講座は、スマホよりパソコンで受講することが勧められています。[^academy-content]
 
@@ -360,7 +385,7 @@ Academyの講座はChatGPTアカウントでログインしないと受講でき
 
 ChatGPTがどのように作られ、どのように使うのかを説明する、Andrej Karpathyの有名な動画は、[ステップ1 第1章「動画でもっと見る」](../00-common/01-what-is-llm.md#動画でもっと見る)と[ステップ1 第3章「動画でもっと見る」](../00-common/03-why-learn.md#動画でもっと見る)にまとめてあります。
 
-> Courseraの有名な講座「Prompt Engineering for ChatGPT」と「Generative AI for Everyone」は、講座のページに「講義資料と課題を見るには、修了証のコースを購入する必要がある」と書かれているため、この無料リストから外しました（確認日 2026-10-25）。[^coursera]
+Courseraの有名な講座2つは、お金を払わないと講義資料を見られないため、この無料リストから外しました。[^coursera]
 
 <Quiz id="ch111-academy" />
 
@@ -403,6 +428,7 @@ ChatGPTがどのように作られ、どのように使うのかを説明する�
 [^adopt]: OpenAI「ChatGPT Usage and Adoption Patterns at Work」。"Advanced features remain underused, even where they could deliver broad impact." https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work （確認日 2026-10-24）
 [^work]: OpenAIヘルプ「ChatGPT Work and Codex」 "Describe the outcome you want. Add any files, constraints, and review criteria ChatGPT should use." https://help.openai.com/en/articles/20001275 · 「Using cloud browser in ChatGPT」 "Check the result and its sources before relying on it." https://help.openai.com/en/articles/20001280 （確認日 2026-10-24）
 [^docs]: OpenAIヘルプ「Creating and editing documents, spreadsheets, and presentations with ChatGPT Work」。テンプレート・`@Template-Creator`、"Say what must stay unchanged…" https://help.openai.com/en/articles/20001278 （確認日 2026-10-24）
+[^split]: OpenAIヘルプ（「How do I create a good prompt for an AI model?」）は、複雑な仕事を小さな依頼に分けるよう勧めています。Academyの資料（「Prompting」）は、互いに関係する文脈と指示を一つの依頼にまとめてもよいと説明し、情報が多すぎると答えがぼやけることがあると付け加えています。
 [^prompt]: OpenAIヘルプ「How do I create a good prompt for an AI model?」。https://help.openai.com/en/articles/4936848 （確認日 2026-10-24）
 [^aprompt]: OpenAI Academy「Prompting」。https://academy.openai.com/public/clubs/work-users-ynjqu/resources/prompting （確認日 2026-10-24）
 [^deep]: OpenAIヘルプ「Deep research in ChatGPT」。"Use search for quick facts, and use deep research for depth and thoroughness." https://help.openai.com/en/articles/10500283 （確認日 2026-10-24）
@@ -429,7 +455,7 @@ ChatGPTがどのように作られ、どのように使うのかを説明する�
 [^dlai]: DeepLearning.AI「ChatGPT Prompt Engineering for Developers」。講師 Isa Fulford "Member of Technical Staff, OpenAI"・Andrew Ng、"1h40m", "Beginner", "Only a basic understanding of Python is needed.", "Course access is free for a limited time during the DeepLearning.AI learning platform beta!" https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/ （確認日 2026-10-25）
 [^msgenai]: Microsoft「Generative AI for Beginners」GitHubリポジトリのREADME。"This course has 21 lessons." / "Lessons are labeled either 'Learn' lessons explaining a Generative AI concept or 'Build' lessons that explain a concept and code examples". 韓国語訳は `translations/ko` フォルダ。https://github.com/microsoft/generative-ai-for-beginners （確認日 2026-10-25）
 [^boost]: ブーストコース「AIで学ぶ段階別の企画書の書き方（AI로 배우는 단계별 기획서 작성법）」講座紹介。「無料講義（무료강의）」、難易度「入門（입문）」、「常時受講（상시 수강）」、講義計画 #1〜#3 と「[課題] 自主実習をやってみる（[과제] 자율 실습 해보기）」、イ・スンピル講師。https://www.boostcourse.org/aix210 （確認日 2026-10-25）
-[^coursera]: Courseraの講座ページのFAQ。"To access course materials, assignments, and earn a Certificate, you'll need to purchase the Certificate experience when you enroll in a course." https://www.coursera.org/learn/prompt-engineering · https://www.coursera.org/learn/generative-ai-for-everyone （確認日 2026-10-25）
+[^coursera]: 「Prompt Engineering for ChatGPT」と「Generative AI for Everyone」。講座のページに「講義資料と課題を見るには、修了証のコースを購入する必要がある」と書かれています。Courseraの講座ページのFAQ。"To access course materials, assignments, and earn a Certificate, you'll need to purchase the Certificate experience when you enroll in a course." https://www.coursera.org/learn/prompt-engineering · https://www.coursera.org/learn/generative-ai-for-everyone （確認日 2026-10-25）
 [^scheduled-name]: ヘルプはこのメニューを「予約済み（예약됨）」と呼んでいますが、実際の画面での名前は「予約（예약）」です。
 [^screen-scheduled]: 横のメニューの「予約」画面を直接確認。案内の文言 "ChatGPT에게 작업 예약, 알림 설정 또는 업데이트 모니터링을 요청하세요"、入力欄「タスクを予約」、タスクの行の「一時停止」「編集」ボタン、「おすすめ」の一覧（ニュースの更新・メールの監視・週末の読み物探しなど）。タスクを押して開くパネルは、実際のタスクの結果が見えるため載せなかった （確認日 2026-10-28、Plusアカウントの Web画面）
 [^screen-data]: 架空の会費の帳簿fees.csvをアップロードして、この節のプロンプトを送って直接確認。最初の答えは空の値・重複を見つけて集計を止め、2番目の答えの図のグラフは韓国語が四角に文字化けしており、描き直してほしいと頼むと画面の中に描いたグラフに変えた。グラフの横のボタンは「グラフをダウンロード」「グラフを展開」。会話を削除したあとも、fees.csvはライブラリに残っており、ライブラリから削除すると "휴지통으로 이동되며 30일 후 영구 삭제됩니다" と案内された （確認日 2026-10-28、Plusアカウントの Web画面）

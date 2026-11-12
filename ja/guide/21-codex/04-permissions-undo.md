@@ -1,5 +1,7 @@
 # 4章. 権限と元に戻す方法 — 何を任せて、どう元に戻すか
 
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
 > **一言まとめ**: 入力欄の下の **権限メニュー** で、Codexが1人でしてよいことと、聞いてほしいことを決めます。最初は **Ask for approval** から始めましょう。
 > 元に戻すのは **Git** で行います。Claude Codeの巻き戻しのような機能は、公式ドキュメントでは見つかりませんでした。だから、仕事を任せる前後に記録（コミット）を残しておく習慣のほうが大切です。
 
@@ -19,7 +21,7 @@
 
 公式ドキュメントは、**ほとんどの仕事はAsk for approvalから始めるように**と言っています。[^start] Claude Codeの「手動」よりは、一歩だけ多く任せる方式です（このガイドの比較）。フォルダの **中** のファイルは、聞かずに直します。
 
-**Approve for me** を選んでも、Codexにできる範囲は広がりません。変わるのは「誰が許可するか」だけです。[^same-box] 自動レビューはモデルをもう一度呼び出すので、使用量が増えることがあります。[^extra]
+**Approve for me** を選んでも、Codexにできる範囲は広がりません。変わるのは「誰が許可するか」だけです。[^same-box][^extra]
 
 **Full access** は、ファイルとインターネットの境界をすべて取り払います。公式ドキュメントも、本当にすべてを任せたいときだけ使うように言っています。[^full] メモの整理には必要ありません。
 
@@ -48,7 +50,12 @@ Codexは、変更された内容を **レビューウィンドウ**（review pan
 
 レビューウィンドウには、**Codexが直したものだけが入っているわけではありません。** 自分で直したもの、まだ記録していない別の変更まで、すべて表示されます。[^includes] だから、仕事を任せる前にそこまでの変更を記録（コミット）しておくと、レビューウィンドウにはCodexの変更だけが残って見やすくなります。
 
-レビューウィンドウの上で、見る範囲を選べます。初期値はまだ記録していない変更（**Unstaged**）で、**Last turn** を選ぶと、Codexの直前の回答1回で変わったものだけを見られます。[^views] 最初はLast turnのほうがわかりやすいです。
+レビューウィンドウの上で、見る範囲を選べます。[^views]
+
+- **Unstaged**（初期値）: まだ `git add` で記録する一覧に載せていない変更が見えます。自分で直したものも入ります。
+- **Last turn**: Codexの直前の回答1回で変わったものだけが見えます。
+
+最初はLast turnのほうがわかりやすいです。いま任せた仕事の結果だけが見えるからです。
 
 気に入らない行があれば、その行に意見を付けられます。行にマウスを重ねて **+** を押し、意見を書いてから、入力欄に「行の意見のとおりに直して」のように送ればOKです。[^comments]
 
@@ -72,7 +79,7 @@ Claude Codeには、会話を前の状態に巻き戻す機能がありました
 
 そこで、この段階では次の順番を習慣にします。
 
-1. 任せる前: アプリのGit機能（コミット）で、いまの状態を記録する。[^commit]
+1. 任せる前: いまの状態を記録（コミット）する。アプリのGit機能でしてもいいし、会話で頼んでもいい（すぐ下を参照）。[^commit]
 2. 任せる。
 3. レビューウィンドウでLast turnを選び、変わったところだけを見る。
 4. よければもう一度記録し、そうでなければ元に戻す。
@@ -118,7 +125,7 @@ Claude Codeには、会話を前の状態に巻き戻す機能がありました
 [^names]: Codex公式ドキュメント、「Sandbox」。"Depending on your configuration, the menu can include **Ask for approval**, **Approve for me** for eligible approval requests, **Full access**, and named or custom permissions profiles." https://learn.chatgpt.com/docs/sandboxing （確認日 2026-11-01）
 [^start]: Codex公式ドキュメント、「Permissions」。"For most work, start with **Ask for approval**. It lets ChatGPT work within the current workspace and pauses before reaching beyond that boundary." https://learn.chatgpt.com/docs/permission-modes （確認日 2026-11-01）
 [^same-box]: Codex公式ドキュメント、「Permissions」。"Changing who reviews a request doesn't expand the sandbox." https://learn.chatgpt.com/docs/permission-modes （確認日 2026-11-01）
-[^extra]: Codex公式ドキュメント、「Agent approvals & security」。"Automatic review uses extra model calls, so it can add to Codex usage." https://learn.chatgpt.com/docs/agent-approvals-security （確認日 2026-11-01）
+[^extra]: 自動レビューはモデルをもう一度呼び出すので、使用量が増えることがあります（8章）。Codex公式ドキュメント、「Agent approvals & security」。"Automatic review uses extra model calls, so it can add to Codex usage." https://learn.chatgpt.com/docs/agent-approvals-security （確認日 2026-11-01）
 [^full]: Codex公式ドキュメント、「Sandbox」。"This removes the filesystem and network boundaries and should be used only when you want the agent to act with full access." https://learn.chatgpt.com/docs/sandboxing （確認日 2026-11-01）
 [^check]: Codex公式ドキュメント、「Permissions」。"Check the selected mode for the current chat; having a mode available doesn't mean it's selected." https://learn.chatgpt.com/docs/permission-modes （確認日 2026-11-01）
 [^two]: Codex公式ドキュメント、「Permissions」。"The **sandbox** defines which files and network resources ChatGPT can access." / "**Approvals** determine when ChatGPT pauses before an action or sends the request to automatic review." https://learn.chatgpt.com/docs/permission-modes （確認日 2026-11-01）

@@ -1,15 +1,21 @@
 # Chapter 11. Hands-on Exercises — Try Out Claude's Features Yourself
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: Here are 11 exercises where you **click through and try** the Claude screens and features you saw in Chapters 1–10 with your own hands.
 > Each exercise has a "Check your results" checklist, so you can verify your work on your own without anyone grading you.
 
 The screens are based on the web version as of October 2026. Since the new Claude interface is rolling out gradually, menu names and locations may differ depending on your screen.
+
+> **If you skipped an "Optional" chapter**, skip the exercises that use that chapter too. You can also skip the checklist items tied to exercises you did not do. You can see each chapter's label at a glance in the [table of contents](README.md).
 
 ## How to Do the Exercises
 
 1. **Open Claude and log in.** Most exercises use chat history and settings, so you need to log in.
 2. **Follow the "What to try" section in each exercise.** Just copy the prompt from the gray box and send it.
 3. **Check off the "Check your results" items one by one.** If you can't check an item, read the chapter listed under "Where to review" and try just that part again.
+
+Some checklist items end with a note in parentheses, like "(check this box if you are on the free plan)". It means that if the case in the parentheses applies to you, you can check the item and move on without trying it. For example, if you are on the free plan, just check the "(Paid) …" items.
 
 You don't have to do the exercises in order. However, **do Exercise 11 last**. That exercise cleans up the traces of your practice.
 You can do most of Exercises 1–8 on the free plan (project instructions in Exercise 7 may vary by plan). Exercises 9 and 10 are for **paid plans** only, so if you are on the free plan, you can just read them and move on.
@@ -20,8 +26,8 @@ You don't need to finish everything at once. Two or three exercises a day is ple
 
 ### Three Rules to Follow While Practicing
 
-- **Use incognito chats whenever possible.** An "Incognito chat" (시크릿 채팅) opened with the ghost icon in the top right ("Use incognito mode (시크릿 모드 사용)")[^screen] is not saved to your chat history or memory. It is not used for training either. However, it is kept for 30 days by default.[^incognito]
-  Do exercises that deal with history, files, or settings (3, 4, 5, 7, and 8) in a regular chat. Incognito chats aren't saved to history, and in the new interface you can't create files inside them either.[^incognito] You can find the reason in [Chapter 3](03-chats.md#leaving-no-record-—-incognito-chat).
+- **Use incognito chats whenever possible.** An "Incognito chat" (시크릿 채팅) opened with the ghost icon in the top right ("Use incognito mode (시크릿 모드 사용)")[^screen] is not saved to your chat history or memory. It is not used for training either. However, it is still kept for 30 days by default.[^incognito][^incognito-keep]
+  - **Exception — do Exercises 3, 4, 5, 7, and 8 in a regular chat.** That is because these exercises deal with history, files, or settings. Incognito chats aren't saved to history, and in the new interface you can't create files inside them either.[^incognito] You can find the reason in [Chapter 3](03-chats.md#leaving-no-record-—-incognito-chat).
 - **Make up fake data.** Instead of real names, contact info, addresses, or company data, use **fake data that you made up**. You will clean up your practice from regular chats in Exercise 11. Information you shouldn't enter is summarized in [Stage 1, Chapter 9](../00-common/09-safety.md#what-not-to-put-in).
 - **Do not click thumbs-up or thumbs-down.** If you send feedback, that entire conversation is stored for up to 5 years.[^feedback] Since you are doing practice chats with the intention of deleting them, don't leave a way for them to stay behind.
 
@@ -146,7 +152,7 @@ Write your answers politely, state the conclusion in one line at the beginning, 
 
 **When to use this**: When asking about recent news or information that changes often.
 
-**What to try**: Send this in a new chat (preferably an incognito chat). There is no web search toggle on the new interface, so just write "Search the web" in your prompt.[^search][^old-search]
+**What to try**: Send this in a new chat (preferably an incognito chat). To make sure Claude searches the web, just write "Search the web" in your prompt. There is no separate switch to turn on search in the new interface.[^search][^old-search] We covered search in [Chapter 6](06-search.md).
 
 ```
 Search the web. Pick one domestic news story that came out today, summarize it in three lines,
@@ -242,8 +248,8 @@ Research gathers multiple sources and writes a long answer, so it can use up you
 **What to try**
 
 1. Create a dedicated practice folder for Claude on your computer and put about ten random files in it. Do not put important files in it.[^safe]
-2. Open a new chat in the desktop app (or Cowork on the older interface) and set the permission mode to "Manual (수동)".[^screen][^manual-name]
-3. Connect only this practice folder to the task and assign the prompt below.
+2. Open a new chat in the desktop app and set the permission mode to "Manual (수동)".[^screen][^manual-name] If you are on the older interface with "Chat" and "Cowork" options in the message box, select "Cowork".
+3. Connect only this practice folder to the task and assign the prompt below. A connected folder is a folder you have allowed Claude to open. If you have trouble finding the button to connect it, ask Claude: "How do I connect my folder to use it for this task?" ([Chapter 8](08-cowork.md)).
 4. Every time it asks for permission, read what it is trying to do before clicking.
 
 ```
@@ -316,6 +322,7 @@ Next chapter: [Chapter 12. Using Claude Like an Expert](12-expert.md)
 [^export]: Anthropic Help Center, "Export your Claude data". "It's not possible to run an export from Claude for iOS or Android." / "The download link will expire 24 hours after delivery." https://support.claude.com/en/articles/9450526 (checked on 2026-10-26)
 [^academy-probe]: Claude Academy course "AI capabilities and limitations", lesson "Next Token Prediction". "Re-run Probe 2 in a tool with citations enabled (like Research mode in Claude)." / "Does having sources to check change the score?" https://academy.claude.com/courses/ai-capabilities-and-limitations/next-token-prediction (checked on 2026-10-26)
 [^your-claude]: On accounts that have received the new Settings layout, this menu may appear under "Settings (설정)" → "Your Claude" (instructions under "Instructions (지침)", and the memory list under "Manage (관리)" next to "Your memory"). See [Chapter 5](05-memory.md) for details.
+[^incognito-keep]: Even though it is not saved to your history, it is kept on the server for 30 days by default ([Chapter 9](09-privacy.md)).
 [^old-search]: On the older interface, turn on "+" → "Web search (웹 검색)" first.
 [^project-instr-free]: Help Center articles differ on whether project instructions are available on the free plan.
 [^old-research]: On the older interface, web search must be turned on for Research to work.

@@ -1,0 +1,17 @@
+# organizer — Memo Organizing Rules
+
+This folder takes the original memos in `inbox/`, organizes them with the templates in `templates/`, and saves them in `notes/`.
+
+## Rules
+1. **Never edit the original memos in `inbox/`.** Only read them, and write results as new files in `notes/`.
+2. **Use the templates in `templates/` when organizing.** Don't change section names or order (how to use them and the checklist: `templates/README.md`).
+3. **Write dates like `10/27(Mon)`.** Month/day + day of the week in parentheses.
+4. **Don't make up anything that isn't in the memo.** Don't delete empty sections; write `(not in notes)`.
+5. **Write action items as a table and always include the owner and due date.** If they aren't in the memo, fill in `(not in notes)`.
+6. At the very bottom of the organized file, include a "Check Against Original" section and list up to 3 numbers, names, or dates to double-check.
+
+Example:
+
+| Action item | Owner | Due |
+|---|---|---|
+| Make presentation slides | Minji | 10/30(Thu) |

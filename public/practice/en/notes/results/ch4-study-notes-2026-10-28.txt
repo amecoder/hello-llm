@@ -1,0 +1,35 @@
+# Prompt Lecture Study Notes — 2026-10-28(Tue)
+
+- Content: Notes taken while listening to an AI prompt lecture (1 hour)
+- Original memo: `inbox/study-2026-10-28-prompt-lecture.txt`
+
+## 1. Key points
+
+**A prompt is a request you make to the AI.** The 5 tips the instructor gave for writing good ones:
+
+1. **Give it a role** — e.g. "You are a cafe marketer"
+2. **Give it context** — who will read it, why you need it
+3. **Set the format** — e.g. as a table, in 3 lines
+4. **Show examples** — doing this is called few-shot
+5. **Don't ask for everything at once; split it up**
+
+**Caution:** AI can tell convincing lies (hallucinations). **Always check numbers, names, and dates yourself.**
+
+## 2. Words I didn't know
+
+| Word | Meaning |
+|---|---|
+| Prompt | A request you make to the AI |
+| Token | Small pieces that text is cut into. The length limit the AI can take in is set in this unit |
+| Hallucination | A convincing lie the AI tells |
+| few-shot | Showing examples in a prompt (tip #4) |
+
+## 3. Questions to ask
+
+- [ ] How many examples (few-shot) is best?
+
+## 4. Things to try
+
+| Thing to try | Status |
+|---|---|
+| Put in role+format when writing Instagram posts | Tried (10/30) — with role+format, the draft was much better (`inbox/review-2026-10-30.txt`) |

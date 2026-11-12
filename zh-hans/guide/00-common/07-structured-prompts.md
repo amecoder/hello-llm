@@ -1,7 +1,9 @@
 # 第7章 结构化提示词 — Markdown·XML 标签
 
+<Badge type="info" text="选读" /> 需要的时候再读。跳过也能跟上后面的章节。
+
 > **一句话总结**：简短的提问，用平时说话的方式就够了。但是当请求变长，指令、资料、示例混在一起时，
-> **请试着分成几个格子来写。** AI 会少一些困惑。分格子时可以用 Markdown 或 XML 标签；想把答案搬到 Excel 里时，就让它给你表格。
+> **请试着分成几个格子来写。** AI 会少一些困惑。分格子的方法，是用 `#` 这样的符号加标题（Markdown），或者在资料前后贴上名牌（XML 标签）。想把答案搬到 Excel 里时，就让它给你表格。
 
 ## 什么时候需要
 
@@ -9,14 +11,16 @@
 请给请求里的每个部分做一个**贴了标签的格子**。这样 AI 就能清楚地知道，到哪里为止是情况说明，从哪里开始是资料。
 这样讲究格式来写的请求，叫做**结构化提示词**（structured prompt）。
 
-![写成一大块的请求里，指令和资料混在一起；分了格子的请求则分成 context（情况）、document（资料）、instructions（要做的事）、format（答案的样子）](../../../guide/00-common/assets/ch7-structure.svg)
+![写成一大块的请求里，指令和资料混在一起；分了格子的请求则分成 context（情况）、document（资料）、instructions（要做的事）、format（答案的样子）](assets/ch7-structure.svg)
+
+下表里的格式名称，这一章会一个一个讲。现在只看括号里的意思就可以往下走了。
 
 | 情况 | 推荐格式 |
 |---|---|
 | 简短的提问，一两句话的请求 | 就用平时的句子 |
-| 请求很长，条件有好几个 | **Markdown** 标题·列表 |
-| 粘贴长资料，或者资料有好几份 | **XML 标签** |
-| 要把答案搬到 Excel·Google 表格里 | **表格**（量大时用 CSV） |
+| 请求很长，条件有好几个 | **Markdown**（用符号加的标题·列表） |
+| 粘贴长资料，或者资料有好几份 | **XML 标签**（把资料包起来的名牌） |
+| 要把答案搬到 Excel·Google 表格里 | **表格**（量大时用以逗号分格的文字，CSV） |
 
 > **不要用过头。** 对“推荐一下午饭吃什么”这种话，没必要再套上标签。
 > 结构化是一种工具，请求太长、连我自己读着都犯迷糊时再拿出来用。
@@ -41,7 +45,7 @@
 
 `` ` `` 是键盘上数字 1 左边那个键上的符号（反引号）。你自己很少需要输入它。
 
-![左边是把情况·任务·条件·客户信息混成一大块的请求，右边是把同样内容分成 ## 情况、## 任务、## 条件、## 客户信息 四个格子的请求。内容相同，分了格子之后更容易发现漏掉的条件](../../../guide/00-common/assets/ch7-markdown.svg)
+![左边是把情况·任务·条件·客户信息混成一大块的请求，右边是把同样内容分成 ## 情况、## 任务、## 条件、## 客户信息 四个格子的请求。内容相同，分了格子之后更容易发现漏掉的条件](assets/ch7-markdown.svg)
 
 把长请求用 Markdown 标题分开，就是这个样子。
 
@@ -86,9 +90,11 @@
 Markdown 标题只标出“从这里开始”，而 XML 标签会把**从哪里开始、到哪里结束**都标出来。
 所以在粘贴长资料时特别有用。
 
+::: details AI 公司们怎么说（点击展开）
 Anthropic（开发 Claude 的公司）的官方文档说明，对于指令、背景、示例、输入混杂在一起的复杂提示词，可以试试用 XML 标签。
 据说有了标签，Claude 读起来就不容易混淆。[^anthropic]
 OpenAI 的指南也写道，XML 的效果很好。在处理长文档的测试中，据说也取得了不错的结果。[^openai]
+:::
 
 ### 例：会议纪要摘要
 
@@ -165,7 +171,7 @@ Markdown 标题没法标出结尾。所以只要把粘贴的资料，用[第5章
 请做一张表格，从价格、交货期、保修期三方面比较这两份报价单。
 ```
 
-这里的 `index="1"` 是标明“1 号资料”的编号。它不是必须写的。像 `<报价单1>` `</报价单1>` 这样，把编号写进名字里也可以。
+这里的 `index="1"` 不是要背的语法。它只是标明“1 号资料”的编号备注，删掉也行。像 `<报价单1>` `</报价单1>` 这样，把编号写进名字里也可以。
 
 如果不想用标签，就给每份资料加上分隔线和名称。
 
@@ -186,11 +192,14 @@ Markdown 标题没法标出结尾。所以只要把粘贴的资料，用[第5章
 
 ### 长资料放上面，问题放最底下
 
-资料特别长的时候，请**先贴资料，把问题放在最末尾。**
-按 Anthropic 文档所说，把问题放在末尾时，测试里答案的质量最多提高了 30%。
-在同时放入多份文档的复杂情况下，效果尤其明显。[^anthropic] 上面的报价单示例就是按这个顺序排的。
+资料特别长的时候，请**先贴资料，把问题放在最末尾。** 上面的报价单示例就是按这个顺序排的。
 
-如果有一定要遵守的条件，可以在最前面写一遍，再在最末尾的问题旁边写一遍。
+::: details 差别有多大（点击展开）
+按 Anthropic 文档所说，把问题放在末尾时，测试里答案的质量最多提高了 30%。
+在同时放入多份文档的复杂情况下，效果尤其明显。[^anthropic]
+:::
+
+**再教一个要领。** 如果有一定要遵守的条件，可以在最前面写一遍，再在最末尾的问题旁边写一遍。
 因为埋在长资料正中间的指令，很容易被漏掉。[^academy-edges] 资料在上、问题在下的顺序，仍然保持不变。
 
 ```
@@ -368,6 +377,6 @@ AI 生成的 JSON 也可能出错，比如漏掉逗号。出了错，就请它�
 
 ---
 
-[^anthropic]: Anthropic，《Prompting best practices》中的 "Structure prompts with XML tags" 和处理长文档的条目。https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices（确认日期 2026-10-20）
-[^openai]: OpenAI Cookbook，《GPT-4.1 Prompting Guide》中的分隔符（Delimiters）条目。2025年4月 GPT-4.1 发布前后撰写，现为已归档（archived）文档。https://developers.openai.com/cookbook/examples/gpt4-1_prompting_guide（确认日期 2026-10-20）
-[^academy-edges]: Claude Academy《AI capabilities and limitations》课程《Try It Out: Working Memory》。"put your most important instructions at the beginning and end of the context" / "If a constraint absolutely must be followed, state it early in the system prompt and restate it near the end." https://academy.claude.com/courses/ai-capabilities-and-limitations/try-it-out-q7hdjm9twcbt（确认日期 2026-10-26）
+[^anthropic]: Anthropic，《Prompting best practices》中的 "Structure prompts with XML tags" 和处理长文档的条目。https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices （确认日期 2026-10-20）
+[^openai]: OpenAI Cookbook，《GPT-4.1 Prompting Guide》中的分隔符（Delimiters）条目。2025年4月 GPT-4.1 发布前后撰写，现为已归档（archived）文档。https://developers.openai.com/cookbook/examples/gpt4-1_prompting_guide （确认日期 2026-10-20）
+[^academy-edges]: Claude Academy《AI capabilities and limitations》课程《Try It Out: Working Memory》。"put your most important instructions at the beginning and end of the context" / "If a constraint absolutely must be followed, state it early in the system prompt and restate it near the end." https://academy.claude.com/courses/ai-capabilities-and-limitations/try-it-out-q7hdjm9twcbt （确认日期 2026-10-26）

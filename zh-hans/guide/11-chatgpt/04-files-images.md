@@ -1,5 +1,7 @@
 # 第4章 文件、照片与生成图片 — 拿给它看，请它来画
 
+<Badge type="info" text="选读" /> 需要的时候再读。跳过也能跟上后面的章节。
+
 > **一句话总结**：难以用话语说清楚的东西，就**上传照片或文件**给它看；需要的图画，就**请它生成**。
 > 上传的文件会汇集在「资料库（라이브러리）」里，可以再次使用。免费套餐每天能上传的文件数量很少。
 
@@ -12,9 +14,11 @@
 
 ![展开了输入框 + 菜单的界面。请看最上面的「添加照片和文件 — 从电脑上传（사진 및 파일 추가 — 컴퓨터에서 업로드）」，以及下面的「从资料库导入（라이브러리에서 가져오기）」「生成图片（이미지 생성）」「草图（스케치）」项目](../../../guide/11-chatgpt/assets/shot-02-plus-menu-marked.png)
 
-对话标题和账号名称已换成示例。这一章用到的是 ① + 按钮、② 「添加照片和文件（사진 및 파일 추가）」、③ 「从资料库导入（라이브러리에서 가져오기）」、④ 「生成图片（이미지 생성）」、⑧ 「草图（스케치）」。
+对话标题和账号名称已换成示例。这一章用到的是 ① + 按钮、② 「添加照片和文件（사진 및 파일 추가）」、③ 「从资料库导入（라이브러리에서 가져오기）」、④ 「生成图片（이미지 생성）」、⑧ 「草图（스케치）」。其余的 ⑤~⑦（网页搜索、Work、深度研究）在其他章节里讲（[第2章](02-screen-tour.md#输入框和-菜单)）。
 
-可以上传的东西如下。[^files]
+### 可以上传的文件
+
+可以上传的东西如下。[^files][^video]
 
 | 种类 | 例子 |
 |---|---|
@@ -24,10 +28,10 @@
 | 演示资料 | PowerPoint（PPTX） |
 | 声音（仅付费） | WAV、MP3、M4A 录音文件 |
 
-视频也可以作为附件。免费套餐也可以。不过能不能成功，要看设备和上传方式。另外，ChatGPT 也可能无法完全理解整段视频或声音。[^image-faq]
-
 谷歌文档（`.gdoc`）不能直接上传。请先在谷歌文档里下载成 PDF 或 Word，再上传。[^files]
 把 PDF 直接上传到对话里，它不只读文字，还会读**里面的图片和图表**。[^files]
+
+### 把想要什么一起写出来
 
 比起只上传文件然后说“看看吧”，请把你想要什么也一起写出来。这样得到的回答会好得多。
 
@@ -43,7 +47,7 @@
 请找出我的摘要里和原件不同的事实和数字，以及原件里没有的内容。
 ```
 
-::: details 得到的回答大致是这样（示例 — 点击展开）
+::: details 得到的回答大致是这样（示例 — 点击展开）（点击展开）
 这是本指南制作的示例。实际的回答会因服务和每次情况而不同。
 
 > 和原件对照后，有三处不同。
@@ -59,6 +63,8 @@
 **确认一下有没有答好**：和原件不同的事实、数字，有没有一个不漏地找出来？原件里没有的内容，有没有单独标出来？请把回答指出的地方，和真正的原件文件对照一遍。
 
 :::
+
+### 上传照片时
 
 如果是照片，可以这样写。
 
@@ -78,7 +84,14 @@
 
 ## 可以上传的数量 — 各套餐的额度
 
-文件有大小和数量的限制。官方帮助中写明的数值如下。[^files]
+文件有大小和数量的限制。在免费套餐里，最先碰到的是**每天3个**。如果需要问好几个文件，请先上传最必要的文件。
+如果有好几张照片，把它们拼成一张再上传也是个办法。这样可以省下相应的数量。
+
+其余的限制一般很少会碰到。只有文件非常大或非常多的时候，再看下面的表格。
+
+表格里的 **token**（词元）是 AI 把文字切成小块来阅读的单位。200万 token 是非常长的篇幅。一般的工作文档很少会碰到这个上限。
+
+官方帮助中写明的数值如下。[^files]
 
 | 限制 | 数值 |
 |---|---|
@@ -91,10 +104,6 @@
 | 我的整个账号的存储空间 | 最多25GB |
 | 声音文件 | **仅付费**可上传 |
 
-**token**（词元）是 AI 把文字切成小块来阅读的单位。200万 token 是非常长的篇幅。一般的工作文档很少会碰到这个上限。
-
-在免费套餐里，最先碰到的是**每天3个**。如果需要问好几个文件，请先上传最必要的文件。
-如果有好几张照片，把它们拼成一张再上传也是个办法。这样可以省下相应的数量。
 额度的数字经常变，所以上面的数值请以确认日期为准。
 
 <Quiz id="ch104-limits" />
@@ -106,6 +115,15 @@
 
 <!-- 需要截图：打开侧边菜单「资料库（라이브러리）」的界面（网页，只显示示例文件） -->
 
+需要知道的几点如下。
+
+- **删除对话后，资料库里的文件仍会保留。** 想去掉文件，请在资料库里另外删除。[^delete][^library-restore]
+- 在**临时聊天**（[第3章](03-chats.md)）里上传的文件不会保存到资料库。[^library]
+- **对话里的下载链接很快就会失效。** ChatGPT 生成的文件请马上保存。如果出现「Download failed」（下载失败）这样的英文提示，可能是链接已经失效了。这时请让它重新生成。[^errors]
+
+> **如果侧边菜单里看到「Space」**，就当作和这一节的「资料库（라이브러리）」是同一个地方。资料库正在改成 Space。[^space]
+
+::: details 各套餐的资料库容量（点击展开）
 资料库能装的容量因套餐而异。[^library]
 
 | 套餐 | 资料库容量 |
@@ -114,15 +132,11 @@
 | Go | 4GB |
 | Plus · Business | 20GB |
 | Pro | 100GB |
+:::
 
-需要知道的几点如下。
-
-- **删除对话后，资料库里的文件仍会保留。** 想去掉文件，请在资料库里另外删除。[^delete]
-- 删除的文件，有时可以在「最近删除的项目（최근 삭제된 항목）」里恢复。并且会被安排在30天内永久删除。[^library]
-- 在**临时聊天**（[第3章](03-chats.md)）里上传的文件不会保存到资料库。[^library]
-- **对话里的下载链接很快就会失效。** ChatGPT 生成的文件请马上保存；如果像「Download failed」这样失败了，请让它重新生成。[^errors]
-
-> **资料库正在改成「Space」。** Space 取代资料库，项目则保持不变。[^space] 在 Space 里，除了文件，还可以创建多人一起修改的**页面**（page，文档）。2026年10月24日，在本指南的界面上还显示为「资料库（라이브러리）」。如果侧边菜单里看到「Space」，就当作和这一节的资料库是同一个地方。
+::: details 想多了解一点 Space 是什么（点击展开）
+Space 取代资料库，项目则保持不变。在 Space 里，除了文件，还可以创建多人一起修改的**页面**（page，文档）。2026年10月24日，在本指南的界面上还显示为「资料库（라이브러리）」。[^space]
+:::
 
 <Quiz id="ch104-library" />
 
@@ -162,11 +176,9 @@ ChatGPT 不只会写字，还会画图。点 + 按钮 →「生成图片（이�
 做一张秋夕假期休息通知海报。休息日：10月5日~7日。
 ```
 
-在设置 →「个性化设置（개인 맞춤 설정）」页面里，也有「参考照片（참고 사진）」「全身参考照片（전신 참고 사진）」项目。个性化设置在[第5章](05-memory.md)里讲。
+在设置 →「个性化设置（개인 맞춤 설정）」页面里，也有「参考照片（참고 사진）」「全身参考照片（전신 참고 사진）」项目。本指南不单独讲这两项。生成图片时，像上面那样把参考照片直接上传到对话里就够了。
 
-ChatGPT 生成的图片里带有 **C2PA**（记录图片是怎样制作出来的国际标准标签）。[^faq] 它肉眼看不见，是和图片文件一起保存的信息。
-
-关于 AI 生成图片的权利，以及上传别人的照片、作品时的注意事项，请在[第1阶段第9章](../00-common/09-safety.md)里确认。
+关于 AI 生成图片的权利，以及上传别人的照片、作品时的注意事项，请在[第1阶段第9章](../00-common/09-safety.md)里确认。[^faq]
 
 <Quiz id="ch104-image" />
 
@@ -234,13 +246,15 @@ ChatGPT 生成的图片里带有 **C2PA**（记录图片是怎样制作出来的
 
 下一章：[第5章. 记忆与个性化设置](05-memory.md)
 
-[^files]: OpenAI 帮助中心，「Uploading files and audio to ChatGPT」。"Select + in the prompt area, then Add photos & files." / "You can't upload a .gdoc file directly." / "maximum size of 512 MB per file" / "capped at 2 million tokens per file" / "size limit of approximately 50 MB" / "Images have a limit of 20 MB per image." / "Free users are limited to 3 file uploads per day." / "capped at 25 GB per user" / "Audio uploads are not available on the Free plan at this time." / "ChatGPT can analyze both text and images in PDFs"。https://help.openai.com/en/articles/8555545（确认日期 2026-10-23）
-[^library]: OpenAI 帮助中心，「Using Library to manage files in ChatGPT」。"Library is available on web" / "Select Add from library." / "Free users have up to 500 MB of Library storage." / "scheduled for permanent deletion from OpenAI systems within 30 days" / "files uploaded while using Temporary Chat are not saved to your account or Library"。https://help.openai.com/en/articles/20001052（确认日期 2026-10-23）
-[^image-faq]: OpenAI 帮助中心，「ChatGPT Image Inputs FAQ」。"The model does not perform as well handling images with text of non-Latin alphabets, such as Japanese or Korean." / "The model is not suitable for interpreting specialized medical images like CT scans" / "consider using a photo edit markup tool on your image before uploading." / "ChatGPT can accept video files as attachments through supported upload methods, including on Free plans." / "It may not analyze the entire video or accurately interpret its audio." https://help.openai.com/en/articles/8400551（确认日期 2026-10-24）
-[^errors]: OpenAI 帮助中心，「Troubleshooting ChatGPT Error Messages」。"Ensure that the file is recently generated, files generated by ChatGPT expire quickly"。https://help.openai.com/en/articles/7996703（确认日期 2026-10-24）
-[^space]: OpenAI 帮助中心，「ChatGPT Space: sharing, data, and controls」。"It replaces Library, while your Projects stay as they are." / "Pages are editable documents that you can organize inside other pages and work on with other people." https://help.openai.com/en/articles/20001544（确认日期 2026-10-24）
-[^faq]: OpenAI 帮助中心，「What is ChatGPT: FAQ」。"ChatGPT images include C2PA provenance metadata." https://help.openai.com/en/articles/12677804（确认日期 2026-10-24）
-[^delete]: OpenAI 帮助中心，「Deleting and archiving chats in ChatGPT」。"Deleting a chat does not delete files saved separately in Library." https://help.openai.com/en/articles/8809935（确认日期 2026-10-23）
+[^files]: OpenAI 帮助中心，「Uploading files and audio to ChatGPT」。"Select + in the prompt area, then Add photos & files." / "You can't upload a .gdoc file directly." / "maximum size of 512 MB per file" / "capped at 2 million tokens per file" / "size limit of approximately 50 MB" / "Images have a limit of 20 MB per image." / "Free users are limited to 3 file uploads per day." / "capped at 25 GB per user" / "Audio uploads are not available on the Free plan at this time." / "ChatGPT can analyze both text and images in PDFs"。https://help.openai.com/en/articles/8555545 （确认日期 2026-10-23）
+[^library]: OpenAI 帮助中心，「Using Library to manage files in ChatGPT」。"Library is available on web" / "Select Add from library." / "Free users have up to 500 MB of Library storage." / "scheduled for permanent deletion from OpenAI systems within 30 days" / "files uploaded while using Temporary Chat are not saved to your account or Library"。https://help.openai.com/en/articles/20001052 （确认日期 2026-10-23）
+[^image-faq]: OpenAI 帮助中心，「ChatGPT Image Inputs FAQ」。"The model does not perform as well handling images with text of non-Latin alphabets, such as Japanese or Korean." / "The model is not suitable for interpreting specialized medical images like CT scans" / "consider using a photo edit markup tool on your image before uploading." / "ChatGPT can accept video files as attachments through supported upload methods, including on Free plans." / "It may not analyze the entire video or accurately interpret its audio." https://help.openai.com/en/articles/8400551 （确认日期 2026-10-24）
+[^errors]: OpenAI 帮助中心，「Troubleshooting ChatGPT Error Messages」。"Ensure that the file is recently generated, files generated by ChatGPT expire quickly"。https://help.openai.com/en/articles/7996703 （确认日期 2026-10-24）
+[^space]: OpenAI 帮助中心，「ChatGPT Space: sharing, data, and controls」。"It replaces Library, while your Projects stay as they are." / "Pages are editable documents that you can organize inside other pages and work on with other people." https://help.openai.com/en/articles/20001544 （确认日期 2026-10-24）
+[^faq]: ChatGPT 生成的图片里带有 **C2PA**（记录图片是怎样制作出来的国际标准标签）。它肉眼看不见，是和图片文件一起保存的信息。出处：OpenAI 帮助中心，「What is ChatGPT: FAQ」。"ChatGPT images include C2PA provenance metadata." https://help.openai.com/en/articles/12677804 （确认日期 2026-10-24）
+[^video]: 视频也可以作为附件。免费套餐也可以。不过能不能成功，要看设备和上传方式。另外，ChatGPT 也可能无法完全理解整段视频或声音。出处见下面的「ChatGPT Image Inputs FAQ」。
+[^library-restore]: 删除的文件，有时可以在「最近删除的项目（최근 삭제된 항목）」里恢复。并且会被安排在30天内永久删除。出处见下面的「Using Library to manage files in ChatGPT」。
+[^delete]: OpenAI 帮助中心，「Deleting and archiving chats in ChatGPT」。"Deleting a chat does not delete files saved separately in Library." https://help.openai.com/en/articles/8809935 （确认日期 2026-10-23）
 [^academy-content]: OpenAI Academy 课程正文（需要登录和注册）。AI Foundations: "Use this template as a model. Rewrite my draft so it follows the same structure and tone." Applied AI Foundations: "Verify" "Check whether a draft is supported by the source"（确认日期 2026-10-26）
 [^screen-sketch]: 亲自确认了通过 + 菜单 →「草图（스케치）」打开的「草图编辑器（스케치 편집기）」，以及关闭时的确认窗口（「继续编辑（계속 편집하기）」「放弃更改（변경 사항 삭제）」）（确认日期 2026-10-28，Plus 账号网页界面）
 [^screen-image]: 通过 + 菜单 →「生成图片（이미지 생성）」发送本节的示例提示词（不含「文字」一行）后亲自确认。图片上方有「编辑（편집）」按钮和分享按钮。删除对话后，图片仍保留在资料库「图片（이미지）」中，因此另行删除了（确认日期 2026-10-28，Plus 账号网页界面）

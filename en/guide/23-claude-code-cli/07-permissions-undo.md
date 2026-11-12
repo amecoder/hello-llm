@@ -1,6 +1,6 @@
 # Chapter 7. Permissions and Undo
 
-<Badge type="tip" text="Required" /> Be sure to read this to follow this stage.
+<Badge type="tip" text="Required" /> Read this to follow this stage.
 
 > **One-line summary**: Permission modes and rules decide what Claude can do without asking. If something goes wrong, you can rewind with Esc twice, but some things don't come back.
 
@@ -22,7 +22,7 @@ A **permission mode** is the range of things Claude may do without asking.[^mode
 - **Accept edits**: It doesn't ask before creating and editing files inside the working folder.[^modes] It also approves common file commands without asking.
 - **Plan**: It only researches and proposes; it doesn't make changes.[^modes] It's good when you want to see how it would go about a big job before handing it over.
 
-::: details More (click to expand)
+::: details More details (click to expand)
 In auto mode, if it gets blocked three times in a row, it pauses and goes back to asking you.[^practice]
 :::
 
@@ -36,10 +36,10 @@ claude --permission-mode manual
 
 ## Reading the Permission Prompt
 
-In manual mode, if you ask "Read the meeting memo in inbox and save it as 회의록2.md. Answer in one line.", a prompt like this appears. The permission prompt first shows what Claude is about to do and then gives you options.[^prompt]
+In manual mode, if you ask "Read the meeting memo in inbox and save it as minutes2.md. Answer in one line.", a prompt like this appears. The permission prompt first shows what Claude is about to do and then gives you options.[^prompt]
 
 ```text
- Do you want to create 회의록2.md?
+ Do you want to create minutes2.md?
  ❯ 1. Yes
    2. Yes, and switch to accept edits (auto-approve file edits and common file commands) for this
       session (shift+tab)
@@ -50,7 +50,7 @@ In manual mode, if you ask "Read the meeting memo in inbox and save it as 회의
 
 Choose with the up and down arrows and press Enter. Option 1 allows it just this once. Option 2 switches this session to accept edits mode. Option 3 doesn't do it. Esc cancels.
 
-When editing an existing file, it asks `Do you want to make this edit to 회의록2.md?` and also shows the lines that change. Lines starting with `+` are the new lines being added.
+When editing an existing file, it asks `Do you want to make this edit to minutes2.md?` and also shows the lines that change. Lines starting with `+` are the new lines being added.
 
 ![Permission prompt before editing a file. ① The green lines are the new content, ② the options](../../../guide/23-claude-code-cli/assets/shot-05-edit-marked.png)
 
@@ -115,13 +115,13 @@ There are three things to do. Make a fake secret file, make a settings file that
 Leave with `/exit` and move to the practice folder in the terminal. On Mac and Linux, paste the whole block below. On Windows PowerShell, follow the method in "If you use Windows PowerShell" just below.
 
 ```bash
-mkdir 비밀
-echo 'Fake password: cafe-1234' > 비밀/암호.txt
+mkdir secret
+echo 'Fake password: cafe-1234' > secret/password.txt
 mkdir -p .claude
 cat > .claude/settings.json <<'EOF'
 {
   "permissions": {
-    "deny": ["Read(./비밀/**)"]
+    "deny": ["Read(./secret/**)"]
   }
 }
 EOF
@@ -129,17 +129,17 @@ EOF
 
 Let's read this box line by line.
 
-- `mkdir 비밀`: Creates the `비밀` (secret) folder.
-- `echo '…' > 비밀/암호.txt`: Saves the text inside the quotes to a file. `>` is the symbol that saves output to a file.
+- `mkdir secret`: Creates the `secret` (secret) folder.
+- `echo '…' > secret/password.txt`: Saves the text inside the quotes to a file. `>` is the symbol that saves output to a file.
 - `mkdir -p .claude`: Creates the `.claude` folder. No error appears even if it already exists.
 - `cat > .claude/settings.json <<'EOF'`: Saves everything from the next line up to `EOF` into this file. Later chapters use this same pattern to make files.
 - From `{` to `}`: The content that goes into the settings file. The target to block is written in the `"deny"` field.
 
-After pasting, if it hasn't run yet, press Enter once more. If nothing appears, it worked. Use `ls` to check that the `비밀` folder was created.
+After pasting, if it hasn't run yet, press Enter once more. If nothing appears, it worked. Use `ls` to check that the `secret` folder was created.
 
-**If you use Windows PowerShell**: Create the folders with `mkdir 비밀` and `mkdir .claude`. Open Notepad with `notepad 비밀\암호.txt` and enter `Fake password: cafe-1234`. In `notepad .claude\settings.json`, enter only what's between the line starting with `cat` and the `EOF` line in the box above, leaving those two lines out. If it asks whether to create a new file, click `Yes`, then save with `Ctrl + S` and close. We did not test this method.
+**If you use Windows PowerShell**: Create the folders with `mkdir secret` and `mkdir .claude`. Open Notepad with `notepad secret\password.txt` and enter `Fake password: cafe-1234`. In `notepad .claude\settings.json`, enter only what's between the line starting with `cat` and the `EOF` line in the box above, leaving those two lines out. If it asks whether to create a new file, click `Yes`, then save with `Ctrl + S` and close. We did not test this method.
 
-`Read(./비밀/**)` means "don't read anything inside the 비밀 folder." Start `claude` in the terminal and ask, "Read the file 비밀/암호.txt and tell me what it says."
+`Read(./secret/**)` means "don't read anything inside the secret folder." Start `claude` in the terminal and ask, "Read the file secret/password.txt and tell me what it says."
 
 When we sent the same request as a one-shot run (the method you'll learn in [Chapter 10](10-headless-automation.md)), Claude replied that it couldn't read the file and didn't show the contents. The wording may differ each run. There's only one thing to check: Did `cafe-1234` appear in the answer?
 
@@ -198,9 +198,9 @@ To undo changes like these, use version control such as **Git**.[^limits] Git is
 ## Try It Yourself
 
 1. In the practice folder, start with `claude --permission-mode manual` and press Shift+Tab four times to watch the modes go all the way around.
-2. Ask it to create 회의록2.md. Then say, "Add one line saying "Draft" at the very top of 회의록2.md. Answer in one line." Read the permission prompt and choose option 1.
+2. Ask it to create minutes2.md. Then say, "Add one line saying "Draft" at the very top of minutes2.md. Answer in one line." Read the permission prompt and choose option 1.
 3. With the input box empty, press Esc twice. Choose the last request and choose `Restore code and conversation`. Did the "Draft" line disappear?
-4. Clear the text that came back into the input box with Esc twice, then leave with `/exit`. Make the deny rule in the terminal, start `claude`, and ask it to read `비밀/암호.txt`.
+4. Clear the text that came back into the input box with Esc twice, then leave with `/exit`. Make the deny rule in the terminal, start `claude`, and ask it to read `secret/password.txt`.
 
 Ask yourself: Can I say what my Claude can do without permission? Can I name three things that rewind doesn't bring back?
 

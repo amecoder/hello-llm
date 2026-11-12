@@ -1,0 +1,65 @@
+---
+name: weekly-review
+description: Organizes a week's review memos (several inbox/review-*.txt) with the templates/weekly-review.md template (KPT — Went well · Fell short · Try next week) and saves them as a weekly review in notes/. Use it for requests like "write my weekly review", "organize this week's review", or "do a KPT". For meeting memos use meeting-notes; for study notes use study-notes.
+---
+
+# weekly-review — review memos → weekly review
+
+## When to use
+
+- On Friday (or the weekend), when gathering that week's `inbox/review-YYYY-MM-DD.txt` memos into a weekly review
+- e.g. "Organize this week's (10/27~10/31) review"
+
+## Files to read (in order)
+
+1. `CLAUDE.md` — the 5 organizing rules for this folder
+2. `templates/README.md` — how to use the templates and the checklist
+3. `templates/weekly-review.md` — the template to use
+4. **All** original memos `inbox/review-YYYY-MM-DD.txt` dated in that week (Mon–Sun) — **read only. Never edit them.**
+   - How to find them: list them with `ls inbox/review-*.txt` and pick only the ones whose file name date falls in that week.
+   - If the request doesn't say which week, use the week that today falls in.
+
+## Template to use
+
+Copy `templates/weekly-review.md` as is and fill in only the `{{ }}` spots. The body has only three sections — **Went well (Keep) → Fell short (Problem) → Try next week (Try)**. Don't change their names or order, and don't add sections.
+
+How to fill each section:
+
+- **Title** — from the Monday of that week to the last memo date. e.g. `# Weekly Review — 2026-10-27(Mon) ~ 10-31(Fri)`
+- **Original memo comment** — in the comment under the title, list every memo file you read. e.g. `<!-- Original memos: inbox/review-2026-10-29.txt · review-2026-10-30.txt -->`
+- **Went well** — 1 to 3, `what — why it went well`. If the memo has numbers (items sold, likes), attach them with their date as evidence.
+- **Fell short** — 1 to 3, `what — why it happened`.
+- **Try next week** — 1 to 3, `- MM/DD(Day): action`. Take these only from resolutions and plans written in the memos.
+- If the "why" or the date isn't in the memo, don't make it up; put `(not in notes)` in that spot. Mark guesses written in the memo as `(guess in the notes)`.
+- If the memos have nothing for a section, don't delete the section; write `- (not in notes)`.
+
+Dates: the body uses month/day + day of the week in parentheses, like `10/29(Wed)`. Check the day of the week on a calendar (`date -j -f %Y-%m-%d 2026-10-29 +%a`).
+
+**Don't make up anything that isn't in the memo.** When combining memos from several days, don't add up or change numbers; carry over the numbers written in the memos together with their dates.
+
+## Where to save
+
+- `notes/weekly-review-YYYY-MM-DD.md` — the date is **the Monday of that week** (not the memo date)
+- e.g. memos from 10/29~10/31 → `notes/weekly-review-2026-10-27.md`
+- If a file with the same name already exists, ask the user before overwriting it.
+
+## Checklist when done
+
+Open the saved file again and check from the top. If even one is ✗, fix it and check again.
+
+**All templates**
+- [ ] Section names and order are the same as the template (no section deleted — if there is nothing to write, `(not in notes)`)
+- [ ] No `{{` is left (`grep -n '{{' notes/weekly-review-....md` returns nothing)
+- [ ] Dates have the day of the week, and the date in the file name (Monday) matches the start date in the title
+- [ ] Numbers, names, and dates were checked once against the original memos (to avoid mistakes like the wrong 6,000 won price)
+- [ ] Nothing was made up that isn't in the memos
+- [ ] The originals in `inbox/` were not edited (`git status inbox/` shows no changes from this task)
+
+**Weekly review (KPT)**
+- [ ] Every review memo of that week was read, and all are listed in the original memo comment
+- [ ] The body has only three sections — Went well / Fell short / Try next week — in this order
+- [ ] All three sections have at least 1 item (if not in the memos, `(not in notes)`)
+- [ ] Went well and Fell short each have a "why" (if not in the memos, `(not in notes)`)
+- [ ] Try next week items are actions with dates, and at least one connects to something that fell short
+
+Finally, tell the user the saved path, the number of memos read, and the spots left as `(not in notes)` — so they can fill in the "why" themselves.

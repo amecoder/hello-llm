@@ -1,5 +1,7 @@
 # Chapter 4. Files and Artifacts — Show Files and Get Files Made
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: For materials that are hard to explain in words, **upload them as files** to show Claude, and when you need documents, spreadsheets, or presentations, **ask Claude to make them as files**.
 > Results worth showing to others open beside your chat as **artifacts**, where you can edit and share them. However, Claude does not generate photos or illustrations.
 
@@ -22,7 +24,15 @@ Here is what you can upload.[^upload]
 | Spreadsheets | Excel (XLSX), CSV |
 | Other | JSON |
 
-To upload Excel files (XLSX), "Code execution and file creation (코드 실행 및 파일 생성)" must be turned on in Settings. We look at this setting in the next section.[^upload]
+You don't need to worry about formats you don't know. The photos, PDFs, Word, and Excel files you normally use are enough. Here is what the unfamiliar names mean.
+
+- RTF, ODT: Document formats used by other word-processing programs
+- EPUB: E-book files
+- HTML: Web page files
+- CSV: Simple table files with columns separated by commas
+- JSON: Files that programs use to exchange data with each other
+
+To upload Excel files (XLSX), "Code execution and file creation (코드 실행 및 파일 생성)" must be turned on in Settings.[^upload] The word "code" in the name may sound unfamiliar, but you will never have to write code. It is a setting that lets Claude run small programs behind the scenes to handle tables and create files. We look at where to turn it on in the next section.
 
 Rather than just uploading a file and saying "take a look," write down what you want along with it. You will get a much more useful answer ([Stage 1, Chapter 4](../00-common/04-prompt-basics.md#the-5-elements-of-a-good-prompt)).
 
@@ -32,7 +42,7 @@ Find the three items that went up the most compared to last month, show them in 
 Mark anything uncertain as "Guess".
 ```
 
-::: details What the answer looks like (Example — click to expand)
+::: details What the answer looks like (Example — click to expand) (click to expand)
 This is an example created for this guide. Actual answers vary by service and each time you ask.
 
 > Here are the three items that went up the most compared to last month.
@@ -47,18 +57,19 @@ This is an example created for this guide. Actual answers vary by service and ea
 
 :::
 
-Things to keep in mind.[^upload]
+At first, just keep two things in mind.[^upload]
 
-- **You can upload up to 20 files per chat.**
-- **PDFs can be up to 1,000 pages.** Up to 100 pages, Claude reads images and charts too. From page 101 onward, it reads text only. If images in a PDF are important, split out and upload only the pages you need.
+- **Upload materials where images matter as short PDFs.** For PDFs up to 100 pages, Claude reads images and charts too. From page 101 onward, it reads text only. So split out and upload only the pages you need.
 - **For non-PDF documents, Claude reads text only.** It cannot read images placed inside a Word file. If the images matter, convert the file to PDF before uploading.
-- **Images work best when they are at least 1,000 pixels wide and tall.**
-- **Refer to PDF pages by the page number shown on screen.** Use the number shown in your PDF viewer, not the page number printed on the document itself.
 
 If a large file won't upload, try splitting it into smaller parts.
 
-::: details How large can a single file be? (Click to expand)
-Different help pages state different size limits for a single file. The file upload help page states 500MB per file.[^upload] The file creation help page states 30MB per file for both uploads and downloads.[^create]
+::: details More on number limits (click to expand)
+- **You can upload up to 20 files per chat.**[^upload]
+- **PDFs can be up to 1,000 pages.**[^upload]
+- **Images work best when they are at least 1,000 pixels wide and tall.**[^upload]
+- **Refer to PDF pages by the page number shown on screen.** Use the number shown in your PDF viewer, not the page number printed on the document itself.[^upload]
+- Different help pages state different size limits for a single file. The file upload help page states 500MB per file.[^upload] The file creation help page states 30MB per file for both uploads and downloads.[^create]
 :::
 
 > Before uploading files that contain personal information—such as ID cards, contracts, or medical records—cover or remove those details first. We covered this principle in [Stage 1, Chapter 9](../00-common/09-safety.md#_2-personal-info-and-secrets-—-think-once-before-putting-them-in).
@@ -119,6 +130,7 @@ Things to keep in mind.
 ## Artifacts — Results That Open Beside Your Chat
 
 An **artifact** is a finished result worth showing to others. It could be a document, presentation slides, a design, or a small tool. It opens in a panel beside your chat, and you can edit it, open it again later, or share it with others.[^artifacts]
+For example, as in the picture below, a one-page A4 flyer opens in the panel to the right of the chat.
 Artifacts work on all plans, including the free plan. "Code execution and file creation" from the previous section must be turned on.[^artifacts]
 
 It is easy to confuse artifacts with file creation from the previous section. The difference is how you receive the result.[^academy-artifacts]
@@ -132,13 +144,15 @@ If you want to keep editing the result inside Claude or share it with a link, as
 
 ![Screen after sending the flyer prompt below. In the center chat, a card labeled "독서 모임 안내문 · Claude Design · 나만" appears, and in the right panel, an A4 flyer opens with the date, time, and location in large print](../../../guide/10-claude/assets/shot-16-design-panel.png)
 
-*This screen was created using the flyer prompt below. At the top of the right panel, there is a download button along with "Fill" and "Fit" (zoom size) buttons. "Only you (나만)" on the card means only you can see it right now. The chat and artifact were deleted after taking the screenshot.*[^screen-design]
+*This screen was created using the flyer prompt below. At the top of the right panel, there is a download button along with "Fill" and "Fit" (buttons that change the zoom size). "Claude Design" on the card is the name of the feature that makes design artifacts (see the video section below), and "Only you (나만)" means only you can see it right now. The chat and artifact were deleted after taking the screenshot.*[^screen-design]
 
 There are three ways to create an artifact.[^artifacts]
 
 - Just ask for one in your chat.
 - Click "Output (출력)" in the message box and choose a template (a starting layout such as a document or presentation).
 - Choose a template from the "Artifacts (아티팩트)" tab in the left sidebar.
+
+If you don't see "Output" around the message box, use the first or third method. You can see the third method right in the picture below.
 
 ![Screen with "Artifacts (아티팩트)" clicked in the sidebar. Red numbers mark ① the "All (전체)", "My items (내 항목)", and "Shared with me (공유받음)" tabs at the top, and ② the "Document (문서)", "Slides (슬라이드)", and "Design (디자인)" cards under "Create something new (새로운 무언가 만들기)"](../../../guide/10-claude/assets/shot-10-artifacts-marked.png)
 
@@ -165,7 +179,8 @@ Everything you make is saved in the "Artifacts" tab in the sidebar. You can find
 
 **Highlight and edit just the part you want.** In a document artifact, highlight the text you want to change with your mouse and click "Edit with Claude (Claude로 편집)". Then type what you want.[^artifacts] You don't have to explain in words which part you mean.
 
-**Try a different direction.** If you edit an earlier message and send it again, your chat branches into a new version. That branch gets its own artifact, so you don't lose what you made before.[^artifacts]
+**Try a different direction.** If you edit an earlier message and send it again, your chat branches into a new version. A branch is another version that splits off from the same chat. That branch gets its own artifact, so you don't lose what you made before.[^artifacts]
+For example, edit a message where you said "Write it formally" to "Write it in a friendly way" and send it again. The formal flyer is still kept as it was.
 
 **Exporting as a file.** Click "Export (내보내기)" to download a file you can open in another program.[^artifacts]
 
@@ -173,13 +188,16 @@ Everything you make is saved in the "Artifacts" tab in the sidebar. You can find
 |---|---|
 | Document | Word, PDF, Markdown, Google Docs |
 | Presentation | PowerPoint, PDF, Google Slides |
-| Animation (Team & Enterprise beta only) | MP4 video |
 
 Things to keep in mind.[^artifacts]
 
 - **If an error occurs, try clicking "Try fixing with Claude (Claude로 수정 시도)".** However, there is no guarantee it will fix the issue.
 - **On the mobile app, you can request, view, and edit artifacts.** To change sharing settings, use the web or desktop app.
-- **Anything made before September 16, 2026 is a "Legacy artifact (레거시 아티팩트)".** You can still use it, but you cannot create new ones the old way.
+
+::: details Business plans and older artifacts (click to expand)
+- **Animations** can be exported as MP4 videos. This is a beta for Team and Enterprise only.[^artifacts]
+- **Anything made before September 16, 2026 is a "Legacy artifact (레거시 아티팩트)".** You can still use it, but you cannot create new ones the old way.[^artifacts]
+:::
 
 <Quiz id="ch204-artifacts" />
 
@@ -188,7 +206,7 @@ Things to keep in mind.[^artifacts]
 Artifacts **start out visible only to you.** Nothing is shown to anyone else until you share it.[^share]
 
 1. Open the artifact and click "Share (공유)".
-2. Choose who can see it. On Pro and Max plans, choose between "Only you (본인만)" and "Anyone with the link (링크가 있는 누구나)".
+2. Choose who can see it. On Pro and Max plans, choose between "Only you (본인만)" and "Anyone with the link (링크가 있는 누구나)". On the free plan, the available options may differ, so follow the options shown in the "Share" window on your screen.
 3. Copy the link and send it.
 
 <!-- 스크린샷 필요: 아티팩트 「공유」 창 — 「본인만」「링크가 있는 누구나」와 권한 선택 (웹) -->
@@ -207,8 +225,8 @@ Things to keep in mind.[^share]
 - **To stop sharing,** go to "Share" and change it back to "Only you" (Pro and Max).
 - **Treat an artifact sent by someone else the same way you would treat a file from a stranger.**
 
-::: details If you are on the free plan (Click to expand)
-Different help pages say different things about whether the free plan can share with "Anyone with the link." Follow the options you see in the "Share" window on your screen.
+::: details If you are on the free plan (click to expand)
+Different help pages say different things about whether the free plan can share with "Anyone with the link." That is why this guide tells you to follow the options on your screen.
 :::
 
 <Quiz id="ch204-share" />
@@ -217,11 +235,24 @@ Different help pages say different things about whether the free plan can share 
 
 Depending on your question, Claude sometimes replies with a **visual layout** instead of plain text. There is nothing special you need to turn on. Claude decides on its own, so just ask naturally.[^visual]
 
-**Weather and recipe cards.** When you ask about the weather or a recipe, Claude can reply with a card. Web search must be enabled.[^visual] On the new layout, there is no web search toggle—Claude searches the web on its own when needed.[^new][^old-search] On a recipe card, you can change the number of servings and the units of measurement.[^visual] Weather cards appear only on the web and desktop; on mobile phones, weather comes back as text.[^visual]
+### Weather and Recipe Cards
 
-**Click to answer.** When Claude asks a follow-up question, it may show interactive choices you can click—such as multiple choice, multi-select, or ranking options. You can click your answer or just reply in text.[^visual]
+When you ask about the weather or a recipe, Claude can reply with a card.[^visual] For example, ask "What's the weather like in Seoul today?" or "Tell me how to make doenjang-jjigae."
 
-**Diagrams and charts.** If you want to see an explanation as a diagram, just ask for one. Claude draws flowcharts, charts, and interactive visuals right inside your chat. This feature is called **Custom visuals** (맞춤 시각화). It is in beta (a preview before official release) and works on the web and desktop apps.[^custom] In "Settings > Capabilities," there is also switch ③ "In-chat visualizations (채팅 내 시각화)". Its description reads: "Allow Claude to generate interactive visualizations, charts, and diagrams directly during conversations."[^screen]
+- On a recipe card, you can change the number of servings and the units of measurement.[^visual]
+- Weather cards appear only on the web and desktop; on mobile phones, weather comes back as text.[^visual]
+- For cards to appear, web search must be enabled. On the new layout, there is no web search toggle—Claude searches the web on its own when needed.[^visual][^new][^old-search]
+
+### Click to Answer
+
+When Claude asks a follow-up question, it may show interactive choices you can click—such as multiple choice, multi-select, or ranking options. You can click your answer or just reply in text.[^visual]
+
+### Diagrams and Charts
+
+If you want to see an explanation as a diagram, just ask for one. Claude draws flowcharts, charts, and interactive visuals right inside your chat. This feature is called **Custom visuals** (맞춤 시각화). It is in beta (a preview before official release) and works on the web and desktop apps.[^custom]
+In "Settings > Capabilities," there is also switch ③ "In-chat visualizations (채팅 내 시각화)". Its description reads: "Allow Claude to generate interactive visualizations, charts, and diagrams directly during conversations."[^screen]
+
+Try drawing one yourself with the prompt below.
 
 ```
 Draw a step-by-step flowchart for making kimchi, from salting the cabbages to packing them into containers.
@@ -231,11 +262,14 @@ Draw a step-by-step flowchart for making kimchi, from salting the cabbages to pa
 
 *This screen shows the prompt above sent in an incognito chat. Hovering the mouse over the diagram did not bring up the "Copy as image" or "Save as artifact" menus.*[^screen-design]
 
-Like a sketch on a whiteboard, a custom visual is a **temporary drawing that is not saved separately**. The help docs list the three menu options below for keeping one. Because these menus did not appear on the screen above, check your own screen first to see if they are there.[^custom][^screen-design]
+Like a sketch on a whiteboard, a custom visual is a **temporary drawing that is not saved separately**.[^custom]
+The help docs list the three menu options below for keeping one. However, these menus may not appear depending on your screen. They were not on the screen above either.[^custom][^screen-design]
 
 - "Copy as image (이미지로 복사)": Copy it as a picture to paste into notes or slides.
 - "Download (다운로드)": Save it as an .svg or .html file.
 - "Save as artifact (아티팩트로 저장)": Turn it into an artifact so you can keep editing it.
+
+Hover your mouse over the drawing. If the menus appear, try them; if not, take a screenshot of any drawing you want to keep.
 
 Custom visuals do not appear on the mobile app (iPhone and Android).[^custom]
 
@@ -263,6 +297,8 @@ There is one difference. The first is an illustration meant for an image-generat
 
 **Claude Docs** are documents you edit together with Claude and with other people. Claude drafts the document right in front of you. Before writing, it asks clarifying questions first, and it leaves comments explaining why it wrote things a certain way.[^docs]
 It works on all plans, including the free plan, and is turned on by default.[^docs] Documents you create are saved in the "Artifacts" tab.
+
+This is not a separate feature from the document artifacts in the previous section. Among artifacts, "Document" is what is called Claude Docs. That is why the place you create them ("Output" → "Docs"), the place they are saved (the "Artifacts" tab), and the export formats are the same.[^docs][^artifacts] This section looks more closely at how to edit documents together.
 
 Here is how to start.[^docs]
 
@@ -311,10 +347,13 @@ Things to keep in mind.[^gws]
 - **Claude reads only the file you currently have open.**
 - **At first, it asks before making changes.** The default mode is "Ask before edits (편집 전에 묻기)". You can switch it to "Accept all edits (모든 편집 수락)", but try checking edits one by one at first.
 - **Edits are recorded under your name in version history.** If you don't like a change, go to "File > Version history (파일 > 버전 기록)" to restore an earlier version.
-- **Claude cannot share files or change permissions.** It won't do that even if you ask.
-- **It does not work on Word, Excel, or PowerPoint files.** Convert them to Google format first.
-- **Do not close the Claude panel while it is working.** Closing it stops what it is doing. A single task can run for up to 6 minutes, so break large jobs into smaller pieces.
-- **It works in Chrome, Edge, and Safari.** Firefox is not supported.
+
+::: details What it can't do and what to watch out for (click to expand)
+- **Claude cannot share files or change permissions.** It won't do that even if you ask.[^gws]
+- **It does not work on Word, Excel, or PowerPoint files.** Convert them to Google format first.[^gws]
+- **Do not close the Claude panel while it is working.** Closing it stops what it is doing. A single task can run for up to 6 minutes, so break large jobs into smaller pieces.[^gws]
+- **It works in Chrome, Edge, and Safari.** Firefox is not supported.[^gws]
+:::
 
 <Quiz id="ch204-google" />
 

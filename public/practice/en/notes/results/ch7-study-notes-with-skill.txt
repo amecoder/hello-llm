@@ -1,0 +1,60 @@
+# Prompt Lecture — 2026-10-28(Wed)
+
+<!-- File name: notes/study-YYYY-MM-DD-topic.md -->
+
+- Source: AI prompt lecture (lecture name and instructor are not in the notes)
+- Length: 1 hour
+- Original memo: `inbox/study-2026-10-28-prompt-lecture.txt`
+
+## 1. One-line summary
+
+<!-- This study in one sentence. e.g. A prompt is a request you make to the AI, and there are 5 ways to write good ones. -->
+
+A prompt is a request you make to the AI, and to write good ones you give it a role, context, format, and examples, and split the work up.
+
+## 2. Key points
+
+<!-- 3 to 7, in your own words, not copied. Adding an example from your own work makes it easier to remember later.
+     e.g. 1. Give it a role — tell the AI what role to play, like "You are a cafe marketer." -->
+
+1. Give it a role — decide what kind of person the AI should answer as. e.g. "You are a cafe marketer"
+2. Give it context — tell it who will read this and why you need it.
+3. Set the format — say in advance what shape you want the answer in. e.g. as a table, in 3 lines
+4. Show examples — show a model of the answer you want first. This is called few-shot.
+5. Split it up — don't hand over everything at once; ask step by step.
+
+## 3. New words
+
+<!-- Terms you saw for the first time and what they mean. e.g. Token | Small pieces that text is cut into. The AI's length limit is set by these. -->
+
+| Term | Meaning |
+|---|---|
+| Prompt | A request you make to the AI |
+| few-shot | Showing examples in a prompt |
+| Token | Small pieces that text is cut into. The AI's length limit is set by these. |
+| Hallucination | A convincing lie the AI tells |
+
+## 4. Watch out for
+
+<!-- Easy-to-get-wrong points, things you must check. e.g. Hallucination — always check numbers, names, and dates. -->
+
+- Hallucination — always check numbers, names, and dates in AI answers.
+
+## 5. Questions to ask
+
+<!-- Things you still don't know. If none, (none). -->
+
+- How many examples (few-shot) is best?
+
+## 6. Things to try
+
+<!-- 1 to 3 actions to apply to your work, and when. e.g. When writing the next Instagram post (Mon), put in role+format and get a draft from the AI. -->
+
+- When writing Instagram posts (date not in notes): try putting role+format in the prompt
+
+## 7. What happened when I tried
+
+<!-- Leave as (not tried yet) at first; after trying, fill in the date and result.
+     e.g. 10/30 — much better with role+format. But it wrote the price as 6,000 won by mistake, so I fixed it. -->
+
+- (not tried yet)

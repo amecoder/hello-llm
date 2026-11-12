@@ -22,12 +22,12 @@ Click a file name to download or open it. If it opens in your browser, you can a
 
 | File | Contents |
 |---|---|
-| [memo-next-month.txt](/practice/memo-next-month.txt) | November meeting notes. Rough notes from the coordinator |
-| [minutes-last-meeting.txt](/practice/minutes-last-meeting.txt) | October meeting minutes. Decisions, action items, and open questions |
-| [members.csv](/practice/members.csv) | Member list (fake names). Attendance and who paid dues |
-| [fees.csv](/practice/fees.csv) | October dues ledger. Income and expenses |
-| [memo-last-month.txt](/practice/memo-last-month.txt) | October meeting notes. For the "test you know the answer to" |
-| [last-notice.txt](/practice/last-notice.txt) | The actual October notice sent last month. The answer key for the "test you know the answer to" |
+| [memo-next-month.txt](/practice/en/memo-next-month.txt) | November meeting notes. Rough notes from the coordinator |
+| [minutes-last-meeting.txt](/practice/en/minutes-last-meeting.txt) | October meeting minutes. Decisions, action items, and open questions |
+| [members.csv](/practice/en/members.csv) | Member list (fake names). Attendance and who paid dues |
+| [fees.csv](/practice/en/fees.csv) | October dues ledger. Income and expenses |
+| [memo-last-month.txt](/practice/en/memo-last-month.txt) | October meeting notes. For the "test you know the answer to" |
+| [last-notice.txt](/practice/en/last-notice.txt) | The actual October notice sent last month. The answer key for the "test you know the answer to" |
 
 CSV files are table files that open in Excel. We did not put phone numbers in the member list. When you use your own real club files, remove or replace names and contact details before uploading ([Chapter 9](09-safety.md)).
 

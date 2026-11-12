@@ -1,7 +1,9 @@
 # Chapter 4. Build — Plan First, Branches and Commits
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **In one sentence**: Start a new session, hand over SPEC.md, and get a plan first in **Plan mode**. Once you approve it, build inside a separate workspace called a **branch**, and save each small change as a **commit**.
-> This is GitHub flow. It is a lightweight workflow useful for anyone, not just developers.
+> This flow of building on a branch, recording, and getting reviewed before merging is called **GitHub flow**. It is a lightweight workflow useful for anyone, not just developers.
 
 This chapter is based on the official Claude Code and GitHub documentation checked on November 1, 2026. You already tried Plan mode and commits in [Claude Code Chapters 4 and 5](../20-claude-code/05-delegate-well.md). This chapter ties them together with branches into a workflow for building safely.
 
@@ -27,13 +29,15 @@ If you don't like something, ask Claude to fix the plan before you approve it. F
 
 A **branch** lets you build a feature in its own separate space. Your main version (`main`) stays untouched until you are ready.[^branch] Even if you mess up, `main` is safe, so you can experiment freely.
 
-GitHub's introductory tutorial sums up the building process like this: **set up a workspace → make and save changes → propose them for review**. The tools for this are branches, commits, and pull requests (Chapter 6).[^core]
+GitHub's introductory tutorial sums up the building process like this: **set up a workspace → make and save changes → propose them for review**. The tools for this are branches, commits, and PRs.[^core] A PR (Pull Request) is a proposal you put forward saying "Please merge what I changed on the branch into `main`." You will make one yourself in Chapter 6.
 
 Give your branch a **short name that shows what it does**.[^name] For the first screen of our to-do board, `first-board` is plenty.
 
 ```
 Create a branch named first-board, and build the first screen following the approved plan. Make it open from a single index.html file in the top folder, with no build step needed.
 ```
+
+The **build** mentioned in the request is a preparation step that turns the code you wrote into files a browser can read. "With no build step needed" means you want it to show up when you open the file directly in a browser, without any such step.
 
 We use a single `index.html` file because GitHub Pages in Chapter 7 looks for `index.html` at the top of the folder it publishes.
 
@@ -78,7 +82,7 @@ If an explanation doesn't connect to any line in SPEC.md, Claude may have done s
 3. Have Claude build the first screen on the `first-board` branch. Use the to-do table from the Stage 3 meeting notes as your to-do data.
 4. Check the files in the diff view, and ask for an explanation of the changes.
 5. Have Claude commit the work in small chunks.
-6. Ask Claude: "Push the `first-board` branch to GitHub." Once you see the branch on your GitHub repository page, you are done.
+6. Ask Claude: "Push the `first-board` branch to GitHub." Once you see the branch on your GitHub repository page, you are done. If a login window pops up the first time you upload, follow the prompts as in Chapter 2. If you get a message saying it failed, show that message to Claude exactly as it is and ask what the problem is.
 
 **Up next**: In Chapter 5, you will build a check so Claude can verify on its own whether every single to-do item shows up on the screen.
 

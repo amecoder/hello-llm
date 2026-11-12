@@ -1,6 +1,6 @@
 # 第6章 會話與上下文
 
-<Badge type="tip" text="必讀" /> 想跟著這個階段走下去，一定要讀這一章。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
 
 > **一句話總結**：對話按資料夾儲存，隨時可以重新開啟。對話變長了就用 `/compact` 縮短，換做別的事就用 `/clear` 清空。
 
@@ -13,7 +13,7 @@
 這裡的關鍵詞是"繫結在資料夾上"。預設列表只顯示這個資料夾裡的對話。所以本章的命令，都要先在終端裡進入練習資料夾再輸入。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 ```
 
 重新開啟 `claude` 時，Claude 不知道之前的對話。因為新會話是在沒有以前對話的狀態下開始的。[^fresh] 想接著昨天的話題，就得自己開啟以前的會話。
@@ -111,7 +111,7 @@ cd ~/hello-ai-연습/터미널
 - 還在做同一件事嗎？那就用 `/compact`。
 - 要換做別的事嗎？那就用 `/clear`。
 
-::: details 詳細（點選展開）
+::: details 詳細說明（點選展開）
 用了 `/clear` 之後，可能會出現兩個同名的會話。這時 `claude -r 名字` 會顯示叫這個名字的列表。看時間和大小來選就行。
 :::
 
@@ -140,7 +140,7 @@ Context limit reached · /compact or /clear to continue
 
 徹底禁止讀取的方法，會在[第7章](07-permissions-undo.md)裡試試。
 
-::: details 詳細（點選展開）
+::: details 詳細說明（點選展開）
 - 還有一個刪除某個專案記錄的 `claude purge` 命令。[^purge] 它很難撤回，所以不要拿來練手。本指南也沒有執行它。
 - 伺服器端的儲存期限在[第13章](13-cost-safety-trouble.md)講。
 :::
@@ -149,12 +149,12 @@ Context limit reached · /compact or /clear to continue
 
 ## 動手試試
 
-在練習資料夾 `~/hello-ai-연습/터미널` 裡試試看。
+在練習資料夾 `~/hello-ai-practice/terminal` 裡試試看。
 
 1. 開啟 `claude`，這樣問。
 
    ```text
-   @inbox/회의-2026-10-27-주간회의.txt 用兩行告訴我這份記錄裡決定了哪些事。
+   @inbox/meeting-2026-10-27-weekly.txt 用兩行告訴我這份記錄裡決定了哪些事。
    ```
 
 2. 用 `/rename 週會-整理` 起名字，再用 `/exit` 退出。

@@ -1,13 +1,15 @@
 # 第1章 Claude Code 是什么，在哪里用——和聊天的区别、使用的地方、套餐
 
-> **一句话总结**：Claude Code 是**直接读取我电脑里的文件夹、修改文件、运行命令**的 Claude。不用像聊天那样拿到回答再复制粘贴，而是把事情交给它，然后检查结果。
-> 要使用，需要**付费订阅**（Pro·Max·Ultra·Team·Enterprise）。这个阶段从不需要终端的**桌面应用**开始。
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
+> **一句话总结**：Claude Code 是**直接读取我电脑里的文件夹、修改文件、运行命令**（用文字指示电脑去做事）的 Claude。不用像聊天那样拿到回答再复制粘贴，而是把事情交给它，然后检查结果。
+> 要使用，需要**付费订阅**（Pro·Max·Ultra·Team·Enterprise）。这个阶段从不需要终端（用文字输入命令来操作电脑的窗口）的**桌面应用**开始。
 
 这一章是根据 2026 年 10 月 31 日确认的 Claude Code 官方文档写的。功能和菜单名称经常变化。
 
 ## 和聊天有什么不同
 
-第2阶段用的 Claude 聊天，是**提问并拿到回答**的地方。回答里的文字，要我自己复制再粘贴到文件里。
+第2阶段用的 ChatGPT 或 Claude 这类聊天服务，是**提问并拿到回答**的地方。回答里的文字，要我自己复制再粘贴到文件里。
 
 **Claude Code 直接在我电脑的文件夹里工作。** 官方文档把 Claude Code 介绍为“读取文件夹的内容、修改文件、运行命令”的工具。[^overview] 你用平时说的话描述想要的东西，它就会规划方法，跨多个文件工作，最后还会确认是否运行正常。[^overview]
 
@@ -22,17 +24,18 @@
 
 这种方式叫作**代理**（Agent，自己推进多个步骤的 AI）。官方文档也把 Claude Code 称为“代理式编程工具”（agentic coding tool）。[^overview]
 
-第2阶段 Claude 指南里的 **Cowork** 也是把整件事交出去的功能（[第2阶段 Claude 第8章](../10-claude/08-cowork.md)）。桌面应用里同时包含聊天（Chat）、Cowork 和 Claude Code（**Code** 标签）。[^linux] 这个阶段讲其中的 **Code** 标签。
+Claude 桌面应用里同时包含聊天（Chat）、**Cowork** 和 Claude Code（**Code** 标签）。[^linux] 这个阶段讲其中的 **Code** 标签。
+Cowork 也是把整件事交给 Claude 的功能。第2阶段 Claude 指南里讲过它，没读过也不影响你跟上这个阶段（[第2阶段 Claude 第8章](../10-claude/08-cowork.md)）。
 
 <Quiz id="ch401-what" />
 
 ## 可以交给它什么事
 
-名字叫“代码”，但它做的事，说到底是**读取并修改文件夹里的文件**。[^overview] 官方文档举的例子是开发者的工作。[^overview]
+名字叫“代码”，但它做的事，说到底是**读取并修改文件夹里的文件**。[^overview] 官方文档举的例子是开发者的工作。[^overview] 如果你不是开发者，这份清单扫一眼就可以跳过。
 
-- 开发功能、修复错误
+- 开发功能、修复错误（程序运行不正常的问题）
 - 出了错误，就把错误信息粘贴进去，或者用语言描述症状
-- 写测试、修正多个文件的格式错误、写发布说明（改动内容的说明文）之类的重复工作
+- 写测试（检查程序是否正常运行的检查）、修正多个文件的格式错误（不符合规定写法的地方）、写发布说明（改动内容的说明文）之类的重复工作
 
 **这本指南不用代码，而是用装着备忘文件的文件夹来练习。** 把会议备忘、学习笔记、每天的回顾这类没整理的备忘放进去，就会得到**按我定的格式**整理好的会议记录、学习笔记、每周回顾，这样一个「按我的方式整理的工具」，在整个第3阶段里会一点一点地做出来。第一件事是这样的请求。
 
@@ -62,6 +65,8 @@ Claude Code 可以在多个地方使用。无论在哪里用，运转的都是**
 
 出处：Claude Code 官方文档[^platforms]
 
+代码编辑器是专门用来编写和修改程序文字（代码）的程序。写文档有 Word，写代码就有 VS Code 这样的编辑器，这样理解就行。
+
 **这本指南从桌面应用开始。** 官方文档也介绍说，对不想用终端的人，桌面应用以图形界面提供同一个引擎。[^platforms] 桌面应用里已经包含 Claude Code，所以没有需要另外安装的程序。[^quickstart]
 
 同一件事在好几个地方混着用也可以。[^platforms] 终端在第10章讲，网页·手机在第8章讲。
@@ -70,11 +75,10 @@ Claude Code 可以在多个地方使用。无论在哪里用，运转的都是**
 
 ## 需要什么——套餐
 
-**Claude Code 只能在付费订阅下使用。** 需要 Pro、Max、Ultra、Team、Enterprise 订阅，或者 Console（API）账号，**免费套餐不能用。**[^setup] 个人订阅（Pro·Max·Ultra）用 claude.ai 账号登录。[^auth]
+**Claude Code 只能在付费订阅下使用。** 需要 Pro、Max、Ultra、Team、Enterprise 订阅，或者 Console（API）账号（开发者在自己的程序里调用 Claude 时用的账号），**免费套餐不能用。**[^setup] 个人订阅（Pro·Max·Ultra）用 claude.ai 账号登录。[^auth]
 
-- 套餐名称变了。**Ultra 是以前 Max 20x 的新名字，Max 是以前 Max 5x 的新名字。**[^availability] 如果在旧文章里看到“Max 5x”，就是现在的 Max。
-- 价格和使用额度，在第2阶段 Claude 指南里讲过了（[第2阶段 Claude 第1章](../10-claude/01-getting-started.md#一眼看懂套餐)）。用量由桌面·终端等**所有使用 Claude Code 的地方一起**消耗。[^desktop] Team·Enterprise 还和聊天·Cowork 一起消耗。[^costs]
-- 宣传的使用额度，是以**一个人正常使用**为前提的。[^legal] 其他公司做的服务用我的订阅登录来代替发送请求的方式，也是不允许的。[^legal]
+- 价格和使用额度，在第2阶段 Claude 指南里整理好了。如果你第2阶段读的是 ChatGPT 指南，订阅之前只打开那一节看看就行（[第2阶段 Claude 第1章](../10-claude/01-getting-started.md#一眼看懂套餐)）。[^availability]用量由桌面·终端等**所有使用 Claude Code 的地方一起**消耗。[^desktop] Team·Enterprise 还和聊天·Cowork 一起消耗。[^costs]
+- 宣传的使用额度，是以**一个人正常使用**为前提的。[^legal]
 
 哪个套餐合适，可以边用边决定。查看用量的方法在第9章讲。
 
@@ -107,7 +111,7 @@ Claude Code 可以在多个地方使用。无论在哪里用，运转的都是**
 - Claude Code 是直接读取我电脑里的文件夹、修改文件、运行命令的代理式工具。
 - 聊天是拿到回答后由我来搬运，Claude Code 是把事情交给它，由我来检查。
 - 在桌面应用·终端·编辑器·网页·手机上使用同一个引擎。这个阶段从桌面应用开始学。
-- 需要 Pro·Max·Ultra·Team·Enterprise 订阅，免费套餐不能用。Ultra 是以前的 Max 20x，Max 是以前的 Max 5x。
+- 需要 Pro·Max·Ultra·Team·Enterprise 订阅，免费套餐不能用。
 
 ## 术语整理
 
@@ -131,5 +135,5 @@ Claude Code 可以在多个地方使用。无论在哪里用，运转的都是**
 [^desktop]: Claude Code 官方文档，《Desktop application》。"Click it to see your plan usage, which is shared across all your Claude Code surfaces." https://code.claude.com/docs/en/desktop （确认日期 2026-10-31）
 [^costs]: Claude Code 官方文档，《Manage costs effectively》。"The allowance is shared with Claude chat and Cowork" https://code.claude.com/docs/en/costs （确认日期 2026-10-31）
 [^auth]: Claude Code 官方文档，《Authentication》。"Claude Pro, Max, or Ultra subscription: log in with your claude.ai account." https://code.claude.com/docs/en/authentication （确认日期 2026-10-31）
-[^availability]: Claude Code 官方文档，《Feature availability》。"Ultra is the new name for the Max 20x plan, and Max is the new name for Max 5x." https://code.claude.com/docs/en/feature-availability （确认日期 2026-10-31）
-[^legal]: Claude Code 官方文档，《Legal and compliance》。"Advertised usage limits for Pro, Max, and Ultra plans assume ordinary, individual usage of Claude Code and the Agent SDK." / "Anthropic does not permit third-party developers to offer Claude.ai login into their own applications, or to route requests through Free, Pro, Max, or Ultra plan credentials on behalf of their users." https://code.claude.com/docs/en/legal-and-compliance （确认日期 2026-10-31）
+[^availability]: 套餐名称变了。Ultra 是以前 Max 20x 的新名字，Max 是以前 Max 5x 的新名字。如果在旧文章里看到“Max 5x”，就是现在的 Max。Claude Code 官方文档，《Feature availability》。"Ultra is the new name for the Max 20x plan, and Max is the new name for Max 5x." https://code.claude.com/docs/en/feature-availability （确认日期 2026-10-31）
+[^legal]: 其他公司做的服务用我的订阅登录来代替发送请求的方式，也是不允许的。Claude Code 官方文档，《Legal and compliance》。"Advertised usage limits for Pro, Max, and Ultra plans assume ordinary, individual usage of Claude Code and the Agent SDK." / "Anthropic does not permit third-party developers to offer Claude.ai login into their own applications, or to route requests through Free, Pro, Max, or Ultra plan credentials on behalf of their users." https://code.claude.com/docs/en/legal-and-compliance （确认日期 2026-10-31）

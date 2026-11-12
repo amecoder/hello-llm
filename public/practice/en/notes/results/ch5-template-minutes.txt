@@ -1,0 +1,36 @@
+# {{Meeting name}} Minutes — {{YYYY-MM-DD(Day)}}
+
+<!-- File name: notes/minutes-YYYY-MM-DD-meeting-name.md
+     Don't make up information that isn't in the original memo; write (not in notes). -->
+
+- Place: {{place}}
+- Attendees: {{attendee names, separated by commas}}
+- Original memo: `{{inbox/meeting-YYYY-MM-DD-name.txt}}`
+
+## 1. Decisions
+
+<!-- Write only what was settled. One line each: what · how much/how · by when, key part in bold.
+     If you know who proposed it or another idea was put on hold, add a word at the end.
+     e.g. **Run a set menu as a 2-week trial.** Coffee+cookie 5,500 won (Junho's proposal). Afternoon discount idea (Minji's proposal) on hold. -->
+
+- **{{Decision 1}}** {{details: how much/how/by when, who proposed, ideas on hold}}
+
+## 2. Action items
+
+<!-- Move over every task someone agreed to do in the meeting. If the owner or due date wasn't decided, send it to section 3.
+     Status is one of three: Planned / In progress / Done(MM/DD) -->
+
+| Action item | Owner | Due | Status |
+|---|---|---|---|
+| {{action item}} | {{name}} | {{MM/DD(Day)}} | {{Planned}} |
+
+## 3. To discuss next
+
+<!-- Agenda items with no conclusion. Write why it wasn't decided and what is needed to decide.
+     e.g. **Whether to list on a delivery app** — no conclusion because of the fees. Need to compare fees. -->
+
+- **{{agenda item}}** — {{why it wasn't decided, what is needed to decide}}
+
+## 4. Next meeting
+
+- {{MM/DD(Day) time}}

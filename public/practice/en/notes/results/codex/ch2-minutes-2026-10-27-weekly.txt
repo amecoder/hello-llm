@@ -1,0 +1,36 @@
+# Weekly Meeting Minutes — 10/27(Tue)
+
+<!-- File name: notes/minutes-YYYY-MM-DD-meeting-name.md
+     Don't make up information that isn't in the original memo; write (not in notes).
+     Date basis: I applied the year 2026 from the original file name. The original's 10/27(Mon) and 11/3(Mon)
+     are written as Tuesday to match the 2026 calendar. I read the Wednesday and Friday deadlines as 10/28(Wed)
+     and 10/30(Fri), after the meeting day. The mismatch between the original's year and days needs checking. -->
+
+- Place: Corner Cafe
+- Attendees: Minji (owner), Junho, Seoyeon
+- Original memo: `inbox/meeting-2026-10-27-weekly.txt`
+
+## 1. Decisions
+
+- **Run a coffee+cookie set at 5,500 won as a 2-week trial.** Adopted Junho's proposal to improve weekday afternoon sales. Start and end dates are (not in notes). The afternoon discount Minji proposed is on hold.
+- **Increase Instagram posts from once a week to 3 times a week (Mon, Wed, Fri).** Junho is in charge of photos and Seoyeon of text. Start date and how long it runs are (not in notes).
+
+## 2. Action items
+
+| Action item | Owner | Due | Status |
+|---|---|---|---|
+| Take photos for Instagram posts | Junho | (not in notes) | Planned |
+| Write text for Instagram posts | Seoyeon | (not in notes) | Planned |
+| Find out ingredient costs and cost of non-alcoholic mulled wine | Junho | 10/30(Fri) | Planned |
+| Buy a bathroom light bulb | Seoyeon | 10/27(Tue) | Planned |
+| Draft the set menu board wording | Seoyeon | 10/28(Wed) | Planned |
+
+## 3. To discuss next
+
+- **Choosing the winter new menu** — Options are yuja tea, non-alcoholic mulled wine, and sweet potato latte. Mulled wine will be decided after working out ingredient costs. Why the other options are undecided and what more information is needed are (not in notes).
+- **Whether to list on a delivery app** — No conclusion because of the fees. Discuss again at the next meeting. The specific information needed to decide is (not in notes).
+- **Deadlines for Instagram photos and text** — The posting days were set to Mon, Wed, Fri, but the deadline for each task is (not in notes). A deadline needs to be set for each task.
+
+## 4. Next meeting
+
+- 11/3(Tue) 10 AM

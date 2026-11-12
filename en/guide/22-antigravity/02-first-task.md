@@ -1,9 +1,11 @@
 # Chapter 2. Installing the App and First Cleanup — Opening a Folder as a Project
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: Install the Antigravity app, sign in with your Google Account, and open your organizer folder as a **Project**.
 > Start by assigning tasks in **Planning mode** (plan first), read the plan, and click **Proceed** to run it.
 
-This chapter is based on the Antigravity official docs checked on November 1, 2026. **This guide has not yet been tested directly on the app screen.** Screen names use the exact English names from the official docs. If your screen looks different, follow your screen. You can find actual run results in Chapter 3 (running in the terminal).
+This guide has not yet been tested on the app screen. Button names on the screen use the exact English names from the official docs. It is fine if your screen looks a little different. Find a button with a similar name and follow along. You can find the results of actually running it in Chapter 3 (running in the terminal).[^tested]
 
 ## Installing and Signing In
 
@@ -30,9 +32,14 @@ When you send your first instruction, you choose how the agent works.[^modes]
 
 Source: Antigravity official docs[^modes]
 
-For your organizer folder, **Local mode** is enough. New worktree mode only works in a Git repository.[^worktree]
+For your organizer folder, choose **Local mode**. It works right in your current folder, so you can find the result files right away.
 
-A new project starts with **Inherit Global** permissions and can read and write all folders in the project.[^inherit] We cover permissions in Chapter 4.
+We cover permissions (what the agent is allowed to do) in Chapter 4. You don't need to change any settings for now.
+
+::: details More details (click to expand)
+- New worktree mode only works in a Git repository. You use it when you want a complex task done apart from your current folder.[^worktree]
+- A new project starts with **Inherit Global** permissions. In this state, it can read and write all folders in the project.[^inherit]
+:::
 
 <Quiz id="ch602-project" />
 
@@ -49,9 +56,13 @@ Source: Antigravity official docs (excerpted)[^planning]
 
 At first, we recommend **Planning mode**. When the **Implementation plan** comes out, read it over. If it looks good, click **Proceed** in the conversation or at the top of the plan to continue.[^proceed] This plays the same role as Plan Mode (계획 모드) in Claude Code Chapter 5 and `/plan` in Codex Chapter 4.
 
-You can choose how you review work in the **Agent** tab of Settings. **Request review** stops and waits for your approval whenever the agent creates a plan or makes changes.[^review-mode] In contrast, Always proceed runs right away without stopping.[^always] Starting with Request review is the safe choice.
-
 When the agent finishes a task, it creates a **Walkthrough** to summarize what changed.[^walkthrough]
+
+At first, it is safe to leave it on **Request review** (waiting for your approval). When the agent makes a plan, it stops and waits until you click Proceed.[^review-mode] You choose how you review work in the **Agent** tab of Settings.[^review-mode]
+
+::: details More details (click to expand)
+At the opposite end, Always proceed runs right away without stopping.[^always] It is best not to choose it until you are used to things.
+:::
 
 <Quiz id="ch602-plan" />
 
@@ -60,7 +71,7 @@ When the agent finishes a task, it creates a **Walkthrough** to summarize what c
 Send the same request you used with the previous two tools.
 
 ```
-Turn the memo in inbox/회의-2026-10-27-주간회의.txt into meeting minutes and save it as a new file in the notes/ folder.
+Turn the memo in inbox/meeting-2026-10-27-weekly.txt into meeting minutes and save it as a new file in the notes/ folder.
 ```
 
 If you want to point out a specific file, you can type `@` and pick it. Pointing to a file does not paste its contents into your prompt. Instead, the agent gets the file path and reads the file when it needs to.[^mention]
@@ -75,7 +86,12 @@ You can see the result of running this same request from the terminal (`agy`) in
 
 The **Review** pane in the app shows changes in your project's Git repository.[^review] The default view is **Uncommitted** (all changes not yet recorded), so edits you made yourself show up alongside the agent's edits. Pick **Agent Edits** to see only the files the agent modified in this conversation.[^views]
 
-Because the Review pane shows changes from a Git repository, it is handy to turn your organizer folder into a Git repository too. If you followed Claude Code Chapter 3 or Codex Chapter 2, it is already a Git repository. The official docs do not mention how the Review pane looks in a folder that does not use Git.
+**Git** is a tool that keeps a record of when and how files changed. The Review pane compares this record with your current files and shows the difference. That is why it is handy to turn your organizer folder into a Git repository (a folder with Git records turned on) too.
+
+- If you followed Claude Code Chapter 3 or Codex Chapter 2, it is already a Git repository.
+- If not, you don't need to know any Git commands. [Claude Code Chapter 3](../20-claude-code/03-screen-tour.md) shows how to ask the agent, "Turn on change history (Git) for this folder" (optional). This method was checked in Claude Code, so this guide could not confirm whether it works the same way in Antigravity.
+
+The official docs do not mention how the Review pane looks in a folder that does not use Git.
 
 <Quiz id="ch602-review" />
 
@@ -108,6 +124,7 @@ Because the Review pane shows changes from a Git repository, it is handy to turn
 
 Next chapter: [Chapter 3. Rules and Skills — No Need to Move Them](03-rules-skills.md)
 
+[^tested]: This chapter is based on the Antigravity official docs checked on November 1, 2026. This guide has not yet been tested on the app screen.
 [^dmg]: Antigravity official docs, "Get started". "Open the downloaded `Antigravity.dmg` disk image and drag **Antigravity** into your **Applications** folder." https://antigravity.google/docs/getting-started (checked on 2026-11-01)
 [^signin]: Antigravity official docs, "Authenticate". "Click **Sign in** to open the browser authentication flow." / "Complete the browser-based OAuth flow using your personal Google Account (Free, Pro, or Ultra plan)." https://antigravity.google/docs/install (checked on 2026-11-01)
 [^projects]: Antigravity official docs, "Get started". "Agents operate within **Projects**, which define the repository boundaries, file scopes, and security permissions for your workspaces." https://antigravity.google/docs/getting-started (checked on 2026-11-01)

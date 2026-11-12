@@ -1,5 +1,7 @@
 # Chapter 6. Search and Deep Research — Checking Sources, Long Research Reports, Notebooks, and Study Helpers
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **In One Line**: Use **Deep Research** when you need a **long report** compiled from many sources. It shows you a research plan first, so edit anything you want right away.
 > Use **Notebooks** to keep materials and chats on one topic over time, and use **Guided Learning, quizzes, and flashcards** when studying. Whatever the answer is, always check the sources yourself.
 
@@ -41,7 +43,9 @@ In the input box, click "+" → "More tools (도구 더보기)" → "Deep Resear
 
 - ① Shows that "Deep Research" is turned on. The prompt in the input box changes to "What would you like to research? (무엇을 조사하고 싶으신가요?)".
 - ② Click "Sources (소스)" to ③ choose where Gemini looks for information. "Google Search (Google 검색)" is checked by default.
-- ③ "Chats (채팅)" appears to include your past Gemini conversations as sources (the help docs do not explain this item). To use Gmail or Drive as sources, Google Workspace must be connected to Gemini ([Chapter 7](07-skills-apps.md#connected-apps-—-use-gmail-drive-and-calendar-in-gemini)).[^deep] If you uncheck "Google Search", Gemini searches **only the sources you selected**.[^deep]
+- ③ If you uncheck "Google Search", Gemini searches **only the sources you selected**.[^deep] At first, leaving just "Google Search" checked is enough.
+- ③ To use Gmail or Drive as sources, you need to connect your Google apps to Gemini first. You will learn how to connect them in [Chapter 7](07-skills-apps.md#connected-apps-—-use-gmail-drive-and-calendar-in-gemini).[^deep]
+- ③ "Chats (채팅)" appears to include your past Gemini conversations as sources.[^chat-source]
 - ④ Use "Files (파일)" to attach your own files as well.[^deep]
 
 Type your research topic and send it, and Gemini first shows you a **research plan**.[^deep]
@@ -57,7 +61,7 @@ Type your research topic and send it, and Gemini first shows you a **research pl
 - ③ In the right panel, you can see the research steps and which websites Gemini is checking.[^screen]
 - ④ Click this button if you want to stop. When "Cancel research? (조사를 취소하시겠어요?)" pops up, click "Yes, cancel (예, 취소합니다)".[^screen]
 
-**If you want to change the plan, click "Edit plan" right away if possible.** When we tested this for the guide, the research started on its own without us clicking "Start research". The "Start research (연구 시작)" speech bubble in the screenshot also appeared automatically at that time. The help docs only say that you must click "Start research" to begin, so we could not verify why this happened. If it has already started, you can stop it with ④.[^screen]
+**If you want to change the plan, click "Edit plan" right away if possible.** That's because the research has started before without anyone clicking "Start research".[^auto-start] If it has already started, you can stop it with ④.[^screen]
 
 A report **usually takes 5 to 10 minutes**, or longer for complex topics. You can leave the chat while you wait. Gemini notifies you when it is done.[^deep]
 
@@ -65,7 +69,7 @@ A report **usually takes 5 to 10 minutes**, or longer for complex topics. You ca
 
 - **It uses a lot of your usage limit** ([Chapter 1](01-getting-started.md#usage-limits-—-5-hour-weekly-and-reading-capacity)).[^limits] There are also limits on how many research reports you can run per day and at the same time. When you get close to the limit, Gemini tells you how many requests you have left.[^deep]
 - **You can find past reports in your chat list.** "Keep Activity (활동 기록 보관)" must be turned on for you to find them later.[^deep]
-- **You can export reports to Docs.**[^deep] You can also turn a report into an Audio Overview ([Chapter 4](04-files-create.md#canvas-—-editing-documents-and-apps-together)).[^deep]
+- **You can export reports to Docs.**[^deep] You can also turn a report into an Audio Overview (which reads the report out loud as a conversation) ([Chapter 4](04-files-create.md#canvas-—-editing-documents-and-apps-together)).[^deep]
 
 Remember that a report is still text written by Gemini. For important numbers, open the source links in the report and verify them yourself.
 
@@ -77,7 +81,11 @@ put the yearly figures in a table, and attach a source to every figure.
 
 ### What About Deep Think?
 
-**Deep Think** was a feature for longer reasoning, but it **is being replaced by Gemini 4 Argon**. Moreover, it was only available to Google AI Ultra subscribers.[^deepthink] For tough problems, just select Argon and the "High (높음)" thinking level from the model button in [Chapter 2](02-screen-tour.md#the-model-button-—-model-and-thinking-level) (Pro and Ultra).
+**Deep Think** was a feature for longer reasoning. It **is now being replaced by Gemini 4 Argon**.[^deepthink] For tough problems, just select Argon and the "High (높음)" thinking level from the model button in [Chapter 2](02-screen-tour.md#the-model-button-—-model-and-thinking-level) (Pro and Ultra).
+
+::: details More details (click to expand)
+Deep Think was only available to Google AI Ultra subscribers.[^deepthink]
+:::
 
 <Quiz id="ch306-deep" />
 
@@ -86,7 +94,7 @@ put the yearly figures in a table, and attach a source to every figure.
 A **Notebook (노트북)** is a space where you gather sources, instructions, and chats on a single topic in one place. When you chat inside a notebook, Gemini remembers the sources, instructions, and past conversations you added there.[^notebook]
 For example, if you put club rules, past meeting minutes, and a schedule into a "Book Club" notebook, you do not have to re-upload those files every time.
 
-In the side menu under "Notebooks (노트북)", click "New notebook (새 노트북)", give it a name, and ask your questions. Add materials with "Add source (소스 추가)" ([Chapter 2](02-screen-tour.md#the-sidebar-—-new-chats-and-past-conversations)).[^notebook][^screen]
+In the side menu under "Notebooks (노트북)", click "New notebook (새 노트북)", give it a name, and ask your questions. Add materials with "Add source (소스 추가)" ([Chapter 2](02-screen-tour.md#the-sidebar-—-new-chats-and-past-conversations)).[^notebook][^screen] You can add up to 600 sources to a single notebook, depending on your plan.[^notebook]
 
 | Sources you can add | Examples |
 |---|---|
@@ -97,14 +105,18 @@ In the side menu under "Notebooks (노트북)", click "New notebook (새 노트�
 
 Source: Google Help[^notebook]
 
-Here are a few things to keep in mind.[^notebook]
+There are two things you really need to know.[^notebook]
 
-- **You can add up to 600 sources to a single notebook** (depending on your plan).
-- You can still use **web search and Gemini tools** inside a notebook.
-- To rename a notebook, add instructions ("Notebook settings (노트북 설정)"), or pin it, go to "All notebooks (모든 노트북)" and click "More (더보기)" on the notebook.
-- **If you delete a notebook, the sources and chats inside it are deleted too.**
-- You can still chat when "Keep Activity" is off, but some features will not work—such as auto-saving chats, remembering past chats, adding existing chats, and **adding Google Drive files as sources**.
-- This feature is rolling out gradually, so you might not see it yet.
+- **If you delete a notebook, the sources and chats inside it are deleted too.** Keep a separate copy of any material you want to keep using outside the notebook.
+- **This feature is rolling out gradually, so you might not see it yet.** If there is no "Notebooks" in the side menu, check again later.
+
+For example, add a single meeting-notes PDF and ask, "Organize the tasks decided in this meeting by person in charge." If you ask again in the same notebook the next day, you don't need to upload the material again.
+
+::: details Other things to know (click to expand)
+- You can still use **web search and Gemini tools** inside a notebook.[^notebook]
+- To rename a notebook, add instructions ("Notebook settings (노트북 설정)"), or pin it, go to "All notebooks (모든 노트북)" and click "More (더보기)" on the notebook.[^notebook]
+- You can still chat when "Keep Activity" is off, but some features will not work—such as auto-saving chats, remembering past chats, adding existing chats, and **adding Google Drive files as sources**.[^notebook]
+:::
 
 You can also add a past chat to a notebook by clicking "Add to notebook (노트북에 추가)" in the chat menu ([Chapter 3](03-chats.md#pinning-renaming-and-deleting)). This also requires "Keep Activity" to be turned on.[^notebook][^screen]
 
@@ -126,8 +138,7 @@ Create flashcards for me. Put the English word on the front, and the meaning and
 ```
 
 - While taking a quiz, you can click "Hint (힌트)", or click "More questions (더 많은 질문 생성)" after finishing to get more questions. When you finish, Gemini shares your **strengths and areas to study more**.[^study]
-- With flashcards, you can shuffle the deck ("Shuffle mode (셔플 모드)") and have Gemini read the cards aloud.[^study]
-- For practice tests, the help docs list exams such as the SAT, JEE Main, and NEET UG, and do not list Korean exams.[^study]
+- With flashcards, you can shuffle the deck ("Shuffle mode (셔플 모드)") and have Gemini read the cards aloud.[^study][^exams]
 
 **When using Gemini for schoolwork, check your school's AI policy first.**[^learn] Treat Gemini's suggestions as a starting point, and finish the work by adding your own thoughts and words.[^learn]
 
@@ -168,6 +179,9 @@ Create flashcards for me. Put the English word on the front, and the meaning and
 Next chapter: [Chapter 7. Skills and Connected Apps](07-skills-apps.md)
 
 [^screen]: Verified directly on the Gemini web app (Google AI Pro, Korean UI) using a practice chat (deleted after taking screenshots). Turning on "Deep Research" shows the input prompt "What would you like to research? (무엇을 조사하고 싶으신가요?)", along with "Sources (소스)" (Google Search selected) and "Files (파일)" buttons. The "Sources" menu shows "Select one or more sources (하나 이상의 소스를 선택하세요)" — "Google Search (Google 검색)", "Gmail", "Drive", "Chats (채팅)", "Enable connected apps (연결된 앱 사용 설정)". Buttons below the plan: "Edit plan (계획 수정)" and "Start research (연구 시작)" (the Korean help docs call them "계획서 수정" and "조사 시작"). Reply after research starts: "I'll get started. I'll let you know when the research is done. Feel free to leave this chat in the meantime. (착수할게요. 연구가 완료되면 알려 드릴게요. 그러는 동안 이 대화에서 나가셔도 됩니다.)", progress card "Researching 16 websites... (웹사이트 16개 조사 중...)", right panel "Show thinking (생각하는 과정 표시)". Clicking the stop button shows "Cancel research? (조사를 취소하시겠어요?)" — "No (아니요)", "Yes, cancel (예, 취소합니다)". In this guide's test, research started while waiting for the plan without clicking "Start research", so we captured the running screen and then canceled it. Also verified "Guided Learning (가이드 학습)" under "More tools (도구 더보기)", "New notebook (새 노트북)" and "All notebooks (모든 노트북)" under "Notebooks (노트북)" in the side menu, and "Add to notebook (노트북에 추가)" in the chat menu. (checked on 2026-10-31)
+[^chat-source]: The help docs do not explain the "Chats" item. This is our guess based on the name shown on the screen.
+[^auto-start]: When we tested this for the guide, the research started on its own without us clicking "Start research". The "Start research (연구 시작)" speech bubble in the screenshot also appeared automatically at that time. The help docs only say that you must click "Start research" to begin, so we could not verify why this happened (see the screen-check footnote below).
+[^exams]: For practice tests, the help docs list exams such as the SAT, JEE Main, and NEET UG, and do not list Korean exams. The source is the "Create quizzes, flashcards, practice tests & more in Gemini Apps" help article below.
 [^learn]: Google Help, "Learn in creative ways with generative AI" (Korean page: "생성형 AI를 활용해 창의적으로 학습하기"). "Important: Make sure to check and follow your school’s policy on using Generative AI." / "Use its suggestions as a starting point, then add your own unique voice and ideas to create something truly original." / "Always evaluate responses: While generative AI is a powerful tool, it can make mistakes." / "It’s important to always fact-check information using built-in tools or by double-checking with Google Search." / "Be specific: The more specific your questions, the more helpful the AI's answers will be." https://support.google.com/gemini/answer/15216790 (checked on 2026-10-31)
 [^deep]: Google Help, "Use Deep Research in Gemini Apps" (Korean page: "Gemini 앱에서 Deep Research 사용하기"). "By default, Gemini includes Google Search as a source for your research." / "You can also upload files and add NotebookLM notebooks." / "Be 18 or over." / "Google AI Pro and Google AI Ultra users can generate reports using Pro for even higher quality. All users can use Thinking for their reports." / "In Gemini Apps, there are limits for:" / "Number of research requests you can run at the same time" / "If you’re close to your limit, Gemini Apps notifies you how many research requests are left for the day." / "To update the research plan before you create a report, click Edit plan." / "Click Start research." / "Google Search is included as a source by default. To limit your research to other selected sources, deselect Google Search." / "It usually takes about 5-10 minutes to generate the report since Gemini analyzes many sources. For more complex reports, it may take longer." / "Important: You can only find past research reports if your Keep Activity setting is on." / "To export the report, click Export to Docs ." / "Other Google services, like Gmail and Drive, are only available if the Google Workspace app is connected to Gemini Apps." / "On the right in the Canvas panel, click Create  Audio Overview ." The Korean page states: "Gemini가 주제에 맞는 조사 계획서를 작성합니다." https://support.google.com/gemini/answer/15719111 (checked on 2026-10-31)
 [^limits]: Google Help, "Gemini Apps limits & feature availability". "This requires Gemini to use multiple, multi-step search queries and several rounds of reasoning sweeps to create a comprehensive report." / "For users without a Google AI plan, some features that require more compute resources, like Deep Research, may be unavailable during periods of high demand." https://support.google.com/gemini/answer/16275805 (checked on 2026-10-31)

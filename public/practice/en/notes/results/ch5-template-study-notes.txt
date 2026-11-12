@@ -1,0 +1,53 @@
+# {{Topic}} — {{YYYY-MM-DD(Day)}}
+
+<!-- File name: notes/study-YYYY-MM-DD-topic.md -->
+
+- Source: {{name of the lecture, book, or video}}
+- Length: {{time it took}}
+- Original memo: `{{inbox/study-YYYY-MM-DD-topic.txt}}`
+
+## 1. One-line summary
+
+<!-- This study in one sentence. e.g. A prompt is a request you make to the AI, and there are 5 ways to write good ones. -->
+
+{{One sentence}}
+
+## 2. Key points
+
+<!-- 3 to 7, in your own words, not copied. Adding an example from your own work makes it easier to remember later.
+     e.g. 1. Give it a role — tell the AI what role to play, like "You are a cafe marketer." -->
+
+1. {{Key point 1}} — {{explanation in my own words / example}}
+
+## 3. New words
+
+<!-- Terms you saw for the first time and what they mean. e.g. Token | Small pieces that text is cut into. The AI's length limit is set by these. -->
+
+| Term | Meaning |
+|---|---|
+| {{term}} | {{meaning}} |
+
+## 4. Watch out for
+
+<!-- Easy-to-get-wrong points, things you must check. e.g. Hallucination — always check numbers, names, and dates. -->
+
+- {{point to watch}}
+
+## 5. Questions to ask
+
+<!-- Things you still don't know. If none, (none). -->
+
+- {{question}}
+
+## 6. Things to try
+
+<!-- 1 to 3 actions to apply to your work, and when. e.g. When writing the next Instagram post (Mon), put in role+format and get a draft from the AI. -->
+
+- {{when}}: {{what}}
+
+## 7. What happened when I tried
+
+<!-- Leave as (not tried yet) at first; after trying, fill in the date and result.
+     e.g. 10/30 — much better with role+format. But it wrote the price as 6,000 won by mistake, so I fixed it. -->
+
+- {{MM/DD}} — {{result}}

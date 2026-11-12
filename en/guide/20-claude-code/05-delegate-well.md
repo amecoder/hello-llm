@@ -1,5 +1,7 @@
 # Chapter 5. How to Delegate Well — Be Specific, Plan First, Give a Checklist
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: In your request, write **what to look at, what shape it should take, where to put it, and what counts as done**. For big tasks, **get a plan first in Plan (계획) mode**, tweak it, and then let Claude start.
 > Don't just take "done" for an answer. Ask for **a checklist and evidence** along with the result.
 
@@ -30,7 +32,9 @@ Read the meeting memo in inbox and organize it into meeting notes. Split it into
 
 The second request is the one you used in Chapter 2. It is longer than the first, but it saves you from fixing the result two or three times.
 
-**If you want a thorough result, say so.** Claude reads requests cautiously and tends to build **the smallest result** that satisfies what you asked.[^ambitious] Expand the scope yourself by adding things like "include what to do when a field is blank" or "add one example for each."
+::: tip When you want a thorough result
+Say so. Claude reads requests cautiously and tends to build **the smallest result** that satisfies what you asked.[^ambitious] Expand the scope yourself by adding things like "include what to do when a field is blank" or "add one example for each."
+:::
 
 <Quiz id="ch405-specific" />
 
@@ -58,7 +62,9 @@ Let's try it out. In a new session, change the mode below the input box to **Pla
 I want to write meeting notes, study notes, and weekly reviews in the same format every time. Look at the meeting notes in the notes folder and the memos in inbox, and make a plan to create 3 templates in the templates folder. In the plan, include what sections go into each template, what to write in each section, and a checklist I can use to verify the result.
 ```
 
-A moment later, the plan appears.
+A moment later, the plan appears. The order goes like this: **read the plan → if there is something to fix, "Edit… (수정…)" → if you like it, "Accept (수락)"**.
+
+### Reading the Plan Screen
 
 ![Proposed plan screen. Red numbers mark ① the "Claude proposed a plan (Claude가 계획을 제안했습니다)" card (Reject, Edit…, Accept, Accept and use Auto mode), ② the "Plan (계획)" pane on the right, and ③ the "Assumptions (가정(묻지 않고 정한 기본값))" section inside the plan](../../../guide/20-claude-code/assets/shot-18-plan-marked.png)
 
@@ -79,24 +85,28 @@ Make sure to read the **③ Assumptions (가정)** section. In this exercise, Cl
 
 ### Editing the Plan
 
-For the weekly review, you wanted three sections: what went well, what fell short, and what to try next. Clicking "Edit… (수정…)" opens a box saying "What needs to be changed? (Optional) (무엇을 변경해야 하나요? (선택사항))".
+For the weekly review, you wanted three sections: what went well, what fell short, and what to try next. This way of splitting a review into three sections is called **KPT**. It stands for the first letters of Keep (what went well), Problem (what fell short), and Try (what to try).
+
+Clicking "Edit… (수정…)" opens a box saying "What needs to be changed? (Optional) (무엇을 변경해야 하나요? (선택사항))".
 
 ![Plan edit box. Red numbers mark ① the box with "Make the weekly review three sections (KPT): what went well / what fell short / what to do next week." typed in, and ② the "Edit (수정)" button](../../../guide/20-claude-code/assets/shot-19-plan-edit-marked.png)
 
-**KPT** is a review method that splits notes into Keep (what went well), Problem (what fell short), and Try (what to try next). When you click "Edit (수정)", Claude updates the plan and asks for approval again.
+Write what to change and click "Edit (수정)", and Claude updates the plan and asks for approval again.
 
 ![Revised plan. Red numbers mark ① "Not approved (승인되지 않음)" on the previous plan, ② the plan file edited by "+12 −16", ③ the new plan card, and ④ the "Accept (수락)" button](../../../guide/20-claude-code/assets/shot-20-plan-revised-marked.png)
+
+### Approving and Running
 
 This time, we clicked **"Accept (수락)"**. Once you approve, Claude exits Plan mode, switches to the permission mode matching your choice, and starts editing files.[^approve] The mode at the bottom of the screen also switched from "Plan (계획)" to "Manual (수동)".
 
 ![Running the plan. Red numbers mark ① the running to-do list, ② the outputs in the session info pane (README, weekly review, study notes, meeting notes), ③ changes "+155 −1", and ④ the "Manual (수동)" permission mode](../../../guide/20-claude-code/assets/shot-21-plan-run-marked.png)
 
-The "Create branch (브랜치 만들기)" and "Write HANDOFF.md (HANDOFF.md 작성)" steps shown in the ① to-do list came from personal instructions on the computer used for screenshots (see the collapsible box in Chapter 6). They may not appear on your screen.
+You can see "Create branch (브랜치 만들기)" and "Write HANDOFF.md (HANDOFF.md 작성)" in the ① to-do list. These steps came from personal instructions written in advance on the computer used to take this guide's screenshots. They usually do not appear on your screen, so you do not need to worry about them. You will learn how to write such instructions in [Chapter 6](06-claude-md.md).
 
 Here are the templates that were created (the results from this guide's exercise).
 
-- [5장-양식-회의록.txt](/practice/notes/results/5장-양식-회의록.txt) · [5장-양식-공부노트.txt](/practice/notes/results/5장-양식-공부노트.txt) · [5장-양식-주간회고.txt](/practice/notes/results/5장-양식-주간회고.txt)
-- [5장-양식-README.txt](/practice/notes/results/5장-양식-README.txt) — How to use the templates and the checklist
+- [ch5-template-minutes.txt](/practice/en/notes/results/ch5-template-minutes.txt) · [ch5-template-study-notes.txt](/practice/en/notes/results/ch5-template-study-notes.txt) · [ch5-template-weekly-review.txt](/practice/en/notes/results/ch5-template-weekly-review.txt)
+- [ch5-template-README.txt](/practice/en/notes/results/ch5-template-README.txt) — How to use the templates and the checklist
 
 Just as requested, the weekly review template now has three sections: "What went well (Keep) / What fell short (Problem) / What to do next week (Try)". Each section comes with instructions on what to write and an example.
 

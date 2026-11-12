@@ -1,0 +1,142 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 420,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "One-block request",
+    "fontSize": 18,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 40,
+   "width": 420,
+   "height": 200,
+   "backgroundColor": "#ffc9c9",
+   "fillStyle": "solid",
+   "label": {
+    "text": "Meeting 3 clients next week\n3rd-yr sales, make question lists\n5 per company, price last\nA canceled last year, B is new\nC is weighing renewal, be polite",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 430,
+   "y": 140,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     118,
+     0
+    ]
+   ],
+   "width": 118,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 430,
+   "y": 72,
+   "width": 120,
+   "height": 50,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "Split with\nheadings",
+    "fontSize": 15,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 0,
+   "width": 420,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "Split with Markdown headings",
+    "fontSize": 18,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 40,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## Situation — 3 client meetings next week, 3rd-yr sales",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 92,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## Task — question list per meeting",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 144,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#e5dbff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## Conditions — 5 per company, price last, polite",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 196,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## Client Info — A canceled / B new / C weighing renewal",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 255,
+   "width": 980,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "Same content, but sections help you and the AI spot gaps",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

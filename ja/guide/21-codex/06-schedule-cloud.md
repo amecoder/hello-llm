@@ -1,5 +1,7 @@
 # 第6章 予約・クラウド・スマートフォン — 決まった時間に自動で、席を外していても
 
+<Badge type="info" text="選択" /> 必要なときに読んでください。読み飛ばしても、後の章についていけます。
+
 > **一言まとめ**: 毎週同じ仕事は**予約**（Scheduled）で動かします。自分のフォルダを使う予約は、**パソコンが起動していて、アプリが実行中**のときだけ動きます。
 > クラウドはGitHubのリポジトリがある人向けで、スマートフォンは自分のパソコンを操作するリモコンのように使います。
 
@@ -9,13 +11,19 @@
 
 予約タスクは、くり返す仕事を決めておいて、裏で動かす機能です。[^schedule] アプリのサイドバーにある**Scheduled**で、予約と実行の履歴をすべて見られます。[^inbox]
 
-予約はデスクトップアプリかウェブで作ります。ターミナル（Codex CLI）には、予約を管理する画面がありません。[^no-cli] 予約も、会話で作ります。[^chat-create] 予約の中で `$スキル名` と書いて、スキルを呼び出すこともできます。[^skill] 第5章のスキルを使うなら、こうお願いできます。
+予約はデスクトップアプリかウェブで、ふだんどおり会話で作ります。[^chat-create][^no-cli] 予約の中で `$スキル名` と書いて、スキルを呼び出すこともできます。[^skill] 第5章のスキルを使うなら、こうお願いできます。
 
 ```
 毎週金曜日の午後6時に $weekly-review で、その週の週間振り返りをnotesフォルダに作って。
 ```
 
-**条件があります。** 自分のパソコンのフォルダを使う予約は、パソコンが起動していて、アプリが実行中のときだけ動きます。[^awake] macOS・Linuxにある**Prevent sleep while running**の設定は、会話が**動いているあいだ**パソコンがスリープしないようにして、席を外していても会話が続くようにします。[^sleep] 予約の時刻までパソコンを起こしておく機能ではないので、予約を使うなら、パソコンの省電力の設定を別に確認してください。
+**条件があります。** 自分のパソコンのフォルダを使う予約は、パソコンが起動していて、アプリが実行中のときだけ動きます。[^awake] 予約を使うなら、その時刻にパソコンがスリープしていないか、パソコンの省電力の設定を確認してください。
+
+::: details アプリの「Prevent sleep while running」の設定（クリックして開く）
+
+macOS・Linuxにある**Prevent sleep while running**の設定は、会話が**動いているあいだ**パソコンがスリープしないようにして、席を外していても会話が続くようにします。[^sleep] 予約の時刻までパソコンを起こしておく機能ではありません。そのため、上のようにパソコンの省電力の設定を別に確認する必要があります。
+
+:::
 
 予約は**人がいない状態**で動きます。そのため、自分のデフォルトの柵（サンドボックス）の範囲はそのまま使いつつ、組織が禁止していなければ、**許可を求めない方式**で動きます。[^unattended] 柵の外の作業は、聞く相手がいないので、失敗すると考えてください。
 
@@ -23,11 +31,16 @@
 |---|---|
 | 読み取りのみ | ファイルを書く必要がある予約は失敗 |
 | フォルダ内への書き込み | 整理ツールのように、フォルダの中でだけ書く作業は動く |
-| Full access | 確認せずに、ファイル・コマンド・インターネットまで使う。危険 |
+| Full access | 確認せずに、ファイル・コマンド・インターネットまで使う（危険） |
 
-出典: Codex公式ドキュメント（一部のみ抜粋。真ん中の行はこのガイドのまとめ）[^modes]
+出典: Codex公式ドキュメント（一部のみ抜粋。真ん中の行はこのガイドのまとめ）[^modes][^readonly]
 
-第4章の権限メニューでいうと、Ask for approvalとApprove for meは真ん中の行（フォルダ内への書き込み）の柵を、Full accessは最後の行を使います。[^ask] ただし、予約ではAsk for approvalでも**確認されません。** 「読み取りのみ」は、メニューには別の項目として表示されないことがある設定です。
+第4章の権限メニューで見ると、次のようになります。[^ask]
+
+- **Ask for approval**と**Approve for me**: 真ん中の行（フォルダ内への書き込み）の柵を使います。
+- **Full access**: 最後の行を使います。
+
+ただし、予約ではAsk for approvalでも**確認されません。**
 
 予約を作る前に、**同じ依頼をふだんの会話で先に動かしてみましょう。** 第5章のように、結果を元のメモと照らし合わせて、問題がなければ予約に移します。最初の数回の実行結果も、必ず確認します。公式ドキュメントも、同じ順番をすすめています。[^test]
 
@@ -35,13 +48,15 @@
 
 ## クラウドは何が違うか
 
-クラウドのタスクは、インターネットの向こうにある作業スペースで動くので、自分のパソコンがスリープしているあいだも続きます。[^cloud] そのかわり、条件があります。
+クラウドのタスクは、インターネットの向こうにある作業スペースで動くので、自分のパソコンがスリープしているあいだも続きます。[^cloud]
 
-- 自分が使える**公開済みの環境**（published environment）が必要です。[^env]
-- 環境を作るには、**GitHubのリポジトリ**を選んで接続します。[^github]
+整理ツールのフォルダは自分のパソコンにしかないので、このガイドではクラウドを使いません。仕事でGitHub（ファイルをインターネットに置いて、変更の履歴を一緒に管理するサービス）を使っているなら、時間のかかる仕事をクラウドに送って、パソコンの電源を切ってもよい、という点だけ覚えておいてください。
+
+クラウドを使うには、条件があります。
+
+- 前もって用意しておくクラウドの作業スペース、つまり**公開済みの環境**（published environment）が必要です。[^env]
+- その作業スペースを作るには、**GitHubのリポジトリ**を選んで接続します。[^github]
 - 自分のパソコンのファイル、実行中のプログラム、ブラウザのログイン情報は、クラウドには移りません。[^not-moved]
-
-整理ツールのフォルダは自分のパソコンにしかないので、このガイドではクラウドを使いません。仕事でGitHubを使っているなら、時間のかかる仕事をクラウドに送って、パソコンの電源を切ってもよい、という点だけ覚えておいてください。
 
 <Quiz id="ch506-cloud" />
 
@@ -101,4 +116,5 @@
 [^trust]: Codex 公式ドキュメント、「Codex on mobile」。"Only connect devices you own and trust." https://learn.chatgpt.com/docs/mobile (確認日 2026-11-01)
 [^rollout]: Codex 公式ドキュメント、「Codex on mobile」。"Use the ChatGPT mobile app with Cloud or a connected Mac or Windows PC. Availability depends on rollout and your workspace settings." https://learn.chatgpt.com/docs/mobile (確認日 2026-11-01)
 [^ask]: Codex 公式ドキュメント、「Permissions」。"For most work, start with **Ask for approval**. It lets ChatGPT work within the current workspace and pauses before reaching beyond that boundary." / "Changing who reviews a request doesn't expand the sandbox." https://learn.chatgpt.com/docs/permission-modes (確認日 2026-11-01)
-[^no-cli]: Codex 公式ドキュメント、「Scheduled tasks」。"Codex CLI doesn't provide the Scheduled management interface." https://learn.chatgpt.com/docs/automations (確認日 2026-11-01)
+[^readonly]: 「読み取りのみ」は、第4章の権限メニューには別の項目として表示されないことがある設定です（このガイドのまとめ）。
+[^no-cli]: ターミナル（Codex CLI）には、予約を管理する画面がありません。Codex 公式ドキュメント、「Scheduled tasks」。"Codex CLI doesn't provide the Scheduled management interface." https://learn.chatgpt.com/docs/automations (確認日 2026-11-01)

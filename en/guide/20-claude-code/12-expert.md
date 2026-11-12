@@ -1,5 +1,7 @@
 # Chapter 12. Using It Like an Expert — Pick What Fits the Task, and Stack One at a Time as Needed
 
+<Badge type="warning" text="Advanced" /> Read this once you are comfortable with the earlier chapters and want to use it even better.
+
 > **One-line summary**: An expert is not someone who uses many features, but someone who **picks the feature that fits the size of the task**. Don't set up everything from the start. Add one thing at a time **when the same inconvenience repeats**.
 > This chapter wraps up with a weekly routine for running the "Organizing Tool" you built in Stage 3.
 
@@ -20,6 +22,8 @@ This chapter is based on the Claude Code official docs checked on October 31, 20
 
 The official docs also explain features by dividing them into "what is always visible every session (CLAUDE.md)," "what you call when needed (skills)," and "what runs on its own at set times."[^match] The bigger the feature you use, the more you can do, but you also have more to check.
 
+Think of one of your own tasks and find the matching row in the table above. For example, "make a weekly review every Friday evening" fits the "A task to run on its own at a set time" row, so it is a scheduled task. If no row fits, a single chat or Code tab session is usually enough.
+
 <Quiz id="ch412-choose" />
 
 ## Stack One at a Time Instead of Building Everything at Once
@@ -31,10 +35,15 @@ The official docs also explain features by dividing them into "what is always vi
 | It gets the same rule or command wrong twice | Write it in CLAUDE.md |
 | You keep starting tasks with the same request | Save it as a skill |
 | You paste the same steps for the third time | Save it as a skill |
-| You keep copying material from a browser | Connect that service with a connector (MCP) |
+| You keep copying material from a browser | Connect that service with a connector |
 | Something must happen every time without asking | Hook (a command that runs automatically at a set moment) |
 
 Source: Claude Code official docs (partial excerpt)[^build]
+
+The last two rows of the table are features this guide does not cover in depth.
+
+- A **connector** links an outside service such as Gmail or Calendar to Claude ([Chapter 7](07-skills-plugins.md)). Once connected, Claude reads that content without you copying and pasting it.
+- A **hook** is a command that runs on its own when a set moment comes, such as "every time a file is edited." For example, you could have it run a spell check every time Claude edits a file. When the same thing repeats often enough to need a hook, look it up in the official docs then.
 
 The organizing tool in this guide grew in this exact order. Long requests in Chapter 2 → templates in Chapter 5 → CLAUDE.md in Chapter 6 → skills in Chapter 7. **You experienced the inconvenience first, and built the tool next.**
 
@@ -44,7 +53,7 @@ You use the same signals **when fixing what you already built**. If the same mis
 
 ## Habits You Can Drop Now
 
-Some tricks that used to be needed for older models actually get in the way now. From what the official docs point out, here are the ones that apply to readers of this guide.[^stop]
+You may see tricks like the ones below in AI tips articles online. They were needed for older models, but now they can actually get in the way. If you are new, just know that **you don't need to follow them**. From what the official docs point out, here are the ones that apply to readers of this guide.[^stop]
 
 | Old trick | Now |
 |---|---|
@@ -84,7 +93,7 @@ Try running the tool you built in Stage 3 each week like this.
 | Term | One-line meaning |
 |---|---|
 | Hook | A command that runs automatically at set moments |
-| Routine | A work habit you run in the same order each week (different from the cloud scheduled task name in Chapter 8) |
+| Routine | A work habit you run in the same order each week (different from Routines, which appears in Chapter 8 as the old name for scheduled tasks) |
 
 <ChapterDone :chapter="412" />
 

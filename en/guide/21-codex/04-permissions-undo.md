@@ -1,5 +1,7 @@
 # Chapter 4. Permissions and Undo — What to Delegate and How to Undo
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: In the **permissions menu** below the input box, you decide what Codex does on its own and what it asks you about. Start with **Ask for approval** at first.
 > You undo changes using **Git**. We could not find a rewind feature like Claude Code's in the official docs. That makes the habit of saving a record (commit) before and after delegating work even more important.
 
@@ -19,7 +21,7 @@ Source: Codex official docs (partially adapted)[^names]
 
 The official docs say to **start with Ask for approval for most work**.[^start] It delegates one step further than "Manual (수동)" in Claude Code (as compared in this guide). It edits files **inside** the folder without asking.
 
-Even if you pick **Approve for me**, the range of what Codex can do does not get wider. The only thing that changes is "who gives permission."[^same-box] Automatic review calls the model one more time, so your usage can go up.[^extra]
+Even if you pick **Approve for me**, the range of what Codex can do does not get wider. The only thing that changes is "who gives permission."[^same-box][^extra]
 
 **Full access** removes all boundaries for both files and the internet. The official docs also say to use it only when you truly want to delegate everything.[^full] You do not need it for organizing notes.
 
@@ -48,7 +50,12 @@ Codex shows what changed in the **review pane**. This corresponds to the "Change
 
 **The review pane does not show only what Codex edited.** It shows everything: things you edited yourself, and any other changes not yet recorded.[^includes] So if you record (commit) your changes so far before delegating a task, only Codex's changes remain in the review pane, making them easy to see.
 
-You can choose the view range at the top of the review pane. The default is changes not yet recorded (**Unstaged**), and if you pick **Last turn**, you see only what changed in Codex's most recent reply.[^views] At first, Last turn is easier to understand.
+You can choose the view range at the top of the review pane.[^views]
+
+- **Unstaged** (default): Shows changes you have not yet added to the list to be recorded with `git add`. Changes you made yourself are included too.
+- **Last turn**: Shows only what changed in Codex's most recent reply.
+
+At first, Last turn is easier to understand. That is because you see only the result of the task you just handed off.
 
 If there is a line you do not like, you can leave a comment on that line. Hover your mouse over the line, click **+**, write your comment, and send something like "Fix it according to the line comments" in the input box.[^comments]
 
@@ -72,7 +79,7 @@ Claude Code had a feature to rewind the conversation ([Claude Code Chapter 4](..
 
 So at this stage, make the following order a habit.
 
-1. Before delegating: Save the current state with the app's Git feature (commit).[^commit]
+1. Before delegating: Record (commit) the current state. You can use the app's Git feature, or ask in chat (see just below).[^commit]
 2. Delegate the task.
 3. In the review pane, view only what changed using Last turn.
 4. If it looks good, save a record again; if not, undo it.
@@ -119,7 +126,7 @@ Next chapter: [Chapter 5. Moving Skills](05-skills.md)
 [^names]: Codex official docs, "Sandbox". "Depending on your configuration, the menu can include **Ask for approval**, **Approve for me** for eligible approval requests, **Full access**, and named or custom permissions profiles." https://learn.chatgpt.com/docs/sandboxing (checked on 2026-11-01)
 [^start]: Codex official docs, "Permissions". "For most work, start with **Ask for approval**. It lets ChatGPT work within the current workspace and pauses before reaching beyond that boundary." https://learn.chatgpt.com/docs/permission-modes (checked on 2026-11-01)
 [^same-box]: Codex official docs, "Permissions". "Changing who reviews a request doesn't expand the sandbox." https://learn.chatgpt.com/docs/permission-modes (checked on 2026-11-01)
-[^extra]: Codex official docs, "Agent approvals & security". "Automatic review uses extra model calls, so it can add to Codex usage." https://learn.chatgpt.com/docs/agent-approvals-security (checked on 2026-11-01)
+[^extra]: Automatic review calls the model one more time, so your usage can go up (Chapter 8). Codex official docs, "Agent approvals & security". "Automatic review uses extra model calls, so it can add to Codex usage." https://learn.chatgpt.com/docs/agent-approvals-security (checked on 2026-11-01)
 [^full]: Codex official docs, "Sandbox". "This removes the filesystem and network boundaries and should be used only when you want the agent to act with full access." https://learn.chatgpt.com/docs/sandboxing (checked on 2026-11-01)
 [^check]: Codex official docs, "Permissions". "Check the selected mode for the current chat; having a mode available doesn't mean it's selected." https://learn.chatgpt.com/docs/permission-modes (checked on 2026-11-01)
 [^two]: Codex official docs, "Permissions". "The **sandbox** defines which files and network resources ChatGPT can access." / "**Approvals** determine when ChatGPT pauses before an action or sends the request to automatic review." https://learn.chatgpt.com/docs/permission-modes (checked on 2026-11-01)

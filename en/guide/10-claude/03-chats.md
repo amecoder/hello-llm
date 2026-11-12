@@ -1,5 +1,7 @@
 # Chapter 3. Managing Chats — Finding, Organizing, Sharing, and Hiding
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: When you finish a chat, **rename or delete** it. To find a past chat, look in your list or ask Claude to **find it for you**.
 > To show a chat to someone else, **invite specific people** or use a **public link**. When you don't want to leave a record, use an **incognito chat**.
 
@@ -58,11 +60,11 @@ Find the chat from last week where I asked about Excel functions. Summarize the 
 
 When Claude searches your past chats, it shows up in the chat as a **tool call** (Claude pulling out a feature to use). Past chats used in the answer are attached as links (citations) back to the original chats.[^search] Click the link to open the original chat. You can check right away whether Claude brought the wrong chat.
 
-Keep the search range in mind too.[^search]
+Keep the search range in mind too. A **project** is a workspace that groups the materials and chats you use for one piece of work ([Chapter 7](07-projects-tools.md)). If you have never made a project, all your chats right now are outside projects.[^search]
 
 - If you ask outside a project, it searches across **all chats outside projects**.
-- If you ask inside a project, it searches only within **chats inside that project**. Projects are covered in [Chapter 7](07-projects-tools.md).
-- This search does not find older Cowork tasks. Look for those tasks by name in Recents (최근 항목).[^new]
+- If you ask inside a project, it searches only within **chats inside that project**.
+- This search does not find older Cowork tasks (records of tasks you handed off whole, [Chapter 8](08-cowork.md)). Look for those tasks by name in Recents (최근 항목).[^new]
 
 To stop Claude from searching your past chats, go to Settings > Memory (설정 > 메모리, or Settings > Your Claude) and turn off Search and reference chats (채팅 검색 및 참조).[^search]
 
@@ -76,13 +78,16 @@ The Help Center states that this switch is under Settings > Your Claude or Setti
 
 There are two ways to show a chat to other people. One is **inviting specific people**, which lets only the people you choose see it, and the other is a **public link**, which lets anyone with the link see it. Inviting specific people is the default method.[^share-people] Let's look at this one first.
 
-1. Click the ▾ menu next to the chat title at the top and choose Share session (세션 공유). If the artifact pane on the right is not open, you can also open it with the Share (공유) button in the top right.
+In the new screen, a chat is also called a "session" (세션). That is why the menu is named Share session (세션 공유). This is a different meaning from the "session limit" (5-hour usage) in Chapter 1.
+Send invites from the web. You cannot send them from the mobile app yet.[^share-people]
+
+1. Click the ▾ menu next to the chat title at the top and choose Share session (세션 공유). When the artifact pane on the right (the pane that shows documents and other things Claude made, [Chapter 4](04-files-artifacts.md)) is not open, you can also open it with the Share (공유) button in the top right.
 2. Type the recipient's email in the Add people by email (이메일로 사람 추가) box.
 3. Click Invite (초대하기).[^screen-share]
 
 ![The Share session (세션 공유) window. It shows the notice "Only messages up to now will be shared" ("지금까지의 메시지만 공유됩니다"), the Add people by email (이메일로 사람 추가) box and Invite (초대하기), Only invited people (초대받은 사람만) and your name (Admin) under People with access (액세스 권한이 있는 사용자), and the Copy link (링크 복사) button at the bottom](../../../guide/10-claude/assets/shot-15-session-share.png)
 
-*Names and emails in this screen were changed to examples. The window was closed without inviting anyone. In the new screen, a chat is called a "session" (세션).*
+*Names and emails in this screen were changed to examples. The window was closed without inviting anyone.*
 
 The recipient gets an email with your name, the chat title, and a link to open it. This works on all plans, including the free plan.[^share-people]
 
@@ -90,9 +95,7 @@ This method has these characteristics.[^share-people]
 
 - **It only opens with the invited email.** Even if the recipient forwards the email, no one else can open it.
 - **They can only view it.** Recipients cannot continue the chat, copy it to their own account, or download files from it.
-- **You can also invite people who don't have a Claude account.** They can view it once they create a free account. Unopened invites disappear after 30 days.
-- **There is a daily limit on how many people you can invite.** The exact number is not in the Help Center.
-- **You cannot send invites from the mobile app yet.** Send them from the web. Shared chats can be opened on any device.
+- **You can also invite people who don't have a Claude account.** They can view it once they create a free account.
 
 Sharing is **like taking a picture of that moment** (a snapshot).[^share-old] Messages you exchange after sharing are not visible to the recipient. To show new messages too, click Update shared chat (공유 채팅 업데이트) in the share window.[^share-people]
 
@@ -101,6 +104,12 @@ Attached files are not included in the shared copy either. Only you can continue
 When you want to stop showing it, click Turn off (끄기) in the share window. The link is blocked for everyone right away. Deleting the chat also blocks the link.[^share-people]
 You can view all the chats you have shared so far in one place and turn them off one by one.[^share-people] Go to Settings > Privacy (설정 > 개인정보보호) and click Manage (관리) next to Shared chats (공유된 채팅).[^screen]
 
+::: details More to know about invites (click to expand)
+- Unopened invites disappear after 30 days.[^share-people]
+- There is a daily limit on how many people you can invite. The exact number is not in the Help Center.[^share-people]
+- Shared chats can be opened on any device, including phones.[^share-people]
+:::
+
 <Quiz id="ch203-share" />
 
 ## Public Links — So Anyone Can View
@@ -108,11 +117,8 @@ You can view all the chats you have shared so far in one place and turn them off
 Anyone who has a public link can open it — **anyone at all**. They do not need a Claude account. Just like with invites, they can only view it.[^public]
 This works only on individual plans (Free, Pro, and Max). Company plans (Team and Enterprise) can only share within their organization.[^public]
 
-You also create a public link from Share (공유) on the chat screen. Follow the options shown in the share window.
-
-::: details Different Help Center articles describe different steps to create one (click to expand)
-The steps for creating a public link are written differently across articles. An older Help Center article explains that clicking Share (공유) and then clicking Share (공유) one more time in the pop-up creates a link.[^share-old] It may vary depending on your screen.
-:::
+You also create a public link from Share (공유) on the chat screen. Open the Share session (세션 공유) window above, then follow the on-screen instructions to create the link.
+The steps are described a little differently depending on the screen and the article. For example, an older Help Center article explains that clicking Share (공유) and then clicking Share (공유) one more time in the pop-up creates a link.[^share-old]
 
 Remember just one rule before using a public link. In the exact words of the Help Center, **"treat a public link as public."**[^public] If you wouldn't post it on the internet, don't make it a public link either.
 
@@ -120,7 +126,7 @@ Remember just one rule before using a public link. In the exact words of the Hel
 - **Search engines are asked not to show it.** However, that does not stop the link from spreading or someone from making a copy.
 - **Turning it off blocks the link right away.** However, it cannot erase copies or screenshots someone else already made.
 
-Chats that contain files created by Claude (Chapter 4) cannot be shared publicly on individual plans.[^file-share]
+Chats that contain files Claude made for you directly, such as Excel or Word files ([Chapter 4](04-files-artifacts.md)), cannot be shared publicly on individual plans.[^file-share]
 
 Compare a poor example and a better example.
 
@@ -135,7 +141,7 @@ There is one difference. Anyone can open a public link if your sibling forwards 
 
 For a chat you don't want to leave in your history, like picking out a gift, use **Incognito chat** (시크릿 채팅). It works on all plans, including the free plan.[^incognito]
 
-1. Open a new chat outside of a project.[^incognito]
+1. Open a new chat outside of a project. A regular new chat where you have not picked a project is fine.[^incognito]
 2. Click the **ghost icon** (Use incognito mode, 시크릿 모드 사용) in the top right of the screen.[^screen]
 3. When the border of the screen turns black and the Incognito (시크릿) label appears in the top left, it has started.[^screen][^incognito-name]
 
@@ -161,7 +167,7 @@ Here are the characteristics of an incognito chat.[^incognito]
 
 This does not mean "it leaves no trace anywhere." **While it is not saved to your history, it is retained for 30 days by default.**[^incognito] Do not put information like passwords into an incognito chat either.
 
-In the new screen, **Claude cannot create files or run code** in an incognito chat.[^incognito] Creating files is covered in Chapter 4.
+In the new screen, **Claude cannot create files or run code** in an incognito chat.[^incognito] Running code means Claude runs a small program itself to do calculations or work with files. Creating Excel or Word files for you also depends on this, so do that kind of work in a regular chat. Creating files is covered in [Chapter 4](04-files-artifacts.md).
 
 ::: details Why can't it create files in an incognito chat? (click to expand)
 Even if you are using the new Claude screen, incognito chats open in the previous screen style.[^incognito] The story of the previous screen is in [Chapter 2](02-screen-tour.md#the-new-claude-screen-vs-the-old-screen).
@@ -188,7 +194,7 @@ If you want to get a fresh answer without any memories about you, try asking lik
 Assume you know nothing about me, and recommend three good exercises for someone in their 50s to learn for the first time, along with their pros and cons.
 ```
 
-::: details The answer you get will look roughly like this (example — click to expand)
+::: details The answer you get will look roughly like this (example — click to expand) (click to expand)
 This is an example created for this guide. Actual answers vary by service and occasion.
 
 > Here are three good exercises for someone in their 50s to learn for the first time.
@@ -209,6 +215,7 @@ This is an example created for this guide. Actual answers vary by service and oc
 
 ## Managing Logged-in Devices
 
+The last way to protect your chats is to make sure your account is not left open on someone else's device.
 Have you ever logged in to Claude on a public computer or someone else's phone? If so, check where you are logged in.
 
 When you log in on the web, your login lasts for 28 days. If you use Claude during that time, it extends for another 28 days from then.[^logout] That means a computer where you forgot to log out can stay open for quite a long time.

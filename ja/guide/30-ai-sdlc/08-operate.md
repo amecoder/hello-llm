@@ -1,5 +1,7 @@
 # 8章. 運用と改善 — イシューで次の一周を回す
 
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
 > **一言まとめ**: 公開したあとに思いついた改善点やバグは、**イシュー**（Issue）として書いておきます。イシューひとつが、次の一周の企画になります。
 > PRに `fixes #番号` のように決まった言葉を書くと、PRをマージするときにそのイシューが **自動で閉じられます。** 企画と運用が、こうしてつながります。
 
@@ -17,7 +19,7 @@ fixes #イシュー番号
 
 イシュー番号は、イシューのタイトルの横に `#2` のように付いています。6章でPRをひとつ作っていたなら、最初のイシューが1番ではないことがあるので、必ず画面で確認してください。
 
-GitHubの入門チュートリアルも、計画の段階で最初のイシューを作ります。タイトルに作りたい機能を書き、説明に作りたいものを数行書きます。[^first-issue]
+イシューを書くときは、タイトルに作りたい機能を書き、説明に作りたいものを数行書けば十分です。[^first-issue] たとえば、タイトルは「期限が過ぎたやることを赤色に」、説明は「期限が今日より前のやることは、文字を赤色で表示してほしい」のように書きます。
 
 <Quiz id="ch708-issue" />
 
@@ -41,7 +43,9 @@ GitHubの入門チュートリアルも、計画の段階で最初のイシュ�
 
 ## もう一周回る
 
-一周が終わったら、次の機能を **新しいイシューとして** 作り、始めるときに進行中へ動かして、次のサイクルを始めます。[^next-cycle] ステップ4で学んだ流れを、イシューひとつでもう一度回すと、こうなります。
+一周が終わったら、次の機能を **新しいイシューとして** 作り、次のサイクルを始めます。ボードを使っているなら、作業を始めるときにそのイシューを進行中（In Progress）へ動かします。[^next-cycle] ボードがなくても、イシューだけで十分です。
+
+ここまでの第3章〜第7章で学んだ流れを、イシューひとつでもう一度回すと、こうなります。
 
 1. **計画**: イシューに何を変えるかを書く。必要なら、SPEC.mdに確認の基準を1行足す（3章）。
 2. **作る**: 新しいブランチで、計画モードで計画をもらってから作る（4章）。
@@ -94,7 +98,7 @@ Claudeがイシューを読めないと言ったら、イシューのタイト�
 
 [^issue]: GitHub公式ドキュメント、「About issues」。"You can create issues in your repository to plan, discuss, and track work." https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues （確認日 2026-11-01）
 [^close]: GitHub公式ドキュメント、「About issues」。"Mentioning an issue in another issue or pull request will create references between them and using keywords, like `fixes:`, in your pull requests will automatically close the associated issues." https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues （確認日 2026-11-01）
-[^first-issue]: GitHub公式ドキュメント、「Planning your work」。"In the **Add a title** field, type `Display a list of starred repositories`." https://docs.github.com/en/get-started/start-your-journey/planning-your-work （確認日 2026-11-01）
+[^first-issue]: GitHubの入門チュートリアルも、計画の段階でこのように最初のイシューを作ります。GitHub公式ドキュメント、「Planning your work」。"In the **Add a title** field, type `Display a list of starred repositories`." https://docs.github.com/en/get-started/start-your-journey/planning-your-work （確認日 2026-11-01）
 [^labels]: GitHub公式ドキュメント、「Managing labels」。"GitHub provides default labels in every new repository." / "`bug` | Indicates an unexpected problem or unintended behavior" / "`documentation` | Indicates a need for improvements or additions to documentation" / "`enhancement` | Indicates new feature requests" https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels （確認日 2026-11-01）
 [^projects]: GitHub公式ドキュメント、「About Projects」。"A project is an adaptable table, board, and roadmap that integrates with your issues and pull requests on GitHub to help you plan and track your work effectively at the user or organization level." https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects （確認日 2026-11-01）
 [^board]: GitHub公式ドキュメント、「Planning your work」。"The board's columns represent stages of your work. As you make progress, move each item to show its status." https://docs.github.com/en/get-started/start-your-journey/planning-your-work （確認日 2026-11-01）

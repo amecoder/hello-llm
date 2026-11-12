@@ -1,5 +1,7 @@
 # 第6章 搜尋與研究——連同來源一起獲取最新資訊
 
+<Badge type="info" text="選讀" /> 需要的時候再讀。跳過也能跟上後面的章節。
+
 > **一句話總結**：今天發生的事、經常變化的資訊，用**網頁搜尋**；需要彙集多份資料來比較的大問題，就交給**研究**（Research）。
 > 不管用哪一種，都要把附帶的來源親自開啟看一看，這才算完整的一套。
 
@@ -10,9 +12,9 @@
 AI 只知道它學習到某個時間點為止的內容（[第1階段第1章](../00-common/01-what-is-llm.md)裡的"知識截止時間"）。
 所以像"這周的天氣""昨天釋出的政策"這樣的近期事情，直接問很容易答錯。
 **網頁搜尋**（web search）是讓 Claude 去網際網路上查詢最新資訊再回答的功能。[^search]
-免費套餐也可以使用。[^pricing]
+免費方案也可以使用。[^pricing]
 
-不需要另外開啟什麼。新介面裡沒有網頁搜尋的開關，Claude 會在有幫助時自己去搜索。[^search][^new] 免費賬號的「+」選單裡也沒有「網頁搜尋」。[^screen]
+不需要另外開啟什麼。新介面裡沒有網頁搜尋的開關，Claude 會在有幫助時自己去搜索。[^search][^new] 免費帳號的「+」選單裡也沒有「網頁搜尋」。[^screen]
 
 ::: details 如果你在用舊介面（點選展開）
 在舊介面裡，點輸入框左下角的「+」，選擇「網頁搜尋」。開啟後，旁邊會出現一個勾選標記。再點一下就關閉了。[^search]
@@ -36,7 +38,8 @@ AI 只知道它學習到某個時間點為止的內容（[第1階段第1章](../
 ## 給它連結，讓它去讀
 
 如果有想讓它讀的網頁，就把**網址**（URL，每個網頁都有的網際網路地址）貼上進來。
-如果網頁搜尋是開啟的，Claude 會直接去讀取那個網頁的內容。這叫做**網頁抓取**（web fetch）。[^fetch]
+這樣 Claude 就會直接去讀取那個網頁的內容。這叫做**網頁抓取**（web fetch）。[^fetch]
+網頁抓取要在能使用網頁搜尋時才能工作。[^fetch] 如果是新介面，就像上一節看到的那樣，不需要另外開啟什麼。
 
 ```
 請讀下面這篇報道，只把與我們店這樣的小飯館有關的內容整理成三行。
@@ -44,8 +47,8 @@ https://www.example.com/news/12345
 ```
 
 讓它整篇總結一篇很長的文章，會**消耗很多用量。**[^fetch]
-免費套餐的使用額度每 5 小時重新補滿一次，搜尋和抓取也算在這個額度裡。[^fetch]
-所以請先想一想，是需要完整分析，還是隻要知道要點就行。使用額度在[第1章](01-getting-started.md)裡講。
+免費方案的使用額度每 5 小時重新補滿一次，搜尋和抓取也算在這個額度裡。[^fetch]
+所以請先想一想，是需要完整分析，還是只要知道要點就行。使用額度在[第1章](01-getting-started.md)裡講。
 
 <Quiz id="ch206-fetch" />
 
@@ -56,11 +59,11 @@ https://www.example.com/news/12345
 
 ![在隱身模式下問"請在網上搜索。告訴我國立中央博物館的參觀時間。"的介面。① 回答上方的「已搜尋網頁」，② 句末的來源標記「museum」，③ 輸入框下面"不會用於歷史記錄、記憶和 Claude 的訓練"的提示](../../../guide/10-claude/assets/shot-13-web-search-marked.png)
 
-這是在隱身模式下拍的介面（免費套餐）。**紅色編號對應下面列表裡的同號內容。**
+這是在隱身模式下拍的介面（免費方案）。**紅色編號對應下面列表裡的同號內容。**
 
 - ① **「已搜尋網頁」**——表示 Claude 在網際網路上查詢過。點一下，就會展開它找了什麼。
 - ② **來源標記**——句末的小標籤（「museum」「segye」等）就是這句話取自的網站。
-- ③ 提示這是隱身模式，所以這個對話不會用於記錄、記憶和訓練。[^screen]
+- ③ 這張圖是在隱身模式下拍的，所以才會出現這條提示。它和搜尋無關，可以跳過。[^screen]
 
 點開 ① 再展開一次，就能看到 Claude 用的搜尋詞和搜尋結果裡出現的網站列表。
 
@@ -91,7 +94,7 @@ https://www.example.com/news/12345
 每條內容都請標明取自哪個網頁。
 ```
 
-像"附近的餐館"這樣地點很重要的問題，它可能會使用根據 **IP 地址**（連線網際網路的每臺裝置都有的編號）推測出的位置。[^search] 如果出現了不對的地區的結果，請直接寫上小區或街道的名字。
+像"附近的餐館"這樣地點很重要的問題，請直接寫上小區或街道的名字。不寫的話，Claude 可能會使用根據你的網路連線（IP 地址，連線網際網路的每臺裝置都有的編號）推測出的位置。這樣有時會出現不對的地區的結果。[^search]
 
 <Quiz id="ch206-citations" />
 
@@ -99,7 +102,9 @@ https://www.example.com/news/12345
 
 **研究**（Research）是深入挖掘一個問題的功能。
 它會連續搜尋很多次，並根據找到的內容，自己決定接下來看什麼。[^research]
-付費套餐（Pro·Max·Team·Enterprise）可以在網頁、桌面端、手機應用裡使用。[^research]
+付費方案（Pro·Max·Team·Enterprise）可以在網頁、桌面端、手機應用裡使用。[^research]
+
+如果你用的是免費方案，這一節大致看一看就行。重點有兩個：**把問題寫詳細，收到的報告裡的數字要去來源核對。** 這兩點對網頁搜尋也同樣適用。
 
 ### 開始的方法
 
@@ -115,8 +120,8 @@ https://www.example.com/news/12345
 
 ![在輸入框裡輸入到 ① 「/deep」時，② 「deep-research」出現在列表裡，③ 旁邊顯示英文說明的介面](../../../guide/10-claude/assets/shot-12-deep-research-marked.png)
 
-這是免費套餐的介面。① 在輸入框裡只輸入 `/deep`，② 「deep-research」就會出現在列表裡。③ 旁邊用英語寫著什麼時候用這個功能。[^screen]
-免費賬號的「+」選單裡沒有「Research」。列表裡雖然能看到這個名稱，但幫助文件說研究是付費套餐的功能。[^research] 本指南沒有在免費賬號裡傳送過研究。
+這是免費方案的介面。① 在輸入框裡只輸入 `/deep`，② 「deep-research」就會出現在列表裡。③ 旁邊用英語寫著什麼時候用這個功能。[^screen]
+免費帳號的「+」選單裡沒有「Research」。列表裡雖然能看到這個名稱，但幫助文件說研究是付費方案的功能。[^research] 所以本指南裡沒有研究結果的介面。因為沒有在免費帳號裡傳送過研究。
 
 問題越詳細越好。請把[第1階段第4章](../00-common/04-prompt-basics.md#好提示詞的5個要素)裡的五個要素原樣放進去。
 
@@ -128,7 +133,7 @@ https://www.example.com/news/12345
 - 優先使用 2026 年的資料，不知道日期的資料請單獨標出
 ```
 
-::: details 收到的回答大概是這樣（示例——點選展開）
+::: details 收到的回答大概是這樣（示例——點選展開）（點選展開）
 這是本指南編寫的示例。實際的回答會因服務和每次情況而不同。
 
 > **一行結論**：如果是經營 1 家店的老闆，把三項費用加起來，最少的那個 App ○ 更有利。
@@ -158,11 +163,16 @@ https://www.example.com/news/12345
 
 - **用量可能很快用完。** 額度和普通對話是一樣的。不過它會彙集多個來源寫出很長的回答，所以用得更快。[^research]
 - **如果它好像沒有做研究，** 就直接說"請使用研究工具來……"。[^research]
-- **連線的應用也會用到。** 如果你打開了聯結器（連線到 Claude 的其他應用，[第7章](07-projects-tools.md)），研究過程中就會不每次詢問，直接使用那些工具。[^research]
-- **在手機上開始的話，只會搜尋網頁。** 它跳過聯結器時，也不會另外告訴你。如果還需要所連線應用裡的資料，請在網頁或桌面端開始。[^research]
 - **模型是固定的。** 不管你選了哪個模型，執行的都是為研究指定的模型。[^research]
 
 報告越長、越像那麼回事，就越容易跳過核對。請從結論裡用到的數字開始，開啟來源對照一下。
+
+::: details 如果連線了郵件、日曆這類其他應用（點選展開）
+Claude 可以連線郵件、日曆這類其他應用。這樣連線的應用叫做**聯結器**（[第7章](07-projects-tools.md)）。如果你還沒連線過，這個框可以跳過。
+
+- **連線的應用也會用到。** 如果你打開了聯結器，研究過程中就會不每次詢問，直接使用那些工具。[^research]
+- **在手機上開始的話，只會搜尋網頁。** 它跳過聯結器時，也不會另外告訴你。如果還需要所連線應用裡的資料，請在網頁或桌面端開始。[^research]
+:::
 
 <Quiz id="ch206-research" />
 
@@ -183,6 +193,7 @@ https://www.example.com/news/12345
 研究適合在 1~3 分鐘內使用五次以上工具的大範圍調查。[^when]
 
 把擴充套件思考和研究**一起**開啟，Claude 會先制定計劃，再廣泛收集，給出更長的報告。[^when]
+擴充套件思考開關會因方案和模型出現在模型選單裡（[第2章](02-screen-tour.md)）。如果看得到開關，就開啟它再開始研究。看不到的話，只用研究也可以。
 
 <Quiz id="ch206-when" />
 
@@ -191,13 +202,13 @@ https://www.example.com/news/12345
 1. 在新聊天裡問"請在網上搜索。告訴我我們小區這個月的文化活動"。小區的名字要自己寫。
 2. 親自打開回答裡附的兩個來源，確認活動日期和原文一致。
 3. 貼上一個你最近讀過的報道的網址，請它總結成三行。
-4. 如果是付費套餐，把上面的外賣 App 手續費例子改成適合你工作的樣子，用研究傳送。從收到的報告結論裡挑一個數字，到來源裡去找一找。
+4. 如果是付費方案，把上面的外賣 App 手續費例子改成適合你工作的樣子，用研究傳送。從收到的報告結論裡挑一個數字，到來源裡去找一找。
 
 **連續任務**（[籌備讀書會](../00-common/practice-kit.md)）：問"請在網上搜索。告訴我我們小區區立圖書館研討室的租借方法"。小區的名字要自己填。營業時間和申請方法，請開啟來源親自確認。
 
 ## 小結
 
-- 最新資訊用網頁搜尋來問。免費套餐也可以。
+- 最新資訊用網頁搜尋來問。免費方案也可以。
 - 在新介面裡，Claude 會自己去搜索（舊介面是「+」→「網頁搜尋」）。一定要它搜尋的話，就寫"在網上搜索"。
 - 貼上網址，它就會去讀那個網頁。長文章會多耗用量。
 - 就算附了引用，也可能出錯。開啟連結和原文對照。
@@ -222,9 +233,9 @@ https://www.example.com/news/12345
 
 [^search]: Anthropic 幫助文件，「Enable and use web search」. "You can have Claude search the internet to provide you with up-to-date information and insights when using the following models:" / "A checkmark will appear next to “Web search” when it’s enabled." / "Note: If you have the new Claude experience, there's no web search toggle. Claude searches the web when it helps." / "If you want to ensure that Claude uses web search, include "Search the web" or "Use web search" in your prompt to Claude." / "Claude selects images from web search results, powered by Bing, and displays them alongside its text response." / "Every response includes citations, so you can easily verify sources yourself." / "Claude may use your location (inferred from your IP address) when responding to a request for localized results." https://support.claude.com/en/articles/10684626 (確認日期 2026-10-26)
 [^fetch]: Anthropic 幫助文件，「Enable and use web search」. "When “Web search” is toggled on, Claude can also retrieve content directly from web pages when provided with specific URLs." / "This can consume a significant portion of your usage limit, especially for lengthy content." / "As a free user, you have usage limits that reset every five hours." https://support.claude.com/en/articles/10684626 (確認日期 2026-10-26)
-[^pricing]: Anthropic 價格頁面，Free 套餐說明。 "Search the web, create files, and run code" https://claude.com/pricing (確認日期 2026-10-26)
+[^pricing]: Anthropic 價格頁面，Free 方案說明。 "Search the web, create files, and run code" https://claude.com/pricing (確認日期 2026-10-26)
 [^new]: Anthropic 幫助文件，「Claude Cowork and chat are one Claude」. "Web search: There's no web search toggle. Claude searches the web when it helps." / "Research: Type /deep-research, or click the “+” button below the chat input, then choose “Research.”" https://support.claude.com/en/articles/16761823 (確認日期 2026-10-26)
-[^screen]: 在 Claude 網頁介面（免費套餐，韓語）中直接確認。輸入框「+」選單（沒有「網頁搜尋」「Research」）、在隱身模式下提問所得回答中的"웹 검색함"標記和來源標記、點選來源後在新標籤頁開啟的 www.museum.go.kr、輸入框 `/deep` 列表裡出現的 "deep-research"。（確認日期 2026-10-27）
+[^screen]: 在 Claude 網頁介面（免費方案，韓語）中直接確認。輸入框「+」選單（沒有「網頁搜尋」「Research」）、在隱身模式下提問所得回答中的"웹 검색함"標記和來源標記、點選來源後在新標籤頁開啟的 www.museum.go.kr、輸入框 `/deep` 列表裡出現的 "deep-research"。（確認日期 2026-10-27）
 [^research]: Anthropic 幫助文件，「Use research on Claude」. "It runs multiple searches that build on each other and decides what to look into next based on what it finds." / "Research is available for users with paid Claude plans (Pro, Max, Team, or Enterprise) using Claude on the web, Claude Desktop, or Claude Mobile." / "Important: You must have web search turned on for research to function." / "Click the “+” button on the bottom left of your chat interface, then "Research." A blue indicator will appear on the bottom of the chat window." / "However, research sessions can use up your limits faster due to Claude retrieving multiple sources and providing comprehensive responses." / "In this case, you can steer and prompt Claude to use Research by saying “Claude, please use the research tool to…”" / "During research, Claude can use tools from your connectors automatically, without asking for approval each time." / "When you start research in Claude Mobile, Claude only searches the web and doesn’t use your connectors." / "Research runs on Claude Opus 5.5 and falls back to Claude Opus 4.8 when needed." https://support.claude.com/en/articles/11088861 (確認日期 2026-10-26)
 [^when]: Anthropic 幫助文件，「When should I use web search, extended thinking, and research?」. "Web search is best for straightforward, factual queries that can be answered with one or two tool calls" / "Extended thinking shines when tackling complex reasoning tasks that don't require recent info from the web" / "Research is optimal for comprehensive information gathering requiring five or more tool calls over 1-3 minutes" / "Combining extended thinking with research allows Claude to both plan its approach thoughtfully and execute comprehensive information gathering" / "The research feature can synthesize information across multiple sources with proper citations and produces a longer final report." https://support.claude.com/en/articles/11095361 (確認日期 2026-10-26)
 [^academy-research]: Claude Academy「Claude 101」課程 「Research for deep dives」. "Include relevant constraints." / "a few minutes or more, depending on the question." / "If you're not sure how to frame your research question, you can even ask Claude to help you write a better Research prompt before enabling the feature." https://academy.claude.com/courses/claude-101/research-mode-for-deep-dives (確認日期 2026-10-26)

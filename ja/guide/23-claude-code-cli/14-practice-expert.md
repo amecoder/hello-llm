@@ -10,24 +10,24 @@
 
 ## 実習課題の進め方
 
-1. **練習フォルダを新しく作ります。** 例: `~/hello-ai-연습/다시`（「다시」は「もう一度」）。`inbox` には週次会議のメモを1つだけ入れます。臨時会議のメモは課題7で入れます。
+1. **練習フォルダを新しく作ります。** 例: `~/hello-ai-practice/again`（「다시」は「もう一度」）。`inbox` には週次会議のメモを1つだけ入れます。臨時会議のメモは課題7で入れます。
 2. **課題の「やってみること」のとおりに進めます。** 灰色の箱の文をコピーして使えば大丈夫です。
 3. **「うまくいったか確認」を1つずつチェックします。** できなかった項目があったら、「見直す場所」の章で、その部分だけもう一度やってみてください。
 
 MacとLinuxは、ターミナルでこう入力します。メモは、前に使っていた練習フォルダからコピーします。
 
 ```bash
-mkdir -p ~/hello-ai-연습/다시/inbox
-cd ~/hello-ai-연습/다시
-cp ../터미널/inbox/회의-2026-10-27-주간회의.txt inbox/
+mkdir -p ~/hello-ai-practice/again/inbox
+cd ~/hello-ai-practice/again
+cp ../terminal/inbox/meeting-2026-10-27-weekly.txt inbox/
 ```
 
 Windows PowerShellはこう入力します。この章のWindowsのコマンドは、実行して試してはいません。
 
 ```powershell
-mkdir $HOME\hello-ai-연습\다시\inbox
-cd $HOME\hello-ai-연습\다시
-cp ..\터미널\inbox\회의-2026-10-27-주간회의.txt inbox\
+mkdir $HOME\hello-ai-practice\again\inbox
+cd $HOME\hello-ai-practice\again
+cp ..\terminal\inbox\meeting-2026-10-27-weekly.txt inbox\
 ```
 
 課題1〜7は順番に進めます。前の課題の結果を、後の課題が使います。**課題8はいちばん最後に**やります。
@@ -51,7 +51,7 @@ cp ..\터미널\inbox\회의-2026-10-27-주간회의.txt inbox\
 **やってみること**: 練習フォルダで `claude --permission-mode manual` で起動して、送ります。信頼の確認の画面で、最初に選ばれているのは `No, exit` です。下矢印で `Yes, I trust this folder` を選びます。
 
 ```text
-inbox/회의-2026-10-27-주간회의.txt を読んで 회의록.md に整理して。決定事項、タスク（担当・期限）、次の会議に分けて、メモにない内容は書かないで。
+inbox/meeting-2026-10-27-weekly.txt を読んで minutes.md に整理して。決定事項、タスク（担当・期限）、次の会議に分けて、メモにない内容は書かないで。
 ```
 
 **うまくいったか確認**
@@ -89,7 +89,7 @@ inbox/회의-2026-10-27-주간회의.txt を読んで 회의록.md に整理し�
 5. 元に戻すと、送った依頼が入力欄に戻ってきます。Escを2回押して消してから、次の課題に進みます。
 
 ```text
-회의록.md のタスクの表に「状態」の列を追加して、すべて「進行中」と書いて。ほかの部分は直さないで。
+minutes.md のタスクの表に「状態」の列を追加して、すべて「進行中」と書いて。ほかの部分は直さないで。
 ```
 
 **うまくいったか確認**
@@ -104,10 +104,10 @@ inbox/회의-2026-10-27-주간회의.txt を読んで 회의록.md に整理し�
 
 **こんなとき**: 同じルールや手順を、何度も言い直しているとき。
 
-**やってみること**: 議事録のルールをCLAUDE.mdに3〜5行で書きます。そのあとスキル `meeting-notes` を作り、**新しいセッション**でルールを伝えずに呼び出します。お手本: [CLAUDE.md](/practice/cli/results/8장-CLAUDE.md.txt) ・ [スキル](/practice/cli/results/9장-스킬-meeting-notes.txt)
+**やってみること**: 議事録のルールをCLAUDE.mdに3〜5行で書きます。そのあとスキル `meeting-notes` を作り、**新しいセッション**でルールを伝えずに呼び出します。お手本: [CLAUDE.md](/practice/ja/cli/results/ch8-CLAUDE.md.txt) ・ [スキル](/practice/ja/cli/results/ch9-skill-meeting-notes.txt)
 
 ```text
-/meeting-notes inbox/회의-2026-10-27-주간회의.txt
+/meeting-notes inbox/meeting-2026-10-27-weekly.txt
 ```
 
 **うまくいったか確認**
@@ -122,7 +122,7 @@ inbox/회의-2026-10-27-주간회의.txt を読んで 회의록.md に整理し�
 
 **こんなとき**: 会話を開かずに整理を終わらせたいとき。
 
-**やってみること**: 回す前に、セッションで `/usage` を見ておきます。そのあと `/exit` で抜けて、ターミナルで進めます。[10章](10-headless-automation.md)の貼り付け用の箱で `주간정리.sh`（週のまとめのスクリプト）を作り、`bash 주간정리.sh` で回します。Windowsは10章のPowerShellの箱を貼り付けます。
+**やってみること**: 回す前に、セッションで `/usage` を見ておきます。そのあと `/exit` で抜けて、ターミナルで進めます。[10章](10-headless-automation.md)の貼り付け用の箱で `weekly-summary.sh`（週のまとめのスクリプト）を作り、`bash weekly-summary.sh` で回します。Windowsは10章のPowerShellの箱を貼り付けます。
 
 **うまくいったか確認**
 
@@ -139,13 +139,13 @@ inbox/회의-2026-10-27-주간회의.txt を読んで 회의록.md に整理し�
 **やってみること**: 次の順番でやってみてください。
 
 1. 11章の変更記録のフックを入れて、ファイルを1つ変えさせます。
-2. この練習フォルダで、12章の「Gitで最初の記録を残す」を最初からたどります。ただし、12章の最初の箱の `cd ~/hello-ai-연습/터미널` の行は入力しなくてかまいません。すでにそのフォルダにいるからです。`git init` から入力します。
+2. この練習フォルダで、12章の「Gitで最初の記録を残す」を最初からたどります。ただし、12章の最初の箱の `cd ~/hello-ai-practice/terminal` の行は入力しなくてかまいません。すでにそのフォルダにいるからです。`git init` から入力します。
 3. 12章のとおりに `.gitignore` を作り、`git config`・`git add .`・`git status --short` を経て、`git commit` で最初のコミットまで進めます。
 
 **うまくいったか確認**
 
 - ☐ `/hooks` にフックが見える
-- ☐ `변경기록.txt`（変更記録）を自分で開いて、行が増えたかを見た
+- ☐ `changelog.txt`（変更記録）を自分で開いて、行が増えたかを見た
 - ☐ `git log --oneline` に記録が見える
 
 **見直す場所**: [11章](11-hooks-statusline.md)、[12章](12-parallel-remote.md)
@@ -165,8 +165,8 @@ inbox/회의-2026-10-27-주간회의.txt を読んで 회의록.md に整理し�
 1つ目の段階では、13章で保存しておいたファイルを使います。消してしまったなら、[13章](13-cost-safety-trouble.md)のとおりにもう一度保存します。MacとLinuxはこう入力します。
 
 ```bash
-cp ~/Downloads/회의-2026-10-29-임시회의.txt inbox/
-cat inbox/회의-2026-10-29-임시회의.txt
+cp ~/Downloads/meeting-2026-10-29-adhoc.txt inbox/
+cat inbox/meeting-2026-10-29-adhoc.txt
 git add .
 git commit -m "臨時会議のメモを追加"
 ```
@@ -174,8 +174,8 @@ git commit -m "臨時会議のメモを追加"
 Windows PowerShellはこう入力します。
 
 ```powershell
-cp $HOME\Downloads\회의-2026-10-29-임시회의.txt inbox\
-Get-Content -Encoding UTF8 inbox\회의-2026-10-29-임시회의.txt
+cp $HOME\Downloads\meeting-2026-10-29-adhoc.txt inbox\
+Get-Content -Encoding UTF8 inbox\meeting-2026-10-29-adhoc.txt
 git add .
 git commit -m "臨時会議のメモを追加"
 ```
@@ -186,7 +186,7 @@ git commit -m "臨時会議のメモを追加"
 - いちばん下の行が `auto mode on` なら、`Shift + Tab` を1回押して `manual mode on` に変えます。
 - 13章のよい例のとおりに任せます。
 
-3つ目の段階で、元のフォルダの `inbox` からメモを取り出す理由は `주간정리.sh` です。このスクリプトは、`inbox` の会議メモをすべて人の目を通さずに処理します。隠れた指示が入ったメモが残っていると、次に回したときにそのまま処理されます。取り出すコマンドは、13章「隠れた指示に気をつける」の節の最後にあります。
+3つ目の段階で、元のフォルダの `inbox` からメモを取り出す理由は `weekly-summary.sh` です。このスクリプトは、`inbox` の会議メモをすべて人の目を通さずに処理します。隠れた指示が入ったメモが残っていると、次に回したときにそのまま処理されます。取り出すコマンドは、13章「隠れた指示に気をつける」の節の最後にあります。
 
 **うまくいったか確認**
 
@@ -202,9 +202,9 @@ git commit -m "臨時会議のメモを追加"
 
 **こんなとき**: もう練習ではなく、自分の仕事に使いたいとき。
 
-**やってみること**: 新しいフォルダ（例: `~/hello-ai-연습/내-주간정리`、「自分の週のまとめ」）に `inbox` を作り、**個人情報を消した**自分のメモを2〜3個入れます。入れるときに2つのことをそろえます。
+**やってみること**: 新しいフォルダ（例: `~/hello-ai-practice/my-weekly-summary`、「自分の週のまとめ」）に `inbox` を作り、**個人情報を消した**自分のメモを2〜3個入れます。入れるときに2つのことをそろえます。
 
-- ファイル名は `회의-日付.txt` の形にそろえます。スクリプトが `회의-`（「会議-」）で始まるファイルだけを探すからです。
+- ファイル名は `meeting-日付.txt` の形にそろえます。スクリプトが `meeting-`（「会議-」）で始まるファイルだけを探すからです。
 - WordやHangul（ワープロソフト）のファイルなら、`.txt` で保存してから入れます。
 
 そのあと `claude` を起動して、送ります。
@@ -216,28 +216,28 @@ inboxのメモを読んで、私が毎週使うまとめの様式を決めたい
 スキルができたら `/exit` で抜けて、課題5のスクリプトをこのフォルダにコピーして回します。Windowsは、10章のPowerShellの箱をこのフォルダで貼り付けます。
 
 ```bash
-cp ../다시/주간정리.sh .
-bash 주간정리.sh
+cp ../again/weekly-summary.sh .
+bash weekly-summary.sh
 ```
 
 回し終わったメモは移しておきます。そうすれば、次の週に同じメモをまた整理せずにすみます。`mv` はファイルを移すコマンドです。次の週は `inbox` に新しいメモを入れて回します。MacとLinuxはこう入力します。
 
 ```bash
 mkdir -p done
-mv inbox/회의-*.txt done/
+mv inbox/meeting-*.txt done/
 ```
 
 Windows PowerShellはこう入力します。
 
 ```powershell
 mkdir done -Force
-Move-Item inbox\회의-*.txt done\
+Move-Item inbox\meeting-*.txt done\
 ```
 
 **うまくいったか確認**
 
 - ☐ ルールを書く前にClaudeが質問し、自分の答えが反映された
-- ☐ `bash 주간정리.sh` の1行（Windowsは10章のPowerShellの箱）で、自分のメモが自分の様式どおりに整理される
+- ☐ `bash weekly-summary.sh` の1行（Windowsは10章のPowerShellの箱）で、自分のメモが自分の様式どおりに整理される
 - ☐ 数字・名前・期限を、元のメモと照らし合わせた
 - ☐ 次の週も同じコマンドで回るか、メモを新しく入れて試した
 
@@ -285,7 +285,7 @@ CLAUDE.mdには、Claudeがフォルダを読んでもわからないことだ�
 作ったツールを、毎週こんなふうに回してみてください。
 
 1. **集める**: メモをその都度 `inbox` に入れる。個人情報は消す。
-2. **整理する**: `bash 주간정리.sh` を回す（Windowsは10章のPowerShellの箱）。
+2. **整理する**: `bash weekly-summary.sh` を回す（Windowsは10章のPowerShellの箱）。
 3. **確かめる**: 数字・担当・期限を元のメモと照らし合わせる。
 4. **記録する**: 回し終わったメモを `done` に移す。気に入ったら `git add .` と `git commit -m "今週のまとめ"` で残す。初めてなら、このフォルダで `git init` から始める。[12章](12-parallel-remote.md)の箱の `cd` の行は入力しない。
 5. **直す**: 同じ指摘を2回したら、CLAUDE.mdかスキルを直す。

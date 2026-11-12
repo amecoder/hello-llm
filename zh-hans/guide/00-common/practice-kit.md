@@ -22,12 +22,12 @@
 
 | 文件 | 内容 |
 |---|---|
-| [memo-next-month.txt](/practice/memo-next-month.txt) | 11月聚会备忘录。干事没整理过的笔记 |
-| [minutes-last-meeting.txt](/practice/minutes-last-meeting.txt) | 10月聚会的会议记录。定下的事、待办事项、没定下的事 |
-| [members.csv](/practice/members.csv) | 会员名单（化名）。出席情况和谁交了会费 |
-| [fees.csv](/practice/fees.csv) | 10月会费账本。收入和支出 |
-| [memo-last-month.txt](/practice/memo-last-month.txt) | 10月聚会备忘录。用于「已知答案的测试」 |
-| [last-notice.txt](/practice/last-notice.txt) | 上个月真正发出去的10月通知。「已知答案的测试」的标准答案 |
+| [memo-next-month.txt](/practice/zh-hans/memo-next-month.txt) | 11月聚会备忘录。干事没整理过的笔记 |
+| [minutes-last-meeting.txt](/practice/zh-hans/minutes-last-meeting.txt) | 10月聚会的会议记录。定下的事、待办事项、没定下的事 |
+| [members.csv](/practice/zh-hans/members.csv) | 会员名单（化名）。出席情况和谁交了会费 |
+| [fees.csv](/practice/zh-hans/fees.csv) | 10月会费账本。收入和支出 |
+| [memo-last-month.txt](/practice/zh-hans/memo-last-month.txt) | 10月聚会备忘录。用于「已知答案的测试」 |
+| [last-notice.txt](/practice/zh-hans/last-notice.txt) | 上个月真正发出去的10月通知。「已知答案的测试」的标准答案 |
 
 CSV 文件是可以用 Excel 打开的表格文件。会员名单里没有写联系方式。即使用真实的聚会资料来做，也请先去掉或替换姓名和联系方式再上传（[第9章](09-safety.md)）。
 

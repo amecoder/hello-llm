@@ -1,5 +1,7 @@
 # 第5章 搬运技能——用一行 `$weekly-review` 做每周回顾
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：Codex 的技能和 Claude Code 是**同一种格式**（`SKILL.md`），只是存放的位置和调用的符号不同。文件夹是 `.agents/skills`，调用时用 `$名称`。
 > 把整理工具里的 3 个技能搬过来，用一行 `$weekly-review` 做出每周回顾，再和原件对一对。
 
@@ -38,9 +40,14 @@ mkdir -p .agents/skills
 cp -R .claude/skills/meeting-notes .claude/skills/study-notes .claude/skills/weekly-review .agents/skills/
 ```
 
-这次练习是预先定好许可方式再运行的终端执行（第7章），所以没法询问，就那样停住了。在应用里这一步看起来是什么样，本指南没能亲自确认。如果出现征求许可的画面，请读清楚**要往哪里写什么**，再做判断。
+这两行的意思是这样的。
 
-本指南是把 Codex 告诉我的命令**亲自**执行，才完成复制的。打开 macOS 终端，用 `cd ~/hello-ai-연습/정리도구` 进入文件夹，然后输入上面的两行。如果是第一次用终端，请先看 [Claude Code 第10章](../20-claude-code/10-terminal.md)。
+- `mkdir -p .agents/skills`：创建 `.agents/skills` 文件夹。`mkdir` 是“创建文件夹”，`-p` 是“把中间的文件夹也一次建好，已经有了就直接跳过”。
+- `cp -R 原件1 原件2 原件3 .agents/skills/`：把三个技能文件夹复制到 `.agents/skills/` 里面。`cp` 是“复制”，`-R` 是“连文件夹里的文件一起整个复制”。原来的文件夹会原样保留。
+
+本指南的练习不是在应用里，而是在**终端**里运行的。这是预先定好许可方式、让它不来询问的运行方式，所以 Codex 没法询问，就那样停住了（这种方式在第7章里讲）。在应用里这一步看起来是什么样，本指南没能亲自确认。如果出现征求许可的画面，请读清楚**要往哪里写什么**，再做判断。
+
+本指南是把 Codex 告诉我的命令**亲自**执行，才完成复制的。打开 macOS 终端，用 `cd ~/hello-ai-practice/organizer` 进入文件夹，然后输入上面的两行。如果是第一次用终端，请先看 [Claude Code 第10章](../20-claude-code/10-terminal.md)。
 
 搬完之后，`.agents/skills` 下面有 `meeting-notes`、`study-notes`、`weekly-review` 三个文件夹就行了。
 
@@ -56,7 +63,7 @@ $weekly-review
 
 复制完成之后，它**直接**打开了 `.agents/skills/weekly-review/SKILL.md`，没有用文件搜索。然后汇总 3 份回顾备忘，做出了每周回顾。
 
-结果：[用技能做的每周回顾](/practice/notes/results/codex/5장-주간회고-스킬로.txt)
+结果：[用技能做的每周回顾](/practice/zh-hans/notes/results/codex/ch5-weekly-review-with-skill.txt)
 
 我把数字和事实，和原始备忘对了一遍。
 
@@ -83,7 +90,7 @@ $weekly-review
 
 从头创建新技能时，调用默认自带的 `$skill-creator`，然后说明目标、步骤、格式。[^creator] 官方文档推荐的好的第一个技能，是每周汇报或会议后续整理这样的**步骤和格式总是相同的事**。[^first] 整理工具的三个技能正是这样的例子。
 
-**插件**是把技能和外部工具连接打包在一起安装的套装。[^plugin] ChatGPT 和 Codex 共用一份插件目录。[^shared] 对于插件里带的钩子（自动运行的脚本），文档要求在运行之前先审查，判断它是否可信。[^hooks] 第一次见到的插件，就像在 [Claude Code 第7章](../20-claude-code/07-skills-plugins.md)里学的那样，先确认是谁做的、有什么权限。
+这次练习不需要**插件**。只要记住名字和要注意的地方就行。插件是把技能和外部工具连接打包在一起安装的套装。[^plugin][^shared] 对于插件里带的钩子（自动运行的脚本），文档要求在运行之前先审查，判断它是否可信。[^hooks] 第一次见到的插件，就像在 [Claude Code 第7章](../20-claude-code/07-skills-plugins.md)里学的那样，先确认是谁做的、有什么权限。
 
 <Quiz id="ch505-create" />
 
@@ -126,6 +133,6 @@ $weekly-review
 [^creator]: Codex 官方文档，「Skills & Plugins」。 "In ChatGPT, start with `@skill-creator`; in Codex, use `$skill-creator`." https://learn.chatgpt.com/docs/skills-and-plugins （确认日期 2026-11-01）
 [^first]: Codex 官方文档，「Skills & Plugins」。 "Good first skills include a weekly update, a campaign brief, a meeting follow-up, or any task where the steps and format should stay consistent." https://learn.chatgpt.com/docs/skills-and-plugins （确认日期 2026-11-01）
 [^plugin]: Codex 官方文档，「Skills & Plugins」。 "A **plugin** is an installable bundle that can include skills and Model Context Protocol (MCP) servers." https://learn.chatgpt.com/docs/skills-and-plugins （确认日期 2026-11-01）
-[^shared]: Codex 官方文档，「Skills & Plugins」。 "ChatGPT and Codex share one universal plugin directory." https://learn.chatgpt.com/docs/skills-and-plugins （确认日期 2026-11-01）
+[^shared]: ChatGPT 和 Codex 共用一份插件目录。Codex 官方文档，「Skills & Plugins」。 "ChatGPT and Codex share one universal plugin directory." https://learn.chatgpt.com/docs/skills-and-plugins （确认日期 2026-11-01）
 [^hooks]: Codex 官方文档，「Plugins」。 "Review and trust plugin hooks before they run." https://learn.chatgpt.com/docs/plugins （确认日期 2026-11-01）
 

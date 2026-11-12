@@ -22,16 +22,16 @@
 
 | 檔案 | 內容 |
 |---|---|
-| [memo-next-month.txt](/practice/memo-next-month.txt) | 11月聚會備忘錄。幹事沒整理過的筆記 |
-| [minutes-last-meeting.txt](/practice/minutes-last-meeting.txt) | 10月聚會的會議記錄。定下的事、待辦事項、沒定下的事 |
-| [members.csv](/practice/members.csv) | 會員名單（化名）。出席情況和誰交了會費 |
-| [fees.csv](/practice/fees.csv) | 10月會費賬本。收入和支出 |
-| [memo-last-month.txt](/practice/memo-last-month.txt) | 10月聚會備忘錄。用於「已知答案的測試」 |
-| [last-notice.txt](/practice/last-notice.txt) | 上個月真正發出去的10月通知。「已知答案的測試」的標準答案 |
+| [memo-next-month.txt](/practice/zh-hant/memo-next-month.txt) | 11月聚會備忘錄。幹事沒整理過的筆記 |
+| [minutes-last-meeting.txt](/practice/zh-hant/minutes-last-meeting.txt) | 10月聚會的會議記錄。定下的事、待辦事項、沒定下的事 |
+| [members.csv](/practice/zh-hant/members.csv) | 會員名單（化名）。出席情況和誰交了會費 |
+| [fees.csv](/practice/zh-hant/fees.csv) | 10月會費賬本。收入和支出 |
+| [memo-last-month.txt](/practice/zh-hant/memo-last-month.txt) | 10月聚會備忘錄。用於「已知答案的測試」 |
+| [last-notice.txt](/practice/zh-hant/last-notice.txt) | 上個月真正發出去的10月通知。「已知答案的測試」的標準答案 |
 
 CSV 檔案是可以用 Excel 開啟的表格檔案。會員名單裡沒有寫聯絡方式。即使用真實的聚會資料來做，也請先去掉或替換姓名和聯絡方式再上傳（[第9章](09-safety.md)）。
 
-**這裡有故意放進去的陷阱。** 會費賬本里有不小心記了兩遍的一行，還有金額為空的一行。看看 AI 能不能把它們找出來，還是直接加起來了事。
+**這裡有故意放進去的陷阱。** 會費賬本裡有不小心記了兩遍的一行，還有金額為空的一行。看看 AI 能不能把它們找出來，還是直接加起來了事。
 
 ## 每章要做的事
 

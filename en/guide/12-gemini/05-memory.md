@@ -1,5 +1,7 @@
 # Chapter 5. Memory and Personalization — Memory, Instructions, and Importing from Other AIs
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **In one line**: Gemini tailors its answers to you using **your past chats (Memory)**, **your connected Google apps**, and **the instructions you write down**.
 > If it remembers something wrong, correct it in a chat. To erase a memory, delete the chats where it came up. You can also bring over your memories and chats from ChatGPT and Claude.
 
@@ -41,7 +43,7 @@ There are a few requirements to use it.[^memory]
 
 - **Age 18 or older**, with a personal Google Account
 - **Keep Activity (활동 기록 보관) must be turned on** ([Chapter 3](03-chats.md#finding-past-chats))
-- **It is not used in certain features.** Most notably, it does not work in Gems or voice chats (Live). However, in a text chat, you can ask Gemini to refer back to a past voice chat.
+- **It is not used in certain features.** Most notably, it does not work in Gems (your own custom Gemini built with instructions, [Chapter 7](07-skills-apps.md)) or voice chats (Live, talking back and forth out loud, [Chapter 10](10-voice-mobile.md)). However, in a text chat, you can ask Gemini to refer back to a past voice chat.
 
 ### Asking About Past Chats
 
@@ -56,9 +58,18 @@ If you are curious, just ask directly. You can ask, "Did you use any info from p
 
 ### When a Memory Is Wrong, or When You Want to Delete It
 
-**If something is wrong, correct it right in the chat.** As long as Memory is turned on, Gemini will take your correction into account. Even so, it might not always get it right.[^memory]
+The way to do it depends on what you want.
 
-**To erase something Gemini remembers, you must delete all chats containing that information.** Find and delete those chats in Gemini Apps Activity (Gemini 앱 활동).[^memory] Even after you delete a chat, there may be a short delay before it stops showing up in answers.[^memory]
+| What you want | How |
+|---|---|
+| Fix a wrong memory | Correct it right in the chat |
+| Erase a memory | Delete every chat containing that information |
+| Stop it from learning new things | Turn off the Memory switch |
+
+**If something is wrong, correct it right in the chat.** For example, just say, "I live in Busan now, not Seoul." As long as Memory is turned on, Gemini will take your correction into account. Even so, it might not always get it right.[^memory]
+
+**To erase something Gemini remembers, you must delete all chats containing that information.** Find and delete those chats in Gemini Apps Activity (Gemini 앱 활동).[^memory]
+Even after you delete a chat, there may be a short delay before it stops showing up in answers.[^memory]
 
 Giving an instruction like "Forget about that" **does not always work.** To make sure Gemini stops bringing up a topic, delete the chats about it.[^instructions]
 
@@ -98,16 +109,23 @@ Here is how to add an instruction. Step 1 was verified on the screen, and steps 
 
 ### Asking Gemini to Remember Things in Chat (US Only)
 
-There is also a feature where you can tell Gemini to remember something right in the middle of a chat, like saying "Remember that I am vegetarian." However, this feature is **currently available only in the US**, and requires a Google AI plan and being 18 or older.[^instructions]
+There is also a feature where you can tell Gemini to remember something right in the middle of a chat, like saying "Remember that I am vegetarian." However, this feature is **not currently available in South Korea.** It only works in the US.[^instructions]
 Outside the US, you can get the same result using **Instructions** above. Just add an instruction like: "I am vegetarian. Leave out meat when recommending food."
 
-There is also a **Memory summary** screen where you can view and edit what Gemini understands about you in one place, but this is also available **only in English to paid plan users in the US**.[^summary]
+The **Memory summary** screen, where you can view and edit what Gemini understands about you in one place, is also US-only.[^summary]
+
+::: details More on the US-only features (click to expand)
+- **Telling Gemini to remember in a chat**: Works only in the US, and requires a Google AI plan and being 18 or older.[^instructions]
+- **Memory summary**: Available **only in English to paid plan users in the US**.[^summary]
+:::
 
 <Quiz id="ch305-instructions" />
 
 ## Importing from Other AIs
 
-If you are switching to Gemini from ChatGPT or Claude, **you can bring over your memories and chats.**[^import] In the Settings (설정) menu, under the Data & privacy (데이터 및 개인 정보 보호) section, click Import memory to Gemini (Gemini로 메모리 가져오기) ([Chapter 2](02-screen-tour.md#the-settings-screen-—-account-preferences-and-privacy)).[^screen]
+If you are switching to Gemini from ChatGPT or Claude, **you can bring over your memories and chats.**[^import] If you have never used another AI, you can skip this section.
+
+In the Settings (설정) menu, under the Data & privacy (데이터 및 개인 정보 보호) section, click Import memory to Gemini (Gemini로 메모리 가져오기) ([Chapter 2](02-screen-tour.md#the-settings-screen-—-account-preferences-and-privacy)).[^screen]
 
 ![The Import memory to Gemini (Gemini로 메모리 가져오기) screen. Red numbers mark ① the prompt to paste into another AI and the Copy (복사) button, ② the "Paste information here..." (여기에 정보를 붙여넣으세요...) box and Add memory (메모리 추가) button, ③ Import chats (채팅 가져오기) — ZIP file (up to 5 GB) and the Add (추가) button, and ④ the notice explaining that imported chats are saved in Activity and used to improve services, including training AI models](../../../guide/12-gemini/assets/shot-15-import-marked.png)
 
@@ -119,13 +137,13 @@ Here is how to **import memories**.[^import][^screen]
 
 To **import chats**, use ③. Click Add (추가) to upload the ZIP file you exported from ChatGPT or Claude.[^import][^screen]
 
-- In ChatGPT, get this from Export data (데이터 내보내기) under Settings > Data controls (설정 > 데이터 관리). In Claude, get it from Export data (데이터 내보내기) under Settings (설정) → Privacy (개인정보보호). For step-by-step instructions, see [ChatGPT Chapter 8](../11-chatgpt/08-privacy.md#exporting-your-data) and [Claude Chapter 9](../10-claude/09-privacy.md#downloading-your-data). (Google's Korean help page translates ChatGPT's menu as 데이터 제어, but on the actual Korean ChatGPT screen verified by this guide, it is called 데이터 관리.)[^import]
+- In ChatGPT, get this from Export data (데이터 내보내기) under Settings > Data controls (설정 > 데이터 관리). In Claude, get it from Export data (데이터 내보내기) under Settings (설정) → Privacy (개인정보보호).[^import][^menu-name] For step-by-step instructions, see [ChatGPT Chapter 8](../11-chatgpt/08-privacy.md#exporting-your-data) and [Claude Chapter 9](../10-claude/09-privacy.md#downloading-your-data).
 - Each file can be up to 5 GB, and you can upload up to 5 files per day.[^import]
 - If you upload the same ZIP file again, new chats are added and previously imported chats are overwritten.[^import]
 
 **Keep one thing in mind before importing.** As noted in ④, imported chats that you **continue** are saved in your Activity and **used to improve Google services, including training generative AI models.**[^import][^screen] You can manage and delete your activity at any time.
 
-Importing is only available for personal Google Accounts and users aged 18 or older. It is not available in the European Economic Area (EEA), Switzerland, or the United Kingdom.[^import]
+Importing is only available for personal Google Accounts and users aged 18 or older.[^import][^import-region]
 
 <Quiz id="ch305-import" />
 
@@ -168,4 +186,6 @@ Next chapter: [Chapter 6. Search and Deep Research](06-search.md)
 [^instructions]: Google Help, "Manage what Gemini remembers about you and customize responses" (Korean version: 「Gemini가 나에 대해 기억하는 정보 관리 및 대답 맞춤설정」). "Gemini will remember the information or instructions you share with it, even in new chats." / "be over 18." (Korean version: "만 18세 이상이어야 합니다.") / "Have a Google AI plan." / "Only available in the US. All users can add instructions for Gemini Apps." / "Remember that I am vegetarian." / "“Start all responses with a short summary.”" / "Important: Instructions for Gemini to forget or avoid topics in chats doesn’t always work perfectly. To make sure Gemini stops mentioning a topic, delete any chats about it from your Gemini Apps Activity." / "Tap Add +." / "At the top, turn Instructions for Gemini off  or on ." / "To stop Gemini from learning about you" Korean UI labels: Instructions for Gemini (Gemini 요청 사항), Add + (추가 +), Submit (제출), More (더보기), Edit (수정), Delete (삭제). https://support.google.com/gemini/answer/16598625 (checked on 2026-10-31)
 [^summary]: Google Help, "View & manage your Memory summary in Gemini Apps" (Korean version: 「Gemini 앱에서 내 메모리 요약 보기 및 관리하기」). "You can use memory summary to view, edit, and delete what Gemini Apps understands about you." / "Currently available to US users with an active Google AI plan." / "Available in English." https://support.google.com/gemini/answer/18617127 (checked on 2026-10-31)
 [^apps]: Google Help, "Connect your Google apps to personalize your Gemini experience" (Korean version: 「Google 앱을 연결하여 Gemini 환경 개인화하기」). "Get content from Gmail and Google Photos, like photos from your last vacation." https://support.google.com/gemini/answer/16598406 (checked on 2026-10-31)
+[^menu-name]: Google's Korean help page translates ChatGPT's menu as "데이터 제어", but on the actual Korean ChatGPT screen verified by this guide, it is called "데이터 관리".
+[^import-region]: Importing is not available in the European Economic Area (EEA), Switzerland, or the United Kingdom. The source is the "Import from other AI platforms to Gemini Apps" help article below.
 [^import]: Google Help, "Import from other AI platforms to Gemini Apps" (Korean version: 「다른 AI 플랫폼에서 Gemini 앱으로 가져오기」). "You can bring over your preferences, remembered facts & details, and general contextual information (sometimes called  "memory") from other AI platforms." / "Be signed in with a personal Google Account. This feature isn’t available if you sign in to a work, school, or supervised Google Account." / "Be 18 or older." / "The EEA, Switzerland, or the United Kingdom." / "Click Settings  Data controls." / "Click Settings  Privacy." / "Copy the response from the other AI platform that contains memories about you." / "Tip:  You can upload up to 5 .zip.files per day." / "A download link will be sent to the email associated with your account on the other AI platform." / "If you reupload a  .zip file with your exported chats it will add any new conversations and overwrite previously imported ones." / "Your imported and continued chats are saved in your Activity. This data is used to improve our services (including training generative AI models), and to protect Google, our users and the public." https://support.google.com/gemini/answer/16868299 (checked on 2026-10-31)

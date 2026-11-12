@@ -206,7 +206,7 @@ export const LEVEL_EXPERT: Record<string, QuestionText> = {
     prompt: "必須用一塊 GPU 微調大模型。QLoRA 的做法，哪項是對的？",
     choices: [
       "把全部權重轉成 4 位元後，重新訓練所有權重",
-      "不拆到多塊 GPU，而是隻留一部分層，其餘層全部刪掉再訓練",
+      "不拆到多塊 GPU，而是只留一部分層，其餘層全部刪掉再訓練",
       "透過凍結的 4 位元量化模型，把梯度傳給 LoRA",
       "把訓練資料減少到四分之一，降低記憶體佔用",
     ],
@@ -506,7 +506,7 @@ export const LEVEL_EXPERT: Record<string, QuestionText> = {
     prompt: "要做一個能讀郵件、回信甚至轉賬的智慧體。哪種設計即使注入成功也能減輕損失？",
     choices: [
       "把所有工具都給它，但用系統提示詞禁止危險行動",
-      "用一個管理員賬號處理所有工作，減少許可權錯誤",
+      "用一個管理員帳號處理所有工作，減少許可權錯誤",
       "只給最小必需的許可權，高風險的行動要由人批准",
       "交給模型自己判斷風險程度，決定是否執行",
     ],
@@ -528,7 +528,7 @@ export const LEVEL_EXPERT: Record<string, QuestionText> = {
       "模型輸出是可信的，所以只留執行日誌",
       "驗證輸出，並用 parameterized query 來執行",
       "在系統提示詞裡寫上不要生成惡意 SQL",
-      "把 temperature 設為 0，總是隻出同樣的 SQL，風險就消失了",
+      "把 temperature 設為 0，總是只出同樣的 SQL，風險就消失了",
     ],
     explain: "OWASP LLM05 建議用 zero-trust，把模型當作另一個使用者來對待，驗證輸出，並且對輸入了模型輸出的資料庫操作使用 parameterized query。",
   },

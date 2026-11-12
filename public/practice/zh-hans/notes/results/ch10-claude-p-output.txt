@@ -1,0 +1,13 @@
+$ cd ~/hello-ai-practice/organizer
+$ claude -p "给我看 notes 文件夹里的文件列表，并一行一行告诉我每个文件是用哪个模板（templates 里的哪一个）写的。不要修改文件。回答要简短，只用表格。"
+
+`notes/` 里有 4 个文件。我把每个文件的标题和开头的栏目跟 `templates/` 里的模板对照，判断了用的是哪个模板。没有修改任何文件。
+
+| notes 文件 | 使用的模板 |
+|---|---|
+| `study-2026-10-28-prompt-lecture.md` | `templates/study-notes.md` |
+| `weekly-review-2026-10-27.md` | `templates/weekly-review.md` |
+| `minutes-2026-10-27-weekly.md` | `templates/minutes.md` |
+| `minutes-2026-10-29-adhoc.md` | `templates/minutes.md` |
+
+确认范围：4/4（只比较了每个文件开头的 15 行）

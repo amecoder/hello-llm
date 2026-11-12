@@ -1,5 +1,7 @@
 # 第5章 搬運技能——用一行 `$weekly-review` 做每週回顧
 
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
+
 > **一句話總結**：Codex 的技能和 Claude Code 是**同一種格式**（`SKILL.md`），只是存放的位置和呼叫的符號不同。資料夾是 `.agents/skills`，呼叫時用 `$名稱`。
 > 把整理工具裡的 3 個技能搬過來，用一行 `$weekly-review` 做出每週回顧，再和原件對一對。
 
@@ -38,9 +40,14 @@ mkdir -p .agents/skills
 cp -R .claude/skills/meeting-notes .claude/skills/study-notes .claude/skills/weekly-review .agents/skills/
 ```
 
-這次練習是預先定好許可方式再執行的終端執行（第7章），所以沒法詢問，就那樣停住了。在應用裡這一步看起來是什麼樣，本指南沒能親自確認。如果出現徵求許可的畫面，請讀清楚**要往哪裡寫什麼**，再做判斷。
+這兩行的意思是這樣的。
 
-本指南是把 Codex 告訴我的命令**親自**執行，才完成複製的。開啟 macOS 終端，用 `cd ~/hello-ai-연습/정리도구` 進入資料夾，然後輸入上面的兩行。如果是第一次用終端，請先看 [Claude Code 第10章](../20-claude-code/10-terminal.md)。
+- `mkdir -p .agents/skills`：建立 `.agents/skills` 資料夾。`mkdir` 是「建立資料夾」，`-p` 是「把中間的資料夾也一次建好，已經有了就直接跳過」。
+- `cp -R 原件1 原件2 原件3 .agents/skills/`：把三個技能資料夾複製到 `.agents/skills/` 裡面。`cp` 是「複製」，`-R` 是「連資料夾裡的檔案一起整個複製」。原來的資料夾會原樣保留。
+
+本指南的練習不是在應用裡，而是在**終端**裡執行的。這是預先定好許可方式、讓它不來詢問的執行方式，所以 Codex 沒法詢問，就那樣停住了（這種方式在第7章裡講）。在應用裡這一步看起來是什麼樣，本指南沒能親自確認。如果出現徵求許可的畫面，請讀清楚**要往哪裡寫什麼**，再做判斷。
+
+本指南是把 Codex 告訴我的命令**親自**執行，才完成複製的。開啟 macOS 終端，用 `cd ~/hello-ai-practice/organizer` 進入資料夾，然後輸入上面的兩行。如果是第一次用終端，請先看 [Claude Code 第10章](../20-claude-code/10-terminal.md)。
 
 搬完之後，`.agents/skills` 下面有 `meeting-notes`、`study-notes`、`weekly-review` 三個資料夾就行了。
 
@@ -56,7 +63,7 @@ $weekly-review
 
 複製完成之後，它**直接**打開了 `.agents/skills/weekly-review/SKILL.md`，沒有用檔案搜尋。然後彙總 3 份回顧備忘，做出了每週回顧。
 
-結果：[用技能做的每週回顧](/practice/notes/results/codex/5장-주간회고-스킬로.txt)
+結果：[用技能做的每週回顧](/practice/zh-hant/notes/results/codex/ch5-weekly-review-with-skill.txt)
 
 我把數字和事實，和原始備忘對了一遍。
 
@@ -64,8 +71,8 @@ $weekly-review
 |---|---|---|
 | 點贊 12 個 | 12 個 | 對 |
 | 價格錯寫成 6,000韓元 | 6,000韓元 錯誤 | 對 |
-| 套餐今天 4 個 | 4 個 | 對 |
-| 套餐本週合計 11 個 | 11 個 | 對 |
+| 方案今天 4 個 | 4 個 | 對 |
+| 方案本週合計 11 個 | 11 個 | 對 |
 | Instagram 3 次都發了 | 3 次 | 對 |
 | 熱紅酒成本 1,800韓元 | 沒有 | 漏了 |
 | 買燈泡並換上 | 沒有 | 漏了 |
@@ -73,7 +80,7 @@ $weekly-review
 
 來源：本指南的實踐結果（2026-11-01）
 
-沒有錯的專案，但有**三個漏掉了**。看起來是因為不太符合回顧模板的三欄（做得好的、可惜的、下週要做的），就被省掉了。像這樣，**不只要看錯的，也要看漏的。** 如果有不該漏掉的內容，就在技能里加一行，比如"像熱紅酒成本這種會成為下次會議議題的數字，要放進下週要做的裡"。
+沒有錯的專案，但有**三個漏掉了**。看起來是因為不太符合回顧模板的三欄（做得好的、可惜的、下週要做的），就被省掉了。像這樣，**不只要看錯的，也要看漏的。** 如果有不該漏掉的內容，就在技能裡加一行，比如"像熱紅酒成本這種會成為下次會議議題的數字，要放進下週要做的裡"。
 
 即使不呼叫，只要請求和技能說明相符，Codex 也可能自己挑選技能。[^implicit] 所以最好在說明的開頭，把**什麼時候用**寫清楚。[^frontload]
 
@@ -83,7 +90,7 @@ $weekly-review
 
 從頭建立新技能時，呼叫預設自帶的 `$skill-creator`，然後說明目標、步驟、格式。[^creator] 官方文件推薦的好的第一個技能，是每週彙報或會議後續整理這樣的**步驟和格式總是相同的事**。[^first] 整理工具的三個技能正是這樣的例子。
 
-**外掛**是把技能和外部工具連線打包在一起安裝的套裝。[^plugin] ChatGPT 和 Codex 共用一份外掛目錄。[^shared] 對於外掛裡帶的鉤子（自動執行的指令碼），文件要求在執行之前先審查，判斷它是否可信。[^hooks] 第一次見到的外掛，就像在 [Claude Code 第7章](../20-claude-code/07-skills-plugins.md)裡學的那樣，先確認是誰做的、有什麼許可權。
+這次練習不需要**外掛**。只要記住名字和要注意的地方就行。外掛是把技能和外部工具連線打包在一起安裝的套裝。[^plugin][^shared] 對於外掛裡帶的鉤子（自動執行的指令碼），文件要求在執行之前先審查，判斷它是否可信。[^hooks] 第一次見到的外掛，就像在 [Claude Code 第7章](../20-claude-code/07-skills-plugins.md)裡學的那樣，先確認是誰做的、有什麼許可權。
 
 <Quiz id="ch505-create" />
 
@@ -92,7 +99,7 @@ $weekly-review
 1. 請 Codex 把 `.claude/skills` 裡的 3 個技能複製到 `.agents/skills`。如果它徵求許可，讀過內容後判斷；如果被攔住，就在終端裡（應用選單「View → Open Terminal」也行）親自輸入正文裡的兩行命令。
 2. 開啟一個新對話，在輸入框裡輸入 `$`，確認三個技能是否出現。
 3. 傳送 `$weekly-review`，把結果和原始備忘對一對。把錯的和漏的分開數一數。
-4. 有漏掉的，就在技能里加一行，再執行一次。
+4. 有漏掉的，就在技能裡加一行，再執行一次。
 
 **連續任務**：第6章裡，我們會看每週五讓每週回顧自動執行的預約，以及雲端和手機。
 
@@ -126,6 +133,6 @@ $weekly-review
 [^creator]: Codex 官方文件，「Skills & Plugins」。 "In ChatGPT, start with `@skill-creator`; in Codex, use `$skill-creator`." https://learn.chatgpt.com/docs/skills-and-plugins （確認日期 2026-11-01）
 [^first]: Codex 官方文件，「Skills & Plugins」。 "Good first skills include a weekly update, a campaign brief, a meeting follow-up, or any task where the steps and format should stay consistent." https://learn.chatgpt.com/docs/skills-and-plugins （確認日期 2026-11-01）
 [^plugin]: Codex 官方文件，「Skills & Plugins」。 "A **plugin** is an installable bundle that can include skills and Model Context Protocol (MCP) servers." https://learn.chatgpt.com/docs/skills-and-plugins （確認日期 2026-11-01）
-[^shared]: Codex 官方文件，「Skills & Plugins」。 "ChatGPT and Codex share one universal plugin directory." https://learn.chatgpt.com/docs/skills-and-plugins （確認日期 2026-11-01）
+[^shared]: ChatGPT 和 Codex 共用一份外掛目錄。Codex 官方文件，「Skills & Plugins」。 "ChatGPT and Codex share one universal plugin directory." https://learn.chatgpt.com/docs/skills-and-plugins （確認日期 2026-11-01）
 [^hooks]: Codex 官方文件，「Plugins」。 "Review and trust plugin hooks before they run." https://learn.chatgpt.com/docs/plugins （確認日期 2026-11-01）
 

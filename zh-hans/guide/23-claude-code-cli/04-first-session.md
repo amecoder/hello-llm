@@ -1,6 +1,6 @@
 # 第4章 第一次会话
 
-<Badge type="tip" text="必读" /> 想跟着这一阶段学下去，一定要读这一章。
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
 
 > **一句话总结**：进入要工作的文件夹，输入 `claude`。在信任确认窗口里选 `Yes`，然后用说话的方式交代任务。要停下按 `Esc`，要结束输入 `/exit`。
 
@@ -13,14 +13,14 @@
 Mac·Linux 这样输入。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude
 ```
 
 Windows PowerShell 这样输入。
 
 ```powershell
-cd $HOME\hello-ai-연습\터미널
+cd $HOME\hello-ai-practice\terminal
 claude
 ```
 
@@ -42,7 +42,7 @@ claude
 ```text
  Accessing workspace:
 
- ~/hello-ai-연습/터미널
+ ~/hello-ai-practice/terminal
 
  Quick safety check: Is this a project you created or one you trust? (Like your own code, a
  well-known open source project, or work from your team). If not, take a moment to review what's in
@@ -75,7 +75,7 @@ claude
 ```text
  ▐▛███▛█   Claude Code v2.1.318
 ▝▜██████▀  Opus 5.5 · Claude 套餐名称
- ▝▝   ▝▝   ~/hello-ai-연습/터미널
+ ▝▝   ▝▝   ~/hello-ai-practice/terminal
 
 ▎ Auto mode is now Claude Code's default permission mode.
 ▎ Auto mode lets Claude handle permission prompts automatically. Claude checks each tool call for
@@ -118,7 +118,7 @@ claude
 现在让它干活。像跟同事说话一样写就行。[^colleague] 把这句话输入到输入框里，按 Enter。
 
 ```text
-读一下 inbox 里的会议笔记，保存成 회의록.md。回答只要一行。
+读一下 inbox 里的会议笔记，保存成 minutes.md。回答只要一行。
 ```
 
 `.md` 是 Markdown 文件。是用记事本也能打开的文本文件。
@@ -133,7 +133,7 @@ claude
 ![创建文件前的许可窗口。这是创建另一个文件时截的图。① 要创建的文件名，② 选项。选 1 号 Yes 就是只允许这一次](../../../guide/23-claude-code-cli/assets/shot-04-create-marked.png)
 
 ```text
- Do you want to create 회의록.md?
+ Do you want to create minutes.md?
  ❯ 1. Yes
    2. Yes, and switch to accept edits (auto-approve file edits and common file commands) for this
       session (shift+tab)
@@ -147,13 +147,13 @@ claude
 完成后，它会这样回答。
 
 ```text
-● 已整理成 회의록.md。笔记里的 10/27（周一）和 11/3（周一）在 2026 年的日历上是星期二，所以在文件里标注了
+● 已整理成 minutes.md。笔记里的 10/27（周一）和 11/3（周一）在 2026 年的日历上是星期二，所以在文件里标注了
   需要确认。
 ```
 
 就算它提到星期几的事，也不要惊讶。练习笔记里的星期是编出来的，和日历对不上。Claude 发现了这一点。回答的句子每次运行都可能不同。输入框里也可能浅浅地显示出下一个请求的建议。不用也没关系。
 
-用同一份笔记做出的成果物在 [4장-회의록.txt](/practice/cli/results/4장-회의록.txt) 里。可以和你自己的结果比一比。不需要一模一样。
+用同一份笔记做出的成果物在 [ch4-minutes.txt](/practice/zh-hans/cli/results/ch4-minutes.txt) 里。可以和你自己的结果比一比。不需要一模一样。
 
 <Quiz id="ch804-first" />
 
@@ -162,7 +162,7 @@ claude
 会话就是对话。可以接着前面的事继续交代。这次来修改文件。
 
 ```text
-在 회의록.md 的最上面一行加上"草稿"这一行。回答只要一行。
+在 minutes.md 的最上面一行加上"草稿"这一行。回答只要一行。
 ```
 
 这次它会显示要改动的行，然后问你。带 `+` 的行是要新加入的行。
@@ -174,7 +174,7 @@ claude
  4  - **日期时间：** 10/27（周一）
 ```
 
-在它下面会问 `Do you want to make this edit to 회의록.md?`。要改动的行的样子，取决于你的会议记录。
+在它下面会问 `Do you want to make this edit to minutes.md?`。要改动的行的样子，取决于你的会议记录。
 
 许可窗口要读完再选。这是你能核对它做的是不是你交代的事的时刻。
 
@@ -196,10 +196,10 @@ claude
 
 ```bash
 ls
-cat 회의록.md
+cat minutes.md
 ```
 
-如果在 PowerShell 里文字显示成乱码，就用 `Get-Content -Encoding UTF8 회의록.md` 来看。
+如果在 PowerShell 里文字显示成乱码，就用 `Get-Content -Encoding UTF8 minutes.md` 来看。
 
 在空的输入框里按两次 `Ctrl + D` 也能结束。[^ctrl-d] 一开始，用文字输入的 `/exit` 最不容易搞混。怎么继续已经结束的对话，在第6章讲。
 

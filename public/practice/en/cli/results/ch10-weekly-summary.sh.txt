@@ -1,0 +1,10 @@
+#!/bin/bash
+# Turn each meeting note in inbox into meeting minutes, one by one.
+for memo in inbox/meeting-*.txt; do
+  echo "Organizing: $memo"
+  if claude -p "/meeting-notes $memo" --allowedTools "Read,Write" --max-turns 10; then
+    echo "Done: $memo"
+  else
+    echo "Failed: $memo"
+  fi
+done

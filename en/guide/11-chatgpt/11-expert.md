@@ -1,5 +1,7 @@
 # Chapter 11. Using It Like an Expert — Moving Beyond the Basics to Fit Your Work
 
+<Badge type="warning" text="Advanced" /> Read this once you are comfortable with the earlier chapters and want to use it even better.
+
 > **In One Line**: An expert is not someone who knows more new features. An expert **speaks as if handing off a task, picks the right tool for the job, turns repeated work into a template, and checks the result before using it**.
 > This chapter shows you **how to combine** the features from Chapters 1–10, and introduces scheduled tasks, data analysis, and study mode.
 
@@ -7,21 +9,21 @@ The screenshots are based on the web version (Plus plan) as of October 2026. The
 
 ## What Makes an Expert Different
 
-In [Stage 1, Chapter 3, "Same Tool, Different Results"](../00-common/03-why-learn.md#same-tool-different-results), you learned that the same AI gives different results depending on how you use it. A report by OpenAI looking at how people use ChatGPT at work shows a similar pattern. Even where they could make a big difference, **advanced features like reasoning, deep research, projects, and custom instructions are used less often**.[^adopt]
+In [Stage 1, Chapter 3, "Same Tool, Different Results"](../00-common/03-why-learn.md#same-tool-different-results), you learned that the same AI gives different results depending on how you use it. Ways of working that **apply to any AI**—like deciding what to hand off, testing before handing off, and checking in proportion to the weight of the task—are covered in [Stage 1, Chapter 11, "Using It Like an Expert"](../00-common/11-expert.md). This chapter translates those methods into ChatGPT features.
 
-Ways of working that **apply to any AI**—like deciding what to hand off, testing before handing off, and checking in proportion to the weight of the task—are covered in [Stage 1, Chapter 11, "Using It Like an Expert"](../00-common/11-expert.md). This chapter translates those methods into ChatGPT features. First, take a quick look at what we cover in this chapter.
+A report by OpenAI looking at how people use ChatGPT at work points to the same thing. Even where they could make a big difference, **advanced features like reasoning, deep research, projects, and custom instructions are used less often**.[^adopt] First, take a quick look at what we cover in this chapter.
 
 | Element | One-Line Description | Learn More |
 |---|---|---|
-| Speak like handing off work | State the task, audience, purpose, and format, then refine after seeing the first answer | [Stage 1, Chapter 4 "The 5 Elements of a Good Prompt"](../00-common/04-prompt-basics.md#the-5-elements-of-a-good-prompt), [Stage 1, Chapter 6 "How to Ask for Revisions Well"](../00-common/06-conversation.md#how-to-ask-for-revisions-well) |
-| Pick the right tool | Choose among search, deep research, Work, and reasoning levels to match the task | [Chapter 6 "Deep Research — Handing Off a Report"](06-search.md#deep-research-—-handing-off-a-report), [Chapter 7 "Difference Between Chat and Work"](07-projects-plugins.md#the-difference-between-chat-and-work) |
-| Build up reference materials | Gather files, instructions, and good answers for the same job in one place | [Chapter 7 "Projects — Chats, Files, and Instructions in One Folder"](07-projects-plugins.md#projects-—-conversations-files-and-instructions-in-one-folder) |
-| Make a reusable frame | Save repeated requests as instructions, templates, or skills | [Stage 1, Chapter 8 "4. Turning It into a Reusable Template"](../00-common/08-meta-prompting.md#_4-turn-it-into-a-reusable-template) |
-| Scheduled tasks | Have ChatGPT do a job on its own at a set time | [This chapter, "On Its Own at a Set Time"](#on-its-own-at-a-set-time-—-scheduled-tasks) |
-| Data analysis | Calculate tables and numbers and get charts | [This chapter, "Handing Off Tables and Numbers"](#handing-off-tables-and-numbers-—-data-analysis) |
-| Study mode | Have it help you understand with questions instead of giving the answer | [This chapter, "Using It to Learn"](#using-it-to-learn-—-study-mode) |
-| Shape of the answer | Adjust the tone, tables, and visuals to fit your work | [Chapter 5 "Setting the Tone"](05-memory.md#choosing-a-tone-—-default-style-and-tone-warmth-reference-my-writing-style) |
-| Verify | Decide what to check for each type of output and verify it | [Stage 1, Chapter 9 "Four Habits for Checking"](../00-common/09-safety.md#four-habits-for-checking) |
+| Speak like handing off work | State the task, audience, purpose, and format, then refine after seeing the first answer | [Stage 1, Chapter 4](../00-common/04-prompt-basics.md#the-5-elements-of-a-good-prompt) · [Chapter 6](../00-common/06-conversation.md#how-to-ask-for-revisions-well) |
+| Pick the right tool | Choose among search, deep research, Work, and reasoning levels to match the task | [Chapter 6](06-search.md#deep-research-—-handing-off-a-report) · [Chapter 7](07-projects-plugins.md#the-difference-between-chat-and-work) |
+| Build up reference materials | Gather files, instructions, and good answers for the same job in one place | [Chapter 7](07-projects-plugins.md#projects-—-conversations-files-and-instructions-in-one-folder) |
+| Make a reusable frame | Save repeated requests as instructions, templates, or skills | [Stage 1, Chapter 8](../00-common/08-meta-prompting.md#_4-turn-it-into-a-reusable-template) |
+| Scheduled tasks | Have ChatGPT do a job on its own at a set time | [This chapter](#on-its-own-at-a-set-time-—-scheduled-tasks) |
+| Data analysis | Calculate tables and numbers and get charts | [This chapter](#handing-off-tables-and-numbers-—-data-analysis) |
+| Study mode | Have it help you understand with questions instead of giving the answer | [This chapter](#using-it-to-learn-—-study-mode) |
+| Shape of the answer | Adjust the tone, tables, and visuals to fit your work | [Chapter 5](05-memory.md#choosing-a-tone-—-default-style-and-tone-warmth-reference-my-writing-style) |
+| Verify | Decide what to check for each type of output and verify it | [Stage 1, Chapter 9](../00-common/09-safety.md#four-habits-for-checking) |
 
 <Quiz id="ch111-difference" />
 
@@ -43,7 +45,7 @@ Review criteria: At the end, check whether the total matches the original file a
 Shape: One table by item and a three-line summary.
 ```
 
-::: details The answer you get will look roughly like this (example — click to expand)
+::: details The answer you get will look roughly like this (example — click to expand) (click to expand)
 This is an example created for this guide. Actual answers vary by service and each time you ask.
 
 > | Item | Amount This Month |
@@ -64,9 +66,12 @@ This is an example created for this guide. Actual answers vary by service and ea
 
 :::
 
-**Split it up or bundle it together?** OpenAI Help recommends breaking complex tasks into smaller requests ([Stage 1, Chapter 5, "3. Breaking into Steps"](../00-common/05-prompt-patterns.md#_3-break-into-steps-—-prompt-chaining)).[^prompt] Academy materials explain that you can bundle related context and instructions into a single request. However, they add that giving too much information at once can make the answer less focused.[^aprompt]
+**Split it up or bundle it together?** Choose based on the situation.[^split][^prompt][^aprompt]
 
-If you need to see an intermediate result before deciding the next direction, split the task up. If you have one clear goal, bundle the five lines into a single request. Either way, attach only the materials that are truly needed.
+- If you need to see an intermediate result before deciding the next direction, split the task up ([Stage 1, Chapter 5, "3. Breaking into Steps"](../00-common/05-prompt-patterns.md#_3-break-into-steps-—-prompt-chaining)).
+- If you have one clear goal, bundle the five lines into a single request.
+
+Either way, attach only the materials that are truly needed. Giving too much information can make the answer less focused.
 
 **For multi-step tasks, set a place to pause.** Do not ask for the final version right away. Decide first where you will choose or review. When steps are small, you can catch misunderstandings early. You do not have to redo everything after the whole thing is already built.[^academy-content]
 ```
@@ -104,7 +109,9 @@ Pull the date, store name, and amount from the five attached receipt photos and 
 
 ### Using It Inside Word and PowerPoint
 
-Word, Excel, and PowerPoint share a single **ChatGPT add-in** (a small tool you attach inside a program). Install "ChatGPT" from the Microsoft marketplace. You can edit right from a pane next to your document.[^word][^ppt]
+This is a tool you use **inside the Word and PowerPoint programs**, not on the ChatGPT screen. If you don't use these programs, you can skip this part.
+
+Word, Excel, and PowerPoint share a single **ChatGPT add-in** (a small tool you attach inside a program). Install "ChatGPT" from the **Microsoft marketplace** (the place where you find and install add-ins for Word and PowerPoint). You can edit right from a pane next to your document.[^word][^ppt] If you can't find where to install it on a work computer, ask your company's IT staff.
 
 - ChatGPT for Word is available on **all plans, including Free**. ChatGPT for PowerPoint has limited access on Free and Go. On a work account, an administrator must allow it before it appears.[^word][^ppt]
 - Chats inside the add-in are separate from your ChatGPT chat history. Memory and skills do not carry over either.[^word]
@@ -146,6 +153,8 @@ If you do the same job often, make a reusable frame. The first step is taking a 
 | Skill | A reusable, shareable way of working that holds instructions and examples | Work and school plans like Business, Enterprise, and Edu, according to Help |
 | Plugin | A bundle combining skills and app connections | [Chapter 7 "Plugins"](07-projects-plugins.md#plugins-—-adding-other-services-and-workflows) |
 
+> Templates are used in Work on paid plans, and skills are used mainly on work and school plans. If neither applies to you, just read the part below, and start by putting a frame into your project instructions as shown above.
+
 **You create templates in Work on the web.** Type `@Template-Creator` in the message box. Attach one reference file (a Word, Excel, or PowerPoint file, or a Google Docs link). Then explain what must stay unchanged, what should change, and what information you will provide each time. Once it is created, click "Install (설치)".[^docs]
 ```
 @Template-Creator Create a template from the attached weekly report file.
@@ -154,7 +163,7 @@ Change: The contents inside the table and the date.
 Information provided each time: My work notes for that week.
 ```
 
-To use a template you made, type `@Documents`, `@Spreadsheets`, or `@Presentations` in the message box. When the template gallery opens, choose "Use template". Just choosing it does not start the job. You need to type this week's content and send it.[^docs]
+To use a template you made, type `@Documents` (documents), `@Spreadsheets` (spreadsheets), or `@Presentations` (presentations) in the message box. When the template gallery (the screen that shows the templates you have made) opens, choose "Use template". Just choosing it does not start the job. You need to type this week's content and send it.[^docs]
 
 When writing project instructions, keep the tips below in mind. Originally, OpenAI recommends these tips for custom GPT instructions.[^gpt-make] Applying them to project instructions is this guide's recommendation.
 
@@ -181,13 +190,21 @@ Every Monday at 8 a.m., summarize this week's Seoul weather forecast in one line
 
 You can view, edit, pause, or delete tasks you made from "Scheduled (예약)" in the side menu.[^tasks][^scheduled-name] You can also open them via Settings → "Notifications (알림)" → "Manage tasks (작업 관리)", or from a chat's ••• (More) menu → "View scheduled tasks (예약 작업 보기)".[^tasks]
 
-Choose how to get alerts—push notification or email—under Settings → "Notifications". To get mobile push notifications, create the task in the mobile app.[^tasks]
+Choose how to get alerts—push notification (an alert that pops up on your phone screen) or email—under Settings → "Notifications". To get mobile push notifications, create the task in the mobile app.[^tasks]
 
 ![The "Scheduled" screen in the side menu. At the top is a "Schedule a task" input box, below it is one created task row (with pause, edit, and ••• buttons), and below that is a list of "Suggested" tasks](../../../guide/11-chatgpt/assets/shot-29-scheduled.png)
 
 *The task name in the screenshot was changed to an example. There is a pause button on the left of the task row, and edit and ••• buttons on the right.*[^screen-scheduled] You can also create a task by typing your request right into the "Schedule a task (작업 예약하기)" box at the top.
 
-The number of active tasks you can have at once depends on your plan. It is 3 on Free and Go, 5 on Plus, 10 on Business and Edu, and 15 on Pro and Enterprise, and these numbers may change (checked on 2026-10-24). On Free, tasks run at most once a day. You can only pick broad time windows like morning, afternoon, or night. Setting an exact time like the example above or running a task every hour requires a paid plan.[^tasks] **App event tasks**—like reacting when a new email arrives—are created in Work. They are not available on Free or Go.[^tasks]
+On the Free plan, tasks run at most once a day, and you cannot set an exact time like the example above.[^tasks]
+
+::: details Number of tasks and run conditions by plan (click to expand)
+
+- Number of tasks you can have active at once: 3 on Free and Go, 5 on Plus, 10 on Business and Edu, and 15 on Pro and Enterprise. These numbers may change (checked on 2026-10-24).[^tasks]
+- On Free, you can only pick broad time windows like morning, afternoon, or night. Setting an exact time or running a task every hour requires a paid plan.[^tasks]
+- **App event tasks**—like reacting when a new email arrives—are created in Work. They are not available on Free or Go.[^tasks]
+
+:::
 
 There are also a few things to watch out for.[^tasks]
 - **A task created inside a project cannot read that project's files.** If it needs file contents, write them directly into the task instructions.
@@ -332,7 +349,13 @@ For each course, if you finish the lessons and score **80% or higher on the Asse
 
 ### Frameworks Taught in the Courses — Compared with This Guide
 
-The three courses teach the same ideas as this guide under different names. Knowing the connections below makes it easy to guess what new terms mean when you meet them in the courses. The course terms are kept in their original English.[^academy-content]
+The three courses teach the same ideas as this guide under different names. For example, the courses' **CLEAR** is a set of check questions you ask yourself after getting an answer, like "Did it answer everything? Does it make sense from start to finish?" It is the same idea as this guide's checking habits.[^academy-content]
+
+If you don't plan to take the courses, you can skip the box below. When you take a course, open it to see which chapter of this guide each course term matches.
+
+::: details Matching course terms to chapters in this guide (click to expand)
+
+The course terms are kept in their original English.
 
 - **Task·Context·Expectation** (AI Foundations): State the task, the background (who it is for and why you need it), and the expected shape of the answer (format, length, tone). This is the same idea as [Stage 1, Chapter 4, "The 5 Elements of a Good Prompt"](../00-common/04-prompt-basics.md#the-5-elements-of-a-good-prompt).
 - **CLEAR** (AI Foundations): When you get an answer, ask yourself five questions. Is it **C**omplete? Is it **L**ogical? Is there **E**vidence? Does it fit the **A**udience? Is it **R**elevant to the topic? See also [Stage 1, Chapter 9, "Four Habits for Checking"](../00-common/09-safety.md#four-habits-for-checking) and [Stage 1, Chapter 11, "Checking in Proportion to the Weight of the Work"](../00-common/11-expert.md#check-in-proportion-to-the-weight-of-the-work).
@@ -341,6 +364,8 @@ The three courses teach the same ideas as this guide under different names. Know
 - **Workflow note** (Applied AI Foundations): During a long task, ChatGPT may lose track of your original goal or conditions. So you keep the goal, decisions made, conditions to follow, and checkpoints in one short note. Showing this note again in the next step carries your earlier decisions forward. Keeping this note as a file in a [Chapter 7 "Project"](07-projects-plugins.md#projects-—-conversations-files-and-instructions-in-one-folder) and updating it whenever things change is this guide's suggestion.
 - **Delegating work to an agent** (Agents and Workflows): Write down in advance what to make, which sources to use, what not to do (do not send, do not invent dates or owners, etc.), the shape of the output, and what you will verify yourself. This is nearly identical to ["Five Lines for Handing Off Work"](#five-lines-for-handing-off-work-—-outcome-sources-keep-unchanged-review-criteria-shape) in this chapter.
 - **Rules for choosing features** (Agents and Workflows): Often, a single clear prompt is enough. Use a plugin if you need data from another service, a skill if the same workflow keeps repeating, and a scheduled task if the same check should run at a set time. See ["Turn Repeated Work into a Frame"](#turn-repeated-work-into-a-frame-—-instructions-templates-and-skills) and ["On Its Own at a Set Time"](#on-its-own-at-a-set-time-—-scheduled-tasks).
+
+:::
 
 The courses include many hands-on activities. Keeping ChatGPT open in a tab next to the course lets you follow along right away. The courses recommend using a computer rather than a phone.[^academy-content]
 
@@ -360,7 +385,7 @@ You can read Materials in other languages using your browser's built-in translat
 
 Famous videos by Andrej Karpathy explaining how ChatGPT is built and how to use it are collected in [Stage 1, Chapter 1, "Watch More in Videos"](../00-common/01-what-is-llm.md#watch-and-learn) and [Stage 1, Chapter 3, "Watch More in Videos"](../00-common/03-why-learn.md#watch-and-learn-more).
 
-> Well-known Coursera courses like "Prompt Engineering for ChatGPT" and "Generative AI for Everyone" state on their course pages that you must purchase the Certificate experience to view course materials and assignments, so we left them off this free list (checked on 2026-10-25).[^coursera]
+Two well-known Coursera courses require payment to view the course materials, so we left them off this free list.[^coursera]
 
 <Quiz id="ch111-academy" />
 
@@ -404,6 +429,7 @@ Next chapter: You have finished Stage 2. Test your skills with the [AI Knowledge
 [^adopt]: OpenAI, "ChatGPT Usage and Adoption Patterns at Work". "Advanced features remain underused, even where they could deliver broad impact." https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work (checked on 2026-10-24)
 [^work]: OpenAI Help, "ChatGPT Work and Codex" "Describe the outcome you want. Add any files, constraints, and review criteria ChatGPT should use." https://help.openai.com/en/articles/20001275 · "Using cloud browser in ChatGPT" "Check the result and its sources before relying on it." https://help.openai.com/en/articles/20001280 (checked on 2026-10-24)
 [^docs]: OpenAI Help, "Creating and editing documents, spreadsheets, and presentations with ChatGPT Work". Templates and `@Template-Creator`, "Say what must stay unchanged…" https://help.openai.com/en/articles/20001278 (checked on 2026-10-24)
+[^split]: OpenAI Help ("How do I create a good prompt for an AI model?") recommends breaking complex tasks into smaller requests. Academy materials ("Prompting") explain that you can bundle related context and instructions into a single request, and add that giving too much information can make the answer less focused.
 [^prompt]: OpenAI Help, "How do I create a good prompt for an AI model?". https://help.openai.com/en/articles/4936848 (checked on 2026-10-24)
 [^aprompt]: OpenAI Academy, "Prompting". https://academy.openai.com/public/clubs/work-users-ynjqu/resources/prompting (checked on 2026-10-24)
 [^deep]: OpenAI Help, "Deep research in ChatGPT". "Use search for quick facts, and use deep research for depth and thoroughness." https://help.openai.com/en/articles/10500283 (checked on 2026-10-24)
@@ -430,7 +456,7 @@ Next chapter: You have finished Stage 2. Test your skills with the [AI Knowledge
 [^dlai]: DeepLearning.AI, "ChatGPT Prompt Engineering for Developers". Instructors Isa Fulford "Member of Technical Staff, OpenAI" and Andrew Ng, "1h40m", "Beginner", "Only a basic understanding of Python is needed.", "Course access is free for a limited time during the DeepLearning.AI learning platform beta!" https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/ (checked on 2026-10-25)
 [^msgenai]: Microsoft, "Generative AI for Beginners" GitHub repository README. "This course has 21 lessons." / "Lessons are labeled either 'Learn' lessons explaining a Generative AI concept or 'Build' lessons that explain a concept and code examples". Korean translation is in the `translations/ko` folder. https://github.com/microsoft/generative-ai-for-beginners (checked on 2026-10-25)
 [^boost]: Boostcourse, "Step-by-Step Proposal Writing Learned with AI (AI로 배우는 단계별 기획서 작성법)" course introduction. "Free course (무료강의)", level "Introductory (입문)", "Always open (상시 수강)", syllabus #1–#3 and "[Assignment] Self-guided practice ([과제] 자율 실습 해보기)", instructor Seungpil Lee. https://www.boostcourse.org/aix210 (checked on 2026-10-25)
-[^coursera]: Coursera course page FAQ. "To access course materials, assignments, and earn a Certificate, you'll need to purchase the Certificate experience when you enroll in a course." https://www.coursera.org/learn/prompt-engineering · https://www.coursera.org/learn/generative-ai-for-everyone (checked on 2026-10-25)
+[^coursera]: "Prompt Engineering for ChatGPT" and "Generative AI for Everyone". Their course pages state that you must purchase the Certificate experience to view course materials and assignments. Coursera course page FAQ. "To access course materials, assignments, and earn a Certificate, you'll need to purchase the Certificate experience when you enroll in a course." https://www.coursera.org/learn/prompt-engineering · https://www.coursera.org/learn/generative-ai-for-everyone (checked on 2026-10-25)
 [^scheduled-name]: Help calls this menu "Scheduled (예약됨)", but the actual label on the Korean screen is "Scheduled (예약)".
 [^screen-scheduled]: Checked the "Scheduled (예약)" screen in the side menu directly. Prompt text "Ask ChatGPT to schedule tasks, set reminders, or monitor updates (ChatGPT에게 작업 예약, 알림 설정 또는 업데이트 모니터링을 요청하세요)", input box "Schedule a task (작업 예약하기)", "Pause (일시 중지)" and "Edit (편집)" buttons on the task row, and "Suggested (추천)" list (news updates, email monitoring, finding weekend reading, etc.). The panel that opens when clicking a task was omitted because it showed real task results (checked on 2026-10-28, Plus account web screen)
 [^screen-data]: Checked directly by uploading the fake club dues ledger fees.csv and sending the prompt in this section. The first answer found missing values and duplicates and paused before totaling; the image chart in the second answer had Korean text broken into empty boxes; when asked to redraw, it switched to an in-screen chart. The buttons next to the chart were "Download chart (차트 다운로드)" and "Expand chart (차트 펼치기)". Even after deleting the chat, fees.csv remained in the Library, and deleting it from the Library showed the notice "Moved to trash and will be permanently deleted after 30 days (휴지통으로 이동되며 30일 후 영구 삭제됩니다)" (checked on 2026-10-28, Plus account web screen)

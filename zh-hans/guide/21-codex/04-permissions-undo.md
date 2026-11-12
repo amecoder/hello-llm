@@ -1,5 +1,7 @@
 # 第4章 权限与撤销 — 交出什么，怎样撤销
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：在输入框下面的**权限菜单**里，决定哪些事 Codex 自己做、哪些事要先问你。刚开始请用 **Ask for approval**。
 > 撤销要靠 **Git**。像 Claude Code 的回退这样的功能，我在官方文档里没有找到。所以在交办工作的前后留下记录（提交）的习惯，就更加重要。
 
@@ -19,7 +21,7 @@
 
 官方文档建议**大部分工作从 Ask for approval 开始**。[^start] 它比 Claude Code 的「手动（수동）」多交出去了一步（本指南的对比）。文件夹**里面**的文件，不用问就会修改。
 
-选了 **Approve for me**，Codex 能做的范围也不会扩大。改变的只有“由谁来批准”。[^same-box] 自动审核会多调用一次模型，所以用量可能增加。[^extra]
+选了 **Approve for me**，Codex 能做的范围也不会扩大。改变的只有“由谁来批准”。[^same-box][^extra]
 
 **Full access** 会去掉文件和互联网的所有边界。官方文档也说，只有真的想全部交出去时才用。[^full] 整理备忘不需要它。
 
@@ -48,7 +50,12 @@ Codex 在**审查窗格**（review pane）里展示改动内容。它相当于 C
 
 审查窗格里**不只有 Codex 改的内容。** 我自己改的、还没记录的其他改动，全部都会显示出来。[^includes] 所以在交办工作之前，先把到目前为止的改动记录下来（提交），审查窗格里就只剩下 Codex 的改动，看起来更方便。
 
-在审查窗格上方可以选择查看范围。默认是还没有记录的改动（**Unstaged**），选 **Last turn**，则只看 Codex 最近一次回答里改动的内容。[^views] 刚开始，Last turn 更容易理解。
+在审查窗格上方可以选择查看范围。[^views]
+
+- **Unstaged**（默认）：显示还没有用 `git add` 放进待记录清单的改动。你自己改的也包括在内。
+- **Last turn**：只显示 Codex 最近一次回答里改动的内容。
+
+刚开始，Last turn 更容易理解。因为只会显示刚刚交办的那件事的结果。
 
 如果有不满意的行，可以在那一行写意见。把鼠标移到那一行，点 **+**，写下意见，然后在输入框里发送像“按行上的意见修改”这样的话就行。[^comments]
 
@@ -72,7 +79,7 @@ Claude Code 里有把对话向前回退的功能（[Claude Code 第4章](../20-c
 
 所以在这个阶段，把下面的顺序养成习惯。
 
-1. 交办之前：用应用的 Git 功能（提交）把现在的状态记录下来。[^commit]
+1. 交办之前：把现在的状态记录下来（提交）。可以用应用的 Git 功能，也可以用对话拜托它（见下面）。[^commit]
 2. 交办。
 3. 在审查窗格里用 Last turn 只看改动的部分。
 4. 满意就再记录一次，不满意就撤销。
@@ -115,23 +122,23 @@ Claude Code 里有把对话向前回退的功能（[Claude Code 第4章](../20-c
 
 下一章：[第5章. 搬运技能](05-skills.md)
 
-[^menu]: Codex 官方文档，「Permissions」。"Use the permissions control below the composer in the ChatGPT desktop app or IDE extension." https://learn.chatgpt.com/docs/permission-modes（确认日期 2026-11-01）
-[^names]: Codex 官方文档，「Sandbox」。"Depending on your configuration, the menu can include **Ask for approval**, **Approve for me** for eligible approval requests, **Full access**, and named or custom permissions profiles." https://learn.chatgpt.com/docs/sandboxing（确认日期 2026-11-01）
-[^start]: Codex 官方文档，「Permissions」。"For most work, start with **Ask for approval**. It lets ChatGPT work within the current workspace and pauses before reaching beyond that boundary." https://learn.chatgpt.com/docs/permission-modes（确认日期 2026-11-01）
-[^same-box]: Codex 官方文档，「Permissions」。"Changing who reviews a request doesn't expand the sandbox." https://learn.chatgpt.com/docs/permission-modes（确认日期 2026-11-01）
-[^extra]: Codex 官方文档，「Agent approvals & security」。"Automatic review uses extra model calls, so it can add to Codex usage." https://learn.chatgpt.com/docs/agent-approvals-security（确认日期 2026-11-01）
-[^full]: Codex 官方文档，「Sandbox」。"This removes the filesystem and network boundaries and should be used only when you want the agent to act with full access." https://learn.chatgpt.com/docs/sandboxing（确认日期 2026-11-01）
-[^check]: Codex 官方文档，「Permissions」。"Check the selected mode for the current chat; having a mode available doesn't mean it's selected." https://learn.chatgpt.com/docs/permission-modes（确认日期 2026-11-01）
-[^two]: Codex 官方文档，「Permissions」。"The **sandbox** defines which files and network resources ChatGPT can access." / "**Approvals** determine when ChatGPT pauses before an action or sends the request to automatic review." https://learn.chatgpt.com/docs/permission-modes（确认日期 2026-11-01）
-[^default]: Codex 官方文档，「Agent approvals & security」。"By default, the agent runs with network access turned off." https://learn.chatgpt.com/docs/agent-approvals-security（确认日期 2026-11-01）
-[^auto]: Codex 官方文档，「Agent approvals & security」。"Codex asks for approval to edit files outside the workspace or to run commands that require network access." https://learn.chatgpt.com/docs/agent-approvals-security（确认日期 2026-11-01）
-[^protected]: Codex 官方文档，「Agent approvals & security」。"`<writable_root>/.git` is protected as read-only whether it appears as a directory or file." / "`<writable_root>/.agents` is protected as read-only when it exists as a directory." / "`<writable_root>/.codex` is protected as read-only when it exists as a directory." / "Protection is recursive, so everything under those paths is read-only." https://learn.chatgpt.com/docs/agent-approvals-security（确认日期 2026-11-01）
-[^review-git]: Codex 官方文档，「Code review」。"The review pane requires a project inside a Git repository." https://learn.chatgpt.com/docs/code-review（确认日期 2026-11-01）
-[^includes]: Codex 官方文档，「Code review」。"It includes changes made by Codex, changes you made yourself, and any other uncommitted changes in the repository." https://learn.chatgpt.com/docs/code-review（确认日期 2026-11-01）
-[^views]: Codex 官方文档，「Code review」。"By default, the review pane shows **Unstaged** changes." / "**Last turn** for the most recent assistant turn" https://learn.chatgpt.com/docs/code-review（确认日期 2026-11-01）
-[^comments]: Codex 官方文档，「Code review」。"Inline comments let you attach feedback directly to specific lines in the diff." https://learn.chatgpt.com/docs/code-review（确认日期 2026-11-01）
-[^revert]: Codex 官方文档，「Code review」。"**Entire diff**: Use the action buttons in the review header, such as **Stage all** or **Revert all**." / "**Per file**: Stage, unstage, or revert an individual file." / "**Per hunk**: Stage, unstage, or revert a single hunk." / "Use staging when you want to accept part of the work, and revert when you want to discard it." https://learn.chatgpt.com/docs/code-review（确认日期 2026-11-01）
-[^checkpoint]: Codex 官方文档，「Codex CLI」。"Create Git checkpoints before and after a task so you can revert changes." https://learn.chatgpt.com/docs/codex/cli（确认日期 2026-11-01）
-[^often]: Codex 官方文档，「Agent approvals & security」。"Commit frequently so you can roll back in small increments." https://learn.chatgpt.com/docs/agent-approvals-security（确认日期 2026-11-01）
-[^plan]: Codex 官方文档，「Prompting」。"For a multi-step task, enter `/plan` in the app composer when you want Codex to investigate and propose an approach before editing." https://learn.chatgpt.com/docs/prompting（确认日期 2026-11-01）
-[^commit]: Codex 官方文档，「Local environments」。"You can stage or revert individual chunks, stage or revert entire files, commit changes, push a branch, and create a pull request without leaving the app." https://learn.chatgpt.com/docs/environments/local-environment（确认日期 2026-11-01）
+[^menu]: Codex 官方文档，「Permissions」。"Use the permissions control below the composer in the ChatGPT desktop app or IDE extension." https://learn.chatgpt.com/docs/permission-modes （确认日期 2026-11-01）
+[^names]: Codex 官方文档，「Sandbox」。"Depending on your configuration, the menu can include **Ask for approval**, **Approve for me** for eligible approval requests, **Full access**, and named or custom permissions profiles." https://learn.chatgpt.com/docs/sandboxing （确认日期 2026-11-01）
+[^start]: Codex 官方文档，「Permissions」。"For most work, start with **Ask for approval**. It lets ChatGPT work within the current workspace and pauses before reaching beyond that boundary." https://learn.chatgpt.com/docs/permission-modes （确认日期 2026-11-01）
+[^same-box]: Codex 官方文档，「Permissions」。"Changing who reviews a request doesn't expand the sandbox." https://learn.chatgpt.com/docs/permission-modes （确认日期 2026-11-01）
+[^extra]: 自动审核会多调用一次模型，所以用量可能增加（第8章）。Codex 官方文档，「Agent approvals & security」。"Automatic review uses extra model calls, so it can add to Codex usage." https://learn.chatgpt.com/docs/agent-approvals-security （确认日期 2026-11-01）
+[^full]: Codex 官方文档，「Sandbox」。"This removes the filesystem and network boundaries and should be used only when you want the agent to act with full access." https://learn.chatgpt.com/docs/sandboxing （确认日期 2026-11-01）
+[^check]: Codex 官方文档，「Permissions」。"Check the selected mode for the current chat; having a mode available doesn't mean it's selected." https://learn.chatgpt.com/docs/permission-modes （确认日期 2026-11-01）
+[^two]: Codex 官方文档，「Permissions」。"The **sandbox** defines which files and network resources ChatGPT can access." / "**Approvals** determine when ChatGPT pauses before an action or sends the request to automatic review." https://learn.chatgpt.com/docs/permission-modes （确认日期 2026-11-01）
+[^default]: Codex 官方文档，「Agent approvals & security」。"By default, the agent runs with network access turned off." https://learn.chatgpt.com/docs/agent-approvals-security （确认日期 2026-11-01）
+[^auto]: Codex 官方文档，「Agent approvals & security」。"Codex asks for approval to edit files outside the workspace or to run commands that require network access." https://learn.chatgpt.com/docs/agent-approvals-security （确认日期 2026-11-01）
+[^protected]: Codex 官方文档，「Agent approvals & security」。"`<writable_root>/.git` is protected as read-only whether it appears as a directory or file." / "`<writable_root>/.agents` is protected as read-only when it exists as a directory." / "`<writable_root>/.codex` is protected as read-only when it exists as a directory." / "Protection is recursive, so everything under those paths is read-only." https://learn.chatgpt.com/docs/agent-approvals-security （确认日期 2026-11-01）
+[^review-git]: Codex 官方文档，「Code review」。"The review pane requires a project inside a Git repository." https://learn.chatgpt.com/docs/code-review （确认日期 2026-11-01）
+[^includes]: Codex 官方文档，「Code review」。"It includes changes made by Codex, changes you made yourself, and any other uncommitted changes in the repository." https://learn.chatgpt.com/docs/code-review （确认日期 2026-11-01）
+[^views]: Codex 官方文档，「Code review」。"By default, the review pane shows **Unstaged** changes." / "**Last turn** for the most recent assistant turn" https://learn.chatgpt.com/docs/code-review （确认日期 2026-11-01）
+[^comments]: Codex 官方文档，「Code review」。"Inline comments let you attach feedback directly to specific lines in the diff." https://learn.chatgpt.com/docs/code-review （确认日期 2026-11-01）
+[^revert]: Codex 官方文档，「Code review」。"**Entire diff**: Use the action buttons in the review header, such as **Stage all** or **Revert all**." / "**Per file**: Stage, unstage, or revert an individual file." / "**Per hunk**: Stage, unstage, or revert a single hunk." / "Use staging when you want to accept part of the work, and revert when you want to discard it." https://learn.chatgpt.com/docs/code-review （确认日期 2026-11-01）
+[^checkpoint]: Codex 官方文档，「Codex CLI」。"Create Git checkpoints before and after a task so you can revert changes." https://learn.chatgpt.com/docs/codex/cli （确认日期 2026-11-01）
+[^often]: Codex 官方文档，「Agent approvals & security」。"Commit frequently so you can roll back in small increments." https://learn.chatgpt.com/docs/agent-approvals-security （确认日期 2026-11-01）
+[^plan]: Codex 官方文档，「Prompting」。"For a multi-step task, enter `/plan` in the app composer when you want Codex to investigate and propose an approach before editing." https://learn.chatgpt.com/docs/prompting （确认日期 2026-11-01）
+[^commit]: Codex 官方文档，「Local environments」。"You can stage or revert individual chunks, stage or revert entire files, commit changes, push a branch, and create a pull request without leaving the app." https://learn.chatgpt.com/docs/environments/local-environment （确认日期 2026-11-01）

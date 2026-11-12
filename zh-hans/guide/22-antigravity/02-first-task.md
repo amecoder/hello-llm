@@ -1,9 +1,11 @@
 # 第2章 安装应用与第一次整理——把文件夹打开为项目
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：安装 Antigravity 应用，用 Google 账号登录，然后把整理工具文件夹作为**项目**打开。
 > 一开始用 **Planning mode**（先做计划）来交代任务，读完计划后点 **Proceed** 继续。
 
-本章依据 2026年11月1日确认的 Antigravity 官方文档写成。**本指南还没有在应用界面上实际练习过。** 界面名称原样写了官方文档里的英文名称，和你的界面不同时，以你的界面为准。实际运行结果在第3章（用终端运行）里。
+本指南还没有在应用界面上实际练习过。界面上的按钮名称，原样写了官方文档里的英文名称。和你的界面有点不一样也没关系。找一个名称相近的按钮，跟着做就行。实际运行的结果在第3章（用终端运行）里。[^tested]
 
 ## 安装并登录
 
@@ -30,9 +32,14 @@ Antigravity 应用里的智能体（Agent），在**项目**（Projects）里干
 
 出处：Antigravity 官方文档[^modes]
 
-整理工具用 **Local mode** 就够了。New worktree mode 只能在 Git 仓库里使用。[^worktree]
+整理工具请选 **Local mode**。它直接在当前文件夹里工作，所以结果文件马上就能找到。
 
-新项目一开始用 **Inherit Global** 权限，可以读写项目文件夹里的全部内容。[^inherit] 权限在第4章讲。
+权限（智能体可以做什么）在第4章讲。现在不用改设置。
+
+::: details 详细说明（点击展开）
+- New worktree mode 只能在 Git 仓库里使用。想让复杂的工作和当前文件夹分开进行时用它。[^worktree]
+- 新项目一开始用 **Inherit Global** 权限。这是可以读写项目文件夹里全部内容的状态。[^inherit]
+:::
 
 <Quiz id="ch602-project" />
 
@@ -49,9 +56,13 @@ Antigravity 应用里的智能体（Agent），在**项目**（Projects）里干
 
 刚开始，建议用 **Planning mode**。计划书（Implementation plan）出来后读一读，没问题就点对话里或计划书上方的 **Proceed**，继续往下做。[^proceed] 它和 Claude Code 第5章的「计划（계획）」模式、Codex 第4章的 `/plan` 起同样的作用。
 
-在设置的 **Agent** 标签页里，可以选择审阅方式。**Request review** 会在做出计划或改动内容时停下来，等我批准。[^review-mode] 相反，Always proceed 则不会停下，直接执行。[^always] 刚开始，Request review 比较安全。
-
 任务完成后，智能体会生成**整理报告**（Walkthrough），概括改了什么。[^walkthrough]
+
+刚开始，设成 **Request review**（等我批准的方式）比较安全。智能体做出计划后会停下来，一直等到我点 Proceed。[^review-mode] 审阅方式在设置的 **Agent** 标签页里选择。[^review-mode]
+
+::: details 详细说明（点击展开）
+另一头的 Always proceed 不会停下，直接执行。[^always] 用熟之前最好不要选它。
+:::
 
 <Quiz id="ch602-plan" />
 
@@ -60,7 +71,7 @@ Antigravity 应用里的智能体（Agent），在**项目**（Projects）里干
 发送和前面两个工具一样的请求。
 
 ```
-把 inbox/회의-2026-10-27-주간회의.txt 这份笔记整理成会议记录，作为新文件保存到 notes/ 文件夹里。
+把 inbox/meeting-2026-10-27-weekly.txt 这份笔记整理成会议记录，作为新文件保存到 notes/ 文件夹里。
 ```
 
 想指定文件的话，也可以输入 `@` 来选。指定文件并不会把内容粘贴进去，而是把文件路径传给智能体，需要时它再去读那个文件。[^mention]
@@ -75,7 +86,12 @@ Antigravity 应用里的智能体（Agent），在**项目**（Projects）里干
 
 应用的 **Review** 窗口会显示项目 Git 仓库里的改动。[^review] 默认视图是所有还没有记录的改动（**Uncommitted**），所以我自己改的内容也会一起显示。选 **Agent Edits**，就只看这次对话里智能体改过的文件。[^views]
 
-Review 窗口显示的是 Git 仓库里的改动，所以把整理工具文件夹也做成 Git 仓库会比较方便。如果你跟着 Claude Code 第3章或 Codex 第2章做过，它已经是 Git 仓库了。在不是 Git 的文件夹里，Review 窗口是什么样子，官方文档里没有写。
+**Git** 是把文件什么时候、怎样改动的记录下来的工具。Review 窗口会把这些记录和现在的文件对比后显示出来。所以把整理工具文件夹也做成 Git 仓库（开启了 Git 记录的文件夹）会比较方便。
+
+- 如果你跟着 Claude Code 第3章或 Codex 第2章做过，它已经是 Git 仓库了。
+- 如果还不是，也不需要懂 Git 命令。拜托智能体「给这个文件夹开启改动记录（Git）」的方法，写在 [Claude Code 第3章](../20-claude-code/03-screen-tour.md)里（选读）。这是在 Claude Code 里确认过的方法，在 Antigravity 里是否同样可行，本指南没能确认。
+
+在不是 Git 的文件夹里，Review 窗口是什么样子，官方文档里没有写。
 
 <Quiz id="ch602-review" />
 
@@ -108,6 +124,7 @@ Review 窗口显示的是 Git 仓库里的改动，所以把整理工具文件�
 
 下一章：[第3章. 规则与技能——不用搬运也行](03-rules-skills.md)
 
+[^tested]: 本章依据 2026年11月1日确认的 Antigravity 官方文档写成。本指南还没有在应用界面上实际练习过。
 [^dmg]: Antigravity 官方文档，「Get started」。"Open the downloaded `Antigravity.dmg` disk image and drag **Antigravity** into your **Applications** folder." https://antigravity.google/docs/getting-started （确认日期 2026-11-01）
 [^signin]: Antigravity 官方文档，「Authenticate」。"Click **Sign in** to open the browser authentication flow." / "Complete the browser-based OAuth flow using your personal Google Account (Free, Pro, or Ultra plan)." https://antigravity.google/docs/install （确认日期 2026-11-01）
 [^projects]: Antigravity 官方文档，「Get started」。"Agents operate within **Projects**, which define the repository boundaries, file scopes, and security permissions for your workspaces." https://antigravity.google/docs/getting-started （确认日期 2026-11-01）

@@ -1,9 +1,13 @@
 # 第4章 权限与撤销——四种预设，丢弃要小心
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：应用的权限用**四个预设**（Request Review、Default、Auto、Turbo）来选。刚开始请从 **Request Review** 或 **Default** 用起。
 > Review 窗口里的**丢弃会不经确认直接生效**。终端里有 `/rewind`，但最可靠的安全网仍然是 Git 记录。
 
-本章依据 2026年11月1日确认的 Antigravity 官方文档写成。**本指南还没有在应用界面上实际练习过。** 和你的界面不同时，以你的界面为准。为什么需要权限，在 [Claude Code 第4章](../20-claude-code/04-permissions-undo.md)里讲过。本章以个人 Google 账号为准，公司、企业账号的权限界面不同。[^business]
+**权限**是智能体不经我许可就可以做的事情的范围。比如"改文件夹里的文件不用问，安装程序一定要问"这样的约定。为什么需要权限，在 [Claude Code 第4章](../20-claude-code/04-permissions-undo.md)里讲得更详细（选读）。
+
+本指南还没有在应用界面上实际练习过。和你的界面不同时，以你的界面为准。本章以个人 Google 账号为准。[^tested]
 
 ## 四种权限预设
 
@@ -30,13 +34,26 @@
 
 ## 围栏与默认规则
 
-应用里有**终端围栏**（沙箱），官方文档说它**默认是开着的**。[^sandbox] 不过各预设不一样。Default、Auto 里是开的，Request Review、Turbo 里是关的。[^by-preset] 围栏内的命令只能用工作文件夹和临时文件夹，**不能上网。**[^no-net] `~/.ssh` 或 `.env` 这类敏感文件也被挡住。[^sensitive]
+应用里有**终端围栏**（沙箱，Sandbox）。这是把智能体执行的命令能碰到的范围挡起来的装置。官方文档说它**默认是开着的**。[^sandbox]
+
+不过各预设不一样。[^by-preset]
+
+- **开**：Default、Auto
+- **关**：Request Review、Turbo
+
+围栏开着时，命令会被这样限制。
+
+- 只能用工作文件夹和临时文件夹。
+- **不能上网。**[^no-net]
+- `~/.ssh` 或 `.env` 这类敏感文件（装着密码、密钥的文件）也被挡住。[^sensitive]
+
+比如在 Default 下，智能体想用一条从网上下载东西的命令，就得走出围栏。这时应用会自己判断这条命令。安全、能撤回的命令不问就继续；有风险或撤不回的命令会停下来，征求我的许可。[^presets]
 
 不管哪个预设，也有一些默认规则。
 
 - 项目文件夹**内**的文件读写不会询问。**外面**的文件需要许可。[^files]
 - 读取和操作网页，默认是"询问"。[^web]
-- 规则冲突时，按 拒绝（Deny）> 询问（Ask）> 允许（Allow）的顺序决定。[^order]
+- 规则冲突时，按 拒绝（Deny）> 询问（Ask）> 允许（Allow）的顺序决定。[^order] 比如同时定了"允许读取网页"和"拦截这个网站"，那在这个网站上就是拦截胜出。现在不用急着定规则。
 
 对话中给过的许可可能会保留下来，所以智能体会渐渐学会哪些动作是可以信任的。[^persist] 虽然方便，但请记住自己许可过什么。
 
@@ -46,18 +63,25 @@
 
 ## 撤销
 
-**请小心 Review 窗口的丢弃。**「Discard unstaged changes」会**不经确认直接**生效，甚至把没有记录过的新文件也删掉。[^discard] 默认视图里也包含我自己改的内容（[第2章](02-first-task.md)），所以丢弃之前一定要看一下里面有什么。
+**请小心 Review 窗口的丢弃。**「Discard unstaged changes」是丢弃还没用 `git add` 放进待记录清单的改动的按钮。这个按钮会**不经确认直接**生效，甚至把从没记录过的新文件也删掉。[^discard]
 
-终端里有 `/rewind`（或 `/undo`），能把对话退回到之前稳定的状态。[^rewind] 名字和 Claude Code 的回退很像，但官方文档只说它撤销的是"对话"。是否连文件也一起撤销，文档里没有写。
+默认视图里也包含我自己改的内容（[第2章](02-first-task.md)）。所以按下这个按钮，不只是智能体改的，连我改的内容也可能消失。丢弃之前一定要看一下里面有什么。
 
-应用里似乎也有撤销功能。官方更新记录里提到，"Confirm Undo"确认窗口多了一个只撤销对话的选项。[^undo] 不过**没有找到讲解用法的文档**，本指南也没能在应用里确认。
-
-所以在这一阶段，也沿用 Codex 第4章的同一个习惯。
+最可靠的撤销是 **Git 记录**。在这一阶段，也沿用 Codex 第4章的同一个习惯。
 
 1. 交代任务之前：用 Git 把当前状态记录下来。
 2. 交代任务。
 3. 在 Review 窗口用 Agent Edits，只看改动的部分。
 4. 满意就再记录一次，不满意就撤回。
+
+不会 Git 命令也没关系。请智能体"把现在的状态用 Git 记录下来"就行（这是在 Claude Code 里确认过的方法。在 Antigravity 里，本指南还没有确认）。
+
+还有别的撤销功能，但还没确认它们会不会连文件也一起撤销。
+
+::: details 详细说明（点击展开）
+- 终端里有 `/rewind`（或 `/undo`），能把对话退回到之前稳定的状态。[^rewind] 名字和 Claude Code 的回退很像，但官方文档只说它撤销的是"对话"。是否连文件也一起撤销，文档里没有写。
+- 应用里似乎也有撤销功能。官方更新记录里提到，"Confirm Undo"确认窗口多了一个只撤销对话的选项。[^undo] 不过**没有找到讲解用法的文档**，本指南也没能在应用里确认。
+:::
 
 <Quiz id="ch604-undo" />
 
@@ -90,6 +114,7 @@
 
 下一章：[第5章. 计划、定时、浏览器、目标](05-plan-schedule.md)
 
+[^tested]: 本章依据 2026年11月1日确认的 Antigravity 官方文档写成。本指南还没有在应用界面上实际练习过。公司、企业账号的权限界面不同。[^business]
 [^business]: Antigravity 官方文档，「Agent settings」。"Business and enterprise accounts use the following settings instead of the permission presets above." https://antigravity.google/docs/agent-settings （确认日期 2026-11-01）
 [^presets]: Antigravity 官方文档，「Agent settings」。"**Request Review** (_“Every command requires approval.”_): The sandbox is off and every terminal command requires approval." / "**Default** (_“Ask before sensitive operations.”_): Commands run without prompting inside the [Terminal sandbox](https://antigravity.google/docs/sandbox); running outside the sandbox requires approval." / "When a command needs to run outside the sandbox, Antigravity automatically evaluates it so safe, reversible commands proceed without prompting while risky or irreversible actions still pause for your approval." https://antigravity.google/docs/agent-settings （确认日期 2026-11-01）
 [^turbo]: Antigravity 官方文档，「Agent settings」。"**Turbo** (_“Run all commands without restrictions.”_): All commands run without prompting with no isolation or restrictions, and the agent has full read and write access to your filesystem." https://antigravity.google/docs/agent-settings （确认日期 2026-11-01）

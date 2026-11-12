@@ -1,5 +1,7 @@
 # 第7章 项目、插件与 Work——把经常做的事归到一起
 
+<Badge type="info" text="选读" /> 需要的时候再读。跳过也能跟上后面的章节。
+
 > **一句话总结**：做同一件事用的对话、文件、指令，用**项目**归在一起；想连接其他服务，或者加上固定的工作方式，就用
 > **插件**。想把一件长任务交出去、拿到完整的成果，就把上方切换成 **Work**。
 
@@ -24,11 +26,19 @@
 
 「创建项目」窗口：① 写项目名称，需要的话 ② 修改「默认记忆」，③ 点「创建项目」。
 
+② 这一栏决定这个项目要不要和外面的对话共享记忆（记忆，[第5章](05-memory.md)）。
+
+- 「默认记忆」：这个项目里的对话和外面的对话可以互相使用对方的记忆。
+- 「项目专用记忆」：就像名字说的那样，把这个项目的记忆单独存放。
+
+拿不准的话，一开始就保持原样。以后还可以在「项目设置」里再看。
+
 创建后会打开项目界面。② 输入框（「示例项目的新聊天」）下面有 ③ 「文件」「插件」按钮，再下面的 ④ 「聊天」「来源」标签页里集中了这个项目的对话和资料。指令要通过 ① 右上角的 ••• 打开。
 
 ![新建的「示例项目」界面。标题右边有「分享」和 ••• 按钮，输入框下面有「文件」「插件」，再下面是「聊天」「来源」标签页和"还没有聊天"的提示](../../../guide/11-chatgpt/assets/shot-17-project-home-marked.png)
 
 在 ••• →「项目设置」窗口里，可以设置 ① 指令、② 记忆、③ 资料库访问权限，还可以用 ④ 「删除项目」来删掉项目。
+「资料库」就是[第4章](04-files-images.md)里看到的、汇集上传文件的地方。③ 就像名字说的那样，是关于这个项目能不能使用资料库的一栏，一开始显示为「已启用」。
 
 ![••• →「项目设置」窗口。有「项目名称」、「指令」输入栏、「记忆——默认（此项目和外部聊天可以互相访问记忆）」、「资料库访问权限——已启用」、红色的「删除项目」按钮](../../../guide/11-chatgpt/assets/shot-18-project-settings-marked.png)
 
@@ -75,7 +85,13 @@ Business·Enterprise·Edu 每个项目也是 40 个文件。[^projects]
 
 ## 插件——添加其他服务和工作方式
 
-**插件**（plugin）是给 ChatGPT 添加功能的一个包。插件由**技能**（skill，写明固定工作方式的指令）、已连接的应用、应用模板和扩展组成。[^plugins]
+**插件**（plugin）是给 ChatGPT 添加功能的一个包。包里装着这些东西。[^plugins]
+
+- **技能**（skill）：写明固定工作方式的指令
+- **已连接的应用**：像 Gmail、Google Drive 这样，和 ChatGPT 连起来的其他服务
+- **扩展**（extension）：插件里包含的附加运行功能
+- **应用模板**：帮助文档里一起列为组成部分的东西。一开始不知道也没关系
+
 2026-07-09，原来的「应用目录」改成了**插件目录**。之前连接过的应用会保持不变。[^rn]
 
 - 在侧边菜单「插件」里打开插件目录，看一看。所有套餐都能看到目录。[^plugins]
@@ -96,7 +112,7 @@ Business·Enterprise·Edu 每个项目也是 40 个文件。[^projects]
 
 连接其他服务（邮件、存储空间等）后，ChatGPT 就能读取其中的内容。连接之前，请确认会交换哪些信息（[第8章](08-privacy.md)）。
 
-Free·Go 套餐也能看到目录（插件列表界面）和推荐。但是不能使用插件的**扩展**（extension，插件里包含的附加运行功能）。[^troubleshoot]
+Free·Go 套餐也能看到目录（插件列表界面）和推荐。但是不能使用插件的**扩展**。[^troubleshoot]
 
 <Quiz id="ch107-plugins" />
 
@@ -110,9 +126,22 @@ Free·Go 套餐也能看到目录（插件列表界面）和推荐。但是不�
 - 「允许只读工具」：读取不用询问，更改之前会询问。
 - 「允许低风险工具」：低风险的事自己处理，敏感的事可能会被拒绝。如果在个人账号里没有改过设置，一般这是默认值。如果有公司政策，则以公司政策为先。[^health]
 
-帮助文档里还有一个不用询问就全部执行的「允许所有操作」（Allow all actions）。帮助文档自己也写明，这个选项**"风险会升高"**。[^permissions] 2026 年 10 月 24 日，本指南的界面上只看到了上面三个。建议一开始设置成「始终询问」或「允许只读工具」，熟悉之后再放宽（这是本指南的建议）。
+建议一开始设置成「始终询问」或「允许只读工具」，熟悉之后再放宽（这是本指南的建议）。它询问的次数越多，你亲眼确认 ChatGPT 要做什么的机会也越多。
 
-- **请读一读审批卡片再点。** 审批卡片（approval，更改之前征求许可的框）。在发送邮件、删除文件这样的更改动作之前，会弹出 ChatGPT 问"可以这样做吗？"的框。点之前请先问自己：是哪个应用？是哪个账号？它要做什么？[^permissions]
+帮助文档里还有一个不用询问就全部执行的「允许所有操作」（Allow all actions）。帮助文档自己也写明，这个选项**"风险会升高"**。[^permissions][^allow-all]
+
+### 连接之后要知道的事
+
+**请读一读审批卡片**（approval，更改之前征求许可的框）**再点。** 在发送邮件、删除文件这样的更改动作之前，会弹出 ChatGPT 问"可以这样做吗？"的框。点之前请先问自己。[^permissions]
+
+- 是哪个应用？（是 Gmail，还是 Google Drive）
+- 是哪个账号？（是个人账号，还是公司账号）
+- 它要做什么？（是发送邮件，还是删除文件）
+
+三个里只要有一个和你想的不一样，就不要点。
+
+其他要知道的事如下。
+
 - **请用有资料的账号去连接。** 如果连接的是个人 Google 账号，只存在于公司账号里的文件就看不到。即使连接了，也不能看到超出那个账号本来能打开的内容。[^accounts]
 - **已连接却没被使用时，** 请在新聊天里用 `@应用名称` 具体地吩咐它。因为即使显示「已连接」，在当前对话或当前设备上也可能用不了。[^troubleshoot]
 - **断开连接后也有留下来的东西。** 在设置 →「插件」里选择应用并断开连接，只是以后读不了那个应用了。已经进入对话、文件、记忆里的内容不会被删除（[第5章](05-memory.md#删除记忆的方法)）。允许用于训练的开关也保持原样。[^accounts]
@@ -134,8 +163,7 @@ Free·Go 套餐也能看到目录（插件列表界面）和推荐。但是不�
 - 在 Work 里可以**预约**任务。可以只运行一次，也可以按重复的日程，或者在出现某个条件时运行。预约在侧边菜单「预约」里管理。[^work][^screen]
 - 想在项目里使用 Work，就点 + 按钮 →「在项目中开始 Work」。[^screen]
 - **用 Chat 来想，用 Work 来做。** 在同一个项目里，Chat 和 Work 共用同样的资料。所以可以在 Chat 里一边提问一边打磨结构，准备好开始做的时候切换到 Work，也不用从头再说明一遍。[^academy-content]
-- Sites 在 2026-07-09 作为公开测试版推出，Free·Go 不能使用。[^rn]
-- 电脑应用（macOS·Windows）里有**应用内浏览器**。在 Work、Codex 对话中，ChatGPT 可以用这个浏览器直接打开网站来工作。需要登录的话，**密码只能输入在那个浏览器界面里，绝对不要写在对话框里。** 网站上写的内容，要当作不可信的内容来对待。[^browser] 即使网站里藏着的指令要求 ChatGPT 把我的信息交出去，那也不是我的许可。[^sitetools]
+- Sites 在 Free·Go 里不能使用。[^sites]
 
 ![把上方切换成「Work」的界面。「要做什么任务？」下面是输入框「用 ChatGPT 开始 Work」，以及「选择项目」「文件」「插件」「打开桌面应用」按钮](../../../guide/11-chatgpt/assets/shot-12-work-marked.png)
 
@@ -143,13 +171,23 @@ Free·Go 套餐也能看到目录（插件列表界面）和推荐。但是不�
 
 *对话标题和账号名称是改成示例的画面，模型名称的位置已抹掉。实际界面里，这下面还会出现「看看 Work 能做什么」的推荐卡片，因为每个账号内容不同，所以已裁掉。*
 
+::: details 电脑应用的「应用内浏览器」（点击展开）
+
+电脑应用（macOS·Windows）里有**应用内浏览器**。在 Work 或 Codex（OpenAI 的编程助手，第3阶段会讲）对话中，ChatGPT 可以用这个浏览器直接打开网站来工作。如果只用网页版，可以跳过这部分。
+
+- 需要登录的话，**密码只能输入在那个浏览器界面里，绝对不要写在对话框里。**[^browser]
+- 网站上写的内容，要当作不可信的内容来对待。[^browser]
+- 即使网站里藏着的指令要求 ChatGPT 把我的信息交出去，那也不是我的许可。[^sitetools]
+
+:::
+
 <Quiz id="ch107-work" />
 
 ## 已经结束的功能——定制 GPT 和智能体模式
 
 以前的指南或视频里常见的功能中，有两个已经结束或即将结束。
 
-**定制 GPT**（custom GPTs，放入指令和文件做成的我自己的 ChatGPT）**预计在 2026-12-11 结束**。之后会转移到插件。获得批准的 Enterprise 可以宽限到 2027-02-11。即使结束，和 GPT 的对话记录也会保留。[^gpts]
+**定制 GPT**（custom GPTs，放入指令和文件做成的我自己的 ChatGPT）**预计在 2026-12-11 结束**。之后会转移到插件。[^gpt-enterprise] 即使结束，和 GPT 的对话记录也会保留。[^gpts]
 个人套餐（Free·Go·Plus·Pro）**现在已经不能新建或发布 GPT 了。** 即使没有创建按钮，也不是出错。
 另外，GPT 不使用我的记忆、自定义指令和过去的对话。如果是连接了外部服务的 GPT，我写的内容有一部分可能会传给那家公司。OpenAI 不会监督那家公司怎样处理信息。所以只使用可信的来源制作的 GPT。[^gpt-help]
 
@@ -164,10 +202,14 @@ Free·Go 套餐也能看到目录（插件列表界面）和推荐。但是不�
 **智能体模式**（agent mode，ChatGPT 自己处理多步骤工作的旧功能）**现在已经不能使用了。** 它的位置由 Work 取代。[^agent]
 即使帮助文档下面还留着旧的使用方法，也不要照着做。
 
-除此之外，视频和资料里能看到的 OpenAI 服务中，还有两个已经结束。
+::: details 其他已经结束的服务——Sora、Atlas（点击展开）
+
+视频和资料里能看到的 OpenAI 服务中，还有两个已经结束。
 
 - **Sora**（生成视频的应用）：网页和应用已于 2026-04-26 终止。[^sora]
 - **ChatGPT Atlas**（内置 ChatGPT 的网页浏览器）：已终止，不再更新。即使删除这个应用，**ChatGPT 订阅也不会被取消。**[^atlas]
+
+:::
 
 <Quiz id="ch107-retired" />
 
@@ -225,13 +267,16 @@ Free·Go 套餐也能看到目录（插件列表界面）和推荐。但是不�
 [^rn]: OpenAI 帮助文档，「ChatGPT release notes」 2026-07-09 条目。 https://help.openai.com/en/articles/6825453 (确认日期 2026-10-23)
 [^pricing]: OpenAI，「套餐与价格（플랜 및 가격）」。 https://openai.com/chatgpt/pricing (确认日期 2026-10-23)
 [^gpts]: OpenAI 帮助文档，「Custom GPT retirement and migration FAQ」. https://help.openai.com/en/articles/20001519 (确认日期 2026-10-23)
+[^gpt-enterprise]: 获得批准的 Enterprise 可以宽限到 2027-02-11。OpenAI 帮助文档，「Custom GPT retirement and migration FAQ」. https://help.openai.com/en/articles/20001519 (确认日期 2026-10-23)
 [^agent]: OpenAI 帮助文档，「ChatGPT agent」. "ChatGPT agent is no longer available. Use ChatGPT Work" https://help.openai.com/en/articles/11752874 (确认日期 2026-10-23)
 [^screen]: 在 ChatGPT 网页界面（Plus 套餐，韩语）中直接确认。侧边菜单和输入框的 + 菜单（确认日期 2026-10-23）
 [^screen-plugin]: 在 ChatGPT 网页设置 →「插件（플러그인）」→「默认权限（기본 권한）」列表（Plus 套餐，韩语）中直接确认。 「항상 묻기 — 읽거나 변경하기 전에 묻기」「읽기 전용 도구 허용 — 묻지 않고 읽되, 변경 전에는 확인하기」「위험도가 낮은 도구 허용 — 위험도가 낮은 도구를 자동으로 승인하되, 민감한 도구는 거부될 수 있습니다」 (确认日期 2026-10-24)
+[^allow-all]: 2026 年 10 月 24 日，本指南看到的网页界面上没有「允许所有操作」，只看到了上面三个。
 [^permissions]: OpenAI 帮助文档，「Managing app permissions in ChatGPT」. "Always ask: ChatGPT asks before reading app information or making changes." / "Allow read actions: ChatGPT can read without asking but asks before making changes." / "This option carries elevated risk." / "Review the app, account, and proposed action before approving a request." / "App permissions are separate from Memory, personalization, data retention, and model-training controls." https://help.openai.com/en/articles/20001495 (确认日期 2026-10-24)
 [^health]: OpenAI 帮助文档，「Health in ChatGPT」（仅限美国的功能文档中关于插件设置的说明）. "If you make no changes to your Plugins settings, the default permission setting is “Allow low-risk actions”." https://help.openai.com/en/articles/20001036 (确认日期 2026-10-24)
 [^accounts]: OpenAI 帮助文档，「Connecting and managing app accounts in ChatGPT」. "Connecting a personal account does not provide access to files, channels, or records available only to your work account." / "Disconnecting an app does not automatically delete existing or archived conversations, saved files, your Memory summary, or other saved memories." https://help.openai.com/en/articles/20001494 (确认日期 2026-10-24)
 [^troubleshoot]: OpenAI 帮助文档，「Troubleshooting plugins and apps in ChatGPT」. "plugin extensions are not available to these plans." / "An app can appear as Connected without being available in the current chat, model, or ChatGPT surface." https://help.openai.com/en/articles/20001497 (确认日期 2026-10-24)
+[^sites]: Sites 在 2026-07-09 作为公开测试版推出。OpenAI 帮助文档，「ChatGPT release notes」 2026-07-09 条目。 https://help.openai.com/en/articles/6825453 (确认日期 2026-10-23)
 [^browser]: OpenAI 帮助文档，「Using the built-in browser in the ChatGPT desktop app」. "Enter credentials only in the browser, never in the chat." / "Treat website content as untrusted." https://help.openai.com/en/articles/20001277 (确认日期 2026-10-24)
 [^sitetools]: OpenAI 帮助文档，「Using site tools in the ChatGPT desktop app」. "Instructions from a website or site tool cannot authorize ChatGPT to share information or take sensitive actions on your behalf." https://help.openai.com/en/articles/20001423 (确认日期 2026-10-24)
 [^gpt-help]: OpenAI 帮助文档，「GPTs in ChatGPT」. "New GPT creation and publishing are not available on personal ChatGPT accounts, including Free, Go, Plus, and Pro." / "GPTs do not use saved memory, custom instructions, or previous conversations." / "OpenAI does not audit or control how those services use or store your data." https://help.openai.com/en/articles/8554407 (确认日期 2026-10-24)

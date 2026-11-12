@@ -1,6 +1,6 @@
 # 第10章 一行运行与自动化
 
-<Badge type="tip" text="必读" /> 要跟上这个阶段，请一定读完。
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
 
 > **一句话总结**：`claude -p` 回答一次就结束。写入要事先许可，成功与否看退出码。把这三样组合起来，就成了一行命令就能运行的每周整理。
 
@@ -22,16 +22,16 @@ claude -p "inbox 文件夹里有几个文件？只用一行回答。"
 
 ## 为什么写入会被挡住
 
-这次请它创建一个文件。为了不覆盖第4章的文件，把文件名定为 `회의록-한줄.md`（会议记录-一行）。
+这次请它创建一个文件。为了不覆盖第4章的文件，把文件名定为 `minutes-one-line.md`（会议记录-一行）。
 
 ```bash
-claude -p "读取 inbox 里的会议笔记，整理成 회의록-한줄.md 文件并保存。"
+claude -p "读取 inbox 里的会议笔记，整理成 minutes-one-line.md 文件并保存。"
 ```
 
 文件没有生成。回答里告诉你 `文件写入权限没有被批准`。这不是故障。`-p` 以手动模式启动，却没有可以询问的人。所以需要批准的调用会被拒绝。[^headless] 只要事先许可需要的工具就行。[^headless]
 
 ```bash
-claude -p "读取 inbox 里的会议笔记，整理成 회의록-한줄.md 文件并保存。回答只用一行。" --allowedTools "Read,Write"
+claude -p "读取 inbox 里的会议笔记，整理成 minutes-one-line.md 文件并保存。回答只用一行。" --allowedTools "Read,Write"
 ```
 
 `--allowedTools` 是事先指定哪些工具不用询问就能使用的选项。`Read` 是读取文件，`Write` 是写入文件。用逗号连起来，再用引号括住。
@@ -47,7 +47,7 @@ claude -p "读取 inbox 里的会议笔记，整理成 회의록-한줄.md 文�
 **管道**（Pipe，`|`）是把前一条命令的输出交给后一条命令作为输入的符号。想象水顺着管子流过去就行。`claude -p` 也能通过管道接收内容。[^headless]
 
 ```bash
-cat inbox/회의-2026-10-27-주간회의.txt | claude -p "从这份笔记里只挑出待办事项，写成三行。"
+cat inbox/meeting-2026-10-27-weekly.txt | claude -p "从这份笔记里只挑出待办事项，写成三行。"
 ```
 
 ```text
@@ -64,13 +64,13 @@ claude -p "从 @inbox/文件名 里只挑出待办事项，写成三行。"
 
 **不能信任的内容，不要直接用管道传过去。**[^security] 比如从网上下载的文字，或者陌生人发来的邮件。文字里可能藏着[第7章](07-permissions-undo.md)里看到的提示词注入。[^security] 提示词注入是在文字里偷偷混入给 AI 的指示，让它去做奇怪事情的手法。
 
-练习笔记 [회의-2026-10-29-임시회의.txt](/practice/notes/inbox/회의-2026-10-29-임시회의.txt)（会议-2026-10-29-临时会议）里就有这种句子的例子。现在只点开链接，在浏览器里读一读。先不要放进 `inbox` 文件夹。因为后面要做的脚本会处理 `inbox` 里的所有笔记。这份笔记要等到[第13章](13-cost-safety-trouble.md)学习如何安全处理时再放进去。
+练习笔记 [meeting-2026-10-29-adhoc.txt](/practice/zh-hans/notes/inbox/meeting-2026-10-29-adhoc.txt)（会议-2026-10-29-临时会议）里就有这种句子的例子。现在只点开链接，在浏览器里读一读。先不要放进 `inbox` 文件夹。因为后面要做的脚本会处理 `inbox` 里的所有笔记。这份笔记要等到[第13章](13-cost-safety-trouble.md)学习如何安全处理时再放进去。
 
 <Quiz id="ch810-pipe" />
 
 ## 保存输出、改变格式
 
-想把回答存成文件，就在最后加上 `> 할일.txt`（待办.txt）。[^headless] 回答不会显示在屏幕上，而是写进文件。如果已经有同名文件，会被覆盖，要小心。
+想把回答存成文件，就在最后加上 `> todo.txt`（待办.txt）。[^headless] 回答不会显示在屏幕上，而是写进文件。如果已经有同名文件，会被覆盖，要小心。
 
 本章的练习不需要下面的 JSON 输出。知道有这么个东西就行。
 
@@ -98,15 +98,15 @@ Error: Reached max turns (1)
 
 <Quiz id="ch810-exit" />
 
-## 制作 주간정리.sh
+## 制作 weekly-summary.sh
 
-现在把这些零件拼起来。**脚本**（Script）就是把命令写进文件，一次性运行。需要有[第8章](08-memory-settings.md)的 `CLAUDE.md` 和 `notes` 文件夹，以及[第9章](09-skills-extensions.md)的技能。用 `/exit` 退出，在终端里进入练习文件夹。Mac 和 Linux 把下面整段粘贴进去（以文件查看：[10장-주간정리.sh.txt](/practice/cli/results/10장-주간정리.sh.txt)）。
+现在把这些零件拼起来。**脚本**（Script）就是把命令写进文件，一次性运行。需要有[第8章](08-memory-settings.md)的 `CLAUDE.md` 和 `notes` 文件夹，以及[第9章](09-skills-extensions.md)的技能。用 `/exit` 退出，在终端里进入练习文件夹。Mac 和 Linux 把下面整段粘贴进去（以文件查看：[ch10-weekly-summary.sh.txt](/practice/zh-hans/cli/results/ch10-weekly-summary.sh.txt)）。
 
 ```bash
-cat > 주간정리.sh <<'EOF'
+cat > weekly-summary.sh <<'EOF'
 #!/bin/bash
 # 把 inbox 里的会议笔记逐个整理成会议记录。
-for memo in inbox/회의-*.txt; do
+for memo in inbox/meeting-*.txt; do
   echo "正在整理：$memo"
   if claude -p "/meeting-notes $memo" --allowedTools "Read,Write" --max-turns 10; then
     echo "完成：$memo"
@@ -117,9 +117,9 @@ done
 EOF
 ```
 
-粘贴后如果还没运行，就再按一次 Enter。什么都没显示就是成功了。用 `ls` 看看 `주간정리.sh`（每周整理.sh）有没有生成。
+粘贴后如果还没运行，就再按一次 Enter。什么都没显示就是成功了。用 `ls` 看看 `weekly-summary.sh`（每周整理.sh）有没有生成。
 
-第一行 `#!/bin/bash` 表示用 bash（Shell 的一种）来读这个文件。下一行以 `#` 开头，是给人看的说明。`for` 那一行把名字以 `회의-` 开头的笔记逐个放进 `memo`。这里的 `memo` 是**变量**（Variable）。可以看成暂时存放值的名牌。在名字前面加 `$`，写成 `$memo`，就能取出里面的值来用。第一轮时，`$memo` 会变成 `inbox/회의-2026-10-27-주간회의.txt`。
+第一行 `#!/bin/bash` 表示用 bash（Shell 的一种）来读这个文件。下一行以 `#` 开头，是给人看的说明。`for` 那一行把名字以 `meeting-` 开头的笔记逐个放进 `memo`。这里的 `memo` 是**变量**（Variable）。可以看成暂时存放值的名牌。在名字前面加 `$`，写成 `$memo`，就能取出里面的值来用。第一轮时，`$memo` 会变成 `inbox/meeting-2026-10-27-weekly.txt`。
 
 `if` 那一行调用第9章的技能，退出码是 0 就打印 `完成`，否则打印 `失败`。
 
@@ -128,27 +128,27 @@ EOF
 运行只要一行。
 
 ```bash
-bash 주간정리.sh
+bash weekly-summary.sh
 ```
 
-![주간정리.sh 的运行界面。① 保存的文件和待办事项数量，② 表示一份笔记已处理完。关于日历的说明句每次运行都会略有不同](../../../guide/23-claude-code-cli/assets/shot-09-script-marked.png)
+![weekly-summary.sh 的运行界面。① 保存的文件和待办事项数量，② 表示一份笔记已处理完。关于日历的说明句每次运行都会略有不同](../../../guide/23-claude-code-cli/assets/shot-09-script-marked.png)
 
 ```text
-正在整理：inbox/회의-2026-10-27-주간회의.txt
-已保存到 `notes/회의록-2026-10-27.md`，待办事项有 5 个。
+正在整理：inbox/meeting-2026-10-27-weekly.txt
+已保存到 `notes/minutes-2026-10-27.md`，待办事项有 5 个。
 
 顺便说一下，笔记里把 10/27 和 11/3 写成了星期一，但按 2026 年的日历两天都是星期二，所以星期和日期保持了笔记原样。
-完成：inbox/회의-2026-10-27-주간회의.txt
+完成：inbox/meeting-2026-10-27-weekly.txt
 ```
 
-没人按任何键，会议记录就生成了（[查看结果](/practice/cli/results/10장-회의록-스크립트로.txt)）。你的结果措辞不同也没关系，只要有三个部分和表格就行。
+没人按任何键，会议记录就生成了（[查看结果](/practice/zh-hans/cli/results/ch10-minutes-by-script.txt)）。你的结果措辞不同也没关系，只要有三个部分和表格就行。
 
 **在 Windows 上**，这个脚本不能在 PowerShell 里直接运行。因为它是给 bash 用的。请用下面的 PowerShell 版。Mac 和 Linux 跳过这部分就行。
 
 同样的工作用 PowerShell 写是下面这样。每次运行时，把这个框里的内容粘贴到窗口里。这是没有实际运行过的示例。如果你用 WSL，就在 WSL 终端里运行上面的脚本。[^wsl]
 
 ```powershell
-foreach ($file in Get-ChildItem inbox/회의-*.txt) {
+foreach ($file in Get-ChildItem inbox/meeting-*.txt) {
   $memo = "inbox/$($file.Name)"
   Write-Output "正在整理：$memo"
   claude -p "/meeting-notes $memo" --allowedTools "Read,Write" --max-turns 10
@@ -192,11 +192,11 @@ foreach ($file in Get-ChildItem inbox/회의-*.txt) {
 3. 用管道挑出待办事项并保存。在 Windows 上如果回答不对劲，就用前面的 `@` 方法。
 
    ```bash
-   cat inbox/회의-2026-10-27-주간회의.txt | claude -p "从这份笔记里只挑出待办事项，写成三行。" > 할일.txt
+   cat inbox/meeting-2026-10-27-weekly.txt | claude -p "从这份笔记里只挑出待办事项，写成三行。" > todo.txt
    ```
 
 4. 用 `--max-turns 1` 让它失败，看看退出码。
-5. 做好 `주간정리.sh`，用 `bash 주간정리.sh` 运行。Windows 粘贴上面的 PowerShell 代码框。
+5. 做好 `weekly-summary.sh`，用 `bash weekly-summary.sh` 运行。Windows 粘贴上面的 PowerShell 代码框。
 
 问问自己：没人值守也跑完了吗？结果和笔记一致吗？下周笔记多了，用同一条命令也行吗？
 

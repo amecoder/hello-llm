@@ -1,6 +1,6 @@
 # 第8章 项目记忆与设置
 
-<Badge type="tip" text="必读" /> 想跟着这个阶段走下去，一定要读这一章。
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
 
 > **一句话总结**：懒得每次都说的规则，写进 `CLAUDE.md`。必须遵守的规则，做成 `settings.json` 里的拒绝规则。
 
@@ -33,7 +33,7 @@
 
 ## 创建并确认 CLAUDE.md
 
-这是练习用的规则（查看文件：[8장-CLAUDE.md.txt](/practice/cli/results/8장-CLAUDE.md.txt)）。用 `/exit` 退出，在终端里进入练习文件夹。Mac 和 Linux 把下面的内容整段粘贴进去。`notes` 文件夹也会一起创建。
+这是练习用的规则（查看文件：[ch8-CLAUDE.md.txt](/practice/zh-hans/cli/results/ch8-CLAUDE.md.txt)）。用 `/exit` 退出，在终端里进入练习文件夹。Mac 和 Linux 把下面的内容整段粘贴进去。`notes` 文件夹也会一起创建。
 
 ```bash
 mkdir notes
@@ -113,8 +113,8 @@ claude -p "这个文件夹的会议记录规则是什么？用三行回答。"
 - 不能用结尾逗号和注释。[^json-rule] 手动修改后如果不生效，先检查逗号。
 
 ```text
-错误的例子：{ "deny": ["Read(./비밀/**)"], }
-正确的例子：{ "deny": ["Read(./비밀/**)"] }
+错误的例子：{ "deny": ["Read(./secret/**)"], }
+正确的例子：{ "deny": ["Read(./secret/**)"] }
 ```
 
 错误的例子在 `]` 后面多了一个逗号。
@@ -126,7 +126,7 @@ claude -p "这个文件夹的会议记录规则是什么？用三行回答。"
 Claude Code 会从项目文件夹和你主文件夹里的 `~/.claude` 读取指令、设置和记忆。[^folder] 名字以点开头的文件夹平时是隐藏的。用 `ls -a`（PowerShell 用 `ls -Force`）可以看到。
 
 ```text
-~/hello-ai-연습/터미널/        这个项目
+~/hello-ai-practice/terminal/        这个项目
 ├── CLAUDE.md                  共享指令
 ├── CLAUDE.local.md            只有你用的指令
 └── .claude/
@@ -153,7 +153,7 @@ Claude Code 会从项目文件夹和你主文件夹里的 `~/.claude` 读取指�
 
 ```text
 写在 CLAUDE.md 里：     不读秘密文件夹。
-写在 settings.json 里："deny": ["Read(./비밀/**)"]
+写在 settings.json 里："deny": ["Read(./secret/**)"]
 ```
 
 `CLAUDE.md` 里的话，会影响 Claude **打算尝试做什么**。但它改变不了 Claude Code **允许做什么**。权限规则不是由模型，而是由 Claude Code 程序来强制执行的。[^permissions] 拿公司来比方，`CLAUDE.md` 是工作须知，权限规则是门上的锁。
@@ -169,7 +169,7 @@ Claude Code 会从项目文件夹和你主文件夹里的 `~/.claude` 读取指�
 ## 动手试试
 
 1. 在终端里创建上面的 `CLAUDE.md` 和 `notes` 文件夹，用 `claude -p` 问一下规则。
-2. 打开 `claude`，请它"把 @inbox/회의-2026-10-27-주간회의.txt 这份记录整理成会议记录。"你没说要用表格，表格出来了吗？文件保存到 `notes` 里了吗？
+2. 打开 `claude`，请它"把 @inbox/meeting-2026-10-27-weekly.txt 这份记录整理成会议记录。"你没说要用表格，表格出来了吗？文件保存到 `notes` 里了吗？
 3. 打开 `/memory` 和 `/status` 看看，再按 Esc 关闭。
 4. 用 `/exit` 退出，在终端里用 `ls -a`（PowerShell 用 `ls -Force`）找到 `.claude` 文件夹。
 

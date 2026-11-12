@@ -1,0 +1,171 @@
+{
+ "skeleton": [
+  {
+   "type": "text",
+   "x": 0,
+   "y": 0,
+   "text": "學習的一圈 — 猜下一個詞",
+   "fontSize": 22
+  },
+  {
+   "type": "rectangle",
+   "id": "s1",
+   "x": 0,
+   "y": 60,
+   "width": 200,
+   "height": 110,
+   "backgroundColor": "#a5d8ff",
+   "label": {
+    "text": "① 出題\n遮住後半部分\n「先把豬肉___」",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "s2",
+   "x": 280,
+   "y": 60,
+   "width": 200,
+   "height": 110,
+   "backgroundColor": "#a5d8ff",
+   "label": {
+    "text": "② 猜一猜\n洗 40%\n炒 30%",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "s3",
+   "x": 560,
+   "y": 60,
+   "width": 200,
+   "height": 110,
+   "backgroundColor": "#ffec99",
+   "label": {
+    "text": "③ 評分\n原文裡的詞是\n「炒」",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "s4",
+   "x": 840,
+   "y": 60,
+   "width": 200,
+   "height": 110,
+   "backgroundColor": "#b2f2bb",
+   "label": {
+    "text": "④ 改數字\n讓「炒」的機率\n稍微變高",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 202,
+   "y": 115,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     76,
+     0
+    ]
+   ],
+   "width": 76,
+   "height": 0,
+   "start": {
+    "id": "s1"
+   },
+   "end": {
+    "id": "s2"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 482,
+   "y": 115,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     76,
+     0
+    ]
+   ],
+   "width": 76,
+   "height": 0,
+   "start": {
+    "id": "s2"
+   },
+   "end": {
+    "id": "s3"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 762,
+   "y": 115,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     76,
+     0
+    ]
+   ],
+   "width": 76,
+   "height": 0,
+   "start": {
+    "id": "s3"
+   },
+   "end": {
+    "id": "s4"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 940,
+   "y": 172,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     50
+    ],
+    [
+     -840,
+     50
+    ],
+    [
+     -840,
+     0
+    ]
+   ],
+   "width": 840,
+   "height": 50
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 232,
+   "width": 1040,
+   "height": 60,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "這一圈要轉幾萬億次\n正確答案本來就在原文裡，所以不需要人來標答案",
+    "fontSize": 18,
+    "strokeColor": "#1e1e1e"
+   }
+  }
+ ]
+}

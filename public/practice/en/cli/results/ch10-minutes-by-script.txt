@@ -1,0 +1,23 @@
+# Corner Cafe Weekly Meeting Minutes (10/27)
+
+## Decisions
+
+- As a fix for weekday afternoon sales, we will run a set menu for 2 weeks. Junho's proposal is a coffee+cookie set for 5,500 won. The afternoon discount is on hold.
+- Instagram posts go from once a week to 3 times a week (Mon, Wed, Fri).
+- Winter new menu options are yuja tea, mulled wine (non-alcoholic), and sweet potato latte. Mulled wine will be decided after working out ingredient costs.
+- The delivery app listing is postponed because of the fees and will be discussed again at the next meeting.
+
+## To-dos
+
+| Owner | To-do | Deadline |
+| --- | --- | --- |
+| Seoyeon | Buy a bathroom light bulb | Today (10/27) |
+| Seoyeon | Draft the set menu board wording | Wednesday |
+| Junho | Find out the mulled wine cost | Friday |
+| Junho | Take photos for Instagram posts | Posted every Mon, Wed, Fri |
+| Seoyeon | Write text for Instagram posts | Posted every Mon, Wed, Fri |
+
+## Next meeting
+
+- When: 11/3 (Mon) 10 AM
+- Agenda: Revisit the delivery app listing

@@ -1,5 +1,7 @@
 # 第2章 ChatGPTアプリでCodexを始める — フォルダを開いて、最初の整理を任せる
 
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
 > **一言まとめ**: ChatGPTデスクトップアプリをインストールし、左上で**Codex**を選んで、入力欄の上の**Choose project**で整理ツールフォルダを開きます。
 > そのあと、Claude Code 第2章と同じ依頼で会議メモを整理してもらい、結果を元のメモと照らし合わせます。
 
@@ -27,15 +29,20 @@
 
 出典: このガイドでの画面確認（2026-11-01）
 
-![Codexの最初の画面: 中央に"What should we build in 정리도구?"、入力欄の上にプロジェクト「정리도구」と「This computer」、入力欄の下に権限「Ask for approval」とモデル名](../../../guide/21-codex/assets/shot-01-home.png)
+![Codexの最初の画面: 中央に"What should we build in organizer?"、入力欄の上にプロジェクト「organizer」と「This computer」、入力欄の下に権限「Ask for approval」とモデル名](../../../guide/21-codex/assets/shot-01-home.png)
 
-上の画面は、整理ツールフォルダをプロジェクトとして開いた状態です。入力欄の上に選んだフォルダ（정리도구）と作業する場所（This computer）が、入力欄の下に権限（Ask for approval）とモデル名が見えます。左側の会話一覧と使用量の案内は、図から切り取りました。
+上の画面は、整理ツールフォルダをプロジェクトとして開いた状態です。入力欄の上に選んだフォルダ（organizer）と作業する場所（This computer）が、入力欄の下に権限（Ask for approval）とモデル名が見えます。左側の会話一覧と使用量の案内は、図から切り取りました。
 
-**Choose project**を押して、`정리도구`フォルダ（Claude Codeのガイドに沿って進めたなら`~/hello-ai-연습/정리도구`）を選びます。Codexは、選んだフォルダのファイルを読んで直せます。[^folder] メニューバーの「File → Open Folder…」で開いてもかまいません。
+**Choose project**を押して、`organizer`フォルダ（Claude Codeのガイドに沿って進めたなら`~/hello-ai-practice/organizer`）を選びます。Codexは、選んだフォルダのファイルを読んで直せます。[^folder] メニューバーの「File → Open Folder…」で開いてもかまいません。
 
-作業する場所は、**This computer**（自分のコンピューター）のままにしておきます。CloudはGitHubリポジトリを連携した人向けのもので、自分のコンピューターのファイルがクラウドに渡ることはありません。[^cloud-files]
+作業する場所は、**This computer**（自分のコンピューター）のままにしておいてください。このガイドではCloudを使いません。自分のコンピューターのファイルは、クラウドに渡らないからです。[^cloud-files] Cloudは第6章で短く紹介します。
 
-フォルダが**Gitリポジトリ**（変更の履歴を残す仕組み）かどうかも確認してください。Codexで変更内容を見るペインは、Gitリポジトリでしか開けません。Gitでなければ、アプリが1つ作ろうと聞いてきます。[^review-git] Claude Code 第3章に沿って進めたなら、すでにGitリポジトリです。練習用の資料で新しく始めたなら、**アプリがリポジトリを作ろうと聞いてきたとき**に従えば大丈夫です。[^review-git] Codexに会話でお願いすることもできますが、Gitの履歴を入れる`.git`フォルダは保護フォルダなので（[第4章](04-permissions-undo.md)）、許可を聞かれたり、止められたりすることがあります。
+フォルダが**Gitリポジトリ**（変更の履歴を残す仕組み）かどうかも確認してください。Codexで変更内容を見るペインは、Gitリポジトリでしか開けません。Gitでなければ、アプリが1つ作ろうと聞いてきます。[^review-git]
+
+- Claude Code 第3章に沿って進めたなら、すでにGitリポジトリです。
+- 練習用の資料で新しく始めたなら、**アプリがリポジトリを作ろうと聞いてきたとき**に従えば大丈夫です。[^review-git]
+
+Codexに会話で「Gitリポジトリにして」とお願いすることもできます。ただし、Gitの履歴が入る`.git`フォルダは、Codexが勝手に直せないように守られています。そのため、許可を聞かれたり、途中で止まったりすることがあります。こうしたフォルダは[第4章](04-permissions-undo.md)で詳しく見ます。
 
 <Quiz id="ch502-open" />
 
@@ -44,17 +51,17 @@
 Claude Code 第2章に似た依頼を送ります。今回は、形式を別に指定しませんでした。フォルダに様式（`templates/`）がすでにあるからです。
 
 ```
-inbox/회의-2026-10-27-주간회의.txt のメモを議事録に整理して、notes/ フォルダに新しいファイルとして保存して。
+inbox/meeting-2026-10-27-weekly.txt のメモを議事録に整理して、notes/ フォルダに新しいファイルとして保存して。
 ```
 
-このガイドで実行してみると、Codexは次のように作業しました。この実行は、同じCodexをターミナル（[第7章](07-terminal.md)）で動かしたものです。公式ドキュメントは、アプリも選んだフォルダで`AGENTS.md`とスキルを自動で探すと説明しています。[^discovery] ただし、このガイドがアプリの画面で同じ結果を直接確認したわけではありません。
+このガイドで実行してみると、Codexは次のように作業しました。この実行は、アプリではなく**ターミナル**（コマンドを文字で打ってコンピューターを操作する画面、[第7章](07-terminal.md)）で同じCodexを動かしたものです。公式ドキュメントは、アプリも選んだフォルダでルールファイルとスキルを自動で探すと説明しています。[^discovery] ただし、このガイドはアプリの画面で同じ結果を確認していません。
 
 1. フォルダでルールファイル（`AGENTS.md`）と様式を探しました。ルールファイルはまだなかったので、**様式だけ**を読みました。
 2. 様式の欄の順番どおりに、決まったこと2件、やること5件、次に話し合うこと、次の会議を埋めました。
 3. メモにない期限は`（メモになし）`と残しました。様式の案内文に書かれたルールです。
 4. 保存したあと、欄の順番と日付・曜日を自分で検査しました。
 
-結果: [第2章の議事録](/practice/notes/results/codex/2장-회의록-2026-10-27-주간회의.txt)
+結果: [第2章の議事録](/practice/ja/notes/results/codex/ch2-minutes-2026-10-27-weekly.txt)
 
 **結果を元のメモと照らし合わせましょう。** 次の質問を1つずつ確認します。
 
@@ -103,5 +110,5 @@ inbox/회의-2026-10-27-주간회의.txt のメモを議事録に整理して、
 [^cloud-files]: Codex公式ドキュメント、「Codex environments」。"Use **Work in** to choose **This computer** or **Cloud**." / "Your computer's local files, running processes, browser sign-ins, and VPN access aren't automatically transferred to it." https://learn.chatgpt.com/docs/environments/modes (確認日 2026-11-01)
 [^review-git]: Codex公式ドキュメント、「Code review」。"The review pane requires a project inside a Git repository. If your project isn't a Git repository yet, the app prompts you to create one." https://learn.chatgpt.com/docs/code-review (確認日 2026-11-01)
 [^review]: Codex公式ドキュメント、「Use ChatGPT」。"A polished response can still be incomplete or wrong, so review the details that matter before you use or share it." https://learn.chatgpt.com/docs/use-chatgpt (確認日 2026-11-01)
-[^discovery]: Codex公式ドキュメント、「Projects and chats」。"New chats start in the primary folder. Codex also uses that folder as the default for Git operations and automatic discovery of `AGENTS.md`, skills, and `config.toml`." https://learn.chatgpt.com/docs/projects (確認日 2026-11-01)
+[^discovery]: このガイドがアプリの画面で同じ結果を直接確認したわけではありません。Codex公式ドキュメント、「Projects and chats」。"New chats start in the primary folder. Codex also uses that folder as the default for Git operations and automatic discovery of `AGENTS.md`, skills, and `config.toml`." https://learn.chatgpt.com/docs/projects (確認日 2026-11-01)
 [^toggle]: Codex公式ドキュメント、「ChatGPT desktop app」。"Choose ChatGPT or Codex. In ChatGPT, use the toggle above the composer to select Chat or Work. In Codex, start with New chat." https://learn.chatgpt.com/docs/app (確認日 2026-11-01)

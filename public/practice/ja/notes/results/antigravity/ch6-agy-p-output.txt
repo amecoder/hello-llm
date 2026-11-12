@@ -1,0 +1,5 @@
+| ファイル | 使った様式 (`templates/`) | ひとこと説明 |
+|---|---|---|
+| [weekly-review-2026-10-27.md](file://~/hello-ai-practice/organizer/notes/weekly-review-2026-10-27.md) | [weekly-review.md](file://~/hello-ai-practice/organizer/templates/weekly-review.md) | `よかったこと (Keep)` · `惜しかったこと (Problem)` · `来週やること (Try)` のKPT 3欄の構成で整理された週間振り返りです。 |
+| [minutes-2026-10-27-weekly.md](file://~/hello-ai-practice/organizer/notes/minutes-2026-10-27-weekly.md) | [minutes.md](file://~/hello-ai-practice/organizer/templates/minutes.md) | `1. 決めたこと` · `2. やること` · `3. 次に話し合うこと` · `4. 次回の会議` の4欄の構成で整理された議事録です。 |
+| [.gitkeep](file://~/hello-ai-practice/organizer/notes/.gitkeep) | (様式なし) | 空のフォルダを残しておくための空のファイルです。 |

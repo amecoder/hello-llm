@@ -1,9 +1,11 @@
 # 2章. アプリのインストールと最初の整理 — フォルダをプロジェクトとして開く
 
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
 > **一言まとめ**: Antigravityアプリをインストールし、Googleアカウントでログインしたら、整理ツールのフォルダを **プロジェクト** として開きます。
 > 最初は **Planning mode**（先に計画）で任せ、計画を読んでから **Proceed** で進めます。
 
-この章は、2026年11月1日に確認したAntigravityの公式ドキュメントをもとに書きました。**このガイドは、まだアプリの画面では実習できていません。** 画面の名前は、公式ドキュメントの英語名をそのまま書きました。自分の画面と違うときは、画面に合わせてください。実際の実行結果は、3章（ターミナルで実行）にあります。
+このガイドは、まだアプリの画面では実習できていません。画面のボタンの名前は、公式ドキュメントの英語名をそのまま書きました。自分の画面と少し違っても大丈夫です。名前の似たボタンを探して、まねしてみてください。実際に動かしてみた結果は、3章（ターミナルで実行）にあります。[^tested]
 
 ## インストールしてログインする
 
@@ -30,9 +32,14 @@ Antigravityアプリのエージェントは、**プロジェクト**（Projects
 
 出典: Antigravity公式ドキュメント[^modes]
 
-整理ツールには、**Local mode** で十分です。New worktree modeは、Gitリポジトリでだけ使う方式です。[^worktree]
+整理ツールには、**Local mode** を選んでください。今のフォルダで直接作業するので、結果のファイルをすぐに見つけられます。
 
-新しいプロジェクトは、最初は **Inherit Global** 権限で始まり、プロジェクトフォルダのすべてを読み書きできます。[^inherit] 権限は4章で扱います。
+権限（エージェントが何をしてよいか）は4章で扱います。今は設定を変えなくても大丈夫です。
+
+::: details 詳しく（クリックして開く）
+- New worktree modeは、Gitリポジトリでだけ使う方式です。複雑な仕事を、今のフォルダから切り離してやらせるときに使います。[^worktree]
+- 新しいプロジェクトは、最初は **Inherit Global** 権限で始まります。プロジェクトフォルダのすべてを読み書きできる状態です。[^inherit]
+:::
 
 <Quiz id="ch602-project" />
 
@@ -49,9 +56,13 @@ Antigravityアプリのエージェントは、**プロジェクト**（Projects
 
 最初は **Planning mode** をおすすめします。計画書（Implementation plan）が出たら読んでみて、問題なければ、会話か計画書の上のほうにある **Proceed** を押して進めます。[^proceed] Claude Code 5章の「計画」モード、Codex 4章の `/plan` と同じ役割です。
 
-設定の **Agent** タブで、確認のしかたを選べます。**Request review** は、計画や変更内容を作ると止まって、自分の承認を待ちます。[^review-mode] 反対にAlways proceedは、止まらずにすぐ実行します。[^always] 最初はRequest reviewが安全です。
-
 仕事を終えると、エージェントが **まとめの報告**（Walkthrough）を作って、何が変わったかを要約します。[^walkthrough]
+
+最初は **Request review**（自分の承認を待つ方式）にしておくのが安全です。エージェントは計画を作ると止まって、自分がProceedを押すまで待ちます。[^review-mode] 確認のしかたは、設定の **Agent** タブで選びます。[^review-mode]
+
+::: details 詳しく（クリックして開く）
+反対の端にあるAlways proceedは、止まらずにすぐ実行します。[^always] 慣れるまでは選ばないほうがよいでしょう。
+:::
 
 <Quiz id="ch602-plan" />
 
@@ -60,7 +71,7 @@ Antigravityアプリのエージェントは、**プロジェクト**（Projects
 前の2つのツールと同じ依頼を送ります。
 
 ```
-inbox/회의-2026-10-27-주간회의.txt のメモを議事録に整理して、notes/ フォルダに新しいファイルとして保存して。
+inbox/meeting-2026-10-27-weekly.txt のメモを議事録に整理して、notes/ フォルダに新しいファイルとして保存して。
 ```
 
 ファイルを指定したいときは、`@` を入力して選ぶこともできます。ファイルを指定しても、中身が貼り付けられるわけではありません。エージェントにはファイルのパスが渡され、必要なときにそのファイルを読みます。[^mention]
@@ -75,7 +86,12 @@ inbox/회의-2026-10-27-주간회의.txt のメモを議事録に整理して、
 
 アプリの **Review** ウィンドウは、プロジェクトのGitリポジトリの変更を表示します。[^review] 初期の表示は、まだ記録していないすべての変更（**Uncommitted**）なので、自分が直したものも一緒に表示されます。**Agent Edits** を選ぶと、この会話でエージェントが直したファイルだけを見られます。[^views]
 
-ReviewウィンドウはGitリポジトリの変更を表示するので、整理ツールのフォルダもGitリポジトリにしておくと便利です。Claude Code 3章やCodex 2章のとおりに進めたなら、すでにGitリポジトリです。Gitではないフォルダで、Reviewウィンドウがどう見えるかは、公式ドキュメントに出ていません。
+**Git**（ギット）は、ファイルがいつ、どう変わったかを記録しておくツールです。Reviewウィンドウは、この記録と今のファイルを比べて表示します。そのため、整理ツールのフォルダもGitリポジトリ（Gitの記録がオンになったフォルダ）にしておくと便利です。
+
+- Claude Code 3章やCodex 2章のとおりに進めたなら、すでにGitリポジトリです。
+- まだなら、Gitのコマンドを知らなくても大丈夫です。エージェントに「このフォルダで変更の記録（Git）をオンにして」と頼む方法が、[Claude Code 3章](../20-claude-code/03-screen-tour.md)にあります（選択）。Claude Codeで確かめた方法なので、Antigravityでもそのままできるかは、このガイドでは確認できていません。
+
+Gitではないフォルダで、Reviewウィンドウがどう見えるかは、公式ドキュメントに出ていません。
 
 <Quiz id="ch602-review" />
 
@@ -107,6 +123,7 @@ ReviewウィンドウはGitリポジトリの変更を表示するので、整�
 
 次の章: [3章. ルールとスキル — 移さなくてもいい](03-rules-skills.md)
 
+[^tested]: この章は、2026年11月1日に確認したAntigravityの公式ドキュメントをもとに書きました。このガイドは、まだアプリの画面では実習できていません。
 [^dmg]: Antigravity公式ドキュメント、「Get started」。"Open the downloaded `Antigravity.dmg` disk image and drag **Antigravity** into your **Applications** folder." https://antigravity.google/docs/getting-started （確認日 2026-11-01）
 [^signin]: Antigravity公式ドキュメント、「Authenticate」。"Click **Sign in** to open the browser authentication flow." / "Complete the browser-based OAuth flow using your personal Google Account (Free, Pro, or Ultra plan)." https://antigravity.google/docs/install （確認日 2026-11-01）
 [^projects]: Antigravity公式ドキュメント、「Get started」。"Agents operate within **Projects**, which define the repository boundaries, file scopes, and security permissions for your workspaces." https://antigravity.google/docs/getting-started （確認日 2026-11-01）

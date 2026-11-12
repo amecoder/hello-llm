@@ -1,0 +1,142 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 420,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "写成一大块的请求",
+    "fontSize": 18,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 40,
+   "width": 420,
+   "height": 200,
+   "backgroundColor": "#ffc9c9",
+   "fillStyle": "solid",
+   "label": {
+    "text": "下周要和三家客户开会\n我做销售第3年 帮我列问题清单\n每家公司5个 价格放最后\nA公司去年解约了 B公司是第一次\nC公司在考虑续约 用敬语",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 430,
+   "y": 140,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     118,
+     0
+    ]
+   ],
+   "width": 118,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 430,
+   "y": 72,
+   "width": 120,
+   "height": 50,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "用标题\n分开",
+    "fontSize": 15,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 0,
+   "width": 420,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "用 Markdown 标题分开的请求",
+    "fontSize": 18,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 40,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## 情况 — 下周和 3 家客户开会，做销售第 3 年",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 92,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## 任务 — 每场会议的问题清单",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 144,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#e5dbff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## 条件 — 每家 5 个，价格放最后，用敬语",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 196,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## 客户信息 — A公司 解约 / B公司 第一次 / C公司 考虑续约",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 255,
+   "width": 980,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "内容相同，分了格子之后，AI 和我都更容易发现漏掉的条件",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

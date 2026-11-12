@@ -1,31 +1,35 @@
 # 第2章 逛一逛介面——什麼在哪裡
 
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
+
 > **一句話總結**：Claude 的介面只要認識四個地方就夠了：**左邊的側邊選單**（過去的對話）、**中間的輸入框**（提問的地方和「+」）、
 > **輸入框下面的模型選單**（模型·投入程度）、**左下角的我的名字**（設定）。剛開始只用輸入框也完全夠用。
 
-介面以 2026 年 10 月的網頁版為準，圖片是免費套餐的韓語介面。Claude 現在正在陸續推送新介面，所以你看到的可能不一樣。如果和你的介面名稱不同，就找一個名字相近的按鈕。
+介面以 2026 年 10 月的網頁版為準，圖片是免費方案的韓語介面。Claude 現在正在陸續推送新介面，所以你看到的可能不一樣。如果和你的介面名稱不同，就找一個名字相近的按鈕。
 
 ## 新的 Claude 介面和舊介面
 
-Claude 現在**正在更換介面**。在新介面裡，通常是把對話和整件事交出去的 **Cowork**（協作模式，[第8章](08-cowork.md)）**合併成了一個對話。** 開始之前不需要先選模式。[^new]
-
-這本指南以**新介面**為準來講解。拍這本指南圖片用的賬號是新介面。把下面的首頁圖片和你的介面比一比。
+這本指南以 Claude 的**新介面**為準來講解。拍圖片用的帳號也是新介面。把下面的首頁圖片和你的介面比一比。
 
 ![登入後的首頁整體。紅色編號 ①~⑩。左側側邊選單上方 ① 「新建」「搜尋」「專案」「Artifacts」「自定義」，② 「已固定」「最近專案」對話列表，中間 ③ 輸入框「今天需要什麼幫助？」，④ 「+」，輸入框下面 ⑤ 「專案」，⑥ 「Sonnet 5.5 中等」，⑦ 「手動」，輸入框右側 ⑧ 麥克風和聲波圖示，右上角 ⑨ 幽靈圖示，左下角 ⑩ 「김하나 · Free」。輸入框周圍沒有「Chat」「Cowork」的選項和網頁搜尋開關](../../../guide/10-claude/assets/shot-01-home-marked.png)
 
-姓名和對話標題是改成示例的介面（免費套餐）。**紅色編號和下面「側邊選單」一節表格裡的編號是同一處。**
+姓名和對話標題是改成示例的介面（免費方案）。**紅色編號和下面「側邊選單」一節表格裡的編號是同一處。**
 
-- ③ 輸入框周圍哪裡都沒有「Chat」「Cowork」的選項。[^screen]
-- 也沒有開關網頁搜尋的開關。[^screen]
+在新介面裡，通常是把對話和 **Cowork**（協作模式，把由多個步驟組成的工作整個交給 Claude 去做的功能，[第8章](08-cowork.md)）**合併成了一個對話。** 所以開始之前不需要先選模式。直接在輸入框裡寫就行。[^new]
+
+圖片裡值得留意的有三點。
+
+- ③ 輸入框周圍沒有「Chat」「Cowork」這樣的模式選項。[^screen]
+- 也沒有開關網頁搜尋的開關。需要時，Claude 會自己去網上查。[^screen][^new]
 - ② 過去的對話都在「最近專案」（Recents）這一個列表裡。[^screen]
 
-如果你的介面和圖片差別很大，請展開下面的框。
+Claude 現在正在陸續更換介面。所以你的介面可能和圖片不一樣。如果差別很大，請展開下面的框。
 
 ::: details 如果你用的是舊介面（點選展開）
 
-以前的介面裡，通常對話（Chat）和 Cowork 是分開的。新介面從 Pro·Max 套餐開始，依次推送到網頁、電腦應用和手機應用。[^new] 即使是同一個套餐，每個人換成新介面的時間也不同。
+以前的介面裡，通常對話（Chat）和 Cowork 是分開的。新介面從 Pro·Max 方案開始，依次推送到網頁、電腦應用和手機應用。[^new] 即使是同一個方案，每個人換成新介面的時間也不同。
 
-如果是 Pro·Max 套餐，請看輸入框。如果能看到「Chat」和「Cowork」的選項，說明還是舊介面。[^new] 免費套餐不能用這個方法來判斷。輸入框裡沒有這個選項，並不代表就是新介面。
+如果是 Pro·Max 方案，請看輸入框。如果能看到「Chat」和「Cowork」的選項，說明還是舊介面。[^new] 免費方案不能用這個方法來判斷。輸入框裡沒有這個選項，並不代表就是新介面。
 
 不需要你另外做什麼。輪到你的時候，會自動換過去。一旦換成新介面，就不能再換回舊介面了。[^new]
 
@@ -37,7 +41,7 @@ Claude 現在**正在更換介面**。在新介面裡，通常是把對話和整
 
 出處：Anthropic 幫助文件[^new]
 
-<!-- 需要截圖：舊介面輸入框裡的「Chat」「Cowork」選項（網頁版，仍保留舊介面的 Pro·Max 賬號） -->
+<!-- 需要截圖：舊介面輸入框裡的「Chat」「Cowork」選項（網頁版，仍保留舊介面的 Pro·Max 帳號） -->
 
 這本指南以新介面為準來講解，和舊介面不同的地方，會像這樣放在摺疊框或腳註裡說明。
 
@@ -58,12 +62,12 @@ Claude 現在**正在更換介面**。在新介面裡，通常是把對話和整
 | ④ | 輸入框左下方 | 「+」 | 新增檔案·聯結器等 |
 | ⑤ | 輸入框下方左邊 | 「專案」 | 選擇專案（[第7章](07-projects-tools.md)） |
 | ⑥ | 輸入框下方右邊 | 「Sonnet 5.5 中等」 | 模型·投入程度選單 |
-| ⑦ | ⑥ 旁邊 | 「手動」 | 許可權模式 |
+| ⑦ | ⑥ 旁邊 | 「手動」 | 許可權模式（要不要先問你） |
 | ⑧ | 輸入框右側 | 麥克風·聲波圖示 | 語音輸入、語音模式（[第10章](10-voice-mobile.md)） |
 | ⑨ | 右上角 | 幽靈圖示 | 隱身模式（[第3章](03-chats.md)） |
-| ⑩ | 左下角 | 「김하나 · Free」 | 賬號選單（設定·語言·「獲取幫助」） |
+| ⑩ | 左下角 | 「김하나 · Free」 | 帳號選單（設定·語言·「獲取幫助」） |
 
-最上方正中間能看到「免費套餐 · 升級」。問候語會隨時變化，比如「你好！」或「김하나，下午好」。[^screen]
+最上方正中間能看到「免費方案 · 升級」。問候語會隨時變化，比如「你好！」或「김하나，下午好」。[^screen]
 
 過去的對話，可以在 ① 「搜尋」或 ② 列表裡找。[^screen][^chats]
 
@@ -84,7 +88,7 @@ Claude 現在**正在更換介面**。在新介面裡，通常是把對話和整
 
 ![點輸入框「+」後的選單。① 「上傳或新增檔案」(Ctrl+U)，② 「Skills」，③ 「新增聯結器」，④ 「設計系統」，⑤ 「新增外掛」，⑥ 帶勾選標記的「記憶」上標有紅色編號](../../../guide/10-claude/assets/shot-02-plus-menu-marked.png)
 
-這是免費套餐的介面。**紅色編號和下面列表的編號是同一處。**[^screen]
+這是免費方案的介面。**紅色編號和下面列表的編號是同一處。**[^screen]
 
 - ① 「上傳或新增檔案」：上傳我電腦裡的文件和照片。把檔案拖到輸入框裡也可以（[第4章](04-files-artifacts.md)）。[^upload]
 - ② 「Skills」·③ 「新增聯結器」·④ 「設計系統」·⑤ 「新增外掛」：給 Claude 新增更多功能的選單。技能·聯結器·外掛在[第7章](07-projects-tools.md)裡講。
@@ -92,13 +96,14 @@ Claude 現在**正在更換介面**。在新介面裡，通常是把對話和整
 
 剛開始只要知道 ① 就夠了。
 
-花較長時間調查並給出報告的 **「Research」（研究）** 也在「+」選單裡。在輸入框裡輸入 `/deep-research` 也可以（[第6章](06-search.md)）。[^new] 研究功能從付費套餐開始提供，所以上面免費賬號的選單裡沒有看到。[^pricing][^screen]
+花較長時間調查並給出報告的 **「Research」（研究）** 也在「+」選單裡。在輸入框裡輸入 `/deep-research` 也可以（[第6章](06-search.md)）。[^new] 研究功能從付費方案開始提供，所以上面免費帳號的選單裡沒有看到。[^pricing][^screen]
 
-輸入框下面的 ⑦ 「手動」是**許可權模式**。它決定 Claude 能多自主地做事。免費賬號裡也能看到。[^screen]
+輸入框下面的 ⑦ 「手動」是**許可權模式**。免費帳號裡也能看到。[^screen]
+Claude 不只是寫回答，做事的過程中還可能用到新工具，或者開啟新網站。許可權模式就是決定這時要不要先問你、Claude 能多自主地做事的設定。
 
 ![點 ⑦ 「手動」後的「許可權模式」選單。① 「手動」(帶勾選標記)和 ② 「自動」兩項說明上標有紅色編號](../../../guide/10-claude/assets/shot-04-permission-marked.png)
 
-- ① 「手動」："Claude 在使用新工具或開啟新網站之前會請求確認。" 這是免費賬號的預設值。[^screen]
+- ① 「手動」："Claude 在使用新工具或開啟新網站之前會請求確認。" 這是免費帳號的預設值。[^screen]
 - ② 「自動」："Claude 會自行執行，如果發現看起來不安全的內容，會暫停並確認。"[^screen]
 
 Pro·Max 的預設值是「自動」（Auto）。[^new] 剛開始設成「手動」會更安心。因為它會在使用新工具或開啟新網站之前先問你。把發訊息這類後果比較大的事交給它時，請在旁邊看著。詳細說明在[第8章](08-cowork.md#選擇確認方式——許可權模式)。[^new]
@@ -124,14 +129,14 @@ Pro·Max 的預設值是「自動」（Auto）。[^new] 剛開始設成「手動
 
 ![點 ⑥ 「Sonnet 5.5 中等」後的模型選單。① 模型列表（Fable 5.1「Pro 或 Max」·「升級」，Opus 5.5「Pro」·「升級」，帶勾選標記的 Sonnet 5.5，Haiku 5.5），② 「投入程度」中等，③ 「更多模型」，④ 最下面 Fable 5.1 的說明文字上標有紅色編號](../../../guide/10-claude/assets/shot-03-model-menu-marked.png)
 
-這是免費套餐的介面。**紅色編號和下面列表的編號是同一處。**[^screen]
+這是免費方案的介面。**紅色編號和下面列表的編號是同一處。**[^screen]
 
-- ① 模型列表：免費賬號只能選 Sonnet 5.5 和 Haiku 5.5。Fable 5.1 和 Opus 5.5 旁邊帶著「升級」。
+- ① 模型列表：免費帳號只能選 Sonnet 5.5 和 Haiku 5.5。Fable 5.1 和 Opus 5.5 旁邊帶著「升級」。
 - ② 「投入程度」：決定每個回答花多少功夫（見下面的「投入程度」）。
 - ③ 「更多模型」：檢視列表裡沒有的模型。
-- ④ 說明："Fable 5.1 包含在 Max 套餐中，在 Pro 套餐裡可以使用額度來使用。"
+- ④ 說明："Fable 5.1 包含在 Max 方案中，在 Pro 方案裡可以使用額度來使用。"
 
-這個免費賬號的選單裡，**沒有看到單獨的思考開關。** 只有 ② 「投入程度」。[^screen] 思考開關可能會因套餐和模型而出現。
+這個免費帳號的選單裡，**沒有看到單獨的思考開關。** 只有 ② 「投入程度」。[^screen] 思考開關可能會因方案和模型而出現。
 
 對話過程中隨時都可以更改。改過的設定**從下一個回答開始**生效。[^model]
 
@@ -139,7 +144,7 @@ Pro·Max 的預設值是「自動」（Auto）。[^new] 剛開始設成「手動
 
 Claude 有好幾個大小和性格各不相同的模型。點模型名稱就可以更換，列表裡沒有的模型在「更多模型」（More models）裡。[^model]
 
-模型名稱經常變。僅 2026 年一年，就推出了好幾次新模型。[^rn] 所以這本指南按**角色**來稱呼模型。2026 年 10 月 26 日的名稱，以及各套餐能不能用，如下所示。
+模型名稱經常變。僅 2026 年一年，就推出了好幾次新模型。[^rn] 所以這本指南按**角色**來稱呼模型。各角色的名稱，以及各方案能不能用，如下所示（以 2026 年 10 月 26 日為準）。
 
 | 角色 | 名稱（系列） | Free | Pro | Max |
 |---|---|---|---|---|
@@ -150,8 +155,12 @@ Claude 有好幾個大小和性格各不相同的模型。點模型名稱就可�
 
 出處：Anthropic 價格頁面·幫助文件[^pricing][^fable][^rn]
 
-**使用額度**（Usage credits）是和套餐額度分開、用多少付多少錢的用量。在 Pro 裡，效能最高的模型不包含在套餐額度內，所以一開始就只能用這種額度。[^fable]
-Max 的「最多 50%」並不是說額度變多了。意思是和其他模型**共用同一份每週額度**，其中最多一半可以用在效能最高的模型上。[^fable]
+現在自己的帳號能選什麼，直接看一看吧。點輸入框下面 ⑥ 的模型名稱就行。如果是免費帳號，只能選 Sonnet 和 Haiku。[^screen]
+
+Fable 一欄裡的「使用額度」和「50%」說的是付費方案。如果你用的是免費方案，可以跳過。
+
+- **使用額度**（Usage credits）是和方案額度分開、用多少付多少錢的用量。在 Pro 裡，效能最高的模型不包含在方案額度內，所以一開始就只能用這種額度。[^fable]
+- Max 的「最多 50%」並不是說額度變多了。意思是和其他模型**共用同一份每週額度**，其中最多一半可以用在效能最高的模型上。[^fable]
 
 模型也會從列表中撤下。到目前為止，Anthropic 大多是在模型推出大約 1 年後將其撤下。[^persona] 換成新模型後，如果覺得說話的口氣變陌生了，可以把你喜歡的過去的對話給它看，這樣拜託它。[^persona]
 
@@ -166,7 +175,7 @@ Max 的「最多 50%」並不是說額度變多了。意思是和其他模型**�
 
 ![滑鼠放在模型選單的「投入程度」上時，在左邊展開的檔位列表。① 最上面的說明文字，② 「低」，帶「推薦」標記和勾選的「中等」，「高」，「超高」，帶「5× 以上用量」警告的「最高」上標有紅色編號](../../../guide/10-claude/assets/shot-05-effort-marked.png)
 
-這是免費套餐的介面（Sonnet 5.5）。① 說明文字是這樣的："更高的投入程度意味著更全面的回答，但需要更長時間，並且更快用完額度。"[^screen]
+這是免費方案的介面（Sonnet 5.5）。① 說明文字是這樣的："更高的投入程度意味著更全面的回答，但需要更長時間，並且更快用完額度。"[^screen]
 ② 檔位有五種。
 
 | 投入程度 | 適合的事 |
@@ -191,8 +200,11 @@ Max 的「最多 50%」並不是說額度變多了。意思是和其他模型**�
 ### 思考——回答之前先推敲一下嗎
 
 開啟**思考**（Thinking）後，Claude 在回答之前會先拆分問題、規劃方法、比較多條思路。[^model] 這也叫作**擴充套件思考**（extended thinking）。[^start]
-幫助文件介紹的開關方法是這樣的：點模型名稱，把滑鼠放在「投入程度」上方，然後開啟或關閉「思考」（Thinking，或「擴充套件」）開關。[^model]
-這個開關可能會因套餐和模型而出現。這本指南使用的免費賬號選單裡沒有看到。[^screen] 如果沒有這個開關，這一節讀一讀了解就行。
+
+先看看你的介面上有沒有這個開關。這個開關可能會因方案和模型而出現。這本指南使用的免費帳號選單裡沒有看到。[^screen]
+沒有開關也沒關係。只調上面的「投入程度」，也能控制回答寫得多細緻。這一節只要知道「思考」是什麼就行。
+
+如果有開關，就這樣開啟或關閉：點模型名稱，把滑鼠放在「投入程度」上方，然後開啟或關閉「思考」（Thinking，或「擴充套件」）開關。[^model]
 思考和投入程度是**分開設定的**。任意組合都可以用。[^model] 最新的模型裡，也有無法關閉思考的。[^model]
 
 開啟思考後，回答期間會看到顯示時間流逝的「思考」標記。點回答上方的「思考」欄，可以看到 Claude 是怎麼想的摘要。[^model]
@@ -211,7 +223,7 @@ Max 的「最多 50%」並不是說額度變多了。意思是和其他模型**�
 請分成考慮定期存款利息和不考慮利息兩種情況，把計算過程展示出來。
 ```
 
-::: details 得到的回答大致是這樣（示例——點選展開）
+::: details 得到的回答大致是這樣（示例——點選展開）（點選展開）
 這是這本指南做的示例。實際的回答會因服務和當時的情況而不同。
 
 > **1. 不考慮利息的情況**
@@ -235,58 +247,62 @@ Max 的「最多 50%」並不是說額度變多了。意思是和其他模型**�
 
 ## 對話中出現「模型已更換」的提示
 
-偶爾會彈出**「模型已更換」的提示**。包括效能最高的模型在內，有些模型會自動對問題做安全檢查。如果判斷屬於範圍很窄的高風險領域，就會轉給另一個模型來回答。[^switch]
-這樣轉交，叫作**回退**（fallback，轉給替你接手的模型）。攻擊性的駭客技術、病毒·毒素之類的生物風險領域等，就屬於這類。[^switch] 大多數問題不會受影響。
+偶爾會彈出**「模型已更換」的提示**。這種情況很少見。大多數問題不會受影響。[^switch]
+有些模型會自動對問題做安全檢查。如果判斷屬於範圍很窄的高風險領域，就會轉給另一個模型來回答。這樣轉交，叫作**回退**（fallback，轉給替你接手的模型）。[^switch]
 
 模型被更換後，會這樣。[^switch]
 
 - **會彈出提示，回答上會標明回答的模型名稱。** 自動切換預設是開啟的。
 - **在這個對話結束之前，會一直停留在更換後的模型上。** 你也可以親自切回原來的模型。但是，如果引起問題的內容還留在對話裡，可能會再次被更換。請改一改前面的訊息，再重新發送。
-- **也可能因為不是我輸入的內容而被更換。** 檢查會連記憶、連線的應用、網頁搜尋結果、上傳的檔案一起看。
 
-如果不喜歡自動切換，請在設定 → 「功能」（Capabilities）裡，關閉「訊息被標記時切換模型」（Switch models when a message is flagged）。[^screen] 關閉後，不會更換模型，而是對話暫停，由我自己來選。[^switch]
-如果覺得是沒有問題的提問卻被誤攔了，請用「傳送反饋」（Send feedback）告訴他們。[^switch]
+如果不喜歡自動切換，請在設定 → 「功能」（Capabilities）裡，關閉「訊息被標記時切換模型」（Switch models when a message is flagged）。[^screen] 「標記」的意思是沒透過安全檢查。關閉後，不會更換模型，而是對話暫停，由我自己來選。[^switch]
+
+::: details 哪些問題會被攔下（點選展開）
+- 攻擊性的駭客技術、病毒·毒素之類的生物風險領域等，就屬於這類。效能最高的模型也在做這種檢查的模型之列。[^switch]
+- **也可能因為不是我輸入的內容而被更換。** 檢查會連記憶、連線的應用、網頁搜尋結果、上傳的檔案一起看。[^switch]
+- 如果覺得是沒有問題的提問卻被誤攔了，請用「傳送反饋」（Send feedback）告訴他們。[^switch]
+:::
 
 <Quiz id="ch202-fallback" />
 
 ## 設定介面——語言和介面外觀
 
-點左下角我的名字（首頁圖片裡的 ⑩），會開啟賬號選單。[^signup][^screen]
+點左下角我的名字（首頁圖片裡的 ⑩），會開啟帳號選單。[^signup][^screen]
 
-![點左下角「김하나 · Free」後的賬號選單。最上面的郵箱下面，① 「設定」(Ctrl+Shift+,)，② 「語言」，③ 「獲取幫助」，④ 「升級套餐」，⑤ 「下載應用和擴充套件程式」上標有紅色編號，下面還有「瞭解更多」「獲取 API 金鑰」「退出登入」](../../../guide/10-claude/assets/shot-07-account-menu-marked.png)
+![點左下角「김하나 · Free」後的帳號選單。最上面的電子郵件下面，① 「設定」(Ctrl+Shift+,)，② 「語言」，③ 「獲取幫助」，④ 「升級方案」，⑤ 「下載應用和擴充套件程式」上標有紅色編號，下面還有「瞭解更多」「獲取 API 金鑰」「退出登入」](../../../guide/10-claude/assets/shot-07-account-menu-marked.png)
 
-姓名和郵箱是改成示例的介面（免費套餐）。**紅色編號和下面列表的編號是同一處。**[^screen]
+姓名和電子郵件是改成示例的介面（免費方案）。**紅色編號和下面列表的編號是同一處。**[^screen]
 
 - ① 「設定」：開啟設定介面。
 - ② 「語言」：更改介面語言。
 - ③ 「獲取幫助」：向客戶支援提問（[第1章](01-getting-started.md#用不了的時候先試試這些)）。[^support]
-- ④ 「升級套餐」：換成付費套餐（[第1章](01-getting-started.md#改成付費前要知道的事)）。
+- ④ 「升級方案」：換成付費方案（[第1章](01-getting-started.md#改成付費前要知道的事)）。
 - ⑤ 「下載應用和擴充套件程式」：下載電腦應用、手機應用等。
 
 點 ① 「設定」，設定介面就會開啟。左邊的選單是豎著排列的。
 
-![設定 → 「通用」介面。① 左側選單（「通用」「賬號」「隱私」「付費」「功能」「記憶」「回顧」「時間與專注」「Claude Code」），② 「顯示模式」的「主題」（跟隨系統·淺色·深色圖示），③ 「語音」的「語言」（韓語）上標有紅色編號](../../../guide/10-claude/assets/shot-09-settings-general-marked.png)
+![設定 → 「通用」介面。① 左側選單（「通用」「帳號」「隱私」「付費」「功能」「記憶」「回顧」「時間與專注」「Claude Code」），② 「顯示模式」的「主題」（跟隨系統·淺色·深色圖示），③ 「語音」的「語言」（韓語）上標有紅色編號](../../../guide/10-claude/assets/shot-09-settings-general-marked.png)
 
-這是免費套餐的介面。**紅色編號和下面文字裡的編號是同一處。**[^screen]
+這是免費方案的介面。**紅色編號和下面文字裡的編號是同一處。**[^screen]
 
 ① 左側選單中，剛開始只要知道下面這幾個就夠了。[^screen]
 
 | 設定選單 | 在這裡做什麼 | 詳細內容 |
 |---|---|---|
 | 「通用」 | 主題（淺色·深色）、字型、語音語言 | 這一章 |
-| 「賬號」 | 我的名字、「Claude 指示」、已登入的裝置 | [第3章](03-chats.md)、[第5章](05-memory.md) |
+| 「帳號」 | 我的名字、「Claude 指示」、已登入的裝置 | [第3章](03-chats.md)、[第5章](05-memory.md) |
 | 「隱私」 | 分享過的對話、匯出資料 | [第3章](03-chats.md)、[第9章](09-privacy.md) |
-| 「付費」 | 更換套餐、取消、收據 | [第1章](01-getting-started.md#改成付費前要知道的事) |
+| 「付費」 | 更換方案、取消、收據 | [第1章](01-getting-started.md#改成付費前要知道的事) |
 | 「功能」 | 模型自動切換 | 這一章 |
 | 「記憶」 | Claude 記住的內容 | [第5章](05-memory.md) |
 | 「時間與專注」 | 休息提醒、勿擾時間 | [第5章](05-memory.md#休息提醒與免打擾時間) |
 
 出處：介面[^screen]，Anthropic 幫助文件[^cancel][^switch][^sessions][^share]
 
-要適用於所有對話的指示，寫在「賬號」裡的「Claude 指示」中。[^screen]
-付費套餐裡還有檢視剩餘額度的「用量」（Usage）介面（[第1章](01-getting-started.md#使用額度——5-小時、每週、長度)）。[^best] 這個免費賬號的設定選單裡沒有看到。[^screen]
+要適用於所有對話的指示，寫在「帳號」裡的「Claude 指示」中。[^screen]
+付費方案裡還有檢視剩餘額度的「用量」（Usage）介面（[第1章](01-getting-started.md#使用額度——5-小時、每週、長度)）。[^best] 這個免費帳號的設定選單裡沒有看到。[^screen]
 
-**更改介面語言**：在賬號選單的 ② 「語言」裡選擇。[^lang][^screen] 網頁版和電腦應用包括韓語在內，可以用 11 種語言。[^lang]
+**更改介面語言**：在帳號選單的 ② 「語言」裡選擇。[^lang][^screen] 網頁版和電腦應用包括韓語在內，可以用 11 種語言。[^lang]
 無論介面語言是什麼，Claude 都會**用我使用的語言回答。** 即使介面是英語，用韓語提問，也會用韓語回答。[^lang]
 語音模式使用的語言要另外設定。在設定 → 「通用」 → 「語音」的 ③ 「語言」裡選擇（[第10章](10-voice-mobile.md)）。[^screen]
 
@@ -296,7 +312,7 @@ Max 的「最多 50%」並不是說額度變多了。意思是和其他模型**�
 ::: details 和幫助文件的名稱不同時（點選展開）
 設定選單的名稱可能因介面而異。
 
-- 幫助文件介紹說，適用於所有對話的指示在新設定介面的「Your Claude」裡。[^new] 這個賬號裡沒有看到「Your Claude」，「賬號」裡的「Claude 指示」就是那個位置。[^screen]
+- 幫助文件介紹說，適用於所有對話的指示在新設定介面的「Your Claude」裡。[^new] 這個帳號裡沒有看到「Your Claude」，「帳號」裡的「Claude 指示」就是那個位置。[^screen]
 - 語音語言，幫助文件介紹的是設定 → 「功能」 → 語音 → 「語音語言」。[^lang]
 :::
 
@@ -313,11 +329,11 @@ Max 的「最多 50%」並不是說額度變多了。意思是和其他模型**�
 ## 整理
 
 - 在新的 Claude 介面裡，聊天和 Cowork 合併成一個對話，不用選模式。這本指南以新介面為準（舊介面的說明在摺疊框裡）。
-- 側邊選單裡有過去的對話，左下角我的名字裡有設定·語言·「獲取幫助」·「升級套餐」。側邊選單不能關掉，只能展開和收起。
+- 側邊選單裡有過去的對話，左下角我的名字裡有設定·語言·「獲取幫助」·「升級方案」。側邊選單不能關掉，只能展開和收起。
 - 用輸入框的「+」或「/」，可以開啟上傳檔案、研究之類的功能。輸入框下面的「手動」·「自動」是許可權模式。
-- 在輸入框下面的模型選單裡決定模型·投入程度（思考開關會因套餐·模型而出現）。免費套餐只能選 Sonnet·Haiku。日常的事用推薦值就夠了。
+- 在輸入框下面的模型選單裡決定模型·投入程度（思考開關會因方案·模型而出現）。免費方案只能選 Sonnet·Haiku。日常的事用推薦值就夠了。
 - 被判斷為高風險領域的問題，可能由另一個模型代為回答。可以透過提示和模型標籤知道，也可以在設定 → 「功能」裡關閉。
-- 介面語言在賬號選單的「語言」裡改，深色介面和字型在設定 → 「通用」裡改。設定選單的名稱可能因介面而異。
+- 介面語言在帳號選單的「語言」裡改，深色介面和字型在設定 → 「通用」裡改。設定選單的名稱可能因介面而異。
 
 ## 術語整理
 
@@ -328,7 +344,7 @@ Max 的「最多 50%」並不是說額度變多了。意思是和其他模型**�
 | Recents | 最近專案 | 最近的對話和任務列表 |
 | Effort | 投入程度 | 決定每個回答花多少功夫的設定 |
 | Extended Thinking | 擴充套件思考 | 回答之前經過仔細推敲階段 |
-| Usage Credits | 使用額度 | 和套餐額度分開、用多少付多少錢的用量 |
+| Usage Credits | 使用額度 | 和方案額度分開、用多少付多少錢的用量 |
 | Fallback | 回退 | 被安全檢查攔住的問題，由另一個模型接手回答 |
 | Dyslexic Friendly | 閱讀障礙友好 | 為閱讀文字有困難的人設計的字型 |
 
@@ -336,7 +352,7 @@ Max 的「最多 50%」並不是說額度變多了。意思是和其他模型**�
 
 下一章：[第3章. 管理對話](03-chats.md)
 
-[^screen]: 在 Claude 網頁介面（免費套餐，韓語）上親自確認。輸入框「오늘 어떤 도움을 드릴까요?」周圍沒有「Chat」「Cowork」選項和網頁搜尋開關，側邊選單「고정됨」「최근 항목」，「+」選單「파일 업로드 또는 추가」「Skills」「커넥터 추가」「디자인 시스템」「플러그인 추가」「메모리」，「권한 모드」「수동」·「자동」，模型選單（免費只能選 Sonnet 5.5·Haiku 5.5，沒有思考開關），投入程度「낮음」「중간」（推薦）「높음」「엑스트라」「최대」，賬號選單，設定 → 「일반」的「테마」·「음성」 → 「언어」，設定 → 「계정」的「Claude 지침」，設定 → 「기능」的「메시지가 플래그 지정되면 모델 전환」。（確認日期 2026-10-26）
+[^screen]: 在 Claude 網頁介面（免費方案，韓語）上親自確認。輸入框「오늘 어떤 도움을 드릴까요?」周圍沒有「Chat」「Cowork」選項和網頁搜尋開關，側邊選單「고정됨」「최근 항목」，「+」選單「파일 업로드 또는 추가」「Skills」「커넥터 추가」「디자인 시스템」「플러그인 추가」「메모리」，「권한 모드」「수동」·「자동」，模型選單（免費只能選 Sonnet 5.5·Haiku 5.5，沒有思考開關），投入程度「낮음」「중간」（推薦）「높음」「엑스트라」「최대」，帳號選單，設定 → 「일반」的「테마」·「음성」 → 「언어」，設定 → 「계정」的「Claude 지침」，設定 → 「기능」的「메시지가 플래그 지정되면 모델 전환」。（確認日期 2026-10-26）
 [^new]: Anthropic 幫助文件，《Claude Cowork and chat are one Claude》。"With the new Claude experience, you ask for all of it in the same conversation, with no mode to choose." / "The new Claude experience is rolling out gradually, starting with Pro and Max plans on web, desktop, and mobile." / "If you're on a Pro or Max plan and your message box still shows "Chat" and "Cowork" options, you don't have it yet." / "One conversation list: Your quick questions and longer tasks live together in Recents." / "Web search: There's no web search toggle. Claude searches the web when it helps." / "Research: Type /deep-research, or click the “+” button below the chat input, then choose “Research.”" / "Auto (default on Pro, Max, and Team plans): Claude keeps working without stopping to ask about each step, and automated safety checks run before it takes an action." / "For work with real consequences, like sending messages or changing important files, stay close and review what Claude does." / "Instructions for Claude: Set preferences that apply to every conversation in Settings > Your Claude (or Settings > Account in the older Settings layout)." https://support.claude.com/en/articles/16761823 （確認日期 2026-10-26）
 [^chats]: Anthropic 幫助文件，《Delete or rename a conversation》。"Find the conversation in the left sidebar, or click "Chats and tasks" to see your full chat history." https://support.claude.com/en/articles/8230524 （確認日期 2026-10-26）
 [^support]: Anthropic 幫助文件，《How to get support》。"Click your initials or name in the lower left corner and select “Get help” from the menu." https://support.claude.com/en/articles/9015913 （確認日期 2026-10-26）
@@ -348,7 +364,7 @@ Max 的「最多 50%」並不是說額度變多了。意思是和其他模型**�
 [^pricing]: Anthropic 價格頁面。模型對比表的 Fable 行 " No Usage credits 50% of weekly limits* 50% of weekly limits* "（列 = Free/Pro/Max 5x/Max 20x），Opus 行 Free 沒有，Sonnet·Haiku 行 Free 有。Research 行 Free 沒有，從 Pro 開始有。https://claude.com/pricing （確認日期 2026-10-26）
 [^fable]: Anthropic 幫助文件，《Claude Fable models on your plan》。"On Pro plans, standard seats on Team plans, and standard seats on seat-based Enterprise plans, Fable models run on pay-as-you-go usage credits from the start, since they aren’t included in your plan's usage limits." / "No. You can use up to 50% of your weekly limit on Fable models, but your use of other models draws from the same usage limits and you can never use more than your weekly limit." https://support.claude.com/en/articles/15424964 （確認日期 2026-10-26）
 [^persona]: Anthropic 幫助文件，《Adapt to new model personas after deprecations》。"historically Anthropic has deprecated most models around a year after their initial release." / "you can ask Claude to review some of the conversations you’ve most appreciated and to craft instructions for itself based on those." https://support.claude.com/en/articles/12738598 （確認日期 2026-10-26）
-[^switch]: Anthropic 幫助文件，說明對話中模型為什麼被更換的文件（文件標題裡帶有當前的模型名稱，所以這本指南里不寫出）。"Offensive cybersecurity techniques, such as building exploits, malware, or attack tooling." / "so a block can be triggered by content you didn't type." / "You’ll see a notice explaining that the model switched, and the response will be labeled with the model that answered." / "Editing your previous message before retrying often helps." / "With automatic model switching off, a blocked request pauses the conversation instead of switching models." / "Use "Send feedback" to report it." https://support.claude.com/en/articles/15363606 （確認日期 2026-10-26）
+[^switch]: Anthropic 幫助文件，說明對話中模型為什麼被更換的文件（文件標題裡帶有當前的模型名稱，所以這本指南裡不寫出）。"Offensive cybersecurity techniques, such as building exploits, malware, or attack tooling." / "so a block can be triggered by content you didn't type." / "You’ll see a notice explaining that the model switched, and the response will be labeled with the model that answered." / "Editing your previous message before retrying often helps." / "With automatic model switching off, a blocked request pauses the conversation instead of switching models." / "Use "Send feedback" to report it." https://support.claude.com/en/articles/15363606 （確認日期 2026-10-26）
 [^signup]: Anthropic 幫助文件，《How do I sign up for the Pro plan?》。"Navigate to Settings > Billing and click the “Upgrade plan” button." 設定透過左下角名字的首字母（或名字）→ 「設定」開啟。https://support.claude.com/en/articles/8325609 （確認日期 2026-10-26）
 [^cancel]: Anthropic 幫助文件，《Cancel your Pro or Max subscription》。"Navigate to Settings > Billing and click the “Cancel” button." https://support.claude.com/en/articles/8325617 （確認日期 2026-10-26）
 [^best]: Anthropic 幫助文件，《Usage limit best practices》。"you can navigate to Settings > Usage to view progress bars showing how much of your five-hour session and weekly usage limits you’ve consumed." https://support.claude.com/en/articles/9797557 （確認日期 2026-10-26）

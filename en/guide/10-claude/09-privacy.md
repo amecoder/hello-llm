@@ -1,5 +1,7 @@
 # Chapter 9. Privacy and Safety — Knowing Where Your Chats Go
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: A single switch called "Help improve our AI models" decides whether the chats you send to Claude are used for AI training.
 > Chats you delete are also erased from the server within 30 days. This chapter also shows you where to find data export, account deletion, reporting, and crisis support.
 
@@ -12,7 +14,7 @@ The screens shown here are from the web version as of October 2026. Because both
 **Model training** is when an AI company gathers people's chats to teach the next AI to do a better job. In Claude, there are three main cases where your chats are used for training.[^training-use]
 
 - When you **allow** them to be used for training
-- When a chat is flagged for **safety review**
+- When an automated system that detects harmful content flags a chat for **safety review**[^toggle]
 - When you send feedback like a **thumbs up or thumbs down** under an answer[^training-personal]
 
 You can decide the first one yourself. We could not verify from the docs whether this switch is turned on or off at the start. So open your settings and check it yourself.
@@ -55,7 +57,9 @@ Use an **Incognito chat (시크릿 채팅)**. You open it with the ghost button 
 
 ![Incognito mode screen. Red numbers mark ① Incognito (시크릿) on the left of the top black bar, ② the dashed input box, ③ the notice text, and ④ ✕ (exit) at the top right](../../../guide/10-claude/assets/shot-06-incognito-marked.png)
 
-This is the free plan screen. ③ The notice says: "Incognito sessions aren't saved to history, memory, or search, and aren't used to train Claude."[^screen] Even if you leave the training switch on, Incognito chats are not used for training.[^training-use] Still, while they are not saved to your history, they are kept for 30 days by default.[^incognito] To finish, click ④ ✕.
+This is the free plan screen. ③ The notice says: "Incognito sessions aren't saved to history, memory, or search, and aren't used to train Claude."[^screen] Even if you leave the training switch on, Incognito chats are not used for training.[^training-use] To finish, click ④ ✕.
+
+Not being saved to your history is different from being kept on the server. Incognito chats are still kept on the server for 30 days by default.[^incognito]
 
 **Don't click thumbs up or thumbs down lightly.** When you send feedback, that entire chat is stored for up to 5 years. It may also be used for training.[^feedback] If you shared sensitive information in a chat, it is better to choose another way instead of using the feedback buttons.
 
@@ -68,15 +72,20 @@ How long a chat stays depends on the situation.[^retention]
 | Situation | How long it stays |
 |---|---|
 | Chats you deleted | Removed from history right away; erased from servers within 30 days |
-| Chats allowed for training | Up to 5 years with your name tag removed |
+| Chats allowed for training | Up to 5 years, separated from your account |
 | Chats where you sent thumbs up/down | Up to 5 years |
-| Chats flagged for breaking usage rules | Chat content up to 2 years; safety scores up to 7 years |
 
-Keep three things in mind when reading this table.
+"Separated from your account" is our wording for "de-identified" (with identifying information removed) in the help docs.[^retention]
+
+Keep two things in mind when reading this table.
 
 - The 5-year retention only applies to chats you newly started or resumed **after turning the switch on**.
-- Deleted chats are not used for future training.
+- Deleted chats are not used for future training.[^retention]
+
+::: details Rare cases — rule violations and legal retention (click to expand)
+- Chats flagged for breaking the **usage rules** (Anthropic's rules on what you must not do) stay longer. Chat content is kept up to 2 years, and safety scores (the risk ratings the safeguards gave that chat) up to 7 years.[^retention]
 - Chats may be kept longer when required by law or needed to settle disputes.[^retention]
+:::
 
 Delete any chats you do not want to keep. Deleted chats will not be used for future training. However, memories created from those chats still remain, so delete them separately as shown in [Chapter 5](05-memory.md).[^memory] We covered how to delete chats in [Chapter 3](03-chats.md).
 
@@ -164,7 +173,13 @@ That way, you get the final check on what goes out.
 
 ## Safeguards, Reporting, and Appeals
 
-Claude has safeguards that filter out harmful content. It uses models that spot harmful content and filters that can block answers, and it temporarily applies stronger filters to users who repeatedly break the rules. The help docs openly state that these safeguards are **not foolproof**. That means they might block a harmless question or miss something they should have blocked.[^safety]
+Claude has safeguards that filter out harmful content.[^safety]
+
+- Models that spot harmful content
+- Filters that can block answers
+- Stronger filters applied temporarily to users who repeatedly break the rules
+
+The help docs openly state that these safeguards are **not foolproof**. That means they might block a harmless question or miss something they should have blocked.[^safety]
 
 ### When You Get a Warning or Your Account Is Suspended
 
@@ -179,7 +194,11 @@ Even with a suspended Free, Pro, or Max account, you can still log in to export 
 
 ### When You See Problematic Content
 
-If you see problematic content in a chat someone else shared, click the Report (신고) button on that screen. There is also a separate reporting form. Copyright and trademark issues use a different process. If you repeatedly send baseless reports, your ability to submit reports may be suspended. You will receive a warning before that happens.[^report]
+If you see problematic content in a chat someone else shared, click the Report (신고) button on that screen.[^report]
+
+- There is also a separate reporting form.
+- Copyright and trademark issues use a different process.
+- If you repeatedly send baseless reports, your ability to submit reports may be suspended. You will receive a warning before that happens.[^report]
 
 <Quiz id="ch209-safeguards" />
 

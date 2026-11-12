@@ -1,5 +1,7 @@
 # 第9章 用语音对话——语音输入和语音对话
 
+<Badge type="info" text="选读" /> 需要的时候再读。跳过也能跟上后面的章节。
+
 > **一句话总结**：输入框右边有两个用说话来输入的按钮。**麦克风**把我说的话转成文字写下来（语音输入），
 > **蓝色声波按钮**让你像打电话一样和 ChatGPT 用嘴说着来回交流（语音对话）。声音也可能像对话记录一样被保存，所以要分场合、分内容来使用。
 
@@ -52,7 +54,7 @@
 如果我的发音或句子不自然，就用韩语简短地告诉我。
 ```
 
-::: details 得到的回答大致是这样（示例——点击展开）
+::: details 得到的回答大致是这样（示例——点击展开）（点击展开）
 这是这本指南做的示例。实际的回答会因服务和当时的情况而不同。
 
 > Hi! Welcome. What can I get for you today?
@@ -68,7 +70,13 @@
 
 如果回答太长，直接用嘴说“再简短一点”就行。这和用文字对话时让它修改的方式（[第1阶段第6章](../00-common/06-conversation.md)）是一样的。
 
-开车时，也可以用 **CarPlay**（Apple 把 iPhone 连接到车载屏幕的功能）用语音和 ChatGPT 对话。所有套餐、全球范围都可以。需要 iOS 26.4 以上的 iPhone。不过它**看不到地图·车辆信息·当前位置。** 所以不能代替导航应用。[^carplay]
+::: details 在车里使用——CarPlay（点击展开）
+
+开车时，也可以用 **CarPlay**（Apple 把 iPhone 连接到车载屏幕的功能）用语音和 ChatGPT 对话。所有套餐、全球范围都可以。需要 iOS 26.4 以上的 iPhone。[^carplay]
+
+不过它**看不到地图·车辆信息·当前位置。** 所以不能代替导航应用。[^carplay]
+
+:::
 
 <Quiz id="ch109-start" />
 
@@ -86,7 +94,9 @@
 
 ### 选择方式和声音
 
-在网页版，通过账号名称 → 「设置」 → **「语音风格」**选择声音和语言。2026 年 10 月 23 日在网页版（Plus）界面里打开看，「语音风格」里有下面这些项目。
+在网页版，通过账号名称 → 「设置」 → **「语音风格」**选择声音和语言。「语音风格」里有下面这些项目。[^screen-voice]
+
+在实时·高级·标准中选一个的栏位，在 2026 年 10 月的网页版界面里**没有看到。** 可能因手机应用或套餐而不同。
 
 ![设置里的「语音风格」界面。最上面是声音选择，还有「语言」（韩语）、「语音输入——启用语音输入」开关、「最近的录音——最近 20 条录音保存在这台设备上」](../../../guide/11-chatgpt/assets/shot-13-voice-style-marked.png)
 
@@ -99,10 +109,12 @@
 | ③ | 启用语音输入 | 决定是否在聊天输入框里使用语音输入（麦克风按钮） |
 | ④ | 最近的录音 | 提示最近 20 条录音保存在**这台设备上** |
 
-实时方式新增了韩语声音 **Haetsal（햇살）** 和 **Hanul（한울）**。[^voice] 如果在首页下方看到「全新韩语语音」的说明，请点一下「试用新语音」。能选哪种方式和声音，可能因套餐而不同。像上面截图里的「Cove」那样，声音名称有时是英语。想换别的声音，点「语音风格」栏（①），从列表里选就行。
+想换别的声音，点「语音风格」栏（①），从列表里选就行。像上面截图里的「Cove」那样，声音名称有时是英语。
+
+实时方式有韩语声音 **Haetsal（햇살）** 和 **Hanul（한울）**。[^voice] 如果在首页下方看到「全新韩语语音」的说明，请点一下「试用新语音」。
 
 ::: details 实时·高级·标准方式在哪里选？（点击展开）
-帮助文档说明，在设置的语音项目里，从实时·高级·标准中选择。[^voice] 但是，在 2026 年 10 月网页版界面里，设置左侧列表中看到的不是「语音」，而是「语音风格」这一项，选择实时·高级·标准的栏位在这个界面里**没有看到。** 可能因手机应用或套餐而不同。
+帮助文档说明，在设置的语音项目里，从实时·高级·标准中选择。[^voice] 但是，在 2026 年 10 月网页版界面里，设置左侧列表中看到的不是「语音」，而是「语音风格」这一项，选择实时·高级·标准的栏位在这个界面里**没有看到。** 可能因手机应用或套餐而不同。能选哪种方式和声音，也可能因套餐而不同。
 :::
 
 <Quiz id="ch109-modes" />
@@ -132,7 +144,7 @@
 - **标准**：转写成文字之后，录音会被删除。
 - **语音输入（麦克风）**：录音在那个对话还留在记录里期间一直保存。删除对话后，会在 30 天内一并删除。不过也有例外，比如出于安全·法律原因，或者同意了共享用于训练的情况。[^dictation]
 
-录音本身，只要我没有另外允许共享，就不会用于训练。必须另外打开「包含我的录音」（Include your audio recordings）设置，录音才会用于训练。不过**转写出来的文字**和普通聊天一样，遵循「允许用数据训练以改进模型」设置。[^voice] 这个设置在[第8章](08-privacy.md)里讲过了。
+录音本身，只要我没有另外允许共享，就不会用于训练。必须另外打开「包含我的录音」（Include your audio recordings）设置，录音才会用于训练。[^audio-switch] 不过**转写出来的文字**和普通聊天一样，遵循「允许用数据训练以改进模型」设置。[^voice] 这个设置在[第8章](08-privacy.md)里讲过了。
 
 ### 在公共场所要小心
 
@@ -143,7 +155,16 @@
 - 在有别人在场的地方，不要让那个人的声音或对话被一起录下来。
 - 在语音对话中，已连接的应用（[第7章](07-projects-plugins.md#设置已连接应用的权限)）可能无法使用。如果不行，就把同样的请求用文字输入试试。[^apps-voice]
 
-**让它转写会议时，要先告知所有参会者并征得同意。** Mac 电脑应用的 **Meetings 插件**（Pro·Business 套餐，测试版）会把会议转写下来，并生成摘要和待办事项。应用弹出的同意提示只有我自己能看到，不会发给其他参会者。笔记完成后，录音会被删除，无法再次回放。[^meetings]
+**让它转写会议时，要先告知所有参会者并征得同意。**[^meetings] 开会之前，像“今天的会议可以录音用来整理吗？”这样问一句就行。
+
+::: details 会议记录功能——Meetings 插件（点击展开）
+
+Mac 电脑应用的 **Meetings 插件**（Pro·Business 套餐，测试版）会把会议转写下来，并生成摘要和待办事项。[^meetings]
+
+- 应用弹出的同意提示只有我自己能看到，不会发给其他参会者。所以要你亲自告诉大家。
+- 笔记完成后，录音会被删除，无法再次回放。
+
+:::
 
 
 <Quiz id="ch109-privacy" />
@@ -209,6 +230,8 @@
 ---
 
 [^voice]: OpenAI 帮助文档，《ChatGPT Voice》。实时·高级·标准 3 种方式，在设置的语音项目里选择，实时不支持视频·屏幕共享（仅手机高级方式可以），韩语声音 Haetsal（햇살）·Hanul（한울），按 24 小时计算的使用额度（Free 有限·Go 3 小时·Plus 3 小时·Pro 15 小时或不限），语音图标的位置，实时·高级的音频片段保存 30 天·标准在转写后删除，音频必须另外选择共享才会用于训练，语音对话一次只能进行 1 个，与语音输入（Dictation）的区别。https://help.openai.com/en/articles/20001274 （确认日期 2026-10-23）
+[^screen-voice]: 2026 年 10 月 23 日在网页版（Plus）界面里打开「设置」 → 「语音风格」亲自确认。
+[^audio-switch]: 这个开关在设置界面的哪里，这本指南没能在界面上确认。必须另外打开录音才会用于训练，这是帮助文档《ChatGPT Voice》的说明。https://help.openai.com/en/articles/20001274 （确认日期 2026-10-23）
 [^dictation]: OpenAI 帮助文档，《Voice Dictation - FAQ》。"Audio from dictation will be retained for as long as the chat is part of your chat history." / "When you delete the chat, we’ll also delete the associated audio clip within 30 days". https://help.openai.com/en/articles/12168547 （确认日期 2026-10-24）
 [^apps-voice]: OpenAI 帮助文档，《Troubleshooting plugins and apps in ChatGPT》。"If an app is unavailable in voice, try a supported text conversation." https://help.openai.com/en/articles/20001497 （确认日期 2026-10-24）
 [^meetings]: OpenAI 帮助文档，《The Meetings plugin in ChatGPT》。"Meetings is available in beta in the ChatGPT desktop app on macOS for all Pro plans and all Business plans." / "get everyone’s consent before you start." / "The consent reminder in your app is visible to you." / "Once your notes are ready, the audio is deleted from your Mac and OpenAI’s servers and can’t be replayed." https://help.openai.com/en/articles/20001546 （确认日期 2026-10-24）

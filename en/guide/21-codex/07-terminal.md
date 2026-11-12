@@ -1,9 +1,11 @@
 # Chapter 7. Using It in the Terminal — Checking Your Organizer with One Line of `codex exec`
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: Codex CLI is Codex for the terminal. It reads `AGENTS.md` and skills from the folder where you run it.
 > `codex exec "task"` runs once and exits, and it is **read-only by default**. It is similar to Claude Code's `claude -p`, except for this difference.
 
-This chapter is based on the official Codex docs checked on November 1, 2026, and the results of running Codex CLI 0.166.0 in the macOS terminal. **If you are new to the terminal, you can skip this chapter.** We explained what the terminal is in [Claude Code Chapter 10](../20-claude-code/10-terminal.md).
+This chapter is based on the official Codex docs checked on November 1, 2026, and the results of running Codex CLI in the macOS terminal.[^version] **If you are new to the terminal, you can skip this chapter.** We explained what the terminal is in [Claude Code Chapter 10](../20-claude-code/10-terminal.md).
 
 ## Installing and Getting Started
 
@@ -19,12 +21,19 @@ curl -fsSL https://chatgpt.com/codex/install.sh | sh
 powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"
 ```
 
+Here is the command broken into pieces.
+
+- `curl -fsSL URL`: Downloads the install script (a file that lists the installation steps) at that address. `-fsSL` is four options written together: "stop if there is an error, hide the progress display, still show errors, and follow the address if it has moved."
+- `|` (pipe): Passes the result of the command before it to the command after it.
+- `sh`: Runs the script it received.
+- Windows works the same way. `irm` downloads it, and `iex` runs it. `-ExecutionPolicy ByPass` lifts the script-running restriction just this once.
+
 **Before running the install command, make sure it matches the official docs (learn.chatgpt.com) character for character.** That is because this command downloads a script from the internet and runs it right away.
 
 Once the installation finishes, move to your organizer folder and type `codex`. On your first run, choose **Sign in with ChatGPT**.[^signin]
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 codex
 ```
 
@@ -37,21 +46,26 @@ In the terminal, Codex treats **the folder where you started it** as the project
 `codex exec` runs once and finishes without opening the chat screen.[^exec] We asked it the same question from Claude Code Chapter 10.
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 codex exec "Show me the list of files in the notes folder, and tell me in one line per file which template (from templates) each file used. Do not edit any files. Reply briefly as a table only."
 ```
 
-Only the answer came out cleanly (full output: [Chapter 7 codex exec output.txt](/practice/notes/results/codex/7장-codex-exec-출력.txt)).
+Only the answer came out cleanly (full output: [Chapter 7 codex exec output.txt](/practice/en/notes/results/codex/ch7-codex-exec-output.txt)).
 
 | notes file | Template used |
 |---|---|
-| 공부-2026-10-28-프롬프트-강의.md | templates/공부노트.md |
-| 주간회고-2026-10-26.md | templates/주간회고.md |
-| 회의록-2026-10-27-주간회의.md | templates/회의록.md |
+| study-2026-10-28-prompt-lecture.md | templates/study-notes.md |
+| weekly-review-2026-10-26.md | templates/weekly-review.md |
+| minutes-2026-10-27-weekly.md | templates/minutes.md |
 
 Source: Hands-on results from this guide (2026-11-01). Progress logs were discarded separately, leaving only the final answer.
 
-`codex exec` sends progress updates and the final answer down **different paths**. Progress goes to the side channel on screen (stderr), and only the final answer goes to standard output (stdout).[^stdout] So if you run something like `codex exec "…" > 결과.md`, only the final answer is saved in the file.
+`codex exec` sends progress updates and the final answer down **different paths**.[^stdout]
+
+- Progress: Goes to the side channel on screen (stderr, standard error).
+- Final answer: Goes only to standard output (stdout, standard out).
+
+This difference is useful when you want the result in a file. For example, try typing `codex exec "…" > result.md`. `>` is a symbol that means "put the standard output in this file instead of on the screen." Then only the progress passes by on the screen, and only the final answer is saved in `result.md`. If a file with the same name already exists, `>` erases its contents and writes it anew. So pick a new name you have not used before.
 
 **`codex exec` is read-only by default.** To let it edit files, add `--sandbox workspace-write`.[^readonly] We also ran the exercises in Chapters 2, 3, and 5 of this guide with this option.
 
@@ -61,7 +75,13 @@ codex exec --sandbox workspace-write '$weekly-review'
 
 `codex exec` works by **setting permissions in advance** before running.[^preset] In the Chapter 5 exercise of this guide, when writing to the `.agents` folder was blocked, Codex could not ask for permission and simply stopped. For tasks that need permission prompts, it is easier to use the app or interactive `codex`.
 
+There are also risky options that turn off both the sandbox and approvals, but do not use them for organizing notes.
+
+::: details Options from older posts and risky options (click to expand)
+
 The `--full-auto` option you might see in older posts is no longer supported.[^fullauto] There is also an option like `--dangerously-bypass-approvals-and-sandbox` that turns off both the sandbox and approvals[^yolo], but you do not need it for organizing notes.
+
+:::
 
 <Quiz id="ch507-exec" />
 
@@ -75,8 +95,9 @@ When you open interactive mode with `codex`, you use commands that start with `/
 | `/import` | Import settings from Claude Code or Cursor |
 | `/resume` | Continue a saved chat |
 | `/status` | View chat details and remaining limits |
+| `/skills` | View the list of skills |
 
-Source: Codex official docs[^permissions][^import][^resume][^status]
+Source: Codex official docs[^permissions][^import][^resume][^status][^skills]
 
 To continue a chat from outside after closing interactive mode, type `codex resume`.[^resume]
 
@@ -112,6 +133,7 @@ To continue a chat from outside after closing interactive mode, type `codex resu
 
 Next chapter: [Chapter 8. Cost, Data, Safety, and Choosing Your Tool](08-safety-choose.md)
 
+[^version]: The version this guide ran was Codex CLI 0.166.0.
 [^install]: Codex official docs, "Codex CLI". "curl -fsSL https://chatgpt.com/codex/install.sh | sh" / "powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"" https://learn.chatgpt.com/docs/codex/cli (checked on 2026-11-01)
 [^signin]: Codex official docs, "Codex CLI". "Open a project directory and run `codex`. The first time you run Codex, choose **Sign in with ChatGPT** or another available sign-in method." https://learn.chatgpt.com/docs/codex/cli (checked on 2026-11-01)
 [^cwd]: Codex official docs, "Projects and chats". "Codex CLI treats the directory where you start it as the project for the chat." https://learn.chatgpt.com/docs/projects (checked on 2026-11-01)

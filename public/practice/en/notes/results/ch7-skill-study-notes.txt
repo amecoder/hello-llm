@@ -1,0 +1,64 @@
+---
+name: study-notes
+description: Organizes study notes in inbox/ (study-*.txt) with the templates/study-notes.md template and saves them as study notes in notes/. Use it for requests like "organize my study notes", "clean up my lecture notes", or "summarize the book I read", or when asked to organize inbox/study-*.txt. For meeting memos use meeting-notes; for review memos use weekly-review.
+---
+
+# study-notes — study jottings → study notes
+
+## When to use
+
+- When organizing `inbox/study-YYYY-MM-DD-topic.txt`, written while watching a lecture, book, or video, into study notes
+- e.g. "Make my 10/28 prompt lecture jottings into study notes"
+
+## Files to read (in order)
+
+1. `CLAUDE.md` — the 5 organizing rules for this folder
+2. `templates/README.md` — how to use the templates and the checklist
+3. `templates/study-notes.md` — the template to use
+4. The original jottings `inbox/study-YYYY-MM-DD-topic.txt` — **read only. Never edit them.**
+
+## Template to use
+
+Copy `templates/study-notes.md` as is and fill in only the `{{ }}` spots. Don't change the section names or order (1. One-line summary → 2. Key points → 3. New words → 4. Watch out for → 5. Questions to ask → 6. Things to try → 7. What happened when I tried).
+
+How to fill each section:
+
+- **Header** — source, length, path of the original memo. If not in the memo, `(not in notes)`.
+- **1. One-line summary** — all the jottings in one sentence.
+- **2. Key points** — 3 to 7, rewritten in plain words instead of copied. If the jottings include an example, add it.
+- **3. New words** — terms from the jottings and their meanings, as a table. If a meaning isn't in the jottings, don't make it up; put `(not in notes)` in the meaning cell — and also add this term to section 5, Questions to ask.
+- **4. Watch out for** — easy-to-get-wrong points written in the jottings.
+- **5. Questions to ask** — things the jottings say you don't know, or question marks. If none, `(none)` as the template comment says.
+- **6. Things to try** — plans to apply written in the jottings, in the form `- when: what`. If "when" isn't in the memo, `- (not in notes): what`.
+- **7. What happened when I tried** — at first `(not tried yet)`, as the template comment says. Fill in with the date only when the jottings themselves record a result.
+- Don't delete a section that has nothing to write; write `(not in notes)`.
+
+Dates: the title follows the template, like `2026-10-28(Tue)`; the body uses month/day + day of the week in parentheses, like `10/28(Tue)`. Check the day of the week on a calendar (`date -j -f %Y-%m-%d 2026-10-28 +%a`).
+
+**Don't make up anything that isn't in the memo.** Rewriting "in your own words" means changing only the wording, not adding knowledge that isn't in the jottings.
+
+## Where to save
+
+- `notes/study-YYYY-MM-DD-topic.md` (date and topic come from the original jottings' file name)
+- e.g. `inbox/study-2026-10-28-prompt-lecture.txt` → `notes/study-2026-10-28-prompt-lecture.md`
+- If a file with the same name already exists, ask the user before overwriting it.
+
+## Checklist when done
+
+Open the saved file again and check from the top. If even one is ✗, fix it and check again.
+
+**All templates**
+- [ ] Section names and order are the same as the template (no section deleted — if there is nothing to write, `(not in notes)`)
+- [ ] No `{{` is left (`grep -n '{{' notes/study-....md` returns nothing)
+- [ ] Dates have the day of the week, and the date in the file name matches the date in the title
+- [ ] Numbers, names, and dates were checked once against the original jottings
+- [ ] Nothing was made up that isn't in the jottings
+- [ ] The originals in `inbox/` were not edited (`git status inbox/` shows no changes from this task)
+
+**Study notes**
+- [ ] Key points are written in plain words, not copied, and there are 3 or more (if the jottings have fewer than 3, write as many as there are and tell the user)
+- [ ] Every unfamiliar word from the jottings is in the "New words" table with its meaning
+- [ ] Things to try are actions with "when · what" ("write better" ✗ → "put role+format in Monday's Instagram post" ✓)
+- [ ] What happened when I tried is either `(not tried yet)` or the date and result written in the jottings
+
+Finally, tell the user the saved path and the list of sections left as `(not in notes)`.

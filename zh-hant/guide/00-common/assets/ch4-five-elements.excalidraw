@@ -1,0 +1,181 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 175,
+   "height": 80,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "1. 目標\n想要什麼？",
+    "fontSize": 17
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 87,
+   "y": 80,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     88
+    ]
+   ],
+   "width": 0,
+   "height": 88
+  },
+  {
+   "type": "rectangle",
+   "x": 200,
+   "y": 0,
+   "width": 175,
+   "height": 80,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "2. 背景\n什麼情況？",
+    "fontSize": 17
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 287,
+   "y": 80,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     88
+    ]
+   ],
+   "width": 0,
+   "height": 88
+  },
+  {
+   "type": "rectangle",
+   "x": 400,
+   "y": 0,
+   "width": 175,
+   "height": 80,
+   "backgroundColor": "#fff3bf",
+   "fillStyle": "solid",
+   "label": {
+    "text": "3. 對象\n誰來讀？",
+    "fontSize": 17
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 487,
+   "y": 80,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     88
+    ]
+   ],
+   "width": 0,
+   "height": 88
+  },
+  {
+   "type": "rectangle",
+   "x": 600,
+   "y": 0,
+   "width": 175,
+   "height": 80,
+   "backgroundColor": "#e5dbff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "4. 格式\n什麼樣子？",
+    "fontSize": 17
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 687,
+   "y": 80,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     88
+    ]
+   ],
+   "width": 0,
+   "height": 88
+  },
+  {
+   "type": "rectangle",
+   "x": 800,
+   "y": 0,
+   "width": 175,
+   "height": 80,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "label": {
+    "text": "5. 條件\n要遵守·要避免",
+    "fontSize": 17
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 887,
+   "y": 80,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     88
+    ]
+   ],
+   "width": 0,
+   "height": 88
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 170,
+   "width": 975,
+   "height": 70,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "好的提示詞 — 寫進這五項，AI 要猜的就少了",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 255,
+   "width": 975,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "不必每次都寫全。回答不理想時，把它當作檢查漏項的清單",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

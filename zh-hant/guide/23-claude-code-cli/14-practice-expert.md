@@ -1,6 +1,6 @@
 # 第14章 實踐任務與像專家一樣使用
 
-<Badge type="tip" text="必讀" /> 要跟著這個階段學下去，請一定讀一讀。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
 
 > **一句話總結**：這是把到目前為止學過的東西**親手再做一遍**的 8 個任務。最後一個任務是用**你自己的筆記**做出每週整理。
 
@@ -10,24 +10,24 @@
 
 ## 怎麼做實踐任務
 
-1. **新建一個練習資料夾。** 例如：`~/hello-ai-연습/다시`（hello-ai 練習/重來）。`inbox` 裡只放每週例會的筆記一份。臨時會議的筆記在任務 7 再放進去。
+1. **新建一個練習資料夾。** 例如：`~/hello-ai-practice/again`（hello-ai 練習/重來）。`inbox` 裡只放每週例會的筆記一份。臨時會議的筆記在任務 7 再放進去。
 2. **按任務的「動手試試」來做。** 複製灰色框裡的文字來用就行。
 3. **把「確認做好了沒有」逐項勾選。** 如果有沒做到的項，就到「回頭再看」裡的那一章，只把那一部分重做一遍。
 
 Mac 和 Linux 在終端裡這樣輸入。筆記從之前用的練習資料夾裡複製過來。
 
 ```bash
-mkdir -p ~/hello-ai-연습/다시/inbox
-cd ~/hello-ai-연습/다시
-cp ../터미널/inbox/회의-2026-10-27-주간회의.txt inbox/
+mkdir -p ~/hello-ai-practice/again/inbox
+cd ~/hello-ai-practice/again
+cp ../terminal/inbox/meeting-2026-10-27-weekly.txt inbox/
 ```
 
 Windows PowerShell 這樣輸入。本章的 Windows 命令沒有實際執行過。
 
 ```powershell
-mkdir $HOME\hello-ai-연습\다시\inbox
-cd $HOME\hello-ai-연습\다시
-cp ..\터미널\inbox\회의-2026-10-27-주간회의.txt inbox\
+mkdir $HOME\hello-ai-practice\again\inbox
+cd $HOME\hello-ai-practice\again
+cp ..\terminal\inbox\meeting-2026-10-27-weekly.txt inbox\
 ```
 
 任務 1~7 按順序做。後面的任務會用到前面任務的結果。**任務 8 放在最後**做。
@@ -51,7 +51,7 @@ cp ..\터미널\inbox\회의-2026-10-27-주간회의.txt inbox\
 **動手試試**：在練習資料夾裡用 `claude --permission-mode manual` 啟動，然後傳送下面的請求。信任確認視窗的預設選項是 `No, exit`。用向下方向鍵選 `Yes, I trust this folder`。
 
 ```text
-讀一下 inbox/회의-2026-10-27-주간회의.txt，整理成 회의록.md。分成決定事項、待辦（負責人·期限）、下次會議，筆記裡沒有的內容不要寫。
+讀一下 inbox/meeting-2026-10-27-weekly.txt，整理成 minutes.md。分成決定事項、待辦（負責人·期限）、下次會議，筆記裡沒有的內容不要寫。
 ```
 
 **確認做好了沒有**
@@ -89,7 +89,7 @@ cp ..\터미널\inbox\회의-2026-10-27-주간회의.txt inbox\
 5. 恢復後，傳送過的請求會回到輸入框裡。按兩次 Esc 清掉，再進入下一個任務。
 
 ```text
-在 회의록.md 的待辦表裡加一欄"狀態"，全部寫成"進行中"。別的部分不要改。
+在 minutes.md 的待辦表裡加一欄"狀態"，全部寫成"進行中"。別的部分不要改。
 ```
 
 **確認做好了沒有**
@@ -104,10 +104,10 @@ cp ..\터미널\inbox\회의-2026-10-27-주간회의.txt inbox\
 
 **適用情況**：同樣的規則和步驟總是一遍遍重複說時。
 
-**動手試試**：把會議記錄的規則用 3~5 行寫進 CLAUDE.md。然後製作技能 `meeting-notes`，在**新會話**裡不說規則、直接呼叫它。參考樣例：[CLAUDE.md](/practice/cli/results/8장-CLAUDE.md.txt) · [技能](/practice/cli/results/9장-스킬-meeting-notes.txt)
+**動手試試**：把會議記錄的規則用 3~5 行寫進 CLAUDE.md。然後製作技能 `meeting-notes`，在**新會話**裡不說規則、直接呼叫它。參考樣例：[CLAUDE.md](/practice/zh-hant/cli/results/ch8-CLAUDE.md.txt) · [技能](/practice/zh-hant/cli/results/ch9-skill-meeting-notes.txt)
 
 ```text
-/meeting-notes inbox/회의-2026-10-27-주간회의.txt
+/meeting-notes inbox/meeting-2026-10-27-weekly.txt
 ```
 
 **確認做好了沒有**
@@ -122,7 +122,7 @@ cp ..\터미널\inbox\회의-2026-10-27-주간회의.txt inbox\
 
 **適用情況**：不想開啟對話就把整理做完時。
 
-**動手試試**：執行之前，先在會話裡看一下 `/usage`。然後用 `/exit` 退出，在終端裡做。用[第10章](10-headless-automation.md)的貼上框做出 `주간정리.sh`（每週整理），再用 `bash 주간정리.sh` 執行。Windows 貼上第10章的 PowerShell 框。
+**動手試試**：執行之前，先在會話裡看一下 `/usage`。然後用 `/exit` 退出，在終端裡做。用[第10章](10-headless-automation.md)的貼上框做出 `weekly-summary.sh`（每週整理），再用 `bash weekly-summary.sh` 執行。Windows 貼上第10章的 PowerShell 框。
 
 **確認做好了沒有**
 
@@ -139,13 +139,13 @@ cp ..\터미널\inbox\회의-2026-10-27-주간회의.txt inbox\
 **動手試試**：按下面的順序做。
 
 1. 加上第11章的變更記錄鉤子，讓它改一個檔案。
-2. 在這個練習資料夾裡，從頭跟著做第12章的「用 Git 留下第一次記錄（Git으로 첫 기록 남기기）」。不過，第12章第一個框裡的 `cd ~/hello-ai-연습/터미널` 那一行可以不輸入。因為你已經在那個資料夾裡了。從 `git init` 開始輸入。
+2. 在這個練習資料夾裡，從頭跟著做第12章的「用 Git 留下第一次記錄（Git으로 첫 기록 남기기）」。不過，第12章第一個框裡的 `cd ~/hello-ai-practice/terminal` 那一行可以不輸入。因為你已經在那個資料夾裡了。從 `git init` 開始輸入。
 3. 按第12章做出 `.gitignore`，經過 `git config`·`git add .`·`git status --short`，一直做到用 `git commit` 完成第一次提交。
 
 **確認做好了沒有**
 
 - ☐ `/hooks` 裡能看到鉤子
-- ☐ 親自開啟 `변경기록.txt`（變更記錄）看了行數有沒有增加
+- ☐ 親自開啟 `changelog.txt`（變更記錄）看了行數有沒有增加
 - ☐ `git log --oneline` 裡能看到記錄
 
 **回頭再看**：[第11章](11-hooks-statusline.md)、[第12章](12-parallel-remote.md)
@@ -165,8 +165,8 @@ cp ..\터미널\inbox\회의-2026-10-27-주간회의.txt inbox\
 第1步用第13章裡下載好的檔案。如果刪掉了，就按[第13章](13-cost-safety-trouble.md)重新下載。Mac 和 Linux 這樣輸入。
 
 ```bash
-cp ~/Downloads/회의-2026-10-29-임시회의.txt inbox/
-cat inbox/회의-2026-10-29-임시회의.txt
+cp ~/Downloads/meeting-2026-10-29-adhoc.txt inbox/
+cat inbox/meeting-2026-10-29-adhoc.txt
 git add .
 git commit -m "新增臨時會議筆記"
 ```
@@ -174,8 +174,8 @@ git commit -m "新增臨時會議筆記"
 Windows PowerShell 這樣輸入。
 
 ```powershell
-cp $HOME\Downloads\회의-2026-10-29-임시회의.txt inbox\
-Get-Content -Encoding UTF8 inbox\회의-2026-10-29-임시회의.txt
+cp $HOME\Downloads\meeting-2026-10-29-adhoc.txt inbox\
+Get-Content -Encoding UTF8 inbox\meeting-2026-10-29-adhoc.txt
 git add .
 git commit -m "新增臨時會議筆記"
 ```
@@ -186,7 +186,7 @@ git commit -m "新增臨時會議筆記"
 - 如果最下面一行是 `auto mode on`，按一次 `Shift + Tab` 換成 `manual mode on`。
 - 按第13章那個更好的例子交給它。
 
-第3步要把筆記從原資料夾的 `inbox` 裡拿出來，是因為 `주간정리.sh`。這個指令碼會在沒人看著的情況下處理 `inbox` 裡所有的會議筆記。如果帶隱藏指令的筆記還留著，下次執行時就會被原樣處理。拿出來的命令在第13章「小心隱藏的指令」一節的末尾。
+第3步要把筆記從原資料夾的 `inbox` 裡拿出來，是因為 `weekly-summary.sh`。這個指令碼會在沒人看著的情況下處理 `inbox` 裡所有的會議筆記。如果帶隱藏指令的筆記還留著，下次執行時就會被原樣處理。拿出來的命令在第13章「小心隱藏的指令」一節的末尾。
 
 **確認做好了沒有**
 
@@ -202,9 +202,9 @@ git commit -m "新增臨時會議筆記"
 
 **適用情況**：現在不想只是練習，而是想用在自己的工作上時。
 
-**動手試試**：在新資料夾（例如 `~/hello-ai-연습/내-주간정리`（hello-ai 練習/我的每週整理））裡建好 `inbox`，放進 2~3 份**刪掉了個人資訊的**自己的筆記。放的時候要注意兩點。
+**動手試試**：在新資料夾（例如 `~/hello-ai-practice/my-weekly-summary`（hello-ai 練習/我的每週整理））裡建好 `inbox`，放進 2~3 份**刪掉了個人資訊的**自己的筆記。放的時候要注意兩點。
 
-- 檔名統一成 `회의-날짜.txt`（會議-日期）的樣子。因為指令碼只找以 `회의-` 開頭的檔案。
+- 檔名統一成 `meeting-date.txt`（會議-日期）的樣子。因為指令碼只找以 `meeting-` 開頭的檔案。
 - 如果是 Word 或韓文軟體（Hangul）的檔案，就另存為 `.txt` 再放進去。
 
 然後啟動 `claude`，傳送下面的請求。
@@ -216,28 +216,28 @@ git commit -m "新增臨時會議筆記"
 技能做好後，用 `/exit` 退出，把任務 5 的指令碼複製到這個資料夾裡執行。Windows 在這個資料夾裡貼上第10章的 PowerShell 框。
 
 ```bash
-cp ../다시/주간정리.sh .
-bash 주간정리.sh
+cp ../again/weekly-summary.sh .
+bash weekly-summary.sh
 ```
 
 處理完的筆記要挪走。這樣下週就不會再整理一遍同樣的筆記。`mv` 是移動檔案的命令。下週把新筆記放進 `inbox` 再執行。Mac 和 Linux 這樣輸入。
 
 ```bash
 mkdir -p done
-mv inbox/회의-*.txt done/
+mv inbox/meeting-*.txt done/
 ```
 
 Windows PowerShell 這樣輸入。
 
 ```powershell
 mkdir done -Force
-Move-Item inbox\회의-*.txt done\
+Move-Item inbox\meeting-*.txt done\
 ```
 
 **確認做好了沒有**
 
 - ☐ 寫規則之前 Claude 先提了問題，並且反映了我的回答
-- ☐ 用 `bash 주간정리.sh` 一行（Windows 用第10章的 PowerShell 框），我的筆記就按我的格式整理好了
+- ☐ 用 `bash weekly-summary.sh` 一行（Windows 用第10章的 PowerShell 框），我的筆記就按我的格式整理好了
 - ☐ 把數字·名字·期限和原始筆記對照過
 - ☐ 放進新筆記試過，下週也能用同樣的命令執行
 
@@ -285,7 +285,7 @@ CLAUDE.md 裡只寫 Claude 讀資料夾也無法知道的東西。[^only-unknown
 把做好的工具每週這樣轉起來。
 
 1. **收集**：筆記隨時放進 `inbox`。刪掉個人資訊。
-2. **整理**：執行 `bash 주간정리.sh`（Windows 用第10章的 PowerShell 框）。
+2. **整理**：執行 `bash weekly-summary.sh`（Windows 用第10章的 PowerShell 框）。
 3. **確認**：把數字·負責人·期限和原文對照。
 4. **記錄**：把處理完的筆記挪到 `done`。滿意的話，用 `git add .` 和 `git commit -m "本週整理"` 儲存下來。如果是第一次，就在這個資料夾裡從 `git init` 開始。[第12章](12-parallel-remote.md)框裡的 `cd` 那一行不要輸入。
 5. **修改**：同樣的問題指出過兩次，就改 CLAUDE.md 或技能。

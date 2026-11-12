@@ -1,0 +1,142 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 420,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "ひとまとめに書いた依頼",
+    "fontSize": 18,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 40,
+   "width": 420,
+   "height": 200,
+   "backgroundColor": "#ffc9c9",
+   "fillStyle": "solid",
+   "label": {
+    "text": "来週 顧客3社とミーティングで\n営業3年目なんだけど質問リスト作って\n会社ごとに5個 価格は最後に\nA社は去年解約してB社は初めてで\nC社は更新を検討中 敬語で",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 430,
+   "y": 140,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     118,
+     0
+    ]
+   ],
+   "width": 118,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 430,
+   "y": 72,
+   "width": 120,
+   "height": 50,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "見出しで\n分ける",
+    "fontSize": 15,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 0,
+   "width": 420,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "Markdownの見出しで分けた依頼",
+    "fontSize": 18,
+    "strokeColor": "#495057"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 40,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## 状況 — 来週 顧客3社とミーティング、営業3年目",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 92,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## やること — 会議ごとの質問リスト",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 144,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#e5dbff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## 条件 — 会社ごとに5個、価格は最後、敬語",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 560,
+   "y": 196,
+   "width": 420,
+   "height": 44,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "## 顧客情報 — A社 解約 / B社 初めて / C社 更新検討",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 255,
+   "width": 980,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "内容は同じでも、枠を分けるとAIも自分も抜けた条件を見つけやすい",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

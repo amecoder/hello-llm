@@ -1,9 +1,11 @@
 # 第7章 在终端里使用——用一行 `codex exec` 检查整理工具
 
+<Badge type="info" text="选读" /> 需要的时候再读。跳过也能跟上后面的章节。
+
 > **一句话总结**：Codex CLI 是在终端里使用的 Codex。它会读取运行所在文件夹里的 `AGENTS.md` 和技能。
 > `codex exec "要做的事"` 只运行一次就结束，而且**默认是只读的**。它和 Claude Code 的 `claude -p` 很像，但这一点不同。
 
-这一章依据 2026年11月1日确认的 Codex 官方文档，以及在 macOS 终端里运行 Codex CLI 0.166.0 的结果写成。**如果你是第一次用终端，可以跳过这一章。** 终端是什么，在 [Claude Code 第10章](../20-claude-code/10-terminal.md)里讲过了。
+这一章依据 2026年11月1日确认的 Codex 官方文档，以及在 macOS 终端里运行 Codex CLI 的结果[^version]写成。**如果你是第一次用终端，可以跳过这一章。** 终端是什么，在 [Claude Code 第10章](../20-claude-code/10-terminal.md)里讲过了。
 
 ## 安装并开始使用
 
@@ -19,12 +21,19 @@ curl -fsSL https://chatgpt.com/codex/install.sh | sh
 powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"
 ```
 
+把命令拆开来看是这样的。
+
+- `curl -fsSL 地址`：下载地址上的安装脚本（写着安装步骤的文件）。`-fsSL` 是把四个选项连在一起写的：“出错就停下、隐藏进度显示、显示错误、地址搬家了就跟过去”。
+- `|`（管道）：把前一个命令的结果交给后一个命令。
+- `sh`：运行接过来的脚本。
+- Windows 那边也一样。`irm` 负责下载，`iex` 负责运行。`-ExecutionPolicy ByPass` 只在这一次解除脚本运行限制。
+
 **请确认安装命令和官方文档（learn.chatgpt.com）上写的一模一样，再去运行。** 因为这是把从网上下载的脚本直接执行的命令。
 
 安装完成后，进入整理工具文件夹，输入 `codex`。第一次请选择 **Sign in with ChatGPT**。[^signin]
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 codex
 ```
 
@@ -37,21 +46,26 @@ codex
 `codex exec` 是这样一种方式：不打开对话画面，只运行一次就结束。[^exec] 我问了和 Claude Code 第10章同样的问题。
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 codex exec "列出 notes 文件夹里的文件，并用一行告诉我每个文件是用哪种模板（templates 里的哪一个）写的。不要修改文件。回答要简短，只用表格。"
 ```
 
-只出来了干净的回答（完整输出：[7장-codex-exec-출력.txt](/practice/notes/results/codex/7장-codex-exec-출력.txt)）。
+只出来了干净的回答（完整输出：[ch7-codex-exec-output.txt](/practice/zh-hans/notes/results/codex/ch7-codex-exec-output.txt)）。
 
 | notes 文件 | 使用的模板 |
 |---|---|
-| `공부-2026-10-28-프롬프트-강의.md` | `templates/공부노트.md` |
-| `주간회고-2026-10-26.md` | `templates/주간회고.md` |
-| `회의록-2026-10-27-주간회의.md` | `templates/회의록.md` |
+| `study-2026-10-28-prompt-lecture.md` | `templates/study-notes.md` |
+| `weekly-review-2026-10-26.md` | `templates/weekly-review.md` |
+| `minutes-2026-10-27-weekly.md` | `templates/minutes.md` |
 
 来源：本指南的实践结果（2026-11-01）。运行过程的记录另外丢弃，只留下了最终回答。
 
-`codex exec` 把进度和最终回答**走不同的路**输出。进度走屏幕旁路（stderr），只有最终回答是正式输出（stdout）。[^stdout] 所以像 `codex exec "…" > 결과.md` 这样用，文件里只会装进最终回答。
+`codex exec` 把进度和最终回答**走不同的路**输出。[^stdout]
+
+- 进度：走屏幕旁路（stderr，标准错误）。
+- 最终回答：只走正式输出（stdout，标准输出）。
+
+想把结果存成文件时，这个区别就有用了。比如，试着输入 `codex exec "…" > result.md`。`>` 是“把正式输出装进这个文件，而不是显示在屏幕上”的符号。这样，屏幕上只会滚过进度，`result.md` 里只会装进最终回答。如果已经有同名文件，`>` 会清掉它的内容重新写。所以请选一个第一次用的新名字。
 
 **`codex exec` 默认是只读的。** 想让它修改文件，就加上 `--sandbox workspace-write`。[^readonly] 本指南第2、3、5章的练习，也是加了这个选项运行的。
 
@@ -61,7 +75,13 @@ codex exec --sandbox workspace-write '$weekly-review'
 
 `codex exec` 是**预先定好**许可方式再运行的方式。[^preset] 本指南第5章的练习里，写入 `.agents` 文件夹被拦住时，Codex 没法询问，就那样停住了。需要许可的事，在应用或交互式 `codex` 里做会更方便。
 
+也有把沙箱和许可全部关掉的危险选项，但整理备忘时请不要用。
+
+::: details 老文章里出现的选项和危险的选项（点击展开）
+
 老文章里出现的 `--full-auto` 选项已经不再支持。[^fullauto] 也有把沙箱和许可全部关掉的 `--dangerously-bypass-approvals-and-sandbox` 之类的选项[^yolo]，但整理备忘用不着。
+
+:::
 
 <Quiz id="ch507-exec" />
 
@@ -75,8 +95,9 @@ codex exec --sandbox workspace-write '$weekly-review'
 | `/import` | 导入 Claude Code、Cursor 的设置 |
 | `/resume` | 继续已保存的对话 |
 | `/status` | 查看对话信息和剩余额度 |
+| `/skills` | 查看技能列表 |
 
-来源：Codex 官方文档[^permissions][^import][^resume][^status]
+来源：Codex 官方文档[^permissions][^import][^resume][^status][^skills]
 
 结束交互式界面后，想在外面继续，就输入 `codex resume`。[^resume]
 
@@ -112,6 +133,7 @@ codex exec --sandbox workspace-write '$weekly-review'
 
 下一章：[第8章. 费用、数据、安全，以及怎样选工具](08-safety-choose.md)
 
+[^version]: 本指南运行的版本是 Codex CLI 0.166.0。
 [^install]: Codex 官方文档，「Codex CLI」。 "curl -fsSL https://chatgpt.com/codex/install.sh | sh" / "powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"" https://learn.chatgpt.com/docs/codex/cli （确认日期 2026-11-01）
 [^signin]: Codex 官方文档，「Codex CLI」。 "Open a project directory and run `codex`. The first time you run Codex, choose **Sign in with ChatGPT** or another available sign-in method." https://learn.chatgpt.com/docs/codex/cli （确认日期 2026-11-01）
 [^cwd]: Codex 官方文档，「Projects and chats」。 "Codex CLI treats the directory where you start it as the project for the chat." https://learn.chatgpt.com/docs/projects （确认日期 2026-11-01）

@@ -1,5 +1,7 @@
 # Chapter 2. A Tour of the Screen — What Is Where
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **In One Sentence**: You only need to know four areas on the ChatGPT screen: the **left sidebar** (past chats and features), the **center input box** (where you ask questions), the **top Chat/Work switch**,
 > and the **bottom-left account menu** (settings). At first, just using the input box and "New chat (새 채팅)" is enough.
 
@@ -27,7 +29,7 @@ If you do not know what to ask, try clicking one of the **suggestions** below th
 Write a text message to tell our regular customers that our neighborhood side-dish shop is opening. Three sentences, in a warm tone.
 ```
 
-::: details The reply will look roughly like this (example — click to expand)
+::: details The reply will look roughly like this (example — click to expand) (click to expand)
 This is an example created for this guide. Actual replies vary by service and each time you ask.
 
 > Hello, this is ○○ Side Dishes. On [Month] [Day], we are finally opening our doors. We look forward to welcoming you warmly with homemade dishes made with care.
@@ -42,21 +44,21 @@ This is an example created for this guide. Actual replies vary by service and ea
 
 The top of the sidebar has feature buttons, and the bottom has your list of chats. The red numbers in the image match the numbers in the table below.
 
+A **thread**, which you will see in the list, is another word for a single chat. "Pinned threads (고정된 스레드)" means "chats you have pinned in place."
+
 ![Close-up of the sidebar. Red numbers mark ① the magnifying glass at the top right, ② "New chat (새 채팅)", ③ "Scheduled (예약)", ④ "Library (라이브러리)", ⑤ "Plugins (플러그인)", ⑥ "Explore (탐색)", ⑦ "Pinned threads (고정된 스레드)", ⑧ "Projects (프로젝트)", and ⑨ "Recent (최근)"](../../../guide/11-chatgpt/assets/shot-01-home-sidebar.png)
 
 | No. | Item | What It Does | Details |
 |---|---|---|---|
 | ① | Magnifying glass ("Search (검색)") | Finds past chats | [Chapter 3](03-chats.md) |
 | ② | "New chat (새 채팅)" | Starts a blank new chat | [Chapter 3](03-chats.md) |
-| ③ | "Scheduled (예약)" | Views scheduled tasks that run at set times | [Chapter 11](11-expert.md#on-its-own-at-a-set-time-—-scheduled-tasks) |
-| ④ | "Library (라이브러리)" | Holds files you uploaded or created (being renamed to "Space") | [Chapter 4](04-files-images.md#library-—-where-your-uploaded-files-are-kept) |
+| ③ | "Scheduled (예약)" | Views things it does on its own at set times (e.g., a morning reminder) | [Chapter 11](11-expert.md#on-its-own-at-a-set-time-—-scheduled-tasks) |
+| ④ | "Library (라이브러리)" | Holds files you uploaded or created[^space] | [Chapter 4](04-files-images.md#library-—-where-your-uploaded-files-are-kept) |
 | ⑤ | "Plugins (플러그인)" | Finds extensions that add features to ChatGPT | [Chapter 7](07-projects-plugins.md) |
 | ⑥ | "Explore (탐색)" | Browses other features | — |
 | ⑦ | "Pinned threads (고정된 스레드)" | A list of chats you open often, pinned to the top | [Chapter 3](03-chats.md) |
 | ⑧ | "Projects (프로젝트)" | Folders that group chats and files by topic | [Chapter 7](07-projects-plugins.md) |
 | ⑨ | "Recent (최근)" | Your list of recent chats | [Chapter 3](03-chats.md) |
-
-A **thread** is another word for a single chat. "Pinned threads (고정된 스레드)" means "chats you have pinned in place."
 
 <Quiz id="ch102-sidebar" />
 
@@ -67,7 +69,7 @@ The "Chat" / "Work" button at the top center is a switch added in July 2026.[^rn
 - **Chat**: The ChatGPT you already know. You ask questions and talk back and forth. Most of this guide is based on Chat.
 - **Work**: A mode where you hand off a long, multi-step job and get back a **finished deliverable** such as a document, spreadsheet, presentation, or report.
 
-On the web and mobile, Work is only available on **paid plans (excluding Free and Go)**. Free and Go plans can use it in a limited way on the computer app only.[^rn-work] We cover how to use it in [Chapter 7](07-projects-plugins.md).
+We cover how to use it in [Chapter 7](07-projects-plugins.md). On the web and mobile, it is only available on **paid plans (excluding Free and Go)**.[^rn-work][^work-desktop]
 
 <Quiz id="ch102-chat-work" />
 
@@ -93,8 +95,10 @@ Below that (⑨) are **plugin** items. Their names may appear in English ([Chapt
 
 On the right side of the input box, you will find the **microphone button** (dictate by voice) and the **voice button** (talk back and forth out loud, [Chapter 9](09-voice.md)).
 
-> **Long pasted text turns into an attachment.** If you paste more than 10,000 characters, it automatically becomes an attached file.
-> If you want to keep it as plain text inside the input box, click "Show in text field."[^paste]
+::: details If long pasted text turned into an attachment (click to expand)
+If you paste more than 10,000 characters, it automatically becomes an attached file.
+If you want to keep it as plain text inside the input box, click "Show in text field." The help article gives this button its English name.[^paste]
+:::
 
 <Quiz id="ch102-plus" />
 
@@ -106,6 +110,21 @@ On paid plans, clicking the label like "Medium" on the right side of the input b
 ![The screen after clicking "Reasoning effort (추론 수준)" on the right of the input box. Look at the small popup showing the word "Medium" and a slider that moves left and right](../../../guide/11-chatgpt/assets/shot-03-model-menu-marked.png)
 
 Chat titles and the account name in the screenshot have been replaced with examples. Clicking ① the "Reasoning effort (추론 수준)" button shows ② the current level ("Medium") and ③ the slider.
+On the Free and Go plans, there is "Think (생각하기)" instead of a slider (see "Available Plans" below).
+
+**When should you turn it up?** Not just for math. For simple or low-stakes tasks like polishing a short sentence, a faster level may be plenty. Turn the level up when you have several conditions, need to compare options against set criteria, or want to spot missing assumptions in a plan you wrote.[^academy-content]
+```
+Compare three candidate event venues using three criteria: budget, public transit, and backup plan for rain.
+Recommend one venue, and tell me how to reduce its downsides.
+```
+
+Send the savings math question below once at a low level and once at a high level. You will feel the difference between a quick answer and a deep answer right away.
+
+```
+If an office worker earning 3 million won a month wants to save 20 million won in 3 years, show me the step-by-step math for how much to save each month—both with savings interest and without it.
+```
+
+### Available Plans
 
 | Level | How It Works | Available Plans |
 |---|---|---|
@@ -113,26 +132,14 @@ Chat titles and the account name in the screenshot have been replaced with examp
 | Medium · High | Thinks longer. Best for planning, comparing, and math | Plus and above |
 | Extra High · Pro | Thinks the deepest | Pro, Business, Enterprise |
 
-Source: OpenAI Help Center[^levels]
+Pro is a plan for very heavy users, and Business and Enterprise are plans for companies ([Chapter 1](01-getting-started.md)). Source: OpenAI Help Center[^levels]
 
 Keep two things in mind.
 
 - **Telling it in words to "think harder" does not change the level.** Even if you type that while set to Instant, it will not switch up automatically. Move the slider yourself.[^levels]
-- **Free and Go plans turn on "Think (생각하기)" instead of using a slider.** In the mobile app on the Go plan, select "Think harder" from the + menu.[^go-think]
+- **Free and Go plans turn on "Think (생각하기)" instead of using a slider.**[^go-think]
 
 <!-- 스크린샷 필요: Free 요금제 웹 화면에서 「생각하기」를 켜는 위치 -->
-
-**When should you turn it up?** Not just for math. For simple or low-stakes tasks like polishing a short sentence, a faster level is plenty. Turn the level up when you have several conditions, need to compare options against set criteria, or want to spot missing assumptions in a plan you wrote.[^academy-content]
-```
-Compare three candidate event venues using three criteria: budget, public transit, and backup plan for rain.
-Recommend one venue, and tell me how to reduce its downsides.
-```
-
-Try asking the exact same question at different levels. You will feel the difference between a quick answer and a deep answer right away.
-
-```
-If an office worker earning 3 million won a month wants to save 20 million won in 3 years, show me the step-by-step math for how much to save each month—both with savings interest and without it.
-```
 
 <Quiz id="ch102-reasoning" />
 
@@ -154,7 +161,7 @@ The Settings menu is grouped into three sections: "Personal (개인)", "Integrat
 |---|---|---|---|
 | ① | "General (일반)" | Screen language ("Auto-detect (자동 감지)") | — |
 | ② | "Appearance (모양)" | Light or dark mode, text contrast, accent color | — |
-| ③ | "Security & login (보안 및 로그인)" | Multi-factor authentication, logged-in devices, account PIN (a 4-digit code to open locked chats), lockdown mode | [Chapter 8](08-privacy.md#protecting-your-account), [Chapter 3](03-chats.md) |
+| ③ | "Security & login (보안 및 로그인)" | Multi-factor authentication, logged-in devices, account PIN, lockdown mode | [Chapter 8](08-privacy.md#protecting-your-account), [Chapter 3](03-chats.md) |
 | ④ | "Archived chats (보관된 채팅)" | Views chats you have archived | [Chapter 3](03-chats.md) |
 | ⑤ | "Family safety (자녀 보호)" · "Trusted contacts (신뢰할 수 있는 연락처)" | Links a teen child's account, designates someone to notify in a crisis | [Chapter 8](08-privacy.md#features-for-family-and-safety) |
 | ⑥ | "Voice style (음성 스타일)" | Voice used in voice chats | [Chapter 9](09-voice.md) |
@@ -163,6 +170,15 @@ The Settings menu is grouped into three sections: "Personal (개인)", "Integrat
 | ⑨ | "Usage (사용량)" | Remaining usage limits and credits | [Chapter 1](01-getting-started.md#what-to-know-before-upgrading-to-paid) |
 | — | "Plugins (플러그인)" (under "Integrations (통합)" lower in the image) | Connected apps and default permissions | [Chapter 7](07-projects-plugins.md#setting-permissions-for-connected-apps) |
 | ⑩ | "Data controls (데이터 관리)"[^data-name] | Training permission, shared links, exporting data | [Chapter 8](08-privacy.md) |
+
+Here is what the unfamiliar words in the table mean. You do not need to remember them all now. Each chapter in the table covers them in detail.
+
+- **Multi-factor authentication**: A login that checks it is really you one more time with another method besides your password (e.g., a code sent to your phone).
+- **Account PIN**: A 4-digit code to open locked chats.
+- **Lockdown mode**: A setting that blocks features that connect to the outside, such as web search. It is meant for people who handle sensitive information.
+- **Trusted contacts**: People you choose in advance to get a check-in alert in a crisis.
+- **Custom instructions**: A place to write rules ChatGPT should always follow in every chat. For example, you write something like "Keep answers short."
+- **Credits**: Extra usage you buy separately to keep using features like Work after you use up your plan's limits. If you only have regular chats, you do not need them.
 
 If your screen appears in English and you want to change the language, go to "Settings" → "General" → "Language". You can only change the language **while logged in**.[^lang]
 Dark mode chosen under "Appearance (모양)" is set **separately on each device**. Changing it on the web leaves your mobile app unchanged. Choose it once more in the app.[^appearance]
@@ -203,8 +219,10 @@ Next chapter: [Chapter 3. Managing Your Chats](03-chats.md)
 [^rn-work]: OpenAI Help Center, "ChatGPT release notes", 2026-07-09 entry. "ChatGPT Work is an agent for longer, more involved tasks." / "rolling out to paid plans except Free and Go". https://help.openai.com/en/articles/6825453 (checked on 2026-10-23). Limited desktop access for Free and Go is from OpenAI, "Plans & Pricing (플랜 및 가격)" https://openai.com/chatgpt/pricing under "Limited access to ChatGPT Work on desktop (데스크톱에서 ChatGPT Work의 제한적 이용)" (checked on 2026-10-23)
 [^paste]: OpenAI Help Center, "ChatGPT release notes", 2026-08-04 entry. "If you paste more than 10k characters…". https://help.openai.com/en/articles/6825453 (checked on 2026-10-23)
 [^levels]: OpenAI Help Center, article on the model menu and thinking levels (the article title contains current model names, so we omit it in this guide). Table "Plus — Included / Not included / Not included" / "Asking ChatGPT to "think harder"… won't automatically switch". https://help.openai.com/en/articles/20001354 (checked on 2026-10-23)
-[^go-think]: OpenAI Help Center, "What is ChatGPT Go?". "On mobile, select Think harder from the + menu." https://help.openai.com/en/articles/11989085 (checked on 2026-10-23)
+[^go-think]: In the mobile app on the Go plan, select "Think harder" from the + menu. Source: OpenAI Help Center, "What is ChatGPT Go?". "On mobile, select Think harder from the + menu." https://help.openai.com/en/articles/11989085 (checked on 2026-10-23)
 [^lang]: OpenAI Help Center, "How to change your language setting in ChatGPT". "you can only update the ChatGPT language setting if you are logged in." https://help.openai.com/en/articles/8357869 (checked on 2026-10-24)
 [^appearance]: OpenAI Help Center, "Updating your visual experience". "changing the appearance on the web doesn't automatically change the appearance in the mobile app." Settings menu names verified on the web Settings screen on 2026-10-24. https://help.openai.com/en/articles/11958281 (checked on 2026-10-24)
 [^academy-content]: OpenAI Academy "Applied AI Foundations" course text (login and registration required). "Use a faster model when the task is simple and/or low-stakes." / "Use a reasoning model when the task has:" "Several constraints" / "A need to compare options" / "Compare options against criteria instead of giving a generic list of pros and cons" / "Review your draft recommendation for missing assumptions" (checked on 2026-10-26)
+[^space]: "Library (라이브러리)" is being renamed to "Space". See [Chapter 4](04-files-images.md#library-—-where-your-uploaded-files-are-kept) for details.
+[^work-desktop]: Free and Go plans can use Work in a limited way on the computer app only. The source is "Plans & Pricing (플랜 및 가격)" in the footnote just before this one.
 [^data-name]: Some help articles translate this into Korean as "데이터 제어", but the actual label on the Korean screen is "데이터 관리" (Data controls).

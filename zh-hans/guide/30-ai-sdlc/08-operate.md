@@ -1,5 +1,7 @@
 # 第8章 运营与改进——用 Issue 转下一圈
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：公开之后想到的改进点和 bug，写成 **Issue**（议题）记下来。一个 Issue 就是下一圈的策划。
 > 在 PR 里写上 `fixes #编号` 这样固定的词，合并 PR 时那个 Issue 就会**自动关闭。** 策划和运营就这样连起来了。
 
@@ -17,7 +19,7 @@ fixes #Issue编号
 
 Issue 编号像 `#2` 这样，附在 Issue 标题旁边。如果你在第6章已经建过一个 PR，第一个 Issue 就可能不是 1 号，所以一定要在界面上确认。
 
-GitHub 的入门教程也是在计划阶段建第一个 Issue。标题写要做的功能，说明里写几行想做的东西。[^first-issue]
+写 Issue 时，标题写要做的功能，说明里写几行想做的东西就行。[^first-issue] 比如标题写"把过期的待办标成红色"，说明写"截止日期早于今天的待办，希望把字显示成红色"。
 
 <Quiz id="ch708-issue" />
 
@@ -41,7 +43,9 @@ Issue 多了之后，用**标签**来分类。新仓库里自带默认标签。[
 
 ## 再转一圈
 
-一圈结束后，把下一个功能建成**新的 Issue**，开始时把它移到进行中，就开始了下一个循环。[^next-cycle] 把第4阶段学过的流程，用一个 Issue 再走一遍，就是这样。
+一圈结束后，把下一个功能建成**新的 Issue**，就开始了下一个循环。如果用看板，开始干活时把这个 Issue 移到进行中（In Progress）。[^next-cycle] 没有看板，只用 Issue 也足够了。
+
+把前面第3～7章学过的流程，用一个 Issue 再走一遍，就是这样。
 
 1. **计划**：在 Issue 里写要改什么。需要的话，在 SPEC.md 里再加一行检查标准（第3章）。
 2. **制作**：在新分支上用计划模式拿到计划再制作（第4章）。
@@ -95,7 +99,7 @@ Issue 多了之后，用**标签**来分类。新仓库里自带默认标签。[
 
 [^issue]: GitHub 官方文档，「About issues」. "You can create issues in your repository to plan, discuss, and track work." https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues (确认日期 2026-11-01)
 [^close]: GitHub 官方文档，「About issues」. "Mentioning an issue in another issue or pull request will create references between them and using keywords, like `fixes:`, in your pull requests will automatically close the associated issues." https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues (确认日期 2026-11-01)
-[^first-issue]: GitHub 官方文档，「Planning your work」. "In the **Add a title** field, type `Display a list of starred repositories`." https://docs.github.com/en/get-started/start-your-journey/planning-your-work (确认日期 2026-11-01)
+[^first-issue]: GitHub 的入门教程也是在计划阶段这样建第一个 Issue。GitHub 官方文档，「Planning your work」. "In the **Add a title** field, type `Display a list of starred repositories`." https://docs.github.com/en/get-started/start-your-journey/planning-your-work (确认日期 2026-11-01)
 [^labels]: GitHub 官方文档，「Managing labels」. "GitHub provides default labels in every new repository." / "`bug` | Indicates an unexpected problem or unintended behavior" / "`documentation` | Indicates a need for improvements or additions to documentation" / "`enhancement` | Indicates new feature requests" https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels (确认日期 2026-11-01)
 [^projects]: GitHub 官方文档，「About Projects」. "A project is an adaptable table, board, and roadmap that integrates with your issues and pull requests on GitHub to help you plan and track your work effectively at the user or organization level." https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects (确认日期 2026-11-01)
 [^board]: GitHub 官方文档，「Planning your work」. "The board's columns represent stages of your work. As you make progress, move each item to show its status." https://docs.github.com/en/get-started/start-your-journey/planning-your-work (确认日期 2026-11-01)

@@ -22,16 +22,16 @@ Interactive `claude` keeps going until you leave, and it starts in auto mode. `c
 
 ## Why Writing Gets Blocked
 
-This time, ask it to create a file. So it does not overwrite the file from Chapter 4, name it `회의록-한줄.md`.
+This time, ask it to create a file. So it does not overwrite the file from Chapter 4, name it `minutes-one-line.md`.
 
 ```bash
-claude -p "Read the meeting note in inbox, organize it, and save it as the file 회의록-한줄.md."
+claude -p "Read the meeting note in inbox, organize it, and save it as the file minutes-one-line.md."
 ```
 
 No file is created. The answer tells you that `file write permission was not approved`. It is not broken. `-p` starts in Manual mode, but there is nobody to ask. So calls that need approval are denied.[^headless] You just need to allow the tools it needs in advance.[^headless]
 
 ```bash
-claude -p "Read the meeting note in inbox, organize it, and save it as the file 회의록-한줄.md. Answer in one line." --allowedTools "Read,Write"
+claude -p "Read the meeting note in inbox, organize it, and save it as the file minutes-one-line.md. Answer in one line." --allowedTools "Read,Write"
 ```
 
 `--allowedTools` is an option that sets in advance which tools it may use without asking. `Read` is reading files, and `Write` is writing files. Join them with a comma and wrap them in quotes.
@@ -47,7 +47,7 @@ Rather than allowing a lot because you are not sure what it needs, it is better 
 A **pipe** (Pipe, `|`) is a symbol that passes the output of the command before it as the input of the command after it. Picture water flowing through a pipe. `claude -p` also takes content through a pipe.[^headless]
 
 ```bash
-cat inbox/회의-2026-10-27-주간회의.txt | claude -p "Pull out only the to-dos from this note, in three lines."
+cat inbox/meeting-2026-10-27-weekly.txt | claude -p "Pull out only the to-dos from this note, in three lines."
 ```
 
 ```text
@@ -64,13 +64,13 @@ claude -p "Pull out only the to-dos from @inbox/filename in three lines."
 
 **Do not pipe untrusted content straight in.**[^security] That includes text from the web or email from people you do not know. The text may hide the prompt injection you saw in [Chapter 7](07-permissions-undo.md).[^security] Prompt injection is a trick that secretly mixes instructions for the AI into text to make it do something unexpected.
 
-The practice note [회의-2026-10-29-임시회의.txt](/practice/notes/inbox/회의-2026-10-29-임시회의.txt) has an example of such a sentence. For now, just click the link and read it in your browser. Do not put it in the `inbox` folder yet. That is because the script we make later processes every note in `inbox`. You will put this note in when you learn how to handle it safely in [Chapter 13](13-cost-safety-trouble.md).
+The practice note [meeting-2026-10-29-adhoc.txt](/practice/en/notes/inbox/meeting-2026-10-29-adhoc.txt) has an example of such a sentence. For now, just click the link and read it in your browser. Do not put it in the `inbox` folder yet. That is because the script we make later processes every note in `inbox`. You will put this note in when you learn how to handle it safely in [Chapter 13](13-cost-safety-trouble.md).
 
 <Quiz id="ch810-pipe" />
 
 ## Saving the Output and Changing Its Format
 
-If you want the answer in a file, add `> 할일.txt` at the very end.[^headless] It does not appear on the screen; it goes into the file. If a file with the same name exists, it is overwritten, so be careful.
+If you want the answer in a file, add `> todo.txt` at the very end.[^headless] It does not appear on the screen; it goes into the file. If a file with the same name exists, it is overwritten, so be careful.
 
 The hands-on in this chapter does not need the JSON output below. Just know that it exists.
 
@@ -98,15 +98,15 @@ The `1` at the very bottom is the **exit code** (Exit code). It is 0 on success 
 
 <Quiz id="ch810-exit" />
 
-## Making 주간정리.sh
+## Making weekly-summary.sh
 
-Now put the pieces together. A **script** (Script) is a set of commands written in a file and run all at once. You need the `CLAUDE.md` and `notes` folder from [Chapter 8](08-memory-settings.md) and the skill from [Chapter 9](09-skills-extensions.md). Leave with `/exit` and move to the practice folder in the terminal. On Mac and Linux, paste the whole block below (view as a file: [10장-주간정리.sh.txt](/practice/cli/results/10장-주간정리.sh.txt)).
+Now put the pieces together. A **script** (Script) is a set of commands written in a file and run all at once. You need the `CLAUDE.md` and `notes` folder from [Chapter 8](08-memory-settings.md) and the skill from [Chapter 9](09-skills-extensions.md). Leave with `/exit` and move to the practice folder in the terminal. On Mac and Linux, paste the whole block below (view as a file: [ch10-weekly-summary.sh.txt](/practice/en/cli/results/ch10-weekly-summary.sh.txt)).
 
 ```bash
-cat > 주간정리.sh <<'EOF'
+cat > weekly-summary.sh <<'EOF'
 #!/bin/bash
 # Turn each meeting note in inbox into meeting minutes, one by one.
-for memo in inbox/회의-*.txt; do
+for memo in inbox/meeting-*.txt; do
   echo "Organizing: $memo"
   if claude -p "/meeting-notes $memo" --allowedTools "Read,Write" --max-turns 10; then
     echo "Done: $memo"
@@ -117,9 +117,9 @@ done
 EOF
 ```
 
-If it has not run yet after pasting, press Enter once more. If nothing appears, it worked. Check with `ls` that `주간정리.sh` was created.
+If it has not run yet after pasting, press Enter once more. If nothing appears, it worked. Check with `ls` that `weekly-summary.sh` was created.
 
-The top line `#!/bin/bash` marks that this file should be read by bash (a kind of shell). The next line starting with `#` is an explanation for people to read. The `for` line puts each note whose name starts with `회의-` into `memo`, one at a time. Here `memo` is a **variable** (Variable). Think of it as a name tag that holds a value for a while. Put `$` in front of the name, as in `$memo`, and you take out the value inside it. On the first round, `$memo` becomes `inbox/회의-2026-10-27-주간회의.txt`.
+The top line `#!/bin/bash` marks that this file should be read by bash (a kind of shell). The next line starting with `#` is an explanation for people to read. The `for` line puts each note whose name starts with `meeting-` into `memo`, one at a time. Here `memo` is a **variable** (Variable). Think of it as a name tag that holds a value for a while. Put `$` in front of the name, as in `$memo`, and you take out the value inside it. On the first round, `$memo` becomes `inbox/meeting-2026-10-27-weekly.txt`.
 
 The `if` line calls the skill from Chapter 9 and prints `Done` if the exit code is 0, or `Failed` if not.
 
@@ -128,27 +128,27 @@ Write variable names in English, like `memo`. bash does not accept Korean variab
 Running it takes one line.
 
 ```bash
-bash 주간정리.sh
+bash weekly-summary.sh
 ```
 
-![The 주간정리.sh run screen. ① the saved file and the number of to-dos, ② the mark that one note is finished. The calendar note sentence differs a little on each run](../../../guide/23-claude-code-cli/assets/shot-09-script-marked.png)
+![The weekly-summary.sh run screen. ① the saved file and the number of to-dos, ② the mark that one note is finished. The calendar note sentence differs a little on each run](../../../guide/23-claude-code-cli/assets/shot-09-script-marked.png)
 
 ```text
-Organizing: inbox/회의-2026-10-27-주간회의.txt
-Saved to `notes/회의록-2026-10-27.md`, with 5 to-dos.
+Organizing: inbox/meeting-2026-10-27-weekly.txt
+Saved to `notes/minutes-2026-10-27.md`, with 5 to-dos.
 
 For reference, the note lists 10/27 and 11/3 as Mondays, but on the 2026 calendar both are Tuesdays, so I left the days and dates as they are in the note.
-Done: inbox/회의-2026-10-27-주간회의.txt
+Done: inbox/meeting-2026-10-27-weekly.txt
 ```
 
-Meeting minutes were created without anyone pressing anything ([see the result](/practice/cli/results/10장-회의록-스크립트로.txt)). Your result and wording may differ; it is fine as long as it has the three sections and the table.
+Meeting minutes were created without anyone pressing anything ([see the result](/practice/en/cli/results/ch10-minutes-by-script.txt)). Your result and wording may differ; it is fine as long as it has the three sections and the table.
 
 **On Windows**, this script does not run as is in PowerShell. That is because it is written for bash. Use the PowerShell version below. On Mac and Linux, you can skip this part.
 
 Here is the same task written for PowerShell. Paste this box into the window each time you run it. It is an example we have not run. If you use WSL, run the script above inside the WSL terminal.[^wsl]
 
 ```powershell
-foreach ($file in Get-ChildItem inbox/회의-*.txt) {
+foreach ($file in Get-ChildItem inbox/meeting-*.txt) {
   $memo = "inbox/$($file.Name)"
   Write-Output "Organizing: $memo"
   claude -p "/meeting-notes $memo" --allowedTools "Read,Write" --max-turns 10
@@ -192,11 +192,11 @@ The script processes every meeting note in `inbox`. So put in new notes and then
 3. Pull out the to-dos with a pipe and save them. On Windows, if the answer is off, use the `@` method from earlier.
 
    ```bash
-   cat inbox/회의-2026-10-27-주간회의.txt | claude -p "Pull out only the to-dos from this note, in three lines." > 할일.txt
+   cat inbox/meeting-2026-10-27-weekly.txt | claude -p "Pull out only the to-dos from this note, in three lines." > todo.txt
    ```
 
 4. Make it fail with `--max-turns 1` and look at the exit code.
-5. Make `주간정리.sh` and run it with `bash 주간정리.sh`. On Windows, paste the PowerShell code box above.
+5. Make `weekly-summary.sh` and run it with `bash weekly-summary.sh`. On Windows, paste the PowerShell code box above.
 
 Ask yourself: Did it run without a person? Does the result match the note? Next week, when there are more notes, will the same command still work?
 

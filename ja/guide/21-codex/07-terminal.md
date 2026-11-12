@@ -1,9 +1,11 @@
 # 第7章 ターミナルで使う — `codex exec`一行で整理ツールを確認
 
+<Badge type="info" text="選択" /> 必要なときに読んでください。読み飛ばしても、後の章についていけます。
+
 > **一言まとめ**: Codex CLIは、ターミナルで使うCodexです。実行したフォルダの`AGENTS.md`とスキルを読みます。
 > `codex exec "やること"`は一度実行して終わりで、**初期設定は読み取り専用**です。Claude Codeの`claude -p`と似ていますが、この点が違います。
 
-この章は、2026年11月1日に確認したCodexの公式ドキュメントと、macOSのターミナルでCodex CLI 0.166.0を実行した結果をもとに書きました。**ターミナルが初めてなら、この章は飛ばしてもかまいません。** ターミナルとは何かは、[Claude Code 第10章](../20-claude-code/10-terminal.md)で説明しました。
+この章は、2026年11月1日に確認したCodexの公式ドキュメントと、macOSのターミナルでCodex CLIを実行した結果[^version]をもとに書きました。**ターミナルが初めてなら、この章は飛ばしてもかまいません。** ターミナルとは何かは、[Claude Code 第10章](../20-claude-code/10-terminal.md)で説明しました。
 
 ## インストールして始める
 
@@ -19,12 +21,19 @@ curl -fsSL https://chatgpt.com/codex/install.sh | sh
 powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"
 ```
 
+コマンドを部分ごとに分けると、次のとおりです。
+
+- `curl -fsSL アドレス`: アドレスにあるインストールスクリプト（インストールの手順を書いておいたファイル）をダウンロードします。`-fsSL`は、「エラーが出たら止まる、進み具合の表示を隠す、エラーは見せる、アドレスが移っていたらたどっていく」という4つのオプションをまとめて書いたものです。
+- `|`（パイプ）: 前のコマンドの結果を、後ろのコマンドに渡します。
+- `sh`: 受け取ったスクリプトを実行します。
+- Windowsのほうも同じです。`irm`がダウンロードし、`iex`が実行します。`-ExecutionPolicy ByPass`は、今回1回だけ、スクリプトの実行制限を外します。
+
 **インストールコマンドは、公式ドキュメント（learn.chatgpt.com）に書かれているものと同じかを確認してから実行してください。** インターネットから受け取ったスクリプトをすぐに実行するコマンドだからです。
 
 インストールが終わったら、整理ツールのフォルダに移動して`codex`と入力します。最初は**Sign in with ChatGPT**を選びます。[^signin]
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 codex
 ```
 
@@ -37,21 +46,26 @@ codex
 `codex exec`は、会話の画面を開かずに、一度実行して終わる方式です。[^exec] Claude Code 第10章と同じ質問をしてみました。
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 codex exec "notesフォルダのファイルの一覧を見せて、各ファイルがどのひな形（templatesのどれ）で書かれたかを一行ずつ教えて。ファイルは書き換えないで。答えは短く、表だけで。"
 ```
 
-答えだけがすっきりと出ました（全体の出力: [7장-codex-exec-출력.txt](/practice/notes/results/codex/7장-codex-exec-출력.txt)）。
+答えだけがすっきりと出ました（全体の出力: [ch7-codex-exec-output.txt](/practice/ja/notes/results/codex/ch7-codex-exec-output.txt)）。
 
 | notesのファイル | 使われたひな形 |
 |---|---|
-| 공부-2026-10-28-프롬프트-강의.md | templates/공부노트.md |
-| 주간회고-2026-10-26.md | templates/주간회고.md |
-| 회의록-2026-10-27-주간회의.md | templates/회의록.md |
+| study-2026-10-28-prompt-lecture.md | templates/study-notes.md |
+| weekly-review-2026-10-26.md | templates/weekly-review.md |
+| minutes-2026-10-27-weekly.md | templates/minutes.md |
 
 出典: このガイドの実習結果（2026-11-01）。進行の記録は別に捨てて、最終的な答えだけを残した。
 
-`codex exec`は、進み具合と最終的な答えを**別の道**に出します。進み具合は画面の脇道（stderr）、最終的な答えだけが正式な出力（stdout）です。[^stdout] そのため、`codex exec "…" > 결과.md`のように使うと、最終的な答えだけがファイルに入ります。
+`codex exec`は、進み具合と最終的な答えを**別の道**に出します。[^stdout]
+
+- 進み具合: 画面の脇道（stderr、スタンダード・エラー）に出ます。
+- 最終的な答え: 正式な出力（stdout、スタンダード・アウト）にだけ出ます。
+
+この違いは、結果をファイルで受け取るときに役立ちます。たとえば`codex exec "…" > result.md`と入力してみてください。`>`は「正式な出力を、画面のかわりにこのファイルに入れて」という記号です。すると、画面には進み具合だけが流れ、`result.md`には最終的な答えだけが入ります。同じ名前のファイルがすでにあると、`>`はその中身を消して新しく書きます。なので、初めて使う新しい名前を選んでください。
 
 **`codex exec`は、初期設定が読み取り専用です。** ファイルを書き換えさせたいときは、`--sandbox workspace-write`を付けます。[^readonly] このガイドの第2・3・5章の実習も、このオプションを付けて実行しました。
 
@@ -61,7 +75,13 @@ codex exec --sandbox workspace-write '$weekly-review'
 
 `codex exec`は、許可の方式を**あらかじめ決めておいて**動かす方式です。[^preset] このガイドの第5章の実習では、`.agents`フォルダへの書き込みがブロックされたとき、Codexは確認できないまま止まってしまいました。許可が必要な仕事は、アプリや対話型の`codex`でやるほうが楽です。
 
+サンドボックスと許可の両方をオフにする危険なオプションもありますが、メモの整理には使わないでください。
+
+::: details 古い記事に出てくるオプションと危険なオプション（クリックして開く）
+
 古い記事に出てくる`--full-auto`オプションは、もうサポートされていません。[^fullauto] サンドボックスと許可の両方をオフにする`--dangerously-bypass-approvals-and-sandbox`のようなオプションもありますが[^yolo]、メモの整理には要りません。
+
+:::
 
 <Quiz id="ch507-exec" />
 
@@ -75,8 +95,9 @@ codex exec --sandbox workspace-write '$weekly-review'
 | `/import` | Claude CodeやCursorの設定を取り込む |
 | `/resume` | 保存した会話を続ける |
 | `/status` | 会話の情報と残りの上限を見る |
+| `/skills` | スキルの一覧を見る |
 
-出典: Codex公式ドキュメント[^permissions][^import][^resume][^status]
+出典: Codex公式ドキュメント[^permissions][^import][^resume][^status][^skills]
 
 対話型を終えたあとで外から続けたいときは、`codex resume`と入力します。[^resume]
 
@@ -111,6 +132,7 @@ codex exec --sandbox workspace-write '$weekly-review'
 
 次の章: [第8章 コスト・データ・安全、そしてツールの選び方](08-safety-choose.md)
 
+[^version]: このガイドが実行したバージョンは、Codex CLI 0.166.0です。
 [^install]: Codex 公式ドキュメント「Codex CLI」。"curl -fsSL https://chatgpt.com/codex/install.sh | sh" / "powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"" https://learn.chatgpt.com/docs/codex/cli (確認日 2026-11-01)
 [^signin]: Codex 公式ドキュメント「Codex CLI」。"Open a project directory and run `codex`. The first time you run Codex, choose **Sign in with ChatGPT** or another available sign-in method." https://learn.chatgpt.com/docs/codex/cli (確認日 2026-11-01)
 [^cwd]: Codex 公式ドキュメント「Projects and chats」。"Codex CLI treats the directory where you start it as the project for the chat." https://learn.chatgpt.com/docs/projects (確認日 2026-11-01)

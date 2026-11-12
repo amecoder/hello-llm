@@ -1,5 +1,7 @@
 # 第11章 像專家一樣使用——判斷、測試、積累
 
+<Badge type="warning" text="進階" /> 學會前面的章節以後，想用得更好時再讀。
+
 > **一句話總結**：用得好，靠的不只是多認識幾個按鈕。靠的是這種能力：**判斷該把什麼交給它，交出去之前先測試，把重複的東西積累下來**。
 > 本章彙集了在任何 AI 服務上都管用的工作方法。選單位置和各服務的功能，在第2階段的 [ChatGPT 第11章](../11-chatgpt/11-expert.md)和 [Claude 第12章](../10-claude/12-expert.md)裡講。
 
@@ -26,7 +28,7 @@ OpenAI 分析人們如何在工作中使用 ChatGPT 的文章裡，也能看到�
 
 ## 選一件最先練習的事
 
-不用從最大、最重要的事開始。一開始，請選這樣的事。這是本指南把 OpenAI 課程要求避開的事（太寬泛的事、只偶爾做的事、風險大的事、難以核對的事）反過來寫出來的。[^academy-openai]
+不用從最大、最重要的事開始。一開始，請選這樣的事。[^guide-pick]
 
 - 經常做
 - 結果很明確
@@ -46,14 +48,14 @@ OpenAI 分析人們如何在工作中使用 ChatGPT 的文章裡，也能看到�
 
 ## 交出去之前先測試
 
-"這件事能交給 AI 嗎？"不要憑感覺定，請測試一下。方法很簡單。**拿我已經知道答案的事**讓它做做看。Anthropic 的課程把這叫做評估（Evals）。[^academy-eval] 課程以 Claude 為例，但同樣的方法也可以用在其他 AI 上（這是本指南的判斷）。
+"這件事能交給 AI 嗎？"不要憑感覺定，請測試一下。方法很簡單。**拿我已經知道答案的事**讓它做做看。Anthropic 的課程把這叫做評估（Evals）。[^academy-eval] 課程以 Claude 為例，但同樣的方法也可以用在其他 AI 上。[^guide-judgment]
 
 1. 挑一件經常做的事。上個月寫的通知郵件、上個季度做的彙總表，都可以。
 2. 收集5～10份我以前做出來的成果。
 3. 把當時我手上有的資料給它，讓 AI 做同樣的事。
 4. 和我的成果並排放在一起對比。
 
-比如可以這樣傳送。我以前寫過的郵件，先不要給它看（這是本指南的建議）。這樣才能看到 AI 不是照抄、而是自己做出來的結果。
+比如可以這樣傳送。我以前寫過的郵件，先不要給它看。[^guide-judgment]這樣才能看到 AI 不是照抄、而是自己做出來的結果。
 
 ```
 請用下面的備忘錄，寫一封給附近讀書會會員的下個月通知郵件。
@@ -73,7 +75,13 @@ OpenAI 分析人們如何在工作中使用 ChatGPT 的文章裡，也能看到�
 
 別先挑選單。先看看眼前的事情是什麼樣子。這樣，該用的功能自然就定下來了。[^academy-tabs]
 
-各個服務的功能名稱雖然不同，但適合某種事情的功能是相近的。
+各個服務的功能名稱雖然不同，但適合某種事情的功能是相近的。下表裡的功能，會在第2階段各服務的指南裡配合介面來學。現在只要知道有這些功能就行。
+
+- **網頁搜尋**：AI 在網際網路上查詢後再回答。
+- **深度研究·研究**：AI 找來多份資料閱讀，整理成報告。
+- **專案**：把做一件事要用的對話、檔案、指令收進一個資料夾。
+- **Work·Cowork**：不是一問一答的對話，而是 AI 進行多個步驟，給你做出成品檔案。
+- **定時任務**：到了設定的時間，AI 會自己去做事。
 
 | 如果是這樣的事 | ChatGPT | Claude |
 |---|---|---|
@@ -84,7 +92,7 @@ OpenAI 分析人們如何在工作中使用 ChatGPT 的文章裡，也能看到�
 | 經過多個步驟，最後拿到成品檔案 | [Work](../11-chatgpt/07-projects-plugins.md#chat-和-work-的區別)（付費） | [Cowork](../10-claude/08-cowork.md#什麼是-cowork——交給它的是事-不是對話)（付費） |
 | 每到固定時間就重複 | [定時任務](../11-chatgpt/11-expert.md#到點自動去做-—-定時任務) | [定時任務](../10-claude/08-cowork.md#到固定時間自動做——預約任務)（付費） |
 
-表裡的功能名稱和套餐，是在各服務的章節裡確認過的。它們可能會變，用之前請看一下那一章。
+表裡的功能名稱和方案，是在各服務的章節裡確認過的。它們可能會變，用之前請看一下那一章。
 
 大部分情況下，最上面一行，也就是一個清楚的提示詞，就夠了。[^academy-openai] 下面幾行的功能，先用普通對話試試，不夠用時再拿出來。
 
@@ -94,12 +102,14 @@ OpenAI 分析人們如何在工作中使用 ChatGPT 的文章裡，也能看到�
 
 用著用著，你會發現自己總在重複同樣的話。把重複的東西寫下來一次，以後 AI 一開始就知道了。
 
-能放的地方有四個。不必一開始就全用。按下面的順序，等需要了再加一個。[^academy-layers]
+比如你每次對話都寫"請用敬語，寫在五行以內"，那就把這一句寫下來一次就行。
 
-1. **所有對話都提同樣的請求** → 寫進指令。ChatGPT 是[「自定義指令」](../11-chatgpt/05-memory.md#自定義指令——希望它始終遵守的事)，Claude 是[「指令」](../10-claude/05-memory.md#指令-—-適用於所有對話的規則)。
-2. **持續做同一件事** → 把這件事歸在一個專案裡。
-3. **每次都要解釋同樣的順序** → 把這個順序留成可以重複使用的模板。可以從把[第8章「4. 做成可重複使用的模板」](08-meta-prompting.md#_4-做成可重複使用的模板)的模板放進專案指令開始。如果服務和套餐支援，也可以做成技能。
-4. **想把打磨好的模板分享給別人** → 把模板做成文件分享出去，或者用服務提供的分享功能（外掛等）打包。這類功能，視服務和套餐不同，可能沒有。
+能放的地方有四個。不必一開始就全用。按下面的順序，等需要了再加一個。[^academy-layers] 名稱會在第2階段學到，現在只要理解成"一點點換到更大的箱子裡"就行。
+
+1. **所有對話都提同樣的請求** → 寫進指令（自動附在所有對話上的、我的請求備忘）。ChatGPT 是[「自定義指令」](../11-chatgpt/05-memory.md#自定義指令——希望它始終遵守的事)，Claude 是[「指令」](../10-claude/05-memory.md#指令-—-適用於所有對話的規則)。
+2. **持續做同一件事** → 把這件事歸在一個專案（收著這件事的對話、檔案、指令的資料夾）裡。
+3. **每次都要解釋同樣的順序** → 把這個順序留成可以重複使用的模板。可以從把[第8章「4. 做成可重複使用的模板」](08-meta-prompting.md#_4-做成可重複使用的模板)的模板放進專案指令開始。如果服務和方案支援，也可以做成技能（把可重複使用的工作順序儲存在服務裡的功能）。
+4. **想把打磨好的模板分享給別人** → 把模板做成文件分享出去，或者用服務提供的分享功能（外掛等，把多個模板打包、方便分給別人的包）打包。這類功能，視服務和方案不同，可能沒有。
 
 按順序來，每次需要重新解釋的事，會一點點減少。
 
@@ -153,11 +163,13 @@ Anthropic 課程裡的例子是這樣的。[^academy-data] 一個幫助退伍軍
 
 學東西的時候，不要直接要答案，而是請它引導我自己去想。自己找到答案，就是同時學會了解題的路。
 
+比如說，你想學 Excel 的 VLOOKUP。VLOOKUP 是一個 Excel 函式：看著一張表裡的編號，到另一張表裡找到配對的值（例如價格）填進來。如果你不用 Excel，讀的時候把 VLOOKUP 換成你想學的東西就行。
+
 ```
 我想學 Excel 的 VLOOKUP。不要直接告訴我答案，請一個一個地向我提問，讓我自己想。
 ```
 
-::: details 收到的回答大概是這樣（示例——點選展開）
+::: details 收到的回答大概是這樣（示例——點選展開）（點選展開）
 這是本指南編的示例。實際的回答會因服務和當時的情況而不同。
 
 > 好的，我們一起想一想。第一個問題。一張表裡有商品編號和價格，另一張表裡只有商品編號。如果要用手把價格填上去，您會怎麼做？
@@ -178,7 +190,7 @@ Anthropic 課程裡的例子是這樣的。[^academy-data] 一個幫助退伍軍
 
 用結果之前先檢查的習慣，你在[第9章「檢查的四個習慣」](09-safety.md#核對的四個習慣)裡學過了。這裡看的是：要檢查到多仔細，在哪個階段檢查。
 
-**不用把所有回答檢查到同樣仔細。** 要按事情的分量來檢查。[^academy-openai] 表裡最後一行是課程的標準，前面三行是本指南選的日常示例。
+**不用把所有回答檢查到同樣仔細。** 要按事情的分量來檢查。[^academy-openai][^guide-weight]
 
 | 如果是這樣的事 | 檢查到這個程度 |
 |---|---|
@@ -187,7 +199,7 @@ Anthropic 課程裡的例子是這樣的。[^academy-data] 一個幫助退伍軍
 | 文章、資料摘要 | 和原文對照 |
 | 影響健康、金錢、工作、法律權利的事 | 由專家仔細審閱，或走規定的流程 |
 
-**不是最後檢查一次，而是每個階段都看。** 如果是分好幾步進行的事，進入下一步之前先停一下。[^academy-openai] 並且請自己問這三件事。這是本指南從課程的檢查框架 CLEAR 裡挑出來的三項。[^academy-openai]
+**不是最後檢查一次，而是每個階段都看。** 如果是分好幾步進行的事，進入下一步之前先停一下。[^academy-openai] 並且請自己問這三件事。[^guide-clear]
 
 - **事實**：數字、名稱、日期、出處對不對？
 - **邏輯**："因為……所以……"這樣的銜接說得通嗎？
@@ -215,7 +227,7 @@ Anthropic 課程裡的例子是這樣的。[^academy-data] 一個幫助退伍軍
 4. 編一張約10行的日期、品類、金額表，我先用手算出各品類的合計。然後把同一張表交給 AI，請它展示計算步驟，再把兩個結果對一對。
 5. 用本章的 VLOOKUP 提示詞，透過被提問的方式，學一個最近想學的東西。
 
-**連續任務**（[籌備讀書會](practice-kit.md)）：如果第2步用了示例檔案，作業就從這裡開始。第2階段每一章的末尾都有下一步。跟著這個作業走，讀完第2階段時，手裡就會留下11月聚會的通知文案包。
+**連續任務**（[籌備讀書會](practice-kit.md)）：你當上社群讀書會的幹事，為11月的聚會做準備。這個作業從本章開始，一直到第2階段（各服務的指南）的最後一章，一點一點接著做。如果第2步用了示例檔案，作業就從這裡開始。下一步接在第2階段每一章的末尾。一直跟到最後，手裡就會留下11月聚會的通知文案，以及附帶的一組資料（通知文案包）。
 
 ## 小結
 
@@ -242,6 +254,10 @@ Anthropic 課程裡的例子是這樣的。[^academy-data] 一個幫助退伍軍
 
 下一章：第1階段讀完了。請用[理解度測試](certificate.md)確認我的 AI 理解水平，或者進入第2階段的 [ChatGPT](../11-chatgpt/01-getting-started.md)、[Claude](../10-claude/01-getting-started.md) 指南。
 
+[^guide-pick]: 這是本指南把 OpenAI 課程要求避開的事（太寬泛的事、只偶爾做的事、風險大的事、難以核對的事）反過來寫出來的。出處見下面的 OpenAI Academy 腳註。
+[^guide-judgment]: 課程以 Claude 為例。同樣的方法也可以用在其他 AI 上，這是本指南的判斷；以前寫過的郵件先不要給它看，這是本指南的建議。
+[^guide-weight]: 表裡最後一行是 OpenAI Academy 課程的標準，前面三行是本指南選的日常示例。
+[^guide-clear]: 這是本指南從 OpenAI Academy 課程的檢查框架 CLEAR（Complete·Logical·Evidence·Audience·Relevant：都寫全了嗎、邏輯通嗎、有依據嗎、適合讀的人嗎、相關嗎）裡挑出來的三項。出處見下面的 OpenAI Academy 腳註。
 [^academy-4d]: Claude Academy「Claude 101」課程的「Getting better results」。"AI Fluency is the ability to collaborate effectively with AI tools—not just knowing which buttons to click, but developing the judgment to use AI well across different situations." / "Deciding on what work should be done by humans, what work should be done by AI, and how to distribute tasks between them." / "Effectively communicating with AI systems." / "Thoughtfully and critically evaluating AI outputs, processes, behaviors and interactions." / "Using AI responsibly and ethically." / "maintaining transparency, and taking accountability for AI-assisted work." https://academy.claude.com/courses/claude-101/getting-better-results （確認日期 2026-10-26）
 [^ways]: OpenAI，「How workers are unlocking new ways of working」。分析指出：在自己職業以外的事情上，人們會多加示例、背景，也更多地請它核對。https://openai.com/index/unlocking-new-ways-of-working （確認日期 2026-10-24）
 [^academy-eval]: Claude Academy「Claude 101」課程的「Getting better results」。"Evals (short for evaluations) are a way to develop intuition for assessing Claude's outputs on the tasks that matter to you." / "Collect 5-10 examples of a task you do regularly—emails you've written, reports you've created, analyses you've done." / "Include the context you'd naturally have when doing this work." / "Does Claude capture the key information?" / "Is the tone and style appropriate?" / "What's missing or could be improved?" / "But if you can't get there after several refinements, you've learned that this isn't a task you should delegate." / "Just remember, validation builds confidence, but it doesn't eliminate responsibility." https://academy.claude.com/courses/claude-101/getting-better-results （確認日期 2026-10-26）

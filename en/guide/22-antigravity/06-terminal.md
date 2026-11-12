@@ -1,9 +1,13 @@
 # Chapter 6. Using It in the Terminal — `agy -p` and Silent Denials
 
-> **One-line summary**: `agy` is Antigravity's terminal program, and `agy -p "task"` runs once and exits.
-> With `-p`, actions that need permission are **silently denied**. Yet the **exit code is still 0 (success)**, so it is easy to mistake an empty result for success.
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
 
-This chapter is based on the Antigravity official docs checked on November 1, 2026, and results from running `agy` 1.4.12 on macOS. For this guide's hands-on practice, `agy` was called from inside another AI tool. The official FAQ does not support this kind of use on individual plans ([Chapter 7](07-safety-choose.md)), so when you follow along, run **`agy` directly in your terminal**. **If you are new to the terminal, you can skip this chapter.** What a terminal is was covered in [Claude Code Chapter 10](../20-claude-code/10-terminal.md).
+> **One-line summary**: `agy` is Antigravity's terminal program, and `agy -p "task"` runs once and exits.
+> With `-p`, actions that need permission are **silently denied**. Yet the **exit code** (the number a program leaves when it finishes) is still **0 (success)**, so it is easy to mistake an empty result for success.
+
+The **terminal** is a window where you control the computer by typing commands as text. **If you are new to the terminal, you can skip this chapter.** If you want to learn more about the terminal, see [Claude Code Chapter 10](../20-claude-code/10-terminal.md) (optional).
+
+The results in this chapter come from this guide actually running `agy` on macOS. When you follow along, run **`agy` directly in your terminal**.[^howrun]
 
 ## Installing and Getting Started
 
@@ -15,10 +19,12 @@ curl -fsSL https://antigravity.google/cli/install.sh | bash
 
 This command downloads an installer from the internet and runs it right away. **Check that it matches the official docs (antigravity.google/docs) word for word before you run it.** The command for Windows is also in the official docs.
 
-Move into the organizer folder and type `agy` to open the chat screen.[^tui] If you already signed in on the app, it signs you in right away without opening a browser.[^keyring] On your first run, it asks **whether you trust this folder** (Workspace trust).[^trust]
+Move into the organizer folder and type `agy` to open the chat screen.[^tui] The `cd` on the first line below is the command that moves into that folder. If you already signed in on the app, it signs you in right away without opening a browser.[^keyring]
+
+On your first run, it asks **whether you trust this folder** (Workspace trust, the step that registers a folder as trusted).[^trust] You made the organizer folder yourself, so you can answer that you trust it. Answering this way should help you avoid one of the denial pitfalls that come later (our estimate).
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 agy
 ```
 
@@ -41,7 +47,12 @@ Default permissions in the terminal are more cautious than in the app. It asks b
 
 ## `agy -p` — Ask Once and Exit
 
-`-p` sends a single request, gets the answer, and exits. Because there is no prompt window, actions that need permission are handled according to preset rules.[^headless] The answer goes to standard output (stdout), while progress and errors go to the side channel (stderr).[^stdout]
+`-p` sends a single request, gets the answer, and exits. Because there is no prompt window, actions that need permission are handled according to preset rules.[^headless] The text a program puts out goes two ways.[^stdout]
+
+- **Standard output** (stdout, "standard out"): the answer itself. For example, the table of files you asked for.
+- **Side channel** (stderr, "standard error"): progress and errors. For example, a notice that a shell command was denied.
+
+In the terminal window, you usually see both together. Don't be surprised if the answer and notices look mixed.
 
 The official docs explain that reading and writing files inside the working folder are allowed automatically, while shell commands default to "Ask" and are **silently denied** (soft-deny).[^policy] A silent denial does not stop the run; it finishes with **exit code 0** and only reports what was blocked to stderr.[^soft]
 
@@ -51,19 +62,29 @@ The official docs explain that reading and writing files inside the working fold
 
 Here is what actually happened while running `agy -p` several times in the organizer folder.
 
-1. **Empty result, yet success.** When the agent tried to run a shell command (`ls`) to see the folder list and got denied, **it finished without creating anything.** The exit code was 0. This happened three times. Always check whether the output file was actually created.
-2. **Reading and writing also denied in an untrusted folder.** The official docs say files inside the working folder are allowed automatically, but in this guide's practice folder, both writing and reading were denied. The likely cause is that this folder had not yet been registered as a "trusted folder" (our estimate). Opening interactive `agy` once and answering that you trust the folder registers it.[^trusted]
-3. **The fix: one mode flag + one sentence.** Adding `--mode accept-edits` and putting "Do not use shell commands; only read and write files" at the end of the request made every run succeed. We did not use `--dangerously-skip-permissions`, which approves everything. The official docs also recommend narrowly scoped allow rules.[^skip]
-4. **A file missing from the answer.** In read-only mode, we asked for a table of the files in the notes folder. There were 3 organized files (weekly meeting notes, ad-hoc meeting notes, weekly retrospective), but **the ad-hoc meeting notes were missing** from the table and the empty file `.gitkeep` was listed instead. Count the items yourself to verify the scope.
+1. **Empty result, yet success.** The agent tried to run a shell command (`ls`, a command you type in the terminal) to see the folder list and got denied. Then **it finished without creating anything.** The exit code was 0. This happened three times.
+   - What to do: Always check whether the output file was actually created.
+2. **Reading and writing also denied in an untrusted folder.** In the practice folder, even writing and reading files were denied at one point. The likely cause is that this folder had not yet been registered as a "trusted folder" (our estimate).[^trusted]
+   - What to do: Open interactive `agy` once and answer that you trust the folder.[^trusted]
+3. **The fix: one mode flag + one sentence.** Adding `--mode accept-edits` at the end of the command and putting "Do not use shell commands; only read and write files" at the end of the request made every run succeed.
+   - Do not use the `--dangerously-skip-permissions` option, which approves everything.
+   - Text like this that starts with `--` is called an **option**. You add it after a command to change how it runs. `--mode accept-edits` means "run in the `accept-edits` mode from the table above." You can see it at the very end of the command below.
+4. **A file missing from the answer.** In read-only mode, we asked for a table of the files in the notes folder. There were 3 organized files (weekly meeting notes, ad-hoc meeting notes, weekly retrospective). But **the ad-hoc meeting notes were missing** from the table and the empty file `.gitkeep` was listed instead.
+   - What to do: Count the items yourself to verify the scope.
+
+::: details More details (click to expand)
+- Item 2: The official docs say files inside the working folder are allowed automatically. Yet they were denied, so we guessed, as above, that registering a trusted folder was the cause.[^trusted]
+- Item 3: We did not use `--dangerously-skip-permissions`, which approves everything. The official docs also recommend narrowly scoped allow rules.[^skip]
+:::
 
 Here is the actual command we ran.
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 agy -p "Show the list of files in the notes folder, and tell me in one line each which template (from templates) each file uses. Do not modify any files. Keep the answer short, as a table only. Do not use shell commands; only read files." --mode accept-edits
 ```
 
-Result: [agy -p output](/practice/notes/results/antigravity/6장-agy-p-출력.txt) (paths on our computer replaced with `~`)
+Result: [agy -p output](/practice/en/notes/results/antigravity/ch6-agy-p-output.txt) (paths on our computer replaced with `~`)
 
 | | Claude Code | Codex | Antigravity |
 |---|---|---|---|
@@ -112,6 +133,7 @@ Check your usage with `/usage`.[^usage]
 
 Next chapter: [Chapter 7. Cost, Data, Safety, and Choosing Among the Three Tools](07-safety-choose.md)
 
+[^howrun]: This chapter is based on the Antigravity official docs checked on November 1, 2026, and results from running `agy` 1.4.12 on macOS. For this guide's hands-on practice, `agy` was called from inside another AI tool. The official FAQ does not support this kind of use on individual plans ([Chapter 7](07-safety-choose.md)).
 [^install]: Antigravity official docs, "Get started". "curl -fsSL https://antigravity.google/cli/install.sh | bash" https://antigravity.google/docs/getting-started (checked on 2026-11-01)
 [^tui]: Antigravity official docs, "Get started". "| `agy` | Launches the interactive TUI in the current directory. |" https://antigravity.google/docs/getting-started (checked on 2026-11-01)
 [^keyring]: Antigravity official docs, "Authenticate". "If a valid token profile is found, the CLI authenticates your session silently without opening a browser." https://antigravity.google/docs/install (checked on 2026-11-01)

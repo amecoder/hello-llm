@@ -1,5 +1,7 @@
 # 第2章 安装桌面应用与第一次会话——安装、登录、Code 标签页、选择文件夹、交代第一件事
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：安装 Claude 桌面应用，打开 **Code** 标签页。在输入框下面一行**选好文件夹**，用平时说话的方式写下要做的事并发送，Claude 就会在那个文件夹里工作。
 > 这一章要让它把一份乱七八糟的会议笔记，整理成**按我定的格式写的会议纪要**。这是贯穿第3阶段、不断长大的「按我的方式帮我整理的工具」的第一步。
 
@@ -12,7 +14,7 @@ Claude Code **包含在 Claude 桌面应用里面。** 只要安装应用就行�
 1. 在官方文档的安装页面，下载适合你电脑的文件。[^quickstart]
    - **macOS**：一个文件就能同时安装在 Intel 和 Apple 芯片的 Mac 上。
    - **Windows**：有普通 PC（x64）用的安装文件，ARM64 PC 的另有一个。
-   - **Linux**：是测试版（试用版），在 Ubuntu、Debian 上用 apt（Linux 的程序安装工具）安装。
+   - **Linux**：是测试版（试用版）。有 Ubuntu、Debian 用的版本。[^linux]
 2. 运行下载好的文件进行安装。
 3. 打开应用，用 **Anthropic 账号**登录。[^quickstart] 如果是个人订阅（Pro·Max·Ultra），用在 claude.ai 上用的账号登录。[^auth]
 
@@ -28,7 +30,10 @@ Claude Code 在应用侧边菜单最上面的 **Code** 标签页里。[^quicksta
 
 - **提示你改用付费套餐**：用 Claude Code 需要有付费订阅（[第1章](01-what-is.md#需要什么——套餐)）。订阅之后再打开。
 - **提示你在线登录**：完成登录后重新启动应用。
-- **403 错误**（表示访问被拒绝的错误）：请看官方文档里的认证问题排查说明。
+
+::: details 如果出现「403」这样的错误
+403 错误表示访问被拒绝。请看官方文档里的认证问题排查说明。
+:::
 
 在 Code 标签页里打开新会话，会出现这样的界面。
 
@@ -47,9 +52,11 @@ Claude Code 在应用侧边菜单最上面的 **Code** 标签页里。[^quicksta
 
 来源：界面名称来自本指南的界面确认（2026-10-31），作用来自官方文档[^desktop-start]
 
-③ 的环境，一开始保持**这台电脑**就行。官方文档里的「Local」（我的电脑）就是这一项。[^quickstart] 在云端工作的方法，在第8章里讲。
+③ 的环境，一开始保持**这台电脑**就行。[^local] 在云端工作的方法，在第8章里讲。
 
 模型（⑤）以后也可以更换。[^quickstart] 一开始直接用屏幕上选好的就可以。
+
+如果你的界面和图里不一样，「选择环境」在输入框**上方**，那就是旧的界面布局。只是位置不同，做的事是一样的，找到同名的项目选上就行。[^quickstart]
 
 ::: details 如果输入框上方有「选择环境」，而下面一行没有环境
 这是旧的界面布局。官方文档说明，如果新会话的输入框下面看不到环境，就是旧布局（earlier layout）。[^quickstart] 在旧布局里，环境和文件夹要在**输入框上方**选，权限模式和模型要在**下面一行**选。[^desktop-layout] 做的事是一样的。
@@ -65,19 +72,19 @@ Claude Code 在**我选的文件夹里面**工作。所以一开始最好另外�
 
 | 文件 | 内容 |
 |---|---|
-| [회의-2026-10-27-주간회의.txt](/practice/notes/inbox/회의-2026-10-27-주간회의.txt) | 乱七八糟的周会笔记 |
-| [공부-2026-10-28-프롬프트-강의.txt](/practice/notes/inbox/공부-2026-10-28-프롬프트-강의.txt) | 听课时写的笔记 |
-| [회고-2026-10-29.txt](/practice/notes/inbox/회고-2026-10-29.txt) · [10-30](/practice/notes/inbox/회고-2026-10-30.txt) · [10-31](/practice/notes/inbox/회고-2026-10-31.txt) | 3 天的每日回顾 |
+| [meeting-2026-10-27-weekly.txt](/practice/zh-hans/notes/inbox/meeting-2026-10-27-weekly.txt) | 乱七八糟的周会笔记 |
+| [study-2026-10-28-prompt-lecture.txt](/practice/zh-hans/notes/inbox/study-2026-10-28-prompt-lecture.txt) | 听课时写的笔记 |
+| [review-2026-10-29.txt](/practice/zh-hans/notes/inbox/review-2026-10-29.txt) · [10-30](/practice/zh-hans/notes/inbox/review-2026-10-30.txt) · [10-31](/practice/zh-hans/notes/inbox/review-2026-10-31.txt) | 3 天的每日回顾 |
 
 笔记里的日期和星期是为了故事编出来的，所以**和真实的 2026 年日历对不上。** 核对结果时，请看和**笔记里写的**日期、星期是否一致。
 
-1. 在你的电脑上新建一个文件夹 **整理工具（정리도구）**，再在里面建一个 **inbox** 文件夹。
+1. 在你的电脑上新建一个文件夹 **整理工具（organizer）**，再在里面建一个 **inbox** 文件夹。放整理结果的 **notes** 文件夹不用提前建。在本指南的实操中，Claude 保存时自己建了它。
 2. 下载上面的 5 个文件，放进 **inbox**。
 3. 点 Code 标签页输入框下面一行的 **选择…**（④）。
 
 ![文件夹菜单。① 文件夹「选择…」，② 「搜索文件夹…」栏（图中输入了一个没打开过的其他练习文件夹的名字，显示出「没有匹配项」），③ 「打开文件夹…」都标有红色编号](../../../guide/20-claude-code/assets/shot-02-folder-menu-marked.png)
 
-4. 菜单打开后，点最下面的 **打开文件夹…**（③）。官方文档里的「Open folder…」就是这一项。[^quickstart]
+4. 菜单打开后，点最下面的 **打开文件夹…**（③）。[^quickstart]
 5. 在选择文件的窗口里选择 **整理工具** 文件夹，点 **打开**。
 
 菜单上方会显示**最近打开的文件夹**。打开过一次的文件夹，下次可以在 ② 的搜索栏里输入名字直接选。第一次打开的文件夹，会像图里那样显示「没有匹配项」，所以用 **打开文件夹…** 来打开。
@@ -116,6 +123,8 @@ Claude Code 在**我选的文件夹里面**工作。所以一开始最好另外�
 
 如果权限模式是**手动**（官方文档里的 Manual），Claude 在修改文件或运行命令**之前，会先询问。** 它会展示将要改什么，每次更改你都可以同意或拒绝。[^desktop-modes] 一开始保持手动，一项一项看它想做什么，会更让人放心。权限模式在[第4章](04-permissions-undo.md)里详细讲。
 
+即使是手动模式，它也可能不询问就直接创建文件。这不是故障。如果你以前在终端里用过 Claude Code，那时设置的内容可能也应用到了应用里。本指南的截图也是在有这种设置的电脑上拍的，所以没有许可窗口。详细原理在下面的框里。
+
 ::: details 明明是手动，却没有询问就直接创建了文件
 如果你以前在终端里用过 Claude Code，那时设置的内容可能也应用到了应用里。**桌面应用读取的设置文件，和终端版 Claude Code 是同一份。**[^desktop-modes] 比如，如果你加过"写文件不要询问"这样的允许规则，即使是手动模式，这件事也不会询问就直接做。本指南的截图也是在有这种设置的电脑上拍的，所以没有出现许可窗口。
 :::
@@ -144,7 +153,7 @@ Claude Code 在**我选的文件夹里面**工作。所以一开始最好另外�
 | 新品看了成本再决定 | 另外注明"备忘录里没有写明什么时候决定" |
 | 下次会议 11/3 周一上午 10 点 | 原样搬过来 |
 
-来源：本指南的实操结果（2026-10-31）。结果文件：[2장-회의록-2026-10-27-주간회의.txt](/practice/notes/results/2장-회의록-2026-10-27-주간회의.txt)（保持 Markdown 格式原样）
+来源：本指南的实操结果（2026-10-31）。结果文件：[ch2-minutes-2026-10-27-weekly.txt](/practice/zh-hans/notes/results/ch2-minutes-2026-10-27-weekly.txt)（保持 Markdown 格式原样）
 
 **即使是同样的请求，每次的结果也会略有不同。** 表格的样子或者语气和本指南不一样也没关系。如果上面的检查问题你都能回答"是"，就是做好了。
 
@@ -187,5 +196,7 @@ Claude Code 在**我选的文件夹里面**工作。所以一开始最好另外�
 [^desktop-start]: Claude Code 官方文档，「Desktop application」. "Before you send your first message, choose the environment, project folder, permission mode, and model in the row under the prompt box" / "Type what you want Claude to do and press Enter to send. Claude reads your project files, makes changes, and runs commands based on your permission mode." / "click the stop button to interrupt immediately, or type a correction and press Enter to send it without stopping the running action." https://code.claude.com/docs/en/desktop (确认日期 2026-10-31)
 [^desktop-layout]: Claude Code 官方文档，「Desktop application」. "In the earlier layout, choose the environment and any project folder or repository above the prompt box, and the permission mode and model in the row under it." https://code.claude.com/docs/en/desktop (确认日期 2026-10-31)
 [^desktop-modes]: Claude Code 官方文档，「Desktop application」. "Claude asks before editing files or running commands. You see a diff and can accept or reject each change." / "The desktop app reads the same settings files as the CLI." https://code.claude.com/docs/en/desktop (确认日期 2026-10-31)
+[^linux]: 在 Linux 上用 apt（在 Linux 里安装程序的工具）安装。参见官方文档「Get started with the desktop app」。https://code.claude.com/docs/en/desktop-quickstart (确认日期 2026-10-31)
+[^local]: 官方文档里把这一项叫作「Local」（我的电脑）。文件夹菜单里的「打开文件夹…」就是官方文档里的「Open folder…」。https://code.claude.com/docs/en/desktop-quickstart (确认日期 2026-10-31)
 [^auth]: Claude Code 官方文档，「Authentication」. "Claude Pro, Max, or Ultra subscription: log in with your claude.ai account." https://code.claude.com/docs/en/authentication (确认日期 2026-10-31)
 [^update]: Claude Code 官方文档，「Desktop application」. "Open Claude > Check for Updates… on macOS or Help > Check for Updates… on Windows to update." https://code.claude.com/docs/en/desktop (确认日期 2026-10-31)

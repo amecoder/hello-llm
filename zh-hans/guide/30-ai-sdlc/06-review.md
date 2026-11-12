@@ -1,5 +1,7 @@
 # 第6章 PR 与评审——合并之前再看一遍
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：**PR**（Pull Request）是**提议**把我分支上的改动合并进 `main`。它为合并之前的讨论和审查，留出了一个位置。
 > 一个人做也要评审。AI 评审（`/code-review`）也可以让它做，但**"没有问题"不等于安全，合不合并由我来决定。**
 
@@ -20,7 +22,9 @@ PR 画面里有这些标签页。[^tabs]
 
 来源：GitHub 官方文档（只摘录了一部分）[^tabs]
 
-创建 PR 时，要写明**改了什么、解决什么问题**。如果是解决第8章里某个 Issue 的 PR，就和 Issue 关联起来，用规定的词来关联，PR 合并时 Issue 就会自动关闭。[^describe]
+创建 PR 时，要写明**改了什么、解决什么问题**。[^describe]
+
+以后在第8章里会用到 **Issue**（GitHub 上用来记下待办事项或 bug 的记录）。如果是解决某个 Issue 的 PR，就在 PR 说明里用 `fixes #编号` 这样规定的词写上这个 Issue，把它们关联起来。这样 PR 合并时，那个 Issue 就会自动关闭。[^describe] 现在只要知道有这种关联就行了。
 
 **小的 PR 更容易评审，合并也更安全。** 在请别人评审之前，先自己检查。读一遍改动的内容，看有没有不小心改动的地方，确认构建和测试是否运行过了。[^small]
 
@@ -46,7 +50,13 @@ GitHub 教程说，**即使一个人工作**，在合并之前有意识地做评
 
 来源：GitHub 官方文档[^decisions]
 
-评审的标准是第3章的 **SPEC.md**。官方最佳实践文档里的示例提示词，是在做完之后**对照 SPEC.md**，确认所有要求都已实现，只报告影响正确性的缺口，并**跳过风格问题**（示例是交给子代理去做，本指南改成用新会话）。[^against-spec] 文档里也写了理由。让评审者找问题，它**总会找出点什么。**[^always-finds] 把这些全都改一遍，就会冒出一堆多余的累赘。
+评审的标准是第3章的 **SPEC.md**。Claude Code 官方最佳实践文档举例说，做完之后要这样评审。[^against-spec]
+
+- **对照 SPEC.md**，看所有要求是否都已实现。
+- 只报告影响正确性的缺口。
+- 字的样子、起名字这类**风格问题跳过。**
+
+为什么要跳过风格问题？让评审者找问题，它**总会找出点什么。**[^always-finds] 把这些全都改一遍，就会冒出一堆多余的累赘。只让它看正确性，留下的就只有必须改的地方。
 
 ```
 在新会话里，把当前分支的改动对照 SPEC.md 做评审。看要求是否都已实现，每条确认标准是否都有检查，只告诉我影响正确性的缺口。跳过风格问题。
@@ -56,14 +66,20 @@ GitHub 教程说，**即使一个人工作**，在合并之前有意识地做评
 
 ## 请 AI 来评审
 
-Claude Code 里有评审命令 `/code-review`。在工作中的会话里输入它，它会读取我分支上的改动，找出正确性问题，并在对话里告诉我。[^local] 用量和会话的其余部分一样，从我的套餐里计算。[^usage]
+Claude Code 里有评审命令 `/code-review`。在工作中的会话里输入它，它会读取我分支上的改动，找出正确性问题，并在对话里告诉我。[^local] 任何套餐都能用。[^plans]
 
-在桌面应用里，提交之前可以在输入框里输入 `/code-review` 来获得评审。[^desktop-review] 打开 PR 之后，可以在会话信息面板里看到 PR 和自动检查的状态。这个功能需要安装并登录 GitHub CLI（`gh`）。[^monitor]
+比如做完第一个画面后，只要在输入框里输入 `/code-review` 就行了。不用另外加说明，它也会去看当前分支的改动。
 
 **AI 评审有明确的局限。**
 
 - AI 评审可能漏掉 bug 或安全问题。**没有发现，并不意味着没有错误，也不意味着安全。**[^miss]
-- 自动加在 GitHub PR 上的托管式评审，也不会批准或阻止 PR。**合不合并由人来决定。**[^decide] 这种托管式评审是给 Team、Enterprise 套餐用的，个人在任何套餐里都可以用 `/code-review`。[^plans]
+- 自动在 GitHub PR 上加评审的托管式评审，也不会批准或阻止 PR。**合不合并由人来决定。**[^decide]
+
+::: details 详细说明（点击展开）
+- **用量**：评审也是在我的会话里运行的，所以和会话的其余部分一样，按我的套餐用量计算。[^usage]
+- **桌面应用**：提交之前可以在输入框里输入 `/code-review` 来获得评审。[^desktop-review] 打开 PR 之后，可以在会话信息面板里看到 PR 和自动检查的状态。这个功能需要安装并登录 GitHub CLI（`gh`，用命令来操作 GitHub 的程序）。[^monitor]
+- **托管式评审**：自动在 GitHub PR 上加评审的功能是给 Team、Enterprise 套餐用的。个人在任何套餐里都可以用 `/code-review`。[^plans]
+:::
 
 如果你在第3阶段学过"写的人和确认的人分开"，那么即使是同一个 Claude，也最好让它在**新会话**里评审。因为这样它不会被制作时那段对话的上下文牵着走。
 
@@ -73,7 +89,7 @@ Claude Code 里有评审命令 `/code-review`。在工作中的会话里输入�
 
 评审完毕、确认手段也通过了，就把 PR **合并**（Merge）。GitHub flow 的最后一步是删除分支。就算删了分支，**PR 和提交记录也不会被删除**，所以不用担心。[^delete]
 
-以后人多了，可以设置"必须有批准才能合并"这样的**保护规则**。保护规则默认会禁止强制覆盖和删除分支。[^protect]
+以后人多了，可以设置"必须有批准才能合并"这样的**保护规则**。[^protect] 现在一个人练习，不用管它。
 
 <Quiz id="ch706-merge" />
 
@@ -114,7 +130,7 @@ Claude Code 里有评审命令 `/code-review`。在工作中的会话里输入�
 [^risks]: Claude Code 官方文档，「Common workflows」。 "Review Claude's generated PR before submitting and ask Claude to highlight potential risks or considerations." https://code.claude.com/docs/en/common-workflows （确认日期 2026-11-01）
 [^alone]: GitHub 官方文档，「Reviewing your proposed changes」。 "Even when you work alone, a deliberate review builds a habit that keeps your software projects healthy and makes collaboration easier later." https://docs.github.com/en/get-started/start-your-journey/reviewing-your-proposed-changes （确认日期 2026-11-01）
 [^decisions]: GitHub 官方文档，「Quickstart for reviewing pull requests」。 "**Approve** signals that the changes are ready to merge." / "**Request changes** flags feedback the author must address before merging." https://docs.github.com/en/pull-requests/get-started/reviewing-pull-requests-quickstart （确认日期 2026-11-01）
-[^against-spec]: Claude Code 官方文档，「Best practices for Claude Code」。 "use a subagent to review the rate limiter diff against SPEC.md, check every requirement is implemented and the listed edge cases have tests, report gaps that affect correctness and skip style" https://code.claude.com/docs/en/best-practices （确认日期 2026-11-01）
+[^against-spec]: 官方示例是把这次评审交给子代理（subagent，Claude 把工作单独拆出去交给的另一个 Claude）去做，本指南改成用新会话。Claude Code 官方文档，「Best practices for Claude Code」。 "use a subagent to review the rate limiter diff against SPEC.md, check every requirement is implemented and the listed edge cases have tests, report gaps that affect correctness and skip style" https://code.claude.com/docs/en/best-practices （确认日期 2026-11-01）
 [^always-finds]: Claude Code 官方文档，「Best practices for Claude Code」。 "A reviewer that's asked to find problems will always find *something*." https://code.claude.com/docs/en/best-practices （确认日期 2026-11-01）
 [^local]: Claude Code 官方文档，「Review locally with /code-review」。 "Claude reviews the changes on your branch, looks for correctness bugs, and reports what it found in your conversation." https://code.claude.com/docs/en/code-review-local （确认日期 2026-11-01）
 [^usage]: Claude Code 官方文档，「Review locally with /code-review」。 "The review runs in your own session, so it counts toward your plan's usage or API billing the same way the rest of the session does." https://code.claude.com/docs/en/code-review-local （确认日期 2026-11-01）
@@ -124,6 +140,6 @@ Claude Code 里有评审命令 `/code-review`。在工作中的会话里输入�
 [^decide]: Claude Code 官方文档，「Code Review」。 "A review never approves or blocks the pull request, so the decision to merge stays with your team." https://code.claude.com/docs/en/code-review （确认日期 2026-11-01）
 [^plans]: Claude Code 官方文档，「Code Review」。 "**Plans**: [Team and Enterprise](https://code.claude.com/docs/en/feature-availability.md)" / "Run [`/code-review`](https://code.claude.com/docs/en/code-review-local) in your Claude Code session on any plan, or [compare all the options](#compare-ways-to-get-a-review)." https://code.claude.com/docs/en/code-review （确认日期 2026-11-01）
 [^delete]: GitHub 官方文档，「GitHub flow」。 "Don't worry about losing information. Your pull request and commit history will not be deleted." https://docs.github.com/en/get-started/using-github/github-flow （确认日期 2026-11-01）
-[^protect]: GitHub 官方文档，「About protected branches」。 "By default, each branch protection rule disables force pushes to the matching branches and prevents the matching branches from being deleted." https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches （确认日期 2026-11-01）
+[^protect]: 保护规则默认会禁止强制覆盖（force push，硬把记录覆盖上传）和删除分支。GitHub 官方文档，「About protected branches」。 "By default, each branch protection rule disables force pushes to the matching branches and prevents the matching branches from being deleted." https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches （确认日期 2026-11-01）
 [^create-pr]: GitHub 官方文档，「Quickstart for pull requests」。 "then click **New pull request**." / "For the **compare** branch, select the branch that contains your changes." / "Click **Create pull request**." https://docs.github.com/en/pull-requests/get-started/pull-request-quickstart （确认日期 2026-11-01）
 

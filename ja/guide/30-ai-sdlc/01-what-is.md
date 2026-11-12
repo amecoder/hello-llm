@@ -1,5 +1,7 @@
 # 第1章 AIといっしょに作るということ — SDLCをひと目で
 
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
 > **一言まとめ**: ソフトウェアは、**計画 → 作る → レビュー → 確認 → デプロイ（公開）→ 運用**を経て、世の中に出ていきます。この流れをSDLCと呼びます。
 > AIは各段階の手になってくれますが、**何を作るかを決めて、結果を確認する仕事は人の役目**です。ステップ4では、この役割分担を学びます。
 
@@ -20,7 +22,7 @@ SDLC（ソフトウェア開発ライフサイクル、Software Development Life
 
 出典: GitHub公式ドキュメント（このガイドのまとめ）[^six]
 
-このガイドでは、確認（第5章）を先に、レビュー（第6章）をあとに扱います。レビューのときに、確認の結果もいっしょに見るためです。「運用」は、GitHubでは監視・部品の管理・セキュリティまで含む広い意味ですが、このガイドでは、イシューで改善すること（第8章）と安全（第9章）までを扱います。
+表の章番号の順番が少し違います。このガイドでは、確認（第5章）をレビュー（第6章）より先に扱います。レビューのときに、確認の結果もいっしょに見るためです。[^operate]
 
 **最初からすべての段階を使う必要はありません。** GitHubも、多くの人がリポジトリ1つとやることいくつかで始めて、プロジェクトが育つのに合わせて広げていくと言っています。[^start-small] このガイドも、小さなウェブページ1つで、6つの段階を一周してみます。
 
@@ -55,7 +57,7 @@ AIが手を担当しても、人が必ず担当しなければならない仕事
 
 出典: このガイドのまとめ（根拠は各章の脚注）
 
-公式ドキュメントも、提案されたコードやコマンドが安全かどうかを**承認する前に確認する責任はユーザーにある**と書いています。[^responsible] また、デプロイのように外のシステムに影響を与える行動は、Claude Codeの巻き戻し（チェックポイント）では取り消せません。[^no-checkpoint] だから、外に出ていく行動ほど、人が確認してから押します。
+公式ドキュメントも、提案されたコードやコマンドが安全かどうかを**承認する前に確認する責任はユーザーにある**と書いています。[^responsible] また、デプロイのように外のシステムに影響を与える行動は、Claude Codeの巻き戻し（チェックポイント）では取り消せません。[^no-checkpoint] チェックポイントは、依頼を送るたびに自動で残るセーブポイントです。ゲームのセーブポイントのように、Claudeが直した自分のパソコンのファイルは、ほとんどその時点に戻せます（シェルコマンドや別のセッションが変えたファイルは除きます）。でも、インターネットにすでに公開したものは戻ってきません。だから、外に出ていく行動ほど、人が確認してから押します。
 
 <Quiz id="ch701-human" />
 
@@ -64,6 +66,13 @@ AIが手を担当しても、人が必ず担当しなければならない仕事
 ステップ4の「自分でやってみよう」は、章ごとにつながる1つの例題で行います。**ステップ3の整理ツールが作った議事録のやることを集めて見せるウェブページ**、その名も「街角カフェ やることボード」です。
 
 GitHubの公式の入門シリーズも、小さなウェブサイトを1つ、最後まで作りながら、**計画し、コードを書き、変更をレビューし、本物のウェブサイトとして公開**します。[^journey] このガイドは同じ順番をたどりますが、AIの役にはステップ3で慣れたClaude Codeを使います。
+
+表に見慣れない言葉がいくつか出てきます。今は意味だけ軽く知っておいてください。それぞれの章で、じっくり扱います。
+
+- **GitHub**（ギットハブ）: プロジェクトのファイルと変更の記録をインターネットに置いて、いっしょに仕事をするサービス
+- **リポジトリ**（Repository）: プロジェクトのファイルと変更の記録を置く場所。プロジェクトの家です
+- **PR**（Pull Request、プルリクエスト）: 「自分が変えたものを取り込んでください」と差し出す変更の提案
+- **GitHub Pages**（ギットハブ・ページズ）: リポジトリのファイルを、無料でウェブページとして公開してくれる機能
 
 | 章 | やることボードでやること |
 |---|---|
@@ -108,4 +117,5 @@ GitHubの公式の入門シリーズも、小さなウェブサイトを1つ、�
 [^fail]: Claude Code 公式ドキュメント、「Best practices for Claude Code」。"It's missing information it can't get from reading the repo." / "Claude said it was done and it wasn't quite, usually because it had no way to check its own work." https://code.claude.com/docs/en/best-practices (確認日 2026-11-01)
 [^responsible]: Claude Code 公式ドキュメント、「Security」。"You're responsible for reviewing proposed code and commands for safety before approval." https://code.claude.com/docs/en/security (確認日 2026-11-01)
 [^no-checkpoint]: Claude Code 公式ドキュメント、「How Claude Code works」。"Actions that affect remote systems (databases, APIs, deployments) can't be checkpointed." https://code.claude.com/docs/en/how-claude-code-works (確認日 2026-11-01)
+[^operate]: 「運用」は、GitHubでは監視・部品の管理・セキュリティまで含む広い意味です。このガイドでは、イシューで改善すること（第8章）と安全（第9章）までを扱います。
 [^journey]: GitHub 公式ドキュメント、「Creating a repository for your project on GitHub」。"By the end of the journey, you'll plan work, write code, review changes, and deploy your code to a live website." https://docs.github.com/en/get-started/start-your-journey/creating-a-repository-for-your-project-on-github (確認日 2026-11-01)

@@ -1,7 +1,9 @@
 # 第10章 语音与手机——开口提问，在手机上更快
 
+<Badge type="info" text="选读" /> 需要的时候再读。跳过也能跟上后面的章节。
+
 > **一句话总结**：输入框里的**麦克风**，会把你说的话记成文字（听写）；**声波符号**，让你和 Claude 用说话的方式交流（语音模式）。
-> 在手机上，用小组件、快捷指令、锁屏界面能更快地打开它，还可以把消息、邮件草稿直接交给对应的应用。
+> 在手机上，用小组件（放在主屏幕上的小快捷方块）、快捷指令（把多个动作合成一个按钮的 iPhone 功能）、锁屏界面能更快地打开它，还可以把消息、邮件草稿直接交给对应的应用。
 
 画面以 2026年10月的网页版为准。手机应用和电脑应用的按钮位置略有不同，设置菜单的名称也可能因画面而异。
 
@@ -24,7 +26,7 @@
 
 ## 试试听写
 
-这一节讲手机应用（iPhone、安卓）的听写。[^dictation] 电脑应用的 Cowork 里也可以用听写。[^voice]
+这一节讲手机应用（iPhone、安卓）的听写。[^dictation] 电脑应用的 Cowork（[第8章](08-cowork.md)）里也可以用听写。[^voice]
 
 1. 在 Claude 应用里打开一个新聊天。
 2. 点输入框右侧的**麦克风**。
@@ -45,12 +47,17 @@
 
 ### 在 Mac 电脑上——快速输入
 
+如果你不用 Mac，可以跳过这一部分。
+
 如果在 Mac 上用 Claude 桌面应用，请试试**连按两下 Option 键**。不管你正在用哪个应用，Claude 的输入框都会马上打开。[^quick] 不用中断手头的事就能提问。
 
 - 可以拖选屏幕的一部分，作为截图贴进去，也可以点应用窗口，把里面的内容一起发过去。[^quick]
-- 打开听写快捷键后，按 Caps Lock 就能用说话来输入。一开始它是关着的。[^quick]
 - 包括免费套餐在内的所有套餐都可以用，但只限 Mac 桌面应用。应用即使在后台，也必须处于开启状态。[^quick]
+
+::: details 详细说明（点击展开）
+- 打开听写快捷键后，按 Caps Lock 就能用说话来输入。一开始它是关着的。[^quick]
 - 需要 Mac 的屏幕录制之类的权限。在「系统设置 > 隐私与安全性（시스템 설정 > 개인정보 보호 및 보안）」里确认。[^quick]
+:::
 
 看着陌生的表格或错误窗口，想马上提问时，很方便。
 
@@ -99,7 +106,7 @@
 我回答之后，请简短地说一个好的地方、一个要改的地方，然后进入下一个问题。
 ```
 
-::: details 拿到的回答大致是这样（示例——点击展开）
+::: details 拿到的回答大致是这样（示例——点击展开）（点击展开）
 这是本指南做的示例。实际的回答会因服务和每次的情况而不同。
 
 > 好的，我们开始面试。第一个问题。请您简单做一下自我介绍，可以吗？
@@ -116,8 +123,8 @@
 
 - 语音对话也**计入套餐的用量限额**（[第1章](01-getting-started.md)）。
 - 在同一个对话里，文字和说话来回切换，**前面的内容也是接着的。** 像网址这样要准确输入的东西，中途用文字输入就行。
-- 它从文字聊天里最后用的模型开始，对话中可以更换。不过 Claude Fable 目前还不能在语音模式中使用（2026-10-26 确认）。
-- 已连接的工具（Gmail、Google 日历等）在语音模式里也能用。语音模式的帮助文档写道，免费套餐可以连接一个工具。工具连接在[第7章](07-projects-tools.md)讲。
+- 它从文字聊天里最后用的模型开始，对话中可以更换。不过 Claude Fable 目前还不能在语音模式中使用。[^voice-fable]
+- 已连接的工具（Gmail、Google 日历等）在语音模式里也能用。[^voice-tools] 工具连接在[第7章](07-projects-tools.md)讲。
 - 在新画面里，包括 Claude 正在做任务的对话在内，任何对话都可以使用语音模式。[^voice][^cowork-voice-old]
 
 <Quiz id="ch210-voice" />
@@ -160,10 +167,10 @@ Claude 的声音，只能在固定的几种里选。这是为了防止模仿或�
 
 ### iPhone（iOS 18 及以上）
 
-- **「向 Claude 提问」**（Ask Claude）：不用打开应用就能提问。可以在 Spotlight 搜索、Siri、分享菜单里使用。比如选中一段文字，通过分享菜单直接发给 Claude。
-- **小组件**：把 Claude 小组件放在主屏幕或今日视图里，一个按钮就能打开新聊天、听写、拍照发送。
-- **「用 Claude 分析照片」**（Analyze Photo with Claude）：放进控制中心或锁屏界面，不用解锁就能拍照发送。
-- **「Open Claude」**：放进锁屏界面、控制中心、操作按钮（Action button），直接打开 Claude。[^ios][^lock]
+- **「向 Claude 提问」**（Ask Claude）：不用打开应用就能提问。可以在 Spotlight 搜索（在主屏幕中间往下滑出现的搜索栏）、Siri、分享菜单里使用。比如选中一段文字，通过分享菜单直接发给 Claude。
+- **小组件**：把 Claude 小组件放在主屏幕或今日视图（主屏幕最左边的那一屏）里，一个按钮就能打开新聊天、听写、拍照发送。
+- **「用 Claude 分析照片」**（Analyze Photo with Claude）：放进控制中心（从屏幕右上角往下滑出现的按钮集合）或锁屏界面，不用解锁就能拍照发送。
+- **「Open Claude」**：放进锁屏界面、控制中心、操作按钮（Action button，部分 iPhone 侧面的按钮），直接打开 Claude。[^ios][^lock]
 
 「向 Claude 提问」和快捷指令，使用的是打开应用时显示的默认模型。[^ios]
 
@@ -220,7 +227,9 @@ Claude 第一次要用位置或日历时，会征求你的同意。在允许一�
 - **iPhone**：「设置」→「Claude」
 - **安卓**：「设置」→「应用」→「Claude」→「权限」[^ios-apps][^android-apps]
 
+::: details 在韩国还不能用的功能（点击展开）
 也有读取健康数据的功能，但它是测试版，只限 Pro、Max 套餐，而且只在美国可用。[^ios-apps]
+:::
 
 <Quiz id="ch210-apps" />
 
@@ -287,5 +296,7 @@ Claude 第一次要用位置或日历时，会征求你的同意。在允许一�
 [^android-apps]: Anthropic 帮助文档，「Use Claude with Android apps」。 "This feature is supported on all Claude plans and works with your device's native and third-party apps" / "Reminders: These are exclusively available on Claude for iOS, so Claude can’t create and manage reminders on Android." / "These permissions can be managed at any time in your device settings by going to Settings > Apps > Claude > Permissions." https://support.claude.com/en/articles/11869629 （确认日期 2026-10-26）
 [^quick]: Anthropic 帮助文档，「Use quick entry with Claude Desktop on Mac」。 "Quick entry is available to all Claude users (free, Pro, Max, Team, and Enterprise plans) using Claude Desktop on macOS." / "Instant access: Double-tap the Option key to open Claude from any app." / "Visual context: Capture screenshots or click application windows to share what you're working on." / "The voice dictation shortcut is disabled by default because it takes over your Caps Lock key." / "Claude Desktop needs to be running on your Mac, but it can run in the background." / "Screen recording: Required to capture screenshots and share application windows." / "You can review or change these permissions in System Settings > Privacy & Security." https://support.claude.com/en/articles/12626668 （确认日期 2026-10-26）
 [^cowork-voice-old]: 同一份帮助文档里还有一句话说，在 Cowork（[第8章](08-cowork.md)）里只能听写，不能用语音模式。
+[^voice-fable]: Anthropic 帮助文档，「Use voice mode」。 "Note: Claude Fable is not currently available in voice mode." （确认日期 2026-10-26）
+[^voice-tools]: 语音模式的帮助文档写道，免费套餐可以连接一个工具。
 [^voice-settings-name]: 帮助文档写的是「设置」→「功能（기능）」。依画面不同，可能有差异。
 

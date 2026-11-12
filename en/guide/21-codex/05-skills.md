@@ -1,5 +1,7 @@
 # Chapter 5. Moving Skills — A Weekly Review in One Line with `$weekly-review`
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: Codex skills use the **same format** (`SKILL.md`) as Claude Code, and only differ in where you put them and the symbol you use to call them. The folder is `.agents/skills`, and you call them with `$name`.
 > You will move three skills from your note-organizing tool, create a weekly review with a single line (`$weekly-review`), and check it against the original notes.
 
@@ -38,9 +40,14 @@ mkdir -p .agents/skills
 cp -R .claude/skills/meeting-notes .claude/skills/study-notes .claude/skills/weekly-review .agents/skills/
 ```
 
-Because this test was a terminal run with the approval mode set in advance (Chapter 7), it could not ask for permission and simply stopped. This guide could not directly verify how this moment looks in the app. If an approval screen pops up, read **what is being written and where** before you decide.
+Here is what the two lines mean.
 
-For this guide, we ran the commands Codex gave us **ourselves** to copy the files. Open the macOS Terminal, go into the folder with `cd ~/hello-ai-연습/정리도구`, and type the two lines above. If you are new to the terminal, see [Claude Code Chapter 10](../20-claude-code/10-terminal.md) first.
+- `mkdir -p .agents/skills`: Creates the `.agents/skills` folder. `mkdir` means "make a folder," and `-p` means "create any in-between folders at once, and just move on if it already exists."
+- `cp -R source1 source2 source3 .agents/skills/`: Copies the three skill folders into `.agents/skills/`. `cp` means "copy," and `-R` means "including all the files inside the folder." The original folders stay as they are.
+
+This guide ran the exercise not in the app but in the **terminal**. It used a mode where the approval method is set in advance so Codex does not ask, so Codex could not ask for permission and simply stopped (we cover this mode in Chapter 7). This guide could not directly verify how this moment looks in the app. If an approval screen pops up, read **what is being written and where** before you decide.
+
+For this guide, we ran the commands Codex gave us **ourselves** to copy the files. Open the macOS Terminal, go into the folder with `cd ~/hello-ai-practice/organizer`, and type the two lines above. If you are new to the terminal, see [Claude Code Chapter 10](../20-claude-code/10-terminal.md) first.
 
 After moving them, you should see three folders under `.agents/skills`: `meeting-notes`, `study-notes`, and `weekly-review`.
 
@@ -56,7 +63,7 @@ $weekly-review
 
 After the copy was done, Codex opened `.agents/skills/weekly-review/SKILL.md` **right away** without searching files. Then it gathered the three reflection notes and created a weekly review.
 
-Result: [Weekly review made with a skill](/practice/notes/results/codex/5장-주간회고-스킬로.txt)
+Result: [Weekly review made with a skill](/practice/en/notes/results/codex/ch5-weekly-review-with-skill.txt)
 
 We checked the numbers and facts against the original notes.
 
@@ -83,7 +90,7 @@ Even if you do not call a skill by name, Codex can pick it on its own when your 
 
 When you make a new skill from scratch, call the built-in `$skill-creator` skill and explain your goal, steps, and format.[^creator] The official docs recommend starting with tasks where **the steps and format always stay the same**, like a weekly report or a meeting follow-up.[^first] The three skills in our note-organizing tool are exact examples of this.
 
-A **plugin** is an installable bundle that packages skills together with external tool connections.[^plugin] ChatGPT and Codex share a single plugin list.[^shared] The docs say to review plugin hooks (scripts that run automatically) and decide whether you trust them before they run.[^hooks] For any plugin you are seeing for the first time, check who made it and what permissions it needs first, just as you learned in [Claude Code Chapter 7](../20-claude-code/07-skills-plugins.md).
+You do not need a **plugin** for this exercise. Just learn the name and what to watch out for. A plugin is an installable bundle that packages skills together with external tool connections.[^plugin][^shared] The docs say to review plugin hooks (scripts that run automatically) and decide whether you trust them before they run.[^hooks] For any plugin you are seeing for the first time, check who made it and what permissions it needs first, just as you learned in [Claude Code Chapter 7](../20-claude-code/07-skills-plugins.md).
 
 <Quiz id="ch505-create" />
 
@@ -126,5 +133,5 @@ Next chapter: [Chapter 6. Schedule, Cloud, and Mobile](06-schedule-cloud.md)
 [^creator]: Codex official docs, "Skills & Plugins". "In ChatGPT, start with `@skill-creator`; in Codex, use `$skill-creator`." https://learn.chatgpt.com/docs/skills-and-plugins (checked on 2026-11-01)
 [^first]: Codex official docs, "Skills & Plugins". "Good first skills include a weekly update, a campaign brief, a meeting follow-up, or any task where the steps and format should stay consistent." https://learn.chatgpt.com/docs/skills-and-plugins (checked on 2026-11-01)
 [^plugin]: Codex official docs, "Skills & Plugins". "A **plugin** is an installable bundle that can include skills and Model Context Protocol (MCP) servers." https://learn.chatgpt.com/docs/skills-and-plugins (checked on 2026-11-01)
-[^shared]: Codex official docs, "Skills & Plugins". "ChatGPT and Codex share one universal plugin directory." https://learn.chatgpt.com/docs/skills-and-plugins (checked on 2026-11-01)
+[^shared]: ChatGPT and Codex share a single plugin list. Codex official docs, "Skills & Plugins". "ChatGPT and Codex share one universal plugin directory." https://learn.chatgpt.com/docs/skills-and-plugins (checked on 2026-11-01)
 [^hooks]: Codex official docs, "Plugins". "Review and trust plugin hooks before they run." https://learn.chatgpt.com/docs/plugins (checked on 2026-11-01)

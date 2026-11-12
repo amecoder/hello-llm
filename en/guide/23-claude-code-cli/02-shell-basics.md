@@ -1,6 +1,6 @@
 # Chapter 2. Terminal Basics
 
-<Badge type="tip" text="Required" /> Be sure to read this to follow this step.
+<Badge type="tip" text="Required" /> Read this to follow this stage.
 
 > **One-line summary**: You only need a few commands in the terminal. Use `pwd` to see where you are, `ls` to see what is there, and `cd` to move around. At the end of this chapter, you will make a practice folder and put notes in it.
 
@@ -68,11 +68,11 @@ A **path** is the address of a file or folder. Mac and Linux separate folders wi
 | Linux | `/home/seoyeon` |
 | Windows | `C:\Users\seoyeon` |
 
-The **home folder** is the starting folder of your account. When you open the terminal, you usually start here. The symbol that shortens this address is `~` (tilde). So `~/hello-ai-연습` means "the hello-ai-연습 folder inside your home folder."[^win-home]
+The **home folder** is the starting folder of your account. When you open the terminal, you usually start here. The symbol that shortens this address is `~` (tilde). So `~/hello-ai-practice` means "the hello-ai-practice folder inside your home folder."[^win-home]
 
 There are two ways to write a path.
 
-- **Full address**: Like `~/hello-ai-연습/터미널`, it points to the same place no matter where you type it.
+- **Full address**: Like `~/hello-ai-practice/terminal`, it points to the same place no matter where you type it.
 - **Based on where you are now**: If you write `inbox`, it means "the inbox inside the current folder."
 
 `..` means the folder one level up. `.` is the current folder.
@@ -117,7 +117,7 @@ You do not need to memorize every command. The commands in this course are colle
 `cd` moves you to another folder. It is short for "change directory." You will make the practice folder below at the end of this chapter. For now, just read along.
 
 ```bash
-cd ~/hello-ai-연습
+cd ~/hello-ai-practice
 cd ..
 cd ~
 ```
@@ -182,8 +182,8 @@ Make a practice folder and put notes in it. You will use this folder throughout 
 On Mac and Linux, type this.
 
 ```bash
-mkdir -p ~/hello-ai-연습/터미널/inbox
-cd ~/hello-ai-연습/터미널
+mkdir -p ~/hello-ai-practice/terminal/inbox
+cd ~/hello-ai-practice/terminal
 pwd
 ls
 ```
@@ -191,19 +191,19 @@ ls
 In Windows PowerShell, type this.
 
 ```powershell
-mkdir $HOME\hello-ai-연습\터미널\inbox
-cd $HOME\hello-ai-연습\터미널
+mkdir $HOME\hello-ai-practice\terminal\inbox
+cd $HOME\hello-ai-practice\terminal
 pwd
 ls
 ```
 
-In the Mac and Linux command, `-p` is an option that makes the folders in between in one go. Without this option, you get an error if the `hello-ai-연습` folder does not exist. `$HOME` is the name PowerShell uses for your home folder. If the `pwd` result ends with `터미널` and you see `inbox` in `ls`, it worked.
+In the Mac and Linux command, `-p` is an option that makes the folders in between in one go. Without this option, you get an error if the `hello-ai-practice` folder does not exist. `$HOME` is the name PowerShell uses for your home folder. If the `pwd` result ends with `terminal` and you see `inbox` in `ls`, it worked.
 
 **2. Download the practice notes.**
 
 In your browser, right-click the link below and choose "Save Link As" (다른 이름으로 링크 저장). The name differs a little by browser. Leave the save location as your Downloads folder.
 
-- [회의-2026-10-27-주간회의.txt](/practice/notes/inbox/회의-2026-10-27-주간회의.txt)
+- [meeting-2026-10-27-weekly.txt](/practice/en/notes/inbox/meeting-2026-10-27-weekly.txt)
 
 These are all made-up notes. The dates and days of the week were also made up for the story, so they do not match the real calendar. In later chapters, Claude may point this out. It is not wrong, so there is no need to be surprised.
 
@@ -212,13 +212,13 @@ These are all made-up notes. The dates and days of the week were also made up fo
 On Mac and Linux, type this.
 
 ```bash
-cp ~/Downloads/회의-2026-10-27-주간회의.txt inbox/
+cp ~/Downloads/meeting-2026-10-27-weekly.txt inbox/
 ```
 
 In Windows PowerShell, type this.
 
 ```powershell
-cp $HOME\Downloads\회의-2026-10-27-주간회의.txt inbox\
+cp $HOME\Downloads\meeting-2026-10-27-weekly.txt inbox\
 ```
 
 On a Mac, even if Finder shows "Downloads" (다운로드), the actual folder name is `Downloads`. If you use Linux in Korean, it may be `~/다운로드`. In that case, type `~/다운로드` instead of `~/Downloads`.
@@ -227,13 +227,13 @@ On a Mac, even if Finder shows "Downloads" (다운로드), the actual folder nam
 
 ```bash
 ls inbox
-cat inbox/회의-2026-10-27-주간회의.txt
+cat inbox/meeting-2026-10-27-weekly.txt
 ```
 
 `cat` shows the contents of a file on the screen. If Korean text looks garbled in PowerShell, type this.
 
 ```powershell
-Get-Content -Encoding UTF8 inbox\회의-2026-10-27-주간회의.txt
+Get-Content -Encoding UTF8 inbox\meeting-2026-10-27-weekly.txt
 ```
 
 Ask yourself: Is the `pwd` result the folder I expected? Do I see the notes file in `ls inbox`? If both are yes, you are ready for the next chapter.

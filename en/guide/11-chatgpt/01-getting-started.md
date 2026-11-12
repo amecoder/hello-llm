@@ -1,5 +1,7 @@
 # Chapter 1. Getting Started — Try It, Sign Up, and Choose a Plan
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **In One Line**: You can try ChatGPT right away without signing up. Sign up for free when you want to save your chats and upload files,
 > and only consider a paid plan when the free plan feels too limited.
 
@@ -8,7 +10,6 @@ The screens shown here are from the web version (Plus plan) as of October 2026. 
 ## Try It Without Logging In
 
 Go to the ChatGPT web address (chatgpt.com). Even without an account, you can type a question right into the center input box, "Ask ChatGPT (ChatGPT에게 물어보세요)."
-South Korea is on the list of **Supported Countries** (countries where the service is officially available).[^countries]
 
 ![First screen before logging in. Red numbers show ① the input box, ② Log in and Sign up buttons, and ③ the side menu. Check the input box below "What can I help with? (오늘은 무엇을 해볼까요?)" in the center, the "Log in (로그인)" and "Sign up for free (무료로 회원가입)" buttons at the top right, and items like "New chat (새 채팅)", "Images (이미지)", "Plugins (플러그인)", and "See plans and pricing (플랜 및 가격 보기)" in the left side menu](../../../guide/11-chatgpt/assets/shot-00-logged-out-marked.png)
 
@@ -19,13 +20,15 @@ There are two limits when you use ChatGPT without logging in.[^home]
 - **You can only have 1 conversation at a time.**
 - **Your chat history is not saved.** Once you close the window, you cannot find that conversation again.
 
+South Korea is on the list of **Supported Countries** (countries where the service is officially available), so you do not need to worry.[^countries]
+
 Try it without logging in first to see what it feels like. If you plan to keep using it, signing up is better. If this is your first time, try asking this:
 
 ```
 What kind of work can you help me with? Give me just five examples that an office worker can use right away.
 ```
 
-::: details What the reply looks like (example — click to expand)
+::: details What the reply looks like (example — click to expand) (click to expand)
 This is a sample answer created for this guide. Actual replies vary depending on the service and when you ask.
 
 > Here are five things an office worker can use right away.
@@ -58,12 +61,16 @@ There are two ways to sign in.[^login]
 
 *Web screen as of 2026-10-28. Instead of a Microsoft button, this window showed "Continue with phone (휴대 전화 번호로 계속하기)."*[^screen-signup]
 
-There are four things to keep in mind.
+There are three things to keep in mind.
 
 1. **Same email means the same account.** Even if you first signed up with an email address, logging in later with a Google account that uses the exact same email address takes you into the same account.[^login]
 2. **Be careful with Apple's "Hide My Email (이메일 가리기)."** If you chose a private relay address that hides your real email when signing up with Apple, you can only return to that account using the same Apple ID. Logging in with your real email address will open a **different new account**.[^login]
 3. **Use a personal email for personal use.** If you sign up with a work email, you may lose access to your account when you leave the company.[^home]
-4. **Accounts do not merge automatically.** If you sign in with a different email and create a new account, your chat history and subscription stay separate. If you think "I paid for a subscription, why does it say Free?" or "My chats are gone," first check whether you logged in with the same account you used when signing up. The email address that receives billing receipts can also be different from your account email.[^cantlogin]
+::: details When you think "My chats are gone" or "I paid for a subscription, why does it say Free?" (click to expand)
+
+**Accounts do not merge automatically.** If you sign in with a different email and create a new account, your chat history and subscription stay separate. If you think "I paid for a subscription, why does it say Free?" or "My chats are gone," first check whether you logged in with the same account you used when signing up. The email address that receives billing receipts can also be different from your account email.[^cantlogin]
+
+:::
 
 <Quiz id="ch101-login" />
 
@@ -77,10 +84,9 @@ ChatGPT offers several **plans** (요금제/플랜 — pricing tiers that give y
 | Go | People who often hit limits on the free plan | ₩13,000 |
 | Plus | Daily users who need deeper, more thoughtful answers | ₩29,000 |
 | Pro | Heavy users (split into 3 tiers) | From ₩159,000 |
-| Business · Enterprise · Edu | Companies, organizations, and schools | Separate pricing |
+| Business[^business] · Enterprise · Edu | Companies, organizations, and schools | Separate pricing |
 
 These prices are what appeared when opening the OpenAI pricing page in South Korea, and **they change often.** Always check the [pricing page](https://openai.com/chatgpt/pricing) yourself before paying.[^pricing]
-Business is the new name for the company plan formerly called "Team," renamed on August 29, 2025.[^business]
 
 ### What Changes Between Plans
 
@@ -90,32 +96,43 @@ It is easier to choose a plan when you focus on **"what changes"** rather than r
 |---|---|---|
 | **Text chats** | Unlimited everyday text chats[^free] | Higher limits across features |
 | **Ads** | Ads may appear below answers on Free and Go | No ads on Plus and above |
-| **Choosing thinking depth** | Turn on "Think (생각하기)" to make it think deeper | Plus and above let you pick a "Reasoning effort (추론 수준)" ([Chapter 2](02-screen-tour.md)) |
+| **Choosing thinking depth** | Turn on "Think (생각하기)" and it thinks longer | Plus and above pick the depth with "Reasoning effort (추론 수준)" |
 | **File uploads** | Up to 3 files per day ([Chapter 4](04-files-images.md)) | Upload many more files |
 | **Work** (mode for handing off long tasks) | Not available on web or mobile | Available ([Chapter 7](07-projects-plugins.md)) |
 
+"Think" is a button that makes ChatGPT think things through longer before answering. It can improve answers to hard questions. You will see where it is on screen in [Chapter 2](02-screen-tour.md).
+
 "Unlimited" on the Free plan applies only to everyday text chats. Safeguards against abuse still apply. Features like files, images, and voice have separate limits.[^free]
 
-If you are worried about ads, check the official guide.[^ads] OpenAI states that ads **do not affect ChatGPT's answers**. Advertisers cannot see your conversations.
-**Temporary Chats** (chats that are not saved to history; see [Chapter 3](03-chats.md)) do not show ads. Ad testing started in the United States in February 2026 and is expanding to select countries.
-We could not confirm from the official guide whether ads appear in South Korea yet.
+If you are worried about ads, just know this. OpenAI states that ads **do not affect ChatGPT's answers**. Advertisers cannot see your conversations.
+**Temporary Chats** (chats that are not saved to history; see [Chapter 3](03-chats.md)) do not show ads.[^ads]
 
 <Quiz id="ch101-plans" />
 
 ## What to Know Before Upgrading to Paid
 
-You do not need to start on a paid plan. **Starting for free and upgrading only when you regularly hit limits** is the safest approach. Make sure you know the points below before paying.
+You do not need to start on a paid plan. **Starting for free and upgrading only when you regularly hit limits** is the safest approach. Make sure you know the three points below before paying.
 
-- **Monthly billing only.** Go, Plus, and Pro do not offer annual billing where you pay for a full year at once.[^go]
 - **Deleting the app does not cancel your subscription.** Removing the ChatGPT app from your phone does not stop billing. To stop paying, you must cancel the subscription yourself.[^pro]
 - **Cancel on the platform where you subscribed.** If you paid on the web, cancel on the web; if you paid through the App Store or Google Play, cancel in that store. You cannot cancel inside the ChatGPT mobile app. Cancel **at least 24 hours before** your next billing date to avoid being charged for the next month.[^promo]
 - **Free trials turn into paid subscriptions automatically when they end.** When a free trial or discount period from a referral or promotion ends, your saved payment method is charged automatically. Cancel before the period ends if you do not want to continue. Promo codes are single-use and cannot be stacked.[^trial]
+
+::: details More to know when paying (click to expand)
+
+- **Monthly billing only.** Go, Plus, and Pro do not offer annual billing where you pay for a full year at once.[^go]
 - **If your account still looks Free after paying, do not pay again.** First check that you logged in with the exact account you used to pay. On the mobile app, go to Settings and tap Restore purchases. We could not confirm the Korean label for this menu item on screen.[^plus]
 - **Go does not include legacy models.** Legacy models (older-generation AI models) are not included in Go, and voice chat has the same limits as the Free tier.[^go]
 
-There is also something called **Credits** (크레딧 — extra usage you buy in advance, separate from your plan). Under Settings → "Usage (사용량)", a note says: "To keep using Work and Codex after reaching your usage limit, buy credits or turn on auto-recharge."[^screen-usage]
+:::
+
+There is also something called **Credits** (크레딧 — extra usage you buy in advance, separate from your plan). If you only have regular chats, you do not need credits.
+They are for when you want to use Work or **Codex** (OpenAI's coding assistant, covered in Stage 3) beyond your limit. Under Settings → "Usage (사용량)", a note says: "To keep using Work and Codex after reaching your usage limit, buy credits or turn on auto-recharge."[^screen-usage]
+
+::: details Before buying credits (click to expand)
+
 Buying credits does not change your plan. Credits expire **12 months from the purchase date**. Except for cases like billing errors or unauthorized use, credits are generally **non-refundable.** If you turn on "Auto-recharge (자동 충전)", your default payment method is charged automatically whenever your balance drops below a set amount.[^credits]
-If you only have regular chats, you do not need credits.
+
+:::
 
 If you are not sure which plan fits you, tell ChatGPT about your usage habits and ask. Just remember to verify actual prices and terms on the pricing page, not from the AI's answer ([Stage 1, Chapter 9](../00-common/09-safety.md)).
 
@@ -132,18 +149,22 @@ to judge for myself when it is time to move from the free plan to a paid plan.
 Beyond a web browser, you can also use ChatGPT in a mobile app or a computer app. You do not need to create a new account for each device. Just **log in with the same account**. Check whether chats from your computer show up on your phone in step 4 of "Try It Yourself" below.
 
 - **Mobile app**: Choose Chat or Work from the top dropdown (a menu that opens when you tap it).[^work]
-- **Computer app**: One new app combines Chat, Work, and Codex in a single place. The older app may still remain on your computer under the name "ChatGPT Classic."[^desktop] The Mac app requires macOS 14 or later.[^macos]
+- **Computer app**: One new app combines Chat, Work, and Codex in a single place.[^desktop][^macos]
 - **KakaoTalk**: In South Korea, you can also use ChatGPT right inside KakaoTalk (explained below).[^kakao]
 
-In March 2026, the mobile app simplified its side menu. Features like Images moved into a horizontal bar above your chat list.
-It may have changed again since then. If button locations differ from the web screens in this guide, look for buttons with similar names.[^rn]
+In the mobile app, look for features like Images in the horizontal bar above your chat list.[^rn]
+Screens change often. If button locations differ from the web screens in this guide, look for buttons with similar names.
 
 When downloading the mobile app, search for "ChatGPT" in the app store and check the **developer name**. On iPhone (App Store), it should say "OpenAI OpCo, LLC"; on Android (Google Play), it should say "OpenAI." Many look-alike apps have similar names.[^appfaq]
 
 **ChatGPT for Kakao** is a service built jointly by Kakao and OpenAI. It works **only in South Korea**. There is no separate app to install. Tap "ChatGPT" at the top of the "Chats (채팅)" tab in KakaoTalk to start. It appears in the latest version of KakaoTalk registered with a Korean phone number.[^kakaofaq]
 
-- If you already have a ChatGPT account, link it. You will be able to see your KakaoTalk chat history inside ChatGPT as well. If you do not have an account, you can sign up with your Kakao account. An account created in KakaoTalk works in the regular ChatGPT app too.
-- From OpenAI's perspective, this is a **third-party service** (a service operated together with another company). Be sure to read **both** OpenAI's and Kakao's terms and privacy notices.[^kakaofaq]
+If you already have a ChatGPT account, link it. You will be able to see your KakaoTalk chat history inside ChatGPT as well. If you do not have an account, you can sign up with your Kakao account. An account created in KakaoTalk works in the regular ChatGPT app too.
+::: details Terms to know when using it in KakaoTalk (click to expand)
+
+From OpenAI's perspective, this is a **third-party service** (a service operated together with another company). Be sure to read **both** OpenAI's and Kakao's terms and privacy notices.[^kakaofaq]
+
+:::
 
 <!-- 스크린샷 필요: 휴대폰 앱 첫 화면(Chat/Work 드롭다운과 가로 막대), 안드로이드 또는 iOS -->
 
@@ -167,7 +188,7 @@ Uninstalling and reinstalling the app **does not reset your usage limits.**[^mob
 ## Try It Yourself
 
 1. Go to chatgpt.com without logging in and ask, "What kind of work can you help me with?"
-2. Close the browser completely, open it again, and check if that conversation is still there (chats before logging in stay visible only during your current session in the same browser).[^home]
+2. Close the browser completely, open it again, and check if that conversation is still there (chats before logging in can be seen only in the browser window you have open now. If it is gone after closing, that is normal).[^home]
 3. Sign up with your personal email, ask the same question again, and check if the conversation appears under "Recents (최근)" in the left side menu.
 4. Install the app on your phone, log in with the same account, and check that the conversation from your computer appears there too.
 
@@ -205,14 +226,14 @@ Next chapter: [Chapter 2. Touring the Screen](02-screen-tour.md)
 [^home]: OpenAI Help Center, "The ChatGPT home page". "ChatGPT can be used without an account in supported countries" / "only have one conversation at a time" / "Chats will remain accessible only for the current session on the same browser." / "For personal use, we recommend an account with an email address you personally own". https://help.openai.com/en/articles/9125172 (checked on 2026-10-23)
 [^login]: OpenAI Help Center, "Changing your account sign-in method". "log in using a social login method (Google, Microsoft, or Apple) as long as the email address matches" / "using your personal email… will open a different account". https://help.openai.com/en/articles/4936824 (checked on 2026-10-23)
 [^pricing]: OpenAI, "Plans and Pricing (플랜 및 가격)" (viewed from South Korea). "₩13,000 /월", "₩29,000 /월", "From ₩159,000 /월". Displayed currency varies by country. https://openai.com/chatgpt/pricing (checked on 2026-10-23)
-[^business]: OpenAI Help Center, "ChatGPT Business overview". "ChatGPT Team was renamed to ChatGPT Business on August 29, 2025." https://help.openai.com/en/articles/8792828 (checked on 2026-10-23)
-[^ads]: OpenAI Help Center, "Ads in ChatGPT". "Ads may appear for users on the Free and Go plans." / "Ads do not influence ChatGPT's answers." / "Temporary Chats will not show ads." / "Ad testing started in the United States on February 9, 2026." https://help.openai.com/en/articles/20001047 (checked on 2026-10-23)
+[^business]: Business is the new name for the company plan formerly called "Team," renamed on August 29, 2025. OpenAI Help Center, "ChatGPT Business overview". "ChatGPT Team was renamed to ChatGPT Business on August 29, 2025." https://help.openai.com/en/articles/8792828 (checked on 2026-10-23)
+[^ads]: Ad testing started in the United States in February 2026 and is expanding to select countries. We could not confirm from the official guide whether ads appear in South Korea yet. OpenAI Help Center, "Ads in ChatGPT". "Ads may appear for users on the Free and Go plans." / "Ads do not influence ChatGPT's answers." / "Temporary Chats will not show ads." / "Ad testing started in the United States on February 9, 2026." https://help.openai.com/en/articles/20001047 (checked on 2026-10-23)
 [^go]: OpenAI Help Center, "What is ChatGPT Go?". "we do not support annual billing… for ChatGPT Go, Plus, or Pro" / "Access to legacy models is not included" / "Voice mode is included with the same usage limits as the Free tier." https://help.openai.com/en/articles/11989085 (checked on 2026-10-23)
 [^pro]: OpenAI Help Center, "About ChatGPT Pro tiers". "Uninstalling the ChatGPT app does not cancel your subscription." https://help.openai.com/en/articles/9793128 (checked on 2026-10-23)
 [^work]: OpenAI Help Center, "ChatGPT Work and Codex". "On mobile: Select Chat or Work from the dropdown." https://help.openai.com/en/articles/20001275 (checked on 2026-10-23)
-[^desktop]: OpenAI Help Center, "Moving to the new ChatGPT desktop app". "ChatGPT Classic: The previous ChatGPT desktop app." https://help.openai.com/en/articles/20001276 (checked on 2026-10-23)
+[^desktop]: The older computer app may still remain under the name "ChatGPT Classic." OpenAI Help Center, "Moving to the new ChatGPT desktop app". "ChatGPT Classic: The previous ChatGPT desktop app." https://help.openai.com/en/articles/20001276 (checked on 2026-10-23)
 [^kakao]: OpenAI Help Center, "ChatGPT release notes", 2026-07-13 entry. "ChatGPT is also available on Kakao in South Korea". https://help.openai.com/en/articles/6825453 (checked on 2026-10-23)
-[^rn]: OpenAI Help Center, "ChatGPT release notes", 2026-03-26 entry. "now appear in a horizontal bar above your chats and projects". https://help.openai.com/en/articles/6825453 (checked on 2026-10-23)
+[^rn]: In March 2026, the mobile app simplified its side menu, and features like Images moved into this horizontal bar. It may have changed again since then. OpenAI Help Center, "ChatGPT release notes", 2026-03-26 entry. "now appear in a horizontal bar above your chats and projects". https://help.openai.com/en/articles/6825453 (checked on 2026-10-23)
 [^cantlogin]: OpenAI Help Center, "Why can't I log in to ChatGPT?". "OpenAI doesn't automatically merge accounts" / "This may be different from the email address where you receive invoices or receipts." https://help.openai.com/en/articles/7426629 (checked on 2026-10-24)
 [^free]: OpenAI Help Center, "ChatGPT Free Tier FAQ". "Free users have unlimited everyday text chats, subject to abuse-prevention safeguards." https://help.openai.com/en/articles/9275245 (checked on 2026-10-24)
 [^promo]: OpenAI Help Center, "ChatGPT Plus promotions and referrals". "you must cancel from the same platform where you started the subscription" / "You can’t cancel through the ChatGPT mobile app." / "Cancel at least 24 hours before your renewal date to avoid an unwanted charge." https://help.openai.com/en/articles/10492689 (checked on 2026-10-24)
@@ -220,7 +241,7 @@ Next chapter: [Chapter 2. Touring the Screen](02-screen-tour.md)
 [^plus]: OpenAI Help Center, "What is ChatGPT Plus?". "On the iOS or Android app, go to Settings > Restore purchases to sync your subscription." Could not confirm the Korean menu name on screen. https://help.openai.com/en/articles/6950777 (checked on 2026-10-24)
 [^screen-usage]: Verified directly on ChatGPT web Settings → "Usage (사용량)" screen (Plus plan, Korean UI). "Credits (크레딧)" and "Auto-recharge (자동 충전)" items (checked on 2026-10-24)
 [^credits]: OpenAI Help Center, "Credits (Personal plans)". "Credits are valid for 12 months from purchase." / "Credits are non-refundable unless required by law or contract, or an approved exception applies." / "Unused credits may qualify for a refund for a verified billing error, confirmed unauthorized activity" / "you can turn it on from Settings > Usage". https://help.openai.com/en/articles/12642688 (checked on 2026-10-24)
-[^macos]: OpenAI Help Center, "Downloading the ChatGPT macOS app". "The ChatGPT macOS app requires macOS 14". https://help.openai.com/en/articles/9275200 (checked on 2026-10-24)
+[^macos]: The Mac app requires macOS 14 or later. OpenAI Help Center, "Downloading the ChatGPT macOS app". "The ChatGPT macOS app requires macOS 14". https://help.openai.com/en/articles/9275200 (checked on 2026-10-24)
 [^appfaq]: OpenAI Help Center, "ChatGPT iOS and Android app FAQ". "Check that the developer is OpenAI OpCo, LLC." / "Check that the publisher is OpenAI." https://help.openai.com/en/articles/8142208 (checked on 2026-10-24)
 [^kakaofaq]: OpenAI Help Center, "ChatGPT for Kakao: Overview and Kakao Tools". "ChatGPT for Kakao is only available in Korea." / "There is no separate app to install." / "the latest version of the KakaoTalk Korea app if it’s registered with a Korean phone number" / "ChatGPT for Kakao is a third-party service" / "Review both sets of terms and privacy notices". https://help.openai.com/en/articles/12677933 (checked on 2026-10-24)
 [^errors]: OpenAI Help Center, "Troubleshooting ChatGPT Error Messages". "Check status.openai.com for known outages" / "Wait 30–60 seconds to see if the response completes" / "Start a new chat if the conversation is long or has many turns" / "Use an incognito or private browsing window" / "Disable VPNs or proxy connections". https://help.openai.com/en/articles/7996703 (checked on 2026-10-24)

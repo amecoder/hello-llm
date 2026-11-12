@@ -1,0 +1,160 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 160,
+   "height": 60,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "一次性請求",
+    "fontSize": 20,
+    "strokeColor": "#1e1e1e"
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "a1",
+   "x": 180,
+   "y": 0,
+   "width": 200,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "幫我寫報告",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "a2",
+   "x": 480,
+   "y": 0,
+   "width": 220,
+   "height": 60,
+   "backgroundColor": "#ffc9c9",
+   "fillStyle": "solid",
+   "label": {
+    "text": "出來一篇長文\n但方向不對",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "a3",
+   "x": 800,
+   "y": 0,
+   "width": 200,
+   "height": 60,
+   "backgroundColor": "#ffc9c9",
+   "fillStyle": "solid",
+   "label": {
+    "text": "從頭再來",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 380,
+   "y": 30,
+   "start": {
+    "id": "a1"
+   },
+   "end": {
+    "id": "a2"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 700,
+   "y": 30,
+   "start": {
+    "id": "a2"
+   },
+   "end": {
+    "id": "a3"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 130,
+   "width": 160,
+   "height": 60,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "分步驟請求",
+    "fontSize": 20,
+    "strokeColor": "#1e1e1e"
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "b1",
+   "x": 180,
+   "y": 130,
+   "width": 200,
+   "height": 60,
+   "backgroundColor": "#a5d8ff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "先只要目錄",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "b2",
+   "x": 480,
+   "y": 130,
+   "width": 220,
+   "height": 60,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "我確認並修改",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "b3",
+   "x": 800,
+   "y": 130,
+   "width": 200,
+   "height": 60,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "寫正文",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 380,
+   "y": 160,
+   "start": {
+    "id": "b1"
+   },
+   "end": {
+    "id": "b2"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 700,
+   "y": 160,
+   "start": {
+    "id": "b2"
+   },
+   "end": {
+    "id": "b3"
+   }
+  }
+ ]
+}

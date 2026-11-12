@@ -1,6 +1,6 @@
 # 第9章 技能與擴充套件
 
-<Badge type="tip" text="必讀" /> 要跟上這個階段，請一定讀完。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
 
 > **一句話總結**：反覆下達的指示，就做成技能。旁支工作交給子代理，外部服務用 MCP，打包安裝用外掛。一開始有一個技能就夠了。
 
@@ -10,7 +10,7 @@
 
 **技能**（Skill）是只用一個 `SKILL.md` 檔案，就能給 Claude 增加一套工作流程的功能。如果你總是把同樣的指示貼上到聊天裡，就值得做一個。[^skill] 可以把它看成一本叫名字就能用的工作說明書。
 
-專案技能放在 `.claude/skills/<技能名>/SKILL.md`。[^skill] 用 `/exit` 退出，在終端裡進入練習資料夾。Mac 和 Linux 把下面整段貼上進去（以檔案檢視：[9장-스킬-meeting-notes.txt](/practice/cli/results/9장-스킬-meeting-notes.txt)）。
+專案技能放在 `.claude/skills/<技能名>/SKILL.md`。[^skill] 用 `/exit` 退出，在終端裡進入練習資料夾。Mac 和 Linux 把下面整段貼上進去（以檔案檢視：[ch9-skill-meeting-notes.txt](/practice/zh-hant/cli/results/ch9-skill-meeting-notes.txt)）。
 
 ```bash
 mkdir -p .claude/skills/meeting-notes
@@ -20,12 +20,12 @@ description: 把會議筆記整理成符合規則的會議記錄。用於整理�
 ---
 
 讀取 $ARGUMENTS 檔案，按照 CLAUDE.md 的規則製作會議記錄。
-檔名用 `회의록-날짜.md`（會議記錄-日期），儲存到 notes 資料夾。
+檔名用 `minutes-date.md`（會議記錄-日期），儲存到 notes 資料夾。
 完成後，用一行告訴我儲存的檔名和待辦事項的數量。
 EOF
 ```
 
-粘貼後如果還沒執行，就再按一次 Enter。什麼都沒顯示就是成功了。用 `ls .claude/skills/meeting-notes` 看看 `SKILL.md` 有沒有生成。
+貼上後如果還沒執行，就再按一次 Enter。什麼都沒顯示就是成功了。用 `ls .claude/skills/meeting-notes` 看看 `SKILL.md` 有沒有生成。
 
 Windows PowerShell 先執行 `mkdir .claude\skills\meeting-notes`，再用 `notepad .claude\skills\meeting-notes\SKILL.md` 開啟記事本。去掉以 `cat` 開頭的那一行和 `EOF` 那一行，只放中間的內容。如果問你要不要新建檔案，就點 `是`，按 `Ctrl + S` 儲存後關閉。這個方法我們沒有實際執行過。
 
@@ -45,16 +45,16 @@ Windows PowerShell 先執行 `mkdir .claude\skills\meeting-notes`，再用 `note
 現在在終端裡啟動 `claude`，輸入 `/`，在列表裡找找看。直接呼叫時這樣輸入。
 
 ```text
-/meeting-notes inbox/회의-2026-10-27-주간회의.txt
+/meeting-notes inbox/meeting-2026-10-27-weekly.txt
 ```
 
-用[第10章](10-headless-automation.md)的 `claude -p` 呼叫同一個技能後，生成了 `notes/회의록-2026-10-27.md`，Claude 這樣回答。
+用[第10章](10-headless-automation.md)的 `claude -p` 呼叫同一個技能後，生成了 `notes/minutes-2026-10-27.md`，Claude 這樣回答。
 
 ```text
-已儲存到 `notes/회의록-2026-10-27.md`，待辦事項有 5 個。
+已儲存到 `notes/minutes-2026-10-27.md`，待辦事項有 5 個。
 ```
 
-按照[第8章](08-memory-settings.md)的 `CLAUDE.md` 規則，生成了決定事項、待辦事項、下次會議三個部分（[檢視結果](/practice/cli/results/10장-회의록-스크립트로.txt)）。技能正文只在使用時才載入，所以平時幾乎沒有負擔。[^skill]
+按照[第8章](08-memory-settings.md)的 `CLAUDE.md` 規則，生成了決定事項、待辦事項、下次會議三個部分（[檢視結果](/practice/zh-hant/cli/results/ch10-minutes-by-script.txt)）。技能正文只在使用時才載入，所以平時幾乎沒有負擔。[^skill]
 
 <Quiz id="ch809-skill" />
 
@@ -151,7 +151,7 @@ Removed MCP server "claude-code-docs" from local config
 ## 動手試一試
 
 1. 在終端裡製作技能。啟動 `claude`，輸入 `/`，確認能看到 `meeting-notes`。
-2. 執行 `/meeting-notes inbox/회의-2026-10-27-주간회의.txt`。`notes` 裡生成檔案了嗎？內容和筆記一致嗎？
+2. 執行 `/meeting-notes inbox/meeting-2026-10-27-weekly.txt`。`notes` 裡生成檔案了嗎？內容和筆記一致嗎？
 3. 用 `/exit` 退出，在終端裡依次輸入 `claude mcp` 的三條命令。用 `claude mcp list` 確認已經刪除。
 
 問問自己：同一個技能能整理別的筆記嗎？現在有我真正需要的擴充套件嗎？

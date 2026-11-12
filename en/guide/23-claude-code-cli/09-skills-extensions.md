@@ -10,7 +10,7 @@ The screens in this chapter come from running Claude Code 2.1.318 on Linux on No
 
 A **skill** (Skill) is a feature that adds a work procedure for Claude with a single `SKILL.md` file. If you keep pasting the same instructions into the chat, it is worth making one.[^skill] Think of it as a work manual you call by name.
 
-Project skills go in `.claude/skills/<skill-name>/SKILL.md`.[^skill] Leave with `/exit` and move to the practice folder in the terminal. On Mac and Linux, paste the whole block below (view as a file: [9장-스킬-meeting-notes.txt](/practice/cli/results/9장-스킬-meeting-notes.txt)).
+Project skills go in `.claude/skills/<skill-name>/SKILL.md`.[^skill] Leave with `/exit` and move to the practice folder in the terminal. On Mac and Linux, paste the whole block below (view as a file: [ch9-skill-meeting-notes.txt](/practice/en/cli/results/ch9-skill-meeting-notes.txt)).
 
 ```bash
 mkdir -p .claude/skills/meeting-notes
@@ -20,7 +20,7 @@ description: Turns meeting notes into meeting minutes that follow the rules. Use
 ---
 
 Read the $ARGUMENTS file and make meeting minutes following the CLAUDE.md rules.
-Name the file `회의록-날짜.md` (회의록 means "minutes" and 날짜 means "date", e.g. `회의록-2026-10-27.md`) and save it in the notes folder.
+Name the file `minutes-date.md` and save it in the notes folder.
 When done, report the saved file name and the number of to-dos in one line.
 EOF
 ```
@@ -45,16 +45,16 @@ The better example says both what it does and when to use it. This makes it easi
 Now start `claude` in the terminal, type `/`, and look for it in the list. To call it yourself, type this:
 
 ```text
-/meeting-notes inbox/회의-2026-10-27-주간회의.txt
+/meeting-notes inbox/meeting-2026-10-27-weekly.txt
 ```
 
-When we called the same skill with `claude -p` from [Chapter 10](10-headless-automation.md), `notes/회의록-2026-10-27.md` was created and Claude answered like this:
+When we called the same skill with `claude -p` from [Chapter 10](10-headless-automation.md), `notes/minutes-2026-10-27.md` was created and Claude answered like this:
 
 ```text
-Saved to `notes/회의록-2026-10-27.md`, with 5 to-dos.
+Saved to `notes/minutes-2026-10-27.md`, with 5 to-dos.
 ```
 
-Following the `CLAUDE.md` rules from [Chapter 8](08-memory-settings.md), it produced three sections: decisions, to-dos, and next meeting ([see the result](/practice/cli/results/10장-회의록-스크립트로.txt)). The skill body loads only when it is used, so it costs almost nothing the rest of the time.[^skill]
+Following the `CLAUDE.md` rules from [Chapter 8](08-memory-settings.md), it produced three sections: decisions, to-dos, and next meeting ([see the result](/practice/en/cli/results/ch10-minutes-by-script.txt)). The skill body loads only when it is used, so it costs almost nothing the rest of the time.[^skill]
 
 <Quiz id="ch809-skill" />
 
@@ -151,7 +151,7 @@ You do not need to install everything. First, ask yourself: Is anything botherin
 ## Try It Yourself
 
 1. Make the skill in the terminal. Start `claude`, type `/`, and check that `meeting-notes` appears.
-2. Run `/meeting-notes inbox/회의-2026-10-27-주간회의.txt`. Was a file created in `notes`? Does its content match the note?
+2. Run `/meeting-notes inbox/meeting-2026-10-27-weekly.txt`. Was a file created in `notes`? Does its content match the note?
 3. Leave with `/exit` and type the three `claude mcp` commands in the terminal in order. Check with `claude mcp list` that the server was removed.
 
 Ask yourself: Could I organize other notes with the same skill? Is there an extension I really need right now?

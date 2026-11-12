@@ -1,6 +1,6 @@
 # 第8章 專案記憶與設定
 
-<Badge type="tip" text="必讀" /> 想跟著這個階段走下去，一定要讀這一章。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
 
 > **一句話總結**：懶得每次都說的規則，寫進 `CLAUDE.md`。必須遵守的規則，做成 `settings.json` 裡的拒絕規則。
 
@@ -33,7 +33,7 @@
 
 ## 建立並確認 CLAUDE.md
 
-這是練習用的規則（檢視檔案：[8장-CLAUDE.md.txt](/practice/cli/results/8장-CLAUDE.md.txt)）。用 `/exit` 退出，在終端裡進入練習資料夾。Mac 和 Linux 把下面的內容整段貼上進去。`notes` 資料夾也會一起建立。
+這是練習用的規則（檢視檔案：[ch8-CLAUDE.md.txt](/practice/zh-hant/cli/results/ch8-CLAUDE.md.txt)）。用 `/exit` 退出，在終端裡進入練習資料夾。Mac 和 Linux 把下面的內容整段貼上進去。`notes` 資料夾也會一起建立。
 
 ```bash
 mkdir notes
@@ -48,7 +48,7 @@ cat > CLAUDE.md <<'EOF'
 EOF
 ```
 
-粘貼後如果還沒執行，就再按一次 Enter。什麼都沒顯示就是成功了。用 `ls` 看看 `CLAUDE.md` 和 `notes` 有沒有建好。
+貼上後如果還沒執行，就再按一次 Enter。什麼都沒顯示就是成功了。用 `ls` 看看 `CLAUDE.md` 和 `notes` 有沒有建好。
 
 Windows PowerShell 用 `mkdir notes` 之後，再用 `notepad CLAUDE.md` 開啟記事本。去掉以 `cat` 開頭的那一行和 `EOF` 那一行，只填入兩者之間的內容。問你是否新建檔案時點「是（예）」，用 `Ctrl + S` 儲存後關閉。這個方法我們沒有實際執行過。
 
@@ -113,8 +113,8 @@ claude -p "這個資料夾的會議記錄規則是什麼？用三行回答。"
 - 不能用結尾逗號和註釋。[^json-rule] 手動修改後如果不生效，先檢查逗號。
 
 ```text
-錯誤的例子：{ "deny": ["Read(./비밀/**)"], }
-正確的例子：{ "deny": ["Read(./비밀/**)"] }
+錯誤的例子：{ "deny": ["Read(./secret/**)"], }
+正確的例子：{ "deny": ["Read(./secret/**)"] }
 ```
 
 錯誤的例子在 `]` 後面多了一個逗號。
@@ -126,7 +126,7 @@ claude -p "這個資料夾的會議記錄規則是什麼？用三行回答。"
 Claude Code 會從專案資料夾和你主資料夾裡的 `~/.claude` 讀取指令、設定和記憶。[^folder] 名字以點開頭的資料夾平時是隱藏的。用 `ls -a`（PowerShell 用 `ls -Force`）可以看到。
 
 ```text
-~/hello-ai-연습/터미널/        這個專案
+~/hello-ai-practice/terminal/        這個專案
 ├── CLAUDE.md                  共享指令
 ├── CLAUDE.local.md            只有你用的指令
 └── .claude/
@@ -153,7 +153,7 @@ Claude Code 會從專案資料夾和你主資料夾裡的 `~/.claude` 讀取指�
 
 ```text
 寫在 CLAUDE.md 裡：     不讀秘密資料夾。
-寫在 settings.json 裡："deny": ["Read(./비밀/**)"]
+寫在 settings.json 裡："deny": ["Read(./secret/**)"]
 ```
 
 `CLAUDE.md` 裡的話，會影響 Claude **打算嘗試做什麼**。但它改變不了 Claude Code **允許做什麼**。許可權規則不是由模型，而是由 Claude Code 程式來強制執行的。[^permissions] 拿公司來比方，`CLAUDE.md` 是工作須知，許可權規則是門上的鎖。
@@ -169,7 +169,7 @@ Claude Code 會從專案資料夾和你主資料夾裡的 `~/.claude` 讀取指�
 ## 動手試試
 
 1. 在終端裡建立上面的 `CLAUDE.md` 和 `notes` 資料夾，用 `claude -p` 問一下規則。
-2. 開啟 `claude`，請它"把 @inbox/회의-2026-10-27-주간회의.txt 這份記錄整理成會議記錄。"你沒說要用表格，表格出來了嗎？檔案儲存到 `notes` 裡了嗎？
+2. 開啟 `claude`，請它"把 @inbox/meeting-2026-10-27-weekly.txt 這份記錄整理成會議記錄。"你沒說要用表格，表格出來了嗎？檔案儲存到 `notes` 裡了嗎？
 3. 開啟 `/memory` 和 `/status` 看看，再按 Esc 關閉。
 4. 用 `/exit` 退出，在終端裡用 `ls -a`（PowerShell 用 `ls -Force`）找到 `.claude` 資料夾。
 

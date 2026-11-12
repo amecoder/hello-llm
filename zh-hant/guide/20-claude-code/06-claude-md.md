@@ -1,14 +1,19 @@
 # 第6章 專案記憶 — 用 CLAUDE.md 寫下我的規則
 
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
+
 > **一句話總結**：每次都要重新說一遍的規則，寫進資料夾裡的 **CLAUDE.md** 檔案。Claude 每次開始會話時都會讀這個檔案。
 > 不過它**不是強制裝置，而是參考背景**。寫得越短、越具體，它就越能遵守。
 
-這一章依據2026年10月31日確認的 Claude Code 官方文件和 macOS 桌面應用（韓語介面，付費賬號）編寫。這一章是把第5章做的模板，歸攏成「基本規則」。
+這一章依據2026年10月31日確認的 Claude Code 官方文件和 macOS 桌面應用（韓語介面，付費帳號）編寫。這一章是把第5章做的模板，歸攏成「基本規則」。
 
 ## 每次會話都從頭開始
 
-Claude Code 的會話每次都**從空白狀態開始。** 即使在上一個會話裡說過「日期請這樣寫」，新會話也不知道。[^fresh] 能讓記憶跨會話延續的機制有兩種。[^two]
+Claude Code 的會話每次都**從空白狀態開始。** 即使在上一個會話裡說過「日期請這樣寫」，新會話也不知道。[^fresh] 能讓記憶跨會話延續的機制有兩種。[^two] 一種是我自己寫的 **CLAUDE.md**，另一種是 Claude 自己記下的**自動記憶**。
 
+這一章只講我自己寫的 **CLAUDE.md**。自動記憶是 Claude 看了我的糾正後，自己記下的備忘，所以現在不需要另外做什麼。[^two]
+
+::: details 把兩種機制放在一起看（點選展開）
 | | CLAUDE.md | 自動記憶 |
 |---|---|---|
 | 誰來寫 | 我 | Claude |
@@ -16,8 +21,7 @@ Claude Code 的會話每次都**從空白狀態開始。** 即使在上一個會
 | 什麼時候讀取 | 每次會話開始時 | 每次會話開始時（只讀前面部分） |
 
 出處：Claude Code 官方文件[^two]
-
-這一章講的是我自己寫的 **CLAUDE.md**。自動記憶是 Claude 看了我的糾正後，自己記下的備忘。[^two]
+:::
 
 <Quiz id="ch406-fresh" />
 
@@ -55,7 +59,7 @@ CLAUDE.md 是寫下**「不寫的話每次都要重新解釋的內容」**的地
 請為這個資料夾做一個 CLAUDE.md。要放進去的規則：1) 絕不修改 inbox 裡的原始備忘 2) 整理時使用 templates 資料夾裡的模板 3) 日期像 10/27(週一) 這樣寫 4) 備忘裡沒有的內容不要編造，寫成（備忘中沒有） 5) 待辦事項用表格寫，一定要包含負責人和期限。要簡短，控制在20行以內。
 ```
 
-Claude 在資料夾最上層做出了 `CLAUDE.md`（結果：[6장-CLAUDE.md.txt](/practice/notes/results/6장-CLAUDE.md.txt)）。5條規則各佔一行，用粗體寫出，後面還附上了待辦事項表格的示例。
+Claude 在資料夾最上層做出了 `CLAUDE.md`（結果：[ch6-CLAUDE.md.txt](/practice/zh-hant/notes/results/ch6-CLAUDE.md.txt)）。5條規則各佔一行，用粗體寫出，後面還附上了待辦事項表格的示例。
 
 資料夾最上層的 `CLAUDE.md`（或 `.claude/CLAUDE.md`）稱為**專案指示**。它適用於在這個資料夾裡工作的所有會話。[^where]
 
@@ -71,7 +75,7 @@ CLAUDE.md 是在**會話開始時**讀取的。[^fresh] 所以測試要在**新�
 請用 inbox 裡的3份覆盤備忘，寫本週的周覆盤。
 ```
 
-把結果（[6장-주간회고-2026-10-27.txt](/practice/notes/results/6장-주간회고-2026-10-27.txt)）和規則對照了一下，是這樣的。
+把結果（[ch6-weekly-review-2026-10-27.txt](/practice/zh-hant/notes/results/ch6-weekly-review-2026-10-27.txt)）和規則對照了一下，是這樣的。
 
 | 規則 | 結果 |
 |---|---|
@@ -82,11 +86,19 @@ CLAUDE.md 是在**會話開始時**讀取的。[^fresh] 所以測試要在**新�
 
 出處：本指南的實踐結果（2026-10-31）
 
-數字（Instagram 3次、點贊12個、寫錯的價格 6,000韓元、套裝4個·每週11個、熱紅酒成本 1,800韓元）也都和備忘一致。
+數字也都和備忘一致。Instagram 3次、點贊12個、寫錯的價格 6,000韓元、套裝4個·每週11個、熱紅酒成本 1,800韓元，都原樣寫了進去。
 
 ![結果介面。紅色編號標在：① Claude 用模板的檢查表自己確認出的「檢查結果」，② 「需要確認的3件事」，③ 會話資訊欄裡的成果（周覆盤檔案）](../../../guide/20-claude-code/assets/shot-24-claudemd-result-marked.png)
 
-看 ①，你會發現 Claude 用第5章做的模板說明裡的**檢查表自己做了確認**，還說明了確認的範圍（覆盤備忘 3/3）。在 ② 裡，它先告知了這幾件事：備忘裡的星期和實際日曆不一致（第2章裡說過的「編造的日期」）、備忘裡沒寫原因的格子、原始備忘裡一處沒有記錄的修改（那是截圖前本指南改的一行，不是 Claude 做的）。**把規則和檢查表寫下來，結果回來時就會連同依據一起回來。**
+看 ①，你會發現 Claude 用第5章做的模板說明裡的**檢查表自己做了確認**。連確認的範圍（覆盤備忘 3/3）也說明了。
+
+在 ② 裡，它先告知了需要確認的三件事。
+
+- 備忘裡的星期和實際日曆不一致（第2章裡說過的「編造的日期」）
+- 備忘裡沒寫原因的格子
+- 原始備忘裡有一處沒有記錄的修改[^memo-edit]
+
+**把規則和檢查表寫下來，結果回來時就會連同依據一起回來。**
 
 <Quiz id="ch406-test" />
 
@@ -96,7 +108,9 @@ CLAUDE.md 是在**會話開始時**讀取的。[^fresh] 所以測試要在**新�
 
 - 越是必須遵守的東西，越要寫得**具體而簡短**。越具體，遵守得越一致。[^context]
 - 如果有互相**衝突的規則**，Claude 可能會隨便選一條。要時不時讀一讀，把過時的規則刪掉。[^conflict]
-- 無論如何都必須阻止的事（例：刪除原件資料夾），不要只相信 CLAUDE.md，要和第4章的許可權模式及 Git 記錄一起來守住。
+- 無論如何都必須阻止的事（例：刪除原件資料夾），不要只相信 CLAUDE.md，要和第4章的許可權模式及 Git 記錄一起來守住。比如設成「手動」模式，Claude 在修改檔案或執行命令之前會先詢問。留下提交的話，就算出了差錯，也能用那條記錄恢復。
+
+這一章圖裡的回答末尾，可能會看到「狀態：」一行。這是因為截圖用的電腦上有一份適用於所有資料夾的個人指示檔案（`~/.claude/CLAUDE.md`），才出現的一行。你的介面裡沒有也是正常的。[^where]
 
 ::: details 也有適用於我整臺電腦的 CLAUDE.md
 寫在 `~/.claude/CLAUDE.md`（我的使用者資料夾）裡的指示，適用於**所有資料夾的會話**。[^where] 本指南截圖用的電腦上也有這樣的個人指示，所以會在回答末尾加「狀態：」一行等，介面略有不同。只在一個資料夾裡使用的規則，請寫進那個資料夾的 CLAUDE.md。
@@ -134,11 +148,12 @@ CLAUDE.md 是在**會話開始時**讀取的。[^fresh] 所以測試要在**新�
 
 下一章：[第7章. 技能、外掛、外部工具](07-skills-plugins.md)
 
-[^fresh]: Claude Code 官方文件，「How Claude remembers your project」。"Each Claude Code session begins with a fresh context window." / "Claude reads them at the start of every session." https://code.claude.com/docs/en/memory（確認日期 2026-10-31）
-[^two]: Claude Code 官方文件，「How Claude remembers your project」。"Two mechanisms carry knowledge across sessions" / "Auto memory: notes Claude writes itself based on your corrections and preferences" / "Both are loaded at the start of every conversation." https://code.claude.com/docs/en/memory（確認日期 2026-10-31）
-[^when]: Claude Code 官方文件，「How Claude remembers your project」。"Treat CLAUDE.md as the place you write down what you'd otherwise re-explain." / "Claude makes the same mistake a second time" / "You type the same correction or clarification into chat that you typed last session" / "A new teammate would need the same context to be productive" / "If an entry is a multi-step procedure or only matters for one part of the codebase, move it to a skill" https://code.claude.com/docs/en/memory（確認日期 2026-10-31）
-[^concrete]: Claude Code 官方文件，「How Claude remembers your project」。"Write instructions that are concrete enough to verify" https://code.claude.com/docs/en/memory（確認日期 2026-10-31）
-[^short]: Claude Code 官方文件，「How Claude remembers your project」。"target under 200 lines per CLAUDE.md file. Longer files consume more context and reduce adherence." https://code.claude.com/docs/en/memory（確認日期 2026-10-31）
-[^where]: Claude Code 官方文件，「How Claude remembers your project」。"Personal preferences for all projects" / "Team-shared instructions for the project" / "A project CLAUDE.md can be stored in either ./CLAUDE.md or ./.claude/CLAUDE.md." https://code.claude.com/docs/en/memory（確認日期 2026-10-31）
-[^context]: Claude Code 官方文件，「How Claude remembers your project」。"Claude treats them as context, not enforced configuration." / "The more specific and concise your instructions, the more consistently Claude follows them." https://code.claude.com/docs/en/memory（確認日期 2026-10-31）
-[^conflict]: Claude Code 官方文件，「How Claude remembers your project」。"if two instructions contradict each other, Claude may pick one arbitrarily." https://code.claude.com/docs/en/memory（確認日期 2026-10-31）
+[^fresh]: Claude Code 官方文件，「How Claude remembers your project」。"Each Claude Code session begins with a fresh context window." / "Claude reads them at the start of every session." https://code.claude.com/docs/en/memory （確認日期 2026-10-31）
+[^two]: Claude Code 官方文件，「How Claude remembers your project」。"Two mechanisms carry knowledge across sessions" / "Auto memory: notes Claude writes itself based on your corrections and preferences" / "Both are loaded at the start of every conversation." https://code.claude.com/docs/en/memory （確認日期 2026-10-31）
+[^when]: Claude Code 官方文件，「How Claude remembers your project」。"Treat CLAUDE.md as the place you write down what you'd otherwise re-explain." / "Claude makes the same mistake a second time" / "You type the same correction or clarification into chat that you typed last session" / "A new teammate would need the same context to be productive" / "If an entry is a multi-step procedure or only matters for one part of the codebase, move it to a skill" https://code.claude.com/docs/en/memory （確認日期 2026-10-31）
+[^concrete]: Claude Code 官方文件，「How Claude remembers your project」。"Write instructions that are concrete enough to verify" https://code.claude.com/docs/en/memory （確認日期 2026-10-31）
+[^short]: Claude Code 官方文件，「How Claude remembers your project」。"target under 200 lines per CLAUDE.md file. Longer files consume more context and reduce adherence." https://code.claude.com/docs/en/memory （確認日期 2026-10-31）
+[^where]: Claude Code 官方文件，「How Claude remembers your project」。"Personal preferences for all projects" / "Team-shared instructions for the project" / "A project CLAUDE.md can be stored in either ./CLAUDE.md or ./.claude/CLAUDE.md." https://code.claude.com/docs/en/memory （確認日期 2026-10-31）
+[^context]: Claude Code 官方文件，「How Claude remembers your project」。"Claude treats them as context, not enforced configuration." / "The more specific and concise your instructions, the more consistently Claude follows them." https://code.claude.com/docs/en/memory （確認日期 2026-10-31）
+[^memo-edit]: 這處修改是截圖前本指南改了原始備忘裡的一行。不是 Claude 做的，所以在你的實操裡可能不會出現這一項。
+[^conflict]: Claude Code 官方文件，「How Claude remembers your project」。"if two instructions contradict each other, Claude may pick one arbitrarily." https://code.claude.com/docs/en/memory （確認日期 2026-10-31）
