@@ -22,16 +22,16 @@ claude -p "inboxフォルダにファイルがいくつあるか、1行だけで
 
 ## なぜ書き込みが止められるのか
 
-今度は、ファイルを作ってほしいと頼んでみます。4章のファイルを上書きしないように、名前を `회의록-한줄.md`（議事録-1行）にします。
+今度は、ファイルを作ってほしいと頼んでみます。4章のファイルを上書きしないように、名前を `minutes-one-line.md`（議事録-1行）にします。
 
 ```bash
-claude -p "inboxの会議メモを読んで、회의록-한줄.md ファイルに整理して保存して。"
+claude -p "inboxの会議メモを読んで、minutes-one-line.md ファイルに整理して保存して。"
 ```
 
 ファイルはできません。答えは「ファイル書き込みの権限が承認されておらず」と知らせます。故障ではありません。`-p` は手動モードで始まりますが、聞く相手がいません。そのため、承認が必要な呼び出しは拒否されます。[^headless] 必要なツールを前もって許可すればOKです。[^headless]
 
 ```bash
-claude -p "inboxの会議メモを読んで、회의록-한줄.md ファイルに整理して保存して。答えは1行で。" --allowedTools "Read,Write"
+claude -p "inboxの会議メモを読んで、minutes-one-line.md ファイルに整理して保存して。答えは1行で。" --allowedTools "Read,Write"
 ```
 
 `--allowedTools` は、聞かずに使ってよいツールを前もって決めるオプションです。`Read` はファイルの読み込み、`Write` はファイルの書き込みです。カンマでつなげて書き、引用符で囲みます。
@@ -47,7 +47,7 @@ claude -p "inboxの会議メモを読んで、회의록-한줄.md ファイル�
 **パイプ**（Pipe、`|`）は、前のコマンドの出力を、後ろのコマンドの入力として渡す記号です。水が管を通って流れる様子を思い浮かべてください。`claude -p` も、パイプで内容を受け取れます。[^headless]
 
 ```bash
-cat inbox/회의-2026-10-27-주간회의.txt | claude -p "このメモから、ToDoだけを3行で抜き出して。"
+cat inbox/meeting-2026-10-27-weekly.txt | claude -p "このメモから、ToDoだけを3行で抜き出して。"
 ```
 
 ```text
@@ -64,13 +64,13 @@ claude -p "@inbox/ファイル名 から、ToDoだけを3行で抜き出して�
 
 **信頼できない内容は、そのままパイプで渡さないでください。**[^security] Webから取ってきた文章や、知らない人からのメールがそうです。文章の中に、[7章](07-permissions-undo.md)で見たプロンプトインジェクションが隠れていることがあります。[^security] プロンプトインジェクションは、文章の中にAIへの指示をこっそり混ぜて、おかしなことをさせる手口です。
 
-練習用のメモ [회의-2026-10-29-임시회의.txt](/practice/notes/inbox/회의-2026-10-29-임시회의.txt)（会議-臨時会議）に、そういう文の例があります。今はリンクをクリックして、ブラウザで読むだけにしてください。まだ `inbox` フォルダには入れません。このあと作るスクリプトが、`inbox` のメモをすべて処理するからです。このメモは、[13章](13-cost-safety-trouble.md)で安全に扱う方法を学ぶときに入れます。
+練習用のメモ [meeting-2026-10-29-adhoc.txt](/practice/ja/notes/inbox/meeting-2026-10-29-adhoc.txt)（会議-臨時会議）に、そういう文の例があります。今はリンクをクリックして、ブラウザで読むだけにしてください。まだ `inbox` フォルダには入れません。このあと作るスクリプトが、`inbox` のメモをすべて処理するからです。このメモは、[13章](13-cost-safety-trouble.md)で安全に扱う方法を学ぶときに入れます。
 
 <Quiz id="ch810-pipe" />
 
 ## 出力を保存して形を変える
 
-答えをファイルで受け取りたければ、最後に `> 할일.txt`（ToDo.txt）を付けます。[^headless] 画面には出ず、ファイルに入ります。同じ名前のファイルがあると上書きされるので、気をつけてください。
+答えをファイルで受け取りたければ、最後に `> todo.txt`（ToDo.txt）を付けます。[^headless] 画面には出ず、ファイルに入ります。同じ名前のファイルがあると上書きされるので、気をつけてください。
 
 この章の実習には、下のJSON出力は必要ありません。こういうものがある、とだけ覚えておいてください。
 
@@ -98,15 +98,15 @@ Error: Reached max turns (1)
 
 <Quiz id="ch810-exit" />
 
-## 주간정리.shを作る
+## weekly-summary.shを作る
 
-いよいよ部品を組み合わせます。**スクリプト**（Script）は、コマンドをファイルに書いて、一度に実行するものです。[8章](08-memory-settings.md)の `CLAUDE.md` と `notes` フォルダ、[9章](09-skills-extensions.md)のスキルが必要です。`/exit` で抜けて、ターミナルで練習フォルダに移動します。MacとLinuxでは、下をまるごと貼り付けます（ファイルで見る: [10장-주간정리.sh.txt](/practice/cli/results/10장-주간정리.sh.txt)）。
+いよいよ部品を組み合わせます。**スクリプト**（Script）は、コマンドをファイルに書いて、一度に実行するものです。[8章](08-memory-settings.md)の `CLAUDE.md` と `notes` フォルダ、[9章](09-skills-extensions.md)のスキルが必要です。`/exit` で抜けて、ターミナルで練習フォルダに移動します。MacとLinuxでは、下をまるごと貼り付けます（ファイルで見る: [ch10-weekly-summary.sh.txt](/practice/ja/cli/results/ch10-weekly-summary.sh.txt)）。
 
 ```bash
-cat > 주간정리.sh <<'EOF'
+cat > weekly-summary.sh <<'EOF'
 #!/bin/bash
 # inbox の会議メモをひとつずつ議事録に整理する。
-for memo in inbox/회의-*.txt; do
+for memo in inbox/meeting-*.txt; do
   echo "整理中: $memo"
   if claude -p "/meeting-notes $memo" --allowedTools "Read,Write" --max-turns 10; then
     echo "完了: $memo"
@@ -117,9 +117,9 @@ done
 EOF
 ```
 
-貼り付けたあと、まだ実行されていなければ、Enterをもう一度押してください。何も表示されなければ成功です。`ls` で、`주간정리.sh`（週ごとの整理）ができたかを見てください。
+貼り付けたあと、まだ実行されていなければ、Enterをもう一度押してください。何も表示されなければ成功です。`ls` で、`weekly-summary.sh`（週ごとの整理）ができたかを見てください。
 
-いちばん上の行 `#!/bin/bash` は、このファイルをbash（シェルの一種）で読むようにという印です。`#` で始まる次の行は、人が読むための説明です。`for` の行は、名前が `회의-`（会議-）で始まるメモをひとつずつ `memo` に入れます。ここで `memo` は **変数**（Variable）です。値を一時的に入れておく名札だと考えてください。名前の前に `$` を付けて `$memo` と書くと、その中に入っている値を取り出して使います。1回目なら、`$memo` は `inbox/회의-2026-10-27-주간회의.txt` に置き換わります。
+いちばん上の行 `#!/bin/bash` は、このファイルをbash（シェルの一種）で読むようにという印です。`#` で始まる次の行は、人が読むための説明です。`for` の行は、名前が `meeting-`（会議-）で始まるメモをひとつずつ `memo` に入れます。ここで `memo` は **変数**（Variable）です。値を一時的に入れておく名札だと考えてください。名前の前に `$` を付けて `$memo` と書くと、その中に入っている値を取り出して使います。1回目なら、`$memo` は `inbox/meeting-2026-10-27-weekly.txt` に置き換わります。
 
 `if` の行は9章のスキルを呼び、終了コードが0なら `完了`、そうでなければ `失敗` と表示します。
 
@@ -128,27 +128,27 @@ EOF
 実行は1行です。
 
 ```bash
-bash 주간정리.sh
+bash weekly-summary.sh
 ```
 
-![주간정리.shの実行画面。① 保存したファイルとToDoの数、② メモをひとつ終えたという表示。カレンダーについての案内の文は、実行するたびに少しずつ違います](../../../guide/23-claude-code-cli/assets/shot-09-script-marked.png)
+![weekly-summary.shの実行画面。① 保存したファイルとToDoの数、② メモをひとつ終えたという表示。カレンダーについての案内の文は、実行するたびに少しずつ違います](../../../guide/23-claude-code-cli/assets/shot-09-script-marked.png)
 
 ```text
-整理中: inbox/회의-2026-10-27-주간회의.txt
-`notes/회의록-2026-10-27.md`に保存しました。ToDoは5個です。
+整理中: inbox/meeting-2026-10-27-weekly.txt
+`notes/minutes-2026-10-27.md`に保存しました。ToDoは5個です。
 
 なお、メモには10/27と11/3が月曜日と書かれていますが、2026年のカレンダーではどちらも火曜日なので、曜日と日付はメモのままにしました。
-完了: inbox/회의-2026-10-27-주간회의.txt
+完了: inbox/meeting-2026-10-27-weekly.txt
 ```
 
-人が何も押していないのに、議事録ができました（[結果を見る](/practice/cli/results/10장-회의록-스크립트로.txt)）。自分の結果と文が違っても、3つの節と表があればOKです。
+人が何も押していないのに、議事録ができました（[結果を見る](/practice/ja/cli/results/ch10-minutes-by-script.txt)）。自分の結果と文が違っても、3つの節と表があればOKです。
 
 **Windowsでは**、このスクリプトはPowerShellでそのままでは動きません。bash用だからです。下のPowerShell用を使ってください。MacとLinuxは、この部分を飛ばしてかまいません。
 
 同じことをPowerShellで書くと、下のようになります。実行するたびに、このボックスをウィンドウに貼り付けます。実際には試していない例です。WSLを使うなら、WSLのターミナルの中で上のスクリプトを実行します。[^wsl]
 
 ```powershell
-foreach ($file in Get-ChildItem inbox/회의-*.txt) {
+foreach ($file in Get-ChildItem inbox/meeting-*.txt) {
   $memo = "inbox/$($file.Name)"
   Write-Output "整理中: $memo"
   claude -p "/meeting-notes $memo" --allowedTools "Read,Write" --max-turns 10
@@ -192,11 +192,11 @@ foreach ($file in Get-ChildItem inbox/회의-*.txt) {
 3. パイプでToDoを抜き出して保存します。Windowsで答えがおかしければ、前に出てきた `@` の方法を使います。
 
    ```bash
-   cat inbox/회의-2026-10-27-주간회의.txt | claude -p "このメモから、ToDoだけを3行で抜き出して。" > 할일.txt
+   cat inbox/meeting-2026-10-27-weekly.txt | claude -p "このメモから、ToDoだけを3行で抜き出して。" > todo.txt
    ```
 
 4. `--max-turns 1` でわざと失敗させ、終了コードを見ます。
-5. `주간정리.sh` を作り、`bash 주간정리.sh` で実行します。Windowsは、上のPowerShellのコードボックスを貼り付けます。
+5. `weekly-summary.sh` を作り、`bash weekly-summary.sh` で実行します。Windowsは、上のPowerShellのコードボックスを貼り付けます。
 
 自分に聞いてみてください。人なしで動いたか？ 結果はメモと合っているか？ 来週メモが増えても、同じコマンドで済むか？
 

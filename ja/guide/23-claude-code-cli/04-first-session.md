@@ -1,6 +1,6 @@
 # 第4章 最初のセッション
 
-<Badge type="tip" text="必須" /> このステップを進めるなら、必ず読んでください。
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
 
 > **一言まとめ**: 作業するフォルダに移動して、`claude` と入力します。信頼の確認画面で `Yes` を選び、言葉で仕事を頼みます。止めるときは `Esc`、終わるときは `/exit` です。
 
@@ -13,14 +13,14 @@
 Mac・Linuxでは、こう入力します。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude
 ```
 
 Windows PowerShellでは、こう入力します。
 
 ```powershell
-cd $HOME\hello-ai-연습\터미널
+cd $HOME\hello-ai-practice\terminal
 claude
 ```
 
@@ -42,7 +42,7 @@ claude
 ```text
  Accessing workspace:
 
- ~/hello-ai-연습/터미널
+ ~/hello-ai-practice/terminal
 
  Quick safety check: Is this a project you created or one you trust? (Like your own code, a
  well-known open source project, or work from your team). If not, take a moment to review what's in
@@ -75,7 +75,7 @@ claude
 ```text
  ▐▛███▛█   Claude Code v2.1.318
 ▝▜██████▀  Opus 5.5 · Claudeの料金プラン名
- ▝▝   ▝▝   ~/hello-ai-연습/터미널
+ ▝▝   ▝▝   ~/hello-ai-practice/terminal
 
 ▎ Auto mode is now Claude Code's default permission mode.
 ▎ Auto mode lets Claude handle permission prompts automatically. Claude checks each tool call for
@@ -118,7 +118,7 @@ claude
 いよいよ仕事を頼んでみます。同僚に話しかけるように書けば大丈夫です。[^colleague] 入力欄にこの文を入れて、Enterを押してください。
 
 ```text
-inboxの会議メモを読んで、회의록.md として保存して。答えは1行で。
+inboxの会議メモを読んで、minutes.md として保存して。答えは1行で。
 ```
 
 `.md` は、マークダウン（Markdown）のファイルです。メモ帳でも開ける、文字だけのファイルです。
@@ -133,7 +133,7 @@ inboxの会議メモを読んで、회의록.md として保存して。答え�
 ![ファイルを作る前の許可の画面。別のファイルを作ったときに撮った画像です。① 作るファイルの名前、② 選択肢。1番の Yes が、今回1回だけ許可します](../../../guide/23-claude-code-cli/assets/shot-04-create-marked.png)
 
 ```text
- Do you want to create 회의록.md?
+ Do you want to create minutes.md?
  ❯ 1. Yes
    2. Yes, and switch to accept edits (auto-approve file edits and common file commands) for this
       session (shift+tab)
@@ -147,13 +147,13 @@ inboxの会議メモを読んで、회의록.md として保存して。答え�
 終わると、こんなふうに答えます。
 
 ```text
-● 회의록.mdに整理しましたが、メモの10/27(月)と11/3(月)は2026年のカレンダーでは火曜日なので、ファイルに要確認と
+● minutes.mdに整理しましたが、メモの10/27(月)と11/3(月)は2026年のカレンダーでは火曜日なので、ファイルに要確認と
   記しておきました。
 ```
 
 曜日の話が出ても驚かないでください。練習用メモの曜日は作り話なので、カレンダーと合いません。Claudeがそのことに気づいたのです。答えの文は、実行するたびに変わることがあります。入力欄に、次の依頼の提案がうっすら表示されることもあります。使わなくてかまいません。
 
-同じメモで作った成果物は、[4장-회의록.txt](/practice/cli/results/4장-회의록.txt)にあります。自分の結果と見比べてみてください。まったく同じである必要はありません。
+同じメモで作った成果物は、[ch4-minutes.txt](/practice/ja/cli/results/ch4-minutes.txt)にあります。自分の結果と見比べてみてください。まったく同じである必要はありません。
 
 <Quiz id="ch804-first" />
 
@@ -162,7 +162,7 @@ inboxの会議メモを読んで、회의록.md として保存して。答え�
 セッションは会話です。前の仕事に続けて頼むことができます。今度は、ファイルを直してみます。
 
 ```text
-회의록.md のいちばん最初の行に「下書き」という1行を入れて。答えは1行で。
+minutes.md のいちばん最初の行に「下書き」という1行を入れて。答えは1行で。
 ```
 
 今度は、変わる行を見せてから聞いてきます。`+` が付いた行が、新しく入る行です。
@@ -174,7 +174,7 @@ inboxの会議メモを読んで、회의록.md として保存して。答え�
  4  - **日時:** 10/27(月)
 ```
 
-その下で、`Do you want to make this edit to 회의록.md?` と聞いてきます。変わる行の形は、自分の議事録によって違います。
+その下で、`Do you want to make this edit to minutes.md?` と聞いてきます。変わる行の形は、自分の議事録によって違います。
 
 許可の画面は、読んでから選んでください。自分が頼んだ仕事と合っているかを確かめられる瞬間です。
 
@@ -196,10 +196,10 @@ Claudeがおかしな方向に進んだら、**`Esc`** を押してください�
 
 ```bash
 ls
-cat 회의록.md
+cat minutes.md
 ```
 
-PowerShellでハングルが文字化けしたら、`Get-Content -Encoding UTF8 회의록.md` で見ます。
+PowerShellでハングルが文字化けしたら、`Get-Content -Encoding UTF8 minutes.md` で見ます。
 
 空の入力欄で `Ctrl + D` を2回押しても終わります。[^ctrl-d] 最初は、文字で入力する `/exit` がいちばん迷いません。終えた会話を続ける方法は、第6章で扱います。
 

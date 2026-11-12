@@ -1,5 +1,7 @@
 # Chapter 3. Planning and Specs — Getting Interviewed and Writing SPEC.md
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: When you are not yet sure what to build, do not try to figure it all out alone. **Have Claude interview you.** When the interview is done, Claude writes the result into **SPEC.md** (a specification).
 > A spec is not "how to build it." It is a **promise of "what it should be."** This promise becomes your standard for building, checking, and reviewing in Chapters 4 to 6.
 
@@ -27,7 +29,9 @@ It is okay if you do not know exactly what you want yet. The official docs say y
 
 > I want to build something like this, but I haven't thought it through deeply yet. Interview me until you have enough to write a spec, and when we're done, write it to SPEC.md.
 
-Then Claude asks back with **multiple-choice questions** about the parts you have not decided yet.[^choices] For the to-do board, your request would look like this:
+Then Claude asks back with **multiple-choice questions** (questions where you pick from options) about the parts you have not decided yet.[^choices] For example, a question like "Should I group to-dos by person in charge or by deadline?" that you only need to pick an answer for. The actual questions vary each time, so pick one of the options or answer in your own words.
+
+For the to-do board, your request would look like this:
 
 ```
 I want to make a web page that collects and shows the to-do tables from the meeting notes created by the Stage 3 organizer tool. I haven't thought it through deeply yet. Interview me until you have enough to write a spec, and when we're done, write it to SPEC.md.
@@ -41,9 +45,7 @@ Once SPEC.md is created, have Claude build from that file in a **new session**. 
 
 ## What a Good Spec Looks Like
 
-In a spec, you write down **behavior that is visible from the outside**. The OpenSpec docs call a spec a "behavior contract, not an implementation plan." They say implementation details that do not change externally visible behavior usually do not belong in the spec.[^contract] spec-kit also says to focus on the **what and why** during the spec stage, not the tech, and leave technology choices for the next planning stage.[^what-why]
-
-For the to-do board's SPEC.md, lines like these belong in it:
+In a spec, you write down **behavior that is visible from the outside**. This means you only write what someone looking at the screen can notice. For the to-do board's SPEC.md, lines like these belong in it:
 
 | Good line | Weak line |
 |---|---|
@@ -55,12 +57,24 @@ Source: Examples from this guide
 
 The lines on the left **can be checked with a yes or no.** In Chapter 5, these exact lines become your verification checklist.
 
+The lines on the right are about how to build it (the tech) or a vague feeling. The docs for the spec tools in the next section say the same thing. The OpenSpec docs call a spec a "behavior contract, not an implementation plan." They say implementation details that do not change externally visible behavior usually do not belong in the spec.[^contract] spec-kit also says to focus on the **what and why** during the spec stage, not the tech, and leave technology choices for the next planning stage.[^what-why]
+
 <Quiz id="ch703-spec" />
 
 ## Spec-Driven Development Tools
 
-A way of developing that puts the spec at the center is called **Spec-Driven Development**. You decide what to build and why first, and then turn that spec into a plan, tasks, and code.[^sdd] There are two tools that help with this.
+A way of developing that puts the spec at the center is called **Spec-Driven Development**. You decide what to build and why first, and then turn that spec into a plan, tasks, and code.[^sdd] Tools that help with this include spec-kit and OpenSpec.
 
+This guide **does not install either tool.** You can put the exact same idea into practice with just the "interview → SPEC.md → new session" flow you learned above. In this section, you can just learn the names and move on.
+
+Both tools put a human check in the middle.
+
+- **spec-kit** (a tool made by GitHub): tells you to run spec → plan → task list → implementation one step at a time and **review the result** before moving on.[^one-at-a-time]
+- **OpenSpec** (a tool made by Fission-AI): has the AI write the documents and lets **you review the plan before any code is written**.[^openspec]
+
+This is the same idea as reading and approving SPEC.md in this guide's flow.
+
+::: details Learn more about the two tools (click to expand)
 | Tool | Maker | What it does |
 |---|---|---|
 | spec-kit | GitHub | Guides you step by step from spec → plan → task list → implementation |
@@ -68,15 +82,14 @@ A way of developing that puts the spec at the center is called **Spec-Driven Dev
 
 Source: Descriptions from each tool (excerpted)[^speckit][^openspec]
 
-OpenSpec has the AI write the documents and lets **you review the plan before any code is written**.[^openspec] spec-kit tells you to run each step one at a time and **review the result** before moving on.[^one-at-a-time] Both tools put a human check in the middle.
-
-This guide **does not install either tool.** spec-kit requires Python 3.11+ and a tool called uv,[^speckit-req] and OpenSpec requires a terminal installation (or Node.js 22.12+).[^os-install] You can put the exact same idea into practice with just the "interview → SPEC.md → new session" flow you learned above. Take a look at those tools later when you work on a larger project.
+Installing them requires separate development tools. spec-kit requires Python 3.11+ and a tool called uv,[^speckit-req] and OpenSpec requires a terminal installation (or Node.js 22.12+).[^os-install] Python, uv, and Node.js are development tools used to run programs. You need none of them to follow this guide. Take a look at those tools later when you work on a larger project.
+:::
 
 <Quiz id="ch703-tools" />
 
 ## Try It Yourself
 
-1. Open the `할일보드` folder you made in Chapter 2 in the Claude Code app.
+1. Open the `todo-board` folder you made in Chapter 2 in the Claude Code app.
 2. Send the interview request above and answer Claude's questions. If you are not sure, you can say "Recommend one for me."
 3. Read the finished SPEC.md and ask for each line: "Can I check this with a yes or no?" If not, ask Claude to fix it.
 4. Check that no real names or contact info made it into SPEC.md (because it is a public repository).

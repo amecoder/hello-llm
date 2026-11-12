@@ -1,9 +1,11 @@
 # Chapter 7. Projects, Connectors, and Skills — Attaching Materials and Tools to Claude
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: Bundle materials and instructions for the same work into a **project**. Connect other apps like email and calendar with **connectors**,
 > and save tasks you do the same way every time as **skills**. A package that bundles all three by job role is a **plugin**.
 
-The screens shown here are from the web version as of October 2026. A new layout combining chat and Cowork is rolling out gradually, so menu locations and names may vary on your screen.
+The screens shown here are from the web version as of October 2026. A new layout combining chat and Cowork (a feature for handing Claude a whole task, [Chapter 8](08-cowork.md)) is rolling out gradually, so menu locations and names may vary on your screen.
 The screenshots in this chapter are from the free web plan. We use the menu names shown in the screenshots. Other names used in the help center are collected in the footnotes.
 
 You will use two places in the side menu in this chapter: "Projects (프로젝트)" and "Customize (사용자 지정)."[^screen] They are marked as ③ and ④ in the screenshots below.
@@ -49,22 +51,29 @@ If you want to keep a project completely separate, turn off "Use account memory 
 
 ### When You Have Lots of Materials — RAG
 
-On paid plans, when your project knowledge grows close to the limit, Claude automatically switches to **RAG** (Retrieval Augmented Generation, a method that searches for and reads only the needed parts instead of the entire set of materials). This expands how much you can add by up to 10 times. There is nothing you need to turn on or off.[^rag]
 When you have a lot of materials, try this: give your files clear, easy-to-recognize names, and mention the document name when you ask a question. That helps Claude narrow down where to look.[^rag]
 
 ```
 From the "2026 Q3 Sales Report" file, pull out only the sales by region in a table.
 ```
 
+On paid plans, when your project knowledge grows close to the limit, Claude automatically switches to **a method that searches for and reads only the needed parts** (RAG, Retrieval Augmented Generation). There is nothing you need to turn on or off.[^rag]
+
+::: details More details (click to expand)
+Once it switches to RAG, the amount you can add to a project expands by up to 10 times.[^rag]
+:::
+
 ### Tips for Staying Organized
 
 - **Start with one specific task.** Instead of one giant project for everything, start with a narrow project like "Weekly Report." You can always add more materials as you use it.[^academy-projects]
 - **Replace old materials from time to time.** If outdated files stay in your project knowledge, you may get outdated answers. Skim through your knowledge list occasionally and update it.[^academy-projects]
+
+::: details Other things to know (click to expand)
 - **Star** a project to find it quickly in the side menu.[^projects-how]
 - You can **archive** finished projects. You cannot delete an archived project right away. "Unarchive (보관 해제)" it first, then delete it.[^projects-how]
 - Sharing projects with other people is only available on Team and Enterprise (company) plans.[^projects]
-
-> **New version of Projects (beta)**: A new style where one project works like a single conversation is rolling out to some users first. Even when you move over, your instructions, files, and chat history carry over as they are.[^projects] Because this feature is only open to some users right now, this chapter explains how projects work today.
+- **New version of Projects (beta)**: A new style where one project works like a single conversation is rolling out to some users first. Even when you move over, your instructions, files, and chat history carry over as they are.[^projects] Because this feature is only open to some users right now, this chapter explains how projects work today.
+:::
 
 ### Putting a Reusable Template into Project Instructions
 
@@ -77,7 +86,7 @@ In chats in this project, organize the work notes I send into a weekly report.
 - Do not make up anything not in the notes; mark it as [Needs check]
 ```
 
-::: details What the reply roughly looks like (Example — click to expand)
+::: details What the reply roughly looks like (Example — click to expand) (click to expand)
 This is an example created for this guide. Actual replies vary depending on the service and the moment.
 
 For example, if this week's note is "Sent quotes to two places. Swapping website photos. Client meeting next week," you will get a reply like this:
@@ -186,7 +195,8 @@ Be careful if you see "Allow always (항상 허용)" when a custom connector ask
 
 ### When You Have Many Connectors — "Tool access"
 
-Each connector takes up space in a conversation. So the more connectors you keep turned on, the less room Claude has for your actual work.[^tools]
+There is a limit to how much text Claude can read at once in a single conversation (the context window from [Stage 1, Chapter 1](../00-common/01-what-is-llm.md)). In this chapter, we call this **conversation space**.
+Each connector takes up some of this conversation space. So the more connectors you keep turned on, the less room Claude has for your actual work.[^tools]
 You can choose how connectors are loaded in "+" → "Connectors" → "Tool access (도구 액세스)."[^tools]
 
 | Option | When to use |
@@ -207,6 +217,7 @@ Research (covered in [Chapter 6](06-search.md)) uses tools from your enabled con
 
 A **skill** is a bundle of instructions and materials that makes Claude do a specific task the same way every time.[^skills]
 For example, if you save the rule "Company reports use this order and this font" as a skill, Claude will follow that method every time you make a report.
+You can try making one yourself below in "Making Your Own Skill."
 
 Skills are available on Free, Pro, Max, Team, and Enterprise plans. However, **file creation must be turned on**. Go to Settings (설정) → "Capabilities (기능)" and turn on "Code execution and file creation (코드 실행 및 파일 생성)."[^create-name][^skills][^skills-use]
 
@@ -214,7 +225,7 @@ Skills are available on Free, Pro, Max, Team, and Enterprise plans. However, **f
 
 - **Built-in skills** included by Anthropic (creating Excel, Word, PowerPoint, and PDF files) are used automatically without you having to call them by name.[^skills-use] These are what Claude uses when creating files in [Chapter 4](04-files-artifacts.md).
 - You can turn skills on or off in the side menu under "Customize" → the "Skills" tab.[^screen] Claude will not use skills that are turned off.[^skills-use]
-- Simple skills can be made with plain text alone, no coding required.[^skills] You zip your skill folder and upload it. In the help center, this path is shown as "+ Create skill (+ 스킬 만들기)" → "Upload skill (스킬 업로드)."[^skills-use] On the screen shown in this chapter, there is an "+ Add (+ 추가)" button in the upper right of "Customize."[^screen]
+- Simple skills can be made with plain text alone, no coding required.[^skills] A skill is a single folder that holds instruction text and material files. You bundle this folder into a **ZIP file** (a compressed file that packs several files into one) and upload it with "Upload skill (스킬 업로드)."[^skills-use][^skill-upload-name] On the screen shown in this chapter, there is an "+ Add (+ 추가)" button in the upper right of "Customize."[^screen] You don't need to make the folder yourself. Just ask Claude to make it for you, as shown below.
 - Skills installed from the skills directory cannot be edited.[^directory]
 
 If Claude doesn't seem to be using a skill, ask for it by name.[^skills-use]
@@ -223,7 +234,11 @@ If Claude doesn't seem to be using a skill, ask for it by name.[^skills-use]
 Use my "Company Report Template" skill to turn these notes into a presentation.
 ```
 
-If a skill you made keeps getting ignored, try editing the skill's **description**. Claude reads this description to decide when to use the skill.[^skills-make] Write specifically when the skill should be used.[^skills-make] It also helps to include the words you normally use when making a request—like "organize meeting minutes" or "summarize meeting notes" (our tip). Descriptions can be up to 200 characters long.[^skills-make]
+If a skill you made keeps getting ignored, try editing the skill's **description**. Claude reads this description to decide when to use the skill.[^skills-make]
+
+- Write specifically when the skill should be used.[^skills-make]
+- Include the words you normally use when making a request—like "organize meeting minutes" or "summarize meeting notes" (our tip).
+- Descriptions can be up to 200 characters long.[^skills-make]
 
 ### Making Your Own Skill — Just Ask in Plain Words
 
@@ -256,7 +271,7 @@ In short, a project holds **the materials to know**, and a skill holds **the ste
 ### Things to Watch Out For
 
 - **Only install skills from sources you trust.** The biggest risks with skills are **prompt injection** (hidden instructions that manipulate Claude) and **data exfiltration** (leaking your data outside).[^skills-use] You learned about prompt injection in [Stage 1, Chapter 9](../00-common/09-safety.md#_4-hidden-instructions-—-prompt-injection).
-- **You can also create a skill by recording your screen.** Record yourself doing a task, and Claude builds a skill from it. This works only in Cowork on the Mac app for Pro, Max, and Team plans, and recordings can run for about 10 minutes.[^skills-make] Do not show passwords or sensitive screens while recording.
+- **You can also create a skill by recording your screen.** Record yourself doing a task, and Claude builds a skill from it. This works only in Cowork (the feature for handing off whole tasks, which you will learn in [Chapter 8](08-cowork.md)) on the Mac app for Pro, Max, and Team plans, and recordings can run for about 10 minutes.[^skills-make] Do not show passwords or sensitive screens while recording.
 
 <Quiz id="ch207-skills" />
 
@@ -275,7 +290,7 @@ Plugins are available on **paid plans** (Pro, Max, Team, and Enterprise) only.[^
 2. Go to the ① "Plugins (플러그인)" tab → ② "Explore (탐색)," pick a plugin, and click "Add (추가)."[^screen][^discover-name]
 3. Type `/` or click "+" in chat or Cowork to see the skills included in your plugins. Pick one to use it.[^plugins]
 
-A plugin you install comes with a general way of handling tasks. Your team's templates and steps may be different.[^academy-plugins] If you click "Customize (커스터마이징)" in the upper right when viewing an installed plugin, a Cowork task opens to edit that plugin. Click "Let's go (시작하기)" to adjust it together with Claude.[^plugins] Menu names may vary by screen. Show Claude real examples of what you use and ask it to adapt the plugin:
+A plugin you install comes with a general way of handling tasks. Your team's templates and steps may be different.[^academy-plugins] If you click "Customize (커스터마이징)" in the upper right when viewing an installed plugin, a Cowork task (one job handed to Claude) opens to edit that plugin. Click "Let's go (시작하기)" to adjust it together with Claude.[^plugins] Menu names may vary by screen. Show Claude real examples of what you use and ask it to adapt the plugin:
 
 ```
 I uploaded three quotes our team sent last month. Update the quote skill in this plugin to follow this template and tone.
@@ -315,7 +330,7 @@ These are official intro videos made by the company. Screens and feature names m
 
 <YouTube id="kS1MJFZWMq4" title="Creating custom Skills with Claude" />
 
-The first video introduces Projects as "a single conversation." If your screen looks different from the video, follow the instructions in this chapter.
+The first video introduces the new style opened to some users first, in which one project is used as "a single conversation." If your screen looks different from the video, follow the instructions in this chapter.
 
 ## Try It Yourself
 
@@ -385,4 +400,5 @@ Next chapter: [Chapter 8. Cowork — Handing Off Whole Tasks](08-cowork.md)
 [^connector-name]: In the help center, this appears as "Connectors (커넥터)" → "Manage connectors (커넥터 관리)," and it also notes that you can type `/`.
 [^create-name]: In the updated Settings layout, this is called "Create and edit files (파일 생성 및 편집)."
 [^discover-name]: In the help center, this appears as the "Discover (발견)" tab.
+[^skill-upload-name]: In the help center, this appears as "+ Create skill (+ 스킬 만들기)" → "Upload skill (스킬 업로드)."
 [^screen-connectors]: Verified directly in the message box "+" → "Add connectors (커넥터 추가)" submenu. Items are "Browse connectors (커넥터 둘러보기)" and "Add custom connector (커스텀 커넥터 추가)" (grayed out) (checked on 2026-10-28, web, Free plan)

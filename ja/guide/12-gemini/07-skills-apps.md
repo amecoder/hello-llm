@@ -1,6 +1,8 @@
 # 第7章 スキルと連携アプリ — よくあるお願いの保存、Googleアプリとの連携
 
-> **一言まとめ**: 毎回長く書くお願いは**スキル**として保存して、`/`で呼び出して使いましょう。今使っている**Gemsは、2026年11月17日からスキルに変わります。**
+<Badge type="info" text="選択" /> 必要なときに読んでください。読み飛ばしても、後の章についていけます。
+
+> **一言まとめ**: 毎回長く書くお願いは**スキル**として保存して、`/`で呼び出して使いましょう。今使っている**Gems**（指示を入れて作った自分だけのGemini）は、**2026年11月17日からスキルに変わります。**
 > Gmail・Drive・カレンダーの内容について聞きたいときは、**連携アプリ**をオンにします。連携する前に、どんな情報がGeminiに送られるのかを先に知っておきましょう。
 
 画面は2026年10月のWeb版を基準にしていて、図は有料プラン（Google AI Pro）の韓国語画面です。
@@ -12,11 +14,15 @@
 
 スキルには次のような特長があります。[^transition]
 
-- **呼び出しやすい。** チャットの入力欄に`/`を入力して、スキル名を選びます。もうすぐ`@`に変わるそうなので、画面に表示されているほうを使ってください。
+- **呼び出しやすい。** チャットの入力欄に`/`を入力して、スキル名を選びます。[^at]
 - **自動で使われることもある。** 今の質問に合うスキルがあれば、Geminiが見つけて適用します。
 - **重ねて使える。** 一つのチャットで、複数のスキルを一緒に使えます。
 
-使うには、**18歳以上**でログインしている必要があり、「アクティビティの保存（활동 기록 보관）」がオンになっていなければなりません。[^skills] **有料プランはなくても大丈夫です。**[^skills] Web、スマホアプリ、Macアプリで使えます。[^skills]
+スキルは**有料プランなしで**、Web、スマホアプリ、Macアプリで使えます。[^skills] 条件は3つです。[^skills]
+
+- 18歳以上
+- ログイン
+- 「アクティビティの保存（활동 기록 보관）」（会話の記録を自分のアカウントに残しておく設定、[第9章](09-privacy.md)）をオンにする
 
 ### スキル画面を開く
 
@@ -30,7 +36,7 @@
 - ②「作成（만들기）」を押すと、③作り方が3つ出てきます。
   - **「Geminiで作成（Gemini로 만들기）」**: 何がしたいかを会話で説明すると、Geminiが一緒に作ってくれます。初めてなら、これがいちばん簡単です。
   - **「手動で作成（수동으로 만들기）」**: 空の用紙に、名前・説明・指示を自分で書きます。
-  - **「アップロード（업로드하기）」**: スキルファイル（`SKILL.md`）や、そのファイルが入ったフォルダをアップロードします。別のサービスで作ったスキルを持ってくるときに使います（WebとMacアプリのみ）。[^transition]
+  - **「アップロード（업로드하기）」**: スキルファイル（`SKILL.md`、スキルの名前・説明・指示が入ったファイル）や、そのファイルが入ったフォルダをアップロードします。別のサービスで作ったスキルを持ってくるときに使います（WebとMacアプリのみ）。[^transition]
 - ④Googleがあらかじめ作った**おすすめスキル**です。「+」を押して追加してから、自分に合わせて直して使ってもかまいません。[^skills]
 
 チャットで「こういう指示でスキルを作って」と話しかけても作れます。ただし、**オン・オフ・削除は「カスタマイズ（맞춤설정）」→「スキル（스킬）」でしか**できません。[^skills]
@@ -48,7 +54,7 @@
 
 出典: Googleヘルプ[^skills]
 
-オフにしたスキルを使うよう頼むと、Geminiが再びオンにするかどうかを聞いてきます。[^skills] スキルはいくつでも作れますが、**同時にオンにしておけるのは100個まで**です。[^transition]
+オフにしたスキルを使うよう頼むと、Geminiが再びオンにするかどうかを聞いてきます。[^skills] スキルはいくつでも作れます。[^limit]
 
 スキルが、すべての機能と一緒に使えるわけではありません。GmailやDriveなどの連携アプリとは一緒に使えますが、**Canvas・Deep Research・動画の作成・音楽の作成・ガイド付き学習とは、まだ一緒に使えません。**[^transition]
 
@@ -111,9 +117,12 @@
 
 出典: Googleヘルプ[^transition]
 
+**Gemsがなくなるときに、スキルとして自動で作り直してくれます。**[^transition] それでも、自分で移しておくと安心です。
+
+::: details 詳しく（クリックして開く）
 - 18歳未満の個人アカウントは、あとで切り替わり、日程は別に知らされるそうです。会社のアカウントは2027年3月、学校のアカウントは2027年6月です。[^transition]
-- **Gemsがなくなるときに、スキルとして自動で作り直してくれます。**[^transition] それでも、自分で移しておくと安心です。
 - ミニアプリを作る実験機能の**OpalとGoogle LabsのGemsも、同じ11月になくなります。**[^transition]
+:::
 
 ### 自動で移すときに抜けるもの
 
@@ -128,7 +137,11 @@
 
 1. Gemを開き、「ナレッジ（지식）」にあるファイルを一つずつ開いてダウンロードします。[^transition]
 2. 「カスタマイズ（맞춤설정）」→「スキル（스킬）」→「作成（만들기）」→「手動で作成（수동으로 만들기）」に、Gemの名前・説明・指示をコピーして貼り付けます。[^transition][^screen]
-3. ファイルまで移すには、今作ったスキルを「ダウンロード（다운로드）」して出てきた`SKILL.md`を、Gemのファイルと同じフォルダに入れます。**フォルダの名前は、スキルの名前と同じでなければなりません。** そのあと、同じスキルの横の「その他のオプション（옵션 더보기）」→「スキルを置き換える（스킬 바꾸기）」で、そのフォルダをアップロードします。[^transition]
+3. ファイルまで移すには、次のようにします。指示だけ移せばよいなら、この手順は飛ばしてもかまいません。[^transition]
+   - 今作ったスキルを「ダウンロード（다운로드）」します。.zipファイル（複数のファイルを一つにまとめた圧縮ファイル）がダウンロードされます。
+   - .zipファイルを開くと、`SKILL.md`が入っています。
+   - 1でダウンロードしたGemのファイルが入っているフォルダに、`SKILL.md`を移します。**フォルダの名前は、スキルの名前と同じでなければなりません**（例: `summarize-meeting-notes`）。
+   - スキル画面に戻り、同じスキルの横の「その他のオプション（옵션 더보기）」→「スキルを置き換える（스킬 바꾸기）」を押して、そのフォルダをアップロードします。
 
 Gemsと違って、スキルには**「このスキルでやり取りした会話」の一覧ページがありません。** スキルを使った会話も、サイドメニューの通常の会話一覧に混ざって表示されます。[^transition] Gemsの共有、Driveのファイル・ノートブックを入れる機能は、「今後数週間以内に」スキルにも入ってくるそうです。[^transition]
 
@@ -151,7 +164,7 @@ Gemsと違って、スキルには**「このスキルでやり取りした会�
 - ③**「インストール済み（설치됨）」**は、すでに連携されているアプリです。このガイドのアカウントでは、Google Workspace・Google検索サービス・連絡先・YouTube Music・Gemini Notebook・Verify AIが表示されていました。
 - ④点が3つのメニューを押すと、「今すぐ使う（지금 사용）」と「接続を解除（연결 해제）」が出ます。
 - ⑤**「すべて（전체）」**は、さらに連携できるアプリです。「+」で連携します。
-- ⑥「+ カスタム（+ 맞춤）」は、他の会社のサーバーを直接つなぐメニューのようです。ヘルプによると、この機能（カスタムアプリ）は**18歳以上で、アメリカにいるユーザー**だけが使えます。[^custom] 初心者の段階では、使わなくてかまいません。
+- ⑥「+ カスタム（+ 맞춤）」は、一覧にない他の会社のサービスを直接つなぐメニューのようです。**アメリカにいるユーザーだけ**が使えるので[^custom]、初心者の段階では使わなくてかまいません。
 
 アプリ名を押すと、詳細画面が開きます。何ができて何ができないか、質問の例が出ます。[^apps] 「Google Workspace」を一つ連携すると、**Gmail・Googleカレンダー・Docs・Drive・Keep・Tasks**を一緒に使えるようになります。[^workspace][^screen]
 
@@ -195,7 +208,7 @@ Google検索、YouTube、Googleマップ、航空券・ホテルの**公開情�
 
 検索の公開情報は「アクティビティの保存（활동 기록 보관）」がオフでも使えますが、マップ・YouTube・航空券・ホテルはオンになっている必要があります。[^apps]
 
-ヘルプにはDropboxなど他の会社のアプリも出てきますが、**アメリカにいるユーザー専用**のアプリもあります。[^dropbox] 今使っているデバイスの一覧にないアプリは、そのデバイスでは使えません。[^apps]
+今使っているデバイスの一覧にないアプリは、そのデバイスでは使えません。[^apps][^dropbox]
 
 <Quiz id="ch307-apps" />
 
@@ -205,7 +218,11 @@ Google検索、YouTube、Googleマップ、航空券・ホテルの**公開情�
 
 - **機微な内容が混ざることがあります。** 連携アプリのデータには、健康や宗教のような機微な内容や機密が入っていることがあります。今後そのアプリに新しくできるデータも、Geminiが見られます。
 - **人が一部を見ることがあります。** 連携アプリのデータの一部は、人間のレビュー担当者（訓練を受けた外部業者の職員を含む）が見ます。そのため、**レビュー担当者に見られては困る機密が入ったアプリは連携しないように**と、Google自身が案内しています。
-- **学習についての説明は次のとおりです。** Gmailの受信トレイやDrive自体で、AIモデルを直接学習させることはありません。ただし、答えを作るときに使った**要約・抜粋・推論**では学習します。メールやファイルが短ければ、その要約が原文そのままのこともあります。そして「アクティビティの保存（활동 기록 보관）」がオンだと、連携アプリのデータが混ざったアクティビティが、AI学習を含むサービス改善に使われます。
+- **学習についての説明は次のとおりです。**
+  - Gmailの受信トレイやDrive自体で、AIモデルを直接学習させることはありません。
+  - ただし、答えを作るときに使った**要約・抜粋・推論**では学習します。たとえば「読書会の場所を知らせてくれたメールを探して」と聞くと、答えを作るために取り出したそのメールの要約がこれに当たります。
+  - メールやファイルが短ければ、その要約が原文そのままのこともあります。
+  - 「アクティビティの保存（활동 기록 보관）」がオンだと、連携アプリのデータが混ざったアクティビティが、AI学習を含むサービス改善に使われます。
 - **連携を切っても、会話の記録は残ります。** アプリの連携を切ったり、そのアプリのデータを消したりしても、「Geminiアプリのアクティビティ（Gemini 앱 활동）」の記録は消えません。記録は別に消す必要があります（[第9章](09-privacy.md)）。
 
 会社のメールや、他の人の情報が多いDriveは、**最初から連携しない**のがいちばん簡単な方法です。必要なファイルだけをその都度アップロードしてもかまいません（[第4章](04-files-create.md#ファイルのアップロード)）。
@@ -246,6 +263,8 @@ Google検索、YouTube、Googleマップ、航空券・ホテルの**公開情�
 次の章: [第8章 仕事を任せる](08-tasks.md)
 
 [^screen]: Gemini Web画面（Google AI Pro、韓国語）で直接確認。サイドメニュー「새 채팅」「라이브러리」「이미지」「예약됨」「맞춤설정」「더보기」（開くと「동영상」「Gems」）。「맞춤설정」の上のタブ「탐색」「커넥터」「스킬」。「스킬」タブの案内 "스킬을 추가하거나 생성하여 Gemini가 할 수 있는 작업 범위를 넓혀 보세요"、「만들기」メニュー「Gemini로 만들기」「수동으로 만들기」「업로드하기」、「추천」スキル「글쓰기 스타일 맞추기」「에너지 효율 최적화」「다양한 관점 살펴보기」「새로운 아이디어 생성」「회의 준비」。「커넥터」タブのタイトル「연결된 앱」、案内 "도구를 연결하여 더 많은 작업을 처리하세요"、「검색」欄と「+ 맞춤」ボタン、「설치됨」Google Workspace・Google 검색 서비스・연락처・YouTube Music・Gemini Notebook・Verify AI、「전체」YouTube・AndroidDevSummit・Google 비즈니스 프로필・GitHub。インストール済みアプリの点が3つのメニュー「지금 사용」「연결 해제」。「Google Workspace」詳細画面のアプリ一覧 Gmail・Google Calendar・Google Docs・Google Drive・Google Keep・Google Tasks。ヘルプのGemsのナレッジファイル欄の名前は、韓国語版で「지식」。（確認日 2026-10-31）
+[^at]: ヘルプによると、`/`はもうすぐ`@`に変わるそうです。画面に表示されているほうを使ってください。出典は下の「Gemsからスキルへの移行」のヘルプです。
+[^limit]: ただし、**同時にオンにしておけるのは100個まで**です。出典は下の「Gemsからスキルへの移行」のヘルプです。
 [^skills]: Googleヘルプ「Create & manage skills for Gemini Apps」（韓国語版「Gemini 앱에서 스킬 만들기 및 관리하기」）。"Be 18 or over." / "Have Keep Activity on." / "Important: For now, skills are only available in the Gemini mobile app, the Gemini app on Mac, and the Gemini web app at gemini.google.com." / "Tip: Skills are available without a Google AI subscription and can be used in your chats." / "If you don’t find “Customize,” first click More ." / "On the Skills page, you can create a skill with help from Gemini, build one from a prefilled or blank template, or upload a skill file or a folder with a SKILL.md file and optional supported reference files." / "Tip: You can’t activate, deactivate, or delete a skill from a chat or task thread." / "Naming convention: The skill name inside SKILL.md must use all lowercase with words separated by a hyphen (such as my-new-skill)." / "If a skill is off and you ask Gemini to use it, Gemini will ask you if you want to turn it back on." / "Important: If you delete a skill, it can’t be undone." / "Click More   Download . This downloads your skill in a .zip file." 韓国語画面の名前 「비활성화」「Gemini로 수정」「다운로드」「삭제」. https://support.google.com/gemini/answer/17094296 （確認日 2026-10-31）
 [^transition]: Googleヘルプ「About the transition from Gems to skills」（韓国語版「Gems에서 스킬로의 전환에 관한 정보」）。"Skills are reusable custom instructions that can help you automate tasks and save time in Gemini." / "Easy access: Use a skill by typing / (soon to be @) followed by the skill's name directly in any Gemini chat." / "Automatic use: Gemini automatically recognizes when a skill is relevant to your current prompt and applies it for you." / "Stackable: Combine multiple skills in a single chat to handle more complex tasks." / "You can create as many skills as you want, but only 100 can be active at a time." / "For now, the option to upload files to create skills is only available in the Gemini app on Mac and in the Gemini web app at gemini.google.com." / "Skills work with some but not all features. You can use them with Connected Apps like Workspace apps, but they do not yet work with features like Canvas and Deep Research." / "November 17, 2026: Gems transition to skills and become read only. You can still access your Gems, but can’t use or edit them, or create new ones." / "December 17, 2026: Gems are removed from Gemini Apps. You’ll no longer be able to access your Gems." / "If you’re under 18 and signed in to a personal Google account, your Gems will transition to skills at a later date. We’ll share more details soon." / "March 2027: Workspace business, enterprise, and non-profit accounts." / "June 2027: Workspace education accounts." / "As part of this change, Opal, our experiment for building mini apps, as well as Gems by Google Labs, will also go away at the same time in November." / "When we remove Gems, we’ll automatically recreate your Gems as skills." / "Skills have a 100 MB total size limit for files. If your Gem is larger than this when we transition it to a skill, we automatically remove the largest files first until it’s under the limit." / "Some file types are not supported in skills. When we transition your Gems to skills, these unsupported file types will not be included:" / "If the Gem has files under “Knowledge,” download your files." / "Copy and paste the name, description, and instructions from your Gem to your skill." / "On your computer, open the .zip file and move the SKILL.md file into the folder with your Gem files." / "Important: The name of the folder must match the name of the skill." / "Go back to the Skills page, and next to the same skill, click More options   Replace skill ." 韓国語版の名前 「옵션 더보기」「스킬 바꾸기」. / "Unlike Gems, skills don’t have a dedicated page that lists your recent chats with that skill." / "In the coming weeks, skills will have the features you loved in Gems, including the ability to share them with others and add files from Google Drive and notebooks from Gemini Notebook." https://support.google.com/gemini/answer/18560919 （確認日 2026-10-31）
 [^write]: Googleヘルプ「Write effective skills for Gemini Apps」（韓国語版「Gemini 앱을 위한 효과적인 스킬 작성하기」）。"Keep your skills short and focused. Instead of long paragraphs of general explanation, focus on:" / "Check if a skill is relevant. Gemini only checks the skill’s name and description to determine if a skill is relevant for your task." / "Repeat prompts: You give Gemini the same instructions over and over, especially for complex tasks with long prompts." / "A one-off job: You only need to do it once and won't repeat it." / "Start with an action statement, or verb. Focus on what the skill does, not what it is." / "Keep the description focused. Make it as clear as possible and within the 1024 character limit." / "Instead of giving instructions that only apply to a specific task, give instructions that teach Gemini how to handle a type of task." / "Tell Gemini exactly what to do if a piece of information is missing. This prevents Gemini from making up or skipping important details." https://support.google.com/gemini/answer/17102773 （確認日 2026-10-31）
@@ -255,6 +274,6 @@ Google検索、YouTube、Googleマップ、航空券・ホテルの**公開情�
 [^youtube]: Googleヘルプ「Find & ask about YouTube content in Gemini Apps」（韓国語版「Gemini 앱에서 YouTube 콘텐츠를 찾고 질문하기」）。"Gemini uses public information from YouTube to help you:" / "Take actions that impact your YouTube experience, like saving a video to a playlist or adding a comment on a video." https://support.google.com/gemini/answer/16622858 （確認日 2026-10-31）
 [^maps]: Googleヘルプ「Find places & get directions in Gemini Apps」（韓国語版「Gemini 앱에서 장소 및 경로 찾기」）。"Get directions based on mode of transport and help you avoid things like tolls" https://support.google.com/gemini/answer/16622866 （確認日 2026-10-31）
 [^flights]: Googleヘルプ「Search for flights & hotels in Gemini Apps」（韓国語版「Gemini 앱에서 항공편 및 호텔 검색하기」）。"Gemini uses public information from Google Flights and Google Hotels to help you:" / "Book a flight or hotel for you" （できないことの一覧） https://support.google.com/gemini/answer/16622256 （確認日 2026-10-31）
-[^dropbox]: Googleヘルプ「Manage files & folders in your Dropbox in Gemini Apps」。"Be 18 or over and in the US." https://support.google.com/gemini/answer/17211088 （確認日 2026-10-31）
+[^dropbox]: ヘルプにはDropboxなど他の会社のアプリも出てきますが、**アメリカにいるユーザー専用**のアプリもあります。Googleヘルプ「Manage files & folders in your Dropbox in Gemini Apps」。"Be 18 or over and in the US." https://support.google.com/gemini/answer/17211088 （確認日 2026-10-31）
 [^custom]: Googleヘルプ「Connect & manage custom apps for Gemini Apps」。"Be 18 or over and in the US." / "Google does not control, monitor, or secure third-party MCP servers. You’re responsible for supervising the MCP server." https://support.google.com/gemini/answer/17209137 （確認日 2026-10-31）
 [^connected]: Googleヘルプ「About personalization with Connected Apps」（韓国語版「연결된 앱을 통한 개인화에 관한 안내」）。"Data shared may relate to topics you find sensitive, like race, religion, and health, or confidential info." / "Keep in mind that if new data is added to these apps in the future, Gemini will have access to that data." / "Gemini does not train generative AI models directly on your Gmail inbox, Drive, Contacts, Calendar or other Workspace apps, on your Google Wallet and payments services, or on imagery or audio from your Google Photos library." / "To make our responses relevant, helpful, and high quality, we train our generative AI models off of these summaries, excerpts, generated media, and inferences." / "Gemini Apps activity, which includes data from apps you connect, is used to improve Google services for everyone, including by training generative AI models, if your Keep Activity setting is on." / "In some cases, for example, where the email or file is brief or particularly relevant to respond to the prompt, the summary may just be the email or file." / "When connected to Gemini, a subset of Connected Apps data processed by Gemini is reviewed by human reviewers (including trained service providers) to debug our services, help keep them safe, and improve them." / "Important: Please don't connect your apps to Gemini Apps if they contain confidential information that you wouldn’t want a reviewer to see." / "Disconnecting an app or deleting data in a connected app doesn’t delete any data from Gemini Apps Activity." https://support.google.com/gemini/answer/16836988 （確認日 2026-10-31）

@@ -1,6 +1,6 @@
 # 第2章 ターミナルの基本
 
-<Badge type="tip" text="必須" /> このステップを進めるなら、必ず読んでください。
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
 
 > **一言まとめ**: ターミナルでどうしても必要なコマンドは、ほんのいくつかです。`pwd` で今いる場所を見て、`ls` で何があるかを見て、`cd` で移動します。この章の最後に、練習用フォルダを作ってメモを入れます。
 
@@ -68,11 +68,11 @@ ls
 | Linux | `/home/seoyeon` |
 | Windows | `C:\Users\seoyeon` |
 
-**ホームフォルダ**は、自分のアカウントの出発点になるフォルダです。ターミナルを開くと、ふつうはここから始まります。この住所を短く書く記号が `~`（チルダ）です。だから `~/hello-ai-연습` は、「自分のホームフォルダの中の hello-ai-연습 フォルダ」という意味です。[^win-home]
+**ホームフォルダ**は、自分のアカウントの出発点になるフォルダです。ターミナルを開くと、ふつうはここから始まります。この住所を短く書く記号が `~`（チルダ）です。だから `~/hello-ai-practice` は、「自分のホームフォルダの中の hello-ai-practice フォルダ」という意味です。[^win-home]
 
 パスの書き方は2つあります。
 
-- **フルの住所**: `~/hello-ai-연습/터미널` のように、どこで入力しても同じ場所を指します。
+- **フルの住所**: `~/hello-ai-practice/terminal` のように、どこで入力しても同じ場所を指します。
 - **今の場所が基準**: `inbox` のように書くと、「今のフォルダの中の inbox」です。
 
 `..` は1つ上のフォルダを表します。`.` は今のフォルダです。
@@ -117,7 +117,7 @@ PowerShellは、`-Force` のように `-` 1つに単語を付けます。同じ�
 `cd` は、別のフォルダに移動します。「change directory（フォルダを変える）」の略です。下の練習用フォルダは、この章の最後に作ります。今は読むだけにしてください。
 
 ```bash
-cd ~/hello-ai-연습
+cd ~/hello-ai-practice
 cd ..
 cd ~
 ```
@@ -182,8 +182,8 @@ sleep 30
 Mac・Linuxでは、こう入力します。
 
 ```bash
-mkdir -p ~/hello-ai-연습/터미널/inbox
-cd ~/hello-ai-연습/터미널
+mkdir -p ~/hello-ai-practice/terminal/inbox
+cd ~/hello-ai-practice/terminal
 pwd
 ls
 ```
@@ -191,19 +191,19 @@ ls
 Windows PowerShellでは、こう入力します。
 
 ```powershell
-mkdir $HOME\hello-ai-연습\터미널\inbox
-cd $HOME\hello-ai-연습\터미널
+mkdir $HOME\hello-ai-practice\terminal\inbox
+cd $HOME\hello-ai-practice\terminal
 pwd
 ls
 ```
 
-Mac・Linuxのコマンドの `-p` は、途中のフォルダまで一度に作るためのオプションです。このオプションがないと、`hello-ai-연습` フォルダがないときにエラーになります。`$HOME` は、PowerShellでホームフォルダを指す名前です。`pwd` の結果が `터미널` で終わり、`ls` に `inbox` が見えれば成功です。
+Mac・Linuxのコマンドの `-p` は、途中のフォルダまで一度に作るためのオプションです。このオプションがないと、`hello-ai-practice` フォルダがないときにエラーになります。`$HOME` は、PowerShellでホームフォルダを指す名前です。`pwd` の結果が `terminal` で終わり、`ls` に `inbox` が見えれば成功です。
 
 **2. 練習用のメモをダウンロードします。**
 
 ブラウザで下のリンクを右クリックして、「名前を付けてリンク先を保存」を選びます。ブラウザによって名前は少し違います。保存先は、ダウンロードフォルダのままにしておいてください。
 
-- [회의-2026-10-27-주간회의.txt](/practice/notes/inbox/회의-2026-10-27-주간회의.txt)
+- [meeting-2026-10-27-weekly.txt](/practice/ja/notes/inbox/meeting-2026-10-27-weekly.txt)
 
 すべて作り話のメモです。日付や曜日も物語のために作ったものなので、実際のカレンダーとは合いません。あとの章で、Claudeがこの点を指摘することがあります。間違ったことを言っているわけではないので、驚かなくて大丈夫です。
 
@@ -212,13 +212,13 @@ Mac・Linuxのコマンドの `-p` は、途中のフォルダまで一度に作
 Mac・Linuxでは、こう入力します。
 
 ```bash
-cp ~/Downloads/회의-2026-10-27-주간회의.txt inbox/
+cp ~/Downloads/meeting-2026-10-27-weekly.txt inbox/
 ```
 
 Windows PowerShellでは、こう入力します。
 
 ```powershell
-cp $HOME\Downloads\회의-2026-10-27-주간회의.txt inbox\
+cp $HOME\Downloads\meeting-2026-10-27-weekly.txt inbox\
 ```
 
 Macでは、Finderに「ダウンロード」と表示されていても、実際のフォルダ名は `Downloads` です。Linuxを日本語で使っていると、`~/ダウンロード` になっていることがあります。そのときは、`~/Downloads` を `~/ダウンロード` に変えて入力してください。
@@ -227,13 +227,13 @@ Macでは、Finderに「ダウンロード」と表示されていても、実�
 
 ```bash
 ls inbox
-cat inbox/회의-2026-10-27-주간회의.txt
+cat inbox/meeting-2026-10-27-weekly.txt
 ```
 
 `cat` は、ファイルの中身を画面に表示します。PowerShellでハングルが文字化けしたら、こう入力します。
 
 ```powershell
-Get-Content -Encoding UTF8 inbox\회의-2026-10-27-주간회의.txt
+Get-Content -Encoding UTF8 inbox\meeting-2026-10-27-weekly.txt
 ```
 
 自分に聞いてみてください。`pwd` の結果は、思っていたフォルダか？　`ls inbox` にメモのファイルが見えるか？　どちらもそうなら、次の章に進む準備はできています。

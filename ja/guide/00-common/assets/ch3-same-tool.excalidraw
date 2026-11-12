@@ -1,0 +1,164 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 240,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "Aさん：「履歴書を書いて」",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 240,
+   "y": 35,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 320,
+   "y": 0,
+   "width": 120,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "同じAI",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 440,
+   "y": 35,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 520,
+   "y": 0,
+   "width": 280,
+   "height": 70,
+   "backgroundColor": "#ffc9c9",
+   "fillStyle": "solid",
+   "label": {
+    "text": "空欄だらけの平凡な見本\n→「あまり役に立たない」",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 110,
+   "width": 240,
+   "height": 90,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "Bさん：経歴・応募する会社・\n希望する形式まで伝える",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 240,
+   "y": 155,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 320,
+   "y": 120,
+   "width": 120,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "同じAI",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 440,
+   "y": 155,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 520,
+   "y": 120,
+   "width": 280,
+   "height": 70,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "すぐ手直しして使える下書き\n→ 時間の節約",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 220,
+   "width": 800,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "道具は同じでも、何を伝えるかによって結果が変わる",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

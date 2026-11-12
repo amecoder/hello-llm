@@ -1,0 +1,44 @@
+# Weekly Meeting Minutes — 2026-10-27(Mon)
+
+<!-- File name: notes/minutes-YYYY-MM-DD-meeting-name.md
+     Don't make up information that isn't in the original memo; write (not in notes). -->
+
+- Place: Corner Cafe
+- Attendees: Minji (owner), Junho, Seoyeon (me)
+- Original memo: `inbox/meeting-2026-10-27-weekly.txt`
+
+## 1. Decisions
+
+<!-- Write only what was settled. One line each: what · how much/how · by when, key part in bold.
+     If you know who proposed it or another idea was put on hold, add a word at the end.
+     e.g. **Run a set menu as a 2-week trial.** Coffee+cookie 5,500 won (Junho's proposal). Afternoon discount idea (Minji's proposal) on hold. -->
+
+- **Run a weekday afternoon set menu as a 2-week trial.** Coffee+cookie set for 5,500 won (Junho's proposal), running for 2 weeks (specific start and end dates are `(not in notes)`). The weekday afternoon discount idea (Minji's proposal) is on hold.
+- **Increase Instagram posts from once a week to 3 times a week (Mon, Wed, Fri).** Junho takes the photos and Seoyeon writes the text; the start time, deadline, and who proposed it are `(not in notes)`.
+
+## 2. Action items
+
+<!-- Move over every task someone agreed to do in the meeting. If the owner or due date wasn't decided, send it to section 3.
+     Status is one of three: Planned / In progress / Done(MM/DD) -->
+
+| Action item | Owner | Due | Status |
+|---|---|---|---|
+| Buy a bathroom light bulb | Seoyeon | 10/27(Mon) | Planned |
+| Draft the set menu board wording | Seoyeon | 10/29(Wed) | Planned |
+| Find out the cost (ingredient costs) of mulled wine (non-alcoholic) | Junho | 10/31(Fri) | Planned |
+| Take photos for Instagram posts (3 times a week, Mon, Wed, Fri) | Junho | (not in notes) | Planned |
+| Write text for Instagram posts (3 times a week, Mon, Wed, Fri) | Seoyeon | (not in notes) | Planned |
+
+## 3. To discuss next
+
+<!-- Agenda items with no conclusion. Write why it wasn't decided and what is needed to decide.
+     e.g. **Whether to list on a delivery app** — no conclusion because of the fees. Need to compare fees. -->
+
+- **Finalizing the winter new menu (options: yuja tea, mulled wine (non-alcoholic), sweet potato latte)** — No conclusion, since we agreed to work out the mulled wine ingredient costs first. Need the mulled wine cost breakdown Junho will bring by `10/31(Fri)`.
+- **Whether to list on a delivery app** — No conclusion, still unsure because of the fees. Needs to be discussed again at the next meeting (`11/3(Mon)`).
+- **Weekday afternoon discount idea** — Minji proposed it, but it was put on hold because we decided to try the 2-week set menu trial first. Need to check the results of the 2-week trial.
+- **Start deadline for Instagram posts (photos and text) (item with undecided owner/due date)** — The owners (Junho, Seoyeon) and days (Mon, Wed, Fri) were decided, but the specific start date and deadline are `(not in notes)`, so they need to be confirmed.
+
+## 4. Next meeting
+
+- 11/3(Mon) 10 AM

@@ -1,9 +1,11 @@
 # 第2章 安裝桌面應用與第一次會話——安裝、登入、Code 標籤頁、選擇資料夾、交代第一件事
 
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
+
 > **一句話總結**：安裝 Claude 桌面應用，開啟 **Code** 標籤頁。在輸入框下面一行**選好資料夾**，用平時說話的方式寫下要做的事併發送，Claude 就會在那個資料夾裡工作。
 > 這一章要讓它把一份亂七八糟的會議筆記，整理成**按我定的格式寫的會議紀要**。這是貫穿第3階段、不斷長大的「按我的方式幫我整理的工具」的第一步。
 
-本章依據 2026 年 10 月 31 日確認過的 Claude Code 官方文件，以及 macOS 桌面應用（韓語介面，付費賬號）寫成。介面上的名稱經常變化。如果和你的介面不一樣，請以你螢幕上顯示的名稱為準。
+本章依據 2026 年 10 月 31 日確認過的 Claude Code 官方文件，以及 macOS 桌面應用（韓語介面，付費帳號）寫成。介面上的名稱經常變化。如果和你的介面不一樣，請以你螢幕上顯示的名稱為準。
 
 ## 安裝並登入
 
@@ -12,9 +14,9 @@ Claude Code **包含在 Claude 桌面應用裡面。** 只要安裝應用就行�
 1. 在官方文件的安裝頁面，下載適合你電腦的檔案。[^quickstart]
    - **macOS**：一個檔案就能同時安裝在 Intel 和 Apple 晶片的 Mac 上。
    - **Windows**：有普通 PC（x64）用的安裝檔案，ARM64 PC 的另有一個。
-   - **Linux**：是測試版（試用版），在 Ubuntu、Debian 上用 apt（Linux 的程式安裝工具）安裝。
+   - **Linux**：是測試版（試用版）。有 Ubuntu、Debian 用的版本。[^linux]
 2. 執行下載好的檔案進行安裝。
-3. 開啟應用，用 **Anthropic 賬號**登入。[^quickstart] 如果是個人訂閱（Pro·Max·Ultra），用在 claude.ai 上用的賬號登入。[^auth]
+3. 開啟應用，用 **Anthropic 帳號**登入。[^quickstart] 如果是個人訂閱（Pro·Max·Ultra），用在 claude.ai 上用的帳號登入。[^auth]
 
 如果你在第2階段已經安裝了 Claude 應用，可以跳過這一步。如果應用比較舊，請下載最新版。macOS 是選單欄的 **Claude → 檢查更新…**，Windows 是 **Help → Check for Updates…**。[^update]
 
@@ -26,9 +28,12 @@ Claude Code 在應用側邊選單最上面的 **Code** 標籤頁裡。[^quicksta
 
 點 Code 時如果彈出提示，按下面處理。[^quickstart]
 
-- **提示你改用付費套餐**：用 Claude Code 需要有付費訂閱（[第1章](01-what-is.md#需要什麼——套餐)）。訂閱之後再開啟。
+- **提示你改用付費方案**：用 Claude Code 需要有付費訂閱（[第1章](01-what-is.md#需要什麼——方案)）。訂閱之後再開啟。
 - **提示你線上登入**：完成登入後重新啟動應用。
-- **403 錯誤**（表示訪問被拒絕的錯誤）：請看官方文件裡的認證問題排查說明。
+
+::: details 如果出現「403」這樣的錯誤
+403 錯誤表示訪問被拒絕。請看官方文件裡的認證問題排查說明。
+:::
 
 在 Code 標籤頁裡開啟新會話，會出現這樣的介面。
 
@@ -47,9 +52,11 @@ Claude Code 在應用側邊選單最上面的 **Code** 標籤頁裡。[^quicksta
 
 來源：介面名稱來自本指南的介面確認（2026-10-31），作用來自官方文件[^desktop-start]
 
-③ 的環境，一開始保持**這臺電腦**就行。官方文件裡的「Local」（我的電腦）就是這一項。[^quickstart] 在雲端工作的方法，在第8章裡講。
+③ 的環境，一開始保持**這臺電腦**就行。[^local] 在雲端工作的方法，在第8章裡講。
 
 模型（⑤）以後也可以更換。[^quickstart] 一開始直接用螢幕上選好的就可以。
+
+如果你的介面和圖裡不一樣，「選擇環境」在輸入框**上方**，那就是舊的介面佈局。只是位置不同，做的事是一樣的，找到同名的專案選上就行。[^quickstart]
 
 ::: details 如果輸入框上方有「選擇環境」，而下面一行沒有環境
 這是舊的介面佈局。官方文件說明，如果新會話的輸入框下面看不到環境，就是舊佈局（earlier layout）。[^quickstart] 在舊佈局裡，環境和資料夾要在**輸入框上方**選，許可權模式和模型要在**下面一行**選。[^desktop-layout] 做的事是一樣的。
@@ -65,20 +72,20 @@ Claude Code 在**我選的資料夾裡面**工作。所以一開始最好另外�
 
 | 檔案 | 內容 |
 |---|---|
-| [회의-2026-10-27-주간회의.txt](/practice/notes/inbox/회의-2026-10-27-주간회의.txt) | 亂七八糟的週會筆記 |
-| [공부-2026-10-28-프롬프트-강의.txt](/practice/notes/inbox/공부-2026-10-28-프롬프트-강의.txt) | 聽課時寫的筆記 |
-| [회고-2026-10-29.txt](/practice/notes/inbox/회고-2026-10-29.txt) · [10-30](/practice/notes/inbox/회고-2026-10-30.txt) · [10-31](/practice/notes/inbox/회고-2026-10-31.txt) | 3 天的每日回顧 |
+| [meeting-2026-10-27-weekly.txt](/practice/zh-hant/notes/inbox/meeting-2026-10-27-weekly.txt) | 亂七八糟的週會筆記 |
+| [study-2026-10-28-prompt-lecture.txt](/practice/zh-hant/notes/inbox/study-2026-10-28-prompt-lecture.txt) | 聽課時寫的筆記 |
+| [review-2026-10-29.txt](/practice/zh-hant/notes/inbox/review-2026-10-29.txt) · [10-30](/practice/zh-hant/notes/inbox/review-2026-10-30.txt) · [10-31](/practice/zh-hant/notes/inbox/review-2026-10-31.txt) | 3 天的每日回顧 |
 
 筆記裡的日期和星期是為了故事編出來的，所以**和真實的 2026 年日曆對不上。** 核對結果時，請看和**筆記裡寫的**日期、星期是否一致。
 
-1. 在你的電腦上新建一個資料夾 **整理工具（정리도구）**，再在裡面建一個 **inbox** 資料夾。
+1. 在你的電腦上新建一個資料夾 **整理工具（organizer）**，再在裡面建一個 **inbox** 資料夾。放整理結果的 **notes** 資料夾不用提前建。在本指南的實操中，Claude 儲存時自己建了它。
 2. 下載上面的 5 個檔案，放進 **inbox**。
 3. 點 Code 標籤頁輸入框下面一行的 **選擇…**（④）。
 
 ![資料夾選單。① 資料夾「選擇…」，② 「搜尋資料夾…」欄（圖中輸入了一個沒開啟過的其他練習資料夾的名字，顯示出「沒有匹配項」），③ 「開啟資料夾…」都標有紅色編號](../../../guide/20-claude-code/assets/shot-02-folder-menu-marked.png)
 
-4. 選單開啟後，點最下面的 **開啟資料夾…**（③）。官方文件裡的「Open folder…」就是這一項。[^quickstart]
-5. 在選擇檔案的窗口裡選擇 **整理工具** 資料夾，點 **開啟**。
+4. 選單開啟後，點最下面的 **開啟資料夾…**（③）。[^quickstart]
+5. 在選擇檔案的視窗裡選擇 **整理工具** 資料夾，點 **開啟**。
 
 選單上方會顯示**最近開啟的資料夾**。開啟過一次的資料夾，下次可以在 ② 的搜尋欄裡輸入名字直接選。第一次開啟的資料夾，會像圖裡那樣顯示「沒有匹配項」，所以用 **開啟資料夾…** 來開啟。
 
@@ -116,6 +123,8 @@ Claude Code 在**我選的資料夾裡面**工作。所以一開始最好另外�
 
 如果許可權模式是**手動**（官方文件裡的 Manual），Claude 在修改檔案或執行命令**之前，會先詢問。** 它會展示將要改什麼，每次更改你都可以同意或拒絕。[^desktop-modes] 一開始保持手動，一項一項看它想做什麼，會更讓人放心。許可權模式在[第4章](04-permissions-undo.md)裡詳細講。
 
+即使是手動模式，它也可能不詢問就直接建立檔案。這不是故障。如果你以前在終端裡用過 Claude Code，那時設定的內容可能也應用到了應用裡。本指南的截圖也是在有這種設定的電腦上拍的，所以沒有許可視窗。詳細原理在下面的框裡。
+
 ::: details 明明是手動，卻沒有詢問就直接建立了檔案
 如果你以前在終端裡用過 Claude Code，那時設定的內容可能也應用到了應用裡。**桌面應用讀取的設定檔案，和終端版 Claude Code 是同一份。**[^desktop-modes] 比如，如果你加過"寫檔案不要詢問"這樣的允許規則，即使是手動模式，這件事也不會詢問就直接做。本指南的截圖也是在有這種設定的電腦上拍的，所以沒有出現許可視窗。
 :::
@@ -135,16 +144,16 @@ Claude Code 在**我選的資料夾裡面**工作。所以一開始最好另外�
 - 有沒有編造筆記裡**沒有的內容**？
 - 原始筆記還是原樣嗎？
 
-我們把本指南里實際生成的會議紀要和筆記對照了一下，結果如下。
+我們把本指南裡實際生成的會議紀要和筆記對照了一下，結果如下。
 
 | 筆記裡寫的 | 會議紀要 |
 |---|---|
-| 咖啡+餅乾套餐 5,500 韓元，試做 2 周 / 折扣暫緩 | 原樣搬過來 |
+| 咖啡+餅乾方案 5,500 韓元，試做 2 周 / 折扣暫緩 | 原樣搬過來 |
 | 俊浩 週五前 成本 / 瑞妍 週三前 文案 / 瑞妍 今天 燈泡 | 日期補上為 10/31（週五）、10/29（週三）、10/27（週一）當天 |
 | 新品看了成本再決定 | 另外註明"備忘錄裡沒有寫明什麼時候決定" |
 | 下次會議 11/3 週一上午 10 點 | 原樣搬過來 |
 
-來源：本指南的實操結果（2026-10-31）。結果檔案：[2장-회의록-2026-10-27-주간회의.txt](/practice/notes/results/2장-회의록-2026-10-27-주간회의.txt)（保持 Markdown 格式原樣）
+來源：本指南的實操結果（2026-10-31）。結果檔案：[ch2-minutes-2026-10-27-weekly.txt](/practice/zh-hant/notes/results/ch2-minutes-2026-10-27-weekly.txt)（保持 Markdown 格式原樣）
 
 **即使是同樣的請求，每次的結果也會略有不同。** 表格的樣子或者語氣和本指南不一樣也沒關係。如果上面的檢查問題你都能回答"是"，就是做好了。
 
@@ -157,13 +166,13 @@ Claude Code 在**我選的資料夾裡面**工作。所以一開始最好另外�
 1. 建立 **整理工具** 資料夾，把 5 個練習材料放進 **inbox**。
 2. 在 Code 標籤頁裡開啟新會話，把資料夾選成 **整理工具**。
 3. 原樣傳送上面"更好的請求"，並用 4 個檢查問題檢查生成的會議紀要。
-4. 如果有不滿意的地方，試著用一句話讓它修改（例如："在待辦表格里加一欄'狀態'"）。
+4. 如果有不滿意的地方，試著用一句話讓它修改（例如："在待辦表格裡加一欄'狀態'"）。
 
 **連續任務**：如果你有自己實際寫過的會議筆記或上課筆記，刪掉個人資訊後放一份進 **inbox**，傳送同樣的請求。格式（決定·要做的事·下次討論）可以按自己的工作改。從[第3章](03-screen-tour.md)起會繼續用這個資料夾。
 
 ## 小結
 
-- Claude Code 在 Claude 桌面應用的 **Code** 標籤頁裡。只要安裝應用並用 Anthropic 賬號登入就行。
+- Claude Code 在 Claude 桌面應用的 **Code** 標籤頁裡。只要安裝應用並用 Anthropic 帳號登入就行。
 - 在輸入框下面一行選擇環境（這臺電腦）、資料夾、模型、許可權模式。
 - 一開始選一個練習用的小資料夾。工作資料夾就是 Claude 能動手的範圍。
 - 請求裡要寫明要讀什麼、格式、儲存在哪裡、什麼不能動。
@@ -187,5 +196,7 @@ Claude Code 在**我選的資料夾裡面**工作。所以一開始最好另外�
 [^desktop-start]: Claude Code 官方文件，「Desktop application」. "Before you send your first message, choose the environment, project folder, permission mode, and model in the row under the prompt box" / "Type what you want Claude to do and press Enter to send. Claude reads your project files, makes changes, and runs commands based on your permission mode." / "click the stop button to interrupt immediately, or type a correction and press Enter to send it without stopping the running action." https://code.claude.com/docs/en/desktop (確認日期 2026-10-31)
 [^desktop-layout]: Claude Code 官方文件，「Desktop application」. "In the earlier layout, choose the environment and any project folder or repository above the prompt box, and the permission mode and model in the row under it." https://code.claude.com/docs/en/desktop (確認日期 2026-10-31)
 [^desktop-modes]: Claude Code 官方文件，「Desktop application」. "Claude asks before editing files or running commands. You see a diff and can accept or reject each change." / "The desktop app reads the same settings files as the CLI." https://code.claude.com/docs/en/desktop (確認日期 2026-10-31)
+[^linux]: 在 Linux 上用 apt（在 Linux 裡安裝程式的工具）安裝。參見官方文件「Get started with the desktop app」。https://code.claude.com/docs/en/desktop-quickstart (確認日期 2026-10-31)
+[^local]: 官方文件裡把這一項叫作「Local」（我的電腦）。資料夾選單裡的「開啟資料夾…」就是官方文件裡的「Open folder…」。https://code.claude.com/docs/en/desktop-quickstart (確認日期 2026-10-31)
 [^auth]: Claude Code 官方文件，「Authentication」. "Claude Pro, Max, or Ultra subscription: log in with your claude.ai account." https://code.claude.com/docs/en/authentication (確認日期 2026-10-31)
 [^update]: Claude Code 官方文件，「Desktop application」. "Open Claude > Check for Updates… on macOS or Help > Check for Updates… on Windows to update." https://code.claude.com/docs/en/desktop (確認日期 2026-10-31)

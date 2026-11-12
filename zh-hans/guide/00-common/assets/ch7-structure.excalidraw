@@ -1,0 +1,123 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 300,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "写成一大块的请求",
+    "fontSize": 20,
+    "strokeColor": "#1e1e1e"
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "blob",
+   "x": 0,
+   "y": 50,
+   "width": 300,
+   "height": 300,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "把下面的会议记录总结一下\n要发给组长\n写成三行\n会议记录：今天的会议上\n新产品的上市日期...\n...（很长的会议记录）...\n啊还有，决定事项\n单独标出来",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 440,
+   "y": 0,
+   "width": 320,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "分了格子的请求",
+    "fontSize": 20,
+    "strokeColor": "#1e1e1e"
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "b1",
+   "x": 440,
+   "y": 50,
+   "width": 320,
+   "height": 60,
+   "backgroundColor": "#a5d8ff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "<context> 情况\n要发给组长的摘要",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "b2",
+   "x": 440,
+   "y": 125,
+   "width": 320,
+   "height": 75,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "<document> 资料\n（很长的会议记录）",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "b3",
+   "x": 440,
+   "y": 215,
+   "width": 320,
+   "height": 60,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "<instructions> 要做的事\n三行摘要 + 标出决定事项",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "b4",
+   "x": 440,
+   "y": 290,
+   "width": 320,
+   "height": 60,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "<format> 答案的样子\n摘要3行 + 决定事项表",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 310,
+   "y": 195,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     118,
+     0
+    ]
+   ],
+   "width": 118,
+   "height": 0,
+   "label": {
+    "text": "整理",
+    "fontSize": 18
+   }
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+$ cd ~/hello-ai-practice/organizer
+$ claude -p "Show the list of files in the notes folder, and tell me in one line per file which template (from templates) each file used. Do not edit any files. Keep the answer short, as a table only."
+
+There are 4 files in `notes/`. I matched each file's title and opening sections against the templates in `templates/` to decide which template it used. I did not edit any files.
+
+| notes file | Template used |
+|---|---|
+| `study-2026-10-28-prompt-lecture.md` | `templates/study-notes.md` |
+| `weekly-review-2026-10-27.md` | `templates/weekly-review.md` |
+| `minutes-2026-10-27-weekly.md` | `templates/minutes.md` |
+| `minutes-2026-10-29-adhoc.md` | `templates/minutes.md` |
+
+Checked scope: 4/4 (compared only the first 15 lines of each file)

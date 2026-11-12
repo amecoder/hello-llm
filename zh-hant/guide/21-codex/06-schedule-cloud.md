@@ -1,5 +1,7 @@
 # 第6章 預約、雲端、手機——到點自動執行，人不在也行
 
+<Badge type="info" text="選讀" /> 需要的時候再讀。跳過也能跟上後面的章節。
+
 > **一句話總結**：每週都一樣的事，用**預約**（Scheduled）來跑。用我的資料夾的預約，必須**電腦開著、應用在執行**才會執行。
 > 雲端是給有 GitHub 倉庫的人用的，手機則像遙控器一樣用來操控我的電腦。
 
@@ -9,13 +11,19 @@
 
 預約任務是先定好要重複的事，然後在後臺執行的功能。[^schedule] 在應用側邊欄的 **Scheduled** 裡，可以看到所有預約和執行記錄。[^inbox]
 
-預約在桌面應用或網頁上建立，終端（Codex CLI）裡沒有預約管理介面。[^no-cli] 預約也是透過對話來建立。[^chat-create] 在預約裡，還可以用 `$技能名稱` 來呼叫技能。[^skill] 用第5章的技能，可以這樣拜託它。
+預約在桌面應用或網頁上，像平時一樣透過對話來建立。[^chat-create][^no-cli] 在預約裡，還可以用 `$技能名稱` 來呼叫技能。[^skill] 用第5章的技能，可以這樣拜託它。
 
 ```
 每週五下午 6 點，用 $weekly-review 在 notes 資料夾裡做出那一週的週迴顧。
 ```
 
-**有條件。** 用我電腦裡資料夾的預約，只有在電腦開著、應用正在執行時才會執行。[^awake] macOS·Linux 的 **Prevent sleep while running** 設定，會讓電腦在對話**執行期間**不進入睡眠，這樣人不在也能讓對話繼續。[^sleep] 它並不是讓電腦一直醒著等到預約時間的功能，所以要使用預約，請另外確認電腦的節能設定。
+**有條件。** 用我電腦裡資料夾的預約，只有在電腦開著、應用正在執行時才會執行。[^awake] 要使用預約，請確認電腦的節能設定，看看到那個時間電腦是不是在睡眠。
+
+::: details 應用的「Prevent sleep while running」設定（點選展開）
+
+macOS·Linux 的 **Prevent sleep while running** 設定，會讓電腦在對話**執行期間**不進入睡眠，這樣人不在也能讓對話繼續。[^sleep] 它並不是讓電腦一直醒著等到預約時間的功能。所以要像上面說的那樣，另外確認電腦的節能設定。
+
+:::
 
 預約是**沒有人**的情況下執行的。所以，它沿用我預設的圍欄（沙盒）範圍，但如果組織沒有禁止，就會以**不徵求許可的方式**執行。[^unattended] 圍欄之外的事，沒有人可以問，所以可以認為會失敗。
 
@@ -23,11 +31,16 @@
 |---|---|
 | 只讀 | 需要寫檔案的預約會失敗 |
 | 在資料夾內寫入 | 像整理工具那樣只在資料夾裡寫的事可以執行 |
-| Full access | 不問就使用檔案·命令甚至網際網路。危險 |
+| Full access | 不問就使用檔案·命令甚至網際網路（危險） |
 
-出處：Codex 官方文件（只摘錄了一部分，中間一行是這本指南的整理）[^modes]
+出處：Codex 官方文件（只摘錄了一部分，中間一行是這本指南的整理）[^modes][^readonly]
 
-用第4章的許可權選單來說，Ask for approval 和 Approve for me 用的是中間一行（在資料夾內寫入）的圍欄，Full access 用的是最後一行。[^ask] 不過在預約裡，即使是 Ask for approval，也**不會詢問。** 「只讀」是在選單裡可能看不到的設定。
+用第4章的許可權選單來看是這樣的。[^ask]
+
+- **Ask for approval** 和 **Approve for me**：用的是中間一行（在資料夾內寫入）的圍欄。
+- **Full access**：用的是最後一行。
+
+不過在預約裡，即使是 Ask for approval，也**不會詢問。**
 
 建立預約之前，**請先在平時的對話裡把同樣的請求跑一遍。** 像第5章那樣把結果和原件對一對，沒問題時再轉成預約。最初幾次的執行結果也一定要確認。官方文件也建議同樣的順序。[^test]
 
@@ -35,13 +48,15 @@
 
 ## 雲端有什麼不同
 
-雲端任務在網際網路另一端的工作空間裡執行，所以我的電腦睡著時它也會繼續。[^cloud] 作為交換，有條件。
+雲端任務在網際網路另一端的工作空間裡執行，所以我的電腦睡著時它也會繼續。[^cloud]
 
-- 必須有我能使用的**已釋出環境**（published environment）。[^env]
-- 建立環境時，要選擇並連線**GitHub 倉庫**。[^github]
+整理工具資料夾只在我的電腦上，所以這本指南不使用雲端。如果你在公司用 GitHub（把檔案放到網際網路上、一起管理改動記錄的服務）工作，只要記住：耗時很久的事可以送到雲端，電腦關掉也行。
+
+要使用雲端，有幾個條件。
+
+- 必須有事先準備好的雲端工作空間，也就是**已釋出環境**（published environment）。[^env]
+- 要建立這個工作空間，需要選擇並連線**GitHub 倉庫**。[^github]
 - 我電腦裡的檔案、正在執行的程式、瀏覽器登入都不會轉到雲端。[^not-moved]
-
-整理工具資料夾只在我的電腦上，所以這本指南不使用雲端。如果你在公司用 GitHub 工作，只要記住：耗時很久的事可以送到雲端，電腦關掉也行。
 
 <Quiz id="ch506-cloud" />
 
@@ -51,7 +66,7 @@
 
 連線透過二維碼完成。官方文件要求**只連線我自己擁有的、可信的裝置。**[^trust] 因為已連線的手機可以操控我電腦裡的 Codex。
 
-官方文件以 iOS 應用為準來說明。功能是按賬號依次開放的，所以我的手機上可能還沒有。[^rollout]
+官方文件以 iOS 應用為準來說明。功能是按帳號依次開放的，所以我的手機上可能還沒有。[^rollout]
 
 <Quiz id="ch506-mobile" />
 
@@ -101,4 +116,5 @@
 [^trust]: Codex 官方文件，《Codex on mobile》。"Only connect devices you own and trust." https://learn.chatgpt.com/docs/mobile （確認日期 2026-11-01）
 [^rollout]: Codex 官方文件，《Codex on mobile》。"Use the ChatGPT mobile app with Cloud or a connected Mac or Windows PC. Availability depends on rollout and your workspace settings." https://learn.chatgpt.com/docs/mobile （確認日期 2026-11-01）
 [^ask]: Codex 官方文件，《Permissions》。"For most work, start with **Ask for approval**. It lets ChatGPT work within the current workspace and pauses before reaching beyond that boundary." / "Changing who reviews a request doesn't expand the sandbox." https://learn.chatgpt.com/docs/permission-modes （確認日期 2026-11-01）
-[^no-cli]: Codex 官方文件，《Scheduled tasks》。"Codex CLI doesn't provide the Scheduled management interface." https://learn.chatgpt.com/docs/automations （確認日期 2026-11-01）
+[^readonly]: 「只讀」是在第4章的許可權選單裡可能不會單獨顯示的設定（這本指南的整理）。
+[^no-cli]: 終端（Codex CLI）裡沒有預約管理介面。Codex 官方文件，《Scheduled tasks》。"Codex CLI doesn't provide the Scheduled management interface." https://learn.chatgpt.com/docs/automations （確認日期 2026-11-01）

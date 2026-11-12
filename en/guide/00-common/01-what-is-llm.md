@@ -1,9 +1,11 @@
 # Chapter 1. What Is an LLM?
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: An LLM is a program that read an enormous amount of text and practiced guessing "what comes next."
 > That is why it speaks very naturally, even though it does not always tell the truth.
 
-> **New here? Start with these sections.** Reading just "The Name 'LLM'," "How Does It Make an Answer?," "What It Is Good At," "What It Is Bad At, and What to Watch Out For," and "Try It Yourself" is fine. You can come back to the other sections when you get curious.
+> **New here? Start with these sections.** Reading just "The Name 'LLM'," "How Does It Make an Answer?," "What It Is Good At," "What It Is Bad At, and What to Watch Out For," and "Try It Yourself" is fine. Sections marked "Advanced" show only their first few lines, and the rest is folded away. Open a folded box whenever you get curious.
 
 ## The Name "LLM"
 
@@ -23,8 +25,13 @@ That is why AI like LLMs is called **generative AI**.[^academy-genai]
 
 ## What Does "Trained" Mean?
 
+<Badge type="warning" text="Advanced" /> If this is your first time, you can read just the few lines below and move on.
+
 When people talk about LLMs, you often hear that they were "trained." It is easy to picture a person reading and memorizing books, but it works a bit differently.
 **Training an LLM means solving a massive number of "guess the next word" problems and slightly adjusting the numbers inside the model every time it gets one wrong.**
+You can think of "the numbers inside the model" as countless tuning knobs that calculate which word comes next. Just as you turn a radio dial little by little to tune in a station, training turns these knobs little by little toward the right answer.
+
+::: details Read more of this section (click to expand)
 
 ### It Solves Countless Fill-in-the-Blank Problems
 
@@ -35,7 +42,7 @@ Here is how one problem works.
 3. **Grade it**: Compare the guess with the word that was actually in the original text. The original text had "stir-fry."
 4. **Adjust**: Tweak the numbers inside the model just a tiny bit so that "stir-fry" gets a slightly higher probability next time.
 
-![One training loop: ① Hide the end of a piece of text → ② The model outputs next-word candidates and probabilities → ③ Compare with the actual next word in the original text → ④ Slightly adjust the numbers inside the model to raise the probability of the right answer. Repeat this loop trillions of times](../../../guide/00-common/assets/ch1-training-loop.svg)
+![One training loop: ① Hide the end of a piece of text → ② The model outputs next-word candidates and probabilities → ③ Compare with the actual next word in the original text → ④ Slightly adjust the numbers inside the model to raise the probability of the right answer. Repeat this loop trillions of times](assets/ch1-training-loop.svg)
 
 It runs through this loop trillions of times. Because the right answer is already in the original text, humans do not need to write an answer key for each problem. That is why it can train on so much text.
 This stage is called **pre-training**.[^academy-pretrain] The "numbers" being adjusted are the parameters we cover in "Model Size" below.
@@ -76,6 +83,8 @@ If the memory feature is off, it will answer that it does not know. If it is on,
 
 <Quiz id="ch1-training" />
 
+:::
+
 ## How Does It Make an Answer?
 
 The core of what an LLM does is surprisingly simple. **It looks at the text so far and tacks on the most plausible next word, one by one.**
@@ -83,7 +92,7 @@ The core of what an LLM does is surprisingly simple. **It looks at the text so f
 Think of autocomplete on your smartphone keyboard. If you type "What should I eat for lunch," it suggests "today."
 An LLM does the same thing. It just looks at a much longer context and does it on a much larger scale.
 
-![From the candidates and probabilities for what comes after "What should I eat for lunch" (e.g., today 62%, now 25%, other candidates), it picks one to make "What should I eat for lunch today". It repeats this process of attaching the chosen word and picking the next one until the answer is complete](../../../guide/00-common/assets/ch1-next-word.svg)
+![From the candidates and probabilities for what comes after "What should I eat for lunch" (e.g., today 62%, now 25%, other candidates), it picks one to make "What should I eat for lunch today". It repeats this process of attaching the chosen word and picking the next one until the answer is complete](assets/ch1-next-word.svg)
 
 For example, if you ask:
 
@@ -110,7 +119,7 @@ Even for the exact same word, changing the context changes the probabilities of 
 | "The pitcher threw the" | "ball to home plate" |
 | "She poured water from the" | "pitcher into the glass" |
 
-That is why prompts matter. What you write becomes the context, and the context changes the probabilities.
+That is why the **prompt** (the question or request you send to AI) matters. What you write becomes the context, and the context changes the probabilities.
 The more clearly you describe your situation and what kind of answer you want, the more the words you want become the "plausible words" ([Chapter 4](04-prompt-basics.md)).
 
 Try it yourself:
@@ -125,10 +134,11 @@ The candidates the AI writes down are examples meant to explain the idea. It is 
 ### How Your Question Is Read
 
 Suppose you ask, "My stomach hurts—should I go to the hospital?" Roughly speaking, here is what happens inside the model.
+A few unfamiliar names come up, but you don't need to memorize them. Just follow the flow: **cut into small pieces, turn them into numbers, let them check each other, then pick the next word**.
 
 1. **It chops the text into pieces.** It cuts the text into small pieces called **tokens**. A single word can be one piece, or it can be split into several pieces.
 2. **It turns each piece into a bundle of numbers.** It is trained so that words with similar meanings become similar bundles of numbers. It is like how nearby neighborhoods on a map have similar coordinates. "Puppy" and "dog" are close together, while "refrigerator" is far away. This is called an **embedding**.[^word2vec]
-3. **The pieces check each other.** Each piece looks around at the other pieces in the sentence and figures out which ones matter for deciding its own meaning. For example, in Korean, the word *bae* can mean stomach, boat, or pear—by looking at "hurts" and "hospital," it locks in the meaning "stomach." This is called **attention**. The Transformer covered in [Chapter 2](02-why-it-matters.md) uses this exact method.[^attention]
+3. **The pieces check each other.** Each piece looks around at the other pieces in the sentence and figures out which ones matter for deciding its own meaning. For example, in Korean, the word *bae* can mean stomach, boat, or pear—by looking at "hurts" and "hospital," it locks in the meaning "stomach." This is called **attention**. The Transformer, the structure that most of today's LLMs are built on, uses this exact method. The Transformer comes up again in [Chapter 2](02-why-it-matters.md).[^attention]
 4. **After repeating this several times, it picks the next word.** It repeats steps 2 and 3 across many layers. At the end, it calculates probabilities for each candidate next piece, picks one, and tacks it on. Then it includes the piece it just added and runs the calculation again.
 
 Seen this way, "understanding" your question is a calculation where the pieces of your question check each other to narrow down the meaning. Whether we can call this the same as human understanding is covered below in "Does It Really Think?"
@@ -152,8 +162,12 @@ The model treats this entire long text as the context and writes what comes afte
 
 ## AI That Searches and Uses Tools
 
+<Badge type="warning" text="Advanced" /> If this is your first time, you can read just the few lines below and move on.
+
 Today's AI can even look up today's news using web search. We said it does not know what happened after training ended (see "Knowledge Cutoff" below)—so how is that possible?
 **The model does not go on the internet itself.** The model writes a request note saying, "Please search for this." Then the service searches on its behalf and pastes the results into the conversation. The model reads those results and continues with the next words.
+
+::: details Read more of this section (click to expand)
 
 ### Step-by-Step: How It Uses a Tool
 
@@ -165,7 +179,7 @@ Suppose you ask, "How is the weather in Seoul today?"
 4. **Attach the results**: The search results are pasted into the conversation. Now today's weather is inside the context.
 5. **Answer**: The model looks at the expanded context and writes the next words. Out comes an answer like, "Seoul is clear today with a high of 18°C." If it still needs more information, it may repeat steps 2 through 4 several times.
 
-![Question "How is the weather in Seoul today?" → ① The model checks the tool list and decides to search → ② Writes a request: "Web search: Seoul weather today" → ③ The service runs the actual search → ④ Search results are attached to the chat → ⑤ The model reads the results and answers. The model only writes the request; the service runs it](../../../guide/00-common/assets/ch1-tool-calling.svg)
+![Question "How is the weather in Seoul today?" → ① The model checks the tool list and decides to search → ② Writes a request: "Web search: Seoul weather today" → ③ The service runs the actual search → ④ Search results are attached to the chat → ⑤ The model reads the results and answers. The model only writes the request; the service runs it](assets/ch1-tool-calling.svg)
 
 This method is called **tool calling** or **function calling**. Both OpenAI (maker of ChatGPT) and Anthropic (maker of Claude) describe this exact sequence in their developer documentation.[^tool-use][^openai-tools]
 Picture someone who works only at a desk indoors. Since they cannot step outside themselves, they write "Please check today's weather" on a note and hand it to an errand runner. They read the note the runner brings back and write their reply. The model is the person at the desk, and the service is the errand runner.
@@ -199,10 +213,16 @@ After you get the answer, ask yourself: Is there a sign that it actually searche
 
 <Quiz id="ch1-tools" />
 
+:::
+
 ## Model Size — Parameters
+
+<Badge type="warning" text="Advanced" /> If this is your first time, you can read just the few lines below and move on.
 
 You may have seen numbers like "8B" or "70B" attached to the end of AI model names. These numbers show **how big the model is**.
 The unit used to measure size is the **parameter**.
+
+::: details Read more of this section (click to expand)
 
 ### What Parameters Are — Tuning Knobs Inside the Model
 
@@ -210,7 +230,7 @@ Inside an LLM, there are a huge number of numbers. These numbers calculate "what
 **Training** is the process of tweaking these numbers little by little so the model guesses the next word well. It is like turning the tuning knob on a radio to lock in the station you want.
 Once training finishes, the knob settings are locked in place. The finished product is the model we use.
 
-![The input "The capital of South Korea is" passes through a model with countless tuning knobs (parameters) and becomes "Seoul". Training means turning the knobs little by little to guess the next word well, and having more knobs means a larger model](../../../guide/00-common/assets/ch1-parameters.svg)
+![The input "The capital of South Korea is" passes through a model with countless tuning knobs (parameters) and becomes "Seoul". Training means turning the knobs little by little to guess the next word well, and having more knobs means a larger model](assets/ch1-parameters.svg)
 
 ### How to Read the Numbers
 
@@ -247,16 +267,24 @@ How a model is polished after training matters too. In the "Learn More" box belo
 
 <Quiz id="ch1-parameters" />
 
+:::
+
 ## Does It Really Think?
+
+<Badge type="warning" text="Advanced" /> If this is your first time, you can read just the few lines below and move on.
 
 When you use AI, it feels as if it understands what you mean and thinks before answering. That feeling is not entirely wrong.
 "Picking the next word" is the way it outputs an answer. **Inside the calculations to pick that word, something close to thinking actually happens.**
 Whether that is the same as human thought, however, is still an open research question.
 
 > **Short answer**
-> 1. It **actually performs** calculations that are close to thinking.
-> 2. However, it **does not always do so.** Sometimes it takes shortcuts and gives a rough answer.
-> 3. And it **cannot accurately explain on its own** how it came up with its answer.
+> 1. It **actually performs** calculations that are close to thinking. For example, when answering "What is the capital of the state where Dallas is?", researchers saw the model link "Dallas is in Texas" and "The capital of Texas is Austin" one after the other inside.
+> 2. However, it **does not always do so.** Sometimes it takes shortcuts and gives a rough answer. Its scores dropped when the numbers in a problem were changed slightly or an irrelevant sentence was slipped in.
+> 3. And it **cannot accurately explain on its own** how it came up with its answer. Inside, it solved 36+59 by running a rough estimate and a last-digit calculation together, but when asked, it said it "carried the one, starting from the ones place."
+>
+> The research behind this is explained in detail in the box below.
+
+:::: details Read more of this section (click to expand)
 
 ### To Guess the Next Word Well, It Has to Know the Content
 
@@ -270,7 +298,7 @@ When they asked, "What is the capital of the state containing Dallas?", two step
 1. It recalled that "Dallas is in the state of Texas," and
 2. It connected that to "The capital of Texas is Austin."
 
-![Question "What is the capital of the state containing Dallas?" → ① Dallas is in Texas → ② The capital of Texas is Austin → Answer: Austin. Rather than pulling out a memorized answer, it linked two facts in order](../../../guide/00-common/assets/ch1-two-hop.svg)
+![Question "What is the capital of the state containing Dallas?" → ① Dallas is in Texas → ② The capital of Texas is Austin → Answer: Austin. Rather than pulling out a memorized answer, it linked two facts in order](assets/ch1-two-hop.svg)
 
 Rather than pulling out a memorized answer, it **linked two facts together** to build the answer.
 When writing poetry, before even starting a line, it first decided on a rhyming word to put at the end of that line. Then it wrote the sentence aiming toward that word. In other words, it **planned ahead**.
@@ -309,7 +337,7 @@ This means **what the AI says to explain its own thinking can differ from what a
 - However, just because its explanation or chain of thought sounds convincing does not guarantee the content is right. Always verify important details yourself.
 - Double-check even more carefully when a common problem is slightly tweaked, when irrelevant details are mixed in, or when the problem is brand new.
 
-::: details Learn More — How Did Researchers Look Inside the AI? (Click to expand)
+::: details Learn More — How Did Researchers Look Inside the AI? (click to expand)
 
 **Before you read**: Many of the studies introduced here are research reports published directly by AI companies. Some are preprints released before going through formal peer review at a journal or conference.
 So please read them as **"what has been observed so far"** rather than settled fact. New findings come out in this field every few months.
@@ -346,11 +374,17 @@ In 2025, the journal *Nature* published a study on reasoning models. It showed t
 
 <Quiz id="ch1-thinking" />
 
+::::
+
 ## It Doesn't Just Read Text — Documents, Photos, Audio, and Video
+
+<Badge type="warning" text="Advanced" /> If this is your first time, you can read just the few lines below and move on.
 
 Saying "LLMs trained on text" describes how LLMs started out. Today's ChatGPT, Claude, and Gemini can look at an uploaded photo and describe what is in it.
 They can also read the total amount off a photo of a receipt. Depending on the service, they can read tables in a PDF report, transcribe recorded speech, and summarize videos.
 A model that **handles multiple types of information together** like this is called a **multimodal** model. "Modal" refers to a mode or type of information (text, image, audio, and so on).
+
+::: details Read more of this section (click to expand)
 
 ### It Cuts Photos into Pieces Just Like Text
 
@@ -358,7 +392,7 @@ As we saw earlier, an LLM cuts text into small pieces called tokens.
 It handles photos the exact same way. It cuts a photo into small grid squares, like a checkerboard, and treats each square like a single word.
 The 2020 paper that first popularized this idea was titled "An Image is Worth 16x16 Words."[^vit]
 
-![When a photo is cut into grid squares, each square becomes a piece just like a word, and lines up in a single row with the pieces of the text question going into the LLM. The LLM predicts the words that come next and answers, "It's a cat sleeping on a couch"](../../../guide/00-common/assets/ch1-image-tokens.svg)
+![When a photo is cut into grid squares, each square becomes a piece just like a word, and lines up in a single row with the pieces of the text question going into the LLM. The LLM predicts the words that come next and answers, "It's a cat sleeping on a couch"](assets/ch1-image-tokens.svg)
 
 Next, it trains on **data where photos are paired with text descriptions**.
 
@@ -406,6 +440,8 @@ Music also learns by pairing audio clips with text descriptions. Some music mode
 - Asking it to **"separate what you can see for sure from what you are guessing"** helps a lot.
 
 <Quiz id="ch1-multimodal" />
+
+:::
 
 ## What It Is Good At
 
@@ -458,8 +494,9 @@ If you do not tell it, it gives a generic answer aimed at an "average somebody."
 
 ### 5. It Easily Agrees with You — Sycophancy
 
-As we saw earlier, the models in today's services went through extra training where humans picked good answers after the model finished reading its training text.
-This stage of polishing a pre-trained model into a conversation partner is called **fine-tuning**. RLHF is one way of doing it.
+The models in today's services went through extra training where humans picked good answers after the model finished reading its training text.
+This stage of polishing a pre-trained model into a conversation partner is called **fine-tuning**.
+Polishing it by having people pick good and bad answers is one way of doing it, called **RLHF** (reinforcement learning from human feedback).
 This training also leaves behind certain habits.[^academy-character]
 
 The most common one is **a habit of leaning toward agreeing with whatever you say**. This is called **sycophancy**.
@@ -546,46 +583,56 @@ Compare the AI's count with your own count. Did it get the numbers right? Did it
 ## Summary
 
 - An LLM is a program that creates text by guessing "what comes next."
-- Training means solving countless next-word problems and slightly adjusting the numbers inside the model each time. Most of what it reads stays as patterns rather than original text, though it can memorize frequently seen text word for word. It does not learn while chatting with you.
 - The probability of the next word is decided together by learned patterns and the current conversation's context (your question, earlier messages, files, and the system prompt). That is why your prompt changes the answer.
+- LLMs are great at writing, summarizing, and explaining, but they can state falsehoods with full confidence. The same holds true when they work with photos.
+- The more context you share about your situation, the better the answer gets.
+- AI easily agrees with you. When you want honest feedback, tell it up front that it is okay to disagree.
+
+If you opened and read the folded boxes in the "Advanced" sections, also recall the points below. If you didn't, you can skip them.
+
+- Training means solving countless next-word problems and slightly adjusting the numbers inside the model each time. Most of what it reads stays as patterns rather than original text, though it can memorize frequently seen text word for word. It does not learn while chatting with you.
 - For tools like web search, the model writes a request note, and the service runs the tool and pastes the results into the conversation. Even when an answer comes from search, always check the cited sources.
 - Model size is measured by the number of parameters (tuning knobs). However, capability depends not just on size, but also on how much text the model read and how it was polished after training.
 - Inside the calculations that pick the next word, processes close to thinking—like combining facts and planning ahead—do happen. However, they do not happen every time, and the AI's own explanation or written chain of thought can differ from what actually happened inside.
 - Models stumble more easily on unfamiliar problems where numbers are changed or irrelevant details are mixed in.
 - Modern models also turn documents, photos, audio, and video into pieces and handle them alongside text (multimodal). AI that creates images and video mostly uses a different method called a diffusion model.
-- LLMs are great at writing, summarizing, and explaining, but they can state falsehoods with full confidence. The same holds true when they work with photos.
-- The more context you share about your situation, the better the answer gets.
-- AI easily agrees with you. When you want honest feedback, tell it up front that it is okay to disagree.
 
 ## Glossary
+
+These are the terms you can see right in the main text.
 
 | Term | One-line meaning |
 |---|---|
 | LLM (Large Language Model) | A program that learned to "guess the next word" from a massive amount of text |
 | Generative AI | AI that creates new text or images instead of just sorting or picking from existing ones |
-| Pre-training | The initial training stage where a model repeatedly guesses the next word across vast amounts of text to tune its internal numbers |
-| Memory | A feature where the service writes down things to remember separately and pulls them into new chats; the model itself is not learning anew |
 | Token | A small piece that a model cuts text or photos into so it can process them |
 | Context | All the text currently in the conversation: your question, earlier messages, files, and the system prompt |
 | Embedding | A token turned into a bundle of numbers that captures its meaning; similar meanings get similar numbers |
 | Attention | A calculation where pieces check each other to figure out which pieces matter most for meaning |
 | System Prompt | Instructions the service places in front of your question before sending it to the model |
-| Tool Calling | A setup where the model writes a structured request and the service runs a tool (like search) and returns the result |
 | Parameter | A number inside the model that guides its calculations; the count of parameters is the model's size |
+| RLHF | Training that polishes a model toward good answers chosen by humans |
+| Fine-tuning | The stage of shaping a pre-trained model into a helpful conversation partner; RLHF is one method |
+| Sycophancy | The habit of leaning toward agreeing with whatever the user says |
+| Multimodal | Handling multiple types of information—such as text, photos, and audio—together |
+| Hallucination | Making up false information in a convincing, believable way |
+| Knowledge Cutoff | The latest point in time covered by a model's training data |
+| Context Window | The total amount of text a model can refer to within a single conversation |
+
+The terms below are explained inside the folded boxes of the "Advanced" sections. It's fine if they are new to you. Open those sections when you are curious.
+
+| Term | One-line meaning |
+|---|---|
+| Pre-training | The initial training stage where a model repeatedly guesses the next word across vast amounts of text to tune its internal numbers |
+| Memory | A feature where the service writes down things to remember separately and pulls them into new chats; the model itself is not learning anew |
+| Tool Calling | A setup where the model writes a structured request and the service runs a tool (like search) and returns the result |
 | B (Billion) | One billion; "70B" means 70 billion parameters |
 | Training Data | The text fed to a model during training, measured in tokens |
 | Interpretability | The research field that peers inside a model's internal calculations to explain how they work |
 | Reasoning Model | A model that writes out a step-by-step chain of thought before giving its final answer (that text is not guaranteed to match its actual computation) |
 | Introspection | A model's ability to notice and report its own internal state |
-| RLHF | Training that polishes a model toward good answers chosen by humans |
-| Fine-tuning | The stage of shaping a pre-trained model into a helpful conversation partner; RLHF is one method |
-| Sycophancy | The habit of leaning toward agreeing with whatever the user says |
 | ELIZA Effect | The tendency to feel that a program has a mind of its own just because it speaks naturally |
-| Multimodal | Handling multiple types of information—such as text, photos, and audio—together |
 | Diffusion Model | A method that creates images or video by gradually clearing away static noise |
-| Hallucination | Making up false information in a convincing, believable way |
-| Knowledge Cutoff | The latest point in time covered by a model's training data |
-| Context Window | The total amount of text a model can refer to within a single conversation |
 
 <ChapterDone :chapter="1" />
 

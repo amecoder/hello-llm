@@ -23,24 +23,24 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "Codex 的規則檔名是 AGENTS.md。其他沒有登記的名字會被忽略，所以遷移整理工具時，要先改這個檔案。",
   },
   "ch501-where": {
-    prompt: "免費（Free）賬號的 ChatGPT 應用裡看不到 Codex。哪種說明最合適？",
+    prompt: "免費（Free）帳號的 ChatGPT 應用裡看不到 Codex。哪種說明最合適？",
     choices: [
       "Free 和 Go 是逐步開放的，可能還沒輪到",
       "因為 Codex 是 Windows 專用的",
-      "Codex 被規定在免費賬號裡無論如何都不能用",
-      "把應用刪掉重新安裝，無論是什麼賬號，一定都會出現",
+      "Codex 被規定在免費帳號裡無論如何都不能用",
+      "把應用刪掉重新安裝，無論是什麼帳號，一定都會出現",
     ],
-    explain: "官方的價格說明寫的是，Free 和 Go 裡的 Codex 是「在桌面應用中提供輕量模型、逐步開放」。各賬號會依次開放。",
+    explain: "官方的價格說明寫的是，Free 和 Go 裡的 Codex 是「在桌面應用中提供輕量模型、逐步開放」。各帳號會依次開放。",
   },
   "ch502-install": {
     prompt: "為了使用 Codex，第一步該做什麼？哪項是對的？",
     choices: [
-      "到應用商店裡另外找 Codex 專用應用來安裝，再建立一個新賬號",
-      "安裝 ChatGPT 桌面應用，用 ChatGPT 賬號登入",
+      "到應用商店裡另外找 Codex 專用應用來安裝，再建立一個新帳號",
+      "安裝 ChatGPT 桌面應用，用 ChatGPT 帳號登入",
       "開啟終端，先把 Codex 命令列表全部背下來",
-      "先註冊 GitHub 賬號，並連線一個倉庫",
+      "先註冊 GitHub 帳號，並連線一個倉庫",
     ],
-    explain: "Codex 就在 ChatGPT 桌面應用裡。安裝應用，用 ChatGPT 賬號登入後，選擇 Codex 即可。",
+    explain: "Codex 就在 ChatGPT 桌面應用裡。安裝應用，用 ChatGPT 帳號登入後，選擇 Codex 即可。",
   },
   "ch502-open": {
     prompt: "想使用 Codex 裡檢視改動內容的視窗。事先在「整理工具」資料夾裡做好什麼比較好？",
@@ -133,7 +133,7 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "工作資料夾裡的 .git、.agents、.codex 在預設狀態下只能讀取。存放技能的 .agents 也屬於這裡，移動時可能需要許可。",
   },
   "ch504-review": {
-    prompt: "想在審閱窗口裡，只看 Codex 最後一次回答所改動的內容。該選什麼？",
+    prompt: "想在審閱視窗裡，只看 Codex 最後一次回答所改動的內容。該選什麼？",
     choices: [
       "Last turn",
       "Unstaged — 所有尚未記錄的改動",
@@ -143,14 +143,14 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "審閱視窗預設顯示尚未記錄的改動（Unstaged）。選 Last turn，就只看最近一次回答的改動。",
   },
   "ch504-undo": {
-    prompt: "點選審閱窗口裡的 Revert all 之前，為什麼要小心？",
+    prompt: "點選審閱視窗裡的 Revert all 之前，為什麼要小心？",
     choices: [
-      "因為點了 Revert all，ChatGPT 賬號和對話記錄會一起被刪除",
-      "因為審閱窗口裡也包含我自己修改的內容",
+      "因為點了 Revert all，ChatGPT 帳號和對話記錄會一起被刪除",
+      "因為審閱視窗裡也包含我自己修改的內容",
       "因為網路會斷開",
       "因為點了 Revert all，資料夾裡的 AGENTS.md 也會一起被刪掉",
     ],
-    explain: "審閱窗口裡不僅有 Codex 的改動，還有我的改動和其他未記錄的改動。只想丟棄一部分時，以檔案或程式碼塊為單位撤銷。",
+    explain: "審閱視窗裡不僅有 Codex 的改動，還有我的改動和其他未記錄的改動。只想丟棄一部分時，以檔案或程式碼塊為單位撤銷。",
   },
   "ch505-where": {
     prompt: "在 Codex 裡，「整理工具」資料夾專用技能的存放位置和呼叫方法，哪項是對的？",
@@ -163,7 +163,7 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "Codex 在 .agents/skills 裡查詢技能，呼叫時用 $名稱。SKILL.md 的格式和 Claude Code 相同。",
   },
   "ch505-move": {
-    prompt: "你請 Codex 把技能複製到 .agents/skills，它回答說「因為是隻讀，被攔下了」。合適的應對是什麼？",
+    prompt: "你請 Codex 把技能複製到 .agents/skills，它回答說「因為是唯讀，被攔下了」。合適的應對是什麼？",
     choices: [
       "把許可權改成 Full access，之後也不再改回來",
       "放棄移動技能，改成每次自己寫很長的請求",
@@ -208,7 +208,7 @@ export const CODEX: Record<string, QuestionText> = {
       "我電腦裡的檔案和瀏覽器登入狀態會自動一起轉過去",
       "需要已釋出的環境，我的檔案不會轉過去",
       "我的電腦一關機或休眠，雲端任務也會立刻停止",
-      "只限免費賬號使用",
+      "只限免費帳號使用",
     ],
     explain: "雲端任務從已釋出的環境開始，我電腦裡的檔案、正在執行的程式、瀏覽器登入狀態都不會轉過去。不過電腦休眠期間任務也會繼續。",
   },
@@ -235,12 +235,12 @@ export const CODEX: Record<string, QuestionText> = {
   "ch507-exec": {
     prompt: "想用 codex exec 讓它修改檔案，卻什麼都沒改。最合適的原因是什麼？",
     choices: [
-      "預設是隻讀，所以要加 --sandbox workspace-write",
+      "預設是唯讀，所以要加 --sandbox workspace-write",
       "codex exec 無論加什麼選項，都被設計成了絕對不能修改任何一個檔案，也不能執行命令",
       "沒有聯網的話，codex exec 一個檔案也改不了",
       "因為 AGENTS.md 太長，Codex 在讀取請求之前就停住了",
     ],
-    explain: "codex exec 預設是隻讀。想讓它修改檔案，就加上 --sandbox workspace-write。",
+    explain: "codex exec 預設是唯讀。想讓它修改檔案，就加上 --sandbox workspace-write。",
   },
   "ch507-commands": {
     prompt: "在 Codex CLI 的互動介面裡，想檢視對話資訊和剩餘額度，用哪個命令？",
@@ -263,14 +263,14 @@ export const CODEX: Record<string, QuestionText> = {
     explain: "ChatGPT Work 與 Codex 共用同樣的費用、積分和使用額度。",
   },
   "ch508-data": {
-    prompt: "你用 Plus 個人賬號使用 Codex。想確認對話會不會被用於改進模型，該看哪裡？",
+    prompt: "你用 Plus 個人帳號使用 Codex。想確認對話會不會被用於改進模型，該看哪裡？",
     choices: [
       "Codex 在任何套餐裡都不用於訓練，所以不用確認",
       "在 AGENTS.md 裡寫上禁止訓練",
-      "檢視 ChatGPT 賬號設定和 OpenAI 幫助",
-      "點審閱窗口裡的 Revert all，對話就會從訓練中排除",
+      "檢視 ChatGPT 帳號設定和 OpenAI 幫助",
+      "點審閱視窗裡的 Revert all，對話就會從訓練中排除",
     ],
-    explain: "資料規則由登入方式決定。「預設不用於訓練」只標註在 Business、Enterprise、API 金鑰上，個人套餐的訓練設定在 Codex 文件裡沒有寫。所以請到 ChatGPT 賬號設定和 OpenAI 幫助裡確認。",
+    explain: "資料規則由登入方式決定。「預設不用於訓練」只標註在 Business、Enterprise、API 金鑰上，個人套餐的訓練設定在 Codex 文件裡沒有寫。所以請到 ChatGPT 帳號設定和 OpenAI 幫助裡確認。",
   },
   "ch508-injection": {
     prompt: "Codex 沒有照一份帶有隱藏指令的筆記去做（1 次實驗）。該怎麼看待這個結果？",

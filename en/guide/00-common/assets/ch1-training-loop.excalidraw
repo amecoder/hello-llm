@@ -1,0 +1,171 @@
+{
+ "skeleton": [
+  {
+   "type": "text",
+   "x": 0,
+   "y": 0,
+   "text": "Training loop — guess the next word",
+   "fontSize": 22
+  },
+  {
+   "type": "rectangle",
+   "id": "s1",
+   "x": 0,
+   "y": 60,
+   "width": 200,
+   "height": 110,
+   "backgroundColor": "#a5d8ff",
+   "label": {
+    "text": "① Make a problem\nHide the end\n\"___ the pork\"",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "s2",
+   "x": 280,
+   "y": 60,
+   "width": 200,
+   "height": 110,
+   "backgroundColor": "#a5d8ff",
+   "label": {
+    "text": "② Make a guess\nwash 40%\nstir-fry 30%",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "s3",
+   "x": 560,
+   "y": 60,
+   "width": 200,
+   "height": 110,
+   "backgroundColor": "#ffec99",
+   "label": {
+    "text": "③ Grade it\nOriginal word:\n\"stir-fry\"",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "s4",
+   "x": 840,
+   "y": 60,
+   "width": 200,
+   "height": 110,
+   "backgroundColor": "#b2f2bb",
+   "label": {
+    "text": "④ Adjust\nMake \"stir-fry\"\na bit likelier",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 202,
+   "y": 115,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     76,
+     0
+    ]
+   ],
+   "width": 76,
+   "height": 0,
+   "start": {
+    "id": "s1"
+   },
+   "end": {
+    "id": "s2"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 482,
+   "y": 115,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     76,
+     0
+    ]
+   ],
+   "width": 76,
+   "height": 0,
+   "start": {
+    "id": "s2"
+   },
+   "end": {
+    "id": "s3"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 762,
+   "y": 115,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     76,
+     0
+    ]
+   ],
+   "width": 76,
+   "height": 0,
+   "start": {
+    "id": "s3"
+   },
+   "end": {
+    "id": "s4"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 940,
+   "y": 172,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     50
+    ],
+    [
+     -840,
+     50
+    ],
+    [
+     -840,
+     0
+    ]
+   ],
+   "width": 840,
+   "height": 50
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 232,
+   "width": 1040,
+   "height": 60,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "Repeated trillions of times\nThe answer is in the text itself, so no one has to label it",
+    "fontSize": 18,
+    "strokeColor": "#1e1e1e"
+   }
+  }
+ ]
+}

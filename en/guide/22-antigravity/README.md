@@ -6,15 +6,15 @@ In this guide, you will **open the same folder as is, without moving anything**�
 > **This guide is based on the official Antigravity docs (antigravity.google/docs) checked on November 1, 2026, and results run with `agy` in the terminal. We have not practiced with the app screens yet.** Features and menu names change often.
 > Out of the three tools, this is the only one where you can use every feature with a **free Google account** (age 18 or older). Only your usage limits and models differ by plan.
 
-| Chapter | Title | What you will learn |
-|---|---|---|
-| 1 | [What Antigravity Is and How It Differs from the First Two Tools](01-what-is.md) | Four forms, all features even for free, models, how the three tools match up |
-| 2 | [Installing the App and Your First Cleanup](02-first-task.md) | Install and sign in, open as a project, Planning mode and Proceed, Review pane |
-| 3 | [Rules and Skills — No Need to Move Anything](03-rules-skills.md) | Keep AGENTS.md and .agents/skills as is, 0→1 with the same note, /skill-name |
-| 4 | [Permissions and Undoing](04-permissions-undo.md) | Four presets, fence defaults (app and terminal), watch out for Discard, /rewind |
-| 5 | [Plans, Schedules, Browser, and Goals](05-plan-schedule.md) | /plan, /schedule and Automations, /browser, /goal, remote control |
-| 6 | [Using It in the Terminal](06-terminal.md) | agy -p, silent refusal and exit code 0, folder trust, four traps |
-| 7 | [Cost, Data, Safety, and Choosing Among the Three Tools](07-safety-choose.md) | Usage and credits, Enable Telemetry, hidden-instruction test, using all three together, practice exercises |
+| Chapter | Reading | Title | What you will learn |
+|---|---|---|---|
+| 1 | Required | [What Antigravity Is and How It Differs from the First Two Tools](01-what-is.md) | Four forms, all features even for free, models, how the three tools match up |
+| 2 | Required | [Installing the App and Your First Cleanup](02-first-task.md) | Install and sign in, open as a project, Planning mode and Proceed, Review pane |
+| 3 | Required | [Rules and Skills — No Need to Move Anything](03-rules-skills.md) | Keep AGENTS.md and .agents/skills as is, 0→1 with the same note, /skill-name |
+| 4 | Required | [Permissions and Undoing](04-permissions-undo.md) | Four presets, fence defaults (app and terminal), watch out for Discard, /rewind |
+| 5 | Optional | [Plans, Schedules, Browser, and Goals](05-plan-schedule.md) | /plan, /schedule and Automations, /browser, /goal, remote control |
+| 6 | Optional | [Using It in the Terminal](06-terminal.md) | agy -p, silent refusal and exit code 0, folder trust, four traps |
+| 7 | Required | [Cost, Data, Safety, and Choosing Among the Three Tools](07-safety-choose.md) | Usage and credits, Enable Telemetry, hidden-instruction test, using all three together, practice exercises |
 
 ## Practice Files
 
@@ -22,19 +22,19 @@ Your starting point is the **organizer folder completed through Chapter 5 of the
 
 | Location in folder | Files to download |
 |---|---|
-| `inbox/` | [회의-2026-10-27-주간회의.txt](/practice/notes/inbox/회의-2026-10-27-주간회의.txt) · [공부-2026-10-28-프롬프트-강의.txt](/practice/notes/inbox/공부-2026-10-28-프롬프트-강의.txt) · [회고-2026-10-29.txt](/practice/notes/inbox/회고-2026-10-29.txt) · [회고-2026-10-30.txt](/practice/notes/inbox/회고-2026-10-30.txt) · [회고-2026-10-31.txt](/practice/notes/inbox/회고-2026-10-31.txt) · [회의-2026-10-29-임시회의.txt](/practice/notes/inbox/회의-2026-10-29-임시회의.txt) |
-| `templates/` | [회의록.md](/practice/notes/results/5장-양식-회의록.txt) · [공부노트.md](/practice/notes/results/5장-양식-공부노트.txt) · [주간회고.md](/practice/notes/results/5장-양식-주간회고.txt) · [README.md](/practice/notes/results/5장-양식-README.txt) |
-| Top level | [AGENTS.md](/practice/notes/results/codex/3장-AGENTS.md.txt) · [CLAUDE.md](/practice/notes/results/6장-CLAUDE.md.txt) |
-| `.agents/skills/name/SKILL.md` (put the same files in `.claude/skills/` if you also want to use Claude Code) | [meeting-notes](/practice/notes/results/7장-스킬-meeting-notes.txt) · [study-notes](/practice/notes/results/7장-스킬-study-notes.txt) · [weekly-review](/practice/notes/results/7장-스킬-weekly-review.txt) |
+| `inbox/` | [meeting-2026-10-27-weekly.txt](/practice/en/notes/inbox/meeting-2026-10-27-weekly.txt) · [study-2026-10-28-prompt-lecture.txt](/practice/en/notes/inbox/study-2026-10-28-prompt-lecture.txt) · [review-2026-10-29.txt](/practice/en/notes/inbox/review-2026-10-29.txt) · [review-2026-10-30.txt](/practice/en/notes/inbox/review-2026-10-30.txt) · [review-2026-10-31.txt](/practice/en/notes/inbox/review-2026-10-31.txt) · [meeting-2026-10-29-adhoc.txt](/practice/en/notes/inbox/meeting-2026-10-29-adhoc.txt) |
+| `templates/` | [minutes.md](/practice/en/notes/results/ch5-template-minutes.txt) · [study-notes.md](/practice/en/notes/results/ch5-template-study-notes.txt) · [weekly-review.md](/practice/en/notes/results/ch5-template-weekly-review.txt) · [README.md](/practice/en/notes/results/ch5-template-README.txt) |
+| Top level | [AGENTS.md](/practice/en/notes/results/codex/ch3-AGENTS.md.txt) · [CLAUDE.md](/practice/en/notes/results/ch6-CLAUDE.md.txt) |
+| `.agents/skills/name/SKILL.md` (put the same files in `.claude/skills/` if you also want to use Claude Code) | [meeting-notes](/practice/en/notes/results/ch7-skill-meeting-notes.txt) · [study-notes](/practice/en/notes/results/ch7-skill-study-notes.txt) · [weekly-review](/practice/en/notes/results/ch7-skill-weekly-review.txt) |
 
-Rename each downloaded file and its extension to match the table when you save it (for example, `3장-AGENTS.md.txt` → `AGENTS.md`). Leave the `notes/` folder empty.
+Rename each downloaded file and its extension to match the table when you save it (for example, `ch3-AGENTS.md.txt` → `AGENTS.md`). Leave the `notes/` folder empty.
 
 We also share the **results** this guide produced with Antigravity. Even with the exact same request, your results will look slightly different.
 
 | Chapter | Results |
 |---|---|
-| 3 | [Meeting notes (without AGENTS.md)](/practice/notes/results/antigravity/3장-회의록-AGENTS없이.txt) · [Meeting notes (with AGENTS.md)](/practice/notes/results/antigravity/3장-회의록-AGENTS있을때.txt) · [Weekly review made with a skill](/practice/notes/results/antigravity/3장-주간회고-스킬로.txt) |
-| 6 | [agy -p output](/practice/notes/results/antigravity/6장-agy-p-출력.txt) |
-| 7 | [Meeting notes made from the hidden-instruction note](/practice/notes/results/antigravity/7장-회의록-숨은지시-메모.txt) |
+| 3 | [Meeting notes (without AGENTS.md)](/practice/en/notes/results/antigravity/ch3-minutes-without-AGENTS.txt) · [Meeting notes (with AGENTS.md)](/practice/en/notes/results/antigravity/ch3-minutes-with-AGENTS.txt) · [Weekly review made with a skill](/practice/en/notes/results/antigravity/ch3-weekly-review-with-skill.txt) |
+| 6 | [agy -p output](/practice/en/notes/results/antigravity/ch6-agy-p-output.txt) |
+| 7 | [Meeting notes made from the hidden-instruction note](/practice/en/notes/results/antigravity/ch7-minutes-hidden-instruction-memo.txt) |
 
 If you have not read the Codex guide yet, start with the [Step 3 · Codex Guide](../21-codex/). If you only have a free account, you can start practicing right here with this guide.

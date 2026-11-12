@@ -1,6 +1,6 @@
 # 第2章 终端基础
 
-<Badge type="tip" text="必读" /> 想跟着这一阶段学下去，一定要读这一章。
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
 
 > **一句话总结**：终端里真正必需的命令只有几个。用 `pwd` 看自己在哪里，用 `ls` 看有什么，用 `cd` 来回移动。本章最后会建好练习文件夹，并放入笔记。
 
@@ -68,11 +68,11 @@ ls
 | Linux | `/home/seoyeon` |
 | Windows | `C:\Users\seoyeon` |
 
-**主文件夹**（Home 文件夹）是你账号的起始文件夹。打开终端，通常就从这里开始。这个地址的简写符号是 `~`（波浪号）。所以 `~/hello-ai-연습` 的意思是"我的主文件夹里的 hello-ai-연습（hello-ai 练习）文件夹"。[^win-home]
+**主文件夹**（Home 文件夹）是你账号的起始文件夹。打开终端，通常就从这里开始。这个地址的简写符号是 `~`（波浪号）。所以 `~/hello-ai-practice` 的意思是"我的主文件夹里的 hello-ai-practice（hello-ai 练习）文件夹"。[^win-home]
 
 写路径有两种方式。
 
-- **完整地址**：像 `~/hello-ai-연습/터미널` 这样，在哪里输入都指向同一个地方。
+- **完整地址**：像 `~/hello-ai-practice/terminal` 这样，在哪里输入都指向同一个地方。
 - **以当前位置为准**：写成 `inbox`，就是"当前文件夹里的 inbox"。
 
 `..` 表示上一级文件夹。`.` 表示当前文件夹。
@@ -117,7 +117,7 @@ PowerShell 是像 `-Force` 这样，一个 `-` 加一个单词。即使意思相
 `cd` 用来移动到别的文件夹。它是"change directory（切换文件夹）"的缩写。下面的练习文件夹会在本章最后建好。现在只读一读就行。
 
 ```bash
-cd ~/hello-ai-연습
+cd ~/hello-ai-practice
 cd ..
 cd ~
 ```
@@ -182,8 +182,8 @@ sleep 30
 Mac·Linux 这样输入。
 
 ```bash
-mkdir -p ~/hello-ai-연습/터미널/inbox
-cd ~/hello-ai-연습/터미널
+mkdir -p ~/hello-ai-practice/terminal/inbox
+cd ~/hello-ai-practice/terminal
 pwd
 ls
 ```
@@ -191,19 +191,19 @@ ls
 Windows PowerShell 这样输入。
 
 ```powershell
-mkdir $HOME\hello-ai-연습\터미널\inbox
-cd $HOME\hello-ai-연습\터미널
+mkdir $HOME\hello-ai-practice\terminal\inbox
+cd $HOME\hello-ai-practice\terminal
 pwd
 ls
 ```
 
-Mac·Linux 命令里的 `-p` 是让它把中间的文件夹也一次建好的选项。没有这个选项的话，如果 `hello-ai-연습` 文件夹不存在，就会出错。`$HOME` 是 PowerShell 里指代主文件夹的名字。`pwd` 的结果以 `터미널`（终端）结尾，`ls` 里能看到 `inbox`，就成功了。
+Mac·Linux 命令里的 `-p` 是让它把中间的文件夹也一次建好的选项。没有这个选项的话，如果 `hello-ai-practice` 文件夹不存在，就会出错。`$HOME` 是 PowerShell 里指代主文件夹的名字。`pwd` 的结果以 `terminal`（终端）结尾，`ls` 里能看到 `inbox`，就成功了。
 
 **2. 下载练习笔记。**
 
 在浏览器里右键单击下面的链接，选「链接另存为（다른 이름으로 링크 저장）」。不同浏览器的叫法会有点不同。保存位置就保持默认的下载文件夹。
 
-- [회의-2026-10-27-주간회의.txt](/practice/notes/inbox/회의-2026-10-27-주간회의.txt)（会议-2026-10-27-每周例会）
+- [meeting-2026-10-27-weekly.txt](/practice/zh-hans/notes/inbox/meeting-2026-10-27-weekly.txt)（会议-2026-10-27-每周例会）
 
 这些都是虚构的笔记。日期和星期也是为了故事编出来的，所以和真实日历对不上。在后面的章节里，Claude 可能会指出这一点。它说的没错，不用惊讶。
 
@@ -212,13 +212,13 @@ Mac·Linux 命令里的 `-p` 是让它把中间的文件夹也一次建好的选
 Mac·Linux 这样输入。
 
 ```bash
-cp ~/Downloads/회의-2026-10-27-주간회의.txt inbox/
+cp ~/Downloads/meeting-2026-10-27-weekly.txt inbox/
 ```
 
 Windows PowerShell 这样输入。
 
 ```powershell
-cp $HOME\Downloads\회의-2026-10-27-주간회의.txt inbox\
+cp $HOME\Downloads\meeting-2026-10-27-weekly.txt inbox\
 ```
 
 Mac 的 Finder 里即使显示为「下载」，实际的文件夹名也是 `Downloads`。如果 Linux 用的是韩语界面，可能是 `~/다운로드`。这时把 `~/Downloads` 换成 `~/다운로드` 再输入。
@@ -227,13 +227,13 @@ Mac 的 Finder 里即使显示为「下载」，实际的文件夹名也是 `Dow
 
 ```bash
 ls inbox
-cat inbox/회의-2026-10-27-주간회의.txt
+cat inbox/meeting-2026-10-27-weekly.txt
 ```
 
 `cat` 会把文件内容显示在屏幕上。如果在 PowerShell 里韩文显示成乱码，就这样输入。
 
 ```powershell
-Get-Content -Encoding UTF8 inbox\회의-2026-10-27-주간회의.txt
+Get-Content -Encoding UTF8 inbox\meeting-2026-10-27-weekly.txt
 ```
 
 问问自己。`pwd` 的结果是我以为的那个文件夹吗？`ls inbox` 里能看到笔记文件吗？如果两个都是，就准备好进入下一章了。

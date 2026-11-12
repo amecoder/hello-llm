@@ -36,10 +36,10 @@ claude --permission-mode manual
 
 ## 許可の画面を読む
 
-手動モードで「inboxの会議メモを読んで、회의록2.md として保存して。答えは1行で。」と頼むと、こんな画面が出ます。許可の画面は、Claudeがしようとしていることを先に見せて、選択肢を出します。[^prompt]
+手動モードで「inboxの会議メモを読んで、minutes2.md として保存して。答えは1行で。」と頼むと、こんな画面が出ます。許可の画面は、Claudeがしようとしていることを先に見せて、選択肢を出します。[^prompt]
 
 ```text
- Do you want to create 회의록2.md?
+ Do you want to create minutes2.md?
  ❯ 1. Yes
    2. Yes, and switch to accept edits (auto-approve file edits and common file commands) for this
       session (shift+tab)
@@ -50,7 +50,7 @@ claude --permission-mode manual
 
 上下の矢印キーで選んで、Enterを押します。1番は、今回1回だけ許可します。2番は、このセッションを編集許可モードに切り替えます。3番は、しません。Escはキャンセルです。
 
-すでにあるファイルを直すときは、`Do you want to make this edit to 회의록2.md?` と聞いて、変わる行も見せてくれます。先頭に `+` が付いた行が、新しく入る行です。
+すでにあるファイルを直すときは、`Do you want to make this edit to minutes2.md?` と聞いて、変わる行も見せてくれます。先頭に `+` が付いた行が、新しく入る行です。
 
 ![ファイルを直す前の許可の画面。① 緑の行が新しく入る内容、② 選択肢](../../../guide/23-claude-code-cli/assets/shot-05-edit-marked.png)
 
@@ -115,13 +115,13 @@ claude --permission-mode manual
 `/exit` で出て、ターミナルで練習用フォルダに移動します。MacとLinuxは、下を丸ごと貼り付けます。Windows PowerShellは、すぐ下の「Windows PowerShellなら」の方法に従ってください。
 
 ```bash
-mkdir 비밀
-echo '偽のパスワード: cafe-1234' > 비밀/암호.txt
+mkdir secret
+echo '偽のパスワード: cafe-1234' > secret/password.txt
 mkdir -p .claude
 cat > .claude/settings.json <<'EOF'
 {
   "permissions": {
-    "deny": ["Read(./비밀/**)"]
+    "deny": ["Read(./secret/**)"]
   }
 }
 EOF
@@ -129,17 +129,17 @@ EOF
 
 この箱を1行ずつ読んでみます。
 
-- `mkdir 비밀`: `비밀`（秘密）フォルダを作ります。
-- `echo '…' > 비밀/암호.txt`: 引用符の中の文字をファイルに保存します。`>` は、出力をファイルに保存する記号です。
+- `mkdir secret`: `secret`（秘密）フォルダを作ります。
+- `echo '…' > secret/password.txt`: 引用符の中の文字をファイルに保存します。`>` は、出力をファイルに保存する記号です。
 - `mkdir -p .claude`: `.claude` フォルダを作ります。すでにあってもエラーになりません。
 - `cat > .claude/settings.json <<'EOF'`: 次の行から `EOF` までを、このファイルに保存します。あとの章でも、ファイルを作るときにこの形を使います。
 - `{` から `}` まで: 設定ファイルに入る内容です。`"deny"` の欄に、ふさぐ対象を書きました。
 
-貼り付けたあと、まだ実行されていなければ、Enterをもう一度押してください。何も表示されなければ成功です。`ls` で `비밀` フォルダができたか確かめてください。
+貼り付けたあと、まだ実行されていなければ、Enterをもう一度押してください。何も表示されなければ成功です。`ls` で `secret` フォルダができたか確かめてください。
 
-**Windows PowerShellなら**: `mkdir 비밀`、`mkdir .claude` でフォルダを作ります。`notepad 비밀\암호.txt` でメモ帳を開き、`偽のパスワード: cafe-1234` を入れます。`notepad .claude\settings.json` には、上の箱から `cat` で始まる行と `EOF` の行を除いて、その間だけを入れます。新しいファイルを作るか聞かれたら `はい` を押し、`Ctrl + S` で保存して閉じます。この方法は実行して確かめていません。
+**Windows PowerShellなら**: `mkdir secret`、`mkdir .claude` でフォルダを作ります。`notepad secret\password.txt` でメモ帳を開き、`偽のパスワード: cafe-1234` を入れます。`notepad .claude\settings.json` には、上の箱から `cat` で始まる行と `EOF` の行を除いて、その間だけを入れます。新しいファイルを作るか聞かれたら `はい` を押し、`Ctrl + S` で保存して閉じます。この方法は実行して確かめていません。
 
-`Read(./비밀/**)` は、`비밀` フォルダの中のすべてを読まないで、という意味です。ターミナルで `claude` を起動して、「비밀/암호.txt ファイルを読んで、内容を教えて。」と頼んでみてください。
+`Read(./secret/**)` は、`secret` フォルダの中のすべてを読まないで、という意味です。ターミナルで `claude` を起動して、「secret/password.txt ファイルを読んで、内容を教えて。」と頼んでみてください。
 
 同じ依頼を1回で終わる実行（[10章](10-headless-automation.md)で学ぶ方式）で送ったところ、Claudeはファイルを読めなかったと答え、内容を見せませんでした。文は実行するたびに変わることがあります。確かめることは1つです。答えに `cafe-1234` が出たか？
 
@@ -198,9 +198,9 @@ Claudeの作業を止めたいときは、Escを **1回** だけ押します。�
 ## やってみよう
 
 1. 練習用フォルダで `claude --permission-mode manual` で始め、Shift+Tabを4回押して、モードがひと回りするのを見ます。
-2. 회의록2.mdを作ってほしいと頼みます。続けて「회의록2.mdのいちばん最初の行に「下書き」という1行を入れて。答えは1行で。」と頼みます。許可の画面を読んで、1番を選びます。
+2. minutes2.mdを作ってほしいと頼みます。続けて「minutes2.mdのいちばん最初の行に「下書き」という1行を入れて。答えは1行で。」と頼みます。許可の画面を読んで、1番を選びます。
 3. 入力欄が空のときにEscを2回押します。最後の依頼を選んで、`Restore code and conversation` を選びます。「下書き」の行は消えましたか？
-4. 入力欄に戻ってきた文章をEsc 2回で消してから、`/exit` で出ます。ターミナルで拒否ルールを作り、`claude` を起動して `비밀/암호.txt` を読んでほしいと頼んでみます。
+4. 入力欄に戻ってきた文章をEsc 2回で消してから、`/exit` で出ます。ターミナルで拒否ルールを作り、`claude` を起動して `secret/password.txt` を読んでほしいと頼んでみます。
 
 自分に聞いてみてください。自分のClaudeが許可なしにできることを説明できるか？ 巻き戻しで戻らないことを3つ挙げられるか？
 

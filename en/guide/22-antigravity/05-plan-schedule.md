@@ -1,9 +1,11 @@
 # Chapter 5. Plans, Schedules, Browser, and Goals — Delegating Work with Slash Commands
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: `/plan` makes a plan before changing anything, `/schedule` is a timer that runs **only inside this chat**, and **Automations** are schedules that keep running beyond a single chat.
 > `/browser` drives Chrome to do web tasks, and `/goal` does not stop until the job is done. Both can use a lot of your quota.
 
-This chapter is based on the Antigravity official docs checked on November 1, 2026. **This guide has not yet been tested directly on the app screen.** If your screen looks different, follow your screen. This guide did not actually save any schedules. That is because doing so would expose real work content and use up quota (for the same reason as in [Claude Code Chapter 8](../20-claude-code/08-parallel-cloud-schedule.md)).
+This guide has not yet been tested directly on the app screen. If your screen looks different, follow your screen.[^tested]
 
 ## Getting a Plan First — `/plan`
 
@@ -13,7 +15,7 @@ A normal request starts editing files right away. When you use `/plan`, the agen
 /plan I want to add a 'Date Created' field to the meeting notes, study notes, and weekly review templates. Show me a plan of what needs to change first.
 ```
 
-If your requirements are still vague, `/grill-me` helps. Before starting, it asks **one question at a time**, along with a recommended answer.[^grill] In effect, the tool draws out the "good delegation habits" you learned in Claude Code Chapter 5 for you.
+If your requirements are still vague, `/grill-me` helps. Before starting, it asks **one question at a time**, along with a recommended answer.[^grill] In effect, the tool draws out what you want by asking questions for you (the same idea as "good delegation habits" in Claude Code Chapter 5).
 
 <Quiz id="ch605-plan" />
 
@@ -31,21 +33,33 @@ Source: Antigravity official docs (excerpted)[^compare]
 
 `/schedule` sets a one-time timer or a repeating schedule, and it does not block your chat while waiting.[^schedule] However, because it belongs to that chat, use **Automations** for ongoing tasks like a **weekly review every Friday**.[^scoped]
 
-Automations send messages to your agent on a set schedule even while you are away.[^automations] You open them from **Automations** in the app sidebar. Keep a few things in mind:
+Automations send messages to your agent on a set schedule even while you are away.[^automations] You open them from **Automations** in the app sidebar.
 
-- You pick a model tier (Flash Lite, Flash, or Pro) for each run. The default is Flash.[^tier]
+Creating a schedule and testing it are done separately.[^run-now]
+
+- **Create with Prompt**: This is how you create a new schedule. The agent walks you through the setup.
+- **Run Now**: This feature runs an existing schedule once right away so you can test it.
+
+For example, in Create with Prompt, try saying something like "Every Friday afternoon, make a weekly review from the review memos in inbox and save it in notes."
+
+This order is safe:
+
+1. Try the same request in a regular chat first.
+2. After creating the schedule, test it once with Run Now.
+3. If the result looks fine, leave the schedule as it is.
+
+While an agent is working, Antigravity keeps your computer from going to sleep.[^sleep] However, **the official docs do not say whether Automations still run when the app is closed or your computer is asleep.** It is safer to leave the app open and keep your computer awake (recommended by this guide, the same as with desktop schedules in Claude Code and Codex).
+
+::: details More details (click to expand)
+- You pick a model tier (Flash Lite, Flash, or Pro) for each run. The default is Flash. At first, you can just leave it at the default.[^tier]
 - They do not run on the exact minute. Runs are spread out by up to 10% of the interval, up to 15 minutes.[^jitter]
-- You can test a schedule right away with **Run Now**, or build one by chatting with the agent using **Create with Prompt**.[^run-now]
-
-While an agent is working, Antigravity keeps your computer from going to sleep.[^sleep] However, **the official docs do not say whether Automations still run when the app is closed or your computer is asleep.** Just like with desktop schedules in Claude Code and Codex, it is safer to leave the app open and keep your computer awake (recommended by this guide).
-
-Before creating a schedule, try the same request in a regular chat first, test it once with Run Now, and then set the schedule.
+:::
 
 <Quiz id="ch605-schedule" />
 
 ## Browser and Goals — `/browser` and `/goal`
 
-`/browser` hands web tasks over to a **browser subagent**. This subagent drives Google Chrome to open pages, click buttons, and take screenshots.[^browser] Every browser session is **recorded as a video** and saved in the results.[^recorded] Running scripts on a page asks for your permission by default.[^js]
+`/browser` hands web tasks over to a **browser subagent**. A subagent (Subagent) is a helper agent that the main agent hands part of the work to. This subagent drives Google Chrome to open pages, click buttons, and take screenshots.[^browser] Every browser session is **recorded as a video** and saved in the results.[^recorded] Running scripts on a page asks for your permission by default.[^js]
 
 `/goal` keeps the agent working without stopping in the middle until it fully achieves the goal.[^goal] There is no cap on how many times it can try, so it keeps going until it decides the job is done or you stop it.[^no-cap] Because this can use a lot of your quota, **write down a clear standard for what "done" means**. Here is an example:
 
@@ -58,6 +72,8 @@ Goal mode changes **only how the agent stops**. Your permission and review setti
 <Quiz id="ch605-browser-goal" />
 
 ## Continuing from Another Device
+
+You don't need this feature for the organizer practice. Read it only if you want to continue from your phone or another computer.
 
 If you turn on **Settings → Application → Enable Remote Control** in the app, you can control Antigravity on your computer from a web browser on another device.[^remote][^any-browser] On the other device, sign in with the **same Google Account as your desktop**.[^same-account]
 
@@ -94,6 +110,7 @@ Even when you use it remotely, the work still happens on **your computer**, usin
 
 Next chapter: [Chapter 6. Using It in the Terminal](06-terminal.md)
 
+[^tested]: This chapter is based on the Antigravity official docs checked on November 1, 2026. This guide has not yet been tested directly on the app screen. It also did not actually save any schedules. That is because doing so would expose real work content and use up quota (for the same reason as in [Claude Code Chapter 8](../20-claude-code/08-parallel-cloud-schedule.md)).
 [^plan]: Antigravity official docs, "Plan (/plan)". "While standard prompts immediately begin modifying files, `/plan` introduces an intentional planning phase that explores the workspace, identifies dependencies, and surfaces architectural decisions for your review." https://antigravity.google/docs/plan (checked on 2026-11-01)
 [^proceed]: Antigravity official docs, "Plan (/plan)". "**Proceed**: Click **Proceed** to transition the agent into execution mode." https://antigravity.google/docs/plan (checked on 2026-11-01)
 [^grill]: Antigravity official docs, "Slash commands overview". "The agent asks one question at a time and recommends an answer for each." https://antigravity.google/docs/slash-commands (checked on 2026-11-01)

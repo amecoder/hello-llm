@@ -1,5 +1,7 @@
 # 第2章 画面を見てみよう — どこに何があるか
 
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
 > **一言まとめ**: Geminiの画面は、**左のサイドメニュー**（過去の会話）、**真ん中の入力欄**（質問する場所と「+」）、
 > **入力欄の右のモデルボタン**（モデルと思考レベル）、**左下の「設定（설정）」**の4か所だけ知っていれば大丈夫です。最初は入力欄だけ使えば十分です。
 
@@ -25,6 +27,8 @@
 
 出典: Gemini Web画面で直接確認[^screen]
 
+①の**ノートブック**は、資料と会話をテーマごとにまとめておく場所です。[第6章](06-search.md)で扱います。
+
 入力欄の下にある「チャット（채팅）」・「タスク（작업）」の切り替えは、通常の会話と、**仕事をまるごと任せるタスク**を選ぶ場所です。タスクは[第8章](08-tasks.md)で扱うので、今は「チャット（채팅）」のままで大丈夫です。[^screen][^models]
 
 最初から全部を知る必要はありません。入力欄に質問を書いて送るだけでかまいません。残りは、必要になったときにこの章をもう一度開いてください。
@@ -39,7 +43,7 @@
 - **「新しいチャット（새 채팅）」**: 新しい会話を開きます。話題が変わったら、ここを押してください（[第1章](01-getting-started.md)）。[^start]
 - **「ライブラリ（라이브러리）」・「画像（이미지）」**: アップロードしたり作ったりしたファイルや画像をまとめて見ます（[第4章](04-files-create.md)）。
 - **「予約済み（예약됨）」**: 決めておいた時間に自動で行う作業をまとめて見ます。
-- **「カスタマイズ（맞춤설정）」**: スキルや連携するアプリを追加します。
+- **「カスタマイズ（맞춤설정）」**: スキル（よくする頼みごとを保存しておいた指示）と、連携するアプリ（Gmail・DriveのようにGeminiとつないで使うGoogleのアプリ）を追加します。[第7章](07-skills-apps.md)で扱います。
 - **「ノートブック（노트북）」**: 資料と会話をテーマごとにまとめておきます。「新しいノートブック（새 노트북）」・「すべてのノートブック（모든 노트북）」があります。
 - **「すべて（전체）」**: これまでにやり取りした会話の一覧です。いちばん上が最新の会話です。
 
@@ -73,7 +77,7 @@
 
 メニューが多く見えますが、最初は「ファイルをアップロード（파일 업로드）」ひとつだけ知っていれば大丈夫です。残りは第4章から一つずつ扱います。
 
-ファイルは、一度に**10個まで**アップロードできます。動画は1本につき2GB、それ以外のファイルは1つにつき100MBまでです。[^files]
+ファイルは、一度に**10個まで**アップロードできます。サイズの上限は[第4章](04-files-create.md)で見ます。[^files]
 
 入力欄の右にあるマイク（「音声入力（음성기록）」）を押すと、声で入力できます。[^screen]
 
@@ -132,7 +136,8 @@ Google AI Proの画面です。①モデルボタンを押すと②モデル一�
 ### いつ上げるか
 
 **良いモデルや高い思考レベルほど、使用量を多く使います。**[^models] ですから、いつも最高にしておく必要はありません。
-ふだんは初期設定（「低（낮음）」）か軽い設定で使い、答えが浅かったり間違っていたりしたときだけ、一段階上げてみましょう。図の「Argon 高（Argon 높음）」は、このガイドが画面を見せるために選んだ設定です。ArgonはProまたはUltraプランでのみ表示されます（[第1章](01-getting-started.md)）。長く考えさせれば必ず良くなる、というわけでもありません（[ステップ1 第5章](../00-common/05-prompt-patterns.md)）。
+ふだんは初期設定（「低（낮음）」）か軽い設定で使いましょう。答えが浅かったり間違っていたりしたときだけ、一段階上げてみましょう。
+長く考えさせれば必ず良くなる、というわけでもありません（[ステップ1 第5章](../00-common/05-prompt-patterns.md)）。[^argon-shot]
 
 知っておきたい点が2つあります。[^models]
 
@@ -240,6 +245,7 @@ Google AI Proの画面です。①モデルボタンを押すと②モデル一�
 
 [^screen]: Gemini Web画面（Google AI Pro、韓国語）で直接確認。最初の画面「무엇을 도와드릴까요?」、入力欄「Gemini에게 물어보기」、「업로드 및 도구」(+)、モデルボタンと「음성기록」、右上の「앱 설치」と「임시 채팅」アイコン、入力欄の下の「채팅」「작업」切り替え。一時チャットの案内 "임시 채팅은 최근 채팅에 표시되지 않으며, Google AI를 개선하는 데 사용되지 않습니다. 안전을 위해 72시간 동안 저장됩니다." サイドメニュー「채팅 검색」「사이드바 닫기」「새 채팅」「라이브러리」「이미지」「예약됨」「맞춤설정」「노트북」「전체」、いちばん下のアカウント名・プラン表示と「설정」。+メニュー「파일 업로드」「Drive에서 파일 추가」「업로드 더보기」「이미지 만들기」「동영상 만들기」「음악 만들기」「도구 더보기」、「도구 더보기」の下の「Canvas」「Deep Research」「가이드 학습」「개인 인텔리전스(Labs)」（2026-10-30にはこれらのツールが+メニューの最初の段にあった）。モデルメニュー「3.5 Flash-Lite — 가장 빠른 답변 제공」「3.8 Flash — 무엇이든 도움을 받으세요」「3.1 Pro — 고급 추론」「4 Argon — 복잡한 작업」、思考レベル「낮음 — 빠르고 효율적」「보통 — 균형 잡힌 깊이」「높음 — 매우 철저함」。設定メニュー「계정」（「사용량 한도」「구독 관리」）、「환경설정」（「개인 인텔리전스」「스킬」「테마」「작업 설정」）、「데이터 및 개인 정보 보호」（「Gemini로 메모리 가져오기」「내 공개 링크」「의견 보내기」「도움말」「위치」「활동」）。「활동」は新しいタブ「Gemini 앱 활동」で開く。ヘルプ韓国語版の画面名: 「텍스트 수정」「업데이트」(13275745)、「응답 세부정보 보기」(18648722)。（確認日 2026-10-30、図と+メニュー・一時チャットは2026-10-31）
 [^start]: Googleヘルプ「Use Gemini Apps」。"In the text box at the bottom, enter your question or prompt." / "To start a new chat, at the top left, click New chat" / "You can start a temporary chat that won’t appear in your Gemini Apps Activity or your recent chats." / "A personal Google Account. This feature is not available for users signed in to a work or school Google Account." / "When you leave the temporary chat, you’ll no longer have access to that chat, and it won’t appear in your recent chats." / "Use Connected Apps and other integrated services that require the Keep Activity setting to be turned on." / "Get personalized responses." / "If you want to revise your prompt, you can edit it, and Gemini will regenerate the response." https://support.google.com/gemini/answer/13275745 （確認日 2026-10-30）
+[^argon-shot]: 図の「Argon 高（Argon 높음）」は、このガイドが画面を見せるために選んだ設定です。ArgonはProまたはUltraプランでのみ表示されます（[第1章](01-getting-started.md)）。
 [^files]: Googleヘルプ「Upload & analyze files in Gemini Apps」。"Up to 10 files (subject to availability) can be uploaded in the same prompt. When uploading a folder, each file inside will count towards this limit." / "Each video can be up to 2 GB. All other supported file types can be up to 100 MB." https://support.google.com/gemini/answer/14903178 （確認日 2026-10-30）
 [^models]: Googleヘルプ「About Gemini models」。"Gemini Flash-Lite: A fast, cost-efficient model built for quick answers to everyday questions and lightweight tasks." / "Gemini Pro: An advanced reasoning model designed for complex prompts, sophisticated coding, and in-depth problem-solving." / "Gemini Argon: Top-tier intelligence, dynamic deep reasoning, and the highest performance for complex workflows." / "Auto or Flash-Lite*" / "If you have a Google AI plan you can manually switch models in both Chat Mode and Task Mode." / "Higher-tier models marked with a lock icon require an eligible plan upgrade" / "Low: Provides fast, concise answers for straightforward queries." / "High: Allows the model to carefully process and reason through complex, multistep prompts." / "If you don’t select a thinking level, it will default to Low." / "More advanced models and higher thinking levels require more of your usage." / "If you have a Google AI plan and reach your usage limit, your chat will continue with Flash-Lite." / "Gemini will continue to use that model and thinking level during the current conversation including if you later return to that same conversation." / "From the menu, select See response details ." / "Access to specific Gemini models, thinking levels, and task features varies depending on your plan and your remaining available usage." ヘルプには初期設定が自動モデル選択と書かれているが、このガイドが確認したProアカウントのモデルメニューには「自動」の項目がなかった。https://support.google.com/gemini/answer/18648722 （確認日 2026-10-30）
 [^privacy]: Googleヘルプ「Gemini Apps Privacy Hub」。"Temporary chats and chats you have when Keep Activity is off are retained with your account for 72 hours and used to:" / "Temporary chats are not used to train Google’s AI models." https://support.google.com/gemini/answer/13594961 （確認日 2026-10-30）

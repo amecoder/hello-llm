@@ -1,5 +1,7 @@
 # 第11章 像专家一样使用 — 超越新手，按工作需要来驾驭
 
+<Badge type="warning" text="进阶" /> 学会前面的章节以后，想用得更好时再读。
+
 > **一句话总结**：专家不是知道更多新功能的人，而是**像交办工作那样说话、按工作选合适的工具、把重复的事做成模板、确认结果之后才使用**的人。
 > 这一章会介绍怎样**组合**你在第1~10章学到的功能，也会介绍还没讲过的定时任务、数据分析和学习模式。
 
@@ -7,21 +9,21 @@
 
 ## 专家有什么不同
 
-在[第1阶段第3章「同一个工具，不同的结果（같은 도구, 다른 결과）」](../00-common/03-why-learn.md#同样的工具-不同的结果)里，你学到了同一个 AI 也会因使用方法不同而结果不同。OpenAI 调查公司里怎样使用 ChatGPT 的报告里，也能看到类似的情况。即使在效果可能很大的地方，推理、深度研究、项目、自定义指令这类**高级功能也用得比较少**。[^adopt]
+在[第1阶段第3章「同一个工具，不同的结果（같은 도구, 다른 결과）」](../00-common/03-why-learn.md#同样的工具-不同的结果)里，你学到了同一个 AI 也会因使用方法不同而结果不同。怎样判断该交办什么、交办之前怎样先试一试、怎样按工作的分量来确认，这类**适用于任何 AI 的方法**，在[第1阶段第11章「像专家一样使用」](../00-common/11-expert.md)里。这一章把那些方法搬到 ChatGPT 的功能上。
 
-怎样判断该交办什么、交办之前怎样先试一试、怎样按工作的分量来确认，这类**适用于任何 AI 的方法**，在[第1阶段第11章「像专家一样使用」](../00-common/11-expert.md)里。这一章把那些方法搬到 ChatGPT 的功能上。先一眼看看这一章讲什么。
+OpenAI 调查公司里怎样使用 ChatGPT 的报告，也指出了同样的情况。即使在效果可能很大的地方，推理、深度研究、项目、自定义指令这类**高级功能也用得比较少**。[^adopt] 先一眼看看这一章讲什么。
 
 | 要素 | 一句话说明 | 详细内容 |
 |---|---|---|
-| 像交办工作那样说话 | 讲明要做的事、对象、目的、形式，看过第一版回答后再修改 | [第1阶段第4章「好提示词的5个要素」](../00-common/04-prompt-basics.md#好提示词的5个要素)、[第1阶段第6章「怎样好好地请它修改」](../00-common/06-conversation.md#怎样把修改要求说清楚) |
-| 选工具 | 在搜索、深度研究、Work、推理级别中，用适合这项工作的 | [第6章「深度研究 — 把报告交给它」](06-search.md#深度调研——把报告交给它)、[第7章「Chat 和 Work 的区别」](07-projects-plugins.md#chat-和-work-的区别) |
-| 积累资料 | 把同一项工作的文件、指令、做得好的回答汇集在一处 | [第7章「项目 — 把对话、文件、指令放进一个文件夹」](07-projects-plugins.md#项目——把对话、文件、指令放进一个文件夹) |
-| 做模板 | 把重复的请求留成指令、模板、技能 | [第1阶段第8章「4. 做成可重复使用的模板」](../00-common/08-meta-prompting.md#_4-做成可重复使用的模板) |
-| 定时任务 | 让 ChatGPT 在约定的时间自己去做 | [本章「到点自动去做」](#到点自动去做-—-定时任务) |
-| 数据分析 | 计算表格和数字，并以图表形式拿到 | [本章「把表格和数字交给它」](#把表格和数字交给它-—-数据分析) |
-| 学习模式 | 不直接给答案，而是用提问帮助理解 | [本章「用来学习」](#用来学习-—-学习模式) |
-| 回答的样子 | 按我的工作调整语气、表格和图片的数量 | [第5章「设定语气」](05-memory.md#设定语气——基本风格和语气、温暖度、参考我的文风) |
-| 确认 | 为每种成果事先定好看哪里，再去确认 | [第1阶段第9章「确认的四个习惯」](../00-common/09-safety.md#核对的四个习惯) |
+| 像交办工作那样说话 | 讲明要做的事、对象、目的、形式，看过第一版回答后再修改 | [第1阶段第4章](../00-common/04-prompt-basics.md#好提示词的5个要素) · [第6章](../00-common/06-conversation.md#怎样把修改要求说清楚) |
+| 选工具 | 在搜索、深度研究、Work、推理级别中，用适合这项工作的 | [第6章](06-search.md#深度调研——把报告交给它) · [第7章](07-projects-plugins.md#chat-和-work-的区别) |
+| 积累资料 | 把同一项工作的文件、指令、做得好的回答汇集在一处 | [第7章](07-projects-plugins.md#项目——把对话、文件、指令放进一个文件夹) |
+| 做模板 | 把重复的请求留成指令、模板、技能 | [第1阶段第8章](../00-common/08-meta-prompting.md#_4-做成可重复使用的模板) |
+| 定时任务 | 让 ChatGPT 在约定的时间自己去做 | [本章](#到点自动去做-—-定时任务) |
+| 数据分析 | 计算表格和数字，并以图表形式拿到 | [本章](#把表格和数字交给它-—-数据分析) |
+| 学习模式 | 不直接给答案，而是用提问帮助理解 | [本章](#用来学习-—-学习模式) |
+| 回答的样子 | 按我的工作调整语气、表格和图片的数量 | [第5章](05-memory.md#设定语气——基本风格和语气、温暖度、参考我的文风) |
+| 确认 | 为每种成果事先定好看哪里，再去确认 | [第1阶段第9章](../00-common/09-safety.md#核对的四个习惯) |
 
 <Quiz id="ch111-difference" />
 
@@ -43,7 +45,7 @@
 形式：按项目列一个表格，再加三句话的摘要。
 ```
 
-::: details 得到的回答大致是这样（示例 — 点击展开）
+::: details 得到的回答大致是这样（示例 — 点击展开）（点击展开）
 这是本指南制作的示例。实际的回答会因服务和每次情况而不同。
 
 > | 项目 | 本月金额 |
@@ -64,9 +66,12 @@
 
 :::
 
-**拆开，还是合在一起？** OpenAI 帮助中心建议把复杂的工作拆成小的请求（[第1阶段第5章「3. 分步骤（단계 나누기）」](../00-common/05-prompt-patterns.md#_3-分步骤-—-提示词链)）。[^prompt] Academy 的资料则说明，把互相有关的背景和指示合在一个请求里也可以。不过它也补充说，信息太多，回答可能会变得模糊。[^aprompt]
+**拆开，还是合在一起？** 按情况来选就行。[^split][^prompt][^aprompt]
 
-如果需要看过中间结果再决定下一步方向，就拆开。如果目标只有一个而且很明确，就把五行合在一个请求里。无论哪种，只附上真正必要的资料就行。
+- 如果需要看过中间结果再决定下一步方向，就拆开（[第1阶段第5章「3. 分步骤（단계 나누기）」](../00-common/05-prompt-patterns.md#_3-分步骤-—-提示词链)）。
+- 如果目标只有一个而且很明确，就把五行合在一个请求里。
+
+无论哪种，只附上真正必要的资料就行。信息太多，回答可能会变得模糊。
 
 **需要多个步骤的工作，要定好在哪里停下。** 不要一开始就要成品，先定好在哪里由我来选择或确认。步骤小，ChatGPT 理解错的时候你就能早点发现。不用等全部做完后再从头修改。[^academy-content]
 ```
@@ -104,7 +109,9 @@
 
 ### 在 Word、PowerPoint 里使用
 
-Word、Excel、PowerPoint 共用**同一个 ChatGPT 加载项**（add-in，附加在程序里使用的小功能）。请在 Microsoft 应用商店里安装「ChatGPT」。在文档旁边的窗格里就能直接修改。[^word][^ppt]
+这是不在 ChatGPT 界面里、而是**在 Word·PowerPoint 程序里**使用的工具。如果你不用这些程序，可以跳过。
+
+Word、Excel、PowerPoint 共用**同一个 ChatGPT 加载项**（add-in，附加在程序里使用的小功能）。请在 **Microsoft 应用商店**（查找并安装 Word·PowerPoint 加载项的地方）里安装「ChatGPT」。在文档旁边的窗格里就能直接修改。[^word][^ppt] 如果在公司电脑上找不到安装的地方，请问问公司的 IT 负责人。
 
 - Word 版**包括免费（Free）在内的所有套餐**都能用。PowerPoint 版在 Free 和 Go 里有限使用。如果是公司账号，要管理员允许才会显示。[^word][^ppt]
 - 加载项里的对话和 ChatGPT 的对话记录是分开的。记忆和技能也不会带过来。[^word]
@@ -146,6 +153,8 @@ Word、Excel、PowerPoint 共用**同一个 ChatGPT 加载项**（add-in，附�
 | 技能（skill） | 装着指令和示例、可以重复使用并分享的工作方式 | 按帮助中心所述，是 Business·Enterprise·Edu 等公司、学校套餐 |
 | 插件（plugin） | 把技能和应用连接打包在一起的组合 | [第7章「插件」](07-projects-plugins.md#插件——添加其他服务和工作方式) |
 
+> 模板在付费套餐的 Work 里使用，技能主要在公司·学校套餐里使用。如果不适用于你，下面的内容读一读就好，先从像上面那样把模板放进项目指令开始试试。
+
 **模板在网页版的 Work 里创建。** 在输入框里输入 `@Template-Creator`。附上一个要参考的文件（Word·Excel·PowerPoint 文件，或谷歌文档链接）。然后说明要保留什么、要改什么、每次要填入什么信息。创建好之后，请点「安装（설치）」。[^docs]
 ```
 @Template-Creator 请用附件的周报文件做一个模板。
@@ -154,7 +163,7 @@ Word、Excel、PowerPoint 共用**同一个 ChatGPT 加载项**（add-in，附�
 每次要填入的信息：那一周的工作备忘。
 ```
 
-使用创建好的模板时，请在输入框里输入 `@Documents`·`@Spreadsheets`·`@Presentations` 其中之一。模板库打开后，选「Use template」。光是选中，任务并不会开始。还需要接着写上这次的内容并发送。[^docs]
+使用创建好的模板时，请在输入框里输入 `@Documents`（文档）·`@Spreadsheets`（表格）·`@Presentations`（演示文稿）其中之一。模板库（集中展示已创建模板的界面）打开后，选「Use template」（使用模板）。光是选中，任务并不会开始。还需要接着写上这次的内容并发送。[^docs]
 
 写项目指令时，可以参考下面的要点。它原本是 OpenAI 对定制 GPT 指令的建议。[^gpt-make] 认为它对项目指令也适用，是本指南的解读。
 
@@ -181,13 +190,21 @@ Word、Excel、PowerPoint 共用**同一个 ChatGPT 加载项**（add-in，附�
 
 创建好的任务，可以在侧边菜单「定时任务（예약）」里查看、修改、暂停、删除。[^tasks][^scheduled-name] 也可以通过设置 →「通知（알림）」→「任务管理（작업 관리）」打开，还可以通过对话的 •••（更多）→「查看定时任务（예약 작업 보기）」打开。[^tasks]
 
-怎样接收通知，请在设置 →「通知（알림）」里选推送或邮件。想收到手机推送，就在手机 App 上创建任务。[^tasks]
+怎样接收通知，请在设置 →「通知（알림）」里选推送（在手机屏幕上方弹出的通知）或邮件。想收到手机推送，就在手机 App 上创建任务。[^tasks]
 
 ![侧边菜单的「定时任务（예약）」界面。上面是「安排任务（작업 예약하기）」输入框，下面是创建好的一行任务（暂停、编辑、••• 按钮），再下面是「推荐（추천）」任务列表](../../../guide/11-chatgpt/assets/shot-29-scheduled.png)
 
 *任务名称已换成示例。任务行的左边是暂停，右边是编辑和 ••• 按钮。*[^screen-scheduled] 也可以直接在上面的「安排任务（작업 예약하기）」栏里写下请求来创建。
 
-可以同时开着的任务数，因套餐而异。Free 和 Go 是3个，Plus 是5个，Business·Edu 是10个，Pro·Enterprise 是15个，这些数字可能会变（确认日期 2026-10-24）。Free 每天最多只执行一次。时间也只能大致定为早上、下午、晚上。像上面的例子那样指定准确的时刻，或者每小时执行，需要付费套餐。[^tasks] 像收到新邮件就做出反应这样的**应用事件任务**，要在 Work 里创建。Free 和 Go 不能用。[^tasks]
+免费（Free）套餐每天最多只执行一次，也不能像上面的例子那样指定准确的时刻。[^tasks]
+
+::: details 各套餐的任务数和执行条件（点击展开）
+
+- 可以同时开着的任务数：Free 和 Go 是3个，Plus 是5个，Business·Edu 是10个，Pro·Enterprise 是15个。这些数字可能会变（确认日期 2026-10-24）。[^tasks]
+- Free 的时间只能大致定为早上、下午、晚上。指定准确的时刻，或者每小时执行，需要付费套餐。[^tasks]
+- 像收到新邮件就做出反应这样的**应用事件任务**，要在 Work 里创建。Free 和 Go 不能用。[^tasks]
+
+:::
 
 也有需要小心的地方。[^tasks]
 - **在项目里创建的任务，读不到那个项目的文件。** 如果需要文件内容，请直接写进指示文字里。
@@ -332,7 +349,13 @@ Word、Excel、PowerPoint 共用**同一个 ChatGPT 加载项**（add-in，附�
 
 ### 课程里学到的框架 — 和本指南对比
 
-这三门课程里，有和本指南相同的内容，只是名字不同。了解下面的对应关系，在课程里遇到新术语时就容易猜到意思。课程里用的名称，照英文原文写出。[^academy-content]
+这三门课程里，有和本指南相同的内容，只是名字不同。比如课程里的 **CLEAR**，是拿到回答后像“都回答了吗？前后合理吗？”这样自己问自己的确认问题。这和本指南的确认习惯是同一个想法。[^academy-content]
+
+如果不打算听课，可以跳过下面的框。听课时展开看看，就能知道课程里的术语对应本指南的哪一章。
+
+::: details 课程术语和本指南章节的对应（点击展开）
+
+课程里用的名称，照英文原文写出。
 
 - **Task·Context·Expectation**（AI Foundations）：定好要做的事、背景（为谁做、为什么需要）、回答的样子（格式、长度、语气）再提出请求。和[第1阶段第4章「好提示词的5个要素」](../00-common/04-prompt-basics.md#好提示词的5个要素)是同一个想法。
 - **CLEAR**（AI Foundations）：拿到回答后，自己问自己。都回答了吗（Complete）？前后合理吗（Logical）？有依据吗（Evidence）？适合读的人吗（Audience）？有没有离题（Relevant）？请和[第1阶段第9章「确认的四个习惯」](../00-common/09-safety.md#核对的四个习惯)、[第1阶段第11章「按工作的分量来确认」](../00-common/11-expert.md#按事情的分量检查)一起看。
@@ -341,6 +364,8 @@ Word、Excel、PowerPoint 共用**同一个 ChatGPT 加载项**（add-in，附�
 - **工作流程笔记**（Applied AI Foundations）：做长时间的工作时，ChatGPT 可能会忘掉最初的目标或条件。所以把目标、已做的决定、要遵守的条件、要确认的节点写在一份简短的笔记里。下一步再把这份笔记拿给它看，就能接着之前定好的内容继续。把这份笔记作为[第7章「项目」](07-projects-plugins.md#项目——把对话、文件、指令放进一个文件夹)的文件，每次修改都更新，是本指南的建议。
 - **把工作交给智能体**（Agents and Workflows）：事先写好做什么、用哪些资料、不能做的事（不发送、不编造日期和负责人等）、成果的样子、我要确认的内容。和本章的[「交办工作的五行」](#交办工作的五行-—-成果、资料、保留项、审核标准、形式)几乎一样。
 - **选功能的规则**（Agents and Workflows）：很多时候，一个清楚的提示词就够了。需要其他服务的资料就用插件，同一件事反复出现就用技能，想在约定的时间重复同样的确认就用定时任务。请看[「重复的工作做成模板」](#重复的工作做成模板-—-指令、模板、技能)和[「到点自动去做」](#到点自动去做-—-定时任务)。
+
+:::
 
 课程里有很多亲手做的活动。在旁边的标签页里打开 ChatGPT，听的同时就可以马上跟着做。建议用电脑而不是手机听课。[^academy-content]
 
@@ -360,7 +385,7 @@ Academy 课程要用 ChatGPT 账号登录才能听，但下面的资料是**免�
 
 讲解 ChatGPT 是怎样做出来的、怎样使用的，Andrej Karpathy 的那些著名视频，汇集在[第1阶段第1章「看视频了解更多」](../00-common/01-what-is-llm.md#看视频了解更多)和[第1阶段第3章「看视频了解更多」](../00-common/03-why-learn.md#看视频了解更多)里。
 
-> Coursera 的著名课程「Prompt Engineering for ChatGPT」和「Generative AI for Everyone」，课程页面上写着“要查看课程资料和作业，必须购买证书课程”，所以从这份免费列表里去掉了（确认日期 2026-10-25）。[^coursera]
+Coursera 的两门著名课程要付费才能看课程资料，所以从这份免费列表里去掉了。[^coursera]
 
 <Quiz id="ch111-academy" />
 
@@ -401,36 +426,37 @@ Academy 课程要用 ChatGPT 账号登录才能听，但下面的资料是**免�
 
 下一章：第2阶段到此结束。请用[AI 知识水平测试](../00-common/level-test.md)来检验你的实力。
 
-[^adopt]: OpenAI，「ChatGPT Usage and Adoption Patterns at Work」。"Advanced features remain underused, even where they could deliver broad impact." https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work（确认日期 2026-10-24）
-[^work]: OpenAI 帮助中心，「ChatGPT Work and Codex」"Describe the outcome you want. Add any files, constraints, and review criteria ChatGPT should use." https://help.openai.com/en/articles/20001275 · 「Using cloud browser in ChatGPT」"Check the result and its sources before relying on it." https://help.openai.com/en/articles/20001280（确认日期 2026-10-24）
-[^docs]: OpenAI 帮助中心，「Creating and editing documents, spreadsheets, and presentations with ChatGPT Work」。模板、`@Template-Creator`，"Say what must stay unchanged…" https://help.openai.com/en/articles/20001278（确认日期 2026-10-24）
-[^prompt]: OpenAI 帮助中心，「How do I create a good prompt for an AI model?」。https://help.openai.com/en/articles/4936848（确认日期 2026-10-24）
-[^aprompt]: OpenAI Academy，「Prompting」。https://academy.openai.com/public/clubs/work-users-ynjqu/resources/prompting（确认日期 2026-10-24）
-[^deep]: OpenAI 帮助中心，「Deep research in ChatGPT」。"Use search for quick facts, and use deep research for depth and thoroughness." https://help.openai.com/en/articles/10500283（确认日期 2026-10-24）
-[^ask]: OpenAI 帮助中心，「How to Ask ChatGPT About Its Features」。https://help.openai.com/en/articles/12548278（确认日期 2026-10-24）
-[^projects]: OpenAI 帮助中心，「Projects in ChatGPT」。https://help.openai.com/en/articles/10169521（确认日期 2026-10-24）
-[^skills]: OpenAI 帮助中心，「Skills in ChatGPT」。"Skills are available to eligible ChatGPT Business, Enterprise, Healthcare, and Edu users" https://help.openai.com/en/articles/20001066（确认日期 2026-10-24）
-[^tasks]: OpenAI 帮助中心，「Scheduled tasks in ChatGPT」。各套餐的任务数、项目内任务的文件访问限制、分享时的注意事项。https://help.openai.com/en/articles/10291617（确认日期 2026-10-24）
-[^data]: OpenAI 帮助中心，「Data analysis with ChatGPT」https://help.openai.com/en/articles/8437071 · 「Extracting Insights with ChatGPT Data Analysis」"Check this data for common issues." https://help.openai.com/en/articles/9213685（确认日期 2026-10-24）
-[^study]: OpenAI 帮助中心，「Using study mode in ChatGPT」https://help.openai.com/en/articles/11780217 · 「Flashcards in ChatGPT」"Flashcards are automatically saved in your library." https://help.openai.com/en/articles/20001533（确认日期 2026-10-24）
-[^char]: OpenAI 帮助中心，「Characteristics in ChatGPT」。https://help.openai.com/en/articles/20001038（确认日期 2026-10-24）
-[^ui]: OpenAI 帮助中心，「Intelligent UI in ChatGPT」。"Select Personalization → Layout and Visuals → Simple." https://help.openai.com/en/articles/20001598（确认日期 2026-10-24）
-[^blocks]: OpenAI 帮助中心，「Working with writing blocks and code blocks in ChatGPT」。https://help.openai.com/en/articles/20001246（确认日期 2026-10-24）
-[^links]: OpenAI 帮助中心，「ChatGPT generated links」。https://help.openai.com/en/articles/10984597（确认日期 2026-10-24）
-[^academy-courses]: OpenAI Academy 课程页面（登录后）。AI Foundations "Duration: ~70 minutes", "Level: Introduction", "No technical background is required." · Applied AI Foundations "Duration: ~80 minutes", "Level: Intermediate", "We recommend completing AI Foundations first." · Agents and Workflows "Duration: ~90 minutes", "Level: Intermediate", "We recommend completing AI Foundations and Applied AI Foundations first.", "Access to agent capabilities"。三个页面共同的 "The pathway includes two required steps: completing the course and passing the assessment with a score of at least 80%." / "Your progress is automatically saved." https://academy.openai.com/home/courses/ai-foundations-dnq5w · https://academy.openai.com/home/courses/applied-ai-foundations-szsmv · https://academy.openai.com/home/courses/agents-and-workflows-y0qoc（确认日期 2026-10-26）
+[^adopt]: OpenAI，「ChatGPT Usage and Adoption Patterns at Work」。"Advanced features remain underused, even where they could deliver broad impact." https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work （确认日期 2026-10-24）
+[^work]: OpenAI 帮助中心，「ChatGPT Work and Codex」"Describe the outcome you want. Add any files, constraints, and review criteria ChatGPT should use." https://help.openai.com/en/articles/20001275 · 「Using cloud browser in ChatGPT」"Check the result and its sources before relying on it." https://help.openai.com/en/articles/20001280 （确认日期 2026-10-24）
+[^docs]: OpenAI 帮助中心，「Creating and editing documents, spreadsheets, and presentations with ChatGPT Work」。模板、`@Template-Creator`，"Say what must stay unchanged…" https://help.openai.com/en/articles/20001278 （确认日期 2026-10-24）
+[^split]: OpenAI 帮助中心（「How do I create a good prompt for an AI model?」）建议把复杂的工作拆成小的请求。Academy 的资料（「Prompting」）则说明，把互相有关的背景和指示合在一个请求里也可以，并补充说，信息太多，回答可能会变得模糊。
+[^prompt]: OpenAI 帮助中心，「How do I create a good prompt for an AI model?」。https://help.openai.com/en/articles/4936848 （确认日期 2026-10-24）
+[^aprompt]: OpenAI Academy，「Prompting」。https://academy.openai.com/public/clubs/work-users-ynjqu/resources/prompting （确认日期 2026-10-24）
+[^deep]: OpenAI 帮助中心，「Deep research in ChatGPT」。"Use search for quick facts, and use deep research for depth and thoroughness." https://help.openai.com/en/articles/10500283 （确认日期 2026-10-24）
+[^ask]: OpenAI 帮助中心，「How to Ask ChatGPT About Its Features」。https://help.openai.com/en/articles/12548278 （确认日期 2026-10-24）
+[^projects]: OpenAI 帮助中心，「Projects in ChatGPT」。https://help.openai.com/en/articles/10169521 （确认日期 2026-10-24）
+[^skills]: OpenAI 帮助中心，「Skills in ChatGPT」。"Skills are available to eligible ChatGPT Business, Enterprise, Healthcare, and Edu users" https://help.openai.com/en/articles/20001066 （确认日期 2026-10-24）
+[^tasks]: OpenAI 帮助中心，「Scheduled tasks in ChatGPT」。各套餐的任务数、项目内任务的文件访问限制、分享时的注意事项。https://help.openai.com/en/articles/10291617 （确认日期 2026-10-24）
+[^data]: OpenAI 帮助中心，「Data analysis with ChatGPT」https://help.openai.com/en/articles/8437071 · 「Extracting Insights with ChatGPT Data Analysis」"Check this data for common issues." https://help.openai.com/en/articles/9213685 （确认日期 2026-10-24）
+[^study]: OpenAI 帮助中心，「Using study mode in ChatGPT」https://help.openai.com/en/articles/11780217 · 「Flashcards in ChatGPT」"Flashcards are automatically saved in your library." https://help.openai.com/en/articles/20001533 （确认日期 2026-10-24）
+[^char]: OpenAI 帮助中心，「Characteristics in ChatGPT」。https://help.openai.com/en/articles/20001038 （确认日期 2026-10-24）
+[^ui]: OpenAI 帮助中心，「Intelligent UI in ChatGPT」。"Select Personalization → Layout and Visuals → Simple." https://help.openai.com/en/articles/20001598 （确认日期 2026-10-24）
+[^blocks]: OpenAI 帮助中心，「Working with writing blocks and code blocks in ChatGPT」。https://help.openai.com/en/articles/20001246 （确认日期 2026-10-24）
+[^links]: OpenAI 帮助中心，「ChatGPT generated links」。https://help.openai.com/en/articles/10984597 （确认日期 2026-10-24）
+[^academy-courses]: OpenAI Academy 课程页面（登录后）。AI Foundations "Duration: ~70 minutes", "Level: Introduction", "No technical background is required." · Applied AI Foundations "Duration: ~80 minutes", "Level: Intermediate", "We recommend completing AI Foundations first." · Agents and Workflows "Duration: ~90 minutes", "Level: Intermediate", "We recommend completing AI Foundations and Applied AI Foundations first.", "Access to agent capabilities"。三个页面共同的 "The pathway includes two required steps: completing the course and passing the assessment with a score of at least 80%." / "Your progress is automatically saved." https://academy.openai.com/home/courses/ai-foundations-dnq5w · https://academy.openai.com/home/courses/applied-ai-foundations-szsmv · https://academy.openai.com/home/courses/agents-and-workflows-y0qoc （确认日期 2026-10-26）
 [^academy-content]: OpenAI Academy 课程正文（需要登录和注册）。AI Foundations: "Reviewing outputs with the CLEAR structure (Complete, Logical, Evidence, Audience, Relevant)" / "Use ChatGPT as the workspace, not the source of truth." / "we recommend that you:" "Use a desktop computer or laptop". Applied AI Foundations: "A workflow has five parts" (Goal, Context, Steps, Checkpoints, Output) / "Do not ask ChatGPT to do the whole job at once." / "A workflow note keeps the goal, context, decisions, sources, capabilities, and review points in one place." Applied AI Foundations 补充: "It's the one that is useful, realistic for you, low-risk while you are learning, and easy to practice and iterate on as you go." / "Avoid workflows that are:" "Too broad" / "Too infrequent" / "Too high stakes" / "Difficult to review or verify" / "If ChatGPT misunderstands something, you can catch it early instead of fixing the whole output later." / "It should happen throughout the workflow, not only at the end." / "Do the “because” and “therefore” statements make sense? If the reasoning does not hold, ask ChatGPT to explain its logic". AI Foundations 补充: "Review intensity depends on the task" / "Drafting something that affects a person’s rights, job, health, finances, or access to services" → "Strong human review or approved process". Agents and Workflows: "Before you direct the agent to create the project brief document, have the agent review what's in the folder." / "Keep the update internal, do not send or publish it, do not invent owners or dates" / "If Work needs another approved source, start with a plugin. If the same workflow keeps repeating, consider a skill. If the same stable review should run later or recur, consider a scheduled task." / "Often, a clear prompt is enough." / "Use scheduled tasks for workflows that check, monitor, summarize, or report. Be cautious with anything that sends, posts, publishes, deletes, approves, changes records, or creates external commitments." / "Start manually. Run the workflow yourself a few times, refine the prompt, confirm the sources, and only then schedule it." / "A skill probably isn't the right fit yet if: The workflow changes every week. ... The output format is still being negotiated. The task requires judgment that should stay with a person"（确认日期 2026-10-26）
-[^academy]: OpenAI 帮助中心，「OpenAI Academy courses」。"These badges and certificates of completion are not certifications" https://help.openai.com/en/articles/20001270（确认日期 2026-10-24）
-[^word]: OpenAI 帮助中心，「ChatGPT for Word」。"ChatGPT for Word is available on all ChatGPT plans, including Free." / "Word, Excel, and PowerPoint use the same ChatGPT Microsoft add-in." / "ChatGPT memory and skills do not carry over to the add-in." / "Save a copy of important work before making substantial changes." https://help.openai.com/en/articles/20001526（确认日期 2026-10-24）
-[^ppt]: OpenAI 帮助中心，「ChatGPT for PowerPoint」。"Free and Go include limited usage access." / "Ask for a plan first when you are making larger edits." / "For important work, duplicate the file first so you can revert if needed." https://help.openai.com/en/articles/20001242（确认日期 2026-10-24）
-[^gpt-make]: OpenAI 帮助中心，「Creating and editing GPTs」。"Prefer positive, concrete instructions (“Do X”) over long lists of prohibitions (“Don’t do Y”) when possible." / "Use knowledge for reference material, not rules or behavior." / "Before adding more tools, tighten instructions and add examples." https://help.openai.com/en/articles/8554397（确认日期 2026-10-24）
-[^slack]: OpenAI 帮助中心，「Using Slack in ChatGPT」。"A shared task link does not transfer your Slack connection, credentials, channel access, or message history." https://help.openai.com/en/articles/12525822（确认日期 2026-10-24）
-[^apps-trouble]: OpenAI 帮助中心，「Troubleshooting plugins and apps in ChatGPT」。"If approval is required, the task pauses until you review it." / "Before resending an email or message, check the intended account’s sent messages and the destination." https://help.openai.com/en/articles/20001497（确认日期 2026-10-24）
-[^drive]: OpenAI 帮助中心，「Google Drive app and setup in ChatGPT」。"Finding a filename or file details does not confirm that ChatGPT retrieved the file’s contents." https://help.openai.com/en/articles/10929079（确认日期 2026-10-24）
-[^academy-public]: OpenAI Academy 公开页面。「Introduction to Prompt Engineering」(Posted Mar 08, 2025)，「Advanced Prompt Engineering」，「ChatGPT fundamentals」(Last updated on May 30, 2026)。三个页面都确认了可以在未登录的浏览器中打开。https://academy.openai.com/public/videos/introduction-to-prompt-engineering-2025-02-13 · https://academy.openai.com/public/videos/advanced-prompt-engineering-2025-02-13 · https://academy.openai.com/public/clubs/work-users-ynjqu/resources/chatgpt-basics（确认日期 2026-10-25）
-[^dlai]: DeepLearning.AI，「ChatGPT Prompt Engineering for Developers」。讲师 Isa Fulford "Member of Technical Staff, OpenAI"·Andrew Ng，"1h40m"，"Beginner"，"Only a basic understanding of Python is needed."，"Course access is free for a limited time during the DeepLearning.AI learning platform beta!" https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/（确认日期 2026-10-25）
-[^msgenai]: Microsoft，「Generative AI for Beginners」GitHub 仓库 README。"This course has 21 lessons." / "Lessons are labeled either 'Learn' lessons explaining a Generative AI concept or 'Build' lessons that explain a concept and code examples"。韩语翻译在 `translations/ko` 文件夹。https://github.com/microsoft/generative-ai-for-beginners（确认日期 2026-10-25）
-[^boost]: Boostcourse（부스트코스），「用 AI 学习的分步策划书写作法（AI로 배우는 단계별 기획서 작성법）」课程介绍。「免费课程（무료강의）」，难度「入门（입문）」，「随时听课（상시 수강）」，课程计划 #1~#3 和「[作业] 自主实践（[과제] 자율 실습 해보기）」，讲师李承弼（이승필）。https://www.boostcourse.org/aix210（确认日期 2026-10-25）
-[^coursera]: Coursera 课程页面 FAQ。"To access course materials, assignments, and earn a Certificate, you'll need to purchase the Certificate experience when you enroll in a course." https://www.coursera.org/learn/prompt-engineering · https://www.coursera.org/learn/generative-ai-for-everyone（确认日期 2026-10-25）
+[^academy]: OpenAI 帮助中心，「OpenAI Academy courses」。"These badges and certificates of completion are not certifications" https://help.openai.com/en/articles/20001270 （确认日期 2026-10-24）
+[^word]: OpenAI 帮助中心，「ChatGPT for Word」。"ChatGPT for Word is available on all ChatGPT plans, including Free." / "Word, Excel, and PowerPoint use the same ChatGPT Microsoft add-in." / "ChatGPT memory and skills do not carry over to the add-in." / "Save a copy of important work before making substantial changes." https://help.openai.com/en/articles/20001526 （确认日期 2026-10-24）
+[^ppt]: OpenAI 帮助中心，「ChatGPT for PowerPoint」。"Free and Go include limited usage access." / "Ask for a plan first when you are making larger edits." / "For important work, duplicate the file first so you can revert if needed." https://help.openai.com/en/articles/20001242 （确认日期 2026-10-24）
+[^gpt-make]: OpenAI 帮助中心，「Creating and editing GPTs」。"Prefer positive, concrete instructions (“Do X”) over long lists of prohibitions (“Don’t do Y”) when possible." / "Use knowledge for reference material, not rules or behavior." / "Before adding more tools, tighten instructions and add examples." https://help.openai.com/en/articles/8554397 （确认日期 2026-10-24）
+[^slack]: OpenAI 帮助中心，「Using Slack in ChatGPT」。"A shared task link does not transfer your Slack connection, credentials, channel access, or message history." https://help.openai.com/en/articles/12525822 （确认日期 2026-10-24）
+[^apps-trouble]: OpenAI 帮助中心，「Troubleshooting plugins and apps in ChatGPT」。"If approval is required, the task pauses until you review it." / "Before resending an email or message, check the intended account’s sent messages and the destination." https://help.openai.com/en/articles/20001497 （确认日期 2026-10-24）
+[^drive]: OpenAI 帮助中心，「Google Drive app and setup in ChatGPT」。"Finding a filename or file details does not confirm that ChatGPT retrieved the file’s contents." https://help.openai.com/en/articles/10929079 （确认日期 2026-10-24）
+[^academy-public]: OpenAI Academy 公开页面。「Introduction to Prompt Engineering」(Posted Mar 08, 2025)，「Advanced Prompt Engineering」，「ChatGPT fundamentals」(Last updated on May 30, 2026)。三个页面都确认了可以在未登录的浏览器中打开。https://academy.openai.com/public/videos/introduction-to-prompt-engineering-2025-02-13 · https://academy.openai.com/public/videos/advanced-prompt-engineering-2025-02-13 · https://academy.openai.com/public/clubs/work-users-ynjqu/resources/chatgpt-basics （确认日期 2026-10-25）
+[^dlai]: DeepLearning.AI，「ChatGPT Prompt Engineering for Developers」。讲师 Isa Fulford "Member of Technical Staff, OpenAI"·Andrew Ng，"1h40m"，"Beginner"，"Only a basic understanding of Python is needed."，"Course access is free for a limited time during the DeepLearning.AI learning platform beta!" https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/ （确认日期 2026-10-25）
+[^msgenai]: Microsoft，「Generative AI for Beginners」GitHub 仓库 README。"This course has 21 lessons." / "Lessons are labeled either 'Learn' lessons explaining a Generative AI concept or 'Build' lessons that explain a concept and code examples"。韩语翻译在 `translations/ko` 文件夹。https://github.com/microsoft/generative-ai-for-beginners （确认日期 2026-10-25）
+[^boost]: Boostcourse（부스트코스），「用 AI 学习的分步策划书写作法（AI로 배우는 단계별 기획서 작성법）」课程介绍。「免费课程（무료강의）」，难度「入门（입문）」，「随时听课（상시 수강）」，课程计划 #1~#3 和「[作业] 自主实践（[과제] 자율 실습 해보기）」，讲师李承弼（이승필）。https://www.boostcourse.org/aix210 （确认日期 2026-10-25）
+[^coursera]: 「Prompt Engineering for ChatGPT」和「Generative AI for Everyone」。课程页面上写着“要查看课程资料和作业，必须购买证书课程”。Coursera 课程页面 FAQ。"To access course materials, assignments, and earn a Certificate, you'll need to purchase the Certificate experience when you enroll in a course." https://www.coursera.org/learn/prompt-engineering · https://www.coursera.org/learn/generative-ai-for-everyone （确认日期 2026-10-25）
 [^scheduled-name]: 帮助中心把这个菜单叫作「已安排（예약됨）」，但实际的界面名称是「定时任务（예약）」。
 [^screen-scheduled]: 亲自确认了侧边菜单「定时任务（예약）」界面。提示文字 "ChatGPT에게 작업 예약, 알림 설정 또는 업데이트 모니터링을 요청하세요"（请 ChatGPT 安排任务、设置通知或监控更新），输入框「安排任务（작업 예약하기）」，任务行的「暂停（일시 중지）」「编辑（편집）」按钮，「推荐（추천）」列表（新闻更新、邮件监控、寻找周末读物等）。点开任务打开的面板里显示的是真实的任务结果，所以没有收入（确认日期 2026-10-28，Plus 账号网页界面）
 [^screen-data]: 上传假会费账本 fees.csv，并发送本节的提示词后亲自确认。第一次回答找出了空值和重复，并停止了汇总；第二次回答里的图片图表，韩文变成了方框，请它重新画之后，换成了画在界面里的图表。图表旁边的按钮是「下载图表（차트 다운로드）」「展开图表（차트 펼치기）」。删除对话之后，fees.csv 仍留在资料库里，从资料库里删除时，提示 "휴지통으로 이동되며 30일 후 영구 삭제됩니다"（将移到回收站，30天后永久删除）（确认日期 2026-10-28，Plus 账号网页界面）

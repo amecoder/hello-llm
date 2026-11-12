@@ -1,5 +1,7 @@
 # Chapter 7. Deployment — Publishing with GitHub Pages
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **In One Line**: **GitHub Pages** is a free service that puts the web files in your repository directly online as a website. With a free account, the repository must be **public**.
 > Because deployment affects the outside world, **you cannot undo it with Claude Code's rewind.** A human must check whether it is safe to publish and click the button.
 
@@ -7,7 +9,9 @@ This chapter is based on the official GitHub and Claude Code docs checked on Nov
 
 ## What Is GitHub Pages?
 
-GitHub Pages is a static site hosting service that takes the HTML, CSS, and JavaScript files in your repository, runs them through a build if needed, and **publishes them as a website**.[^pages] A static site shows fixed files directly, without a server that changes the content for each visitor. It fits pages that display a table, like a to-do board.
+GitHub Pages is a service that takes the web files in your repository (HTML, CSS, and JavaScript, the files that make up a web page) and **publishes them as a website**.[^pages] If needed, it runs a build (the process of turning files into the shape they need to be uploaded to a site) before publishing. For the to-do board, you just upload the files as they are, so you do not need to worry about the build.
+
+Pages is a place for publishing **static sites**. A static site shows fixed files directly, without a server that changes the content for each visitor. It fits pages that display a table, like a to-do board.
 
 As we saw in Chapter 2, **free accounts can only use Pages in public repositories.**[^free] Also, a Pages site is **publicly available on the internet.** Even if your plan lets you make the repository private, the site itself is still public, so you must delete sensitive data before publishing.[^public-site]
 
@@ -22,29 +26,44 @@ As we saw in Chapter 2, **free accounts can only use Pages in public repositorie
 
 Source: GitHub official docs (excerpted)[^two-ways]
 
+GitHub Actions in the second method is the feature you saw in [Chapter 5](05-test.md). Every time you push, GitHub automatically runs the tasks you set up. This method lets that feature handle publishing too.
+
 For a page that simply shows your files as they are, like our to-do board, **publishing from a branch** is enough. The official docs also recommend this method when you do not need to tweak the build process.[^two-ways] Once you pick a branch and a folder (the repository root `/` or `/docs`), the contents of that folder are published every time you push to that branch.[^branch-source]
 
-GitHub's introductory tutorial uses the Actions method. In your settings under Pages, if you change **Source** to **GitHub Actions** and add a deployment workflow file, your site will redeploy automatically whenever you push to `main`.[^actions-deploy] The address looks like `https://your-username.github.io/repository-name/`.
+The address of the published site looks like `https://your-username.github.io/repository-name/`.
+
+::: details More details: Publishing with GitHub Actions (click to expand)
+This guide's "Try It Yourself" does not use it. GitHub's introductory tutorial uses this method, so it is written down here so you do not get confused when you read the tutorial.
+
+In your settings under Pages, if you change **Source** to **GitHub Actions** and add a deployment workflow file, your site will redeploy automatically whenever you push to `main`.[^actions-deploy]
+:::
 
 <Quiz id="ch707-ways" />
 
 ## Limits and Prohibited Uses
 
-Although it is free, there are places where you cannot use it and limits to keep in mind.
+Although it is free, there are places where you must not use it. First, just remember these two.
 
-| Category | Details |
+- **Do not use it for a business**: Running a business, an online store, or a commercial service (SaaS, an online service you charge money for) is prohibited.[^business]
+- **Do not take passwords**: Do not use it for pages that send passwords or credit card numbers.[^sensitive]
+
+The practice to-do board falls under neither.
+
+**Visitor IP addresses are logged.** An IP address is a number given to each device connected to the internet. When someone visits a Pages site, the visitor's IP address is logged and stored for security purposes, whether or not they are signed in.[^ip] If you want to write "We collect nothing" on your page, be sure to mention this as well.
+
+::: details More details: Size and time limits, and conditions for practice sites (click to expand)
+| Category | Limit |
 |---|---|
-| Prohibited | Running an online business, online store, or commercial service (SaaS) |
-| Do not use for | Pages that send passwords or credit card numbers |
 | Size | Published site must be 1 GB or smaller |
 | Time | Deployment fails if it takes longer than 10 minutes |
 | Bandwidth | 100 GB per month (soft limit) |
 
-Source: GitHub official docs (excerpted)[^business][^sensitive][^size][^timeout][^bandwidth]
+Source: GitHub official docs (excerpted)[^size][^timeout][^bandwidth]
 
-**Visitor IP addresses are logged.** When someone visits a Pages site, the visitor's IP address is logged and stored for security purposes, whether or not they are signed in.[^ip] If you want to write "We collect nothing" on your page, be sure to mention this as well.
+Bandwidth is the amount of data sent to visitors.
 
 **Practice sites that imitate real services** come with conditions. Copying an existing site as a learning exercise is not prohibited in itself, but you must write the code yourself, collect no user data, and include a **prominent disclaimer** stating that the site is not associated with the original and was created only for educational purposes.[^clone-site]
+:::
 
 <Quiz id="ch707-limits" />
 
@@ -79,7 +98,7 @@ If you uploaded something sensitive, simply undoing the change is not enough. It
 
 - GitHub Pages publishes the web files in your repository as a website. Free accounts can only use it on public repositories, and the site is always public.
 - If you do not need to customize the build, publish from a branch.
-- Do not use it for businesses, online stores, or password entry. Limits: 1 GB site size, 10-minute deployment timeout, 100 GB monthly bandwidth (soft limit). Visitor IPs are logged.
+- Do not use it for businesses, online stores, or password entry. There are size and time limits, and visitor IPs are logged.
 - Deployment cannot be undone with rewind. A human clicks the button only after finishing verification, review, and the public safety check.
 
 ## Glossary

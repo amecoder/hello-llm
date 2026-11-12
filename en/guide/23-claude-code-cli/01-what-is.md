@@ -1,6 +1,6 @@
 # Chapter 1. The Terminal and Claude Code
 
-<Badge type="tip" text="Required" /> Be sure to read this to follow this step.
+<Badge type="tip" text="Required" /> Read this to follow this stage.
 
 > **One-line summary**: The terminal is a window where you tell your computer what to do with text. This course takes someone who has never opened a terminal all the way to installing Claude Code and, in the end, organizing weekly notes with a single command.[^tested]
 
@@ -35,7 +35,7 @@ Putting the same task side by side shows the difference.
 Claude Code reads the files it needs on its own.[^reads] It can also read and organize files you already have.[^organize] So you can just say something like this.
 
 ```text
-Read the meeting notes in inbox and save them as 회의록.md. Answer in one line.
+Read the meeting notes in inbox and save them as minutes.md. Answer in one line.
 ```
 
 You do not need to type it now. You will do it in Chapter 4.
@@ -48,7 +48,7 @@ Because it handles files directly, there are also things to be careful about. Yo
 
 The terminal is already on your computer. You do not need to install it. Open it the way that matches your operating system.
 
-- **Mac**: Press `Cmd + Space` to open Spotlight Search. Type `Terminal` and press Enter.[^open-mac] If your keyboard is set to Korean, you can also type `터미널`.
+- **Mac**: Press `Cmd + Space` to open Spotlight Search. Type `Terminal` and press Enter.[^open-mac] If your keyboard is set to Korean, you can also type `terminal`.
 - **Linux**: On most systems, pressing `Ctrl + Alt + T` opens it. If that does not work, look for "Terminal" in the application menu.[^open-linux]
 - **Windows**: Press `Win + X` and choose **Windows PowerShell** or **Terminal** from the menu.[^open-win]
 
@@ -83,7 +83,7 @@ This course has one main thread: **a weekly review that runs with a single comma
 
 You practice with the notes of Seoyeon, a staff member at a small cafe called "Corner Cafe." You put jumbled meeting notes into a folder. You run one script (a file that lists commands in order). Then the notes are organized into meeting minutes one by one.
 
-If you want a preview, open [the finished script](/practice/cli/results/10장-주간정리.sh.txt) and [the meeting minutes that script made](/practice/cli/results/10장-회의록-스크립트로.txt). You do not need to understand them yet.
+If you want a preview, open [the finished script](/practice/en/cli/results/ch10-weekly-summary.sh.txt) and [the meeting minutes that script made](/practice/en/cli/results/ch10-minutes-by-script.txt). You do not need to understand them yet.
 
 This works because Claude Code has **a way of running that answers once and then ends**.[^oneshot] There is no back-and-forth conversation. You hand it the task in one line, and it answers and then ends on its own. You will learn this in Chapter 10.
 

@@ -1,5 +1,7 @@
 # 第1章 和 AI 一起做出东西——一眼看懂 SDLC
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：软件要经过**计划 → 制作 → 评审 → 确认 → 发布 → 运营**，才会走向世界。这个流程叫作 SDLC。
 > AI 可以成为每个步骤里的双手，但**决定做什么、确认结果，是人的事**。第4阶段就是学习这种分工。
 
@@ -20,7 +22,7 @@ SDLC（软件开发生命周期，Software Development Life Cycle）指的是项
 
 出处：GitHub 官方文档（这本指南的整理）[^six]
 
-这本指南先讲确认（第5章），后讲评审（第6章）。这是为了在评审时能一并看到确认的结果。「运营」在 GitHub 里的含义很宽，包括监控、依赖管理、安全，但这本指南只讲到用议题（issue）来改进（第8章）和安全（第9章）。
+表里的章节顺序有一点不同。这本指南把确认（第5章）放在评审（第6章）前面讲。这是为了在评审时能一并看到确认的结果。[^operate]
 
 **不需要从一开始就用到所有步骤。** GitHub 也说，很多人是从一个仓库和几个待办事项开始，随着项目成长再逐步扩展。[^start-small] 这本指南也是用一个小网页，把六个步骤走一圈。
 
@@ -55,7 +57,7 @@ Claude Code 分三个阶段处理交给它的事。**收集上下文 → 采取�
 
 出处：这本指南的整理（依据在各章的脚注里）
 
-官方文档也写明，对提议的代码和命令是否安全，**在批准之前进行检查的责任在用户**。[^responsible] 另外，像发布这类会影响外部系统的行为，不能用 Claude Code 的回退（检查点）撤销。[^no-checkpoint] 所以越是会影响到外部的行为，越要由人来确认并按下按钮。
+官方文档也写明，对提议的代码和命令是否安全，**在批准之前进行检查的责任在用户**。[^responsible] 另外，像发布这类会影响外部系统的行为，不能用 Claude Code 的回退（检查点）撤销。[^no-checkpoint] 检查点是每次发送请求时自动留下的保存点。就像游戏里的存档点一样，Claude 改过的我电脑里的文件，大多可以退回到那个时间点（shell 命令或其他会话改过的文件除外）。但已经在网上公开的东西是退不回来的。所以越是会影响到外部的行为，越要由人来确认并按下按钮。
 
 <Quiz id="ch701-human" />
 
@@ -64,6 +66,13 @@ Claude Code 分三个阶段处理交给它的事。**收集上下文 → 采取�
 第4阶段的「亲自试一试」，是用一个贯穿各章的例子来做。就是**把第3阶段整理工具做出的会议记录里的待办事项汇总展示出来的网页**，名字叫「街角咖啡馆待办看板」。
 
 GitHub 的官方入门系列也是一路跟着做出一个小网站，**计划、写代码、评审改动，然后发布成真正的网站**。[^journey] 这本指南遵循同样的顺序，只是把 AI 的位置换成第3阶段熟悉了的 Claude Code。
+
+表里会出现几个陌生的词。现在只要大概知道意思就行。到了相应的章节会一步步讲。
+
+- **GitHub**：把项目文件和改动记录放到网上、一起协作的服务
+- **仓库**（Repository）：存放项目文件和改动记录的地方。是项目的家
+- **PR**（Pull Request，拉取请求）：递出"请把我改的东西合并进去"的改动提议
+- **GitHub Pages**：把仓库里的文件免费发布成网页的功能
 
 | 章 | 在待办看板上做的事 |
 |---|---|
@@ -108,4 +117,5 @@ GitHub 的官方入门系列也是一路跟着做出一个小网站，**计划�
 [^fail]: Claude Code 官方文档，《Best practices for Claude Code》。"It's missing information it can't get from reading the repo." / "Claude said it was done and it wasn't quite, usually because it had no way to check its own work." https://code.claude.com/docs/en/best-practices （确认日期 2026-11-01）
 [^responsible]: Claude Code 官方文档，《Security》。"You're responsible for reviewing proposed code and commands for safety before approval." https://code.claude.com/docs/en/security （确认日期 2026-11-01）
 [^no-checkpoint]: Claude Code 官方文档，《How Claude Code works》。"Actions that affect remote systems (databases, APIs, deployments) can't be checkpointed." https://code.claude.com/docs/en/how-claude-code-works （确认日期 2026-11-01）
+[^operate]: 「运营」在 GitHub 里的含义很宽，包括监控、依赖管理、安全。这本指南只讲到用议题（issue）来改进（第8章）和安全（第9章）。
 [^journey]: GitHub 官方文档，《Creating a repository for your project on GitHub》。"By the end of the journey, you'll plan work, write code, review changes, and deploy your code to a live website." https://docs.github.com/en/get-started/start-your-journey/creating-a-repository-for-your-project-on-github （确认日期 2026-11-01）

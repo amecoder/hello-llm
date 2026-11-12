@@ -1,0 +1,26 @@
+# Weekly Review — {{YYYY-MM-DD}} ~ {{MM-DD}}
+
+<!-- File name: notes/weekly-review-YYYY-MM-DD.md (the Monday of that week)
+     Look at that week's inbox/review-*.txt memos and sort them into the three sections.
+     Attach numbers (items sold, likes, etc.) as evidence in the sections below. -->
+
+## Went well (Keep)
+
+<!-- 1 to 3. What + why it went well. Use numbers if you have them.
+     e.g. Posted on Instagram all 3 times (Mon, Wed, Fri) — because we split photo and text duties in the meeting. -->
+
+- {{what went well}} — {{why it went well}}
+
+## Fell short (Problem)
+
+<!-- 1 to 3. What + why it happened.
+     e.g. Got confused about who was doing what — because I didn't write minutes after the meeting. -->
+
+- {{what fell short}} — {{why it happened}}
+
+## Try next week (Try)
+
+<!-- 1 to 3. Actions to fix what fell short, and when.
+     e.g. 11/3(Mon) organize the minutes with the template right after the meeting. -->
+
+- {{MM/DD(Day)}}: {{action}}

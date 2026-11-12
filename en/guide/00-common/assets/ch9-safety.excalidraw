@@ -1,0 +1,106 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "id": "before",
+   "x": 0,
+   "y": 0,
+   "width": 300,
+   "height": 170,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "Before sending\n\nPrivate info & secrets hidden?\nOthers' files in delimiters?",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "ai",
+   "x": 400,
+   "y": 50,
+   "width": 140,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "AI",
+    "fontSize": 22
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "after",
+   "x": 640,
+   "y": 0,
+   "width": 300,
+   "height": 170,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "After receiving\n\nNumbers, dates, sources OK?\nSafe to use as is?",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 300,
+   "y": 85,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     98,
+     0
+    ]
+   ],
+   "width": 98,
+   "height": 0,
+   "start": {
+    "id": "before"
+   },
+   "end": {
+    "id": "ai"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 540,
+   "y": 85,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     98,
+     0
+    ]
+   ],
+   "width": 98,
+   "height": 0,
+   "start": {
+    "id": "ai"
+   },
+   "end": {
+    "id": "after"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 190,
+   "width": 940,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "Risks: when sending and when receiving",
+    "fontSize": 18,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

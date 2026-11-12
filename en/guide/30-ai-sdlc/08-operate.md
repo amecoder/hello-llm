@@ -1,5 +1,7 @@
 # Chapter 8. Operations and Improvements — Running the Next Cycle with Issues
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: Write down improvements and bugs that come to mind after publishing as **Issues**. One issue becomes the plan for your next cycle.
 > If you write a special keyword like `fixes #number` in a PR, that issue **closes automatically** when you merge the PR. This is how planning and operations connect.
 
@@ -17,7 +19,7 @@ fixes #issue-number
 
 The issue number appears next to the issue title, like `#2`. If you created a PR in Chapter 6, your first issue might not be `#1`, so be sure to check the number on your screen.
 
-GitHub's beginner tutorial also creates its first issue during the planning stage. You write the feature you want to build in the title, and write a few lines in the description about what you want to make.[^first-issue]
+When you write an issue, just write the feature you want to build in the title, and write a few lines in the description about what you want to make.[^first-issue] For example, the title could be "Show overdue to-dos in red" and the description "I'd like to-dos whose due date is before today to show their text in red."
 
 <Quiz id="ch708-issue" />
 
@@ -41,7 +43,9 @@ Source: GitHub official docs (selected items)[^labels]
 
 ## Running One More Cycle
 
-When one cycle ends, you create the next feature **as a new issue** and move it to In Progress when you start the next cycle.[^next-cycle] Here is how you run the workflow you learned in Stage 4 again with a single issue.
+When one cycle ends, you create the next feature **as a new issue** to start the next cycle. If you use a board, move that issue to In Progress when you start working on it.[^next-cycle] Even without a board, the issue alone is enough.
+
+Here is how you run the workflow you learned in Chapters 3–7 again with a single issue.
 
 1. **Plan**: Write what you want to change in an issue. If needed, add one line of acceptance criteria to SPEC.md (Chapter 3).
 2. **Build**: Get a plan in Plan Mode on a new branch, then build it (Chapter 4).
@@ -95,7 +99,7 @@ Next chapter: [Chapter 9. Safety and Responsibility](09-safety.md)
 
 [^issue]: GitHub official docs, "About issues". "You can create issues in your repository to plan, discuss, and track work." https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues (checked on 2026-11-01)
 [^close]: GitHub official docs, "About issues". "Mentioning an issue in another issue or pull request will create references between them and using keywords, like `fixes:`, in your pull requests will automatically close the associated issues." https://docs.github.com/en/issues/tracking-your-work-with-issues/learning-about-issues/about-issues (checked on 2026-11-01)
-[^first-issue]: GitHub official docs, "Planning your work". "In the **Add a title** field, type `Display a list of starred repositories`." https://docs.github.com/en/get-started/start-your-journey/planning-your-work (checked on 2026-11-01)
+[^first-issue]: GitHub's beginner tutorial also creates its first issue this way during the planning stage. GitHub official docs, "Planning your work". "In the **Add a title** field, type `Display a list of starred repositories`." https://docs.github.com/en/get-started/start-your-journey/planning-your-work (checked on 2026-11-01)
 [^labels]: GitHub official docs, "Managing labels". "GitHub provides default labels in every new repository." / "`bug` | Indicates an unexpected problem or unintended behavior" / "`documentation` | Indicates a need for improvements or additions to documentation" / "`enhancement` | Indicates new feature requests" https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels (checked on 2026-11-01)
 [^projects]: GitHub official docs, "About Projects". "A project is an adaptable table, board, and roadmap that integrates with your issues and pull requests on GitHub to help you plan and track your work effectively at the user or organization level." https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects (checked on 2026-11-01)
 [^board]: GitHub official docs, "Planning your work". "The board's columns represent stages of your work. As you make progress, move each item to show its status." https://docs.github.com/en/get-started/start-your-journey/planning-your-work (checked on 2026-11-01)

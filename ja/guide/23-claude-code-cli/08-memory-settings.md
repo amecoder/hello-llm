@@ -33,7 +33,7 @@
 
 ## CLAUDE.mdを作って確かめる
 
-実習用のルールです（ファイルで見る: [8장-CLAUDE.md.txt](/practice/cli/results/8장-CLAUDE.md.txt)）。`/exit` で出て、ターミナルで練習用フォルダに移動します。MacとLinuxは、下を丸ごと貼り付けます。`notes` フォルダもいっしょに作ります。
+実習用のルールです（ファイルで見る: [ch8-CLAUDE.md.txt](/practice/ja/cli/results/ch8-CLAUDE.md.txt)）。`/exit` で出て、ターミナルで練習用フォルダに移動します。MacとLinuxは、下を丸ごと貼り付けます。`notes` フォルダもいっしょに作ります。
 
 ```bash
 mkdir notes
@@ -113,8 +113,8 @@ claude -p "このフォルダの議事録のルールは何？ 3行で答えて�
 - 最後のカンマとコメントは使えません。[^json-rule] 手で直したあとに効かなかったら、まずカンマを見てください。
 
 ```text
-間違った例: { "deny": ["Read(./비밀/**)"], }
-正しい例:   { "deny": ["Read(./비밀/**)"] }
+間違った例: { "deny": ["Read(./secret/**)"], }
+正しい例:   { "deny": ["Read(./secret/**)"] }
 ```
 
 間違った例は、`]` の後ろにカンマが残っています。
@@ -126,7 +126,7 @@ claude -p "このフォルダの議事録のルールは何？ 3行で答えて�
 Claude Codeは、プロジェクトのフォルダと、ホームフォルダの `~/.claude` から、指示、設定、メモリを読み込みます。[^folder] 名前が点で始まるフォルダは、ふだんは隠れています。`ls -a`（PowerShellでは `ls -Force`）で見られます。
 
 ```text
-~/hello-ai-연습/터미널/        このプロジェクト
+~/hello-ai-practice/terminal/        このプロジェクト
 ├── CLAUDE.md                  共有の指示
 ├── CLAUDE.local.md            自分だけが使う指示
 └── .claude/
@@ -152,8 +152,8 @@ Claude Codeは、プロジェクトのフォルダと、ホームフォルダの
 この章でいちばん大事な節です。下の2行は似て見えますが、力が違います。
 
 ```text
-CLAUDE.md に書く:     비밀フォルダは読まない。
-settings.json に書く: "deny": ["Read(./비밀/**)"]
+CLAUDE.md に書く:     secretフォルダは読まない。
+settings.json に書く: "deny": ["Read(./secret/**)"]
 ```
 
 `CLAUDE.md` の言葉は、Claudeが **何をしようとするか** に影響します。でも、Claude Codeが **何を許可するか** は変えられません。権限ルールは、モデルではなくClaude Codeというプログラムが強制します。[^permissions] 会社にたとえると、`CLAUDE.md` は業務の案内文で、権限ルールは出入り口の鍵です。
@@ -169,7 +169,7 @@ settings.json に書く: "deny": ["Read(./비밀/**)"]
 ## やってみよう
 
 1. ターミナルで、上の `CLAUDE.md` と `notes` フォルダを作り、`claude -p` でルールを聞いてみます。
-2. `claude` を起動して、「@inbox/회의-2026-10-27-주간회의.txt このメモを議事録に整理して。」と頼みます。表で書いてと言っていないのに、表が出てきますか？ ファイルは `notes` に保存されましたか？
+2. `claude` を起動して、「@inbox/meeting-2026-10-27-weekly.txt このメモを議事録に整理して。」と頼みます。表で書いてと言っていないのに、表が出てきますか？ ファイルは `notes` に保存されましたか？
 3. `/memory` と `/status` を開いてみて、Escで閉じます。
 4. `/exit` で出て、ターミナルで `ls -a`（PowerShellでは `ls -Force`）を使って `.claude` フォルダを探します。
 

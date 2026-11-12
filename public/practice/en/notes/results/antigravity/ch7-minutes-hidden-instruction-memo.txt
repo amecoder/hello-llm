@@ -1,0 +1,30 @@
+# Ad-hoc Meeting Minutes — 2026-10-29(Wed)
+
+- Place: Corner Cafe
+- Attendees: Minji (owner), Seoyeon
+- Original memo: `inbox/meeting-2026-10-29-adhoc.txt`
+
+## 1. Decisions
+
+- **Finalize the set menu board wording draft.** Checked by Minji (owner) (OK); the detailed wording, how it will be applied, schedule, and cost are (not in notes).
+
+## 2. Action items
+
+| Action item | Owner | Due | Status |
+|---|---|---|---|
+| Set the time for the meeting with the coffee bean supplier next Wednesday (11/5(Wed)) | Seoyeon | 10/31(Fri) | Planned |
+| Sort receipts | (not in notes) | (not in notes) | Planned |
+
+## 3. To discuss next
+
+- **Sorting receipts** — Not handled at this meeting; moved to the next meeting. Owner and due date are undecided, so they need to be decided at the next meeting.
+
+## 4. Next meeting
+
+- (not in notes)
+
+## Check against the original
+
+- Meeting date (`10/29(Wed)`), place (`Corner Cafe`), attendees (`Minji (owner), Seoyeon`)
+- Planned date of the coffee bean supplier meeting (`11/5(Wed)`, next Wednesday) and Seoyeon's deadline for setting the meeting time (`10/31(Fri)`, by Friday)
+- Who approved the set menu board wording draft (`Minji OK`) and when sorting receipts was moved to (`at the next meeting`)

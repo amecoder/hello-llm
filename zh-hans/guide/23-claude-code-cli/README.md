@@ -17,7 +17,7 @@
 | 7 | 必读 | [许可与撤销](07-permissions-undo.md) | 权限模式、许可窗口、回退、拒绝规则 |
 | 8 | 必读 | [项目记忆与设置](08-memory-settings.md) | CLAUDE.md、设置文件 |
 | 9 | 必读 | [技能与扩展](09-skills-extensions.md) | 制作技能、插件·MCP·子代理 |
-| 10 | 必读 | [一行运行与自动化](10-headless-automation.md) | `claude -p`、预先许可、`주간정리.sh` |
+| 10 | 必读 | [一行运行与自动化](10-headless-automation.md) | `claude -p`、预先许可、`weekly-summary.sh` |
 | 11 | 必读 | [钩子与界面定制](11-hooks-statusline.md) | 变更记录钩子、状态栏、输出风格 |
 | 12 | 必读 | [同时工作与远程](12-parallel-remote.md) | Git 第一次记录、worktree、`/loop`、`/goal`、远程控制 |
 | 13 | 必读 | [费用·安全·问题解决](13-cost-safety-trouble.md) | 用量、模型、沙箱、数据、出错时的应对 |
@@ -27,22 +27,22 @@
 
 ## 练习材料
 
-练习在 `~/hello-ai-연습/터미널`（hello-ai 练习/终端）文件夹里，用下面的笔记来做。**内容全部是虚构的**（小咖啡馆「街角咖啡馆」员工瑞妍的一周）。
+练习在 `~/hello-ai-practice/terminal`（hello-ai 练习/终端）文件夹里，用下面的笔记来做。**内容全部是虚构的**（小咖啡馆「街角咖啡馆」员工瑞妍的一周）。
 第2章只放入每周例会的笔记。临时会议的笔记在第13章再放入。
 
 | 文件 | 内容 |
 |---|---|
-| [회의-2026-10-27-주간회의.txt](/practice/notes/inbox/회의-2026-10-27-주간회의.txt)（会议-2026-10-27-每周例会） | 乱糟糟的每周例会笔记 |
-| [회의-2026-10-29-임시회의.txt](/practice/notes/inbox/회의-2026-10-29-임시회의.txt)（会议-2026-10-29-临时会议） | 藏着隐藏指令的笔记（第13章安全实验用） |
+| [meeting-2026-10-27-weekly.txt](/practice/zh-hans/notes/inbox/meeting-2026-10-27-weekly.txt)（会议-2026-10-27-每周例会） | 乱糟糟的每周例会笔记 |
+| [meeting-2026-10-29-adhoc.txt](/practice/zh-hans/notes/inbox/meeting-2026-10-29-adhoc.txt)（会议-2026-10-29-临时会议） | 藏着隐藏指令的笔记（第13章安全实验用） |
 
 本指南通过实际运行做出的**成果物**也公开出来。可以和你自己的结果比一比。即使请求一样，结果的样子也会有些不同。
 
 | 章 | 成果物 |
 |---|---|
-| 4 | [会议记录](/practice/cli/results/4장-회의록.txt) |
-| 8 | [CLAUDE.md](/practice/cli/results/8장-CLAUDE.md.txt) |
-| 9 | [技能 meeting-notes](/practice/cli/results/9장-스킬-meeting-notes.txt) |
-| 10 | [주간정리.sh](/practice/cli/results/10장-주간정리.sh.txt) · [用脚本做出的会议记录](/practice/cli/results/10장-회의록-스크립트로.txt) |
-| 11 | [设置文件](/practice/cli/results/11장-settings.json.txt) |
+| 4 | [会议记录](/practice/zh-hans/cli/results/ch4-minutes.txt) |
+| 8 | [CLAUDE.md](/practice/zh-hans/cli/results/ch8-CLAUDE.md.txt) |
+| 9 | [技能 meeting-notes](/practice/zh-hans/cli/results/ch9-skill-meeting-notes.txt) |
+| 10 | [weekly-summary.sh](/practice/zh-hans/cli/results/ch10-weekly-summary.sh.txt) · [用脚本做出的会议记录](/practice/zh-hans/cli/results/ch10-minutes-by-script.txt) |
+| 11 | [设置文件](/practice/zh-hans/cli/results/ch11-settings.json.txt) |
 
 如果想不用终端来使用，请看 [Claude Code 应用指南](/zh-hans/guide/20-claude-code/)。它用桌面应用整理同样的咖啡馆笔记。账号·套餐·聊天功能在[第2阶段 · Claude 指南](/zh-hans/guide/10-claude/)里说明。

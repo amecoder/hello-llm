@@ -1,5 +1,7 @@
 # Chapter 3. The Rules File AGENTS.md — Moving CLAUDE.md to Codex
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **In short**: Codex reads **`AGENTS.md`** before starting any work. If you leave Claude Code's `CLAUDE.md` as is, Codex does not read it.
 > You will move the rules in the note-organizer folder into `AGENTS.md` and test in a new chat whether Codex follows them **without being told**.
 
@@ -25,7 +27,7 @@ CLAUDE.md is the rules file that Claude Code reads. Move the same rules into AGE
 
 Codex copied the five rules from `CLAUDE.md` as they were and added the new rule as number 6. Then it reported that it verified the contents matched the original completely, except for the added rule.
 
-Result: [AGENTS.md](/practice/notes/results/codex/3장-AGENTS.md.txt)
+Result: [AGENTS.md](/practice/en/notes/results/codex/ch3-AGENTS.md.txt)
 
 There is a reason we did not delete `CLAUDE.md`. We want to keep using the same folder in Claude Code as well. In return, you have to **update both files together**. If you edit only one, the two tools will work under different rules.
 
@@ -36,7 +38,7 @@ There is a reason we did not delete `CLAUDE.md`. We want to keep using the same 
 Open a new chat and ask Codex to organize your study notes without saying anything about the rules.
 
 ```
-Organize inbox/공부-2026-10-28-프롬프트-강의.txt into study notes and save it in notes/.
+Organize inbox/study-2026-10-28-prompt-lecture.txt into study notes and save it in notes/.
 ```
 
 At the very bottom of the result, the section from the new rule appeared.
@@ -49,7 +51,7 @@ At the very bottom of the result, the section from the new rule appeared.
 - Prompt-writing methods introduced by the instructor: 5.
 ```
 
-Result: [Study notes written from rules alone](/practice/notes/results/codex/3장-공부노트-규칙확인.txt)
+Result: [Study notes written from rules alone](/practice/en/notes/results/codex/ch3-study-notes-rule-check.txt)
 
 | When the file was made | "Check Against Original (원본과 대조할 것)" section |
 |---|---|
@@ -58,7 +60,17 @@ Result: [Study notes written from rules alone](/practice/notes/results/codex/3�
 
 Source: Hands-on results from this guide (2026-11-01, 1 run each)
 
-Because the new rule existed only in `AGENTS.md`, we can see that Codex read and followed that file. Keep in mind, though, that this was **tested once each**, and the note types before and after (meeting notes vs. study notes) were different. The template checklist also has a similar item: "Checked once against the original note." To be more certain, try running the **same note** once without `AGENTS.md` and once with it, then compare. There is no guarantee it will follow the rules every single time, so check the result each time you view it.
+Because the new rule existed only in `AGENTS.md`, we can see that Codex read and followed that file. There is no guarantee it will follow the rules every single time, so check the result each time you view it.
+
+::: details Limits of this experiment (click to expand)
+
+- This was **tested once each**.
+- The note types before and after (meeting notes vs. study notes) were different.
+- The template checklist also has a similar item: "Checked once against the original note."
+
+To be more certain, try running the **same note** once without `AGENTS.md` and once with it, then compare.
+
+:::
 
 <Quiz id="ch503-test" />
 
@@ -73,7 +85,11 @@ You can place `AGENTS.md` in two locations.[^chain]
 
 Source: Codex official docs (selected)[^chain]
 
-If both exist, Codex reads them **joined together**, and the file closer to your current folder comes later and takes priority over earlier instructions.[^override] Once the combined size reaches the default limit of 32 KiB, Codex stops adding more.[^limit] In Korean, that is roughly 10,000 characters. Keep your rules short.
+If both exist, Codex reads them **joined together** as one. The file closer to your current folder is added later, and later instructions take priority over earlier ones.[^override]
+
+For example, say `~/.codex/AGENTS.md` says "Answer in Korean" and the organizer folder's `AGENTS.md` says "Answer in English." The organizer folder's file is added later, so in this folder "in English" wins.
+
+There is a limit to how much can be joined. Once the combined size reaches the default of 32 KiB (kibibytes, a unit of file size), Codex stops adding more.[^limit] In Korean, that is roughly 10,000 characters. Keep your rules short.
 
 If you edited the rules and they do not seem to take effect, **start a new chat** or restart Codex. Codex reads the rules fresh each time it starts a run.[^restart]
 
@@ -83,11 +99,15 @@ If a folder does not have `AGENTS.md` yet, you can also type `/init` in the app'
 
 ## Import and Memories
 
-**Import** is a feature that brings over settings from another agent all at once. In the app, you can import from Claude Code, Claude Cowork, or Cursor.[^import-from] Start from the **Import** menu in the app settings. If you do not see that menu, open **General** and look for **Import other agent setup**.[^import-menu]
+There is also a feature that does what you did by hand in this chapter all at once. **Import** is a feature that brings over settings from another agent all at once. In the app, you can import from Claude Code, Claude Cowork, or Cursor.[^import-from] Start from the **Import** menu in the app settings.[^import-menu]
 
 ![Settings → Import screen in the ChatGPT app: under "Import from another AI app", Claude Code, Claude Cowork, and Cursor are listed, each with an Import button](../../../guide/21-codex/assets/shot-02-import.png)
 
 On this guide's screen (2026-11-01), **Import** was in the left list of settings, and Claude Code, Claude Cowork, and Cursor found on this computer appeared with an **Import** button next to each. This guide did not click the button.
+
+This guide **did not run** Import. Import looks through not just a single folder, but also your personal settings on your computer.[^import-scope] It then converts your rules files, skills, slash commands, and settings files into their Codex counterparts and moves them all at once. For example, `CLAUDE.md` becomes `AGENTS.md`.[^import-map] Because a lot gets moved at once, if you want to see for yourself what gets moved one by one, it is better to move things by hand as we did in this chapter.
+
+::: details What Import moves and what to review (click to expand)
 
 | In Claude Code | In Codex |
 |---|---|
@@ -98,9 +118,17 @@ On this guide's screen (2026-11-01), **Import** was in the left list of settings
 
 Source: Codex official docs (selected)[^import-map]
 
-Importing does not change or delete your original settings.[^import-keep] However, after importing, the docs strongly recommend reviewing **permission restrictions in skills, hooks, and commands that take arguments**.[^import-review]
+`settings.json` and `config.toml` are files that hold each tool's settings. Only the names differ; they do the same job.
 
-This guide **did not run** Import. Import looks through not just a single folder, but also your personal settings on your computer.[^import-scope] If you want to see for yourself what gets moved, it is better to move things by hand as we did in this chapter.
+Importing does not change or delete your original settings.[^import-keep] However, after importing, the docs strongly recommend reviewing these things.[^import-review]
+
+- Parts that limit which tools or permissions a skill can use
+- Hooks (scripts that run automatically at set times)
+- Commands you use by filling in a blank with a value (commands that take arguments)
+
+If you do not see the **Import** menu in settings, open **General** and look for **Import other agent setup**.[^import-menu]
+
+:::
 
 **Memories** is a feature that carries context from earlier work into future work.[^memory] Local Codex memories on your computer are turned off by default.[^memory-off] The official docs say to treat memories only as a "recall helper" and not to rely on them for rules that must always be followed.[^memory-rules] **Write rules that must be followed in `AGENTS.md`**.[^memory-agents]
 

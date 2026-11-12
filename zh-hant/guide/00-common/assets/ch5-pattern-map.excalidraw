@@ -1,0 +1,390 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 980,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "第一次用 — 基本模式",
+    "fontSize": 18,
+    "strokeColor": "#1971c2"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 40,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "想把語氣·格式\n完全統一",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 115,
+   "y": 100,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 130,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "1. 展示示例",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 250,
+   "y": 40,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "需要特定\n視角的建議",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 365,
+   "y": 100,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 250,
+   "y": 130,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "2. 指定角色",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 500,
+   "y": 40,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "長文·大任務",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 615,
+   "y": 100,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 500,
+   "y": 130,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "3. 分步驟",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 750,
+   "y": 40,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "不知道該\n告訴它什麼",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 865,
+   "y": 100,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 750,
+   "y": 130,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#d0ebff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "4. 讓 AI 反問",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 200,
+   "width": 980,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "需要時 — 情景模式",
+    "fontSize": 18,
+    "strokeColor": "#e8590c"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 240,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "要貼上\n長資料",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 115,
+   "y": 300,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 330,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "label": {
+    "text": "5. 用分隔符包起來",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 250,
+   "y": 240,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "答案\n不止一個",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 365,
+   "y": 300,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 250,
+   "y": 330,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "label": {
+    "text": "6. 要多個方案",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 500,
+   "y": 240,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "出錯\n會很麻煩",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 615,
+   "y": 300,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 500,
+   "y": 330,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "label": {
+    "text": "7. 讓 AI 自己檢查",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 750,
+   "y": 240,
+   "width": 230,
+   "height": 60,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "需要計算·\n比較·判斷",
+    "fontSize": 15
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 865,
+   "y": 300,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     28
+    ]
+   ],
+   "width": 0,
+   "height": 28
+  },
+  {
+   "type": "rectangle",
+   "x": 750,
+   "y": 330,
+   "width": 230,
+   "height": 50,
+   "backgroundColor": "#ffd8a8",
+   "fillStyle": "solid",
+   "label": {
+    "text": "8. 一步一步想",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 395,
+   "width": 980,
+   "height": 36,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "看到灰色格子裡的情況，就用下面的模式。混著用幾個也可以",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

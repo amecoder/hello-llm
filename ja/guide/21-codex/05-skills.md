@@ -1,5 +1,7 @@
 # 5章. スキルを移す — `$weekly-review` 1行で週次の振り返り
 
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
 > **一言まとめ**: Codexのスキルは、Claude Codeと **同じ形式**（`SKILL.md`）で、置く場所と呼び出す記号だけが違います。フォルダは `.agents/skills`、呼び出すときは `$名前` です。
 > 整理ツールのスキル3つを移し、`$weekly-review` 1行で週次の振り返りを作って、元のメモと照らし合わせます。
 
@@ -38,9 +40,14 @@ mkdir -p .agents/skills
 cp -R .claude/skills/meeting-notes .claude/skills/study-notes .claude/skills/weekly-review .agents/skills/
 ```
 
-この実習は、許可の方式をあらかじめ決めておいて動かすターミナル実行（7章）なので、聞くことができず、そのまま止まりました。アプリでこの場面がどう見えるかは、このガイドでは直接確認できませんでした。許可を聞く画面が出たら、**何をどこに書くのか** を読んで判断してください。
+2行の意味は次のとおりです。
 
-このガイドは、Codexが教えてくれたコマンドを **自分で** 実行してコピーしました。macOSのターミナルを開いて、`cd ~/hello-ai-연습/정리도구` でフォルダに入ってから、上の2行を入力します。ターミナルが初めてなら、先に[Claude Code 10章](../20-claude-code/10-terminal.md)を見てください。
+- `mkdir -p .agents/skills`: `.agents/skills` フォルダを作ります。`mkdir` は「フォルダを作る」、`-p` は「途中のフォルダまで一度に作り、すでにあればそのまま進む」という意味です。
+- `cp -R コピー元1 コピー元2 コピー元3 .agents/skills/`: スキルのフォルダ3つを `.agents/skills/` の中にコピーします。`cp` は「コピー」、`-R` は「フォルダの中のファイルまで丸ごと」という意味です。元のフォルダはそのまま残ります。
+
+このガイドの実習は、アプリではなく **ターミナル** で動かしました。許可の方式をあらかじめ決めておき、聞かないようにする方式なので、Codexは聞くことができず、そのまま止まりました（この方式は7章で扱います）。アプリでこの場面がどう見えるかは、このガイドでは直接確認できませんでした。許可を聞く画面が出たら、**何をどこに書くのか** を読んで判断してください。
+
+このガイドは、Codexが教えてくれたコマンドを **自分で** 実行してコピーしました。macOSのターミナルを開いて、`cd ~/hello-ai-practice/organizer` でフォルダに入ってから、上の2行を入力します。ターミナルが初めてなら、先に[Claude Code 10章](../20-claude-code/10-terminal.md)を見てください。
 
 移したあと、`.agents/skills` の下に `meeting-notes`、`study-notes`、`weekly-review` の3つのフォルダがあればOKです。
 
@@ -56,7 +63,7 @@ $weekly-review
 
 コピーを終えたあとは、ファイル検索なしで `.agents/skills/weekly-review/SKILL.md` を **すぐに** 開きました。そして、振り返りメモ3つをまとめて、週次の振り返りを作りました。
 
-結果: [スキルで作った週次の振り返り](/practice/notes/results/codex/5장-주간회고-스킬로.txt)
+結果: [スキルで作った週次の振り返り](/practice/ja/notes/results/codex/ch5-weekly-review-with-skill.txt)
 
 数字と事実を、元のメモと照らし合わせてみました。
 
@@ -83,7 +90,7 @@ $weekly-review
 
 新しいスキルをゼロから作るときは、最初から入っている `$skill-creator` を呼び出して、目標・ステップ・形式を説明します。[^creator] 公式ドキュメントが挙げる良い最初のスキルは、週次報告や会議後のフォローアップの整理のような、**ステップと形式がいつも同じ仕事** です。[^first] 整理ツールの3つのスキルが、まさにその例です。
 
-**プラグイン**は、スキルと外部ツールとの接続をまとめてインストールするパッケージです。[^plugin] ChatGPTとCodexは、ひとつのプラグイン一覧を共通で使います。[^shared] プラグインに入っているフック（自動で動くスクリプト）は、動く前に確認して、信頼できるかを判断するように言っています。[^hooks] 初めて見るプラグインは、[Claude Code 7章](../20-claude-code/07-skills-plugins.md)で学んだように、作った人と権限を先に確認してください。
+今回の実習には **プラグイン** は必要ありません。名前と注意点だけ知っておいてください。プラグインは、スキルと外部ツールとの接続をまとめてインストールするパッケージです。[^plugin][^shared] プラグインに入っているフック（自動で動くスクリプト）は、動く前に確認して、信頼できるかを判断するように言っています。[^hooks] 初めて見るプラグインは、[Claude Code 7章](../20-claude-code/07-skills-plugins.md)で学んだように、作った人と権限を先に確認してください。
 
 <Quiz id="ch505-create" />
 
@@ -125,5 +132,5 @@ $weekly-review
 [^creator]: Codex公式ドキュメント、「Skills & Plugins」。"In ChatGPT, start with `@skill-creator`; in Codex, use `$skill-creator`." https://learn.chatgpt.com/docs/skills-and-plugins （確認日 2026-11-01）
 [^first]: Codex公式ドキュメント、「Skills & Plugins」。"Good first skills include a weekly update, a campaign brief, a meeting follow-up, or any task where the steps and format should stay consistent." https://learn.chatgpt.com/docs/skills-and-plugins （確認日 2026-11-01）
 [^plugin]: Codex公式ドキュメント、「Skills & Plugins」。"A **plugin** is an installable bundle that can include skills and Model Context Protocol (MCP) servers." https://learn.chatgpt.com/docs/skills-and-plugins （確認日 2026-11-01）
-[^shared]: Codex公式ドキュメント、「Skills & Plugins」。"ChatGPT and Codex share one universal plugin directory." https://learn.chatgpt.com/docs/skills-and-plugins （確認日 2026-11-01）
+[^shared]: ChatGPTとCodexは、ひとつのプラグイン一覧を共通で使います。Codex公式ドキュメント、「Skills & Plugins」。"ChatGPT and Codex share one universal plugin directory." https://learn.chatgpt.com/docs/skills-and-plugins （確認日 2026-11-01）
 [^hooks]: Codex公式ドキュメント、「Plugins」。"Review and trust plugin hooks before they run." https://learn.chatgpt.com/docs/plugins （確認日 2026-11-01）

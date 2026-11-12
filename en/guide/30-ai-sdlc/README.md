@@ -6,25 +6,25 @@ It is okay if you do not know how to code. What you learn in this stage is not h
 > **This guide is based on the official GitHub and Claude Code docs, as well as the spec-kit and OpenSpec repositories, checked on November 1, 2026.** Features and screen names change often.
 > A free GitHub account is all you need. For AI tools, you will use the same ones from Stage 3 (Claude Code, Codex, Antigravity).
 
-| Chapter | Title | What You Will Learn |
-|---|---|---|
-| 1 | [Building Together with AI](01-what-is.md) | The six stages of SDLC, how AI works in a loop, what humans are responsible for |
-| 2 | [Creating a GitHub Repository](02-repository.md) | Git, GitHub, and repositories, public vs. private, README, .gitignore, license, and cloning |
-| 3 | [Planning and Specification](03-plan-spec.md) | Getting interviewed for SPEC.md, what a good spec looks like, spec-driven development tools |
-| 4 | [Building](04-build.md) | Plan mode, branches, small commits, reading what AI built |
-| 5 | [Checking and Testing](05-test.md) | Verification checks, getting proof, GitHub Actions |
-| 6 | [PR and Review](06-review.md) | Pull requests, reviewing even when working alone, limits of `/code-review`, merging |
-| 7 | [Deploying](07-deploy.md) | GitHub Pages, how to publish, limits and prohibited uses, irreversible deployments |
-| 8 | [Operating and Improving](08-operate.md) | Issues, labels, and boards, the `fixes` keyword, going around the loop once more |
-| 9 | [Safety and Responsibility](09-safety.md) | Three layers of defense for secrets, pre-public checklist, licenses and AI output, dependencies |
-| 10 | [Hands-on Project](10-practice.md) | One full cycle with the to-do board, starting from scratch with your own problem, checklist |
+| Chapter | Reading | Title | What You Will Learn |
+|---|---|---|---|
+| 1 | Required | [Building Together with AI](01-what-is.md) | The six stages of SDLC, how AI works in a loop, what humans are responsible for |
+| 2 | Required | [Creating a GitHub Repository](02-repository.md) | Git, GitHub, and repositories, public vs. private, README, .gitignore, license, and cloning |
+| 3 | Required | [Planning and Specification](03-plan-spec.md) | Getting interviewed for SPEC.md, what a good spec looks like, spec-driven development tools |
+| 4 | Required | [Building](04-build.md) | Plan mode, branches, small commits, reading what AI built |
+| 5 | Required | [Checking and Testing](05-test.md) | Verification checks, getting proof, GitHub Actions |
+| 6 | Required | [PR and Review](06-review.md) | Pull requests, reviewing even when working alone, limits of `/code-review`, merging |
+| 7 | Required | [Deploying](07-deploy.md) | GitHub Pages, how to publish, limits and prohibited uses, irreversible deployments |
+| 8 | Required | [Operating and Improving](08-operate.md) | Issues, labels, and boards, the `fixes` keyword, going around the loop once more |
+| 9 | Required | [Safety and Responsibility](09-safety.md) | Three layers of defense for secrets, pre-public checklist, licenses and AI output, dependencies |
+| 10 | Required | [Hands-on Project](10-practice.md) | One full cycle with the to-do board, starting from scratch with your own problem, checklist |
 
 ## Ongoing Example — Corner Cafe To-Do Board
 
 The "Try It Yourself" section at the end of each chapter connects into a single example. It is a web page that collects and shows action items from the meeting notes created by the Stage 3 organizer tool. For the to-do data, you will use the results from Stage 3.
 
-- [Meeting notes from Stage 3 Claude Code Chapter 2](/practice/notes/results/2장-회의록-2026-10-27-주간회의.txt)
-- [Meeting notes from Stage 3 Codex Chapter 2](/practice/notes/results/codex/2장-회의록-2026-10-27-주간회의.txt)
+- [Meeting notes from Stage 3 Claude Code Chapter 2](/practice/en/notes/results/ch2-minutes-2026-10-27-weekly.txt)
+- [Meeting notes from Stage 3 Codex Chapter 2](/practice/en/notes/results/codex/ch2-minutes-2026-10-27-weekly.txt)
 
 All names in the notes (Minji, Junho, Seoyeon) are fictional. If you use your own notes instead, remove real names and contact info before uploading to a public repository (Chapter 9).
 

@@ -1,0 +1,164 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 0,
+   "width": 240,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "A：「幫我寫簡歷。」",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 240,
+   "y": 35,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 320,
+   "y": 0,
+   "width": 120,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "同樣的 AI",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 440,
+   "y": 35,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 520,
+   "y": 0,
+   "width": 280,
+   "height": 70,
+   "backgroundColor": "#ffc9c9",
+   "fillStyle": "solid",
+   "label": {
+    "text": "空格很多的普通模板\n→「沒什麼用」",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 110,
+   "width": 240,
+   "height": 90,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "B：告訴經歷、要應聘的公司、\n想要的格式",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 240,
+   "y": 155,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 320,
+   "y": 120,
+   "width": 120,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "同樣的 AI",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 440,
+   "y": 155,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     78,
+     0
+    ]
+   ],
+   "width": 78,
+   "height": 0
+  },
+  {
+   "type": "rectangle",
+   "x": 520,
+   "y": 120,
+   "width": 280,
+   "height": 70,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "可以直接修改使用的初稿\n→ 節省時間",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 220,
+   "width": 800,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "工具一樣，告訴它什麼，結果就不同",
+    "fontSize": 16,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

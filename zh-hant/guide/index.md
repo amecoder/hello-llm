@@ -64,7 +64,7 @@ features:
     link: /zh-hant/guide/00-common/practice-kit
     linkText: 檢視課題
   - title: 拿來就用的提示詞合集
-    details: 郵件、摘要、簡歷、會議紀要、合同準備等，第1階段和 ChatGPT、Claude 指南里的 46 條提示詞按用途排列——複製下來只換空格就行
+    details: 郵件、摘要、簡歷、會議紀要、合同準備等，第1階段和 ChatGPT、Claude 指南裡的 46 條提示詞按用途排列——複製下來只換空格就行
     link: /zh-hant/guide/00-common/prompt-library
     linkText: 檢視合集
   - title: 理解程度確認考試——我的 AI 理解水平是？
@@ -88,7 +88,7 @@ features:
     link: /zh-hant/guide/20-claude-code/
     linkText: 開始 Claude Code 指南
   - title: 第3階段 · Claude Code 終端指南
-    details: 寫給第一次打開終端的人的 14 章 — 從基礎命令到安裝、許可與復原、技能，再到一行命令就能執行的每週整理
+    details: 寫給第一次開啟終端的人的 14 章 — 從基礎命令到安裝、許可與撤銷、技能，再到一行命令就能執行的每週整理
     link: /zh-hant/guide/23-claude-code-cli/
     linkText: 開始終端指南
   - title: 第3階段 · Codex 使用指南
@@ -96,7 +96,7 @@ features:
     link: /zh-hant/guide/21-codex/
     linkText: 開始 Codex 指南
   - title: 第3階段 · Antigravity 使用指南
-    details: Google 的 Antigravity——不用搬運，直接開啟同一個整理工具資料夾，共 7 章，免費賬號也能練習
+    details: Google 的 Antigravity——不用搬運，直接開啟同一個整理工具資料夾，共 7 章，免費帳號也能練習
     link: /zh-hant/guide/22-antigravity/
     linkText: 開始 Antigravity 指南
   - title: 第4階段 · AI-SDLC 指南

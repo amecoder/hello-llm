@@ -1,9 +1,11 @@
 # 第7章 在終端裡使用——用一行 `codex exec` 檢查整理工具
 
-> **一句話總結**：Codex CLI 是在終端裡使用的 Codex。它會讀取執行所在資料夾裡的 `AGENTS.md` 和技能。
-> `codex exec "要做的事"` 只執行一次就結束，而且**預設是隻讀的**。它和 Claude Code 的 `claude -p` 很像，但這一點不同。
+<Badge type="info" text="選讀" /> 需要的時候再讀。跳過也能跟上後面的章節。
 
-這一章依據 2026年11月1日確認的 Codex 官方文件，以及在 macOS 終端裡執行 Codex CLI 0.166.0 的結果寫成。**如果你是第一次用終端，可以跳過這一章。** 終端是什麼，在 [Claude Code 第10章](../20-claude-code/10-terminal.md)裡講過了。
+> **一句話總結**：Codex CLI 是在終端裡使用的 Codex。它會讀取執行所在資料夾裡的 `AGENTS.md` 和技能。
+> `codex exec "要做的事"` 只執行一次就結束，而且**預設是唯讀的**。它和 Claude Code 的 `claude -p` 很像，但這一點不同。
+
+這一章依據 2026年11月1日確認的 Codex 官方文件，以及在 macOS 終端裡執行 Codex CLI 的結果[^version]寫成。**如果你是第一次用終端，可以跳過這一章。** 終端是什麼，在 [Claude Code 第10章](../20-claude-code/10-terminal.md)裡講過了。
 
 ## 安裝並開始使用
 
@@ -19,12 +21,19 @@ curl -fsSL https://chatgpt.com/codex/install.sh | sh
 powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"
 ```
 
+把命令拆開來看是這樣的。
+
+- `curl -fsSL 地址`：下載地址上的安裝指令碼（寫著安裝步驟的檔案）。`-fsSL` 是把四個選項連在一起寫的：「出錯就停下、隱藏進度顯示、顯示錯誤、地址搬家了就跟過去」。
+- `|`（管道）：把前一個命令的結果交給後一個命令。
+- `sh`：執行接過來的指令碼。
+- Windows 那邊也一樣。`irm` 負責下載，`iex` 負責執行。`-ExecutionPolicy ByPass` 只在這一次解除指令碼執行限制。
+
 **請確認安裝命令和官方文件（learn.chatgpt.com）上寫的一模一樣，再去執行。** 因為這是把從網上下載的指令碼直接執行的命令。
 
 安裝完成後，進入整理工具資料夾，輸入 `codex`。第一次請選擇 **Sign in with ChatGPT**。[^signin]
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 codex
 ```
 
@@ -37,23 +46,28 @@ codex
 `codex exec` 是這樣一種方式：不開啟對話畫面，只執行一次就結束。[^exec] 我問了和 Claude Code 第10章同樣的問題。
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 codex exec "列出 notes 資料夾裡的檔案，並用一行告訴我每個檔案是用哪種模板（templates 裡的哪一個）寫的。不要修改檔案。回答要簡短，只用表格。"
 ```
 
-只出來了乾淨的回答（完整輸出：[7장-codex-exec-출력.txt](/practice/notes/results/codex/7장-codex-exec-출력.txt)）。
+只出來了乾淨的回答（完整輸出：[ch7-codex-exec-output.txt](/practice/zh-hant/notes/results/codex/ch7-codex-exec-output.txt)）。
 
 | notes 檔案 | 使用的模板 |
 |---|---|
-| `공부-2026-10-28-프롬프트-강의.md` | `templates/공부노트.md` |
-| `주간회고-2026-10-26.md` | `templates/주간회고.md` |
-| `회의록-2026-10-27-주간회의.md` | `templates/회의록.md` |
+| `study-2026-10-28-prompt-lecture.md` | `templates/study-notes.md` |
+| `weekly-review-2026-10-26.md` | `templates/weekly-review.md` |
+| `minutes-2026-10-27-weekly.md` | `templates/minutes.md` |
 
 來源：本指南的實踐結果（2026-11-01）。執行過程的記錄另外丟棄，只留下了最終回答。
 
-`codex exec` 把進度和最終回答**走不同的路**輸出。進度走螢幕旁路（stderr），只有最終回答是正式輸出（stdout）。[^stdout] 所以像 `codex exec "…" > 결과.md` 這樣用，檔案裡只會裝進最終回答。
+`codex exec` 把進度和最終回答**走不同的路**輸出。[^stdout]
 
-**`codex exec` 預設是隻讀的。** 想讓它修改檔案，就加上 `--sandbox workspace-write`。[^readonly] 本指南第2、3、5章的練習，也是加了這個選項執行的。
+- 進度：走螢幕旁路（stderr，標準錯誤）。
+- 最終回答：只走正式輸出（stdout，標準輸出）。
+
+想把結果存成檔案時，這個區別就有用了。比如，試著輸入 `codex exec "…" > result.md`。`>` 是「把正式輸出裝進這個檔案，而不是顯示在螢幕上」的符號。這樣，螢幕上只會滾過進度，`result.md` 裡只會裝進最終回答。如果已經有同名檔案，`>` 會清掉它的內容重新寫。所以請選一個第一次用的新名字。
+
+**`codex exec` 預設是唯讀的。** 想讓它修改檔案，就加上 `--sandbox workspace-write`。[^readonly] 本指南第2、3、5章的練習，也是加了這個選項執行的。
 
 ```bash
 codex exec --sandbox workspace-write '$weekly-review'
@@ -61,7 +75,13 @@ codex exec --sandbox workspace-write '$weekly-review'
 
 `codex exec` 是**預先定好**許可方式再執行的方式。[^preset] 本指南第5章的練習裡，寫入 `.agents` 資料夾被攔住時，Codex 沒法詢問，就那樣停住了。需要許可的事，在應用或互動式 `codex` 裡做會更方便。
 
+也有把沙箱和許可全部關掉的危險選項，但整理備忘時請不要用。
+
+::: details 老文章裡出現的選項和危險的選項（點選展開）
+
 老文章裡出現的 `--full-auto` 選項已經不再支援。[^fullauto] 也有把沙箱和許可全部關掉的 `--dangerously-bypass-approvals-and-sandbox` 之類的選項[^yolo]，但整理備忘用不著。
+
+:::
 
 <Quiz id="ch507-exec" />
 
@@ -75,8 +95,9 @@ codex exec --sandbox workspace-write '$weekly-review'
 | `/import` | 匯入 Claude Code、Cursor 的設定 |
 | `/resume` | 繼續已儲存的對話 |
 | `/status` | 檢視對話資訊和剩餘額度 |
+| `/skills` | 檢視技能列表 |
 
-來源：Codex 官方文件[^permissions][^import][^resume][^status]
+來源：Codex 官方文件[^permissions][^import][^resume][^status][^skills]
 
 結束互動式介面後，想在外面繼續，就輸入 `codex resume`。[^resume]
 
@@ -97,7 +118,7 @@ codex exec --sandbox workspace-write '$weekly-review'
 
 - 終端裡的 Codex 把執行它的資料夾當作專案，讀取那個資料夾裡的 `AGENTS.md` 和技能。
 - 安裝命令要確認和官方文件一致再執行。
-- `codex exec` 執行一次就結束，預設是隻讀的。想修改，就加 `--sandbox workspace-write`。
+- `codex exec` 執行一次就結束，預設是唯讀的。想修改，就加 `--sandbox workspace-write`。
 - `codex exec` 是預先定好許可方式再執行的。需要許可的事，在應用或互動式介面裡做。
 
 ## 術語整理
@@ -112,6 +133,7 @@ codex exec --sandbox workspace-write '$weekly-review'
 
 下一章：[第8章. 費用、資料、安全，以及怎樣選工具](08-safety-choose.md)
 
+[^version]: 本指南執行的版本是 Codex CLI 0.166.0。
 [^install]: Codex 官方文件，「Codex CLI」。 "curl -fsSL https://chatgpt.com/codex/install.sh | sh" / "powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"" https://learn.chatgpt.com/docs/codex/cli （確認日期 2026-11-01）
 [^signin]: Codex 官方文件，「Codex CLI」。 "Open a project directory and run `codex`. The first time you run Codex, choose **Sign in with ChatGPT** or another available sign-in method." https://learn.chatgpt.com/docs/codex/cli （確認日期 2026-11-01）
 [^cwd]: Codex 官方文件，「Projects and chats」。 "Codex CLI treats the directory where you start it as the project for the chat." https://learn.chatgpt.com/docs/projects （確認日期 2026-11-01）

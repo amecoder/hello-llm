@@ -1,5 +1,7 @@
 # 第12章 像專家一樣使用 — 按工作挑選，需要時再一個一個積累
 
+<Badge type="warning" text="進階" /> 學會前面的章節以後，想用得更好時再讀。
+
 > **一句話總結**：專家不是用很多功能的人，而是**挑選與工作大小相稱的功能**的人。不要一開始就全部設定好，而是在**同樣的不便反覆出現時**，一個一個地增加。
 > 這一章用每週運轉第3階段做出的「整理工具」的固定流程來收尾。
 
@@ -20,6 +22,8 @@
 
 官方文件也把功能分成「每次會話始終可見的（CLAUDE.md）」「需要時呼叫的（技能）」「到點自己執行的」來說明。[^match] 用的功能越大，能做的事就越多，但要確認的東西也相應變多。
 
+想一件你自己的工作，在上面的表裡找到對應的那一行。比如「每週五晚上做本週回顧」，就是「到點自動做的事」那一行，所以用定時任務。如果沒有對應的行，大多數情況下一次聊天或一個 Code 標籤頁會話就夠了。
+
 <Quiz id="ch412-choose" />
 
 ## 不要一次全做，而是逐步積累
@@ -31,10 +35,15 @@
 | 同一條規則或命令錯了兩次 | 寫進 CLAUDE.md |
 | 總是用同樣的請求開始一件事 | 儲存成技能 |
 | 同一個流程已經是第三次貼上 | 儲存成技能 |
-| 總是從瀏覽器裡複製資料過來 | 把那個服務連線成聯結器（MCP） |
+| 總是從瀏覽器裡複製資料過來 | 把那個服務連線成聯結器 |
 | 有些事不用問也該每次都發生 | 鉤子（在規定的時刻自動執行的命令） |
 
 出處：Claude Code 官方文件（僅摘錄一部分）[^build]
+
+表裡最後兩行，是本指南沒有深入講的功能。
+
+- **聯結器**是把 Gmail·日曆這樣的外部服務連線到 Claude 上（[第7章](07-skills-plugins.md)）。連線以後，不用你複製貼上，Claude 也能讀到那些內容。
+- **鉤子**（Hook）是像「每次修改檔案時」這樣，到了規定的時刻就自己執行的命令。比如讓 Claude 每次修改檔案時都執行一次拼寫檢查。等同樣的事反覆到需要鉤子的程度時，再去查官方文件吧。
 
 本指南的整理工具也是按這個順序長大的。第2章的長請求 → 第5章的模板 → 第6章的 CLAUDE.md → 第7章的技能。是**先遇到不便，然後才做工具。**
 
@@ -44,7 +53,7 @@
 
 ## 現在可以不用再做的習慣
 
-以前的模型所需要的竅門裡，有些現在反而會礙事。這裡只摘錄官方文件列出的、與本指南讀者相關的部分。[^stop]
+你可能會在網上的 AI 使用技巧文章裡看到下面這些方法。這些是以前的模型需要的竅門，現在有時反而會礙事。如果你是第一次用，只要知道**不用照著做**就行了。這裡只摘錄官方文件列出的、與本指南讀者相關的部分。[^stop]
 
 | 以前的竅門 | 現在 |
 |---|---|
@@ -84,13 +93,13 @@
 | 術語 | 中文名稱 | 一句話解釋 |
 |---|---|---|
 | Hook | 鉤子 | 在規定的時刻自動執行的命令 |
-| Routine | 固定流程 | 每週按同樣順序運轉的工作習慣（與第8章的雲端定時名稱含義不同） |
+| Routine | 固定流程 | 每週按同樣順序運轉的工作習慣（與第8章裡作為定時任務舊名稱出現的 Routines 含義不同） |
 
 <ChapterDone :chapter="412" />
 
 下一章：第3階段 Claude Code 指南到這裡就結束了。想把同樣的整理工具搬到 OpenAI 的 Codex 上，請接著看[第3階段 · Codex 指南](../21-codex/)。也可以在[第3階段 · Claude Code 目錄](./)裡挑想再看的章節，或者用 [AI 知識水平測試](../00-common/level-test.md)檢驗一下到目前為止所學的內容。
 
-[^match]: Claude Code 官方文件，《Extend Claude Code》。"Features range from always-on context that Claude sees every session, to on-demand capabilities you or Claude can invoke, to background automation that runs on specific events." https://code.claude.com/docs/en/features-overview（確認日期 2026-10-31）
-[^build]: Claude Code 官方文件，《Extend Claude Code》。"You don't need to configure everything up front. Each feature has a recognizable trigger, and most teams add them in roughly this order" / "Claude gets a convention or command wrong twice" / "You keep typing the same prompt to start a task" / "You paste the same playbook or multi-step procedure into chat for the third time" / "You keep copying data from a browser tab Claude can't see" / "You want something to happen every time without asking" https://code.claude.com/docs/en/features-overview（確認日期 2026-10-31）
-[^update]: Claude Code 官方文件，《Extend Claude Code》。"A repeated mistake or a recurring review comment is a CLAUDE.md edit, not a one-off correction in chat. A workflow you keep tweaking by hand is a skill that needs another revision." https://code.claude.com/docs/en/features-overview（確認日期 2026-10-31）
-[^stop]: Claude Code 官方文件，《Best practices for Claude Code》。"Current ones follow a plainly worded line, and piling on emphasis mostly makes Claude over-apply the rule. If it's a rule that can't bend, turn it into a hook or a deny rule." / "Current models usually carry on through an agreed task without being told" / "Giving Claude a check to pass is different, and still worth doing." / "Claude reads the repo itself. Only write down what isn't in there." https://code.claude.com/docs/en/best-practices（確認日期 2026-10-31）
+[^match]: Claude Code 官方文件，《Extend Claude Code》。"Features range from always-on context that Claude sees every session, to on-demand capabilities you or Claude can invoke, to background automation that runs on specific events." https://code.claude.com/docs/en/features-overview （確認日期 2026-10-31）
+[^build]: Claude Code 官方文件，《Extend Claude Code》。"You don't need to configure everything up front. Each feature has a recognizable trigger, and most teams add them in roughly this order" / "Claude gets a convention or command wrong twice" / "You keep typing the same prompt to start a task" / "You paste the same playbook or multi-step procedure into chat for the third time" / "You keep copying data from a browser tab Claude can't see" / "You want something to happen every time without asking" https://code.claude.com/docs/en/features-overview （確認日期 2026-10-31）
+[^update]: Claude Code 官方文件，《Extend Claude Code》。"A repeated mistake or a recurring review comment is a CLAUDE.md edit, not a one-off correction in chat. A workflow you keep tweaking by hand is a skill that needs another revision." https://code.claude.com/docs/en/features-overview （確認日期 2026-10-31）
+[^stop]: Claude Code 官方文件，《Best practices for Claude Code》。"Current ones follow a plainly worded line, and piling on emphasis mostly makes Claude over-apply the rule. If it's a rule that can't bend, turn it into a hook or a deny rule." / "Current models usually carry on through an agreed task without being told" / "Giving Claude a check to pass is different, and still worth doing." / "Claude reads the repo itself. Only write down what isn't in there." https://code.claude.com/docs/en/best-practices （確認日期 2026-10-31）

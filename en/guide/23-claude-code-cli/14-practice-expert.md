@@ -1,6 +1,6 @@
 # Chapter 14. Practice Exercises and Using It Like a Pro
 
-<Badge type="tip" text="Required" /> Be sure to read this to follow this step.
+<Badge type="tip" text="Required" /> Read this to follow this stage.
 
 > **One-line summary**: These are 8 exercises where you **redo, with your own hands, once each** what you have learned so far. The last exercise is making a weekly review from **your own notes**.
 
@@ -10,24 +10,24 @@ A pro is not someone who uses lots of features. A pro starts small, gives a way 
 
 ## How to Do the Practice Exercises
 
-1. **Make a new practice folder.** For example: `~/hello-ai-연습/다시`. Put only the weekly meeting memo in `inbox`. You will add the ad-hoc meeting memo in Exercise 7.
+1. **Make a new practice folder.** For example: `~/hello-ai-practice/again`. Put only the weekly meeting memo in `inbox`. You will add the ad-hoc meeting memo in Exercise 7.
 2. **Follow "What to try" in each exercise.** You can copy the text in the gray boxes and use it.
 3. **Check off "Did it work?" one item at a time.** If you could not do an item, redo just that part in the chapter under "Where to review."
 
 On Mac and Linux, type this in the terminal. You copy the memo from the practice folder you used before.
 
 ```bash
-mkdir -p ~/hello-ai-연습/다시/inbox
-cd ~/hello-ai-연습/다시
-cp ../터미널/inbox/회의-2026-10-27-주간회의.txt inbox/
+mkdir -p ~/hello-ai-practice/again/inbox
+cd ~/hello-ai-practice/again
+cp ../terminal/inbox/meeting-2026-10-27-weekly.txt inbox/
 ```
 
 On Windows PowerShell, type this. The Windows commands in this chapter were not tested.
 
 ```powershell
-mkdir $HOME\hello-ai-연습\다시\inbox
-cd $HOME\hello-ai-연습\다시
-cp ..\터미널\inbox\회의-2026-10-27-주간회의.txt inbox\
+mkdir $HOME\hello-ai-practice\again\inbox
+cd $HOME\hello-ai-practice\again
+cp ..\terminal\inbox\meeting-2026-10-27-weekly.txt inbox\
 ```
 
 Do Exercises 1 to 7 in order. Later exercises use the results of earlier ones. **Do Exercise 8 at the very end.**
@@ -51,7 +51,7 @@ There are three things to keep in mind.
 **What to try**: Start with `claude --permission-mode manual` in the practice folder and send this. The default choice in the trust prompt is `No, exit`. Use the down arrow to choose `Yes, I trust this folder`.
 
 ```text
-Read inbox/회의-2026-10-27-주간회의.txt and organize it into 회의록.md. Split it into decisions, to-dos (owner and due date), and next meeting, and do not write anything that is not in the memo.
+Read inbox/meeting-2026-10-27-weekly.txt and organize it into minutes.md. Split it into decisions, to-dos (owner and due date), and next meeting, and do not write anything that is not in the memo.
 ```
 
 **Did it work?**
@@ -89,7 +89,7 @@ Read inbox/회의-2026-10-27-주간회의.txt and organize it into 회의록.md.
 5. After restoring, the request you sent comes back in the input box. Clear it with Esc twice, then move on to the next exercise.
 
 ```text
-Add a 'Status' column to the to-do table in 회의록.md and fill every row with 'In progress'. Do not change anything else.
+Add a 'Status' column to the to-do table in minutes.md and fill every row with 'In progress'. Do not change anything else.
 ```
 
 **Did it work?**
@@ -104,10 +104,10 @@ Add a 'Status' column to the to-do table in 회의록.md and fill every row with
 
 **When**: You keep repeating the same rules and steps.
 
-**What to try**: Write the meeting-minutes rules in CLAUDE.md in 3 to 5 lines. Then make the skill `meeting-notes`, and call it in a **new session** without saying the rules. Examples: [CLAUDE.md](/practice/cli/results/8장-CLAUDE.md.txt) · [Skill](/practice/cli/results/9장-스킬-meeting-notes.txt)
+**What to try**: Write the meeting-minutes rules in CLAUDE.md in 3 to 5 lines. Then make the skill `meeting-notes`, and call it in a **new session** without saying the rules. Examples: [CLAUDE.md](/practice/en/cli/results/ch8-CLAUDE.md.txt) · [Skill](/practice/en/cli/results/ch9-skill-meeting-notes.txt)
 
 ```text
-/meeting-notes inbox/회의-2026-10-27-주간회의.txt
+/meeting-notes inbox/meeting-2026-10-27-weekly.txt
 ```
 
 **Did it work?**
@@ -122,7 +122,7 @@ Add a 'Status' column to the to-do table in 회의록.md and fill every row with
 
 **When**: You want to finish the cleanup without opening a conversation.
 
-**What to try**: Before running it, check `/usage` in a session. Then exit with `/exit` and do this in the terminal. Make `주간정리.sh` with the paste box from [Chapter 10](10-headless-automation.md), and run it with `bash 주간정리.sh`. On Windows, paste the PowerShell box from Chapter 10.
+**What to try**: Before running it, check `/usage` in a session. Then exit with `/exit` and do this in the terminal. Make `weekly-summary.sh` with the paste box from [Chapter 10](10-headless-automation.md), and run it with `bash weekly-summary.sh`. On Windows, paste the PowerShell box from Chapter 10.
 
 **Did it work?**
 
@@ -139,13 +139,13 @@ Add a 'Status' column to the to-do table in 회의록.md and fill every row with
 **What to try**: Follow the steps below.
 
 1. Add the change-log hook from Chapter 11 and have Claude change one file.
-2. In this practice folder, follow "Making Your First Record with Git" (Git으로 첫 기록 남기기) in Chapter 12 from the start. But you do not need to type the `cd ~/hello-ai-연습/터미널` line in the first box of Chapter 12. That is because you are already in that folder. Start from `git init`.
+2. In this practice folder, follow "Making Your First Record with Git" (Git으로 첫 기록 남기기) in Chapter 12 from the start. But you do not need to type the `cd ~/hello-ai-practice/terminal` line in the first box of Chapter 12. That is because you are already in that folder. Start from `git init`.
 3. Make `.gitignore` as in Chapter 12, then go through `git config`, `git add .`, and `git status --short`, all the way to your first commit with `git commit`.
 
 **Did it work?**
 
 - ☐ The hook shows up in `/hooks`
-- ☐ I opened `변경기록.txt` myself and checked that lines were added
+- ☐ I opened `changelog.txt` myself and checked that lines were added
 - ☐ The record shows up in `git log --oneline`
 
 **Where to review**: [Chapter 11](11-hooks-statusline.md), [Chapter 12](12-parallel-remote.md)
@@ -165,8 +165,8 @@ There is a reason you commit first. As you saw in [Chapter 12](12-parallel-remot
 In step 1, use the file you downloaded in Chapter 13. If you deleted it, download it again as in [Chapter 13](13-cost-safety-trouble.md). On Mac and Linux, type this.
 
 ```bash
-cp ~/Downloads/회의-2026-10-29-임시회의.txt inbox/
-cat inbox/회의-2026-10-29-임시회의.txt
+cp ~/Downloads/meeting-2026-10-29-adhoc.txt inbox/
+cat inbox/meeting-2026-10-29-adhoc.txt
 git add .
 git commit -m "Add ad-hoc meeting memo"
 ```
@@ -174,8 +174,8 @@ git commit -m "Add ad-hoc meeting memo"
 On Windows PowerShell, type this.
 
 ```powershell
-cp $HOME\Downloads\회의-2026-10-29-임시회의.txt inbox\
-Get-Content -Encoding UTF8 inbox\회의-2026-10-29-임시회의.txt
+cp $HOME\Downloads\meeting-2026-10-29-adhoc.txt inbox\
+Get-Content -Encoding UTF8 inbox\meeting-2026-10-29-adhoc.txt
 git add .
 git commit -m "Add ad-hoc meeting memo"
 ```
@@ -186,7 +186,7 @@ Do step 2 like this.
 - If the bottom line says `auto mode on`, press `Shift + Tab` once to switch to `manual mode on`.
 - Hand it over as in the better example in Chapter 13.
 
-In step 3, you take the memo out of `inbox` in your main folder because of `주간정리.sh`. This script processes every meeting memo in `inbox` without a person watching. If the memo with hidden instructions is left there, it will be processed as is the next time you run it. The command to take it out is at the end of the "Watch Out for Hidden Instructions" (숨은 지시 조심하기) section in Chapter 13.
+In step 3, you take the memo out of `inbox` in your main folder because of `weekly-summary.sh`. This script processes every meeting memo in `inbox` without a person watching. If the memo with hidden instructions is left there, it will be processed as is the next time you run it. The command to take it out is at the end of the "Watch Out for Hidden Instructions" (숨은 지시 조심하기) section in Chapter 13.
 
 **Did it work?**
 
@@ -202,9 +202,9 @@ In step 3, you take the memo out of `inbox` in your main folder because of `주�
 
 **When**: You now want to use it for your own work, not for practice.
 
-**What to try**: Make `inbox` in a new folder (for example, `~/hello-ai-연습/내-주간정리`), and put in 2 or 3 of your own notes **with personal information removed**. When you put them in, match two things.
+**What to try**: Make `inbox` in a new folder (for example, `~/hello-ai-practice/my-weekly-summary`), and put in 2 or 3 of your own notes **with personal information removed**. When you put them in, match two things.
 
-- Name the files in the form `회의-date.txt` (회의 means "meeting"). That is because the script only looks for files that start with `회의-`.
+- Name the files in the form `meeting-date.txt` (회의 means "meeting"). That is because the script only looks for files that start with `meeting-`.
 - If they are Word or Hangul (Korean word processor) files, save them as `.txt` and put them in.
 
 Then start `claude` and send this.
@@ -216,28 +216,28 @@ Read the notes in inbox. I want to decide on a review format I will use every we
 When the skill is ready, exit with `/exit`, copy the script from Exercise 5 into this folder, and run it. On Windows, paste the PowerShell box from Chapter 10 in this folder.
 
 ```bash
-cp ../다시/주간정리.sh .
-bash 주간정리.sh
+cp ../again/weekly-summary.sh .
+bash weekly-summary.sh
 ```
 
 Move the memos you have finished processing. That way you will not clean up the same memos again next week. `mv` is the command that moves files. Next week, put new memos in `inbox` and run it. On Mac and Linux, type this.
 
 ```bash
 mkdir -p done
-mv inbox/회의-*.txt done/
+mv inbox/meeting-*.txt done/
 ```
 
 On Windows PowerShell, type this.
 
 ```powershell
 mkdir done -Force
-Move-Item inbox\회의-*.txt done\
+Move-Item inbox\meeting-*.txt done\
 ```
 
 **Did it work?**
 
 - ☐ Claude asked questions before writing the rules, and my answers were reflected
-- ☐ The one line `bash 주간정리.sh` (on Windows, the PowerShell box from Chapter 10) organizes my notes in my format
+- ☐ The one line `bash weekly-summary.sh` (on Windows, the PowerShell box from Chapter 10) organizes my notes in my format
 - ☐ I compared the numbers, names, and due dates with the original notes
 - ☐ I put in new notes to test whether the same command still works next week
 
@@ -285,7 +285,7 @@ In CLAUDE.md, write only what Claude cannot learn by reading the folder.[^only-u
 Run the tool you built like this every week.
 
 1. **Collect**: Put memos in `inbox` as they come. Remove personal information.
-2. **Organize**: Run `bash 주간정리.sh` (on Windows, the PowerShell box from Chapter 10).
+2. **Organize**: Run `bash weekly-summary.sh` (on Windows, the PowerShell box from Chapter 10).
 3. **Check**: Compare the numbers, owners, and due dates with the originals.
 4. **Record**: Move the finished memos to `done`. If you are happy with it, save it with `git add .` and `git commit -m "This week's review"`. If it is your first time, start with `git init` in this folder. Do not type the `cd` line in the box from [Chapter 12](12-parallel-remote.md).
 5. **Fix**: If you gave the same correction twice, fix CLAUDE.md or the skill.

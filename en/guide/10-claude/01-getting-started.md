@@ -1,5 +1,7 @@
 # Chapter 1. Getting Started — Where to Use It, Signing Up, Plans, and Usage Limits
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: You use Claude with the same account on the web, the desktop app, and the mobile app. Signing up takes an email address (or a Google or Apple account) and
 > a text-message phone verification. Start on the Free plan and only consider a paid plan if you often run into limits.
 
@@ -20,7 +22,6 @@ There are three places you can use it. Whichever you use, you share a single acc
 
 Source: Anthropic Help Center[^start][^desktop][^ios][^android]
 
-The desktop app is also available on Linux (a type of computer operating system) in **beta** (a testing stage before the official release).[^desktop]
 If this is your first time, start on the web. There is nothing to install, so it is the easiest way in.
 
 You need to meet two requirements to use Claude.[^start]
@@ -29,15 +30,19 @@ You need to meet two requirements to use Claude.[^start]
 - You must be **at least 18 years old**.
 
 When downloading the mobile app, search your app store for "Claude by Anthropic".[^ios][^android]
-On the iPhone App Store, you will also see a work version called "Claude for Intune". Unless your company specifically told you to use that one, download "Claude by Anthropic".[^ios]
-If the app does not show up in search, your region, device, or OS version may not be supported.[^android]
-If a new feature does not appear in your app, try updating the app manually in the app store.[^update]
 
 Once you are in for the first time, try asking this:
 
 ```
 What kinds of things can you help me with? Give me just five examples an office worker can use right away.
 ```
+
+::: details If installing the app is not going smoothly (click to expand)
+- The desktop app is also available on Linux (a type of computer operating system) in **beta** (a testing stage before the official release).[^desktop]
+- On the iPhone App Store, you will also see a work version called "Claude for Intune". Unless your company specifically told you to use that one, download "Claude by Anthropic".[^ios]
+- If the app does not show up in search, your region, device, or OS version may not be supported.[^android]
+- If a new feature does not appear in your app, try updating the app manually in the app store.[^update]
+:::
 
 <Quiz id="ch201-where" />
 
@@ -66,12 +71,16 @@ You **cannot skip this step.** Every new user goes through it.[^phone]
 
 <!-- 스크린샷 필요: 휴대폰 번호 입력 화면과 「코드 확인」 화면 (웹) -->
 
-Check the points below before you enter your number.[^phone]
+Be sure to check these two points before you enter your number.[^phone]
 
-- **Only a regular mobile phone number works.** Internet phone (VoIP) numbers, Google Voice, numbers created by an app, and home phones (landlines) do not work.
-- **If the text does not arrive after 5 minutes**, click "Try again" (다시 시도).
-- **One phone number can verify up to 3 accounts.**
 - **Once a phone number is verified, you cannot change it later.** So verify with your own number that you plan to keep for a long time. If you verify with a borrowed number, there is no way to change it later.
+- **Only a regular mobile phone number works.** Internet phone (VoIP) numbers, Google Voice, numbers created by an app, and home phones (landlines) do not work.
+
+**If the text does not arrive after 5 minutes**, click "Try again" (다시 시도).[^phone]
+
+::: details If you are creating several accounts (click to expand)
+**One phone number can verify up to 3 accounts.**[^phone]
+:::
 
 <Quiz id="ch201-phone" />
 
@@ -103,6 +112,13 @@ It is easier to choose when you focus on **what changes**, rather than on the nu
 | **Larger model** (Opus) | Not selectable | Selectable ([Chapter 2](02-screen-tour.md))[^pricing] |
 | **Cowork** (handing off whole tasks) | Not included | Included ([Chapter 8](08-cowork.md))[^desktop] |
 
+Here is what the unfamiliar words in the table mean. You do not need to remember them all now. Later chapters cover them one by one.
+
+- **Usage amount**: How much you can use Claude over a set period of time. The "Usage Limits" section below covers this in detail.
+- **Research**: A feature where Claude spends a long time finding and reading many web pages, then organizes them into a long research report.
+- **Opus**: The larger model among Claude's several models (the AI that produces the answers). You will see how to choose a model in Chapter 2.
+- **Cowork**: A feature that goes beyond asking and answering in chat. You hand Claude a whole task made up of several steps.
+
 You can see for yourself what is included in the Free plan under Settings → "Billing" (결제).
 
 ![Settings → "Billing" (결제) screen. Red numbers mark ① "Free plan · Try Claude" (무료 플랜 · Claude 사용해 보기), ② the list of features included in the Free plan (chat, web search, memory across conversations, file creation and code execution, extended thinking for complex tasks, etc.), and ③ the "Upgrade plan" (플랜 업그레이드) button at the top right](../../../guide/10-claude/assets/shot-09-settings-billing-marked.png)
@@ -112,6 +128,14 @@ This is the web screen for the Free plan. **The red numbers match the numbered l
 - ① Current plan: "Free plan" (무료 플랜)
 - ② Included in the Free plan: chat on web, iOS, Android, and desktop; code generation and data visualization; writing and editing; web search; memory across conversations; file creation and code execution; desktop extensions; Slack and Google Workspace connections; connectors (a feature that links other services; see [Chapter 7](07-projects-tools.md)); and extended thinking for complex tasks[^screen]
 - ③ "Upgrade plan" (플랜 업그레이드): button to switch to a paid plan (see "What to Know Before Switching to a Paid Plan" below)
+
+It is fine if the names in ② look unfamiliar. Here are just the ones you will use often:
+
+- **Memory across conversations**: A feature that remembers what you told Claude in past conversations and keeps it for the next one ([Chapter 5](05-memory.md))
+- **File creation and code execution**: A feature where Claude creates files such as Excel or Word files directly and lets you download them ([Chapter 4](04-files-artifacts.md))
+- **Extended thinking**: A feature that makes Claude think longer before answering ([Chapter 2](02-screen-tour.md))
+
+The rest will be explained in the chapter where you need them.
 
 Consider a paid plan only when you need a feature that is not on this list. That way, you do not pay for features you will never use.
 
@@ -125,6 +149,8 @@ Aside from the annual billing discount, there is no standard ongoing discount fo
 ## Usage Limits — 5-Hour, Weekly, and Length
 
 Claude has **no fixed message count like "X messages per day."** How much you can use depends on the length and complexity of your conversations, the model you choose, and the features you use.[^pricing]
+For example, uploading a long file and asking for a summary uses more than a few short questions.
+
 Instead, there are three kinds of limits.
 
 | Limit | What it means | Who it applies to |
@@ -135,22 +161,35 @@ Instead, there are three kinds of limits.
 
 Source: Anthropic Help Center[^start][^limits]
 
+### Session Limit and Weekly Limit
+
 The **session limit and weekly limit** are buckets that measure how much you have used. Your weekly limit refills on a fixed day and time assigned to your account.[^pro]
 What you use across the web, desktop app, and mobile app is **counted together from the same bucket**. Switching to your phone does not give you a separate limit.[^limits][^pricing]
 
-When you get close to a limit, you see a warning such as "Approaching session limit" (세션 제한에 접근 중) or "Approaching weekly limit" (주간 제한에 접근 중).[^errors] Once you hit the limit, a message tells you the time when you can use Claude again.[^errors]
-At that point, you can either wait until that time or upgrade your plan.[^limits] On paid plans, you can see progress bars showing how much you have used under Settings → "Usage" (사용량).[^best][^usage-name]
+Here is what happens as you get close to a limit.
+
+1. You see a warning such as "Approaching session limit" (세션 제한에 접근 중) or "Approaching weekly limit" (주간 제한에 접근 중).[^errors]
+2. Once you hit the limit, a message tells you the time when you can use Claude again.[^errors]
+3. You can either wait until that time or upgrade your plan.[^limits]
+
+For example, say you hit the limit in the morning after polishing a long report many times. Once the time shown has passed, you can use Claude again.
+On paid plans, you can see progress bars showing how much you have used under Settings → "Usage" (사용량).[^best][^usage-name]
+
+### Length Limit
 
 The **length limit** is how much Claude can handle in a single conversation. It is the same thing as the [context window](../00-common/01-what-is-llm.md#_3-there-is-a-limit-to-how-much-it-can-see-at-once-—-context-window) you learned about in Stage 1.[^limits]
 If you see a message starting with "Your message will exceed the length limit for this chat" (메시지가 이 채팅의 길이 제한을 초과합니다), attach fewer or smaller files, or start a new conversation.[^errors]
+
 When a conversation gets very long, Claude sometimes automatically summarizes the earlier part to keep going. When that happens, you see a notice saying "Organizing thoughts" (생각을 정리 중).[^limits]
 Long conversations like this use up more of your usage limit. When you change topics, it is better to open a [new conversation](../00-common/06-conversation.md#when-to-start-a-new-chat).[^limits]
+
+### Tips to Save Your Usage Limit
 
 Here are a few tips to save your usage limit.[^best]
 
 - **Group related questions into a single message.** Asking once uses less than splitting the same thing across three messages.
 - **Read your message once more before sending.** You will need fewer follow-up questions.
-- **Put reference materials you use often into a Project** ([Chapter 7](07-projects-tools.md)). Reusing materials stored in a Project counts less against your limits.
+- **Put reference materials you use often into a Project** ([Chapter 7](07-projects-tools.md)). A Project is a workspace that gathers the materials and conversations you use for one piece of work. Reusing materials stored in a Project counts less against your limits.
 
 For example, instead of sending three separate questions, bundle them like this:
 
@@ -162,7 +201,7 @@ Please answer these three things at once.
 (Paste meeting notes here)
 ```
 
-::: details The answer you get will look roughly like this (example — click to expand)
+::: details The answer you get will look roughly like this (example — click to expand) (click to expand)
 This is an example created for this guide. Actual answers vary by service and from run to run.
 
 > **1. Five-line summary**
@@ -193,7 +232,7 @@ This is an example created for this guide. Actual answers vary by service and fr
 
 You do not need to start on a paid plan. **Starting on Free and upgrading only when you regularly hit the limit** is the safest approach.
 
-**Here is how to subscribe on the web:**[^signup]
+**Here is how to switch to a paid plan on the web:**[^signup]
 
 1. Click your name (or initials) at the bottom left and select "Settings" (설정).
 2. Go to "Billing" (결제) and click "Upgrade plan" (플랜 업그레이드) (③ in the Billing screenshot above).[^screen][^billing-name]
@@ -213,11 +252,13 @@ Make sure you know the points below before you pay.
 - **Deleting the app does not stop your subscription.** Removing the app from your phone does not automatically cancel your subscription.[^ios]
 - **Your conversations stay even if you cancel.** Your chats, projects, and files remain as they are, and your account switches to the Free plan when the billing period ends.[^pricing]
 - **Payments are generally non-refundable.** Exceptions apply only when stated in the Terms of Service or required by local law.[^pricing]
+
+::: details Common billing questions (click to expand)
 - **Web subscriptions only accept credit or debit cards.**[^billing]
 - **You cannot change your billing date directly.** If you want a different billing date, you have to cancel and subscribe again on the day you want.[^billing]
 - **If you paid but your account still shows Free, do not pay again.** First check whether you logged in with a different email address. Also check whether the payment failed.[^billing]
-
-You can view receipts under Settings → "Billing" (결제), and they are also sent by email. Search your inbox for "Your receipt from Anthropic".[^billing]
+- **Receipts** can be viewed under Settings → "Billing" (결제), and they are also sent by email. Search your inbox for "Your receipt from Anthropic".[^billing]
+:::
 
 If you are not sure which plan fits you, tell Claude your usage habits and ask. Just remember to verify prices and terms on the pricing page, not from the AI's answer ([Stage 1, Chapter 9](../00-common/09-safety.md)).
 

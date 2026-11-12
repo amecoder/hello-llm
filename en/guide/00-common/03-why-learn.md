@@ -1,5 +1,7 @@
 # Chapter 3. Why Learn This?
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **In short**: Even with the same AI, your results change dramatically depending on how you ask.
 > Anyone can close that gap with a little practice.
 
@@ -34,7 +36,7 @@ Person B gets sentences they can use right away. Then they follow up by asking t
 **The difference between the two wasn't the AI—it was the request.** Person A shared nothing, while Person B shared their background, target role, and desired format.
 This request text is called a **prompt**. You will learn how to write good prompts starting in [Chapter 4](04-prompt-basics.md).
 
-![Person A only said "Write me a resume" and got a generic template full of blanks, while Person B shared their experience, target company, and desired format to get a ready-to-edit draft. Even with the same AI, results change depending on what you tell it.](../../../guide/00-common/assets/ch3-same-tool.svg)
+![Person A only said "Write me a resume" and got a generic template full of blanks, while Person B shared their experience, target company, and desired format to get a ready-to-edit draft. Even with the same AI, results change depending on what you tell it.](assets/ch3-same-tool.svg)
 
 <Quiz id="ch3-same-tool" />
 
@@ -50,6 +52,9 @@ This tool is not just for developers or experts. Below are examples anyone can u
 | Daily life | "I have eggs, tofu, green onions, and kimchi in my fridge. Give me 3 dinner ideas I can make in 20 minutes." |
 | Travel | "Plan a 3-day, 2-night trip to Busan with my parents that doesn't require much walking." |
 | Parenting | "My 7-year-old asked 'Why does it rain?' Show me how to explain it at a child's level." |
+
+When you paste in a contract or an email, first delete names, addresses, phone numbers, and bank account numbers, or cover them with "OOO."
+That's because what you type may be stored by the service. [Chapter 9, "Using AI Safely"](09-safety.md) covers what you should never put in.
 
 <Quiz id="ch3-daily" />
 

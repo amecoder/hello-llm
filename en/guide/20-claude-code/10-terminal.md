@@ -1,24 +1,31 @@
 # Chapter 10. Using It in the Terminal — The Same Organizer in One Line
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: Claude Code for the terminal runs on the **same engine** as the desktop app. Open it in the same folder and it uses **your CLAUDE.md, skills, and settings as they are**.
 > With a single line like `claude -p "task"`, it asks a question, gets the answer, and exits right away. This is very useful for automating repetitive tasks.
 
-This chapter is based on the official Claude Code documentation checked on October 31, 2026, and actual runs of Claude Code 2.1.316 in the macOS Terminal. **If you are new to the terminal, you can skip this chapter.** You can use the entire organizer tool with just the desktop app.
+This chapter is based on the official Claude Code documentation checked on October 31, 2026, and actual runs of Claude Code 2.1.316 in the macOS Terminal. **If you are new to the terminal, you can skip this chapter.** You can use the entire organizer tool with just the desktop app. If you want to learn the terminal properly, see the [Claude Code terminal guide](/en/guide/23-claude-code-cli/).
 
 ## What Is the Terminal?
 
-The **Terminal** is a window where you control your computer by **typing text commands** instead of using a mouse. On macOS, open "Applications → Utilities → Terminal" (응용 프로그램 → 유틸리티 → 터미널). On Windows, use PowerShell. The official documentation also has a separate guide for people opening a terminal for the first time.[^install]
+The **Terminal** is a window where you control your computer by **typing text commands** instead of using a mouse.
+
+- **macOS**: In Finder, open "Applications → Utilities → Terminal" (응용 프로그램 → 유틸리티 → 터미널).
+- **Windows**: Find **PowerShell** in the Start menu and open it.
+
+When the window opens, type a command where the cursor is blinking and press Enter. For more details on opening it, see the terminal guide in the official documentation.[^install]
 
 Even when you already have the desktop app, there are two reasons to use the terminal:
 
 - **One-line tasks**: You can ask a single question, get the answer, and finish right away.
-- **Automation**: Other programs or scripts can call Claude Code. The desktop app does not have this scripting feature.[^no-script]
+- **Automation**: Other programs or **scripts** (bundles of commands that list steps in order and run them all at once) can call Claude Code. For example, instead of typing "check the folder for new notes" by hand every time, you put it in a bundle of commands and run it. The desktop app does not have this scripting feature.[^no-script]
 
 <Quiz id="ch410-why" />
 
 ## Installing and Starting
 
-Open the terminal and paste the single command that matches your computer.[^install]
+Open the terminal and paste the single command that matches your computer.[^install] On macOS, use only the first box; on Windows, use only the second box.
 
 ```bash
 # macOS, Linux, WSL
@@ -30,16 +37,31 @@ curl -fsSL https://claude.ai/install.sh | bash
 irm https://claude.ai/install.ps1 | iex
 ```
 
-**Never paste an install command from an unfamiliar website as is.** The command above downloads a script from the internet and runs it right away. Always check that it matches **the exact text in the official documentation (code.claude.com)** before running it.
+Here is the command, piece by piece.
 
-Once the installation finishes, move to your working folder and type `claude`.[^start]
+- `curl`: a command that downloads a file from an internet address
+- `-fsSL`: options for downloading (stop if there is an error, hide the progress display, and follow the address if it has moved)
+- `|`: a symbol that passes the result of the command before it to the command after it
+- `bash`: the program that runs the install script it receives
+- On Windows, `irm` downloads and `iex` runs what was downloaded, so they do the same job.
+
+In other words, the command above **downloads an install script from the internet and runs it right away.** That is why you should **never paste an install command from an unfamiliar website as is.** Always check that it matches **the exact text in the official documentation (code.claude.com)** before running it.
+
+Once the installation finishes, move to your working folder and type `claude`.[^start] `cd` means "move to this folder." It is the same as picking a folder in the desktop app.
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 claude
 ```
 
-The first time, it will ask you to log in. If you have a subscription account, just finish logging in through your browser.[^start] `cd` means "move to this folder." It is the same as picking a folder in the desktop app.
+`~/hello-ai-practice/organizer` is an example location.
+
+- `~`: a symbol that is short for your user folder (home folder)
+- `/`: a mark that means going into a folder inside a folder
+
+Change it to the place where the **organizer** folder you made in Chapter 2 actually is. If you named the folder differently, use that name. On macOS, type `cd ` (cd followed by one space), then drag the folder from Finder onto the terminal window, and the location is filled in automatically.
+
+The first time, it will ask you to log in. If you have a subscription account, just finish logging in through your browser.[^start]
 
 <Quiz id="ch410-install" />
 
@@ -64,18 +86,18 @@ After starting in interactive mode, you use `/` commands just like in the app. `
 Here is what we ran in the organizer folder:
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 claude -p "Show the list of files in the notes folder, and tell me in one line per file which template (from templates) each file used. Do not edit any files. Keep the answer short, as a table only."
 ```
 
-A few seconds later, the answer appeared and the command finished right away (full output: [10장-claude-p-출력.txt](/practice/notes/results/10장-claude-p-출력.txt)).
+A few seconds later, the answer appeared and the command finished right away (full output: [ch10-claude-p-output.txt](/practice/en/notes/results/ch10-claude-p-output.txt)).
 
 | notes file | Template used |
 |---|---|
-| 공부-2026-10-28-프롬프트-강의.md | templates/공부노트.md |
-| 주간회고-2026-10-27.md | templates/주간회고.md |
-| 회의록-2026-10-27-주간회의.md | templates/회의록.md |
-| 회의록-2026-10-29-임시회의.md | templates/회의록.md |
+| study-2026-10-28-prompt-lecture.md | templates/study-notes.md |
+| weekly-review-2026-10-27.md | templates/weekly-review.md |
+| minutes-2026-10-27-weekly.md | templates/minutes.md |
+| minutes-2026-10-29-adhoc.md | templates/minutes.md |
 
 Source: Hands-on result from this guide (2026-10-31). The end of the answer also included "Checked scope: 4/4."
 
@@ -91,7 +113,7 @@ However, a one-off run with `-p` **cannot ask for your permission in the middle.
 
 - You can use both **at the same time, in the same folder**. They keep separate session lists, but share settings and CLAUDE.md.[^same]
 - To move a conversation from the terminal to the app, type `/desktop` in the terminal (macOS and Windows x64, signed in with a subscription).[^to-desktop]
-- Going the other way, you can bring a terminal session into the app using **Import Claude Code CLI session (Claude Code CLI 세션 가져오기)** on the app's home screen (the guide card on the home screen in Chapter 2).
+- You can also bring it in from the app side. Click **Import Claude Code CLI session (Claude Code CLI 세션 가져오기)** on the app's home screen (the guide card on the home screen in Chapter 2), and the session you had in the terminal comes into the app. Here, CLI means "Claude Code for the terminal."
 
 <Quiz id="ch410-switch" />
 

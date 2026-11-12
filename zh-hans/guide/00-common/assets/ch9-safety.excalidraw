@@ -1,0 +1,106 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "id": "before",
+   "x": 0,
+   "y": 0,
+   "width": 300,
+   "height": 170,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "发送前\n\n个人信息·机密遮住了吗？\n别人的资料用分隔符包起来了吗？",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "ai",
+   "x": 400,
+   "y": 50,
+   "width": 140,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "AI",
+    "fontSize": 22
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "after",
+   "x": 640,
+   "y": 0,
+   "width": 300,
+   "height": 170,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "收到之后\n\n数字·日期·出处核对了吗？\n结果可以直接用吗？",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 300,
+   "y": 85,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     98,
+     0
+    ]
+   ],
+   "width": 98,
+   "height": 0,
+   "start": {
+    "id": "before"
+   },
+   "end": {
+    "id": "ai"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 540,
+   "y": 85,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     98,
+     0
+    ]
+   ],
+   "width": 98,
+   "height": 0,
+   "start": {
+    "id": "ai"
+   },
+   "end": {
+    "id": "after"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 190,
+   "width": 940,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "风险出在放进去和拿到结果两个地方",
+    "fontSize": 18,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

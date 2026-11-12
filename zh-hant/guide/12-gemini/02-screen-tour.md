@@ -1,9 +1,11 @@
 # 第2章 熟悉介面 — 什麼在哪裡
 
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
+
 > **一句話總結**：Gemini 的介面，你只要認得四個地方：**左邊的側邊選單**（以前的對話）、**中間的輸入框**（提問的地方和「+」）、
 > **輸入框右邊的模型按鈕**（模型和思考級別）、**左下角的「設定（설정）」**。剛開始時，只用輸入框就足夠了。
 
-介面以2026年10月的網頁版為準，圖片是付費套餐（Google AI Pro）的韓語介面。免費賬號裡，有些選單可能看不到，或者帶著一把鎖。如果名稱和你的介面不同，請找名稱相近的按鈕。
+介面以2026年10月的網頁版為準，圖片是付費方案（Google AI Pro）的韓語介面。免費帳號裡，有些選單可能看不到，或者帶著一把鎖。如果名稱和你的介面不同，請找名稱相近的按鈕。
 
 ## 一眼看懂首頁
 
@@ -25,6 +27,8 @@
 
 出處：在 Gemini 網頁介面上親自確認[^screen]
 
+① 裡的**筆記本**，是把資料和對話按主題歸在一起的地方。在[第6章](06-search.md)裡講。
+
 輸入框下面的「聊天（채팅）」·「任務（작업）」切換，是用來選擇普通對話，還是**把整件事交出去的任務**。任務在[第8章](08-tasks.md)裡講，現在放在「聊天（채팅）」就行。[^screen][^models]
 
 不需要一開始就全部瞭解。在輸入框裡寫下問題併發送就可以了。其餘的，需要時再回來翻這一章。
@@ -39,11 +43,11 @@
 - **「新聊天（새 채팅）」**：開啟新的對話。話題變了就點這裡（[第1章](01-getting-started.md)）。[^start]
 - **「資料庫（라이브러리）」·「圖片（이미지）」**：集中檢視上傳或生成的檔案和圖畫（[第4章](04-files-create.md)）。
 - **「已安排（예약됨）」**：集中檢視到約定的時間自動去做的事。
-- **「個性化設定（맞춤설정）」**：新增技能和已連線的應用。
+- **「個性化設定（맞춤설정）」**：新增技能（儲存下來的常用請求的指令）和已連線的應用（像 Gmail·Drive 這樣和 Gemini 連起來用的 Google 應用）。在[第7章](07-skills-apps.md)裡講。
 - **「筆記本（노트북）」**：把資料和對話按主題歸在一起。有「新建筆記本（새 노트북）」·「所有筆記本（모든 노트북）」。
 - **「全部（전체）」**：到目前為止聊過的對話列表。最上面是最近的對話。
 
-最下面是我的賬號名稱和套餐（例：「Pro」），以及齒輪「設定（설정）」。[^screen]
+最下面是我的帳號名稱和方案（例：「Pro」），以及齒輪「設定（설정）」。[^screen]
 
 側邊選單可以透過左上角的「關閉側邊欄（사이드바 닫기）」（方框圖示）收起和展開。[^screen]
 
@@ -73,7 +77,7 @@
 
 選單看起來很多，但剛開始時，只要認得「上傳檔案（파일 업로드）」這一個就行。其餘的從第4章起一個個講。
 
-檔案一次最多可以上傳**10個**。影片每個最大2GB，其他檔案每個最大100MB。[^files]
+檔案一次最多可以上傳**10個**。大小限制在[第4章](04-files-create.md)裡看。[^files]
 
 點輸入框右邊的麥克風（「語音輸入（음성기록）」），就可以用說話來輸入。[^screen]
 
@@ -112,8 +116,8 @@
 
 模型名稱前面的數字（例：3.8 Flash）是版本號。它經常變，所以比起數字，請按**作用**來記。[^models]
 
-**免費賬號不能自己選擇模型。** Gemini 會自動選擇適合問題的模型，或者用 Flash-Lite 來回答。[^models]
-有付費套餐（Google AI 套餐）才能自己切換。帶著鎖的模型，意思是需要升級套餐才能使用。[^models]
+**免費帳號不能自己選擇模型。** Gemini 會自動選擇適合問題的模型，或者用 Flash-Lite 來回答。[^models]
+有付費方案（Google AI 方案）才能自己切換。帶著鎖的模型，意思是需要升級方案才能使用。[^models]
 
 ### 思考級別 — 想多深
 
@@ -132,14 +136,15 @@
 ### 什麼時候調高
 
 **模型越好、思考級別越高，用量消耗得越多。**[^models] 所以不必總是調到最高。
-平時用預設值（「低（낮음）」）或較輕的設定，只有在回答太淺或有錯時，再調高一檔。圖中的「Argon 高（Argon 높음）」，是本指南為了展示介面而選的設定。Argon 只在 Pro·Ultra 套餐裡才會出現（[第1章](01-getting-started.md)）。讓它想得久一點，也不一定總會更好（[第1階段第5章](../00-common/05-prompt-patterns.md)）。
+平時請用預設值（「低（낮음）」）或較輕的設定。只有在回答太淺或有錯時，再調高一檔。
+讓它想得久一點，也不一定總會更好（[第1階段第5章](../00-common/05-prompt-patterns.md)）。[^argon-shot]
 
 有兩點需要注意。[^models]
 
 - **選過一次的模型會一直保留在那個對話裡。** 以後回到那個對話，用的還是同樣的模型和思考級別。
 - **想看是哪個模型回答的**，請點回答下方的「更多（더보기）」（三個點），選「查看回答詳情（응답 세부정보 보기）」。
 
-在付費套餐裡碰到額度上限，對話就會用 Flash-Lite 接著進行。[^models] 如果回答突然變短了，請用「查看回答詳情（응답 세부정보 보기）」確認一下。
+在付費方案裡碰到額度上限，對話就會用 Flash-Lite 接著進行。[^models] 如果回答突然變短了，請用「查看回答詳情（응답 세부정보 보기）」確認一下。
 
 在交辦困難的工作之前這樣問一問，就能掂量出這件事值不值得調高思考級別。
 
@@ -170,24 +175,24 @@
 - **離開臨時聊天後，就再也看不到那個對話了。** 需要的回答，請在離開之前複製下來。
 - 不能使用 Gmail、Drive 這類**已連線的應用**。
 - 不能得到貼合我個人資訊的**個性化回答**，也不能給回答留下**反饋**（贊、踩）。
-- 只有**個人 Google 賬號**可以用。公司、學校賬號不行。
+- 只有**個人 Google 帳號**可以用。公司、學校帳號不行。
 
-**臨時聊天也會在賬號裡儲存72小時。** 介面上的說明解釋為「為了安全」。不過，它不會用於 Google 的 AI 模型訓練。[^screen][^privacy]
+**臨時聊天也會在帳號裡儲存72小時。** 介面上的說明解釋為「為了安全」。不過，它不會用於 Google 的 AI 模型訓練。[^screen][^privacy]
 所以即使是臨時聊天，也不要輸入密碼或身份證號碼這類資訊（[第1階段第9章](../00-common/09-safety.md)）。詳細的隱私設定在[第9章](09-privacy.md)裡講。
 
 <Quiz id="ch302-temp" />
 
-## 設定頁面 — 賬號、偏好設定、隱私
+## 設定頁面 — 帳號、偏好設定、隱私
 
 點左下角的齒輪「設定（설정）」，選單會分成三組開啟。[^screen]
 
-![點左下角齒輪「設定（설정）」（④）後開啟的選單。紅色編號標在：① 「賬號（계정）」（「用量上限（사용량 한도）」「管理訂閱（구독 관리）」「升級到 Google AI Ultra（Google AI Ultra(으)로 업그레이드）」），② 「偏好設定（환경설정）」（「個人智慧（개인 인텔리전스）」「技能（스킬）」「主題（테마）」「任務設定（작업 설정）」），③ 「資料與隱私（데이터 및 개인 정보 보호）」（「用 Gemini 匯入記憶（Gemini로 메모리 가져오기）」「我的公開連結（내 공개 링크）」「傳送反饋（의견 보내기）」「幫助（도움말）」「位置（위치）」「活動（활동）」）](../../../guide/12-gemini/assets/shot-06-settings-marked.png)
+![點左下角齒輪「設定（설정）」（④）後開啟的選單。紅色編號標在：① 「帳號（계정）」（「用量上限（사용량 한도）」「管理訂閱（구독 관리）」「升級到 Google AI Ultra（Google AI Ultra(으)로 업그레이드）」），② 「偏好設定（환경설정）」（「個人智慧（개인 인텔리전스）」「技能（스킬）」「主題（테마）」「任務設定（작업 설정）」），③ 「資料與隱私（데이터 및 개인 정보 보호）」（「用 Gemini 匯入記憶（Gemini로 메모리 가져오기）」「我的公開連結（내 공개 링크）」「傳送反饋（의견 보내기）」「幫助（도움말）」「位置（위치）」「活動（활동）」）](../../../guide/12-gemini/assets/shot-06-settings-marked.png)
 
 姓名、對話標題已換成示例。表中的 ①②③ 是和圖中編號相同的分組。[^screen]
 
 | 分組 | 選單 | 作用 |
 |---|---|---|
-| ① 賬號 | 「用量上限（사용량 한도）」·「管理訂閱（구독 관리）」 | 檢視用了多少、管理套餐（[第1章](01-getting-started.md)） |
+| ① 帳號 | 「用量上限（사용량 한도）」·「管理訂閱（구독 관리）」 | 檢視用了多少、管理方案（[第1章](01-getting-started.md)） |
 | ② 偏好設定 | 「個人智慧（개인 인텔리전스）」·「技能（스킬）」 | 貼合我個人資訊的回答、管理技能 |
 | ② 偏好設定 | 「主題（테마）」·「任務設定（작업 설정）」 | 淺色、深色介面，交辦工作的設定 |
 | ③ 資料與隱私 | 「用 Gemini 匯入記憶（Gemini로 메모리 가져오기）」 | 把其他 AI 的記憶搬過來 |
@@ -221,9 +226,9 @@
 - 介面分為側邊選單、輸入框、模型按鈕、「臨時聊天（임시 채팅）」、「設定（설정）」這五個地方。
 - 在側邊選單裡開啟新聊天，用「搜尋聊天（채팅 검색）」和「全部（전체）」列表查詢以前的對話。
 - 輸入框的「+」裡集中了上傳檔案和生成的工具。檔案一次最多10個。
-- 模型有 Flash-Lite、Flash、Pro、Argon，思考級別有低、中、高。越高越消耗用量。免費賬號不能自己選擇。
-- 臨時聊天不會留在對話列表裡，但會在賬號裡儲存72小時。離開後就再也看不到了。
-- 「設定（설정）」分為賬號、偏好設定、資料與隱私三組。介面語言跟隨瀏覽器語言。
+- 模型有 Flash-Lite、Flash、Pro、Argon，思考級別有低、中、高。越高越消耗用量。免費帳號不能自己選擇。
+- 臨時聊天不會留在對話列表裡，但會在帳號裡儲存72小時。離開後就再也看不到了。
+- 「設定（설정）」分為帳號、偏好設定、資料與隱私三組。介面語言跟隨瀏覽器語言。
 
 ## 術語表
 
@@ -239,10 +244,11 @@
 
 下一章：[第3章. 對話管理](03-chats.md)
 
-[^screen]: 在 Gemini 網頁介面（Google AI Pro，韓語）上親自確認。首頁「무엇을 도와드릴까요?」（有什麼可以幫您？），輸入框「Gemini에게 물어보기」（向 Gemini 提問），「업로드 및 도구」(+)（上傳和工具），模型按鈕和「음성기록」（語音輸入），右上角的「앱 설치」（安裝應用）和「임시 채팅」（臨時聊天）圖示，輸入框下方「채팅」（聊天）「작업」（任務）切換。臨時聊天說明 "임시 채팅은 최근 채팅에 표시되지 않으며, Google AI를 개선하는 데 사용되지 않습니다. 안전을 위해 72시간 동안 저장됩니다." 側邊選單「채팅 검색」「사이드바 닫기」「새 채팅」「라이브러리」「이미지」「예약됨」「맞춤설정」「노트북」「전체」，最下面的賬號名稱、套餐標示和「설정」。+ 選單「파일 업로드」「Drive에서 파일 추가」「업로드 더보기」「이미지 만들기」「동영상 만들기」「음악 만들기」「도구 더보기」，「도구 더보기」下的「Canvas」「Deep Research」「가이드 학습」「개인 인텔리전스(Labs)」（2026-10-30 時這些工具在 + 選單的第一層）。模型選單「3.5 Flash-Lite — 가장 빠른 답변 제공」「3.8 Flash — 무엇이든 도움을 받으세요」「3.1 Pro — 고급 추론」「4 Argon — 복잡한 작업」，思考級別「낮음 — 빠르고 효율적」「보통 — 균형 잡힌 깊이」「높음 — 매우 철저함」。設定選單「계정」(「사용량 한도」「구독 관리」)，「환경설정」(「개인 인텔리전스」「스킬」「테마」「작업 설정」)，「데이터 및 개인 정보 보호」(「Gemini로 메모리 가져오기」「내 공개 링크」「의견 보내기」「도움말」「위치」「활동」)。「활동」會在新標籤頁「Gemini 앱 활동」中開啟。幫助中心韓語版裡的介面名稱：「텍스트 수정」「업데이트」(13275745)，「응답 세부정보 보기」(18648722)。（確認日期 2026-10-30，圖片、+ 選單、臨時聊天為 2026-10-31）
-[^start]: Google 幫助中心，「Use Gemini Apps」。"In the text box at the bottom, enter your question or prompt." / "To start a new chat, at the top left, click New chat" / "You can start a temporary chat that won’t appear in your Gemini Apps Activity or your recent chats." / "A personal Google Account. This feature is not available for users signed in to a work or school Google Account." / "When you leave the temporary chat, you’ll no longer have access to that chat, and it won’t appear in your recent chats." / "Use Connected Apps and other integrated services that require the Keep Activity setting to be turned on." / "Get personalized responses." / "If you want to revise your prompt, you can edit it, and Gemini will regenerate the response." https://support.google.com/gemini/answer/13275745（確認日期 2026-10-30）
-[^files]: Google 幫助中心，「Upload & analyze files in Gemini Apps」。"Up to 10 files (subject to availability) can be uploaded in the same prompt. When uploading a folder, each file inside will count towards this limit." / "Each video can be up to 2 GB. All other supported file types can be up to 100 MB." https://support.google.com/gemini/answer/14903178（確認日期 2026-10-30）
-[^models]: Google 幫助中心，「About Gemini models」。"Gemini Flash-Lite: A fast, cost-efficient model built for quick answers to everyday questions and lightweight tasks." / "Gemini Pro: An advanced reasoning model designed for complex prompts, sophisticated coding, and in-depth problem-solving." / "Gemini Argon: Top-tier intelligence, dynamic deep reasoning, and the highest performance for complex workflows." / "Auto or Flash-Lite*" / "If you have a Google AI plan you can manually switch models in both Chat Mode and Task Mode." / "Higher-tier models marked with a lock icon require an eligible plan upgrade" / "Low: Provides fast, concise answers for straightforward queries." / "High: Allows the model to carefully process and reason through complex, multistep prompts." / "If you don’t select a thinking level, it will default to Low." / "More advanced models and higher thinking levels require more of your usage." / "If you have a Google AI plan and reach your usage limit, your chat will continue with Flash-Lite." / "Gemini will continue to use that model and thinking level during the current conversation including if you later return to that same conversation." / "From the menu, select See response details ." / "Access to specific Gemini models, thinking levels, and task features varies depending on your plan and your remaining available usage." 幫助中心寫的是預設自動選擇模型，但本指南確認的 Pro 賬號的模型選單裡沒有「自動（자동）」專案。https://support.google.com/gemini/answer/18648722（確認日期 2026-10-30）
-[^privacy]: Google 幫助中心，「Gemini Apps Privacy Hub」。"Temporary chats and chats you have when Keep Activity is off are retained with your account for 72 hours and used to:" / "Temporary chats are not used to train Google’s AI models." https://support.google.com/gemini/answer/13594961（確認日期 2026-10-30）
-[^theme]: Google 幫助中心，「Use Dark theme in Gemini Apps」。"By default, the color scheme for the Gemini app matches the color scheme of the device you’re on." https://support.google.com/gemini/answer/13542227（確認日期 2026-10-30）
-[^language]: Google 幫助中心，「Change Gemini's language」。"The Gemini web app uses the language set in your browser or device language settings." / "Regardless of this setting, Gemini Apps can understand and reply in any supported language when you type your prompt or speak in Gemini Live." https://support.google.com/gemini/answer/15984485（確認日期 2026-10-30）
+[^screen]: 在 Gemini 網頁介面（Google AI Pro，韓語）上親自確認。首頁「무엇을 도와드릴까요?」（有什麼可以幫您？），輸入框「Gemini에게 물어보기」（向 Gemini 提問），「업로드 및 도구」(+)（上傳和工具），模型按鈕和「음성기록」（語音輸入），右上角的「앱 설치」（安裝應用）和「임시 채팅」（臨時聊天）圖示，輸入框下方「채팅」（聊天）「작업」（任務）切換。臨時聊天說明 "임시 채팅은 최근 채팅에 표시되지 않으며, Google AI를 개선하는 데 사용되지 않습니다. 안전을 위해 72시간 동안 저장됩니다." 側邊選單「채팅 검색」「사이드바 닫기」「새 채팅」「라이브러리」「이미지」「예약됨」「맞춤설정」「노트북」「전체」，最下面的帳號名稱、方案標示和「설정」。+ 選單「파일 업로드」「Drive에서 파일 추가」「업로드 더보기」「이미지 만들기」「동영상 만들기」「음악 만들기」「도구 더보기」，「도구 더보기」下的「Canvas」「Deep Research」「가이드 학습」「개인 인텔리전스(Labs)」（2026-10-30 時這些工具在 + 選單的第一層）。模型選單「3.5 Flash-Lite — 가장 빠른 답변 제공」「3.8 Flash — 무엇이든 도움을 받으세요」「3.1 Pro — 고급 추론」「4 Argon — 복잡한 작업」，思考級別「낮음 — 빠르고 효율적」「보통 — 균형 잡힌 깊이」「높음 — 매우 철저함」。設定選單「계정」(「사용량 한도」「구독 관리」)，「환경설정」(「개인 인텔리전스」「스킬」「테마」「작업 설정」)，「데이터 및 개인 정보 보호」(「Gemini로 메모리 가져오기」「내 공개 링크」「의견 보내기」「도움말」「위치」「활동」)。「활동」會在新標籤頁「Gemini 앱 활동」中開啟。幫助中心韓語版裡的介面名稱：「텍스트 수정」「업데이트」(13275745)，「응답 세부정보 보기」(18648722)。（確認日期 2026-10-30，圖片、+ 選單、臨時聊天為 2026-10-31）
+[^start]: Google 幫助中心，「Use Gemini Apps」。"In the text box at the bottom, enter your question or prompt." / "To start a new chat, at the top left, click New chat" / "You can start a temporary chat that won’t appear in your Gemini Apps Activity or your recent chats." / "A personal Google Account. This feature is not available for users signed in to a work or school Google Account." / "When you leave the temporary chat, you’ll no longer have access to that chat, and it won’t appear in your recent chats." / "Use Connected Apps and other integrated services that require the Keep Activity setting to be turned on." / "Get personalized responses." / "If you want to revise your prompt, you can edit it, and Gemini will regenerate the response." https://support.google.com/gemini/answer/13275745 （確認日期 2026-10-30）
+[^argon-shot]: 圖中的「Argon 高（Argon 높음）」，是本指南為了展示介面而選的設定。Argon 只在 Pro·Ultra 方案裡才會出現（[第1章](01-getting-started.md)）。
+[^files]: Google 幫助中心，「Upload & analyze files in Gemini Apps」。"Up to 10 files (subject to availability) can be uploaded in the same prompt. When uploading a folder, each file inside will count towards this limit." / "Each video can be up to 2 GB. All other supported file types can be up to 100 MB." https://support.google.com/gemini/answer/14903178 （確認日期 2026-10-30）
+[^models]: Google 幫助中心，「About Gemini models」。"Gemini Flash-Lite: A fast, cost-efficient model built for quick answers to everyday questions and lightweight tasks." / "Gemini Pro: An advanced reasoning model designed for complex prompts, sophisticated coding, and in-depth problem-solving." / "Gemini Argon: Top-tier intelligence, dynamic deep reasoning, and the highest performance for complex workflows." / "Auto or Flash-Lite*" / "If you have a Google AI plan you can manually switch models in both Chat Mode and Task Mode." / "Higher-tier models marked with a lock icon require an eligible plan upgrade" / "Low: Provides fast, concise answers for straightforward queries." / "High: Allows the model to carefully process and reason through complex, multistep prompts." / "If you don’t select a thinking level, it will default to Low." / "More advanced models and higher thinking levels require more of your usage." / "If you have a Google AI plan and reach your usage limit, your chat will continue with Flash-Lite." / "Gemini will continue to use that model and thinking level during the current conversation including if you later return to that same conversation." / "From the menu, select See response details ." / "Access to specific Gemini models, thinking levels, and task features varies depending on your plan and your remaining available usage." 幫助中心寫的是預設自動選擇模型，但本指南確認的 Pro 帳號的模型選單裡沒有「自動（자동）」專案。https://support.google.com/gemini/answer/18648722 （確認日期 2026-10-30）
+[^privacy]: Google 幫助中心，「Gemini Apps Privacy Hub」。"Temporary chats and chats you have when Keep Activity is off are retained with your account for 72 hours and used to:" / "Temporary chats are not used to train Google’s AI models." https://support.google.com/gemini/answer/13594961 （確認日期 2026-10-30）
+[^theme]: Google 幫助中心，「Use Dark theme in Gemini Apps」。"By default, the color scheme for the Gemini app matches the color scheme of the device you’re on." https://support.google.com/gemini/answer/13542227 （確認日期 2026-10-30）
+[^language]: Google 幫助中心，「Change Gemini's language」。"The Gemini web app uses the language set in your browser or device language settings." / "Regardless of this setting, Gemini Apps can understand and reply in any supported language when you type your prompt or speak in Gemini Live." https://support.google.com/gemini/answer/15984485 （確認日期 2026-10-30）

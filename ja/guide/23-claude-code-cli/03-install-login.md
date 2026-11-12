@@ -1,6 +1,6 @@
 # 第3章 インストールとログイン
 
-<Badge type="tip" text="必須" /> このステップを進めるなら、必ず読んでください。
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
 
 > **一言まとめ**: 公式ドキュメントのインストールコマンドを貼り付けて、**新しいターミナルウィンドウ**で `claude --version` を実行して確かめます。そのあと練習用フォルダで `claude` を実行し、ブラウザでログインすれば準備は完了です。
 
@@ -138,14 +138,14 @@ $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
 新しいウィンドウで第2章の練習用フォルダに移動してから、`claude` と入力します。Mac・Linuxでは、こう入力します。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude
 ```
 
 Windows PowerShellでは、こう入力します。
 
 ```powershell
-cd $HOME\hello-ai-연습\터미널
+cd $HOME\hello-ai-practice\terminal
 claude
 ```
 

@@ -1,5 +1,7 @@
 # Chapter 8. Meta Prompting — Letting the AI Write Your Prompt
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: You do not have to write a good prompt all by yourself. Give your rough request to the AI and
 > ask it to **"turn this into a good prompt."** Just make sure you read the AI's result yourself before you send it.
 
@@ -11,11 +13,16 @@ It is hard to memorize all of these and follow them every time. So there is a wa
 A **prompt that makes the AI write or fix a prompt** is called **meta prompting**.
 "Meta" means "about itself." It means a question about a question, or a prompt about a prompt.
 
-AI companies use this method too. OpenAI, the maker of ChatGPT, has a separate practice screen for developers (Playground, a developer site different from ChatGPT).
-OpenAI shared that the Generate button on that screen works through a **meta-prompt** (a prompt that instructs the AI to create or fix a good prompt).[^openai-gen]
-Research also shows that instructions written by an AI work just as well as—and sometimes better than—instructions written by people.[^ape]
+The instructions you send the AI here—a prompt that tells it to create or fix a good prompt—are called a **meta-prompt**.
+It isn't a method only for special people. AI companies use this method too.
 
-![Meta prompting order: My rough request written as it came to mind → AI organizes it into a structured prompt → I read, edit, and fill in the blanks → Paste and send in a new chat. Only let the AI organize it, and check it yourself before sending](../../../guide/00-common/assets/ch8-meta.svg)
+::: details How do AI companies and researchers use it? (click to expand)
+OpenAI, the maker of ChatGPT, has a separate practice screen for developers (Playground, a developer site different from ChatGPT).
+OpenAI shared that the Generate button on that screen works through a meta-prompt.[^openai-gen]
+Research also shows that instructions written by an AI work just as well as—and sometimes better than—instructions written by people.[^ape]
+:::
+
+![Meta prompting order: My rough request written as it came to mind → AI organizes it into a structured prompt → I read, edit, and fill in the blanks → Paste and send in a new chat. Only let the AI organize it, and check it yourself before sending](assets/ch8-meta.svg)
 
 In this chapter, we look at four methods based on how you use them.
 
@@ -52,7 +59,23 @@ Two sentences are important here.
 
 **Step 2 — Fill in the blanks and send it again**
 
-In the prompt the AI gave back, fill in the blanks (for example: departure date, budget). Then paste and send it in a **new chat**.
+The AI gives it back in roughly this shape. The actual answer is a little different every time.
+
+```
+## Context
+I'm taking my parents on a 2-night, 3-day trip to Jeju. My dad has bad knees. We have a rental car.
+
+## Task
+Plan a trip itinerary that doesn't involve much walking. Include good restaurants and places to go if it rains.
+
+## Answer Format
+A table by date (time / place / how to get there)
+
+Departure date: [Please write the departure date here]
+Budget: [Please write the budget here]
+```
+
+The parts in square brackets `[ ]` are the blanks. Fill in the blanks (for example: departure date, budget). Then paste and send it in a **new chat**.
 As we saw in [Chapter 6](06-conversation.md), you should send it in a new chat so traces of your organizing chat do not mix into the answer.
 
 > Try changing "with Markdown headings" to "with XML tags." Using the same method, you can also get an XML-tag prompt from [Chapter 7](07-structured-prompts.md).

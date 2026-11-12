@@ -1,5 +1,7 @@
 # 第6章 搜索与 Deep Research——核实依据、长篇调查报告、笔记本、学习助手
 
+<Badge type="info" text="选读" /> 需要的时候再读。跳过也能跟上后面的章节。
+
 > **一句话总结**：如果需要把多方资料查找并整理成的**长篇报告**，就用 **Deep Research**。它会先给你看调查计划，有要改的地方，当场就改。
 > 想长期收集某个主题的资料和对话，就用**笔记本**；学习时用**引导式学习·测验·闪卡**。无论是什么回答，依据都要亲自核实。
 
@@ -41,7 +43,9 @@ Gemini 的回答可能出错。Google 也提醒，**要时常审视回答，并�
 
 - ① 表示「Deep Research」已经开启。输入框的提示变成“你想调查什么？”。
 - ② 点「来源」，就可以选择 ③ 到哪里去找。「Google 搜索」一开始就是勾选的。
-- ③ 「聊天」看起来是把我过去的 Gemini 对话作为来源加进去的选项（帮助文档里没有说明）。要把 Gmail·Drive 作为来源使用，Google Workspace 必须已连接到 Gemini（[第7章](07-skills-apps.md#已连接的应用-—-在-gemini-里用-gmail·drive·日历)）。[^deep] 去掉「Google 搜索」的勾选后，就**只在选定的来源里**查找。[^deep]
+- ③ 去掉「Google 搜索」的勾选后，就**只在选定的来源里**查找。[^deep] 一开始只留着「Google 搜索」来用就足够了。
+- 要把 ③ 里的 Gmail·Drive 作为来源使用，需要先把 Google 应用连接到 Gemini。连接方法在[第7章](07-skills-apps.md#已连接的应用-—-在-gemini-里用-gmail·drive·日历)里学。[^deep]
+- ③ 「聊天」看起来是把我过去的 Gemini 对话作为来源加进去的选项。[^chat-source]
 - ④ 用「文件」可以一起放进我的文件。[^deep]
 
 写下要调查的主题发送后，Gemini 会先给你看**调查计划**。[^deep]
@@ -57,7 +61,7 @@ Gemini 的回答可能出错。Google 也提醒，**要时常审视回答，并�
 - ③ 在右侧面板里，可以看到按哪些步骤调查、查看了哪些网站。[^screen]
 - ④ 想停下来，就点这个按钮。弹出「要取消调查吗？」时，点「是，取消」。[^screen]
 
-**如果想修改计划，请尽量马上点「修改计划」。** 这本指南试过一次，没有点「开始研究」，调查却已经开始了。图中的「开始研究」气泡也是当时自己冒出来的。帮助文档里只写着要点「开始研究」才会开始，所以没能确认为什么会这样。如果已经开始了，可以用 ④ 停下来。[^screen]
+**如果想修改计划，请尽量马上点「修改计划」。** 因为出现过没有点「开始研究」，调查却已经开始的情况。[^auto-start] 如果已经开始了，可以用 ④ 停下来。[^screen]
 
 报告**通常需要 5~10 分钟**，复杂的会更久。等待期间可以离开对话。完成后会通知你。[^deep]
 
@@ -65,7 +69,7 @@ Gemini 的回答可能出错。Google 也提醒，**要时常审视回答，并�
 
 - **会用掉很多用量**（[第1章](01-getting-started.md#使用额度——5-小时·每周·阅读量)）。[^limits] 一天能做的调查数量，以及能同时运行的调查数量也有上限。接近上限时，会告诉你剩余的次数。[^deep]
 - **过去的报告在对话列表里找。** 必须开着「保留活动记录」，之后才能找到。[^deep]
-- **报告可以导出到 Docs。**[^deep] 也可以转成音频概览（[第4章](04-files-create.md#canvas-—-一起修改文档和应用)）。[^deep]
+- **报告可以导出到 Docs。**[^deep] 也可以转成音频概览（用对话形式的语音把报告讲给你听）（[第4章](04-files-create.md#canvas-—-一起修改文档和应用)）。[^deep]
 
 报告也是 Gemini 写的文字。重要的数字，请打开报告里的来源链接亲自核实。
 
@@ -77,7 +81,11 @@ Gemini 的回答可能出错。Google 也提醒，**要时常审视回答，并�
 
 ### 那 Deep Think 呢？
 
-**Deep Think** 曾经是思考更久的功能，但现在**正在被 Gemini 4 Argon 取代**。而且以前只有 Google AI Ultra 订阅者才能用。[^deepthink] 难题的话，在[第2章](02-screen-tour.md#模型按钮-—-模型和思考级别)的模型按钮里选择 Argon 和思考级别「高」就行（Pro·Ultra）。
+**Deep Think** 曾经是思考更久的功能。现在**正在被 Gemini 4 Argon 取代**。[^deepthink] 难题的话，在[第2章](02-screen-tour.md#模型按钮-—-模型和思考级别)的模型按钮里选择 Argon 和思考级别「高」就行（Pro·Ultra）。
+
+::: details 详细说明（点击展开）
+以前只有 Google AI Ultra 订阅者才能用 Deep Think。[^deepthink]
+:::
 
 <Quiz id="ch306-deep" />
 
@@ -86,7 +94,7 @@ Gemini 的回答可能出错。Google 也提醒，**要时常审视回答，并�
 **笔记本**是把一个主题的资料（来源）、指示和对话集中放在一处的空间。在里面对话时，它会记住放进去的资料和指示以及以前聊过的内容，接着继续。[^notebook]
 比如，在“读书会”笔记本里放进章程、上次的会议记录和聚会日程表，就不用每次重新上传资料了。
 
-点侧边菜单「笔记本」下面的「新建笔记本」，取个名字后提问。资料通过「添加来源」放进去（[第2章](02-screen-tour.md#侧边菜单-—-新聊天和以前的对话)）。[^notebook][^screen]
+点侧边菜单「笔记本」下面的「新建笔记本」，取个名字后提问。资料通过「添加来源」放进去（[第2章](02-screen-tour.md#侧边菜单-—-新聊天和以前的对话)）。[^notebook][^screen] 一个笔记本最多可以放 600 份资料，因套餐而异。[^notebook]
 
 | 可以放的资料 | 例子 |
 |---|---|
@@ -97,14 +105,18 @@ Gemini 的回答可能出错。Google 也提醒，**要时常审视回答，并�
 
 出处：Google 帮助文档[^notebook]
 
-有几点要知道。[^notebook]
+一定要知道的有两点。[^notebook]
 
-- **一个笔记本最多可以放 600 份资料**（因套餐而异）。
-- 在笔记本里也可以使用**网页搜索和 Gemini 工具**。
-- 笔记本改名、放入指示（「笔记本设置」）、置顶，在「所有笔记本」里通过笔记本的「更多」来做。
-- **删除笔记本时，里面的资料和对话也会一起删除。**
-- 即使「保留活动记录」关闭，也可以对话，但是对话自动保存、记住过去的对话、放入过去的对话、**把 Drive 文件作为资料放入**等一部分功能不能使用。
-- 这是逐步开放的功能，所以可能还看不到。
+- **删除笔记本时，里面的资料和对话也会一起删除。** 要一直用的资料，请在笔记本外面另外保存一份。
+- **这是逐步开放的功能，所以可能还看不到。** 侧边菜单里没有「笔记本」的话，请过一阵子再看看。
+
+比如，放进一份会议记录 PDF，然后问“把这次会议定下的事按负责人整理一下”。第二天在同一个笔记本里再问，也不用重新上传资料。
+
+::: details 其他要知道的事（点击展开）
+- 在笔记本里也可以使用**网页搜索和 Gemini 工具**。[^notebook]
+- 笔记本改名、放入指示（「笔记本设置」）、置顶，在「所有笔记本」里通过笔记本的「更多」来做。[^notebook]
+- 即使「保留活动记录」关闭，也可以对话，但是对话自动保存、记住过去的对话、放入过去的对话、**把 Drive 文件作为资料放入**等一部分功能不能使用。[^notebook]
+:::
 
 用对话菜单里的「添加到笔记本」，也可以把过去的对话放进笔记本（[第3章](03-chats.md#置顶·改名·删除)）。这个也必须开着「保留活动记录」才行。[^notebook][^screen]
 
@@ -126,8 +138,7 @@ Gemini 的回答可能出错。Google 也提醒，**要时常审视回答，并�
 ```
 
 - 做测验时，可以看「提示」，或者做完后用「生成更多问题」得到更多题目。做完后，会告诉你**强项和需要继续学习的部分**。[^study]
-- 闪卡可以使用打乱顺序（「随机模式」）和朗读。[^study]
-- 作为模拟考试，帮助文档里写的考试有 SAT·JEE Main·NEET UG 等，没有写韩国的考试。[^study]
+- 闪卡可以使用打乱顺序（「随机模式」）和朗读。[^study][^exams]
 
 **用在学校作业上时，请先确认学校的 AI 使用规定。**[^learn] 把 Gemini 的建议当作出发点，再加上自己的想法和语言来完成。[^learn]
 
@@ -168,6 +179,9 @@ Gemini 的回答可能出错。Google 也提醒，**要时常审视回答，并�
 下一章：[第7章. 技能和已连接的应用](07-skills-apps.md)
 
 [^screen]: 在 Gemini 网页界面（Google AI Pro，韩语）上用练习用的对话亲自确认（对话在截图后已删除）。开启「Deep Research」后输入框提示 "무엇을 조사하고 싶으신가요?"，「소스」（已选中 Google 搜索）和「파일」按钮。「소스」菜单 "하나 이상의 소스를 선택하세요"——「Google 검색」「Gmail」「Drive」「채팅」「연결된 앱 사용 설정」。计划下面的按钮「계획 수정」「연구 시작」（帮助文档韩语版是「계획서 수정」「조사 시작」）。调查开始后的回答 "착수할게요. 연구가 완료되면 알려 드릴게요. 그러는 동안 이 대화에서 나가셔도 됩니다."，进度卡片 "웹사이트 16개 조사 중..."，右侧面板「생각하는 과정 표시」。点停止按钮会出现「조사를 취소하시겠어요?」——「아니요」「예, 취소합니다」。这本指南在没有点「연구 시작」的情况下，等计划期间调查就开始了，所以拍下进行界面后取消了。「도구 더보기」里的「가이드 학습」，侧边菜单「노트북」里的「새 노트북」「모든 노트북」，对话菜单里的「노트북에 추가」。（确认日期 2026-10-31）
+[^chat-source]: 帮助文档里没有关于「聊天」选项的说明。这是本指南看了界面名称后推测的。
+[^auto-start]: 本指南试过一次，没有点「开始研究」，调查却已经开始了。图中的「开始研究」气泡也是当时自己冒出来的。帮助文档里只写着要点「开始研究」才会开始，所以没能确认为什么会这样（见下面的界面确认脚注）。
+[^exams]: 作为模拟考试，帮助文档里写的考试有 SAT·JEE Main·NEET UG 等，没有写韩国的考试。依据是下面的《Create quizzes, flashcards, practice tests & more in Gemini Apps》帮助文档。
 [^learn]: Google 帮助文档，《Learn in creative ways with generative AI》（韩语版《생성형 AI를 활용해 창의적으로 학습하기》）。"Important: Make sure to check and follow your school’s policy on using Generative AI." / "Use its suggestions as a starting point, then add your own unique voice and ideas to create something truly original." / "Always evaluate responses: While generative AI is a powerful tool, it can make mistakes." / "It’s important to always fact-check information using built-in tools or by double-checking with Google Search." / "Be specific: The more specific your questions, the more helpful the AI's answers will be." https://support.google.com/gemini/answer/15216790 （确认日期 2026-10-31）
 [^deep]: Google 帮助文档，《Use Deep Research in Gemini Apps》（韩语版《Gemini 앱에서 Deep Research 사용하기》）。"By default, Gemini includes Google Search as a source for your research." / "You can also upload files and add NotebookLM notebooks." / "Be 18 or over." / "Google AI Pro and Google AI Ultra users can generate reports using Pro for even higher quality. All users can use Thinking for their reports." / "In Gemini Apps, there are limits for:" / "Number of research requests you can run at the same time" / "If you’re close to your limit, Gemini Apps notifies you how many research requests are left for the day." / "To update the research plan before you create a report, click Edit plan." / "Click Start research." / "Google Search is included as a source by default. To limit your research to other selected sources, deselect Google Search." / "It usually takes about 5-10 minutes to generate the report since Gemini analyzes many sources. For more complex reports, it may take longer." / "Important: You can only find past research reports if your Keep Activity setting is on." / "To export the report, click Export to Docs ." / "Other Google services, like Gmail and Drive, are only available if the Google Workspace app is connected to Gemini Apps." / "On the right in the Canvas panel, click Create  Audio Overview ." 韩语版里有 "Gemini가 주제에 맞는 조사 계획서를 작성합니다." https://support.google.com/gemini/answer/15719111 （确认日期 2026-10-31）
 [^limits]: Google 帮助文档，《Gemini Apps limits & feature availability》。"This requires Gemini to use multiple, multi-step search queries and several rounds of reasoning sweeps to create a comprehensive report." / "For users without a Google AI plan, some features that require more compute resources, like Deep Research, may be unavailable during periods of high demand." https://support.google.com/gemini/answer/16275805 （确认日期 2026-10-31）

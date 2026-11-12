@@ -10,7 +10,7 @@
 
 **スキル**（Skill）は、`SKILL.md` ファイルひとつで、Claudeに仕事の手順を足してくれる機能です。同じ指示を何度もチャットに貼り付けているなら、作る価値があります。[^skill] 名前を呼んで使う作業マニュアルだと考えてください。
 
-プロジェクトのスキルは `.claude/skills/<スキル名>/SKILL.md` に置きます。[^skill] `/exit` で抜けて、ターミナルで練習フォルダに移動します。MacとLinuxでは、下をまるごと貼り付けます（ファイルで見る: [9장-스킬-meeting-notes.txt](/practice/cli/results/9장-스킬-meeting-notes.txt)）。
+プロジェクトのスキルは `.claude/skills/<スキル名>/SKILL.md` に置きます。[^skill] `/exit` で抜けて、ターミナルで練習フォルダに移動します。MacとLinuxでは、下をまるごと貼り付けます（ファイルで見る: [ch9-skill-meeting-notes.txt](/practice/ja/cli/results/ch9-skill-meeting-notes.txt)）。
 
 ```bash
 mkdir -p .claude/skills/meeting-notes
@@ -20,7 +20,7 @@ description: 会議メモをルールどおりの議事録に整理する。会�
 ---
 
 $ARGUMENTS ファイルを読み、CLAUDE.md のルールどおりに議事録を作る。
-ファイル名は `회의록-날짜.md`（議事録-日付）にして notes フォルダに保存する。
+ファイル名は `minutes-date.md` にして notes フォルダに保存する。
 終わったら、保存したファイル名とToDoの数を1行で知らせる。
 EOF
 ```
@@ -45,16 +45,16 @@ Windows PowerShellでは、`mkdir .claude\skills\meeting-notes` のあとに `no
 では、ターミナルで `claude` を起動し、`/` を入力して一覧から探してみてください。直接呼ぶときは、こう入力します。
 
 ```text
-/meeting-notes inbox/회의-2026-10-27-주간회의.txt
+/meeting-notes inbox/meeting-2026-10-27-weekly.txt
 ```
 
-同じスキルを[10章](10-headless-automation.md)の `claude -p` で呼んだら、`notes/회의록-2026-10-27.md` ができて、Claudeはこう答えました。
+同じスキルを[10章](10-headless-automation.md)の `claude -p` で呼んだら、`notes/minutes-2026-10-27.md` ができて、Claudeはこう答えました。
 
 ```text
-`notes/회의록-2026-10-27.md`に保存しました。ToDoは5個です。
+`notes/minutes-2026-10-27.md`に保存しました。ToDoは5個です。
 ```
 
-[8章](08-memory-settings.md)の `CLAUDE.md` のルールどおり、決定事項、ToDo、次の会議の3つの節が出てきました（[結果を見る](/practice/cli/results/10장-회의록-스크립트로.txt)）。スキルの本文は使うときだけ読み込まれるので、ふだんの負担はほとんどありません。[^skill]
+[8章](08-memory-settings.md)の `CLAUDE.md` のルールどおり、決定事項、ToDo、次の会議の3つの節が出てきました（[結果を見る](/practice/ja/cli/results/ch10-minutes-by-script.txt)）。スキルの本文は使うときだけ読み込まれるので、ふだんの負担はほとんどありません。[^skill]
 
 <Quiz id="ch809-skill" />
 
@@ -151,7 +151,7 @@ Removed MCP server "claude-code-docs" from local config
 ## やってみよう
 
 1. ターミナルでスキルを作ります。`claude` を起動し、`/` を入力して `meeting-notes` が見えるかを確認します。
-2. `/meeting-notes inbox/회의-2026-10-27-주간회의.txt` を実行します。`notes` にファイルができましたか？ 内容はメモと合っていますか？
+2. `/meeting-notes inbox/meeting-2026-10-27-weekly.txt` を実行します。`notes` にファイルができましたか？ 内容はメモと合っていますか？
 3. `/exit` で抜けて、ターミナルで `claude mcp` の3つのコマンドを順に入力します。消えたかを `claude mcp list` で確認します。
 
 自分に聞いてみてください。同じスキルで、別のメモも整理できそうか？ 今の自分に、どうしても必要な拡張機能はあるか？

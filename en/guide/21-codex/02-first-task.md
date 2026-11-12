@@ -1,5 +1,7 @@
 # Chapter 2. Starting Codex in the ChatGPT App — Opening a Folder and Handing Off Your First Task
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: Install the ChatGPT desktop app, pick **Codex** at the top left, and open your organizer folder with **Choose project** above the input box.
 > Then ask it to organize meeting notes with the same request from Claude Code Chapter 2, and check the result against the original.
 
@@ -27,15 +29,20 @@ Right above the input box, there are two choices.
 
 Source: Screen check for this guide (2026-11-01)
 
-![Codex home screen: "What should we build in 정리도구?" in the center, project "정리도구" and "This computer" above the input box, permission "Ask for approval" and model name below the input box](../../../guide/21-codex/assets/shot-01-home.png)
+![Codex home screen: "What should we build in organizer?" in the center, project "organizer" and "This computer" above the input box, permission "Ask for approval" and model name below the input box](../../../guide/21-codex/assets/shot-01-home.png)
 
-The screen above shows the organizer folder (`정리도구`) opened as a project. You can see the chosen folder (`정리도구`) and where you are working (This computer) above the input box, and the permission setting (Ask for approval) and model name below it. We cropped out the chat list and usage notice on the left.
+The screen above shows the organizer folder (`organizer`) opened as a project. You can see the chosen folder (`organizer`) and where you are working (This computer) above the input box, and the permission setting (Ask for approval) and model name below it. We cropped out the chat list and usage notice on the left.
 
-Click **Choose project** and pick the `정리도구` folder (or `~/hello-ai-연습/정리도구` if you followed the Claude Code guide). Codex can read and edit files in the folder you choose.[^folder] You can also open it from the menu bar with "File → Open Folder…".
+Click **Choose project** and pick the `organizer` folder (or `~/hello-ai-practice/organizer` if you followed the Claude Code guide). Codex can read and edit files in the folder you choose.[^folder] You can also open it from the menu bar with "File → Open Folder…".
 
-Leave the work location set to **This computer**. Cloud is for people who connected a GitHub repository, and files on your computer are not sent to the cloud.[^cloud-files]
+Leave the work location set to **This computer**. This guide does not use Cloud, because files on your computer are not sent to the cloud.[^cloud-files] We briefly introduce Cloud in Chapter 6.
 
-Also check whether your folder is a **Git repository** (a tool that keeps a record of changes). The pane that shows changes in Codex only opens inside a Git repository. If it is not a Git repository, the app asks if you want to create one.[^review-git] If you followed Claude Code Chapter 3, it is already a Git repository. If you started fresh with the practice files, just follow along **when the app asks to create a repository**.[^review-git] You can also ask Codex in chat, but because the `.git` folder that holds Git history is a protected folder ([Chapter 4](04-permissions-undo.md)), it may ask for permission or be blocked.
+Also check whether your folder is a **Git repository** (a tool that keeps a record of changes). The pane that shows changes in Codex only opens inside a Git repository. If it is not a Git repository, the app asks if you want to create one.[^review-git]
+
+- If you followed Claude Code Chapter 3, it is already a Git repository.
+- If you started fresh with the practice files, just follow along **when the app asks to create a repository**.[^review-git]
+
+You can also ask Codex in chat, "Make this a Git repository." However, the `.git` folder that holds Git history is locked so Codex cannot change it freely. So it may ask for permission or stop partway. We look at folders like this in detail in [Chapter 4](04-permissions-undo.md).
 
 <Quiz id="ch502-open" />
 
@@ -44,17 +51,17 @@ Also check whether your folder is a **Git repository** (a tool that keeps a reco
 Send a request similar to the one in Claude Code Chapter 2. This time, you do not need to explain the format. That is because the folder already has templates (`templates/`).
 
 ```
-Organize the notes in inbox/회의-2026-10-27-주간회의.txt into meeting minutes and save them as a new file in the notes/ folder.
+Organize the notes in inbox/meeting-2026-10-27-weekly.txt into meeting minutes and save them as a new file in the notes/ folder.
 ```
 
-When we ran this for the guide, here is how Codex worked. We ran this same Codex in the terminal ([Chapter 7](07-terminal.md)). The official docs explain that the app also automatically finds `AGENTS.md` and skills in the folder you choose.[^discovery] However, this guide did not directly verify that exact same result inside the app screen.
+When we ran this for the guide, here is how Codex worked. We ran this same Codex not in the app but in the **terminal** (a window where you control the computer by typing commands, [Chapter 7](07-terminal.md)). The official docs explain that the app also automatically finds the rules file and skills in the folder you choose.[^discovery] However, this guide did not verify the same result on the app screen.
 
 1. It looked for a rules file (`AGENTS.md`) and templates in the folder. There was no rules file yet, so it read **only the template**.
 2. Following the order of sections in the template, it filled in 2 decisions, 5 action items, topics for next time, and the next meeting.
 3. For due dates missing from the notes, it wrote `(메모에 없음)` (not in notes). That rule was written in the template instructions.
 4. After saving, it checked the section order, date, and day of the week on its own.
 
-Result: [Chapter 2 Meeting Minutes](/practice/notes/results/codex/2장-회의록-2026-10-27-주간회의.txt)
+Result: [Chapter 2 Meeting Minutes](/practice/en/notes/results/codex/ch2-minutes-2026-10-27-weekly.txt)
 
 **Check the result against the original.** Check these questions one by one.
 
@@ -71,7 +78,7 @@ Even with the same request, the result looks a little different every time you r
 ## Try It Yourself
 
 1. Install the ChatGPT app and sign in.
-2. Select **Codex** at the top left, and open the organizer folder (`정리도구`) with **Choose project**.
+2. Select **Codex** at the top left, and open the organizer folder (`organizer`) with **Choose project**.
 3. Ask it to organize the meeting notes using the request above.
 4. Check the number of action items, owners, due dates, and date against the original notes.
 
@@ -104,5 +111,5 @@ Next chapter: [Chapter 3. The AGENTS.md Rules File](03-agents-md.md)
 [^cloud-files]: Codex official docs, "Codex environments". "Use **Work in** to choose **This computer** or **Cloud**." / "Your computer's local files, running processes, browser sign-ins, and VPN access aren't automatically transferred to it." https://learn.chatgpt.com/docs/environments/modes (checked on 2026-11-01)
 [^review-git]: Codex official docs, "Code review". "The review pane requires a project inside a Git repository. If your project isn't a Git repository yet, the app prompts you to create one." https://learn.chatgpt.com/docs/code-review (checked on 2026-11-01)
 [^review]: Codex official docs, "Use ChatGPT". "A polished response can still be incomplete or wrong, so review the details that matter before you use or share it." https://learn.chatgpt.com/docs/use-chatgpt (checked on 2026-11-01)
-[^discovery]: Codex official docs, "Projects and chats". "New chats start in the primary folder. Codex also uses that folder as the default for Git operations and automatic discovery of `AGENTS.md`, skills, and `config.toml`." https://learn.chatgpt.com/docs/projects (checked on 2026-11-01)
+[^discovery]: This guide did not directly verify the same result on the app screen. Codex official docs, "Projects and chats". "New chats start in the primary folder. Codex also uses that folder as the default for Git operations and automatic discovery of `AGENTS.md`, skills, and `config.toml`." https://learn.chatgpt.com/docs/projects (checked on 2026-11-01)
 [^toggle]: Codex official docs, "ChatGPT desktop app". "Choose ChatGPT or Codex. In ChatGPT, use the toggle above the composer to select Chat or Work. In Codex, start with New chat." https://learn.chatgpt.com/docs/app (checked on 2026-11-01)

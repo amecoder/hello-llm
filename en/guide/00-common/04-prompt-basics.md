@@ -1,5 +1,7 @@
 # Chapter 4. Prompt Basics
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: A good prompt is like asking a capable new coworker for help.
 > They are smart, but they know nothing about your situation.
 
@@ -28,7 +30,7 @@ You don't need to include every element every time. Use this list as a checklist
 | **4. Format** | What should it look like? | "Under five sentences, in a polite and respectful tone" |
 | **5. Constraints** | What to include or avoid? | "Mention that we look forward to working together next time. Don't apologize too much" |
 
-![Five elements make a good prompt: Goal (what you want), Context (what the situation is), Audience (who will read it), Format (what shape it takes), and Constraints (what to follow or avoid). You don't need all five every time—use them as a checklist when the answer falls short](../../../guide/00-common/assets/ch4-five-elements.svg)
+![Five elements make a good prompt: Goal (what you want), Context (what the situation is), Audience (who will read it), Format (what shape it takes), and Constraints (what to follow or avoid). You don't need all five every time—use them as a checklist when the answer falls short](assets/ch4-five-elements.svg)
 
 Putting all five elements together looks like this:
 

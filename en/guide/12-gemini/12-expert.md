@@ -1,5 +1,7 @@
 # Chapter 12. Using It Like a Pro — Picking Features, Building Habits, and Checking Results
 
+<Badge type="warning" text="Advanced" /> Read this once you are comfortable with the earlier chapters and want to use it even better.
+
 > **In One Sentence**: Getting good at AI is not just about knowing more buttons. It is about **picking the right feature for your task, saving what you repeat, and checking the result as carefully as the task requires**.
 > This chapter shows you how to **combine** the Gemini features from Chapters 1 to 11 to fit your own work.
 
@@ -37,15 +39,22 @@ As you use Gemini, you will find yourself saying the same things over and over. 
 There are four places to save things. You do not need to use all of them from day one. Add them one by one in the order below, only as you need them. To learn when *not* to turn something into a template, see [Stage 1, Chapter 11: "Saving What You Repeat"](../00-common/11-expert.md#save-what-you-repeat).
 
 1. **You ask for the same thing in every chat** → Write it as instructions in Instructions for Gemini (Gemini 요청 사항) ([Chapter 5](05-memory.md#instructions-—-so-you-don-t-have-to-repeat-yourself)).
+   - Example: if you keep adding "Put a one-line summary at the very top of your answer" to every question
 2. **You keep pulling up materials on the same topic** → Gather those materials in a Notebook ([Chapter 6](06-search.md#notebooks-—-organizing-sources-and-chats-by-topic)).
+   - Example: if you keep re-uploading the book club's notices, meeting notes, and member guide
 3. **You explain the same steps every time** → Turn those steps into a Skill ([Chapter 7](07-skills-apps.md#how-to-write-a-good-skill)).
+   - Example: if every time you paste meeting notes, you write "Organize this as decisions, action items, and things to revisit"
 4. **You do the same task at set times** → Set up a scheduled action ([Chapter 8](08-tasks.md#running-on-its-own-at-a-set-time-—-schedules)).
+   - Example: if you ask "Summarize this week's weather" every Monday morning
 
 If you mix up instructions and skills, remember it this way. **Instructions are rules Gemini always follows, while a skill is a set of steps it pulls out only when the situation fits.** Gemini looks at a skill's name and description to decide whether to use it right now.[^write]
 
 ### Compare Your Skills by Turning Them On and Off
 
 Test a skill you made by sending the exact same request twice and comparing the answers. Send it once with the skill turned on, and once with it turned off using Deactivate (비활성화).[^skills] For tips on comparing and fixing templates, see [Stage 1, Chapter 11: "Test and Refine Your Templates"](../00-common/11-expert.md#test-and-fix-the-templates-you-make).
+
+For example, with the meeting-notes skill from Chapter 7, paste the same fake meeting notes twice. Put the two answers side by side and check whether the one with the skill on organizes things in the set order, and writes "Needs confirmation" when an owner is missing.
+Then send one question that has nothing to do with meetings, like a dinner menu suggestion. If the answer comes back shaped like meeting notes, the skill jumped in.
 
 When you compare, ask yourself:
 
@@ -60,6 +69,8 @@ If it jumps in when you do not want it to, narrow down **when to use it** in the
 
 When you upload a table file, Gemini can analyze it and draw charts for you ([Chapter 4](04-files-create.md#uploading-files)).
 
+The example below assumes you have already uploaded a sales record table. If you don't have one, make one for practice. Just make up a few rows of items, months, and sales amounts in a spreadsheet and save it.
+
 ```
 The attached table is the past three months of item sales records for a neighborhood shop. Make a table of totals by item from largest to smallest, and draw a bar chart.
 Also write down the method you used for the calculation, one line at a time.
@@ -67,7 +78,7 @@ Also write down the method you used for the calculation, one line at a time.
 
 As in that last line, **asking it to write down its calculation method** makes it much easier to spot where a mistake happened.
 
-With number analysis, the biggest worry is whether you can trust the result. First, test it against **past data you have already calculated**. If it gets the right answer on data where you already know the result, you can trust it a bit more when you hand off new data. You can find the method and examples in [Stage 1, Chapter 11: "Handing Off Tables and Numbers"](../00-common/11-expert.md#handing-off-tables-and-numbers).
+With number analysis, the biggest worry is whether you can trust the result. First, test it against **past data you have already calculated**. For example, upload a household budget table whose total for last month you already know, have it calculate the total, and see if it matches the number you know. If it gets the right answer on data where you already know the result, you can trust it a bit more when you hand off new data. You can find more detailed methods in [Stage 1, Chapter 11: "Handing Off Tables and Numbers"](../00-common/11-expert.md#handing-off-tables-and-numbers).
 For important calculations, double-check them in a spreadsheet or by hand. You can move a table using Export to Sheets (Sheets로 내보내기) and recalculate it right away ([Chapter 3](03-chats.md#exporting-to-other-apps)).
 
 <Quiz id="ch312-data" />

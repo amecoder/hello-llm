@@ -13,7 +13,7 @@
 | `~` | 我的主資料夾 | `cd ~` |
 | `.` | 當前資料夾 | `git add .` |
 | `..` | 上一級資料夾 | `cd ..` |
-| `*` | 任意幾個字元（沒有也行） | `inbox/회의-*.txt` |
+| `*` | 任意幾個字元（沒有也行） | `inbox/meeting-*.txt` |
 | `\|` | 把前一個命令的輸出交給後一個命令 | `cat 筆記.txt \| claude -p "幫我總結"` |
 | `>` | 把輸出存進檔案（覆蓋） | `claude -p "幫我總結" > 總結.txt` |
 | `>>` | 把輸出追加到檔案末尾 | `echo 第二行 >> 筆記.txt` |
@@ -141,7 +141,7 @@ EOF
 | `git --version` | 看看有沒有 Git |
 | `git init` | 開始記錄這個資料夾 |
 | `git config user.name "名字"` | 設定寫進記錄裡的名字 |
-| `git config user.email "郵箱"` | 設定寫進記錄裡的郵箱 |
+| `git config user.email "電子郵件"` | 設定寫進記錄裡的電子郵件 |
 | `git config core.quotePath false` | 原樣顯示韓文檔名 |
 | `git add .` | 把當前資料夾的改動放進下一次記錄 |
 | `git status --short` | 簡短地檢視改動狀態 |

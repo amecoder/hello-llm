@@ -1,0 +1,61 @@
+---
+name: meeting-notes
+description: Organizes meeting memos in inbox/ (meeting-*.txt) with the templates/minutes.md template and saves them as meeting minutes in notes/. Use it for requests like "organize the minutes", "clean up the meeting memo", or "summarize the meeting", or when asked to organize inbox/meeting-*.txt. For study notes use study-notes; for review memos use weekly-review.
+---
+
+# meeting-notes — meeting memo → meeting minutes
+
+## When to use
+
+- After a meeting, when organizing an `inbox/meeting-YYYY-MM-DD-name.txt` memo into meeting minutes
+- e.g. "Turn the 10/27 weekly meeting memo into minutes"
+
+## Files to read (in order)
+
+1. `CLAUDE.md` — the 5 organizing rules for this folder
+2. `templates/README.md` — how to use the templates and the checklist
+3. `templates/minutes.md` — the template to use
+4. The original memo `inbox/meeting-YYYY-MM-DD-name.txt` — **read only. Never edit it.**
+
+## Template to use
+
+Copy `templates/minutes.md` as is and fill in only the `{{ }}` spots. Don't change the section names or order (1. Decisions → 2. Action items → 3. To discuss next → 4. Next meeting).
+
+How to fill each section:
+
+- **Header** — place, attendees, path of the original memo. If not in the memo, `(not in notes)`.
+- **1. Decisions** — only what was settled. One line each: what · how much/how · by when, key part in bold. If the memo names who proposed it or an idea on hold, add it at the end.
+- **2. Action items** — move **every** task someone agreed to do in the memo into the table. If the owner or due date isn't in the memo, don't delete that row; fill it with `(not in notes)`, then also add the same task to section 3 as "owner/due date undecided". Status is one of three: `Planned` / `In progress` / `Done(MM/DD)`.
+- **3. To discuss next** — agenda items with no conclusion, why they weren't decided, and what is needed to decide.
+- **4. Next meeting** — like `11/3(Mon) 10 AM`. If not in the memo, `(not in notes)`.
+- Don't delete a section that has nothing to write; write `(not in notes)`.
+
+Dates: the title follows the template, like `2026-10-27(Mon)`; the body uses month/day + day of the week in parentheses, like `10/27(Mon)`. Check the day of the week on a calendar (`date -j -f %Y-%m-%d 2026-10-27 +%a`).
+
+**Don't make up anything that isn't in the memo.** If you would have to guess, don't write it; write `(not in notes)`.
+
+## Where to save
+
+- `notes/minutes-YYYY-MM-DD-meeting-name.md` (the date is the date in the original memo's file name)
+- e.g. `inbox/meeting-2026-10-27-weekly.txt` → `notes/minutes-2026-10-27-weekly.md`
+- If a file with the same name already exists, ask the user before overwriting it.
+
+## Checklist when done
+
+Open the saved file again and check from the top. If even one is ✗, fix it and check again.
+
+**All templates**
+- [ ] Section names and order are the same as the template (no section deleted — if there is nothing to write, `(not in notes)`)
+- [ ] No `{{` is left (`grep -n '{{' notes/minutes-....md` returns nothing)
+- [ ] Dates have the day of the week, and the date in the file name matches the date in the title
+- [ ] Numbers, names, and dates were checked once against the original memo (to avoid mistakes like a wrong price)
+- [ ] Nothing was made up that isn't in the memo
+- [ ] The originals in `inbox/` were not edited (`git status inbox/` shows no changes from this task)
+
+**Meeting minutes**
+- [ ] Each decision includes "what · how much/how · by when" (missing parts are `(not in notes)`)
+- [ ] Every row in the action items table has an owner and a due date (if not in the memo, `(not in notes)` + also added to section 3)
+- [ ] All action items in the original memo were moved into the table (number of "do ~" lines in the original = number of table rows)
+- [ ] The next meeting date is written down (if not in the memo, `(not in notes)`)
+
+Finally, tell the user the saved path and the list of sections left as `(not in notes)` — so they can ask the attendees and fill them in.

@@ -1,6 +1,6 @@
 # 第9章 技能与扩展
 
-<Badge type="tip" text="必读" /> 要跟上这个阶段，请一定读完。
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
 
 > **一句话总结**：反复下达的指示，就做成技能。旁支工作交给子代理，外部服务用 MCP，打包安装用插件。一开始有一个技能就够了。
 
@@ -10,7 +10,7 @@
 
 **技能**（Skill）是只用一个 `SKILL.md` 文件，就能给 Claude 增加一套工作流程的功能。如果你总是把同样的指示粘贴到聊天里，就值得做一个。[^skill] 可以把它看成一本叫名字就能用的工作说明书。
 
-项目技能放在 `.claude/skills/<技能名>/SKILL.md`。[^skill] 用 `/exit` 退出，在终端里进入练习文件夹。Mac 和 Linux 把下面整段粘贴进去（以文件查看：[9장-스킬-meeting-notes.txt](/practice/cli/results/9장-스킬-meeting-notes.txt)）。
+项目技能放在 `.claude/skills/<技能名>/SKILL.md`。[^skill] 用 `/exit` 退出，在终端里进入练习文件夹。Mac 和 Linux 把下面整段粘贴进去（以文件查看：[ch9-skill-meeting-notes.txt](/practice/zh-hans/cli/results/ch9-skill-meeting-notes.txt)）。
 
 ```bash
 mkdir -p .claude/skills/meeting-notes
@@ -20,7 +20,7 @@ description: 把会议笔记整理成符合规则的会议记录。用于整理�
 ---
 
 读取 $ARGUMENTS 文件，按照 CLAUDE.md 的规则制作会议记录。
-文件名用 `회의록-날짜.md`（会议记录-日期），保存到 notes 文件夹。
+文件名用 `minutes-date.md`（会议记录-日期），保存到 notes 文件夹。
 完成后，用一行告诉我保存的文件名和待办事项的数量。
 EOF
 ```
@@ -45,16 +45,16 @@ Windows PowerShell 先运行 `mkdir .claude\skills\meeting-notes`，再用 `note
 现在在终端里启动 `claude`，输入 `/`，在列表里找找看。直接调用时这样输入。
 
 ```text
-/meeting-notes inbox/회의-2026-10-27-주간회의.txt
+/meeting-notes inbox/meeting-2026-10-27-weekly.txt
 ```
 
-用[第10章](10-headless-automation.md)的 `claude -p` 调用同一个技能后，生成了 `notes/회의록-2026-10-27.md`，Claude 这样回答。
+用[第10章](10-headless-automation.md)的 `claude -p` 调用同一个技能后，生成了 `notes/minutes-2026-10-27.md`，Claude 这样回答。
 
 ```text
-已保存到 `notes/회의록-2026-10-27.md`，待办事项有 5 个。
+已保存到 `notes/minutes-2026-10-27.md`，待办事项有 5 个。
 ```
 
-按照[第8章](08-memory-settings.md)的 `CLAUDE.md` 规则，生成了决定事项、待办事项、下次会议三个部分（[查看结果](/practice/cli/results/10장-회의록-스크립트로.txt)）。技能正文只在使用时才加载，所以平时几乎没有负担。[^skill]
+按照[第8章](08-memory-settings.md)的 `CLAUDE.md` 规则，生成了决定事项、待办事项、下次会议三个部分（[查看结果](/practice/zh-hans/cli/results/ch10-minutes-by-script.txt)）。技能正文只在使用时才加载，所以平时几乎没有负担。[^skill]
 
 <Quiz id="ch809-skill" />
 
@@ -151,7 +151,7 @@ Removed MCP server "claude-code-docs" from local config
 ## 动手试一试
 
 1. 在终端里制作技能。启动 `claude`，输入 `/`，确认能看到 `meeting-notes`。
-2. 运行 `/meeting-notes inbox/회의-2026-10-27-주간회의.txt`。`notes` 里生成文件了吗？内容和笔记一致吗？
+2. 运行 `/meeting-notes inbox/meeting-2026-10-27-weekly.txt`。`notes` 里生成文件了吗？内容和笔记一致吗？
 3. 用 `/exit` 退出，在终端里依次输入 `claude mcp` 的三条命令。用 `claude mcp list` 确认已经删除。
 
 问问自己：同一个技能能整理别的笔记吗？现在有我真正需要的扩展吗？

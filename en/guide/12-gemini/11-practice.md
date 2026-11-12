@@ -1,9 +1,13 @@
 # Chapter 11. Hands-On Exercises — Try Gemini's Features Yourself
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **In One Line**: Here are 10 exercises where you **click through the screens and features** of Gemini from Chapters 1–10 with your own hands.
 > Each exercise has a "Check Your Work" checklist, so you can verify your progress without anyone grading you.
 
 The screens are based on the web version as of October 2026. Gemini changes menu names and locations often, so if your screen looks different, follow the names shown on your screen.
+
+> **If you skipped an "Optional" chapter**, skip the exercises that use it too. You can also skip the checklist items tied to exercises you didn't do. You can see each chapter's label at a glance in the [table of contents](README.md).
 
 ## How to Do the Exercises
 
@@ -12,7 +16,9 @@ The screens are based on the web version as of October 2026. Gemini changes menu
 3. **Check off each item under "Check Your Work."** If you miss an item, read the chapter listed under "Where to Review" and try just that part again.
 
 You do not have to do the exercises in order. However, **do Exercise 10 last**. It cleans up the traces of your practice.
-"Actions (작업)" in Exercise 8 is only for **Google AI Pro and Ultra**, so if you are on the free plan, just try scheduled chats. Other menus may also be hidden depending on your account, your plan, or whether they have rolled out to you yet. If you do not see a menu, just read through and move on.
+"Actions (작업)" in Exercise 8 is only for **Google AI Pro and Ultra**. If you are on the free plan, just try scheduled chats.
+
+**If you do not see a menu, just read through and move on.** Some menus may be hidden depending on your account, your plan, or whether they have rolled out to you yet.
 
 Practice on how to ask questions (how to write prompts) is in [Stage 1, Chapter 10: Hands-On Exercises](../00-common/10-practice.md). Here, focus on **buttons and menus**.
 
@@ -133,7 +139,12 @@ Put a one-line summary at the very beginning of your answer, and explain hard wo
 
 **When to use this**: When you want to check the basis for an answer, or when you need a report gathered from multiple sources.
 
-**What to Try**: First, send the prompt below and open one of the "Sources (출처)" in the answer. Next, turn on "+" → "More tools (도구 더보기)" → "Deep Research", send the same topic, and when the plan appears, click "Edit plan (계획 수정)" to add "Use only official statistics."
+**What to Try**: Follow these steps.
+
+1. Send the prompt below and open one of the "Sources (출처)" in the answer.
+2. Turn on "+" → "More tools (도구 더보기)" → "Deep Research".
+3. Send the same prompt again.
+4. When the plan appears, click "Edit plan (계획 수정)" and change it to "Use only official statistics."
 
 ```
 Tell me how the share of single-person households in South Korea has changed over the past 5 years, with sources.
@@ -151,7 +162,7 @@ Tell me how the share of single-person households in South Korea has changed ove
 
 **When to use this**: When you make the same request often.
 
-**What to Try**: Go to "Customization (맞춤설정)" → "Skills (스킬)" → "Create (만들기)" → "Create manually (수동으로 만들기)" and create a skill like the one below. In a new chat, type `/`, pick the skill, and paste fake meeting notes.
+**What to Try**: Go to "Customization (맞춤설정)" → "Skills (스킬)" → "Create (만들기)" → "Create manually (수동으로 만들기)" and create a skill like the one below. Split the box's contents into the three fields "Name (이름)", "Description (설명)", and "Instructions (지침)". Leave out labels like "Name:", and put both lines after "Instructions:" into the Instructions field. Then, in a new chat, type `/`, pick the skill, and paste fake meeting notes.
 
 ```
 Name: summarize-meeting-notes
@@ -208,7 +219,13 @@ Tell me three dishes I can make for dinner tonight with the eggs, tofu, and gree
 
 **When to use this**: When you finish practicing, and once every few months.
 
-**What to Try**: Open "Settings (설정)" at the bottom left and check each item on the checklist below.
+**What to Try**: Open the three places below in order and check them against the checklist.
+
+- "Settings (설정)" at the bottom left → "Activity (활동)": Keep Activity (활동 기록 보관) and the auto-delete period. It opens in a new tab ([Chapter 9](09-privacy.md)).
+- "Settings (설정)" at the bottom left → "My public links (내 공개 링크)": links to chats you shared ([Chapter 3](03-chats.md#deleting-a-shared-link)).
+- "Customization (맞춤설정)" in the side menu → "Connectors (커넥터)": your connected apps ([Chapter 7](07-skills-apps.md)).
+
+Delete your practice chats from the chat list in the side menu ([Chapter 3](03-chats.md)).
 
 **Check Your Work**
 

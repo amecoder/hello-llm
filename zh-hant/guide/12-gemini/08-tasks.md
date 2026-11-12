@@ -1,9 +1,11 @@
 # 第8章 交代工作——任務、日程、Chrome 裡的 Gemini、安全守則
 
+<Badge type="info" text="選讀" /> 需要的時候再讀。跳過也能跟上後面的章節。
+
 > **一句話總結**：需要多個步驟的事，請用輸入框下面的**「任務」（작업）**交給它。想讓它在定好的時間自動執行，就設定**日程**。
 > 交代任務時，**不要把登入·付款資訊寫進對話裡，要認真讀那些徵求許可的介面。** 親自盯著，是最好的安全保障。
 
-介面以 2026 年 10 月的網頁版為準，圖片是付費套餐（Google AI Pro）的韓語介面。
+介面以 2026 年 10 月的網頁版為準，圖片是付費方案（Google AI Pro）的韓語介面。
 
 ## 任務——不是聊天，而是把整件事交出去
 
@@ -18,10 +20,10 @@ Gemini 會用已連線的應用、技能、過去的對話、我登入過的網�
 
 要使用，必須同時滿足下面的條件。[^tasks]
 
-- 年滿 18 週歲，**個人 Google 賬號**（公司·學校賬號暫時不行）
+- 年滿 18 週歲，**個人 Google 帳號**（公司·學校帳號暫時不行）
 - 訂閱 **Google AI Pro 或 Ultra**
 - 「保留活動記錄」開啟，使用「個人智慧」（[第5章](05-memory.md)）
-- 只能在網頁、手機應用、Mac 應用上使用。歐洲經濟區·奈及利亞·瑞士·英國不能使用。這本指南使用的韓國賬號裡，「任務」是可以開啟的。[^screen]
+- 只能在網頁、手機應用、Mac 應用上使用。這本指南使用的韓國帳號裡，「任務」是可以開啟的。[^screen][^region]
 
 ### 開始任務
 
@@ -33,7 +35,7 @@ Gemini 會用已連線的應用、技能、過去的對話、我登入過的網�
 - ② 提示變成「描述任務」。寫下要交出去的事併發送。想一起使用技能，就用 `@` 選擇，也可以附上檔案。[^tasks]
 - ③ 設定了日程的任務，在側邊選單的**「已預約」**裡看（見下一節）。
 
-第一次用，不知道該交什麼事的話，可以在任務輸入框裡寫**「採訪我」**。韓語版幫助文件說，輸入「設定」、「開始」、「採訪我」（설정、시작、물어봐 줘），它就會和你一邊對話，一邊一起做出第一個技能和任務（英語版是 set up, get started, interview me）。[^tasks]
+第一次用，不知道該交什麼事的話，可以在任務輸入框裡寫**「採訪我」**。韓語版幫助文件說，輸入「設定」、「開始」、「採訪我」（설정、시작、물어봐 줘），它就會和你一邊對話，一邊一起做出第一個技能和任務。[^tasks]
 
 即使事情正在進行中，也可以在輸入框裡再寫指示來改變方向。已經做完的事會照舊繼續。[^tasks]
 
@@ -44,12 +46,13 @@ Gemini 會用已連線的應用、技能、過去的對話、我登入過的網�
 
 像最後一行那樣，**把不該做的事寫下來**，有助於防止出現不想要的行為。
 
-有幾點要知道。[^tasks][^threads]
+交出去的任務和側邊選單的對話列表顯示在一起，並用圖示告訴你進行狀態。[^threads] 任務也和聊天一樣會用掉用量。[^tasks] 任務**最多同時執行 15 個。** 超過了就要等有任務結束。[^tasks]
 
-- **最多同時執行 15 個。** 超過了就要等有任務結束。
-- 任務也會用掉用量。用多少，因套餐和事情的複雜程度而異。
-- 任務和側邊選單的對話列表顯示在一起，並用圖示告訴你進行狀態。必須開著「保留活動記錄」，才會出現在列表裡。
-- 刪除任務對話時，與該任務相連的日程也會一起刪除。用任務做出的檔案會保留。
+::: details 詳細說明（點選展開）
+- 用掉多少用量，因方案和事情的複雜程度而異。[^tasks]
+- 必須開著「保留活動記錄」，任務才會出現在側邊選單的列表裡。[^threads]
+- 刪除任務對話時，與該任務相連的日程也會一起刪除。用任務做出的檔案會保留。[^threads]
+:::
 
 <Quiz id="ch308-task" />
 
@@ -60,10 +63,11 @@ Gemini 會用已連線的應用、技能、過去的對話、我登入過的網�
 | | 聊天裡的日程 | 任務裡的日程 |
 |---|---|---|
 | 作用 | 在固定時間收到摘要·訊息 | 在固定時間執行任務 |
-| 可以開著的數量 | 10 個 | 50 個 |
-| 需要的套餐 | 條件裡沒有（正在逐步開放） | Google AI Pro·Ultra |
+| 需要的方案 | 條件裡沒有（正在逐步開放） | Google AI Pro·Ultra |
 
 出處：Google 幫助文件[^chatschedule][^schedule]
+
+能開著的數量也有上限。聊天裡的日程最多 10 個，任務裡的日程最多 50 個。[^chatschedule][^schedule]
 
 ### 在聊天裡設定日程
 
@@ -100,14 +104,19 @@ Gemini 會用已連線的應用、技能、過去的對話、我登入過的網�
 
 購物、預訂旅行、預訂餐廳這類**必須親自點選網站的事**，也可以交出去。[^tasks] 這時 Gemini 會使用兩種瀏覽器中的一種。[^tasks]
 
-| | 我電腦裡的 Chrome | 雲端的遠端瀏覽器 |
+- **我電腦裡的 Chrome**：就是我現在在用的瀏覽器。
+- **遠端瀏覽器**：不在我的裝置上，而是在網路另一頭 Google 那邊的電腦（雲端，Cloud）上執行的 Gemini 專用瀏覽器。
+
+| | 我電腦裡的 Chrome | 遠端瀏覽器 |
 |---|---|---|
 | 能進入的網站 | 包括我登入過的網站 | 在 Gemini 專用瀏覽器裡 |
 | 使用的地方 | 只在電腦上 | 手機上只用這個 |
-| 關掉裝置後 | 要開著。關掉的話可能轉到遠端瀏覽器 | 繼續進行 |
+| 關掉裝置後 | 要開著 | 繼續進行 |
 | 需要登入時 | — | 暫停，由我來接手 |
 
 出處：Google 幫助文件[^tasks]
+
+用我電腦裡的 Chrome 做事時，如果關掉電腦，可能會轉到遠端瀏覽器上接著做。[^tasks]
 
 使用網路的任務**預設每次都會先徵求確認。**[^tasks] 在設定裡改成「始終允許」，就會不問直接使用網路。[^permission]
 
@@ -131,7 +140,7 @@ Gemini 在使用瀏覽器、修改應用裡的內容，或傳送可能敏感的�
 
 ### 任務設定
 
-設定選單「任務設定」（[第2章](02-screen-tour.md#設定頁面-—-賬號、偏好設定、隱私)）裡有三項。[^screen][^tasks]
+設定選單「任務設定」（[第2章](02-screen-tour.md#設定頁面-—-帳號、偏好設定、隱私)）裡有三項。[^screen][^tasks]
 
 | 專案 | 作用 |
 |---|---|
@@ -140,6 +149,11 @@ Gemini 在使用瀏覽器、修改應用裡的內容，或傳送可能敏感的�
 | 「刪除遠端程式碼執行資料」 → 「刪除」 | 刪除遠端電腦上留下的檔案等 |
 
 出處：Gemini 網頁介面[^screen]
+
+如果表裡的詞很陌生，可以這樣理解。
+
+- **Cookie**：網站為了記住登入狀態之類的資訊，留在瀏覽器裡的小記錄。刪掉後，就會從那個網站退出登入。
+- **遠端程式碼執行檔案·資料**：看起來是 Gemini 在做事時，留在遠端電腦（Google 那邊的電腦）上的檔案。
 
 即使關閉任務功能，已經建立的任務、對話、檔案也不會被刪除。[^tasks]
 
@@ -153,7 +167,7 @@ Gemini 在使用瀏覽器、修改應用裡的內容，或傳送可能敏感的�
 2. **敏感的事不要設日程。** 如果日程在我離線時執行，可能無法阻止它完成不想要的操作。[^tasks]
 3. **認真讀徵求許可的介面和反過來問你的問題。** 只交代可以放心交出去的事。[^tasks]
 4. **小心第一次見到的網站·郵件裡的隱藏指示。** 網頁或郵件裡可能藏著欺騙 AI 的句子。這叫作**提示詞注入**（Prompt injection，用隱藏的指示操縱 AI）。正在執行任務的 AI 如果讀到這樣的句子，可能會做出離譜的事，即使有安全保障，也無法攔住所有風險。[^tasks][^inject]
-5. **把資料夾連線到 Mac 應用時，不要放入丟不起的檔案。** Gemini 工作時刪除的檔案，可能無法找回。Gemini 只會看到我放進「已連線的資料夾」的資料夾·檔案。[^mac]
+5. **把資料夾連線到 Mac 應用時，不要放入丟不起的檔案。** 在 Mac 應用裡，可以把我電腦上的資料夾放進「已連線的資料夾」，讓任務使用。Gemini 只會看到放在這裡的資料夾·檔案。可是，Gemini 工作時刪除的檔案，可能無法找回。如果你不用 Mac 應用，這一條可以跳過。[^mac]
 
 提示詞注入在第1階段也講過（[第1階段第9章](../00-common/09-safety.md#_4-隱藏指令——提示詞注入)）。Google 也提醒，要小心不認識的人分享的 Gemini 對話或 Canvas 應用。[^inject]
 
@@ -168,8 +182,7 @@ Gemini 在使用瀏覽器、修改應用裡的內容，或傳送可能敏感的�
 - 點 Chrome 上方的**「向 Gemini 提問」**，第一次要按照螢幕提示同意使用。[^chrome]
 - 預設會把**當前標籤頁的內容**發給 Gemini。在提問欄裡輸入 `@` 還可以選擇其他標籤頁，最多可以一起傳送**10 個**開啟的標籤頁。[^chrome]
 - 還沒有對所有人開放。正在分階段推送。[^chrome]
-
-讓 Chrome 代替你瀏覽網頁、加入購物車、預訂的**自動瀏覽**（auto browse），只有**在美國的年滿 18 週歲的人**才能用。在韓國還不能用。[^autobrowse]
+- 代替你瀏覽網頁、一直做到加入購物車·預訂的**自動瀏覽**（auto browse），在韓國還不能用。[^autobrowse]
 
 這一節這本指南沒能在介面上確認，只是以幫助文件為依據寫的。
 
@@ -177,7 +190,7 @@ Gemini 在使用瀏覽器、修改應用裡的內容，或傳送可能敏感的�
 
 ## 親自試一試
 
-1. 點輸入框下面的「任務」，傳送「採訪我」，看看 Gemini 會建議什麼任務（付費套餐）。
+1. 點輸入框下面的「任務」，傳送「採訪我」，看看 Gemini 會建議什麼任務（付費方案）。
 2. 在聊天裡設定日程「每週一早上 8 點總結本週天氣」，在側邊選單的「已預約」裡確認後，用「更多」試著讓它暫停或刪除。
 3. 開啟設定 → 「任務設定」，讀一讀三個專案的名稱和說明（不用點選）。
 4. 在電腦的 Chrome 裡點「向 Gemini 提問」，讓它把你正在讀的一篇文章總結成三行。
@@ -186,7 +199,7 @@ Gemini 在使用瀏覽器、修改應用裡的內容，或傳送可能敏感的�
 
 ## 整理
 
-- 「任務」是把多步驟的事整件交出去的地方。需要年滿 18 週歲·個人賬號·Google AI Pro 或 Ultra·「保留活動記錄」·「個人智慧」。最多同時執行 15 個。
+- 「任務」是把多步驟的事整件交出去的地方。需要年滿 18 週歲·個人帳號·Google AI Pro 或 Ultra·「保留活動記錄」·「個人智慧」。最多同時執行 15 個。
 - 日程有兩種。聊天日程最多開 10 個，任務日程最多開 50 個。在側邊選單的「已預約」裡管理。
 - 使用網路的任務預設會徵求許可。剛開始只用「允許一次」，有異常就用「停止回答」或「親自控制」讓它停下來。
 - 登入·付款資訊不要寫進對話，敏感的事不要設日程。小心隱藏的指示（提示詞注入），並盯著它執行的樣子。
@@ -208,6 +221,7 @@ Gemini 在使用瀏覽器、修改應用裡的內容，或傳送可能敏感的�
 下一章：[第9章. 個人資訊與安全](09-privacy.md)
 
 [^screen]: 在 Gemini 網頁介面（Google AI Pro，韓語）上親自確認。輸入框下面的「채팅」「작업」切換按鈕，點「작업」後標題 "시작할 준비가 됐어요! 어떤 작업인가요?" 和輸入框提示 "작업을 설명하세요"（幫助文件韓語版把按鈕叫作「할 일」）。側邊選單「예약됨」介面的「베타」標示、按狀態篩選的選單、「예약 작업 만들기」按鈕（幫助文件韓語版「예약된 작업 만들기」），提示 "비활성 상태의 일부 예약된 작업이 일시중지되었습니다"。設定 → 「작업 설정」介面的「작업 모드를 사용하여 작업 전달」（說明 "이 기능을 사용 중지하면 인터넷 사용 기록과 원격 코드 실행 파일이 삭제되고 예약된 작업이 중지됩니다"，按鈕「사용 중지」）、「원격 브라우저 데이터 삭제」（說明 "쿠키가 삭제되고 웹사이트에서 로그아웃됩니다"，按鈕「삭제」）、「원격 코드 실행 데이터 삭제」（按鈕「삭제」）。幫助文件寫的是在「設定 > 瀏覽器」裡刪除遠端瀏覽器資料，但這個介面的設定選單裡沒有「브라우저」。（確認日期 2026-10-31）
+[^region]: 歐洲經濟區·奈及利亞·瑞士·英國不能使用。出處是下面《Gemini 앱에서 작업 및 워크플로 관리하기》這份幫助文件。
 [^tasks]: Google 幫助文件，《Manage your tasks & workflows in Gemini Apps》（韓語版《Gemini 앱에서 작업 및 워크플로 관리하기》）. "Assign Gemini tasks to automate complex workflows and manage schedules for ongoing tasks." / "Save you money: Gemini can monitor and alert you when the prices of flights and hotels drop within your budget." / "Be 18 or over." / "Have a Google AI Pro or Ultra subscription. Learn how to upgrade." / "Have Keep Activity on." / "Opt in to Personal Intelligence." / "Available wherever Gemini Apps are supported, except in the European Economic Area, Nigeria, Switzerland, and the United Kingdom." / "Only available in the Gemini mobile app, the Gemini app on Mac, and the Gemini web app at gemini.google.com." / "Just enter “set up,” “get started,” or “interview me” in a task." 韓語版 "작업에 '설정', '시작' 또는 '물어봐 줘'를 입력하기만 하면 됩니다." / "If you close or turn off your device before the task is finished, or the device isn’t available, Gemini might use a remote browser to complete the task." / "Your schedules and tasks are paused and not deleted." / "직접 제어 모드: Gemini는 작업을 일시적으로 중지하고 사용자에게 브라우저를 '직접 제어'해 특정 유형의 정보(예: 비밀번호 또는 결제 세부정보) 입력 등 일부 작업을 직접 수행해 달라고 요청할 수 있습니다." / "Gemini updates its work without losing progress." / "You can have up to 15 tasks running at a given time." / "To interact with websites, Gemini can connect to the local Chrome browser on your desktop or use a separate remote browser in the cloud." / "If you use your local browser: Gemini has access to all the same sites that you do, including sites you’re signed into." / "If you use the remote browser: Gemini continues to work on your task even if you close your device, and only uses the remote browser on mobile devices. For certain steps, like signing in to a website, the task pauses until you take over and complete that step." / "After that, for every task that involves web browsing, Gemini will ask for confirmation first." / "Do not enter sign-in info, payment details, or info you may find sensitive directly into the task thread. If needed, take control of Gemini’s browser or the local browser. Then, enter relevant details directly on the webpage." / "If a schedule runs when you are offline, you may not be able to stop Gemini from completing an unintended action." / "Sending communications, modifying or deleting your data, making purchases, completing financial transactions, and filling out and submitting web forms." / "Gemini pauses and asks for your permission before it shares info you may find sensitive, such as your health information, financial details, or government ID numbers, with a website or connected app." / "If an AI agent reads these instructions while doing a task, it may be misled into doing unintended things." / "Deny or don’t allow an action: If you deny an action in a task thread, Gemini stops and doesn’t try another way to complete it." / "Gemini’s ability to handle tasks is experimental." / "Your active supervision is the most important way to protect against risk when you assign tasks to Gemini. Review confirmation requests and clarifying questions closely. Assign tasks to Gemini carefully and safely, and only give it tasks you're comfortable with." / "If Gemini is doing something you don't like, you can stop it by selecting Stop response  in the chat or Take control  over Gemini’s browser." / "Your tasks, threads, schedules, or any related files that Gemini updated or created will not be deleted." 韓語介面名稱 「대답 중지」「직접 제어」. https://support.google.com/gemini/answer/17094507 （確認日期 2026-10-31）
 [^threads]: Google 幫助文件，《Find & manage your tasks in Gemini Apps》（韓語版《Gemini 앱에서 할 일 확인 및 관리하기》）. "Next to your task threads, check the icon for the progress of your tasks." / "Tasks are only listed in the side bar if you have Keep Activity on." / "If you delete a task thread, it also deletes the following:" https://support.google.com/gemini/answer/17094196 （確認日期 2026-10-31）
 [^schedule]: Google 幫助文件，《Create & manage schedules for tasks in Gemini》（韓語版《Gemini에서 작업 일정 만들기 및 관리하기》）. "A schedule acts as the automated trigger for a task, telling Gemini exactly when to step in and execute your instructions." / "Time-based: schedule tasks to run once, hourly, daily, weekly, monthly, or yearly." / "While Gemini has improved at monitoring and responding to events more quickly, monitors are still not ideal for tracking fast-moving data or performing time-critical tasks like “Let me know when tickets go on sale immediately so I can buy it.”" / "The option to create a schedule manually is only available for time-based schedules." / "Tip: To test your new schedule, hover over the schedule, then click More   Run now ." / "Active schedules limit reached: The current limit for how many active schedules you can have for tasks is 50." / "Schedule run times vary: Scheduled tasks run times are approximate and may not run at the exact moment a time or event condition is met." https://support.google.com/gemini/answer/17094710 （確認日期 2026-10-31）
@@ -217,4 +231,5 @@ Gemini 在使用瀏覽器、修改應用裡的內容，或傳送可能敏感的�
 [^inject]: Google 幫助文件，《How Gemini Apps help protect users from malicious content & prompt injection》（韓語版《Gemini 앱이 악성 콘텐츠 및 프롬프트 인젝션으로부터 사용자를 보호하는 방법》）. "Prompt injection is an attempt to elicit an unintended or harmful response from generative AI tools." / "Use caution when interacting with shared content, like public Gemini Apps chats or Gemini Canvas web apps, from unknown providers" https://support.google.com/gemini/answer/16188217 （確認日期 2026-10-31）
 [^chrome]: Google 幫助文件，《Use Gemini in Chrome》（韓語版《Chrome의 Gemini 사용하기》）. "With Gemini in Chrome, you can get AI assistance in your browser to easily get key takeaways, clarify concepts, find answers and more." / "Important: Gemini in Chrome is not available to all users at this time." / "On a computer, you can also share up to 10 open tabs with Gemini." / "Use a Chromebook Plus, Mac, or Windows computer." / "Use the latest version of Chrome." / "Sign in to Chrome. This feature isn’t available in Incognito mode." / "You’ll need to opt in the first time you use Gemini in Chrome. To opt in, follow the onscreen instructions." / "To add an open tab directly in your prompt, enter @ and select the tab. You can also share up to 10 of your open tabs." 韓語版 버튼 이름 「Gemini에게 물어보기」. https://support.google.com/gemini/answer/16283624 （確認日期 2026-10-31）
 [^chromeavail]: Google 幫助文件，《Gemini in Chrome availability》（韓語版《Chrome의 Gemini 사용 가능 여부》）. "For users 18 or older, Gemini in Chrome is available in the following locales:" （列表中包含 "South Korea"，支援語言列表中包含 "Korean"）https://support.google.com/gemini/answer/17140089 （確認日期 2026-10-31）
-[^autobrowse]: Google 幫助文件，《Ask Gemini in Chrome to complete tasks for you with auto browse》（韓語版《Chrome의 Gemini에게 자동 탐색을 사용하여 작업을 완료하도록 요청하기》）. "Be 18 or over and in the US." https://support.google.com/gemini/answer/16821166 （確認日期 2026-10-31）
+[^autobrowse]: 自動瀏覽只有**在美國的年滿 18 週歲的人**才能用。Google 幫助文件，
+《Ask Gemini in Chrome to complete tasks for you with auto browse》（韓語版《Chrome의 Gemini에게 자동 탐색을 사용하여 작업을 완료하도록 요청하기》）. "Be 18 or over and in the US." https://support.google.com/gemini/answer/16821166 （確認日期 2026-10-31）

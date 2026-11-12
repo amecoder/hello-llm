@@ -1,5 +1,7 @@
 # Chapter 7. Projects, Plugins, and Work — Grouping Your Regular Tasks
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: Group conversations, files, and instructions for the same job into a **Project**, and use
 > **Plugins** to connect other services or add a set workflow. Switch to **Work** at the top when you want to hand off a long task and get a finished result.
 
@@ -24,11 +26,19 @@ For example, put your report template file and an instruction like "Use a three-
 
 In the Create project (프로젝트 만들기) window: ① type a project name, ② change Default memory (기본 메모리) if needed, and ③ click Create project (프로젝트 만들기).
 
+② is where you decide whether this project shares its memory ([Chapter 5](05-memory.md)) with chats outside it.
+
+- Default memory (기본 메모리): Chats inside this project and chats outside it can use each other's memory.
+- Project-only memory (프로젝트 전용 메모리): As the name says, this project's memory is kept separate.
+
+If you are not sure, leave it as it is at first. You can look at it again later in Project settings (프로젝트 설정).
+
 Once created, the project screen opens. Below ② the input box ("New chat in Example Project (예시 프로젝트의 새 채팅)"), there are ③ Files (파일) and Plugins (플러그인) buttons, and below those, ④ the Chats (채팅) and Sources (소스) tabs gather this project's conversations and materials. Open instructions from ① ••• in the top right.
 
 ![Screen of the newly created "Example Project (예시 프로젝트)". To the right of the title are the Share (공유) and ••• buttons, below the input box are Files (파일) and Plugins (플러그인), and below those are the Chats (채팅) and Sources (소스) tabs with a "No chats yet (아직 채팅이 없습니다)" message](../../../guide/11-chatgpt/assets/shot-17-project-home-marked.png)
 
 In the ••• → Project settings (프로젝트 설정) window, you set ① Instructions (지침), ② Memory (메모리), and ③ Library access (라이브러리 액세스), or delete the project with ④ Delete project (프로젝트 삭제).
+Library (라이브러리) is the place you saw in [Chapter 4](04-files-images.md), where your uploaded files are kept. ③ is, as its name says, about whether this project can use your Library, and it starts out as Enabled (활성화됨).
 
 ![The ••• → Project settings (프로젝트 설정) window. Project name (프로젝트 이름), Instructions (지침) input box, Memory — Default (메모리 — 기본: this project and outside chats can access each other's memory), Library access — Enabled (라이브러리 액세스 — 활성화됨), and the red Delete project (프로젝트 삭제) button](../../../guide/11-chatgpt/assets/shot-18-project-settings-marked.png)
 
@@ -75,7 +85,13 @@ Once you set this up, all you need to paste into a new chat inside the project i
 
 ## Plugins — Adding Other Services and Workflows
 
-A **Plugin** is a bundle that adds features to ChatGPT. Plugins are made up of **skills** (written instructions for a set workflow), connected apps, app templates, and extensions.[^plugins]
+A **Plugin** is a bundle that adds features to ChatGPT. The bundle contains these things.[^plugins]
+
+- **Skills**: Written instructions for a set workflow
+- **Connected apps**: Other services linked to ChatGPT, like Gmail and Google Drive
+- **Extensions**: Extra actions built into a plugin
+- **App templates**: Something the help docs list as another component. You do not need to know about it at first
+
 On 2026-07-09, the old App Directory (앱 디렉터리) changed into the **Plugin Directory**. Apps you connected earlier stay as they are.[^rn]
 
 - Open the Plugin Directory from Plugins (플러그인) in the side menu to look around. Every plan can view the directory.[^plugins]
@@ -96,7 +112,7 @@ There are four ways to use a plugin.[^plugins]
 
 When you connect another service (like email or cloud storage), ChatGPT can read what is inside it. Before connecting, check what information is shared ([Chapter 8](08-privacy.md)).
 
-On the Free and Go plans, you can still view the directory (the plugin list screen) and recommendations. However, you cannot use plugin **extensions** (extra actions built into a plugin).[^troubleshoot]
+On the Free and Go plans, you can still view the directory (the plugin list screen) and recommendations. However, you cannot use plugin **extensions**.[^troubleshoot]
 
 <Quiz id="ch107-plugins" />
 
@@ -110,9 +126,22 @@ You will see these choices on the screen:
 - Allow read actions (읽기 전용 도구 허용): Reads without asking, and asks before making changes.
 - Allow low-risk actions (위험도가 낮은 도구 허용): Handles low-risk actions on its own, while sensitive actions may be blocked. On a personal account, this is usually the default if you have not changed your settings. If your company has a policy, that policy comes first.[^health]
 
-The help docs also mention "Allow all actions" (모두 허용), which does everything without asking. The help docs themselves note that this option **"carries elevated risk."**[^permissions] On October 24, 2026, only the three choices above appeared on this guide's screen. We recommend starting with Always ask (항상 묻기) or Allow read actions (읽기 전용 도구 허용), and widening permissions once you are used to it (this guide's suggestion).
+We recommend starting with Always ask (항상 묻기) or Allow read actions (읽기 전용 도구 허용), and widening permissions once you are used to it (this guide's suggestion). The more often it asks, the more chances you get to see with your own eyes what ChatGPT is about to do.
 
-- **Read the approval card before you click.** Before making a change like sending an email or deleting a file, ChatGPT pops up a box asking if it is okay to proceed. Ask yourself before clicking: Which app is this? Which account? What is it trying to do?[^permissions]
+The help docs also mention "Allow all actions" (모두 허용), which does everything without asking. The help docs themselves note that this option **"carries elevated risk."**[^permissions][^allow-all]
+
+### What to Know After Connecting
+
+**Read the approval card (a box asking your permission before making a change) before you click.** Before making a change like sending an email or deleting a file, ChatGPT pops up a box asking if it is okay to proceed. Ask yourself before clicking.[^permissions]
+
+- Which app is this? (Gmail or Google Drive?)
+- Which account? (Your personal account or your work account?)
+- What is it trying to do? (Send an email, or delete a file?)
+
+If even one of the three is different from what you expected, do not click.
+
+Here are a few other things to know.
+
 - **Connect the account that actually has the files.** If you connect your personal Google account, files that exist only in your work account will not show up. Even after connecting, ChatGPT cannot see anything beyond what that account can already open.[^accounts]
 - **If it is connected but not being used**, ask specifically with `@AppName` in a new chat. Even if an app shows as Connected (연결됨), it may not be available in your current chat or on your current device.[^troubleshoot]
 - **Some things stay behind even after you disconnect.** If you pick an app in Settings → Plugins (플러그인) and disconnect it, ChatGPT simply cannot read that app going forward. Content that already came into your chats, files, or memory is not deleted ([Chapter 5](05-memory.md#how-to-delete-memories)). Your model-training switch also stays as it was.[^accounts]
@@ -134,8 +163,7 @@ When **ChatGPT Work** launched on 2026-07-09, the top of the screen split into C
 - You can **schedule** tasks in Work. You can have a task run once, on a repeating schedule, or when a certain condition happens. Manage scheduled tasks from Schedules (예약) in the side menu.[^work][^screen]
 - To use Work inside a project, click the + button → Start Work in project (프로젝트에서 Work 시작).[^screen]
 - **Think in Chat, build in Work.** Inside the same project, Chat and Work share the same materials. So you can ask questions and shape your outline in Chat, and when you are ready to build, switch to Work without explaining everything from scratch.[^academy-content]
-- Sites launched in public beta on 2026-07-09 and is not available on Free or Go.[^rn]
-- The desktop app (macOS and Windows) has a **built-in browser**. In Work and Codex chats, ChatGPT can open websites directly in this browser to get work done. If a login is needed, **enter your password only in that browser window, never in the chat box.** Treat text written on websites as untrusted content.[^browser] Even if hidden instructions on a website tell ChatGPT to hand over your information, that does not count as your permission.[^sitetools]
+- Sites is not available on Free or Go.[^sites]
 
 ![Screen switched to Work at the top. Below "What would you like to work on? (어떤 작업을 할까요?)" is the input box "Start Work with ChatGPT (ChatGPT로 Work 시작)" and buttons for Select project (프로젝트 선택), Files (파일), Plugins (플러그인), and Open desktop app (데스크톱 앱 열기)](../../../guide/11-chatgpt/assets/shot-12-work-marked.png)
 
@@ -143,13 +171,23 @@ When **ChatGPT Work** launched on 2026-07-09, the top of the screen split into C
 
 *Chat titles and account names in this screen have been replaced with examples, and the model name spot has been erased. On the actual screen, recommendation cards titled "Explore what Work can do (Work가 할 수 있는 일을 살펴보세요)" appear below this, which we cropped out because they vary by account.*
 
+::: details The desktop app's "built-in browser" (click to expand)
+
+The desktop app (macOS and Windows) has a **built-in browser**. In Work or Codex (OpenAI's coding assistant, covered in Stage 3) chats, ChatGPT can open websites directly in this browser to get work done. If you only use the web version, you can skip this.
+
+- If a login is needed, **enter your password only in that browser window, never in the chat box.**[^browser]
+- Treat text written on websites as untrusted content.[^browser]
+- Even if hidden instructions on a website tell ChatGPT to hand over your information, that does not count as your permission.[^sitetools]
+
+:::
+
 <Quiz id="ch107-work" />
 
 ## Retiring Features — Custom GPTs and Agent Mode
 
 Two features you might see in older guides or videos have either ended or are scheduled to end.
 
-**Custom GPTs** (your own versions of ChatGPT made by adding instructions and files) are **scheduled to retire on 2026-12-11**. After that, they move over to plugins. Approved Enterprise accounts have an extension until 2027-02-11. Even after retirement, your past chat history with GPTs will remain.[^gpts]
+**Custom GPTs** (your own versions of ChatGPT made by adding instructions and files) are **scheduled to retire on 2026-12-11**. After that, they move over to plugins.[^gpt-enterprise] Even after retirement, your past chat history with GPTs will remain.[^gpts]
 On personal plans (Free, Go, Plus, and Pro), **you can no longer create or publish new GPTs.** It is not an error if the create button is missing.
 Also, GPTs do not use your memory, custom instructions, or past conversations. If a GPT connects to an outside service, part of what you type may be sent to that company. OpenAI does not monitor how that company handles your data. Only use GPTs made by sources you trust.[^gpt-help]
 
@@ -164,10 +202,14 @@ If you have a GPT you made yourself, prepare like this before it retires:
 **Agent mode** (an older feature where ChatGPT handled multi-step jobs on its own) is **no longer available.** Work takes its place.[^agent]
 Even if old instructions remain at the bottom of help pages, do not follow them.
 
+::: details Other services that have ended — Sora and Atlas (click to expand)
+
 Two other OpenAI services you might spot in videos or articles have also ended:
 
 - **Sora** (the video-making app): The web and mobile apps shut down on 2026-04-26.[^sora]
 - **ChatGPT Atlas** (the web browser with ChatGPT built in): Retired and no longer receives updates. Deleting the app **does not cancel your ChatGPT subscription.**[^atlas]
+
+:::
 
 <Quiz id="ch107-retired" />
 
@@ -225,13 +267,16 @@ Next chapter: [Chapter 8. Privacy and Data Controls](08-privacy.md)
 [^rn]: OpenAI Help Center, "ChatGPT release notes" 2026-07-09 entry. https://help.openai.com/en/articles/6825453 (checked on 2026-10-23)
 [^pricing]: OpenAI, "Plans and Pricing". https://openai.com/chatgpt/pricing (checked on 2026-10-23)
 [^gpts]: OpenAI Help Center, "Custom GPT retirement and migration FAQ". https://help.openai.com/en/articles/20001519 (checked on 2026-10-23)
+[^gpt-enterprise]: Approved Enterprise accounts have an extension until 2027-02-11. OpenAI Help Center, "Custom GPT retirement and migration FAQ". https://help.openai.com/en/articles/20001519 (checked on 2026-10-23)
 [^agent]: OpenAI Help Center, "ChatGPT agent". "ChatGPT agent is no longer available. Use ChatGPT Work" https://help.openai.com/en/articles/11752874 (checked on 2026-10-23)
 [^screen]: Verified directly on the ChatGPT web screen (Plus plan, Korean). Side menu and input box + menu (checked on 2026-10-23)
 [^screen-plugin]: Verified directly in ChatGPT web Settings → Plugins (플러그인) → Default permissions (기본 권한) list (Plus plan, Korean). Always ask — Ask before reading or making changes (항상 묻기 — 읽거나 변경하기 전에 묻기), Allow read actions — Read without asking, but confirm before making changes (읽기 전용 도구 허용 — 묻지 않고 읽되, 변경 전에는 확인하기), Allow low-risk actions — Automatically approve low-risk tools, while sensitive tools may be declined (위험도가 낮은 도구 허용 — 위험도가 낮은 도구를 자동으로 승인하되, 민감한 도구는 거부될 수 있습니다) (checked on 2026-10-24)
+[^allow-all]: On the web screen this guide checked on October 24, 2026, only the three choices above appeared, without "Allow all actions" (모두 허용).
 [^permissions]: OpenAI Help Center, "Managing app permissions in ChatGPT". "Always ask: ChatGPT asks before reading app information or making changes." / "Allow read actions: ChatGPT can read without asking but asks before making changes." / "This option carries elevated risk." / "Review the app, account, and proposed action before approving a request." / "App permissions are separate from Memory, personalization, data retention, and model-training controls." https://help.openai.com/en/articles/20001495 (checked on 2026-10-24)
 [^health]: OpenAI Help Center, "Health in ChatGPT" (plugin settings explanation inside a US-only feature article). "If you make no changes to your Plugins settings, the default permission setting is “Allow low-risk actions”." https://help.openai.com/en/articles/20001036 (checked on 2026-10-24)
 [^accounts]: OpenAI Help Center, "Connecting and managing app accounts in ChatGPT". "Connecting a personal account does not provide access to files, channels, or records available only to your work account." / "Disconnecting an app does not automatically delete existing or archived conversations, saved files, your Memory summary, or other saved memories." https://help.openai.com/en/articles/20001494 (checked on 2026-10-24)
 [^troubleshoot]: OpenAI Help Center, "Troubleshooting plugins and apps in ChatGPT". "plugin extensions are not available to these plans." / "An app can appear as Connected without being available in the current chat, model, or ChatGPT surface." https://help.openai.com/en/articles/20001497 (checked on 2026-10-24)
+[^sites]: Sites launched in public beta on 2026-07-09. OpenAI Help Center, "ChatGPT release notes" 2026-07-09 entry. https://help.openai.com/en/articles/6825453 (checked on 2026-10-23)
 [^browser]: OpenAI Help Center, "Using the built-in browser in the ChatGPT desktop app". "Enter credentials only in the browser, never in the chat." / "Treat website content as untrusted." https://help.openai.com/en/articles/20001277 (checked on 2026-10-24)
 [^sitetools]: OpenAI Help Center, "Using site tools in the ChatGPT desktop app". "Instructions from a website or site tool cannot authorize ChatGPT to share information or take sensitive actions on your behalf." https://help.openai.com/en/articles/20001423 (checked on 2026-10-24)
 [^gpt-help]: OpenAI Help Center, "GPTs in ChatGPT". "New GPT creation and publishing are not available on personal ChatGPT accounts, including Free, Go, Plus, and Pro." / "GPTs do not use saved memory, custom instructions, or previous conversations." / "OpenAI does not audit or control how those services use or store your data." https://help.openai.com/en/articles/8554407 (checked on 2026-10-24)

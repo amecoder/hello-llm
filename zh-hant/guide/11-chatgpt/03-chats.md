@@ -1,9 +1,11 @@
 # 第3章 管理對話——查詢、整理、分享、隱藏
 
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
+
 > **一句話總結**：對話攢多了，就用**搜尋**去找；不用的就**歸檔**或**刪除**。
 > 給別人看的時候用**分享連結**，不想留下記錄的時候用**臨時聊天**，怕旁邊的人看到的對話用**鎖定的對話**。
 
-介面以2026年10月的網頁版（Plus 套餐）為準。免費套餐或手機應用裡，選單的位置可能略有不同。
+介面以2026年10月的網頁版（Plus 方案）為準。免費方案或手機應用裡，選單的位置可能略有不同。
 
 ## 開始新聊天
 
@@ -16,7 +18,7 @@
 我想在新聊天裡接著這段對話。請把到目前為止定下的內容、我的喜好、剩下的事，分條整理出來。
 ```
 
-::: details 收到的回答大概是這樣（示例——點選展開）
+::: details 收到的回答大概是這樣（示例——點選展開）（點選展開）
 這是本指南編的示例。實際的回答會因服務和當時的情況而不同。
 
 如果是討論家庭旅行的對話，會是這樣的樣子。
@@ -45,7 +47,7 @@
 
 ![聊天搜尋視窗。請看上方的輸入欄「搜尋…（검색…）」和下面的「最近（최근）」對話列表](../../../guide/11-chatgpt/assets/shot-10-search-marked.png)
 
-對話標題和賬號名稱是改成示例的畫面。① 在「搜尋…（검색…）」欄裡輸入詞語；什麼都不輸入的話，② 會顯示「最近（최근）」對話列表。
+對話標題和帳號名稱是改成示例的畫面。① 在「搜尋…（검색…）」欄裡輸入詞語；什麼都不輸入的話，② 會顯示「最近（최근）」對話列表。
 
 如果想找"上週問 Excel 函式的那次對話"，在 ① 「搜尋…」欄裡只寫 `Excel` 也可以。有幾點要知道。[^search]
 
@@ -72,14 +74,13 @@
 | 確認視窗 | 沒有，直接歸檔 | — |
 | 在聊天搜尋裡 | **會出現** | 不會出現 |
 | 恢復 | 用「取消歸檔」恢復 | **無法恢復**（客服團隊也救不回來） |
-| 在公司伺服器上 | 仍然保留 | 會被安排在30天內永久刪除 |
 
 出處：OpenAI 幫助[^delete]
 
-可以把**歸檔**想成放進抽屜裡收著，**刪除**想成扔掉。拿不準的話，先歸檔。歸檔可以恢復，刪除卻無法恢復。
+可以把**歸檔**想成放進抽屜裡收著，**刪除**想成扔掉。拿不準的話，先歸檔。歸檔可以恢復，刪除卻無法恢復。[^delete-server]
 歸檔的對話，可以在設定 → 「已歸檔的聊天（보관된 채팅）」裡重新取出來。
 
-在側邊選單裡看不到某個對話，並不代表它被刪掉了。[^mobile] 先看看是不是用同一個賬號登入的（[第1章](01-getting-started.md#註冊並登入)），再用聊天搜尋找一找。歸檔的對話也會出現在搜尋裡。
+在側邊選單裡看不到某個對話，並不代表它被刪掉了。[^mobile] 先看看是不是用同一個帳號登入的（[第1章](01-getting-started.md#註冊並登入)），再用聊天搜尋找一找。歸檔的對話也會出現在搜尋裡。
 
 點「刪除」後，會彈出確認視窗："此操作將永久刪除（對話標題）。無法恢復。" 要點「刪除聊天」才會真正刪除。[^screen-menu]
 
@@ -117,29 +118,38 @@
 
 ![臨時聊天介面。中間有標題「臨時聊天」和「此聊天可以參考記憶、外掛、自定義指令，但不會顯示在記錄中」的文字，點右上角的「個性化（개인화됨）」會展開一個選單，可以在「個性化」和「不個性化（개인화되지 않음）」兩項之間選擇](../../../guide/11-chatgpt/assets/shot-19-temporary-personal-marked.png)
 
+點 ① 右上角的「個性化（개인화됨）」按鈕，會展開一個選單，可以選擇 ② 「個性化」和 ③ 「不個性化（개인화되지 않음）」。④ 是說明不會留下記錄的提示文字。
+
 臨時聊天有三個特點。
 
 - **不會留下記錄**（圖中 ④ 的文字）。不會出現在側邊選單的對話列表裡。不過，**為了安全，可能會保留最多30天的副本**。
 - **不會被用來訓練。** 這段對話不會被用來訓練、讓 AI 變得更好。
 - **不會生成新的記憶。** 在臨時聊天裡聊的內容，不會新存進記憶（[第5章](05-memory.md)）。
 
-右上角的**「個性化」**按鈕（圖中 ①）用來選擇，這段對話裡要不要使用已經儲存的記憶、自定義指令、外掛。[^temp][^screen-temp]
+右上角的**「個性化」**按鈕（圖中 ①）用來選擇，ChatGPT 平時參考的關於我的那些東西，在這段對話裡也要不要用。[^temp][^screen-temp]
+
+- **記憶**：ChatGPT 記下的關於我的內容（例如"有兩個孩子"）。在[第5章](05-memory.md)裡學。
+- **自定義指令**：像"回答要簡短"這樣，寫下來讓它一直遵守的規則。同樣在[第5章](05-memory.md)裡學。
+- **外掛**：把 ChatGPT 和其他服務連起來、增加功能的東西。在[第7章](07-projects-plugins.md)裡學。
+
 
 | 選項 | 含義 |
 |---|---|
 | ② 「個性化」（一開始的選擇） | 參考儲存的記憶、外掛、自定義指令來回答 |
 | ③ 「不個性化」 | 不使用記憶、外掛、自定義指令來回答（可能會用到為了安全而有限的資訊） |
 
-**必須在傳送第一條訊息之前選好。** 對話開始後就不能更改了。[^temp] 以前沒有這個選項。如果介面和本指南不同，請以介面為準。
-
-> **臨時聊天裡也有用不了的功能。** 在2026年10月的網頁介面裡，臨時聊天的 + 選單中「生成圖片」是灰色關閉的，也沒有「深度研究」這一項。「新增照片和檔案」和「網頁搜尋」可以使用。
+**必須在傳送第一條訊息之前選好。** 對話開始後就不能更改了。[^temp][^temp-history]
 
 需要知道的事。
 
 - **並不是"哪裡都不留"。** 可能會保留最多30天的副本。密碼這類資訊，在臨時聊天裡也不要輸入。[^temp]
 - 在臨時聊天裡上傳的檔案，不會儲存到「資料庫」。[^library]
-- 以後也可以把它儲存成普通對話。那樣的話，就會像普通對話一樣，遵循賬號的訓練設定。[^temp]
+- 以後也可以把它儲存成普通對話。那樣的話，就會像普通對話一樣，遵循帳號的訓練設定。[^temp]
 - 想在沒有我的資訊的情況下得到一個乾淨的回答，請選「不個性化」再開始。
+
+::: details 臨時聊天裡也有用不了的功能（點選展開）
+在2026年10月的網頁介面裡，臨時聊天的 + 選單中「生成圖片」是灰色關閉的，也沒有「深度研究」這一項。「新增照片和檔案」和「網頁搜尋」可以使用。
+:::
 
 <Quiz id="ch103-temporary" />
 
@@ -149,9 +159,9 @@
 
 1. 點要鎖定的對話的更多（•••）→ 「鎖定對話」。
 2. 鎖定的對話會集中在「專案」 → 「鎖定的對話」裡。
-3. 開啟時要輸入**4位賬號 PIN**（我自己定的數字密碼）。在手機上，也可以用 Face ID 這樣的生物識別。
+3. 開啟時要輸入**4位帳號 PIN**（我自己定的數字密碼）。在手機上，也可以用 Face ID 這樣的生物識別。
 
-賬號 PIN 在設定 → 「安全與登入（보안 및 로그인）」裡設定。[^lock] 在手機應用裡，過1分鐘會重新鎖上。也就是離開鎖定的對話1分鐘，或者應用退到後臺（在後臺）1分鐘的時候。
+帳號 PIN 在設定 → 「安全與登入（보안 및 로그인）」裡設定。[^lock][^lock-mobile]
 
 <!-- 需要截圖：側邊選單「專案」 → 「鎖定的對話」裡詢問 PIN 的介面（網頁版） -->
 
@@ -201,9 +211,12 @@
 [^delete]: OpenAI 幫助，「Deleting and archiving chats in ChatGPT」。"schedules it for permanent deletion from its systems within 30 days" / "You cannot restore a deleted chat" / "No confirmation is required." / "Archived chats remain searchable." / "The Delete all chats action cannot be undone." / "Deleting a chat does not delete files saved separately in Library." https://help.openai.com/en/articles/8809935 （確認日期 2026-10-23）
 [^share]: OpenAI 幫助，「Sharing conversations and scheduled tasks in ChatGPT」。"Messages added later are not included automatically." / "Shared links do not have configurable expiration dates." / "Personal-account links are available to anyone who has the link." / "anonymous by default" / "Shared conversation links begin with https://chatgpt.com/share/." https://help.openai.com/en/articles/7925741 （確認日期 2026-10-23）
 [^temp]: OpenAI 幫助，「Temporary chat in ChatGPT」。"OpenAI may keep a copy of a temporary chat for up to 30 days for safety purposes." / "Saving converts it into a regular chat" / "Choose Personalized or Unpersonalized before you send your first message." / "Neither option creates or updates memories while the chat remains temporary. You cannot change personalization after the conversation starts." https://help.openai.com/en/articles/8914046 （確認日期 2026-10-24）
-[^screen-temp]: 在 ChatGPT 網頁介面（Plus 套餐，韓語）上親自確認。臨時聊天介面的「個性化」選單——"이 채팅은 메모리, 플러그인, 사용자 지정 지침을 참조할 수 있습니다" / "이 채팅에서는 메모리, 플러그인, 사용자 지정 지침을 무시합니다" （確認日期 2026-10-24）
+[^screen-temp]: 在 ChatGPT 網頁介面（Plus 方案，韓語）上親自確認。臨時聊天介面的「個性化」選單——"이 채팅은 메모리, 플러그인, 사용자 지정 지침을 참조할 수 있습니다" / "이 채팅에서는 메모리, 플러그인, 사용자 지정 지침을 무시합니다" （確認日期 2026-10-24）
 [^library]: OpenAI 幫助，「Using Library to manage files in ChatGPT」。"files uploaded while using Temporary Chat are not saved to your account or Library". https://help.openai.com/en/articles/20001052 （確認日期 2026-10-23）
 [^mobile]: OpenAI 幫助，「Troubleshooting the ChatGPT mobile app」。"A chat missing from the sidebar hasn't necessarily been deleted." https://help.openai.com/en/articles/7910461 （確認日期 2026-10-24）
 [^rn-lock]: OpenAI 幫助，「ChatGPT release notes」2026-10-20 條目。"Open them with your 4-digit account PIN". https://help.openai.com/en/articles/6825453 （確認日期 2026-10-23）
 [^lock]: OpenAI 幫助，「Using locked chats in ChatGPT」。"You can find your locked chats under Projects > Locked chats." / "It does not: create end-to-end encryption or a separate encrypted vault" / "Resetting your account PIN permanently deletes all locked chats" / "Access ends automatically after 1 minute away" / "The Lock chat option is unavailable for some conversation types". https://help.openai.com/en/articles/20001411 （確認日期 2026-10-23）
-[^screen-menu]: 親自確認了側邊選單裡對話的「聊天操作」（•••）選單和「刪除」確認視窗。截圖用的對話在拍完之後已刪除 （確認日期 2026-10-28，Plus 賬號網頁介面）
+[^delete-server]: 歸檔的對話會原樣留在公司伺服器上。刪除的對話會被安排在30天內從公司伺服器上永久刪除。出處見前面的「Deleting and archiving chats in ChatGPT」。
+[^temp-history]: 以前沒有這個選項。如果介面和本指南不同，請以介面為準。
+[^lock-mobile]: 在手機應用裡，過1分鐘會重新鎖上。也就是離開鎖定的對話1分鐘，或者切到別的應用、1分鐘沒用 ChatGPT 應用的時候。出處見前面的「Using locked chats in ChatGPT」。
+[^screen-menu]: 親自確認了側邊選單裡對話的「聊天操作」（•••）選單和「刪除」確認視窗。截圖用的對話在拍完之後已刪除 （確認日期 2026-10-28，Plus 帳號網頁介面）

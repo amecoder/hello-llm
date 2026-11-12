@@ -1,5 +1,7 @@
 # Chapter 6. Refining Through Follow-up Conversation
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: AI's first answer is a draft, not a finished product. Refine it within the same chat,
 > and if the conversation gets tangled, take a summary and move to a new chat.
 
@@ -104,11 +106,11 @@ it chooses **by probability** among the most likely candidates. That is why the 
 When an answer looks off, it is tempting to press Regenerate right away. First, pause and identify what kind of failure it is. Knowing the type of failure takes you straight to the right fix.[^academy-diagnose]
 
 - **Names, numbers, or sources look plausible but suspicious** → Check them against the original source ([Chapter 9](09-safety.md#four-habits-for-checking)).
-- **It forgot your initial rules in a long chat** → Remind it of the rules, or take a handoff note and move to a new chat (see ["When to Start a New Chat"](#when-to-start-a-new-chat) below).
-- **The math is wrong** → If the service can run code to calculate, ask it to do that.
-- **It agrees with everything you say** → Tell it that pushing back is welcome ([Chapter 1](01-what-is-llm.md#_5-it-easily-agrees-with-you-—-sycophancy)).
+- **It forgot your initial rules in a long chat** → Remind it of the rules. For example: "Follow the rules I gave at the start again (five sentences or fewer, polite tone)." If that doesn't work, take a handoff note and move to a new chat (see ["When to Start a New Chat"](#when-to-start-a-new-chat) below).
+- **The math is wrong** → Some services let the AI run a small program (code) itself to do calculations. If yours does, try saying "Run this calculation in code and check it." If it doesn't, check it yourself with a calculator.
+- **It agrees with everything you say** → Tell it that pushing back is welcome. For example: "If anything in my thinking is wrong, feel free to disagree. Point out the weakest parts first" ([Chapter 1](01-what-is-llm.md#_5-it-easily-agrees-with-you-—-sycophancy)).
 
-As shown in the table above, Regenerate is for when your question is fine, but the answer happened to be weak. If there is a specific cause, fix that cause instead of just pressing the button again.
+If it's none of these four, that's when to press Regenerate.
 
 <Quiz id="ch6-regenerate" />
 
@@ -117,7 +119,7 @@ As shown in the table above, Regenerate is for when your question is fine, but t
 Keeping one conversation going for too long can actually make the answers worse. Everything you talked about earlier keeps influencing the new replies.
 For example, if you spend a long time writing promotional copy for a shop and then ask for a resume in the same chat, a promotional tone can bleed into your resume.
 
-![When you do not like the answer: if the direction is right, point out only what to fix and ask for a revision. If the direction is wrong and the chat is long or the topic changed, get a summary and start a new chat; otherwise, rewrite your request and try again in the same chat](../../../guide/00-common/assets/ch6-decide.svg)
+![When you do not like the answer: if the direction is right, point out only what to fix and ask for a revision. If the direction is wrong and the chat is long or the topic changed, get a summary and start a new chat; otherwise, rewrite your request and try again in the same chat](assets/ch6-decide.svg)
 
 Start a new chat when you see any of these signs:
 

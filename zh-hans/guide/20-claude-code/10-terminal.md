@@ -1,24 +1,31 @@
 # 第10章 在终端里使用——用一行命令跑同一个整理工具
 
+<Badge type="info" text="选读" /> 需要的时候再读。跳过也能跟上后面的章节。
+
 > **一句话总结**：终端版 Claude Code 和桌面应用是**同一个引擎**。在同一个文件夹里打开，就**原样沿用 CLAUDE.md、技能和设置**。
 > 一行 `claude -p "要做的事"` 就能提问、拿到回答，然后立刻结束。自动化重复性工作时特别有用。
 
-本章依据 2026 年 10 月 31 日确认过的 Claude Code 官方文档，以及在 macOS 终端里实际运行 Claude Code 2.1.316 的结果写成。**如果你是第一次接触终端，可以跳过这一章。** 只用桌面应用，整理工具就够用了。
+本章依据 2026 年 10 月 31 日确认过的 Claude Code 官方文档，以及在 macOS 终端里实际运行 Claude Code 2.1.316 的结果写成。**如果你是第一次接触终端，可以跳过这一章。** 只用桌面应用，整理工具就够用了。如果想好好学终端，请看 [Claude Code 终端指南](/zh-hans/guide/23-claude-code-cli/)。
 
 ## 终端是什么
 
-**终端**（Terminal）是不用鼠标，而是**用打字输入命令**来操作电脑的窗口。macOS 用「应用程序 → 实用工具 → 终端」，Windows 用 PowerShell。官方文档里也专门有给第一次打开终端的人看的说明。[^install]
+**终端**（Terminal）是不用鼠标，而是**用打字输入命令**来操作电脑的窗口。
+
+- **macOS**：在 Finder 里打开「应用程序 → 实用工具 → 终端」。
+- **Windows**：在开始菜单里找到 **PowerShell** 并打开。
+
+窗口打开后，在闪烁的光标处输入命令，按 Enter。更详细的打开方法，在官方文档的终端说明里。[^install]
 
 已经有了桌面应用，为什么还要用终端？有两个原因。
 
 - **一行就能完成的事**：可以只抛出一个问题，拿到回答就结束。
-- **自动化**：可以从其他程序或脚本里调用 Claude Code。桌面应用没有这种运行脚本的功能。[^no-script]
+- **自动化**：可以从其他程序或**脚本**（把要做的事按顺序写好、一次运行的一组命令）里调用 Claude Code。比如“检查一下文件夹里的新备忘”，不用每次手动输入，而是放进一组命令里运行。桌面应用没有这种运行脚本的功能。[^no-script]
 
 <Quiz id="ch410-why" />
 
 ## 安装并开始
 
-打开终端，把适合你电脑的一条命令粘贴进去。[^install]
+打开终端，把适合你电脑的一条命令粘贴进去。[^install] 如果是 macOS，只用第一个框；如果是 Windows，只用第二个框。
 
 ```bash
 # macOS, Linux, WSL
@@ -30,16 +37,31 @@ curl -fsSL https://claude.ai/install.sh | bash
 irm https://claude.ai/install.ps1 | iex
 ```
 
-**不要把陌生网站上的安装命令直接粘贴进去。** 上面的命令会直接运行从互联网下载的脚本。运行之前，一定要确认**和官方文档（code.claude.com）上写的完全一样**。
+把命令拆开来看是这样的。
 
-安装完成后，进入要工作的文件夹，输入 `claude`。[^start]
+- `curl`：从网址下载文件的命令
+- `-fsSL`：下载时的选项（出错就停止、隐藏进度显示、地址搬走了就跟过去）
+- `|`：把前一个命令的结果交给后一个命令的符号
+- `bash`：运行接过来的安装脚本的程序
+- Windows 的 `irm` 是下载，`iex` 是运行下载的内容，做的事是一样的。
+
+也就是说，上面的命令会**直接运行从互联网下载的安装脚本。** 所以**不要把陌生网站上的安装命令直接粘贴进去。** 运行之前，一定要确认**和官方文档（code.claude.com）上写的完全一样**。
+
+安装完成后，进入要工作的文件夹，输入 `claude`。[^start] `cd` 的意思是"进入这个文件夹"。这和在桌面应用里选择文件夹是同一回事。
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 claude
 ```
 
-第一次会提示你登录。如果是订阅账号，在浏览器里完成登录就行。[^start] `cd` 的意思是"进入这个文件夹"。这和在桌面应用里选择文件夹是同一回事。
+`~/hello-ai-practice/organizer` 是举例的位置。
+
+- `~`：我的用户文件夹（主文件夹）的简写符号
+- `/`：表示进入文件夹里面的文件夹
+
+请换成第2章建的**整理工具（organizer）**文件夹实际所在的位置。如果文件夹起了别的名字，就用那个名字。在 macOS 上，输入 `cd `（cd 后面加一个空格）之后，把 Finder 里的文件夹拖到终端窗口里，位置就会自动填进去。
+
+第一次会提示你登录。如果是订阅账号，在浏览器里完成登录就行。[^start]
 
 <Quiz id="ch410-install" />
 
@@ -64,18 +86,18 @@ claude
 在整理工具文件夹里，我们这样运行了一下。
 
 ```bash
-cd ~/hello-ai-연습/정리도구
+cd ~/hello-ai-practice/organizer
 claude -p "给我看 notes 文件夹里的文件列表，并一行一行告诉我每个文件是用哪个模板（templates 里的哪一个）写的。不要修改文件。回答要简短，只用表格。"
 ```
 
-几秒钟后回答出来，随即就结束了（完整输出：[10장-claude-p-출력.txt](/practice/notes/results/10장-claude-p-출력.txt)）。
+几秒钟后回答出来，随即就结束了（完整输出：[ch10-claude-p-output.txt](/practice/zh-hans/notes/results/ch10-claude-p-output.txt)）。
 
 | notes 文件 | 使用的模板 |
 |---|---|
-| 공부-2026-10-28-프롬프트-강의.md | templates/공부노트.md |
-| 주간회고-2026-10-27.md | templates/주간회고.md |
-| 회의록-2026-10-27-주간회의.md | templates/회의록.md |
-| 회의록-2026-10-29-임시회의.md | templates/회의록.md |
+| study-2026-10-28-prompt-lecture.md | templates/study-notes.md |
+| weekly-review-2026-10-27.md | templates/weekly-review.md |
+| minutes-2026-10-27-weekly.md | templates/minutes.md |
+| minutes-2026-10-29-adhoc.md | templates/minutes.md |
 
 来源：本指南的实操结果（2026-10-31）。回答末尾还附上了"确认范围：4/4"。
 
@@ -91,7 +113,7 @@ CLAUDE.md 和技能，官方文档说明是终端和应用**共用的**。[^same
 
 - 两边可以在**同一个文件夹里同时**使用。会话列表是各自独立的，但设置和 CLAUDE.md 是共用的。[^same]
 - 想把在终端里进行的对话转到应用里，就在终端里输入 `/desktop`（macOS·Windows x64，订阅登录）。[^to-desktop]
-- 反过来，用应用首页的 **「导入 Claude Code CLI 会话」**，可以把在终端里进行过的会话导入应用（第2章首页的提示卡片）。
+- 也可以从应用这边导入。点应用首页的 **「导入 Claude Code CLI 会话」**（第2章首页的提示卡片），就能把在终端里进行过的会话导入应用。这里的 CLI 是“终端版 Claude Code”的意思。
 
 <Quiz id="ch410-switch" />
 

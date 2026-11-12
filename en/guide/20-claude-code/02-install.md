@@ -1,5 +1,7 @@
 # Chapter 2. Desktop App Setup and First Session — Install and Sign In, the Code Tab, Picking a Folder, and Your First Task
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: Install the Claude desktop app and open the **Code** tab. In the bar below the input box, **pick a folder**, type what you want done in everyday words, and Claude will work inside that folder.
 > In this chapter, you will have Claude turn one messy meeting note into **meeting minutes in a format you choose**. This is the first step toward the "personal organizer tool" you will build throughout Stage 3.
 
@@ -12,7 +14,7 @@ Claude Code is **built right into the Claude desktop app.** You only need to ins
 1. Download the right installer for your computer from the official setup page.[^quickstart]
    - **macOS**: A single file works on both Intel and Apple Silicon Macs.
    - **Windows**: There is a standard installer for most PCs (x64) and a separate one for ARM64 PCs.
-   - **Linux**: Currently in beta (test version). On Ubuntu and Debian, you install it with apt (the Linux software installer).
+   - **Linux**: Currently in beta (test version). There is a version for Ubuntu and Debian.[^linux]
 2. Run the downloaded file to install the app.
 3. Open the app and sign in with your **Anthropic account**.[^quickstart] If you have a personal subscription (Pro, Max, or Ultra), sign in with the same account you use on claude.ai.[^auth]
 
@@ -28,7 +30,10 @@ If a message pops up when you click Code, here is what to do.[^quickstart]
 
 - **A prompt to upgrade to a paid plan**: You need a paid subscription to use Claude Code ([Chapter 1](01-what-is.md#what-you-need-—-pricing-plans)). Subscribe first, then open it again.
 - **A prompt to sign in online**: Finish signing in and restart the app.
-- **403 error** (an access denied error): Check the authentication troubleshooting guide in the official docs.
+
+::: details If you see an error called "403"
+A 403 error means access was denied. Check the authentication troubleshooting guide in the official docs.
+:::
 
 When you open a new session in the Code tab, you will see a screen like this.
 
@@ -47,9 +52,11 @@ The spot you will look at most while working is **the bar below the input box**.
 
 Source: Screen labels verified in this guide (2026-10-31); roles from official docs[^desktop-start]
 
-For ③, leave the environment set to **This computer (이 컴퓨터)** at first. This matches "Local" (your computer) in the official docs.[^quickstart] We will cover working in the cloud in Chapter 8.
+For ③, leave the environment set to **This computer (이 컴퓨터)** at first.[^local] We will cover working in the cloud in Chapter 8.
 
 You can also change the model (⑤) later.[^quickstart] At first, you can just keep whatever is already selected on your screen.
+
+If, unlike the screenshot, your screen has "Choose environment (환경 선택)" **above** the input box, you have the earlier screen layout. Only the position is different and the job is the same, so find the item with the same name and pick it.[^quickstart]
 
 ::: details If "Choose environment (환경 선택)" is above the input box and there is no environment in the bottom bar
 You have the earlier screen layout. The official docs note that if a new session does not show an environment under the input box, you are seeing the earlier layout.[^quickstart] In the earlier layout, you pick the environment and folder **above the input box**, and the permission mode and model **in the bar below it**.[^desktop-layout] They do the exact same job.
@@ -65,26 +72,26 @@ Claude Code works **inside the folder you pick**. That is why it is best to star
 
 | File | Contents |
 |---|---|
-| [회의-2026-10-27-주간회의.txt](/practice/notes/inbox/회의-2026-10-27-주간회의.txt) | Messy weekly meeting notes |
-| [공부-2026-10-28-프롬프트-강의.txt](/practice/notes/inbox/공부-2026-10-28-프롬프트-강의.txt) | Lecture notes from a class |
-| [회고-2026-10-29.txt](/practice/notes/inbox/회고-2026-10-29.txt) · [10-30](/practice/notes/inbox/회고-2026-10-30.txt) · [10-31](/practice/notes/inbox/회고-2026-10-31.txt) | Three days of daily reflections |
+| [meeting-2026-10-27-weekly.txt](/practice/en/notes/inbox/meeting-2026-10-27-weekly.txt) | Messy weekly meeting notes |
+| [study-2026-10-28-prompt-lecture.txt](/practice/en/notes/inbox/study-2026-10-28-prompt-lecture.txt) | Lecture notes from a class |
+| [review-2026-10-29.txt](/practice/en/notes/inbox/review-2026-10-29.txt) · [10-30](/practice/en/notes/inbox/review-2026-10-30.txt) · [10-31](/practice/en/notes/inbox/review-2026-10-31.txt) | Three days of daily reflections |
 
 The dates and days of the week in these notes were made up for the story, so **they do not match the real 2026 calendar.** When you check the results, see if they match the dates and days **written in the notes**.
 
-1. Create a new folder named **정리도구** (organizer tool) on your computer, and create an **inbox** folder inside it.
+1. Create a new folder named **organizer** (organizer tool) on your computer, and create an **inbox** folder inside it. You do not need to create the **notes** folder for the results ahead of time. In this guide's practice run, Claude created it when saving.
 2. Download the 5 files above and put them inside **inbox**.
 3. Click **Select… (선택…)** (④) in the bar below the input box in the Code tab.
 
 ![Folder menu. Red numbers mark ① folder "Select… (선택…)", ② the "Search folders… (폴더 검색…)" box (showing "No matching items (일치하는 항목 없음)" after typing the name of another practice folder that has never been opened), and ③ "Open folder… (폴더 열기…)"](../../../guide/20-claude-code/assets/shot-02-folder-menu-marked.png)
 
-4. When the menu opens, click **Open folder… (폴더 열기…)** (③) at the very bottom. This is "Open folder…" in the official docs.[^quickstart]
-5. In the file picker window, choose the **정리도구** folder and click **Open (열기)**.
+4. When the menu opens, click **Open folder… (폴더 열기…)** (③) at the very bottom.[^quickstart]
+5. In the file picker window, choose the **organizer** folder and click **Open (열기)**.
 
 The top of the menu shows **recently opened folders**. Once you have opened a folder, next time you can type its name into the search box (②) to pick it right away. A brand-new folder will say "No matching items (일치하는 항목 없음)" like in the screenshot, so use **Open folder…** the first time.
 
 Once you pick a folder, its name appears in spot ④.
 
-![Bar below the input box after picking a folder. ① shows "정리도구" in the folder spot](../../../guide/20-claude-code/assets/shot-03-folder-picked-marked.png)
+![Bar below the input box after picking a folder. ① shows "organizer" in the folder spot](../../../guide/20-claude-code/assets/shot-03-folder-picked-marked.png)
 
 Think of the **working folder as the boundary of what Claude can touch**. That is why it is much safer to pick a small folder holding only the files for your current task rather than a big folder containing all of your documents.
 
@@ -116,6 +123,8 @@ After you send it, the screen shows what Claude is doing line by line. Sometimes
 
 When the permission mode is set to **Manual (수동)**, Claude **asks you first** before editing a file or running a command. It shows you what will change, and you can approve or reject each change one by one.[^desktop-modes] At first, it is safest to leave it on Manual and watch what it wants to do step by step. We will cover permission modes in detail in [Chapter 4](04-permissions-undo.md).
 
+Even in Manual mode, Claude may create a file right away without asking. It is not broken. If you have used Claude Code in the terminal before, the settings you chose back then might also apply to the app. The screenshots in this guide were also taken on a computer with such settings, so there is no permission prompt. The box below explains how this works.
+
 ::: details If it is set to Manual, why did Claude create the file right away without asking?
 If you have used Claude Code in the terminal before, the settings you chose back then might also apply to the desktop app. **The desktop app reads the same settings files as the terminal version of Claude Code.**[^desktop-modes] For example, if you added an allow rule like "Do not ask before writing files," Claude will do that without asking even in Manual mode. The screenshots in this guide were taken on a computer with those settings, so no permission prompt appeared.
 :::
@@ -144,18 +153,18 @@ Here is how the meeting minutes generated for this guide compared against the or
 | Decide on new menu item after seeing cost | Explicitly noted: "The note does not state when this will be decided" |
 | Next meeting Mon 11/3 at 10 AM | Copied as is |
 
-Source: Practice run for this guide (2026-10-31). Result file: [2장-회의록-2026-10-27-주간회의.txt](/practice/notes/results/2장-회의록-2026-10-27-주간회의.txt) (kept in Markdown format)
+Source: Practice run for this guide (2026-10-31). Result file: [ch2-minutes-2026-10-27-weekly.txt](/practice/en/notes/results/ch2-minutes-2026-10-27-weekly.txt) (kept in Markdown format)
 
 **Even with the exact same request, the result will vary slightly each time.** It is totally fine if the table style or wording looks different from this guide. As long as you can answer "yes" to all four check questions above, it went well.
 
-The new file is saved in the **정리도구/notes** folder on your computer. Open it in Finder or File Explorer to take a look. In [Chapter 3](03-screen-tour.md), we will see how to view files and changes right inside the app.
+The new file is saved in the **organizer/notes** folder on your computer. Open it in Finder or File Explorer to take a look. In [Chapter 3](03-screen-tour.md), we will see how to view files and changes right inside the app.
 
 <Quiz id="ch402-check" />
 
 ## Try It Yourself
 
-1. Create the **정리도구** folder and put the 5 practice files inside **inbox**.
-2. Open a new session in the Code tab and pick **정리도구** as your folder.
+1. Create the **organizer** folder and put the 5 practice files inside **inbox**.
+2. Open a new session in the Code tab and pick **organizer** as your folder.
 3. Send the "better request" from above as is, then check the resulting meeting minutes using the 4 check questions.
 4. If there is something you want changed, ask Claude to fix it in one sentence (for example: "Add a 'Status' column to the action items table").
 
@@ -187,5 +196,7 @@ Next chapter: [Chapter 3. Touring the Screen](03-screen-tour.md)
 [^desktop-start]: Claude Code official docs, "Desktop application". "Before you send your first message, choose the environment, project folder, permission mode, and model in the row under the prompt box" / "Type what you want Claude to do and press Enter to send. Claude reads your project files, makes changes, and runs commands based on your permission mode." / "click the stop button to interrupt immediately, or type a correction and press Enter to send it without stopping the running action." https://code.claude.com/docs/en/desktop (checked on 2026-10-31)
 [^desktop-layout]: Claude Code official docs, "Desktop application". "In the earlier layout, choose the environment and any project folder or repository above the prompt box, and the permission mode and model in the row under it." https://code.claude.com/docs/en/desktop (checked on 2026-10-31)
 [^desktop-modes]: Claude Code official docs, "Desktop application". "Claude asks before editing files or running commands. You see a diff and can accept or reject each change." / "The desktop app reads the same settings files as the CLI." https://code.claude.com/docs/en/desktop (checked on 2026-10-31)
+[^linux]: On Linux, you install it with apt (a tool for installing programs on Linux). See the official docs, "Get started with the desktop app". https://code.claude.com/docs/en/desktop-quickstart (checked on 2026-10-31)
+[^local]: The official docs call this item "Local" (your computer). "Open folder… (폴더 열기…)" in the folder menu is "Open folder…" in the official docs. https://code.claude.com/docs/en/desktop-quickstart (checked on 2026-10-31)
 [^auth]: Claude Code official docs, "Authentication". "Claude Pro, Max, or Ultra subscription: log in with your claude.ai account." https://code.claude.com/docs/en/authentication (checked on 2026-10-31)
 [^update]: Claude Code official docs, "Desktop application". "Open Claude > Check for Updates… on macOS or Help > Check for Updates… on Windows to update." https://code.claude.com/docs/en/desktop (checked on 2026-10-31)

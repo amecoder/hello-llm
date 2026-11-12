@@ -1,6 +1,6 @@
 # 第2章 終端基礎
 
-<Badge type="tip" text="必讀" /> 想跟著這一階段學下去，一定要讀這一章。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
 
 > **一句話總結**：終端裡真正必需的命令只有幾個。用 `pwd` 看自己在哪裡，用 `ls` 看有什麼，用 `cd` 來回移動。本章最後會建好練習資料夾，並放入筆記。
 
@@ -68,11 +68,11 @@ ls
 | Linux | `/home/seoyeon` |
 | Windows | `C:\Users\seoyeon` |
 
-**主資料夾**（Home 資料夾）是你帳號的起始資料夾。開啟終端，通常就從這裡開始。這個地址的簡寫符號是 `~`（波浪號）。所以 `~/hello-ai-연습` 的意思是"我的主資料夾裡的 hello-ai-연습（hello-ai 練習）資料夾"。[^win-home]
+**主資料夾**（Home 資料夾）是你帳號的起始資料夾。開啟終端，通常就從這裡開始。這個地址的簡寫符號是 `~`（波浪號）。所以 `~/hello-ai-practice` 的意思是"我的主資料夾裡的 hello-ai-practice（hello-ai 練習）資料夾"。[^win-home]
 
 寫路徑有兩種方式。
 
-- **完整地址**：像 `~/hello-ai-연습/터미널` 這樣，在哪裡輸入都指向同一個地方。
+- **完整地址**：像 `~/hello-ai-practice/terminal` 這樣，在哪裡輸入都指向同一個地方。
 - **以當前位置為準**：寫成 `inbox`，就是"當前資料夾裡的 inbox"。
 
 `..` 表示上一級資料夾。`.` 表示當前資料夾。
@@ -117,7 +117,7 @@ PowerShell 是像 `-Force` 這樣，一個 `-` 加一個單詞。即使意思相
 `cd` 用來移動到別的資料夾。它是"change directory（切換資料夾）"的縮寫。下面的練習資料夾會在本章最後建好。現在只讀一讀就行。
 
 ```bash
-cd ~/hello-ai-연습
+cd ~/hello-ai-practice
 cd ..
 cd ~
 ```
@@ -155,7 +155,7 @@ cp 筆記.txt inbox/
 | 貼上 | `Cmd + V` | `Ctrl + Shift + V`[^paste] | `Ctrl + V`、右鍵單擊[^paste-win] |
 | 複製 | `Cmd + C` | `Ctrl + Shift + C` | 選中後 `Ctrl + C`、右鍵單擊 |
 
-不同程式可能會有些差別。這一頁上的命令可以複製後貼上。這樣能減少打錯字。粘貼後如果還沒有執行，再按一次 Enter。
+不同程式可能會有些差別。這一頁上的命令可以複製後貼上。這樣能減少打錯字。貼上後如果還沒有執行，再按一次 Enter。
 
 現在試試。複製上面的 `pwd`，貼上到終端裡，按 Enter。
 
@@ -182,8 +182,8 @@ sleep 30
 Mac·Linux 這樣輸入。
 
 ```bash
-mkdir -p ~/hello-ai-연습/터미널/inbox
-cd ~/hello-ai-연습/터미널
+mkdir -p ~/hello-ai-practice/terminal/inbox
+cd ~/hello-ai-practice/terminal
 pwd
 ls
 ```
@@ -191,19 +191,19 @@ ls
 Windows PowerShell 這樣輸入。
 
 ```powershell
-mkdir $HOME\hello-ai-연습\터미널\inbox
-cd $HOME\hello-ai-연습\터미널
+mkdir $HOME\hello-ai-practice\terminal\inbox
+cd $HOME\hello-ai-practice\terminal
 pwd
 ls
 ```
 
-Mac·Linux 命令裡的 `-p` 是讓它把中間的資料夾也一次建好的選項。沒有這個選項的話，如果 `hello-ai-연습` 資料夾不存在，就會出錯。`$HOME` 是 PowerShell 裡指代主資料夾的名字。`pwd` 的結果以 `터미널`（終端）結尾，`ls` 裡能看到 `inbox`，就成功了。
+Mac·Linux 命令裡的 `-p` 是讓它把中間的資料夾也一次建好的選項。沒有這個選項的話，如果 `hello-ai-practice` 資料夾不存在，就會出錯。`$HOME` 是 PowerShell 裡指代主資料夾的名字。`pwd` 的結果以 `terminal`（終端）結尾，`ls` 裡能看到 `inbox`，就成功了。
 
 **2. 下載練習筆記。**
 
 在瀏覽器裡右鍵單擊下面的連結，選「連結另存為（다른 이름으로 링크 저장）」。不同瀏覽器的叫法會有點不同。儲存位置就保持預設的下載資料夾。
 
-- [회의-2026-10-27-주간회의.txt](/practice/notes/inbox/회의-2026-10-27-주간회의.txt)（會議-2026-10-27-每週例會）
+- [meeting-2026-10-27-weekly.txt](/practice/zh-hant/notes/inbox/meeting-2026-10-27-weekly.txt)（會議-2026-10-27-每週例會）
 
 這些都是虛構的筆記。日期和星期也是為了故事編出來的，所以和真實日曆對不上。在後面的章節裡，Claude 可能會指出這一點。它說的沒錯，不用驚訝。
 
@@ -212,13 +212,13 @@ Mac·Linux 命令裡的 `-p` 是讓它把中間的資料夾也一次建好的選
 Mac·Linux 這樣輸入。
 
 ```bash
-cp ~/Downloads/회의-2026-10-27-주간회의.txt inbox/
+cp ~/Downloads/meeting-2026-10-27-weekly.txt inbox/
 ```
 
 Windows PowerShell 這樣輸入。
 
 ```powershell
-cp $HOME\Downloads\회의-2026-10-27-주간회의.txt inbox\
+cp $HOME\Downloads\meeting-2026-10-27-weekly.txt inbox\
 ```
 
 Mac 的 Finder 裡即使顯示為「下載」，實際的資料夾名也是 `Downloads`。如果 Linux 用的是韓語介面，可能是 `~/다운로드`。這時把 `~/Downloads` 換成 `~/다운로드` 再輸入。
@@ -227,13 +227,13 @@ Mac 的 Finder 裡即使顯示為「下載」，實際的資料夾名也是 `Dow
 
 ```bash
 ls inbox
-cat inbox/회의-2026-10-27-주간회의.txt
+cat inbox/meeting-2026-10-27-weekly.txt
 ```
 
 `cat` 會把檔案內容顯示在螢幕上。如果在 PowerShell 裡韓文顯示成亂碼，就這樣輸入。
 
 ```powershell
-Get-Content -Encoding UTF8 inbox\회의-2026-10-27-주간회의.txt
+Get-Content -Encoding UTF8 inbox\meeting-2026-10-27-weekly.txt
 ```
 
 問問自己。`pwd` 的結果是我以為的那個資料夾嗎？`ls inbox` 裡能看到筆記檔案嗎？如果兩個都是，就準備好進入下一章了。

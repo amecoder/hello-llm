@@ -14,7 +14,7 @@ A hook is a shell command you set up. Claude Code runs that command at set point
 
 Put it side by side with the CLAUDE.md from [Chapter 8](08-memory-settings.md) and you can see the difference.
 
-- **Weak example**: You write in CLAUDE.md, "When you change a file, leave one line in 변경기록.txt." The one keeping this rule is Claude. It can miss it.
+- **Weak example**: You write in CLAUDE.md, "When you change a file, leave one line in changelog.txt." The one keeping this rule is Claude. It can miss it.
 - **Better example**: You make the same thing a hook. The one keeping this rule is Claude Code. The command runs after every file change.
 
 Use hooks for things that must happen every single time.[^every-time] That does not mean you need to move every rule into a hook. Rules like tone or document format are fine in CLAUDE.md. Use hooks only for "things that would cause trouble if skipped."
@@ -41,14 +41,14 @@ The detailed meanings are explained one by one right below the box.
 cat > .claude/settings.json <<'EOF'
 {
   "permissions": {
-    "deny": ["Read(./비밀/**)"]
+    "deny": ["Read(./secret/**)"]
   },
   "hooks": {
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
         "hooks": [
-          { "type": "command", "command": "date '+%F %T File changed' >> 변경기록.txt" }
+          { "type": "command", "command": "date '+%F %T File changed' >> changelog.txt" }
         ]
       }
     ]
@@ -64,16 +64,16 @@ Let's explain the unfamiliar words one by one. The last field, `statusLine`, is 
 
 - `PostToolUse`: Means **after** Claude uses a tool. It cannot undo what is already done. The point where you can step in and block **before** a tool is used is `PreToolUse`.[^post]
 - `matcher`: Sets which tools it reacts to. `Write|Edit` are the tool that creates files and the tool that edits them. Here `|` means "or." This hook does not react to files Claude changes with shell commands.
-- `command`: The command to run. It appends the current date, time, and a sentence to the end of `변경기록.txt`. Broken into pieces, the command looks like this:
+- `command`: The command to run. It appends the current date, time, and a sentence to the end of `changelog.txt`. Broken into pieces, the command looks like this:
   - `date`: A command that prints the current date and time.
   - `'+%F %T File changed'`: The format to print. The date (`2026-11-06`) goes in place of `%F`, and the time (`11:19:11`) in place of `%T`.
-  - `>> 변경기록.txt`: Appends the result to the end of that file. The `>` from Chapter 10 overwrites a file, while `>>` adds to the end. If the file does not exist, it creates a new one.
+  - `>> changelog.txt`: Appends the result to the end of that file. The `>` from Chapter 10 overwrites a file, while `>>` adds to the end. If the file does not exist, it creates a new one.
 
 Instead of overwriting, you can also ask Claude in words.[^ask-claude] For a file that already has settings in it, like your own project's, this way is better. The `.claude` folder is specially protected, so a permission prompt may appear at this point.[^protected]
 
 ```text
 Add a hook to .claude/settings.json. Make the command below run every time after Claude uses the Write or Edit tool. Do not delete what is already there.
-date '+%F %T File changed' >> 변경기록.txt
+date '+%F %T File changed' >> changelog.txt
 ```
 
 If there is already a `hooks` field, do not replace it wholesale; add one more inside it.[^sibling] We did not run this hook on Windows. The `date` command is in bash form, so it may not run as is. In that case, ask Claude to change it to a command that fits your environment.
@@ -81,16 +81,16 @@ If there is already a `hooks` field, do not replace it wholesale; add one more i
 Now let's test it. Start `claude` and send this:
 
 ```text
-Create 훅시험.md in the notes folder and write just one line: "hook test".
+Create hook-test.md in the notes folder and write just one line: "hook test".
 ```
 
-When it finishes, type `! cat 변경기록.txt`. When we actually ran it, one line was left like this:
+When it finishes, type `! cat changelog.txt`. When we actually ran it, one line was left like this:
 
 ```text
 2026-11-06 11:19:11 File changed
 ```
 
-You can see the full settings file at [11장-settings.json.txt](/practice/cli/results/11장-settings.json.txt).
+You can see the full settings file at [ch11-settings.json.txt](/practice/en/cli/results/ch11-settings.json.txt).
 
 <Quiz id="ch811-log" />
 
@@ -105,7 +105,7 @@ To see whether a hook is registered, type `/hooks` in a session.[^hooks-menu] Th
   This menu is read-only. To add or change a hook, edit settings.json or ask Claude. Learn more
 
     PostToolUse  after tool execution
-  ❯ [Project] date '+%F %T File changed' >> 변경기록.txt   Write|Edit · command
+  ❯ [Project] date '+%F %T File changed' >> changelog.txt   Write|Edit · command
 
     All events
 
@@ -169,9 +169,9 @@ A **theme** is the colors. If the text on screen is hard to read, use `/theme` t
 1. Leave with `/exit` and paste the settings box in the terminal.
 2. Start `claude` and check that `Organizing Corner Cafe` appears below the input box.
 3. Type `/hooks`, check that the hook appears under `PostToolUse`, and close it with Esc.
-4. Send the hook-test request, then use `! cat 변경기록.txt` to see whether a line was added.
+4. Send the hook-test request, then use `! cat changelog.txt` to see whether a line was added.
 
-Ask yourself: Did the hook really run? Answer by opening `변경기록.txt` yourself, not by trusting Claude's answer.
+Ask yourself: Did the hook really run? Answer by opening `changelog.txt` yourself, not by trusting Claude's answer.
 
 ## Summary
 

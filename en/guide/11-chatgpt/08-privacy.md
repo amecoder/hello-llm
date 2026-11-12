@@ -1,5 +1,7 @@
 # Chapter 8. Privacy and Data Controls — Deciding How Your Chats Are Used
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: Chats you send to ChatGPT are saved on OpenAI's computers (servers), and depending on your settings, they may be used for training to make the AI better.
 > On a single screen under Settings > Data controls (설정 > 데이터 관리), you can manage training permissions, shared links, archiving and deletion, and data export.
 
@@ -17,14 +19,16 @@ The red numbers in the image match the numbers in the table below.
 
 | No. | Item | What it does | In this chapter |
 |---|---|---|---|
-| ① | Shared links (공유 링크) · Manage (관리) | View and delete conversation share links you created | Section 3 |
-| ② | Improve the model for everyone (모델 개선을 위한 데이터 학습 허용) | Toggle that decides whether your chats can be used for training | Section 2 |
+| ① | Shared links (공유 링크) · Manage (관리) | View and delete conversation share links you created | [Shared links](#managing-shared-links) |
+| ② | Improve the model for everyone (모델 개선을 위한 데이터 학습 허용) | Toggle that decides whether your chats can be used for training | [Turning off training](#stopping-your-chats-from-being-used-for-training) |
 | ③ | Location (위치) · Turn on (켜기) | Lets ChatGPT use your device location for local recommendations and weather | Explained below |
-| ④ | Work network access (Work 네트워크 액세스) · Reset ChatGPT Work (ChatGPT Work 재설정) | Settings for the Work feature | [Chapter 7](07-projects-plugins.md) |
+| ④ | Work network access (Work 네트워크 액세스) · Reset ChatGPT Work (ChatGPT Work 재설정) | Settings for the Work feature | Explained below |
 | ⑤ | Information shared with apps (앱과 공유되는 정보) · Manage (관리) | Manage information shared with connected apps (plugins) | [Chapter 7](07-projects-plugins.md) |
-| ⑥ | Archived chats (보관된 채팅) · Archive all chats (모든 채팅 보관하기) · Delete all chats (모든 채팅 삭제) | Hide chats or delete them all at once | Section 4 |
-| ⑦ | Export data (데이터 내보내기) · Export (내보내기) | Download your entire chat history as a file | Section 5 |
+| ⑥ | Archived chats (보관된 채팅) · Archive all chats (모든 채팅 보관하기) · Delete all chats (모든 채팅 삭제) | Hide chats or delete them all at once | [Archive and delete](#archiving-and-deleting-all-chats) |
+| ⑦ | Export data (데이터 내보내기) · Export (내보내기) | Download your entire chat history as a file | [Export](#exporting-your-data) |
 | ⑧ | Cookie settings (쿠키 설정) · Manage (관리) | Settings for small records (cookies) that websites leave in your browser | — |
+
+**Work settings**: Work is a feature where you hand off a long task and get back a finished result ([Chapter 7](07-projects-plugins.md#the-difference-between-chat-and-work)). This guide does not cover the two settings in ④. If you don't use Work, you can leave them as they are.
 
 **Location**: Device location sharing is turned off at first.[^search] Even if you leave it off, ChatGPT knows your rough area from your internet connection address (IP address). You only need to turn this on when you really want neighborhood-level answers like "weather in my neighborhood."
 
@@ -36,7 +40,7 @@ The red numbers in the image match the numbers in the table below.
 
 ### It Might Be Turned On at First
 
-Whether this switch starts turned on or off **can vary depending on your plan and region.** One OpenAI help page says it is turned on by default for Free, Plus, and Pro personal accounts.[^controls] Another page says it depends on your region and settings.[^home]
+Whether this switch starts turned on or off **can vary depending on your plan and region.**[^default-on][^controls][^home]
 So don't just assume "mine is probably off." **Open your settings and check for yourself.** The image above shows the switch turned off (gray).
 
 ### How to Turn It Off
@@ -52,7 +56,7 @@ Let's clear up four common misunderstandings about this switch.
 
 - **Does turning it off erase my chat history?** No. Your history stays right where it is in the sidebar.
 - **Does turning it off mean none of my chats are ever used for training?** Not quite. If you send feedback—like clicking the thumbs-up or thumbs-down button below an answer to rate whether it was good—that entire conversation may be used for training.
-- **Does turning it off stop my chats from being saved?** No. They aren't used for training, but your chats are still saved on the servers. If you want to erase them, use deletion in Section 4.
+- **Does turning it off stop my chats from being saved?** No. They aren't used for training, but your chats are still saved on the servers. If you want to erase them, see [Archiving and Deleting All Chats](#archiving-and-deleting-all-chats) below.
 - **If I leave it on, are materials from connected Google apps used for training too?** No. The help docs state that data read directly from connected Google apps (like Gmail or Drive) is not used for training even when the switch is on. However, there are exceptions: chats where you sent feedback (thumbs-up or thumbs-down), content you copied, pasted, or uploaded yourself, and content included in ChatGPT's replies.[^google]
 
 > Alongside training permissions, what you write in Custom Instructions ([Chapter 5](05-memory.md)) also follows this switch.[^ci] So you can block both with a single switch.
@@ -89,7 +93,7 @@ In Data controls, you can do this for all your chats at once.
 
 - Archived chats · Manage: View your list of archived chats and unarchive them.
 - Archive all chats · Archive all (모두 보관하기): Clear your sidebar all at once. The content stays saved.
-- Delete all chats · Delete all (전체 삭제): Erase every conversation. **You cannot undo this.** Before clicking it, download a backup using Export data in Section 5.
+- Delete all chats · Delete all (전체 삭제): Erase every conversation. **You cannot undo this.** Before clicking it, download a backup using [Exporting Your Data](#exporting-your-data) below.
 
 **Some things remain even after you delete a chat.**
 
@@ -113,7 +117,11 @@ This is available on Free, Go, Plus, and Pro personal accounts. You cannot use i
 
 > The downloaded file **contains all of your conversations.** Do not download it on a public computer, and do not upload it to a cloud folder you share with others.
 
-**There is no feature to move your chats to another account.** You cannot merge two accounts or move your entire chat list over. The most you can do is upload the `conversations.json` file from the downloaded ZIP file into a chat on your new account and use it **as reference material**. Your old chats will not appear in the sidebar.[^transfer]
+**There is no feature to move your chats to another account.** You cannot merge two accounts or move your entire chat list over. The most you can do is upload your downloaded history into a chat on your new account **as reference material**. Your old chats will not appear in the sidebar.[^transfer]
+
+1. Unzip the downloaded file. Usually you can double-click the file, or use Extract (압축 풀기) from the right-click menu.
+2. In the unzipped folder, find the `conversations.json` file. This file holds your chat history as text. The `.json` at the end is just the name of the file format, so you don't need to worry about it.
+3. Upload this file into a chat on your new account and ask something like "Find what we talked about for last month's trip plan in this history."
 
 <Quiz id="ch108-export" />
 
@@ -138,7 +146,7 @@ When you no longer want to use ChatGPT, you can delete your account.[^account]
 |---|---|
 | Data | Deleted within 30 days (except where required to be kept by law) |
 | Recovery | Impossible |
-| Signing up again | Help docs say you can sign up again with the same email **after 30 days**. The confirmation window says you cannot create a new account with the same email[^screen-account] |
+| Signing up again | It may be difficult with the same email[^rejoin][^account][^screen-account] |
 
 **Cancel your subscription separately.** Subscriptions paid through the iPhone App Store (Apple) are not canceled when you delete your account.[^account] Deleting the app from your phone does not stop your subscription either.[^pro] So before you delete your account, make sure to cancel your subscription first wherever you set up payment.
 
@@ -158,9 +166,16 @@ Your account holds all of your conversations. Protecting it with just a password
 
 When you click Sign in with ChatGPT on another app or website, that site receives **only your name, email address, and profile picture**.[^signin] Your chat content is not shared. Still, check Connected logins from time to time to clean up where you have logged in.
 
-**Lockdown Mode** is a setting that blocks outside connection features. It limits web browsing to pre-saved (cached) content and blocks features like deep research. This reduces the risk of information leaking through malicious instructions hidden inside web pages or files (**prompt injection**).[^lockdown]
+**Lockdown Mode** is a setting that blocks outside connection features. It reduces the risk of information leaking through malicious instructions hidden inside web pages or files (**prompt injection**).[^lockdown] It is designed for **people and organizations that handle sensitive data**, so you normally do not need to turn it on (our guide's view).
 
-The help docs state that this feature is not meant for everyone. It does not stop hidden instructions from appearing, either. The help docs explain that it is designed for **people and organizations that handle sensitive data**. Depending on your plan and account, you might not see this menu. Unless you handle sensitive data, our guide's view is that you normally do not need to turn it on. To learn what hidden instructions are, see [Part 1, Chapter 9](../00-common/09-safety.md).
+::: details More about Lockdown Mode (click to expand)
+
+- It limits web browsing to pre-saved (cached) content and blocks features like deep research.[^lockdown]
+- The help docs state that this feature is not meant for everyone. It does not stop hidden instructions from appearing, either.[^lockdown]
+- Depending on your plan and account, you might not see this menu.
+- To learn what hidden instructions are, see [Part 1, Chapter 9](../00-common/09-safety.md).
+
+:::
 
 <Quiz id="ch108-security" />
 
@@ -171,16 +186,28 @@ In Settings, you will find Parental controls (자녀 보호) and Trusted contact
 **Parental controls** link a parent or guardian's account with a teen's account (under age 18). The parent or guardian can adjust certain features, set quiet hours, and receive safety notifications in rare situations.[^parental]
 
 - **Parents cannot read their teen's chats.** Linking accounts does not give the parent access to conversation content, chat history, or current activity.[^parental]
-- If ChatGPT's usage signals suggest a user is under 18, teen protections may turn on automatically. If you are an adult and were mistaken for a teen, you can remove these restrictions by completing age verification if it is available on your account (this varies by account). An outside company called **Persona** handles the verification. **OpenAI does not receive your ID or selfie**, and you do not need to show ID numbers like a national registration number or Social Security number.[^age]
+- If ChatGPT's usage signals suggest a user is under 18, teen protections may turn on automatically. If you are an adult and were mistaken for a teen, you may be able to remove these restrictions by completing age verification (see "More details" below).[^age]
 
 **Trusted contact** lets an adult choose one person in advance. If there is a conversation raising serious safety concerns around suicide, ChatGPT may send a notification asking that person to check in on you. Trained reviewers check the case after automated detection.[^trusted]
 
-- It works **only on personal accounts**. It is not enabled in company or school workspaces like Business, Enterprise, or Edu.[^trusted]
-- **In Korea, both you and the person you choose as your contact must be 19 or older** (18 or older in other countries).[^trusted-ko]
-- The notification **does not include the content of your chats.** The person you choose must accept the invitation **within 1 week** for the feature to become active. You can also choose someone who does not have a ChatGPT account.[^trusted][^trusted-add]
+- The notification **does not include the content of your chats.**[^trusted]
 - **It is not an emergency service.** It does not work in voice conversations. If you are in danger right now, do not wait for this feature—contact emergency services or a crisis helpline immediately.[^trusted]
 
-In conversations where you share difficult feelings, ChatGPT may show **crisis helplines** for your area. OpenAI provides these local helplines in partnership with ThroughLine, an organization specializing in crisis support connections.[^helpline]
+In conversations where you share difficult feelings, ChatGPT may show **crisis helplines** for your area.[^helpline]
+
+::: details More details — Conditions for age verification and trusted contact (click to expand)
+
+**Age verification**: This only works if age verification is available on your account (this varies by account). An outside company called **Persona** handles the verification. **OpenAI does not receive your ID or selfie**, and you do not need to show ID numbers like a national registration number or Social Security number.[^age]
+
+Here are the conditions for **Trusted contact**.
+
+- It works **only on personal accounts**. It is not enabled in company or school workspaces like Business, Enterprise, or Edu.[^trusted]
+- **In Korea, both you and the person you choose as your contact must be 19 or older** (18 or older in other countries).[^trusted-ko]
+- The person you choose must accept the invitation **within 1 week** for the feature to become active. You can also choose someone who does not have a ChatGPT account.[^trusted][^trusted-add]
+
+**Crisis helpline guidance**: OpenAI provides these local helplines in partnership with ThroughLine, an organization specializing in crisis support connections.[^helpline]
+
+:::
 
 <Quiz id="ch108-family" />
 
@@ -259,6 +286,8 @@ Next chapter: [Chapter 9. Talking with Voice](09-voice.md)
 
 ---
 
+[^default-on]: One OpenAI help page ("Data controls in ChatGPT") says it is turned on by default for Free, Plus, and Pro personal accounts. Another page ("The ChatGPT home page") says it depends on your region and settings.
+[^rejoin]: The help docs ("Deleting your ChatGPT account") say you can sign up again with the same email **after 30 days**. However, the deletion confirmation window says you cannot create a new account with the same email. If you plan to sign up again, double-check the help docs before deleting.
 [^controls]: OpenAI Help Center, "Data controls in ChatGPT". On by default for Free, Plus, and Pro personal workspaces; applies across all devices when logged in; saved only to that browser when logged out; entire conversation may be used for training when feedback is given; Business, Enterprise, and Edu do not train on data by default. https://help.openai.com/en/articles/7730893 (checked on 2026-10-23)
 [^home]: OpenAI Help Center, "The ChatGPT home page". Whether chats are used for training "depends on your location and settings". https://help.openai.com/en/articles/9125172 (checked on 2026-10-23)
 [^ci]: OpenAI Help Center, "ChatGPT Custom Instructions". Information from Custom Instructions use may also be used to improve models, and you can opt out via your training settings. https://help.openai.com/en/articles/8096356 (checked on 2026-10-23)

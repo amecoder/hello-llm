@@ -1,5 +1,7 @@
 # Chapter 6. Pull Requests and Reviews — One More Look Before Merging
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: A **PR** (Pull Request) **proposes** merging the changes on your branch into `main`. It gives you a place to discuss and review work before merging.
 > Review your work even when you work alone. Use AI review (`/code-review`) too, **but "no findings" does not mean your code is safe, and you decide whether to merge.**
 
@@ -20,7 +22,9 @@ A PR page has these tabs.[^tabs]
 
 Source: GitHub official docs (excerpted)[^tabs]
 
-When you create a PR, write down **what you changed and what problem it solves**. If the PR fixes an issue from Chapter 8, link it to the issue. If you link it with a set keyword, the issue closes automatically when the PR merges.[^describe]
+When you create a PR, write down **what you changed and what problem it solves**.[^describe]
+
+Later, in Chapter 8, you will use **issues** (GitHub records where you write down to-dos or bugs). If a PR fixes an issue, link it by writing the issue in the PR description with a set keyword such as `fixes #number`. Then the issue closes automatically when the PR merges.[^describe] For now, it is enough to know that this kind of link exists.
 
 **Small PRs are easier to review and safer to merge.** Before you ask someone else to review your work, review it yourself first. Read the changed lines, check that you did not change anything by mistake, and make sure builds and tests ran.[^small]
 
@@ -46,7 +50,13 @@ A review ends with one of three decisions.[^decisions]
 
 Source: GitHub official docs[^decisions]
 
-The standard for a review is **SPEC.md** from Chapter 3. An example prompt in the official best practices docs asks for a review **against SPEC.md** after building to check that every requirement is implemented, report only gaps that affect correctness, and **skip style** (the example delegates this to a subagent, while this guide adapts it to a new session).[^against-spec] It also explains why. When you ask a reviewer to find problems, it **always finds something.**[^always-finds] If you try to fix everything it points out, you end up adding unnecessary clutter.
+The standard for a review is **SPEC.md** from Chapter 3. The official Claude Code best practices docs give this example of how to review after building.[^against-spec]
+
+- Check **against SPEC.md** that every requirement is implemented.
+- Report only gaps that affect correctness.
+- **Skip style**, such as formatting and naming.
+
+Why skip style? When you ask a reviewer to find problems, it **always finds something.**[^always-finds] If you try to fix everything it points out, you end up adding unnecessary clutter. If it looks only at correctness, only what you really need to fix is left.
 
 ```
 In a new session, review the changes on the current branch against SPEC.md. Check whether every requirement is implemented and whether each verification criterion has a check. Tell me only about gaps that affect correctness. Skip style.
@@ -56,14 +66,20 @@ In a new session, review the changes on the current branch against SPEC.md. Chec
 
 ## Getting a Review from AI
 
-Claude Code has a review command, `/code-review`. If you type it in your working session, Claude reads the changes on your branch, looks for correctness problems, and tells you what it found in the conversation.[^local] Usage counts toward your plan the same way the rest of the session does.[^usage]
+Claude Code has a review command, `/code-review`. If you type it in your working session, Claude reads the changes on your branch, looks for correctness problems, and tells you what it found in the conversation.[^local] You can use it on any plan.[^plans]
 
-In the desktop app, you can type `/code-review` in the prompt box to get a review before you commit.[^desktop-review] After you open a PR, you can see the PR and its automated check status in the session details panel. This feature requires the GitHub CLI (`gh`) to be installed and signed in.[^monitor]
+For example, after you finish building the first screen, just type `/code-review` in the prompt box. You do not need to add any explanation. It looks at the changes on the current branch.
 
 **AI review has clear limits.**
 
 - AI review can miss bugs or security problems. **Having no findings does not mean your code is error-free or safe.**[^miss]
-- Even the managed review that posts automatically on GitHub PRs never approves or blocks a PR. **People decide whether to merge.**[^decide] That managed review is for Team and Enterprise plans, while individuals can run `/code-review` on any plan.[^plans]
+- Even the managed review that automatically posts reviews on GitHub PRs never approves or blocks a PR. **People decide whether to merge.**[^decide]
+
+::: details More details (click to expand)
+- **Usage**: The review also runs inside your session, so it counts toward your plan's usage the same way the rest of the session does.[^usage]
+- **Desktop app**: You can type `/code-review` in the prompt box to get a review before you commit.[^desktop-review] After you open a PR, you can see the PR and its automated check status in the session details panel. This feature requires the GitHub CLI (`gh`, a program for working with GitHub through commands) to be installed and signed in.[^monitor]
+- **Managed review**: The feature that automatically posts reviews on GitHub PRs is for Team and Enterprise plans. Individuals can run `/code-review` on any plan.[^plans]
+:::
 
 If you learned in Stage 3 to "separate the writer from the checker," it is better to have Claude review in a **new session**, even if it is the same Claude. That way it is not pulled along by the context of the conversation where you built the feature.
 
@@ -73,7 +89,7 @@ If you learned in Stage 3 to "separate the writer from the checker," it is bette
 
 Once the review is done and the verification checks pass, **merge** the PR. The final step of GitHub flow is deleting the branch. Even if you delete the branch, **your PR and commit history are not deleted**, so you do not need to worry.[^delete]
 
-Later, as more people join, you can set **branch protection rules** such as "require approvals before merging." By default, protection rules block force-overwriting and branch deletion.[^protect]
+Later, as more people join, you can set **branch protection rules** such as "require approvals before merging."[^protect] You do not need to know about this while you practice alone.
 
 <Quiz id="ch706-merge" />
 
@@ -114,7 +130,7 @@ Next chapter: [Chapter 7. Deployment](07-deploy.md)
 [^risks]: Claude Code official docs, "Common workflows". "Review Claude's generated PR before submitting and ask Claude to highlight potential risks or considerations." https://code.claude.com/docs/en/common-workflows (checked on 2026-11-01)
 [^alone]: GitHub official docs, "Reviewing your proposed changes". "Even when you work alone, a deliberate review builds a habit that keeps your software projects healthy and makes collaboration easier later." https://docs.github.com/en/get-started/start-your-journey/reviewing-your-proposed-changes (checked on 2026-11-01)
 [^decisions]: GitHub official docs, "Quickstart for reviewing pull requests". "**Approve** signals that the changes are ready to merge." / "**Request changes** flags feedback the author must address before merging." https://docs.github.com/en/pull-requests/get-started/reviewing-pull-requests-quickstart (checked on 2026-11-01)
-[^against-spec]: Claude Code official docs, "Best practices for Claude Code". "use a subagent to review the rate limiter diff against SPEC.md, check every requirement is implemented and the listed edge cases have tests, report gaps that affect correctness and skip style" https://code.claude.com/docs/en/best-practices (checked on 2026-11-01)
+[^against-spec]: The official example hands this review to a subagent (another Claude that Claude hands a separate piece of work to), while this guide adapts it to a new session. Claude Code official docs, "Best practices for Claude Code". "use a subagent to review the rate limiter diff against SPEC.md, check every requirement is implemented and the listed edge cases have tests, report gaps that affect correctness and skip style" https://code.claude.com/docs/en/best-practices (checked on 2026-11-01)
 [^always-finds]: Claude Code official docs, "Best practices for Claude Code". "A reviewer that's asked to find problems will always find *something*." https://code.claude.com/docs/en/best-practices (checked on 2026-11-01)
 [^local]: Claude Code official docs, "Review locally with /code-review". "Claude reviews the changes on your branch, looks for correctness bugs, and reports what it found in your conversation." https://code.claude.com/docs/en/code-review-local (checked on 2026-11-01)
 [^usage]: Claude Code official docs, "Review locally with /code-review". "The review runs in your own session, so it counts toward your plan's usage or API billing the same way the rest of the session does." https://code.claude.com/docs/en/code-review-local (checked on 2026-11-01)
@@ -124,5 +140,5 @@ Next chapter: [Chapter 7. Deployment](07-deploy.md)
 [^decide]: Claude Code official docs, "Code Review". "A review never approves or blocks the pull request, so the decision to merge stays with your team." https://code.claude.com/docs/en/code-review (checked on 2026-11-01)
 [^plans]: Claude Code official docs, "Code Review". "**Plans**: [Team and Enterprise](https://code.claude.com/docs/en/feature-availability.md)" / "Run [`/code-review`](https://code.claude.com/docs/en/code-review-local) in your Claude Code session on any plan, or [compare all the options](#compare-ways-to-get-a-review)." https://code.claude.com/docs/en/code-review (checked on 2026-11-01)
 [^delete]: GitHub official docs, "GitHub flow". "Don't worry about losing information. Your pull request and commit history will not be deleted." https://docs.github.com/en/get-started/using-github/github-flow (checked on 2026-11-01)
-[^protect]: GitHub official docs, "About protected branches". "By default, each branch protection rule disables force pushes to the matching branches and prevents the matching branches from being deleted." https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches (checked on 2026-11-01)
+[^protect]: By default, protection rules block force pushes (forcibly overwriting the history) and branch deletion. GitHub official docs, "About protected branches". "By default, each branch protection rule disables force pushes to the matching branches and prevents the matching branches from being deleted." https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches (checked on 2026-11-01)
 [^create-pr]: GitHub official docs, "Quickstart for pull requests". "then click **New pull request**." / "For the **compare** branch, select the branch that contains your changes." / "Click **Create pull request**." https://docs.github.com/en/pull-requests/get-started/pull-request-quickstart (checked on 2026-11-01)

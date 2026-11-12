@@ -1,16 +1,23 @@
 # Chapter 2. Why Is Everyone Talking About It?
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **In short**: Anyone can now use AI with everyday language—something only experts could do before.
 
 ## It Looks Sudden, But It Wasn't
 
-AI research has been going on for decades. The turning point that led to today's LLMs was a single research paper.
-In 2017, Google researchers published "Attention Is All You Need."[^1]
-This paper introduced a structure called the **Transformer**. Thanks to this structure, it became possible to train AI on massive amounts of text efficiently.
-Older methods had to read a sentence one word at a time, from start to finish. A Transformer looks at how all the words in a sentence relate to each other **all at once**. That made it possible to split the work across many computers and train much faster.
-Most LLMs used today are built on this structure. You can see how a Transformer works in the visual explainer videos under "Watch and Learn" below.
+AI research has been going on for decades. Everyday people first started to feel AI for themselves in 2022, with ChatGPT.
+But the technology behind it came out five years earlier.
 
-Still, it took another five years before everyday people could feel the difference for themselves.
+The turning point was a single research paper. In 2017, Google researchers published "Attention Is All You Need."[^1]
+This paper first appeared on arXiv (pronounced "archive"), a public site where researchers post papers before they are reviewed.
+This paper introduced a structure called the **Transformer**. It is a structure that looks at how all the words in a sentence relate to each other at once.
+Thanks to this structure, it became possible to train AI on massive amounts of text efficiently. Most LLMs used today are built on this structure.
+
+::: details How was the Transformer different from older methods? (click to expand)
+Older methods had to read a sentence one word at a time, from start to finish. A Transformer looks at how all the words in a sentence relate to each other **all at once**. That made it possible to split the work across many computers and train much faster.
+You can see how a Transformer works in the visual explainer videos under "Watch and Learn" below.
+:::
 
 <Quiz id="ch2-origin" />
 
@@ -25,7 +32,7 @@ it was named the fastest-growing consumer app in history.[^3]
 
 After that, companies like Anthropic (with Claude) and Google (with Gemini) released similar services, and the race began.
 
-![2017 Transformer paper → Nov 2022 ChatGPT free launch → Jan 2023 ~100M monthly users (est.) → Competition begins with Claude, Gemini, and others. It took 5 years from the technical breakthrough to everyday use.](../../../guide/00-common/assets/ch2-timeline.svg)
+![2017 Transformer paper → Nov 2022 ChatGPT free launch → Jan 2023 ~100M monthly users (est.) → Competition begins with Claude, Gemini, and others. It took 5 years from the technical breakthrough to everyday use.](assets/ch2-timeline.svg)
 
 <Quiz id="ch2-chatgpt" />
 

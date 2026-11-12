@@ -1,5 +1,7 @@
 # Chapter 10. Voice and Phone — Asking by Voice, Gemini Live, Mobile and Desktop Apps
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: If typing feels tedious, ask with the **microphone**. When you want a back-and-forth spoken conversation, use **Gemini Live** on your phone.
 > You can also show your camera or screen while you ask. You can call up the desktop app right away with **one keyboard shortcut**.
 
@@ -14,7 +16,7 @@ Instead of typing text, you can ask with your voice.
 
 When you ask out loud, the tips you learned in Stage 1 still apply. Say what you want, who it is for, and what shape you want it in ([Stage 1, Chapter 4](../00-common/04-prompt-basics.md)).
 
-Korean is a supported language in the mobile app, and South Korea is a supported country.[^mobile] However, some voice features, like changing the voice, are not available in certain languages.[^voice]
+Korean is a supported language in the mobile app, and South Korea is a supported country.[^mobile]
 
 <Quiz id="ch310-voice" />
 
@@ -34,9 +36,12 @@ I'll try saying it first. Listen to me, and then tell me how to make it shorter 
 ### Where to Use It and Requirements
 
 The help docs state that you use it in the **Gemini app on an Android phone or tablet**. **You cannot use Live on the web yet.**[^live] You must be 13 or older (varies by country) and signed in.[^live]
-The Gemini widget for iPhone (iOS 17 or up) also has a Live shortcut.[^widget] However, since the Live help docs are written for Android, this guide could not verify how much of it works on iPhone.
 
-For now, **you cannot use Gems in Live.**[^live] The tailored feature that uses memories of your past chats in Live is **only available in English in the US**.[^live]
+::: details More details (click to expand)
+- The Gemini **widget** for iPhone (a small window on your home screen that opens an app feature directly, iOS 17 or up) also has a Live shortcut.[^widget] However, since the Live help docs are written for Android, this guide could not verify how much of it works on iPhone.
+- For now, **you cannot use Gems in Live.**[^live]
+- The tailored feature that uses memories of your past chats in Live is **only available in English in the US**.[^live]
+:::
 
 ### Starting and Stopping
 
@@ -50,7 +55,7 @@ Even if you turn off interrupting by voice, you can still tap the screen to stop
 
 ### Changing Gemini's Voice
 
-You choose a voice in the **mobile app settings**. Tap a name to preview how it sounds, then tap "Confirm (확인)" to save.[^voice] The voice you pick is used not only in Live, but in **every feature that answers out loud**, such as "Listen (듣기)", which reads replies to you.[^voice]
+You choose a voice in the **mobile app settings**. Tap a name to preview how it sounds, then tap "Confirm (확인)" to save.[^voice] The voice you pick is used not only in Live, but in **every feature that answers out loud**, such as "Listen (듣기)", which reads replies to you.[^voice] However, you cannot change the voice in some languages.[^voice]
 
 ### Showing Your Camera and Screen
 
@@ -78,7 +83,7 @@ On Android, you can set Gemini as your **default assistant** (the helper you cal
 
 - You call it up by pressing and holding the power button or home button. The exact method varies by device.[^mobilestart]
 - "Hey Google" isn't available in every language, but even then, you can tap the microphone to talk with your voice.[^mobilestart]
-- While looking at another app, you can call up Gemini and **ask about what is on your screen right now**. Screen context ("Screen context (화면 컨텍스트)") must be turned on in your settings.[^mobilestart]
+- While looking at another app, you can call up Gemini and **ask about what is on your screen right now**. Screen context ("Screen context (화면 컨텍스트)", the setting that lets Gemini see what is on your phone screen right now) must be turned on in your settings.[^mobilestart]
 
 ### Using It on the Lock Screen
 
@@ -94,7 +99,7 @@ How to install the Mac and Windows apps is covered in [Chapter 1](01-getting-sta
 
 | Computer | Shortcut | Other features |
 |---|---|---|
-| Mac | Option + Space | Share window, "Speak to Window (현재 창에서 바로 말하기)" |
+| Mac | Option + Space | Two more features (below) |
 | Windows | Alt + Space | — |
 
 Source: Google Help[^mac][^windows]
@@ -111,7 +116,7 @@ Sharing a window works just like sharing your phone screen. Check first to make 
 ## Try It Yourself
 
 1. In the Gemini app on your phone, tap the microphone and say, "Recommend three dinner menu ideas for tonight."
-2. If you use Android, tap "Live" to practice a 1-minute self-introduction, then tap "End (종료)" to see how the same conversation continues in text.
+2. If you use Android, tap "Live" to practice a 1-minute self-introduction, then tap "End (종료)" to see how the same conversation continues in text. If you only have an iPhone or a computer, skip this task and do step 1 once more.
 3. In the mobile app settings, preview two or three of Gemini's voices and pick one.
 4. If you have the desktop app, call up Gemini with the shortcut (Option + Space on Mac, Alt + Space on Windows).
 

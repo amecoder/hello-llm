@@ -1,10 +1,11 @@
 # 第5章 記憶與個性化設定 — 不用每次都自我介紹
 
+<Badge type="info" text="選讀" /> 需要的時候再讀。跳過也能跟上後面的章節。
+
 > **一句話總結**：希望 Claude 始終遵守的事，寫在**指令**裡；對話中瞭解到的關於我的內容，由**記憶**來記住。
 > 你會學到怎麼檢視、修改、關閉被記住的內容。還會看到長時間使用時，提醒你休息的休息提醒。
 
-介面以 2026年10月的網頁版為準。目前新的 Claude 介面和新的設定介面正在陸續推送，所以選單名稱和位置可能因介面而異。
-這一章的截圖是免費套餐的網頁介面。選單名稱按截圖裡看到的名稱來寫。幫助文件裡出現的其他名稱，集中放在腳註和摺疊框裡。
+介面以 2026年10月的網頁版為準，截圖是免費方案的介面。如果選單名稱和你的介面略有不同，就找一個名字相近的。這是因為新介面正在陸續推送。
 
 ## 讓 Claude 瞭解我的三種方法
 
@@ -36,17 +37,17 @@ Claude 有三個功能，可以省去這份辛苦。
 
 ![設定裡的「賬戶」介面。紅色編號標出：①「姓名（성명）」和「希望 Claude 怎麼稱呼你？」，②「Claude 指令」輸入欄，③「退出所有裝置的登入」，④「刪除賬戶」](../../../guide/10-claude/assets/shot-09-settings-account-marked.png)
 
-姓名和郵箱是改成示例的介面（免費套餐）。**紅色編號和下面列表裡的編號是同一個位置。**
+姓名和電子郵件是改成示例的介面（免費方案）。**紅色編號和下面列表裡的編號是同一個位置。**
 
 - ①「姓名（성명）」·「希望 Claude 怎麼稱呼你？（Claude가 어떻게 불러드릴까요?）」 — Claude 稱呼我用的名字
 - ②「Claude 指令（Claude 지침）」 — 寫下適用於所有對話的規則的欄
 - ③「退出所有裝置的登入（모든 기기에서 로그아웃）」
 - ④「刪除賬戶（계정 삭제）」
 
-② 欄的上方有一段提示，說明這份指令會在聊天和 Cowork 的整體範圍內被記在心裡。[^screen] 空白處用淺色字寫著「例：保持說明簡單明瞭」。[^screen]
+② 欄的上方有一段提示，說明這份指令會在聊天和 Cowork（把由多個步驟組成的工作整個交給它做的功能，[第8章](08-cowork.md)）的整體範圍內被記在心裡。[^screen] 空白處用淺色字寫著「例：保持說明簡單明瞭」。[^screen]
 
 ::: details 如果設定裡看到的不是「賬戶」而是「Your Claude」（點選展開）
-在幫助文件裡，這一欄出現在「設定（설정）」→「Your Claude」的「指令（지침）」裡。[^personal] 收到新設定介面的賬號，可能會看到這樣的樣子。請以螢幕上看到的名稱為準。
+在幫助文件裡，這一欄出現在「設定（설정）」→「Your Claude」的「指令（지침）」裡。[^personal] 收到新設定介面的帳號，可能會看到這樣的樣子。請以螢幕上看到的名稱為準。
 :::
 
 如果不知道該寫什麼，可以從[第1階段第4章](../00-common/04-prompt-basics.md#好提示詞的5個要素)的五個要素裡，只挑**每次都一樣**的放進去。
@@ -76,14 +77,17 @@ Claude 有三個功能，可以省去這份辛苦。
 ## 記憶 — Claude 在對話中記住的內容
 
 **記憶**是 Claude 把對話中瞭解到的關於我的內容記下來的功能。
-在 Free·Pro·Max 套餐裡，網頁·桌面·手機應用都是**一開始就開著的。**[^memory]
-公司用套餐（Team·Enterprise）要管理員允許才能用，在每個人自己開啟之前是關閉的。[^memory]
-
-Claude 不會在對話結束後再做總結。它是**在對話的過程中**，按主題分開儲存。[^memory]
+Claude 是**在對話的過程中**，按主題分開儲存。不是等對話結束後再一次性總結。[^memory]
 所以如果你說「截止日期變了」，下一次對話就已經知道這件事了。
+
+在 Free·Pro·Max 方案裡，網頁·桌面·手機應用都是**一開始就開著的。** 不需要另外開啟。[^memory]
 
 在[第1階段第6章](../00-common/06-conversation.md#在新對話裡-預設它不知道)或其他 AI 課程裡，你學到的是「新對話從零開始」。[^academy-memory] 在 Claude 裡，只要記憶開著，新對話也能帶著我告訴過它的內容開始。
 如果你真想看看從白紙開始的樣子，請在新聊天裡發第一條訊息之前，先把「+」→「記憶」關掉。這樣那個聊天裡就不會用到記住的內容。[^off] 方法在下面的「只關閉一個聊天的記憶」裡。
+
+::: details 如果是公司用方案（點選展開）
+公司用方案（Team·Enterprise）要管理員允許才能用，在每個人自己開啟之前是關閉的。[^memory]
+:::
 
 ### 記住什麼
 
@@ -120,7 +124,7 @@ Claude 也會自己決定儲存。如果有一定要留下的內容，直接說�
 
 ![設定裡的「記憶」介面。紅色編號標出：①「從聊天中生成記憶」開關，②「在記憶中包含敏感話題」開關，③「從其他 AI 提供商匯入記憶」和「開始匯入」，④「匯出記憶」和「匯出」](../../../guide/10-claude/assets/shot-09-settings-memory-marked.png)
 
-這是免費套餐的介面。**紅色編號和下面列表裡的編號是同一個位置。**
+這是免費方案的介面。**紅色編號和下面列表裡的編號是同一個位置。**
 
 - ①「從聊天中生成記憶（채팅에서 메모리 생성）」 — 開啟和關閉記憶的開關
 - ②「在記憶中包含敏感話題（민감한 주제를 메모리에 포함）」 — 讓它也記住健康·宗教等話題的開關
@@ -129,7 +133,7 @@ Claude 也會自己決定儲存。如果有一定要留下的內容，直接說�
 
 這個介面下方有已儲存的記憶列表。[^screen] 點開主題來讀，用鉛筆圖示修改，或者用「刪除（삭제）」刪掉就行。[^manage][^your-claude]
 
-<!-- 需要截圖：有已儲存記憶的賬號裡的主題列表和編輯·「刪除」按鈕 -->
+<!-- 需要截圖：有已儲存記憶的帳號裡的主題列表和編輯·「刪除」按鈕 -->
 
 列表最下面還有一個輸入欄，寫著「告訴 Claude 需要修改的內容（Claude에게 변경할 내용을 알려 주세요）」。[^screen]
 不用特地跑到設定介面。在聊天裡用話說一遍來修改，從下一次對話起也會生效。[^manage]
@@ -145,7 +149,7 @@ Claude 也會自己決定儲存。如果有一定要留下的內容，直接說�
 有一點很容易搞混。**即使刪除了對話，從那場對話裡產生的記憶也不會被刪除。**[^manage]
 如果有想刪掉的內容，請到「設定（설정）」→「記憶（메모리）」的列表裡，把那條記憶單獨刪掉。
 
-> 這個說明以現在的新記憶為準。部分公司用套餐裡還保留著舊方式的記憶。[^manage] 如果和你的介面不一樣，請以介面為準。
+> 這個說明以現在的新記憶為準。部分公司用方案裡還保留著舊方式的記憶。[^manage] 如果和你的介面不一樣，請以介面為準。
 
 <Quiz id="ch205-manage" />
 
@@ -161,7 +165,7 @@ Claude 也會自己決定儲存。如果有一定要留下的內容，直接說�
 
 ### 只關閉一個聊天的記憶
 
-也可以讓記憶保持開啟，只在**這一次聊天裡**關閉。[^off]
+也可以讓記憶保持開啟，只在**這一次聊天裡**關閉。[^off] 這和[第3章](03-chats.md)「保留對話，只關閉記憶」裡看到的是同一個方法。這一章再整理一遍。
 
 1. 開啟一個新聊天。
 2. 點輸入框裡的「+」。
@@ -170,7 +174,7 @@ Claude 也會自己決定儲存。如果有一定要留下的內容，直接說�
 
 ![點輸入框裡的「+」後開啟的選單。紅色編號標出：①「上傳或新增檔案」，②「Skills」，③「新增聯結器」，④「設計系統」，⑤「新增外掛」，⑥ 帶勾選標記的「記憶」](../../../guide/10-claude/assets/shot-02-plus-menu-marked.png)
 
-這是免費套餐的介面。這一章用到的是 ⑥「記憶」。其餘的在[第4章](04-files-artifacts.md)和[第7章](07-projects-tools.md)裡講。
+這是免費方案的介面。這一章用到的是 ⑥「記憶」。其餘的在[第4章](04-files-artifacts.md)和[第7章](07-projects-tools.md)裡講。
 
 **只能在傳送第一條訊息之前**關閉。對話一開始，就不能再改了。[^off]
 
@@ -186,7 +190,8 @@ Claude 也會自己決定儲存。如果有一定要留下的內容，直接說�
 ## 參考過往對話
 
 你也可以問「上次聊的那個，你還記得嗎」。
-在付費套餐（Pro·Max·Team·Enterprise）裡，Claude 會**查詢過往的對話**，並接著用裡面的內容。[^past]
+在付費方案（Pro·Max·Team·Enterprise）裡，Claude 會**查詢過往的對話**，並接著用裡面的內容。[^past]
+它和[第3章](03-chats.md#查詢過去的對話)的「讓 Claude 幫你找」是同一個功能。這裡重點看它和記憶有什麼不同。記憶是 Claude 事先記下的筆記，而這個功能是每次提問時直接去翻過去的對話。
 
 自然地問就行。
 
@@ -200,7 +205,7 @@ Claude 一旦去查詢過往對話，當前聊天裡就會出現**使用了工�
 需要了解的幾點。
 
 - **專案裡的對話**，只會在該專案裡查詢。[^past]
-- **想關掉的話**，請在「設定（설정）」→「記憶（메모리）」裡關閉「搜尋和引用聊天（채팅 검색 및 참조）」。[^past][^past-where] 這是付費套餐的功能，所以在這一章的免費套餐介面裡，看不到這個開關。[^screen]
+- **想關掉的話**，請在「設定（설정）」→「記憶（메모리）」裡關閉「搜尋和引用聊天（채팅 검색 및 참조）」。[^past][^past-where] 這是付費方案的功能，所以在這一章的免費方案介面裡，看不到這個開關。[^screen]
 - 在側邊選單裡自己查詢過往對話的方法，在[第3章](03-chats.md)裡講。
 
 <Quiz id="ch205-past-chats" />
@@ -208,9 +213,9 @@ Claude 一旦去查詢過往對話，當前聊天裡就會出現**使用了工�
 ## 遷入·匯出其他 AI 的記憶
 
 如果你原來用別的 AI 服務，現在換到了 Claude，可以把那邊積累的記憶帶過來。
-**所有套餐**都可以在網頁和桌面應用上做到。[^import]
+**所有方案**都可以在網頁和桌面應用上做到。[^import]
 
-1. **從原來用的 AI 裡提取記憶。** 幫助文件裡有推薦的提示詞。這是一段以 "I'm moving to another service and need to export my data." 開頭的英文提示詞。請到腳註的幫助連結裡，把全文複製下來用。[^import]
+1. **從原來用的 AI 裡提取記憶。** 開啟 Anthropic 幫助文件[《Import and export your memory from Claude》](https://support.claude.com/en/articles/12123587)，裡面有推薦的提示詞。這是一段以 "I'm moving to another service and need to export my data." 開頭的英文提示詞。把那段文字整個複製下來，發給原來用的 AI。直接用英文發也可以。它回覆的內容，就是提取出來的記憶。[^import]
 2. **在 Claude 裡開啟匯入。** 點「設定（설정）」→「記憶（메모리）」裡 ③「從其他 AI 提供商匯入記憶」旁邊的「開始匯入（가져오기 시작）」。[^screen][^your-claude]
 3. **貼上。** 把提取來的文字貼上進輸入欄，點「新增到記憶（메모리에 추가）」。[^import]
 4. **確認。** 完成後，點「檢視 Claude 對我瞭解到的內容（Claude가 나에 대해 학습한 내용 보기）」，看看進去了什麼。[^import]
@@ -235,14 +240,15 @@ Claude 一旦去查詢過往對話，當前聊天裡就會出現**使用了工�
 
 ## 休息提醒與免打擾時間
 
+記憶和指令是讓 Claude 適應我的設定。使用的時間，也可以按我的情況來定。
 和 AI 聊著聊著，有時會不知不覺過去很久。這時可以用的功能有兩個。
-在 Free·Pro·Max 套餐裡，以**測試版**（beta，正式釋出前的試用功能）提供。[^wellbeing]
+在 Free·Pro·Max 方案裡，以**測試版**（beta，正式釋出前的試用功能）提供。[^wellbeing]
 
 開啟的位置是「設定（설정）」→「時間與專注（시간 및 집중）」（Time and focus）。[^screen][^wellbeing-name]
 
 ![設定裡的「時間與專注」介面。紅色編號標出：①「休息提醒」和選擇小時·分鐘的兩個欄，②「免打擾時間」和週日~週六的星期按鈕](../../../guide/10-claude/assets/shot-09-settings-time-marked.png)
 
-這是免費套餐的介面。**紅色編號和下面列表裡的編號是同一個位置。**
+這是免費方案的介面。**紅色編號和下面列表裡的編號是同一個位置。**
 
 - ① **休息提醒** — 先選好小時和分鐘。[^screen] 用到那個時長，就會彈出提醒。你可以選擇停下，稍後再提醒，或者關掉提醒繼續用。[^wellbeing]
 - ② **免打擾時間**（quiet hours）[^quiet-name] — 選出為了做別的事而空出來的星期幾。[^screen]
@@ -250,7 +256,7 @@ Claude 一旦去查詢過往對話，當前聊天裡就會出現**使用了工�
 在網頁或桌面端設定一次，手機應用也會適用。[^wellbeing]
 
 兩者都**不是強制鎖定。** 你隨時可以點「繼續」接著用。[^wellbeing]
-而且它們和套餐的使用額度是**兩回事。**[^wellbeing] 使用額度在[第1章](01-getting-started.md)裡講過。
+而且它們和方案的使用額度是**兩回事。**[^wellbeing] 使用額度在[第1章](01-getting-started.md)裡講過。
 
 <Quiz id="ch205-wellbeing" />
 
@@ -270,7 +276,7 @@ Claude 一旦去查詢過往對話，當前聊天裡就會出現**使用了工�
 - 敏感話題預設不儲存，身份證號碼、賬戶號碼之類，即使拜託也不會儲存。
 - 在「設定」→「記憶」裡檢視和修改。刪了對話，記憶也還在，所以要另外刪除。
 - 關閉記憶時，暫停會保留記憶，重置會全部刪除。只想關一個聊天，就在第一條訊息之前關「+」→「記憶」。
-- 在付費套餐裡，可以查詢過往對話並接著用。
+- 在付費方案裡，可以查詢過往對話並接著用。
 - 其他 AI 的記憶，用「開始匯入」搬過來。這是實驗功能。我的記憶，用「匯出」下載。
 - 休息提醒和免打擾時間，在「設定」→「時間與專注」裡設定。這是提醒，不是鎖定。
 
@@ -291,18 +297,18 @@ Claude 一旦去查詢過往對話，當前聊天裡就會出現**使用了工�
 
 下一章：[第6章. 搜尋與調研](06-search.md)
 
-[^screen]: 在 Claude 網頁介面（免費套餐，韓語）中親自確認。「設定（설정）」→「賬戶（계정）」的「Claude 指令（Claude 지침）」："Claude는 Anthropic의 가이드라인 범위 내에서 이 계정 및 연결된 모든 계정의 채팅과 Cowork 전반에 걸쳐 이 지침을 염두에 둡니다."（意思是：Claude 會在 Anthropic 準則的範圍內，把這份指令記在心裡，用於這個賬號及所有關聯賬號的聊天和 Cowork 整體。） / 「設定」→「記憶（메모리）」：「從聊天中生成記憶（채팅에서 메모리 생성）」、「在記憶中包含敏感話題（민감한 주제를 메모리에 포함）」、「從其他 AI 提供商匯入記憶（다른 AI 제공업체에서 메모리 가져오기）」、「匯出記憶（메모리 내보내기）」（"把記憶下載為裝有 Markdown 檔案的 .zip 檔案。"） / 「+」選單裡的「記憶」 / 「設定」→「時間與專注（시간 및 집중）」：「休息提醒（휴식 알림）」、「免打擾時間（방해 금지 시간）」（確認日期 2026-10-26）
-[^personal]: Anthropic 幫助文件，《Understanding Claude's personalization features》。"Any instructions you add here will be applied to all of your conversations with Claude." / "Select "Settings," then "Your Claude" (or "Account" in the older Settings layout)." / "These instructions only apply to chats within that project." https://support.claude.com/en/articles/10185728（確認日期 2026-10-26）
-[^memory]: Anthropic 幫助文件，《Use Claude’s chat search and memory to build on previous context》。"Memory is on by default for Free, Pro, and Max plans on the web, Claude Desktop, and Claude Mobile" / "On Team and Enterprise plans, owners control whether memory is available, and it's off for each member until they turn it on." / "Claude saves memory as a set of individual topics as you chat, rather than summarizing conversations after they end." / "Your role, projects, and professional context" / "Claude uses the project's memory alongside your memory from chats outside of projects, but not memory from other projects." https://support.claude.com/en/articles/11817273（確認日期 2026-10-26）
-[^sensitive]: Anthropic 幫助文件，《Use Claude’s chat search and memory to build on previous context》。"By default, Claude does not store topics related to personal or sensitive subject matter" / "Turn on Include sensitive topics in memory in Settings > Your Claude" / "This includes government ID numbers, criminal history, financial account numbers, and immigration status." https://support.claude.com/en/articles/11817273（確認日期 2026-10-26）
-[^manage]: Anthropic 幫助文件，《Use Claude’s chat search and memory to build on previous context》。"Select any topic to read it, then use the edit icon to change it or select "Delete" to remove it." / "Tell Claude what you'd like it to remember, change, or forget, and the update applies to your next conversation." / "When a conversation is deleted, including under a retention period, memory entries generated from it aren’t removed" / "A small number of Team and Enterprise organizations still use the legacy memory from chats experience." https://support.claude.com/en/articles/11817273（確認日期 2026-10-26）
-[^off]: Anthropic 幫助文件，《Use Claude’s chat search and memory to build on previous context》。"navigating to Settings > Your Claude and turning on Memory from chats" / "Reset memory: Permanently deletes all memories including project memories." / "You need to turn memory off before you send the first message." / "Unlike incognito chats, they stay in your chat history." / "Claude won't use what it remembers about you in that chat, and nothing from the chat is saved to memory." https://support.claude.com/en/articles/11817273（確認日期 2026-10-26）
-[^past]: Anthropic 幫助文件，《Use Claude’s chat search and memory to build on previous context》。"Searching past chats is available to users on paid plans (Pro, Max, Team, and Enterprise plans) on the web, Claude Desktop, and Claude Mobile apps." / "When Claude searches your previous chats, you will see this reflected in your current chat as a tool call." / "When Claude references previous conversations through search, you'll see citations linking back to the original chats, along with the option to delete specific conversations." / "Individual project conversations (searches are limited to within each specific project)." / "navigate to Settings > Your Claude (or Settings > Memory in the older Settings layout) and switch the toggle next to Search and reference chats off." https://support.claude.com/en/articles/11817273（確認日期 2026-10-26）
-[^import]: Anthropic 幫助文件，《Import and export your memory from Claude》。"Memory imports are available for Free, Pro, Max, Team, and Enterprise plans on the web and Claude Desktop." / "I'm moving to another service and need to export my data." / "Paste the exported text from your previous AI provider into the text box and click the "Add to memory" button to submit it." / "Click the "See what Claude learned about you" button to start a new conversation" / "You can customize this prompt to exclude any sensitive information before importing into Claude." / "Claude may not retain imported personal details unrelated to work." / "Important: Memory imports are experimental and still in active development" / "Write out your memories of me verbatim, exactly as they appear in your memory." https://support.claude.com/en/articles/12123587（確認日期 2026-10-26）
-[^wellbeing]: Anthropic 幫助文件，《Set break reminders and quiet hours》。"Break reminders and quiet hours are in beta on Free, Pro, and Max plans." / "Go to Settings > Wellbeing (or Settings > Time and focus in the older Settings layout)." / "When you reach the amount you set, Claude shows a reminder. You can stop, snooze it, or dismiss it and keep going." / "Neither is a hard lock, so you can always continue past them." / "They’re separate from your plan’s usage limits." https://support.claude.com/en/articles/15672868（確認日期 2026-10-26）
-[^academy-context]: Claude Academy《Introduction to Claude Cowork》課程《Standing context: Global instructions and projects》。"Your global instructions don't need to be complete on day one." / "those are global-instruction candidates." https://academy.claude.com/courses/introduction-to-claude-cowork/giving-cowork-context（確認日期 2026-10-26）
-[^academy-memory]: Claude Academy《AI capabilities and limitations》課程《Working Memory》。"Then open a brand-new conversation and ask a question that assumes it remembers what you taught it. Watch it start from zero." https://academy.claude.com/courses/ai-capabilities-and-limitations/working-memory（確認日期 2026-10-26）
-[^your-claude]: 在幫助文件裡，這個選單出現在新設定介面的名稱「設定（설정）」→「Your Claude」之下（例：記憶列表在「Your memory」旁邊的「管理」裡）。收到新設定介面的賬號，可能會看到這樣的樣子。請以螢幕上看到的名稱為準。
+[^screen]: 在 Claude 網頁介面（免費方案，韓語）中親自確認。「設定（설정）」→「賬戶（계정）」的「Claude 指令（Claude 지침）」："Claude는 Anthropic의 가이드라인 범위 내에서 이 계정 및 연결된 모든 계정의 채팅과 Cowork 전반에 걸쳐 이 지침을 염두에 둡니다."（意思是：Claude 會在 Anthropic 準則的範圍內，把這份指令記在心裡，用於這個帳號及所有關聯帳號的聊天和 Cowork 整體。） / 「設定」→「記憶（메모리）」：「從聊天中生成記憶（채팅에서 메모리 생성）」、「在記憶中包含敏感話題（민감한 주제를 메모리에 포함）」、「從其他 AI 提供商匯入記憶（다른 AI 제공업체에서 메모리 가져오기）」、「匯出記憶（메모리 내보내기）」（"把記憶下載為裝有 Markdown 檔案的 .zip 檔案。"） / 「+」選單裡的「記憶」 / 「設定」→「時間與專注（시간 및 집중）」：「休息提醒（휴식 알림）」、「免打擾時間（방해 금지 시간）」（確認日期 2026-10-26）
+[^personal]: Anthropic 幫助文件，《Understanding Claude's personalization features》。"Any instructions you add here will be applied to all of your conversations with Claude." / "Select "Settings," then "Your Claude" (or "Account" in the older Settings layout)." / "These instructions only apply to chats within that project." https://support.claude.com/en/articles/10185728 （確認日期 2026-10-26）
+[^memory]: Anthropic 幫助文件，《Use Claude’s chat search and memory to build on previous context》。"Memory is on by default for Free, Pro, and Max plans on the web, Claude Desktop, and Claude Mobile" / "On Team and Enterprise plans, owners control whether memory is available, and it's off for each member until they turn it on." / "Claude saves memory as a set of individual topics as you chat, rather than summarizing conversations after they end." / "Your role, projects, and professional context" / "Claude uses the project's memory alongside your memory from chats outside of projects, but not memory from other projects." https://support.claude.com/en/articles/11817273 （確認日期 2026-10-26）
+[^sensitive]: Anthropic 幫助文件，《Use Claude’s chat search and memory to build on previous context》。"By default, Claude does not store topics related to personal or sensitive subject matter" / "Turn on Include sensitive topics in memory in Settings > Your Claude" / "This includes government ID numbers, criminal history, financial account numbers, and immigration status." https://support.claude.com/en/articles/11817273 （確認日期 2026-10-26）
+[^manage]: Anthropic 幫助文件，《Use Claude’s chat search and memory to build on previous context》。"Select any topic to read it, then use the edit icon to change it or select "Delete" to remove it." / "Tell Claude what you'd like it to remember, change, or forget, and the update applies to your next conversation." / "When a conversation is deleted, including under a retention period, memory entries generated from it aren’t removed" / "A small number of Team and Enterprise organizations still use the legacy memory from chats experience." https://support.claude.com/en/articles/11817273 （確認日期 2026-10-26）
+[^off]: Anthropic 幫助文件，《Use Claude’s chat search and memory to build on previous context》。"navigating to Settings > Your Claude and turning on Memory from chats" / "Reset memory: Permanently deletes all memories including project memories." / "You need to turn memory off before you send the first message." / "Unlike incognito chats, they stay in your chat history." / "Claude won't use what it remembers about you in that chat, and nothing from the chat is saved to memory." https://support.claude.com/en/articles/11817273 （確認日期 2026-10-26）
+[^past]: Anthropic 幫助文件，《Use Claude’s chat search and memory to build on previous context》。"Searching past chats is available to users on paid plans (Pro, Max, Team, and Enterprise plans) on the web, Claude Desktop, and Claude Mobile apps." / "When Claude searches your previous chats, you will see this reflected in your current chat as a tool call." / "When Claude references previous conversations through search, you'll see citations linking back to the original chats, along with the option to delete specific conversations." / "Individual project conversations (searches are limited to within each specific project)." / "navigate to Settings > Your Claude (or Settings > Memory in the older Settings layout) and switch the toggle next to Search and reference chats off." https://support.claude.com/en/articles/11817273 （確認日期 2026-10-26）
+[^import]: Anthropic 幫助文件，《Import and export your memory from Claude》。"Memory imports are available for Free, Pro, Max, Team, and Enterprise plans on the web and Claude Desktop." / "I'm moving to another service and need to export my data." / "Paste the exported text from your previous AI provider into the text box and click the "Add to memory" button to submit it." / "Click the "See what Claude learned about you" button to start a new conversation" / "You can customize this prompt to exclude any sensitive information before importing into Claude." / "Claude may not retain imported personal details unrelated to work." / "Important: Memory imports are experimental and still in active development" / "Write out your memories of me verbatim, exactly as they appear in your memory." https://support.claude.com/en/articles/12123587 （確認日期 2026-10-26）
+[^wellbeing]: Anthropic 幫助文件，《Set break reminders and quiet hours》。"Break reminders and quiet hours are in beta on Free, Pro, and Max plans." / "Go to Settings > Wellbeing (or Settings > Time and focus in the older Settings layout)." / "When you reach the amount you set, Claude shows a reminder. You can stop, snooze it, or dismiss it and keep going." / "Neither is a hard lock, so you can always continue past them." / "They’re separate from your plan’s usage limits." https://support.claude.com/en/articles/15672868 （確認日期 2026-10-26）
+[^academy-context]: Claude Academy《Introduction to Claude Cowork》課程《Standing context: Global instructions and projects》。"Your global instructions don't need to be complete on day one." / "those are global-instruction candidates." https://academy.claude.com/courses/introduction-to-claude-cowork/giving-cowork-context （確認日期 2026-10-26）
+[^academy-memory]: Claude Academy《AI capabilities and limitations》課程《Working Memory》。"Then open a brand-new conversation and ask a question that assumes it remembers what you taught it. Watch it start from zero." https://academy.claude.com/courses/ai-capabilities-and-limitations/working-memory （確認日期 2026-10-26）
+[^your-claude]: 在幫助文件裡，這個選單出現在新設定介面的名稱「設定（설정）」→「Your Claude」之下（例：記憶列表在「Your memory」旁邊的「管理」裡）。收到新設定介面的帳號，可能會看到這樣的樣子。請以螢幕上看到的名稱為準。
 [^past-where]: 幫助文件說明，這個開關在「設定」→「Your Claude」裡；在舊介面裡，則在「設定」→「記憶」裡。
 [^wellbeing-name]: 在幫助文件裡，它也以新設定介面的名稱「Wellbeing」出現。可能因介面而異。
 [^quiet-name]: 幫助文件的韓語譯名是「조용한 시간」（安靜時間）。

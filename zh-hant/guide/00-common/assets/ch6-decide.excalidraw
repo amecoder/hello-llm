@@ -1,0 +1,219 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "id": "start",
+   "x": 0,
+   "y": 40,
+   "width": 200,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "對回答\n不滿意",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "diamond",
+   "id": "q1",
+   "x": 320,
+   "y": 0,
+   "width": 220,
+   "height": 150,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "方向\n對嗎？",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "fix",
+   "x": 700,
+   "y": 40,
+   "width": 230,
+   "height": 70,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "指出要改的地方\n請它修改",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "diamond",
+   "id": "q2",
+   "x": 300,
+   "y": 250,
+   "width": 260,
+   "height": 170,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "對話很長或\n話題變了？",
+    "fontSize": 16
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "new",
+   "x": 700,
+   "y": 300,
+   "width": 230,
+   "height": 70,
+   "backgroundColor": "#a5d8ff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "讓它寫摘要\n開始新對話",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "retry",
+   "x": 320,
+   "y": 510,
+   "width": 220,
+   "height": 70,
+   "backgroundColor": "#a5d8ff",
+   "fillStyle": "solid",
+   "label": {
+    "text": "重寫請求\n在同一個對話裡",
+    "fontSize": 18
+   }
+  },
+  {
+   "x": 200,
+   "y": 75,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     118,
+     0
+    ]
+   ],
+   "start": {
+    "id": "start"
+   },
+   "end": {
+    "id": "q1"
+   },
+   "type": "arrow",
+   "width": 118,
+   "height": 0
+  },
+  {
+   "x": 540,
+   "y": 75,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     158,
+     0
+    ]
+   ],
+   "start": {
+    "id": "q1"
+   },
+   "end": {
+    "id": "fix"
+   },
+   "label": {
+    "text": "是",
+    "fontSize": 18
+   },
+   "type": "arrow",
+   "width": 158,
+   "height": 0
+  },
+  {
+   "x": 430,
+   "y": 150,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     98
+    ]
+   ],
+   "start": {
+    "id": "q1"
+   },
+   "end": {
+    "id": "q2"
+   },
+   "label": {
+    "text": "否",
+    "fontSize": 18
+   },
+   "type": "arrow",
+   "width": 0,
+   "height": 98
+  },
+  {
+   "x": 560,
+   "y": 335,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     138,
+     0
+    ]
+   ],
+   "start": {
+    "id": "q2"
+   },
+   "end": {
+    "id": "new"
+   },
+   "label": {
+    "text": "是",
+    "fontSize": 18
+   },
+   "type": "arrow",
+   "width": 138,
+   "height": 0
+  },
+  {
+   "x": 430,
+   "y": 420,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     88
+    ]
+   ],
+   "start": {
+    "id": "q2"
+   },
+   "end": {
+    "id": "retry"
+   },
+   "label": {
+    "text": "否",
+    "fontSize": 18
+   },
+   "type": "arrow",
+   "width": 0,
+   "height": 88
+  }
+ ]
+}

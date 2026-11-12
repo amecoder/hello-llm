@@ -1,11 +1,17 @@
 # 第12章 像专家一样使用——判断、测试、积累
 
+<Badge type="warning" text="进阶" /> 学会前面的章节以后，想用得更好时再读。
+
 > **一句话总结**：用得好，需要的不只是多认识几个按钮。而是**判断该把什么交出去、交出去之前先测试、把重复的事积累下来**的能力。
 > 这一章讲的是，怎样把第 1~11 章学到的功能**组合起来**，适应我自己的工作。最后会介绍 Anthropic 做的课程合集 Claude Academy。
 
 这一章几乎不讲新功能。主题是前面各章学到的 Claude 功能，什么时候用、怎么用。
 
-判断该把什么交出去的方法（4D）、交出去之前先用已经知道答案的事来测试的方法、学习时让 AI 向你提问的方法，这类**对任何 AI 都适用的方法**，在[第1阶段第11章「像专家一样使用」](../00-common/11-expert.md)里。先读一读再来，这一章会更轻松。这一章把那些方法对照 Claude 的功能和菜单来讲。
+**对任何 AI 都适用的方法**，在[第1阶段第11章「像专家一样使用」](../00-common/11-expert.md)里。先读一读再来，这一章会更轻松。这一章把那些方法对照 Claude 的功能和菜单来讲。那一章讲过的方法，简单回顾一下是这样的。
+
+- **判断该把什么交出去（4D）**：分成委托、描述、辨别、负责这四种能力来看。取英文首字母，叫做4D。
+- **交出去之前先测试**：先把已经知道答案的事交给它，看结果和我的答案是否一致。比如，把一封我已经写好回信的邮件交给它，再和我的回信对比一下。
+- **学习时让它提问**：不直接拿答案，而是一边回答 Claude 提出的问题一边学。
 
 ## 选择适合工作的工具
 
@@ -15,7 +21,7 @@
 |---|---|---|
 | 提问、打磨、一起思考 | 普通对话 | [第1阶段](../00-common/) |
 | 简单的事实、今天发生的事 | 网页搜索 | [第6章](06-search.md#什么时候用什么) |
-| 不需要最新信息、深入推敲 | 扩展思考 | [第6章](06-search.md#什么时候用什么) |
+| 不需要最新信息、深入推敲 | 扩展思考（想得更久再回答） | [第6章](06-search.md#什么时候用什么) |
 | 收集大量资料做成报告 | 研究（付费） | [第6章](06-search.md#什么时候用什么) |
 | 持续推进同一件事 | 项目 | [第7章](07-projects-tools.md#项目-—-把资料和指令放在一处) |
 | 需要文档·表格·演示文件 | 创建文件 | [第4章](04-files-artifacts.md#让它生成文件——excel、word、powerpoint、pdf) |
@@ -53,7 +59,7 @@
 
 ## 把表格和数字交出去
 
-像[第4章「上传文件」](04-files-artifacts.md#上传文件)那样，上传 CSV·TSV 之类的表格文件，Claude 就会分析数据并画图表。图表也可以拿到 PNG 之类的图片文件。[^create]
+像[第4章「上传文件」](04-files-artifacts.md#上传文件)那样，上传 CSV·TSV（和 CSV 差不多，但用制表符而不是逗号来分隔各栏的文件）之类的表格文件，Claude 就会分析数据并画图表。图表也可以拿到 PNG 之类的图片文件。[^create]
 
 ```
 附上的 CSV 是附近小店最近三个月各个品类的销售记录。请按品类合计从大到小做成表格，再做一张柱状图的 PNG 图片。
@@ -66,7 +72,7 @@
 
 ## 想学更多——Claude Academy
 
-**Claude Academy** 是 Anthropic 做的在线课程合集。下面的课程，不用登录就能打开课程正文（2026-10-26 确认）。正文全部是**英语**，课程首页上没有写需要多长时间。[^academy-courses]
+**Claude Academy** 是 Anthropic 做的在线课程合集。下面的课程，不用登录就能打开课程正文。正文全部是**英语**。[^academy-courses][^academy-time]
 
 | 课程 | 课时数 | 适合这样的人 | 需要准备 |
 |---|---|---|---|
@@ -74,17 +80,18 @@
 | [AI capabilities and limitations](https://academy.claude.com/courses/ai-capabilities-and-limitations) | 13 节课 + 测验 | 想知道 AI 为什么那样回答的人 | 不需要预备知识 |
 | [Claude 101](https://academy.claude.com/courses/claude-101) | 13 节课 + 测验 | 第一次在工作中使用 Claude 的人 | Claude 账号（包括免费）。Cowork·研究的课需要付费套餐 |
 | [Introduction to Claude Cowork](https://academy.claude.com/courses/introduction-to-claude-cowork) | 14 节课 + 测验 | 在文件和应用之间来回做事的人 | 付费套餐，用到文件夹的课需要电脑应用。不懂编程也可以 |
-| [Introduction to agent skills](https://academy.claude.com/courses/introduction-to-agent-skills) | 6 节课 | 想自己动手做技能文件的人 | Claude Code（第3阶段会讲的开发者用工具） |
 
 - 前两门课，用 Claude 以外的其他 AI 来学也可以。这两门课的设计是先学哪一门都可以。[^academy-courses]
 - 「AI Fluency」课程在最后的测验里答对 80% 以上，就可以把**结业徽章**（completion badge）添加到账号上。它不是资格证书。[^academy-courses] 这本指南的[理解度确认考试](../00-common/certificate.md)也是同样性质的学习徽章。
-- 「Introduction to agent skills」请在学完这本指南的第3阶段（编程代理工具）之后再看。所有内容都以 Claude Code 为基准。
 
 英语页面可以用 Chrome 之类浏览器的翻译功能来读（在页面上点鼠标右键 →「翻译成中文」）。
 
 ### 课程里学到的框架——和这本指南对照
 
-课程里出现的内容和这本指南是一样的，只是名称不同。了解下面的对应关系，在课程里遇到新术语时，就容易猜出意思。课程中使用的名称，按英语原文直接写出。
+课程里出现的内容和这本指南是一样的，只是名称不同。了解下面的对应关系，在课程里遇到新术语时，就容易猜出意思。现在不用全部读完。听课时遇到陌生的名称，再展开看看。
+
+::: details 课程术语和本指南的章节（点击展开）
+课程中使用的名称，按英语原文直接写出。
 
 - **Setting the stage · Defining the task · Specifying rules**（Claude 101）：确定我的角色和目标、要做的事、语气·格式·示例，然后提出请求。[^academy-stage] 和[第1阶段第4章「好提示词的 5 个要素」](../00-common/04-prompt-basics.md#好提示词的5个要素)是同样的想法。
 - **4D — Delegation · Description · Discernment · Diligence**（Claude 101、AI Fluency）：请看[第1阶段第11章「专家有什么不同」](../00-common/11-expert.md#专家有什么不同)。
@@ -93,6 +100,11 @@
 - **成果·资料·只有我知道的情况**（Cowork）：交出去的时候写下这三样。[^academy-review] 和[第8章「交付的要领」](08-cowork.md#交代任务的要领)相同。
 - **检查结果的三个问题**（Cowork）：是我想要的结果吗？事实对吗？有没有编造的地方？[^academy-review] 请一并看[第1阶段第9章「核实的四个习惯」](../00-common/09-safety.md#核对的四个习惯)。
 - **"projects store knowledge, skills perform tasks"**（Claude 101）：项目装资料，技能装做事的步骤。[^academy-skills-vs] 请看这一章的[「把重复的事积累下来」](#把重复的事积累下来)。
+:::
+
+::: details 学完第3阶段后再看的课程（点击展开）
+[Introduction to agent skills](https://academy.claude.com/courses/introduction-to-agent-skills) 是一门6节课的课程。适合想自己动手做技能文件的人。[^academy-courses] 所有内容都以 Claude Code（第3阶段会讲的开发者用工具）为基准，所以请在学完这本指南的第3阶段（编程代理工具）之后再看。
+:::
 
 <Quiz id="ch212-academy" />
 
@@ -133,6 +145,7 @@
 [^academy-stage]: Claude Academy「Claude 101」课程「Your first conversation with Claude」。"One, setting the stage. What is your role and what are your objectives?" / "Two, defining the task. What action do you want Claude to take?" / "Three, specifying rules. Is there a style or tone you want Claude to use? Are there examples that you can attach to show Claude?" https://academy.claude.com/courses/claude-101/your-first-conversation-with-claude （确认日期 2026-10-26）
 [^academy-review]: Claude Academy「Introduction to Claude Cowork」课程「Hand Claude Cowork your first task」。"name the deliverable, the inputs, and any nuance" / "Does it meet the actual objective?" / "Are the facts accurate?" / "Does anything sound made up?" https://academy.claude.com/courses/introduction-to-claude-cowork/the-task-loop （确认日期 2026-10-26）
 [^academy-courses]: Claude Academy 课程首页。AI Fluency: Framework and foundations "14 lessons · 1 quiz", "Our goal is to make AI Fluency accessible and useful to everyone, no matter what stage of AI expertise you find yourself at." 同一课程的课「Introduction to AI Fluency」"you're welcome to work with any language model you prefer." / "No paid subscriptions required to complete course activities"，测验 "A score of 80% or higher passes." https://academy.claude.com/courses/ai-fluency-framework-foundations · AI capabilities and limitations "13 lessons · 1 quiz", "None. This course assumes no technical background and no prior experience with AI tools.", "Anyone who uses, or is about to start using, generative AI in their work or studies and wants to understand why it behaves the way it does.", "The two are designed to be taken in either order" https://academy.claude.com/courses/ai-capabilities-and-limitations · Claude 101 "13 lessons · 1 quiz", "A Claude account on any plan (Free, Pro, Max, Team, or Enterprise)", "A few features covered here require a paid plan to try hands-on: Cowork and Research (Pro, Max, Team, and Enterprise plans)", "Anyone getting started with Claude at work." https://academy.claude.com/courses/claude-101 · Introduction to Claude Cowork "14 lessons · 1 quiz", "Knowledge workers whose day is spent moving information between files, apps, and tools", "A paid Claude plan (Pro, Max, Team, or Enterprise); the Claude desktop app for the lessons that work on folders on your computer", "no coding or command-line experience needed" https://academy.claude.com/courses/introduction-to-claude-cowork · Introduction to agent skills "6 lessons", "Explain what skills are, where they live, and how Claude Code matches them to requests" https://academy.claude.com/courses/introduction-to-agent-skills · 已确认课程正文在未登录的浏览器里可以打开（确认日期 2026-10-26）
+[^academy-time]: 课程首页上没有写需要多长时间（确认日期 2026-10-26）。
 [^when]: Anthropic 帮助文档，《When should I use web search, extended thinking, and research?》。"Web search is best for straightforward, factual queries that can be answered with one or two tool calls" / "Extended thinking shines when tackling complex reasoning tasks that don't require recent info from the web" / "Research is optimal for comprehensive information gathering requiring five or more tool calls over 1-3 minutes" https://support.claude.com/en/articles/11095361 （确认日期 2026-10-26）
 [^plugins]: Anthropic 帮助文档，《Use plugins in Claude》。"Plugins are available to all paid plans (Pro, Max, Team, Enterprise)." / "Each plugin bundles skills, connectors, and sub-agents into a single package" https://support.claude.com/en/articles/13837440 （确认日期 2026-10-26）
 [^skills-use]: Anthropic 帮助文档，《Use skills in Claude》。"Toggle any skill on or off using the switch next to it. Disabled skills won't be available to Claude." https://support.claude.com/en/articles/12512180 （确认日期 2026-10-26）

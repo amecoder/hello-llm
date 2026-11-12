@@ -1,7 +1,9 @@
 # Chapter 7. Structured Prompts — Markdown and XML Tags
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: For short questions, everyday language is enough. But when your request is long and mixes instructions, reference text, and examples,
-> **split it into labeled sections.** The AI gets confused less often. Use Markdown or XML tags to split sections, and ask for a table when moving the answer into Excel.
+> **split it into labeled sections.** The AI gets confused less often. You split sections by adding headings with symbols like `#` (Markdown), or by putting name labels before and after your reference text (XML tags). Ask for a table when moving the answer into Excel.
 
 ## When Do You Need It?
 
@@ -9,14 +11,16 @@ In [Chapter 5](05-prompt-patterns.md), you learned how to wrap reference text be
 Create **labeled sections** for each part of your request. Then the AI can clearly tell where the situation ends and where the reference text begins.
 A request written with this kind of structure is called a **structured prompt**.
 
-![A request written as one big block mixes instructions and reference text, while a sectioned request is split into context (situation), document (reference text), instructions (task), and format (shape of the answer)](../../../guide/00-common/assets/ch7-structure.svg)
+![A request written as one big block mixes instructions and reference text, while a sectioned request is split into context (situation), document (reference text), instructions (task), and format (shape of the answer)](assets/ch7-structure.svg)
+
+This chapter explains each format named in the table below. For now, you can just look at the meaning in parentheses and move on.
 
 | Situation | Recommended Format |
 |---|---|
 | A short question, a one- or two-sentence request | Plain everyday sentences |
-| A long request with multiple conditions | **Markdown** headings and lists |
-| Pasting long reference text, or multiple documents | **XML tags** |
-| Moving the answer into Excel or Google Sheets | **Table** (or CSV if there is a lot of data) |
+| A long request with multiple conditions | **Markdown** (headings and lists made with symbols) |
+| Pasting long reference text, or multiple documents | **XML tags** (name labels that wrap your reference text) |
+| Moving the answer into Excel or Google Sheets | **Table** (or, if there is a lot of data, text with columns split by commas: CSV) |
 
 > **Don't overdo it.** You don't need to wrap "Recommend a lunch menu" in tags.
 > Structuring is a tool to pull out when your request is so long that even you find it confusing to read.
@@ -41,7 +45,7 @@ This guide is written in Markdown too.
 
 `` ` `` is the symbol on the key to the left of the number 1 on your keyboard (the backtick). You will rarely need to type it yourself.
 
-![On the left, a request where the situation, task, conditions, and client info are mixed into one block; on the right, the same content split into four sections: ## Situation, ## Task, ## Conditions, and ## Client Info. Even with the same content, splitting into sections makes it easy to spot missing conditions](../../../guide/00-common/assets/ch7-markdown.svg)
+![On the left, a request where the situation, task, conditions, and client info are mixed into one block; on the right, the same content split into four sections: ## Situation, ## Task, ## Conditions, and ## Client Info. Even with the same content, splitting into sections makes it easy to spot missing conditions](assets/ch7-markdown.svg)
 
 When you split a long request using Markdown headings, it looks like this.
 
@@ -86,9 +90,11 @@ The meeting notes you pasted go here.
 A Markdown heading only marks "starting from here," while XML tags mark both **where it starts and where it ends**.
 That makes them especially useful when you paste long reference text.
 
+::: details What do AI companies say? (click to expand)
 The official docs from Anthropic (the company that made Claude) recommend trying XML tags for complex prompts that mix instructions, background, examples, and input.
 They explain that tags help Claude read the prompt without getting confused.[^anthropic]
 OpenAI's guide also notes that XML works well. It performed well in tests involving long documents too.[^openai]
+:::
 
 ### Example: Summarizing Meeting Notes
 
@@ -165,7 +171,7 @@ You can put tags inside other tags, just like placing smaller boxes inside a lar
 Create a table comparing the two quotes by price, delivery time, and warranty period.
 ```
 
-Here, `index="1"` is a label that numbers it as "Document 1." You don't have to write it that way. Putting the number in the tag name, like `<quote1>` `</quote1>`, works too.
+Here, `index="1"` is not grammar you have to memorize. It is just a note that numbers it as "Document 1," and you can leave it out. Putting the number in the tag name, like `<quote1>` `</quote1>`, works too.
 
 To write it without tags, add a label and divider lines to each document.
 
@@ -186,11 +192,14 @@ Create a table comparing the two quotes by price, delivery time, and warranty pe
 
 ### Long Reference Text on Top, Question at the Very Bottom
 
-When your reference text is very long, **put the reference text first and your question at the very end**.
-According to Anthropic's documentation, putting the question at the end improved answer quality by up to 30% in tests.
-It was especially effective in complex cases with multiple documents.[^anthropic] The quote comparison example above follows this order.
+When your reference text is very long, **put the reference text first and your question at the very end**. The quote comparison example above follows this order.
 
-If you have a rule that must be followed, write it once at the very beginning and write it one more time right next to your question at the very end.
+::: details How big is the difference? (click to expand)
+According to Anthropic's documentation, putting the question at the end improved answer quality by up to 30% in tests.
+It was especially effective in complex cases with multiple documents.[^anthropic]
+:::
+
+**One more tip.** If you have a rule that must be followed, write it once at the very beginning and write it one more time right next to your question at the very end.
 Instructions buried in the middle of long reference text are easy to miss.[^academy-edges] Keep the order of reference text on top and question at the bottom.
 
 ```
@@ -224,7 +233,7 @@ Organize the information from these ten business cards into a table. Put the col
 When there is a lot of data, people also ask for **CSV** (text where columns are separated by commas). However, if you paste CSV text directly, the whole thing might go into a single cell.
 When that happens, split the cells by commas. In Excel, use **Data → Text to Columns**, and in Google Sheets, use **Data → Split text to columns**.
 
-::: details Learn More (For Developers) — JSON and JSONL (Click to expand)
+::: details Learn More (For Developers) — JSON and JSONL (click to expand)
 
 **Everyday users don't need to know this.** This is a format used when passing the AI's answer to another computer program. If you only use AI in a chat window, skip this.
 We use it in earnest in Stage 3 (Coding Tools) and Stage 4 (AI-SDLC) of this guide.

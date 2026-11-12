@@ -1,9 +1,13 @@
 # 第4章 権限と元に戻す — プリセットは4つ、破棄は慎重に
 
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
 > **一言まとめ**: アプリの権限は**4つのプリセット**（Request Review・Default・Auto・Turbo）から選びます。最初は**Request Review**か**Default**で始めましょう。
 > Reviewウィンドウの**破棄は、確認なしですぐに**適用されます。ターミナルには`/rewind`がありますが、いちばん確実な安全網は、やはりGitの記録です。
 
-この章は、2026年11月1日に確認したAntigravityの公式ドキュメントをもとに書きました。**このガイドは、まだアプリの画面では実習できていません。** 自分の画面と違うときは、画面に合わせてください。権限がなぜ必要なのかは、[Claude Code 第4章](../20-claude-code/04-permissions-undo.md)で説明しました。個人のGoogleアカウントを前提にしていて、会社・企業のアカウントでは権限の画面が違います。[^business]
+**権限** は、エージェントが自分の許可なしにやってもいい仕事の範囲です。たとえば「フォルダの中のファイルを直すのは聞かなくていいけど、プログラムのインストールは必ず聞いて」のような約束です。権限がなぜ必要なのかは、[Claude Code 第4章](../20-claude-code/04-permissions-undo.md)でもっと詳しく説明しました（選択）。
+
+このガイドは、まだアプリの画面では実習できていません。自分の画面と違うときは、画面に合わせてください。この章は、個人のGoogleアカウントを前提に書きました。[^tested]
 
 ## 権限のプリセット4種類
 
@@ -30,13 +34,26 @@
 
 ## 柵と基本のルール
 
-アプリには**ターミナルの柵**（サンドボックス）があり、公式ドキュメントは**初期設定でオン**だと説明しています。[^sandbox] ただし、プリセットによって違います。DefaultとAutoではオンになり、Request ReviewとTurboではオフになります。[^by-preset] 柵の中のコマンドは、作業フォルダと一時フォルダだけを使い、**インターネットには出られません。**[^no-net] `~/.ssh`や`.env`のような機密性の高いファイルも、ブロックされます。[^sensitive]
+アプリには**ターミナルの柵**（サンドボックス、Sandbox）があります。エージェントが実行するコマンドが手を出せる範囲を限っておく仕組みです。公式ドキュメントは**初期設定でオン**だと説明しています。[^sandbox]
+
+ただし、プリセットによって違います。[^by-preset]
+
+- **オン**: Default・Auto
+- **オフ**: Request Review・Turbo
+
+柵がオンのとき、コマンドはこのように制限されます。
+
+- 作業フォルダと一時フォルダだけを使います。
+- **インターネットには出られません。**[^no-net]
+- `~/.ssh`や`.env`のような機密性の高いファイル（パスワードや鍵が入ったファイル）も、ブロックされます。[^sensitive]
+
+たとえばDefaultで、エージェントがインターネットから何かをダウンロードするコマンドを使おうとすると、柵の外に出る必要があります。このとき、アプリがそのコマンドを自分で判断します。安全で元に戻せるコマンドは聞かずに進め、危険なコマンドや元に戻せないコマンドは止まって、自分の許可を求めます。[^presets]
 
 プリセットに関係なく、基本のルールもあります。
 
 - プロジェクトフォルダの**中**のファイルの読み書きは、聞かれません。**外**のファイルには許可が必要です。[^files]
 - Webページの読み込みと操作は、初期設定が「聞く」です。[^web]
-- ルールが重なったときは、ブロック（Deny）> 確認（Ask）> 許可（Allow）の順で決まります。[^order]
+- ルールが重なったときは、ブロック（Deny）> 確認（Ask）> 許可（Allow）の順で決まります。[^order] たとえば「Webページの読み込みは許可」と「このサイトはブロック」を両方決めておくと、そのサイトではブロックが勝ちます。今すぐルールを作る必要はありません。
 
 会話の中で許可したことは残ることがあり、エージェントが信頼できる動作を少しずつ覚えていきます。[^persist] 便利ですが、何を許可したかは覚えておいてください。
 
@@ -46,18 +63,25 @@
 
 ## 元に戻す
 
-**Reviewウィンドウの破棄には気をつけてください。**「Discard unstaged changes」は**確認なしですぐに**適用され、記録されていない新しいファイルまで消します。[^discard] 初期の表示には自分で直したものも入っているので（[第2章](02-first-task.md)）、破棄する前に、何が入っているかを必ず見てください。
+**Reviewウィンドウの破棄には気をつけてください。**「Discard unstaged changes」は、まだ`git add`で記録するリストに載せていない変更を捨てるボタンです。このボタンは**確認なしですぐに**適用され、一度も記録されていない新しいファイルまで消します。[^discard]
 
-ターミナルには、会話をひとつ前の安定した状態に戻す`/rewind`（または`/undo`）があります。[^rewind] 名前はClaude Codeの巻き戻しと似ていますが、公式ドキュメントは「会話」を戻すとしか説明していません。ファイルまで戻るのかは、書かれていません。
+初期の表示には、自分で直したものも入っています（[第2章](02-first-task.md)）。そのため、このボタンを押すと、エージェントが直したものだけでなく、自分で直したものまで消えることがあります。破棄する前に、何が入っているかを必ず見てください。
 
-アプリにも元に戻す機能があるようです。公式の変更履歴に、「Confirm Undo」の確認ウィンドウに、会話だけを戻す選択肢が加わったという内容があります。[^undo] ただし、**使い方を説明したドキュメントは見つかりませんでした**し、このガイドもアプリで確認できていません。
-
-そこで、この段階でもCodex 第4章と同じ習慣を使います。
+いちばん確実な元に戻す方法は、**Gitの記録** です。この段階でもCodex 第4章と同じ習慣を使います。
 
 1. 任せる前: Gitで今の状態を記録しておく。
 2. 任せる。
 3. ReviewウィンドウのAgent Editsで、変わったものだけを見る。
 4. よければまた記録し、そうでなければ元に戻す。
+
+Gitのコマンドを知らなくても大丈夫です。エージェントに「今の状態をGitで記録して」と頼めばOKです（Claude Codeで確認した方法です。Antigravityでは、このガイドはまだ確認できていません）。
+
+ほかにも元に戻す機能はありますが、ファイルまで戻るのかはまだ確認されていません。
+
+::: details 詳しく（クリックして開く）
+- ターミナルには、会話をひとつ前の安定した状態に戻す`/rewind`（または`/undo`）があります。[^rewind] 名前はClaude Codeの巻き戻しと似ていますが、公式ドキュメントは「会話」を戻すとしか説明していません。ファイルまで戻るのかは、書かれていません。
+- アプリにも元に戻す機能があるようです。公式の変更履歴に、「Confirm Undo」の確認ウィンドウに、会話だけを戻す選択肢が加わったという内容があります。[^undo] ただし、**使い方を説明したドキュメントは見つかりませんでした**し、このガイドもアプリで確認できていません。
+:::
 
 <Quiz id="ch604-undo" />
 
@@ -89,6 +113,7 @@
 
 次の章: [第5章 計画・予約・ブラウザ・目標](05-plan-schedule.md)
 
+[^tested]: この章は、2026年11月1日に確認したAntigravityの公式ドキュメントをもとに書きました。このガイドは、まだアプリの画面では実習できていません。会社・企業のアカウントでは、権限の画面が違います。[^business]
 [^business]: Antigravity 公式ドキュメント「Agent settings」。"Business and enterprise accounts use the following settings instead of the permission presets above." https://antigravity.google/docs/agent-settings (確認日 2026-11-01)
 [^presets]: Antigravity 公式ドキュメント「Agent settings」。"**Request Review** (_“Every command requires approval.”_): The sandbox is off and every terminal command requires approval." / "**Default** (_“Ask before sensitive operations.”_): Commands run without prompting inside the [Terminal sandbox](https://antigravity.google/docs/sandbox); running outside the sandbox requires approval." / "When a command needs to run outside the sandbox, Antigravity automatically evaluates it so safe, reversible commands proceed without prompting while risky or irreversible actions still pause for your approval." https://antigravity.google/docs/agent-settings (確認日 2026-11-01)
 [^turbo]: Antigravity 公式ドキュメント「Agent settings」。"**Turbo** (_“Run all commands without restrictions.”_): All commands run without prompting with no isolation or restrictions, and the agent has full read and write access to your filesystem." https://antigravity.google/docs/agent-settings (確認日 2026-11-01)

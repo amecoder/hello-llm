@@ -14,7 +14,7 @@
 
 [8章](08-memory-settings.md)のCLAUDE.mdと並べてみると、違いがわかります。
 
-- **惜しい例**: CLAUDE.mdに「ファイルを変えたら、변경기록.txtに1行残して」と書く。守るのはClaudeです。抜け落ちることがあります。
+- **惜しい例**: CLAUDE.mdに「ファイルを変えたら、changelog.txtに1行残して」と書く。守るのはClaudeです。抜け落ちることがあります。
 - **良い例**: 同じことをフックにする。守るのはClaude Codeです。ファイルを変えるたびに、そのあとコマンドが実行されます。
 
 毎回必ず起きなければならないことには、フックを使ってください。[^every-time] だからといって、ルールを全部フックに移す必要はありません。口調や文書の形式のようなルールは、CLAUDE.mdで十分です。フックは「抜けると困ること」にだけ使ってください。
@@ -41,14 +41,14 @@
 cat > .claude/settings.json <<'EOF'
 {
   "permissions": {
-    "deny": ["Read(./비밀/**)"]
+    "deny": ["Read(./secret/**)"]
   },
   "hooks": {
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
         "hooks": [
-          { "type": "command", "command": "date '+%F %T ファイルが変更されました' >> 변경기록.txt" }
+          { "type": "command", "command": "date '+%F %T ファイルが変更されました' >> changelog.txt" }
         ]
       }
     ]
@@ -64,16 +64,16 @@ Windows PowerShellでは、`notepad .claude\settings.json` でメモ帳を開き
 
 - `PostToolUse`: Claudeがツールを使った **あと** という意味です。すでに終わったことを元に戻すことはできません。ツールを使う **前** に割り込んで止められるタイミングは `PreToolUse` です。[^post]
 - `matcher`: どのツールに反応するかを決めます。`Write|Edit` は、ファイルを作るツールと直すツールです。ここで `|` は「または」という意味です。Claudeがシェルのコマンドで変えたファイルには、このフックは反応しません。
-- `command`: 実行するコマンドです。今の日付・時刻と文を、`변경기록.txt`（変更記録.txt）の最後に書き足します。コマンドを部品に分けてみると、こうなります。
+- `command`: 実行するコマンドです。今の日付・時刻と文を、`changelog.txt`（変更記録.txt）の最後に書き足します。コマンドを部品に分けてみると、こうなります。
   - `date`: 今の日付と時刻を出力するコマンドです。
   - `'+%F %T ファイルが変更されました'`: 出力する形です。`%F` の場所に日付（`2026-11-06`）、`%T` の場所に時刻（`11:19:11`）が入ります。
-  - `>> 변경기록.txt`: 結果をそのファイルの最後に書き足します。10章の `>` はファイルを上書きし、`>>` は後ろに続けて書きます。ファイルがなければ新しく作ります。
+  - `>> changelog.txt`: 結果をそのファイルの最後に書き足します。10章の `>` はファイルを上書きし、`>>` は後ろに続けて書きます。ファイルがなければ新しく作ります。
 
 上書きする代わりに、Claudeに言葉で頼んでもかまいません。[^ask-claude] 自分のプロジェクトのように、すでに設定が入っているファイルなら、この方法のほうがよいです。`.claude` フォルダは特別に守られている場所なので、このとき許可の画面が出ることがあります。[^protected]
 
 ```text
 .claude/settings.json にフックを追加して。ClaudeがWriteかEditのツールを使ったあとに、毎回下のコマンドが動くようにして。すでにある内容は消さないで。
-date '+%F %T ファイルが変更されました' >> 변경기록.txt
+date '+%F %T ファイルが変更されました' >> changelog.txt
 ```
 
 すでに `hooks` の欄があるなら、まるごと置き換えずに、その中にもうひとつ入れます。[^sibling] Windowsでは、このフックは試していません。`date` コマンドはbashの形式なので、そのままでは実行されないことがあります。そのときは、Claudeに自分の環境に合うコマンドに変えてほしいと頼んでください。
@@ -81,16 +81,16 @@ date '+%F %T ファイルが変更されました' >> 변경기록.txt
 では試してみます。`claude` を起動して、こう送ります。
 
 ```text
-notes フォルダに 훅시험.md を作って、「フックのテスト」と1行だけ書いて。
+notes フォルダに hook-test.md を作って、「フックのテスト」と1行だけ書いて。
 ```
 
-終わったら、`! cat 변경기록.txt` と入力します。実際に動かしたときは、こんな1行が残りました。
+終わったら、`! cat changelog.txt` と入力します。実際に動かしたときは、こんな1行が残りました。
 
 ```text
 2026-11-06 11:19:11 ファイルが変更されました
 ```
 
-設定ファイル全体は、[11장-settings.json.txt](/practice/cli/results/11장-settings.json.txt)で見られます。
+設定ファイル全体は、[ch11-settings.json.txt](/practice/ja/cli/results/ch11-settings.json.txt)で見られます。
 
 <Quiz id="ch811-log" />
 
@@ -105,7 +105,7 @@ notes フォルダに 훅시험.md を作って、「フックのテスト」と
   This menu is read-only. To add or change a hook, edit settings.json or ask Claude. Learn more
 
     PostToolUse  after tool execution
-  ❯ [Project] date '+%F %T ファイルが変更されました' >> 변경기록.txt   Write|Edit · command
+  ❯ [Project] date '+%F %T ファイルが変更されました' >> changelog.txt   Write|Edit · command
 
     All events
 
@@ -169,9 +169,9 @@ cat .claude/settings.json
 1. `/exit` で抜けて、ターミナルで設定のボックスを貼り付けます。
 2. `claude` を起動し、入力欄の下に `街角カフェ整理中` が見えるかを確かめます。
 3. `/hooks` と入力して、`PostToolUse` の下に表示されるかを確認し、Escで閉じます。
-4. フックのテストの依頼を送ったあと、`! cat 변경기록.txt` で1行増えたかを見ます。
+4. フックのテストの依頼を送ったあと、`! cat changelog.txt` で1行増えたかを見ます。
 
-自分に聞いてみてください。フックは本当に実行されたか？ Claudeの答えではなく、`변경기록.txt` を直接開いて答えてください。
+自分に聞いてみてください。フックは本当に実行されたか？ Claudeの答えではなく、`changelog.txt` を直接開いて答えてください。
 
 ## まとめ
 

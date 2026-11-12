@@ -80,7 +80,7 @@ export const LEVEL_BASIC: Record<string, QuestionText> = {
       "越老的程式，越比現在的 AI 更懂人心，更會安慰人",
       "對話程式被限制得完全不能用來傾訴煩惱",
     ],
-    explain: "即使是隻有幾條規則的 ELIZA，也有很多人覺得它理解了自己（ELIZA 效應）。不能僅憑這種感覺就判斷 AI 有心。",
+    explain: "即使是只有幾條規則的 ELIZA，也有很多人覺得它理解了自己（ELIZA 效應）。不能僅憑這種感覺就判斷 AI 有心。",
   },
   "basic-s1-size-not-all": {
     prompt: "朋友說：「AI 模型名字後面的數字越大，就一定越聰明。」怎麼回答才對？",
@@ -526,7 +526,7 @@ export const LEVEL_BASIC: Record<string, QuestionText> = {
     prompt: "新員工泰浩想用 AI 整理公司的工作報告。最先該做的是什麼？",
     choices: [
       "把報告原件整篇貼上進去，儘快做完",
-      "偷偷上傳到自己在家用的個人 AI 賬號來整理",
+      "偷偷上傳到自己在家用的個人 AI 帳號來整理",
       "確認公司有沒有 AI 使用規定，能用什麼",
       "把同事的名字和業績也一起放進去，詳細地問",
     ],

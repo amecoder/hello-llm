@@ -1,5 +1,7 @@
 # 第3章 对话管理 — 查找·整理·分享·导出
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：过去的对话，可以在侧边菜单里**查找、置顶、改名、删除。**
 > 要给别人看时，用**分享链接**；要搬到文档或邮件里时，用**导出**。只有一点一定要记住：分享链接是拿到链接的任何人都能读。
 
@@ -12,10 +14,8 @@
 
 比如上周问过腌泡菜的材料，就用“腌泡菜”来搜。搜索栏会单独在屏幕上方打开。[^screen]
 
-**个人账号必须开启「保存活动记录（활동 기록 보관）」，才能使用对话的查找·置顶·改名·删除。**[^recent]
+**个人账号必须开启「保存活动记录（활동 기록 보관）」，才能使用对话的查找·置顶·改名·删除。**[^recent][^work]
 「保存活动记录」是把我的对话保存在账号里的设置。年满 18 周岁的话，一开始就是开着的。它在点「设置（설정）」→「活动（활동）」后打开的「Gemini 应用活动（Gemini 앱 활동）」页面里。怎么关、关了之后有什么变化，在[第9章](09-privacy.md#开启和关闭「保留活动记录」)里讲。[^activity]
-
-公司·学校账号由管理员管理记录。这时我不能删除对话。[^recent]
 
 <Quiz id="ch303-find" />
 
@@ -33,7 +33,7 @@
 | 「重命名（이름 변경）」 | 修改对话标题 |
 | 「删除（삭제）」 | 删除对话 |
 | 「分享对话（대화 공유）」 | 生成公开链接（见下面的“分享对话”） |
-| 「添加到笔记本（노트북에 추가）」 | 把对话收进笔记本（笔记本在第6章） |
+| 「添加到笔记本（노트북에 추가）」 | 把对话收进按主题归类的合集（笔记本）（第6章） |
 
 出处：Google 帮助文档和实际界面[^recent][^screen]
 
@@ -82,7 +82,7 @@
 - **不会带上我的名字。** 链接地址和分享页面上，不会显示我的名字或账号。
 - **按生成链接那一刻的样子显示。** 之后修改或继续这场对话，分享页面也不会变。想让别人看到修改后的内容，请重新生成链接。
 - **做出的成果也会一起显示。** Canvas 文档、图片、视频也会进入分享页面。
-- **收到的人可以接着对话。** 打开链接的人，可以用「继续这个聊天（이 채팅 계속하기）」接着聊。不过，用 Gem 做的对话和未满 18 周岁的人不行。另外，**如果是我用 Google AI 付费套餐做的对话，对方也必须是付费套餐**才能接着聊。
+- **收到的人可以接着对话。** 打开链接的人，可以用「继续这个聊天（이 채팅 계속하기）」接着聊。不过，用 Gem（放进指示做成的专属 Gemini，[第7章](07-skills-apps.md)）做的对话和未满 18 周岁的人不行。另外，**如果是我用 Google AI 付费套餐做的对话，对方也必须是付费套餐**才能接着聊。
 
 ### 删除分享过的链接
 
@@ -122,7 +122,7 @@
 ![点表格正下方的小小三个点（①）后打开的菜单（②）— 「导出到 Sheets」「复制」。下面的 ③ 是整个答案的工具栏](../../../guide/12-gemini/assets/shot-11-table-menu-marked.png)
 
 ① 表格下方的三个点和 ③ 答案下方的三个点是不同的菜单。只想搬表格，就点 ①。[^screen]
-「在 Gmail 中起草」需要有 Gmail 账号。邮件不会直接发出去，而是保存为**草稿**，所以请确认收件人和内容后，亲自发送。[^export]
+「在 Gmail 中起草」需要有 Gmail 账号。邮件不会直接发出去，而是保存为**草稿**，所以请确认收件人和内容后，亲自发送。[^export][^export-terms]
 
 比如，像下面这样得到的表格，用「导出到 Sheets」搬过去，马上就能排序和修改。
 
@@ -131,9 +131,7 @@
 不要用其他应用，就在这个聊天里用表格展示给我。
 ```
 
-写第二行是有原因的。本指南只发第一行时，Gemini 没有在对话里展示表格。它转而想连接 Google Sheets，然后停住了。[^screen] 如果想先在对话里确认表格，请像第二行那样讲清楚。
-
-导出的文档和邮件，遵循那个服务（Docs·Gmail）的条款和政策。[^export]
+第二行的意思是“先在这个聊天里展示表格”。如果想先在对话里确认表格，请像这样讲清楚。[^sheets-try]
 
 <Quiz id="ch303-export" />
 
@@ -158,13 +156,14 @@
 链接可能是网站，也可能是我上传的文件，或者我连接过的 Gmail·Docs。[^sources]
 **并不是每个答案都有来源。** 没有「来源」按钮，就说明这个答案没有链接。[^sources]
 
-Google 也明确说过，Gemini 可能出错。[^accuracy]
+Google 也明确说过，Gemini 可能出错。下面三点尤其要小心。[^accuracy]
 
-- **不要把它当作医疗·法律·金钱问题上的专家建议。**
+- **不要把它当作医疗·法律·金钱问题上的专家建议。** 比如，对“这两种药能一起吃吗？”的回答，请再找医生或药师确认。
 - **关于人的答案尤其要再核实。** 可能会出现错误的内容。
 - **Gemini 对它自己的说明也可能出错。** 比如，对“你是怎么训练的？”或“你是怎么标注来源的？”的回答，可能和实际不符。如果好奇某个功能，请看本指南或官方帮助文档。
 
-看到错误的答案，请点答案下方的「回答不好（대답이 마음에 들지 않아요）」（大拇指向下），写明哪里错了。[^accuracy] 不过，一旦发送反馈，那场对话也会一起发给 Google（[第1章](01-getting-started.md#用不了的时候先试试这些)）。
+看到错误的答案，请点答案下方的「回答不好（대답이 마음에 들지 않아요）」（大拇指向下），写明哪里错了。[^accuracy]
+不过，一旦发送反馈，那场对话也会一起发给 Google（[第1章](01-getting-started.md#用不了的时候先试试这些)）。
 
 <Quiz id="ch303-regen" />
 
@@ -205,10 +204,13 @@ Google 也明确说过，Gemini 可能出错。[^accuracy]
 下一章：[第4章. 文件与创作](04-files-create.md)
 
 [^screen]: 在 Gemini 网页界面（Google AI Pro，韩语）里，用练习用的对话亲自确认。侧边菜单「搜索聊天（채팅 검색）」（搜索栏在屏幕上方打开），「设置」菜单的「我的公开链接（내 공개 링크）」。侧边菜单里对话的三个点菜单「分享对话（대화 공유）」「置顶（고정）」「重命名（이름 변경）」「添加到笔记本（노트북에 추가）」「删除（삭제）」。对话界面右上角「打开对话操作菜单（대화 작업 메뉴 열기）」菜单「分享对话」「置顶」「重命名」「下载 PDF（PDF 다운로드）」「导出到 Docs（Docs로 내보내기）」「添加到笔记本」「删除」。答案下方工具栏「回答不错（대답이 마음에 들어요）」「回答不好（대답이 마음에 들지 않아요）」「重新运行（다시 실행）」「复制（복사）」「更多选项（옵션 더보기）」，「更多选项」菜单「在新聊天中创建分支（새 채팅에서 브랜치 생성）」「朗读（듣기）」「导出到 Docs」「在 Gmail 中起草（Gmail 초안 작성）」「举报法律问题（법적 문제 신고）」「显示思考步骤（사고 단계 표시）」。表格下方「更多选项」菜单「导出到 Sheets（Sheets로 내보내기）」「复制」。帮助文档里的「새 채팅에서 분기」「재생성」「공유 및 내보내기」，以及答案下方的「공유」，在这个界面里没有看到，它们已经换成了上面的名称。只发“做成表格”时，答案停在了「Connecting to Google Sheets」的提示上。（确认日期 2026-10-31）
-[^recent]: Google 帮助文档，《Find & manage your recent chats in Gemini Apps》（韩语版《Gemini 앱에서 최근 채팅 확인 및 관리하기》）。"You can pin, rename, and delete your chats so the important ones are easy to find." / "If you're using Gemini Apps with a personal account, the features below are only available if you have Keep Activity turned on." / "If you’re using Gemini Apps with a work or school account, your Gemini Apps Activity is controlled by your Google Workspace administrator and you can’t delete chats." / "In the text box, enter what you want to search." / "Click Pin. You can find your pinned chat at the top of the “Recent” section." / "On the side panel, hover over the chat you want to rename." / "You can create a new chat that branches off from a specific point in a conversation, then return to the main conversation to continue it." / "Tip: Deleting a branched chat doesn’t delete the original chat. Deleting the original chat doesn’t delete a branched chat." / "Important: When you delete a chat from your pinned and recent chats, it's also deleted from Gemini Apps Activity." / "If you delete a chat in pinned and recent chats, it also deletes any content created in that chat (like Canvas docs and apps) and the related activity from Gemini Apps Activity." 韩语界面名称：「더보기」「고정」「고정 해제」「이름 변경」「삭제」「새 채팅에서 분기」。 https://support.google.com/gemini/answer/13666746（确认日期 2026-10-31）
-[^activity]: Google 帮助文档，《Manage & delete your activity in Gemini Apps》。"If you’re 18 or over, Keep Activity is on by default." 界面名称「保存活动记录（활동 기록 보관）」，是在点「设置（설정）」→「活动（활동）」后打开的「Gemini 应用活动（Gemini 앱 활동）」页面里确认的（2026-10-30，`docs/reports/2026-10-30_Gemini-공식-자료.md` 「实际界面亲自确认」）。 https://support.google.com/gemini/answer/13278892（确认日期 2026-10-31）
-[^share]: Google 帮助文档，《Share your chats from Gemini Apps》（韩语版《Gemini 앱의 채팅 공유하기》）。"Anyone with the link can read the chat, even if you didn’t share the link with them directly." / "To share the link: The g.co/gemini/share link is auto-copied." / "If you upload an image to a chat and then share the chat, the image is available and downloadable from the shared chat." / "We don’t add your name or account to the URL address or the shared chat page." / "If you edit or continue the chat after you create a public link, the content on the shared chat page won’t change." / "The shared chat will include any AI-generated artifacts from the conversation, including Canvas documents, images, and videos." / "Continue the chat with Gemini Apps on their own (except for a chat that was created with Gems or for users under the age of 18)." / "If the chat was created by a user with a Google AI subscription, you can continue it only if you have a Google AI subscription." / "anyone with the link can read the chat, reshare it with others" / "It doesn’t delete the chat from your Gemini Apps activity." / "Tip: To delete all your public links, click Delete all links." / "It doesn't delete any posts with the link that you've made on third-party sites. To delete the post, delete it from the third party site." / "Your links are publicly available for as long as the associated chat is saved in your Gemini Apps Activity." 韩语界面名称：「공유」「대화 공유」「이 채팅 계속하기」「내 공개 링크」「모든 링크 삭제」。 https://support.google.com/gemini/answer/13743730（确认日期 2026-10-31）
-[^export]: Google 帮助文档，《Export responses from Gemini Apps》（韩语版《Gemini 앱 대답 내보내기》）。"You can export responses from Gemini Apps to Google Workspace apps like Gmail and Google Docs. You can also export code to developer tools like Google Colab and Replit." / "If you export content or code from Gemini Apps, the terms and policies of the service you export to will apply to that content." / "Below the response, click Share & export   Export to Docs. This saves a new doc in Google Drive." / "Below the response, click Share & export   Draft in Gmail. This creates a new draft email in Gmail." / "Important: This feature is only available if you have a Gmail account." / "Important: This feature is only available for responses that have a table. Tables with images can’t be exported to Sheets." 韩语界面名称：「공유 및 내보내기」「Docs로 내보내기」「Gmail 초안 작성」「Sheets로 내보내기」。 https://support.google.com/gemini/answer/14184041（确认日期 2026-10-31）
-[^regen]: Google 帮助文档，《Regenerate or modify responses from Gemini Apps》（韩语版《Gemini 앱에서 대답 재생성 또는 수정하기》）。"Important: You can regenerate only the most recent response in a chat." / "To switch between response versions: Below the response, click the arrows to switch between versions." / "For example, you can adjust the length, simplify the language, and change the tone of a response." / "You can continue to chat with Gemini to modify a response. For example, you can ask Gemini to simplify the language or provide more details about your topic." 韩语界面名称：「재생성」。 https://support.google.com/gemini/answer/14262426（确认日期 2026-10-31）
-[^sources]: Google 帮助文档，《View related sources from Gemini Apps》（韩语版《Gemini 앱의 관련 출처 보기》）。"When sources are available, you can find the Sources button at the bottom of the response or in-line throughout the response. On the right, a side panel will open with the relevant links." / "These links may include content that is related to parts of Gemini’s response, including public websites, files you have uploaded, or documents or emails from Google Workspace if you’ve connected to Workspace." / "Not all responses include related links or sources." 按钮名称「출처」是帮助文档韩语版的名称。本指南的练习对话里没有附带来源，所以没能在界面上确认。 https://support.google.com/gemini/answer/14143489（确认日期 2026-10-31）
-[^accuracy]: Google 帮助文档，《Learn about responses from Gemini Apps》（韩语版《Gemini 앱의 대답에 관해 자세히 알아보기》）。"Don’t rely on responses from Gemini Apps as medical, legal, financial or other professional advice." / "Gemini Apps may provide inaccurate or inappropriate responses about people, so double-check its responses." / "One example is that Gemini can misrepresent how it works, including in response to prompts asking how it was trained or how it carries out various functions (like citing sources, or providing fresh information)." / "If you see a hallucination or something that isn’t accurate, please click the thumbs down button and provide your feedback." 大拇指向下按钮的韩语名称「대답이 마음에 들지 않아요」，出自《Send feedback or report a problem with Gemini Apps》（13275746）的韩语版。 https://support.google.com/gemini/answer/16279220（确认日期 2026-10-31）
+[^work]: 公司·学校账号由管理员管理记录。这时我不能删除对话。依据是下面的《Find & manage your recent chats in Gemini Apps》帮助文档。
+[^sheets-try]: 本指南只发第一行时，Gemini 没有在对话里展示表格。它转而想连接 Google Sheets，然后停住了（见下面的界面确认脚注）。
+[^export-terms]: 导出的文档和邮件，遵循那个服务（Docs·Gmail）的条款和政策。依据是下面的《Export responses from Gemini Apps》帮助文档。
+[^recent]: Google 帮助文档，《Find & manage your recent chats in Gemini Apps》（韩语版《Gemini 앱에서 최근 채팅 확인 및 관리하기》）。"You can pin, rename, and delete your chats so the important ones are easy to find." / "If you're using Gemini Apps with a personal account, the features below are only available if you have Keep Activity turned on." / "If you’re using Gemini Apps with a work or school account, your Gemini Apps Activity is controlled by your Google Workspace administrator and you can’t delete chats." / "In the text box, enter what you want to search." / "Click Pin. You can find your pinned chat at the top of the “Recent” section." / "On the side panel, hover over the chat you want to rename." / "You can create a new chat that branches off from a specific point in a conversation, then return to the main conversation to continue it." / "Tip: Deleting a branched chat doesn’t delete the original chat. Deleting the original chat doesn’t delete a branched chat." / "Important: When you delete a chat from your pinned and recent chats, it's also deleted from Gemini Apps Activity." / "If you delete a chat in pinned and recent chats, it also deletes any content created in that chat (like Canvas docs and apps) and the related activity from Gemini Apps Activity." 韩语界面名称：「더보기」「고정」「고정 해제」「이름 변경」「삭제」「새 채팅에서 분기」。 https://support.google.com/gemini/answer/13666746 （确认日期 2026-10-31）
+[^activity]: Google 帮助文档，《Manage & delete your activity in Gemini Apps》。"If you’re 18 or over, Keep Activity is on by default." 界面名称「保存活动记录（활동 기록 보관）」，是在点「设置（설정）」→「活动（활동）」后打开的「Gemini 应用活动（Gemini 앱 활동）」页面里确认的（2026-10-30，`docs/reports/2026-10-30_Gemini-공식-자료.md` 「实际界面亲自确认」）。 https://support.google.com/gemini/answer/13278892 （确认日期 2026-10-31）
+[^share]: Google 帮助文档，《Share your chats from Gemini Apps》（韩语版《Gemini 앱의 채팅 공유하기》）。"Anyone with the link can read the chat, even if you didn’t share the link with them directly." / "To share the link: The g.co/gemini/share link is auto-copied." / "If you upload an image to a chat and then share the chat, the image is available and downloadable from the shared chat." / "We don’t add your name or account to the URL address or the shared chat page." / "If you edit or continue the chat after you create a public link, the content on the shared chat page won’t change." / "The shared chat will include any AI-generated artifacts from the conversation, including Canvas documents, images, and videos." / "Continue the chat with Gemini Apps on their own (except for a chat that was created with Gems or for users under the age of 18)." / "If the chat was created by a user with a Google AI subscription, you can continue it only if you have a Google AI subscription." / "anyone with the link can read the chat, reshare it with others" / "It doesn’t delete the chat from your Gemini Apps activity." / "Tip: To delete all your public links, click Delete all links." / "It doesn't delete any posts with the link that you've made on third-party sites. To delete the post, delete it from the third party site." / "Your links are publicly available for as long as the associated chat is saved in your Gemini Apps Activity." 韩语界面名称：「공유」「대화 공유」「이 채팅 계속하기」「내 공개 링크」「모든 링크 삭제」。 https://support.google.com/gemini/answer/13743730 （确认日期 2026-10-31）
+[^export]: Google 帮助文档，《Export responses from Gemini Apps》（韩语版《Gemini 앱 대답 내보내기》）。"You can export responses from Gemini Apps to Google Workspace apps like Gmail and Google Docs. You can also export code to developer tools like Google Colab and Replit." / "If you export content or code from Gemini Apps, the terms and policies of the service you export to will apply to that content." / "Below the response, click Share & export   Export to Docs. This saves a new doc in Google Drive." / "Below the response, click Share & export   Draft in Gmail. This creates a new draft email in Gmail." / "Important: This feature is only available if you have a Gmail account." / "Important: This feature is only available for responses that have a table. Tables with images can’t be exported to Sheets." 韩语界面名称：「공유 및 내보내기」「Docs로 내보내기」「Gmail 초안 작성」「Sheets로 내보내기」。 https://support.google.com/gemini/answer/14184041 （确认日期 2026-10-31）
+[^regen]: Google 帮助文档，《Regenerate or modify responses from Gemini Apps》（韩语版《Gemini 앱에서 대답 재생성 또는 수정하기》）。"Important: You can regenerate only the most recent response in a chat." / "To switch between response versions: Below the response, click the arrows to switch between versions." / "For example, you can adjust the length, simplify the language, and change the tone of a response." / "You can continue to chat with Gemini to modify a response. For example, you can ask Gemini to simplify the language or provide more details about your topic." 韩语界面名称：「재생성」。 https://support.google.com/gemini/answer/14262426 （确认日期 2026-10-31）
+[^sources]: Google 帮助文档，《View related sources from Gemini Apps》（韩语版《Gemini 앱의 관련 출처 보기》）。"When sources are available, you can find the Sources button at the bottom of the response or in-line throughout the response. On the right, a side panel will open with the relevant links." / "These links may include content that is related to parts of Gemini’s response, including public websites, files you have uploaded, or documents or emails from Google Workspace if you’ve connected to Workspace." / "Not all responses include related links or sources." 按钮名称「출처」是帮助文档韩语版的名称。本指南的练习对话里没有附带来源，所以没能在界面上确认。 https://support.google.com/gemini/answer/14143489 （确认日期 2026-10-31）
+[^accuracy]: Google 帮助文档，《Learn about responses from Gemini Apps》（韩语版《Gemini 앱의 대답에 관해 자세히 알아보기》）。"Don’t rely on responses from Gemini Apps as medical, legal, financial or other professional advice." / "Gemini Apps may provide inaccurate or inappropriate responses about people, so double-check its responses." / "One example is that Gemini can misrepresent how it works, including in response to prompts asking how it was trained or how it carries out various functions (like citing sources, or providing fresh information)." / "If you see a hallucination or something that isn’t accurate, please click the thumbs down button and provide your feedback." 大拇指向下按钮的韩语名称「대답이 마음에 들지 않아요」，出自《Send feedback or report a problem with Gemini Apps》（13275746）的韩语版。 https://support.google.com/gemini/answer/16279220 （确认日期 2026-10-31）

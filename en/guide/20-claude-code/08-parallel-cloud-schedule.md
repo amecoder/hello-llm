@@ -1,5 +1,7 @@
 # Chapter 8. Multitasking, Cloud, and Schedules — Let Your Organizer Run on Its Own
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **In short**: You can open several sessions and **run tasks side by side**. To make a task run on its own at a set time, create a **scheduled task**.
 > There are three ways to schedule tasks (Desktop, Cloud, and `/loop`), and the biggest difference is **whether your computer needs to stay on**.
 
@@ -15,7 +17,11 @@ Each session is an independent conversation with its own context and changes.[^s
 
 For example, you can make study notes with `/study-notes` in one session and a weekly review with `/weekly-review` in another session at the same time. They write to different files, so they will not clash.
 
-**Do not let two sessions edit the same file at the same time.** Rewinding in one session normally does not track changes made by another session (Chapter 4).[^other-session] If you want to try changing the same file in different ways, open a folder that is a Git repository (a folder where you turned on change history in Chapters 3 and 4), turn on **Worktree** below the input box, and start a session. That session will then work in an **isolated copy** of the folder.[^worktree]
+**Do not let two sessions edit the same file at the same time.** One session may overwrite lines the other session changed. On top of that, rewinding in one session normally does not track changes made by another session (Chapter 4).[^other-session] Then it is hard to undo if something goes wrong.
+
+When you want to try changing the same file in different ways, the feature to use is **Worktree** (an isolated copy of the folder). In a folder that is a Git repository (a folder where you turned on change history in Chapters 3 and 4), turn on Worktree below the input box and start a session. That session will then work in the **copy**, not the original folder.[^worktree] In effect, the two sessions no longer touch each other's files.
+
+Merging changes from the copy back into the original folder takes a bit more Git knowledge. So at first, it is enough to **edit each file in only one session**.
 
 <Quiz id="ch408-parallel" />
 
@@ -29,13 +35,18 @@ A scheduled task makes Claude **start a new session automatically** at a set tim
 | Requires computer on | Yes (app running, awake) | No | Yes |
 | Requires open session | No | No | Yes |
 | Access to your files | Yes | No (freshly downloaded copy) | Yes |
-| Minimum interval | 1 hour (in the form) | 1 hour | 1 minute |
 
 Source: Claude Code official docs[^compare]
 
-**Desktop scheduled tasks are the right fit for your organizer.** That is because Claude needs to read the `inbox` notes on your computer. Cloud scheduled tasks run even when your computer is off, but they work by downloading a fresh copy of a GitHub repository instead of using your local files.[^compare][^cloud] Use `/loop` when you want to repeat a quick check inside an open session; it stops on its own after 7 days.[^loop]
+**Desktop scheduled tasks are the right fit for your organizer.** That is because Claude needs to read the `inbox` notes on your computer.
 
-In older versions of the app, scheduled tasks may appear under the name **Routines**.[^old-name]
+Cloud scheduled tasks run even when your computer is off. But they cannot see the files on your computer. Instead, they work by downloading a fresh copy, in the cloud, of a **repository** (a folder that keeps a record with Git) you uploaded to **GitHub** (a service for putting sets of files on the internet and sharing them).[^compare][^cloud] If you have never uploaded your `inbox` notes to GitHub, there are no notes for the cloud to read.
+
+Use `/loop` when you want to repeat a quick check inside an open session; it stops on its own after 7 days.[^loop]
+
+::: details More details (click to expand) — How often can it run? (click to expand)
+The shortest interval is 1 hour for Desktop scheduled tasks (based on the on-screen form), 1 hour for Cloud scheduled tasks, and 1 minute for `/loop`.[^compare] For something that runs once a week, like a weekly review, you do not need to worry about this.
+:::
 
 <Quiz id="ch408-kinds" />
 
@@ -49,14 +60,31 @@ There are two ways to create a Desktop scheduled task.
 Create a scheduled task that runs /weekly-review every Friday at 6 PM to make this week's review. If there are no review notes for that week, don't create anything and just leave a note saying "No notes".
 ```
 
-**Method 2 — Create it on the screen.** In the sidebar of the Code tab, click **Scheduled** (or find it inside the More menu) and click **New task**.[^create] You can pick a schedule such as hourly, daily, weekdays, or weekly, or save it without a schedule and run it whenever you want with **Run now**.[^options]
+**Method 2 — Create it on the screen.** In the sidebar of the Code tab, click **Scheduled** (or find it inside the More menu) and click **New task**.[^create] In older versions of the app, these appear as **Routines** and **New routine**.[^old-name] You can pick a schedule such as hourly, daily, weekdays, or weekly, or save it without a schedule and run it whenever you want with **Run now**.[^options]
 
 There are four important things to check when scheduling a task.
 
-1. **The app and your computer must stay awake**: Desktop scheduled tasks **only run while the app is open and your computer is awake**. To stop your computer from sleeping, turn on **Keep computer awake** in settings. Closing your laptop lid will still put it to sleep.[^awake]
-2. **Runs missed while off**: If your computer was asleep, it runs **only the single most recent missed task** when it wakes up. A task set for Friday at 6 PM might run on Saturday morning.[^missed] That is why it helps to **include a condition** in your prompt, such as "If there are no notes for that week…".[^missed]
-3. **Stalling on permission prompts**: Each scheduled task has its own permission mode. If it is set to Manual (수동), the task **pauses and waits** whenever it needs permission.[^perm] After creating a task, run it once with **Run now** and choose **Always allow** on any permission prompt that pops up. That way, future runs will not get stuck.[^perm] This differs from choosing "Allow once (한 번만 허용)" in Chapter 7 because scheduled tasks run while you are not watching.
-4. **Personal allow rules also apply**: The allow rules in your computer's Claude Code settings (`~/.claude/settings.json`) also apply to scheduled task sessions.[^perm]
+**1. The app and your computer must stay awake.**
+
+- Desktop scheduled tasks **only run while the app is open and your computer is awake**.
+- To stop your computer from sleeping, turn on **Keep computer awake** in settings.
+- Closing your laptop lid will still put it to sleep.[^awake]
+
+**2. Runs missed while off happen only once.**
+
+If your computer was asleep, it runs **only the single most recent missed task** when it wakes up. For example, a task set for Friday at 6 PM might run on Saturday morning.[^missed] That is why you **include a condition** in your prompt, such as "If there are no notes for that week…".[^missed] Then, even if it runs late, it will not make an odd review.
+
+**3. It can stall on permission prompts.**
+
+Each scheduled task has its own permission mode. If it is set to Manual (수동), the task **pauses and waits** whenever it needs permission.[^perm] No one is watching, so it stays stuck until someone comes to click.
+
+So after creating a task, run it once with **Run now** and choose **Always allow** on any permission prompt that pops up. That way, future runs will not get stuck.[^perm]
+
+In Chapter 7, we recommended "Allow once (한 번만 허용)". That was because you were watching in front of the screen. Scheduled tasks run while you are away, so you allow things ahead of time. But before choosing Always allow, **read the preview and check that it matches the job you gave (for example, writing the review file)**. If it is a command you do not recognize, reject it and fix your request.
+
+**4. Allow rules in your computer-wide settings also apply.**
+
+Claude Code keeps a settings file shared by all folders on your computer (`~/.claude/settings.json`). The allow rules written there also apply to scheduled tasks.[^perm] If you have never written allow rules in this file, you can skip this.
 
 <Quiz id="ch408-schedule" />
 
@@ -87,7 +115,7 @@ Cloud sessions **keep working even if you turn off your computer.**[^cloud-run] 
 | Term | One-line meaning |
 |---|---|
 | Scheduled task | A task that starts a new session on its own at a set time |
-| Routine | The earlier name for a cloud scheduled task |
+| Routine | The name for scheduled tasks on older app screens |
 | Worktree | An isolated working copy of the same Git repository |
 | Cloud session | A session that runs in the cloud instead of on your computer |
 | `/loop` | A command that repeats a task inside an open session (ends after 7 days) |

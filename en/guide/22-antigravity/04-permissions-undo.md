@@ -1,9 +1,13 @@
 # Chapter 4. Permissions and Undo — Four Presets, Be Careful with Discard
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **In One Line**: In the app, you pick permissions using **four presets** (Request Review, Default, Auto, Turbo). Start with **Request Review** or **Default** at first.
 > **Discard** in the Review pane takes effect **right away without asking to confirm**. The terminal has `/rewind`, but your safest net is still your Git history.
 
-This chapter is based on the official Antigravity docs checked on November 1, 2026. **This guide has not yet been tested directly on the app screen.** If your screen looks different, follow your screen. We explained why permissions matter in [Claude Code Chapter 4](../20-claude-code/04-permissions-undo.md). This guide assumes a personal Google account; work and enterprise accounts have a different permissions screen.[^business]
+**Permissions** are the range of things the agent may do without asking you. For example, a promise like "Don't ask before editing files in the folder, but always ask before installing a program." We explained why permissions matter in more detail in [Claude Code Chapter 4](../20-claude-code/04-permissions-undo.md) (optional).
+
+This guide has not yet been tested directly on the app screen. If your screen looks different, follow your screen. This chapter assumes a personal Google account.[^tested]
 
 ## Four Permission Presets
 
@@ -30,13 +34,26 @@ Projects follow your global setting by default (**Inherit Global**), and you can
 
 ## The Fence and Basic Rules
 
-The app has a **terminal fence** (sandbox), and the official docs say it is **on by default**.[^sandbox] However, it depends on the preset. It turns on in Default and Auto, and turns off in Request Review and Turbo.[^by-preset] Commands inside the fence can only use your workspace folder and temp folders, and **cannot access the internet**.[^no-net] Sensitive files like `~/.ssh` and `.env` are also blocked.[^sensitive]
+The app has a **terminal fence** (sandbox, Sandbox). It is a device that limits what the commands the agent runs can touch. The official docs say it is **on by default**.[^sandbox]
+
+However, it depends on the preset.[^by-preset]
+
+- **On**: Default, Auto
+- **Off**: Request Review, Turbo
+
+When the fence is on, commands are limited like this.
+
+- They can only use your workspace folder and temp folders.
+- They **cannot access the internet**.[^no-net]
+- Sensitive files (files with passwords or keys) like `~/.ssh` and `.env` are also blocked.[^sensitive]
+
+For example, say that in Default the agent tries to use a command that downloads something from the internet. That command has to step outside the fence. The app then evaluates the command on its own. Safe, reversible commands proceed without asking, while risky or irreversible commands pause and ask for your approval.[^presets]
 
 Regardless of your preset, there are also basic rules.
 
 - Reading and writing files **inside** your project folder does not ask. Files **outside** require approval.[^files]
 - Reading and interacting with web pages default to "Ask."[^web]
-- When rules conflict, they are decided in this order: block (Deny) > ask (Ask) > allow (Allow).[^order]
+- When rules conflict, they are decided in this order: block (Deny) > ask (Ask) > allow (Allow).[^order] For example, if you set both "Allow reading web pages" and "Block this site," block wins on that site. You don't need to make any rules right now.
 
 Approvals you give during a chat can stick around, so the agent gradually learns actions it can trust.[^persist] That is convenient, but remember what you approved.
 
@@ -46,18 +63,25 @@ Approvals you give during a chat can stick around, so the agent gradually learns
 
 ## Undoing Changes
 
-**Be careful with Discard in the Review pane.** "Discard unstaged changes" takes effect **right away without asking to confirm**, and it even deletes untracked new files.[^discard] The default view also includes edits you made yourself ([Chapter 2](02-first-task.md)), so always check what is inside before discarding.
+**Be careful with Discard in the Review pane.** "Discard unstaged changes" is a button that throws away changes you have not yet put on the list to record with `git add`. This button takes effect **right away without asking to confirm**, and it even deletes new files that have never been recorded.[^discard]
 
-The terminal has `/rewind` (or `/undo`), which rolls your chat back to an earlier stable state.[^rewind] The name sounds like rewind in Claude Code, but the official docs only say it rolls back the "conversation." They do not say whether it also rolls back files.
+The default view also includes edits you made yourself ([Chapter 2](02-first-task.md)). So pressing this button can erase not only what the agent changed but also what you changed. Always check what is inside before discarding.
 
-The app seems to have an undo feature too. The official changelog mentions that the "Confirm Undo" dialog now has an option to revert only the conversation.[^undo] However, **we could not find docs explaining how to use it**, and this guide could not verify it in the app either.
-
-So at this stage, we use the same habit as in Codex Chapter 4.
+The safest way to undo is your **Git history**. At this stage, too, we use the same habit as in Codex Chapter 4.
 
 1. Before handing off work: save your current state with Git.
 2. Hand off the task.
 3. In the Review pane, switch to Agent Edits to view only what changed.
 4. If it looks good, save again; if not, roll it back.
+
+You don't need to know Git commands. Just ask the agent, "Save the current state with Git" (this is a method we verified in Claude Code; this guide has not yet verified it in Antigravity).
+
+There are other undo features too, but it has not yet been verified whether they also roll back files.
+
+::: details More details (click to expand)
+- The terminal has `/rewind` (or `/undo`), which rolls your chat back to an earlier stable state.[^rewind] The name sounds like rewind in Claude Code, but the official docs only say it rolls back the "conversation." They do not say whether it also rolls back files.
+- The app seems to have an undo feature too. The official changelog mentions that the "Confirm Undo" dialog now has an option to revert only the conversation.[^undo] However, **we could not find docs explaining how to use it**, and this guide could not verify it in the app either.
+:::
 
 <Quiz id="ch604-undo" />
 
@@ -90,6 +114,7 @@ So at this stage, we use the same habit as in Codex Chapter 4.
 
 Next chapter: [Chapter 5. Plan, Schedule, Browser, and Goal](05-plan-schedule.md)
 
+[^tested]: This chapter is based on the official Antigravity docs checked on November 1, 2026. This guide has not yet been tested directly on the app screen. Work and enterprise accounts have a different permissions screen.[^business]
 [^business]: Antigravity official docs, "Agent settings". "Business and enterprise accounts use the following settings instead of the permission presets above." https://antigravity.google/docs/agent-settings (checked on 2026-11-01)
 [^presets]: Antigravity official docs, "Agent settings". "**Request Review** (_“Every command requires approval.”_): The sandbox is off and every terminal command requires approval." / "**Default** (_“Ask before sensitive operations.”_): Commands run without prompting inside the [Terminal sandbox](https://antigravity.google/docs/sandbox); running outside the sandbox requires approval." / "When a command needs to run outside the sandbox, Antigravity automatically evaluates it so safe, reversible commands proceed without prompting while risky or irreversible actions still pause for your approval." https://antigravity.google/docs/agent-settings (checked on 2026-11-01)
 [^turbo]: Antigravity official docs, "Agent settings". "**Turbo** (_“Run all commands without restrictions.”_): All commands run without prompting with no isolation or restrictions, and the agent has full read and write access to your filesystem." https://antigravity.google/docs/agent-settings (checked on 2026-11-01)

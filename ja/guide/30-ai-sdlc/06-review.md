@@ -1,5 +1,7 @@
 # 第6章 PRとレビュー — マージする前にもう一度見る
 
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
 > **一言まとめ**: **PR**（Pull Request）は、自分のブランチの変更を `main` に取り込もうと**提案する**ものです。取り込む前に、話し合ったり確認したりする場になります。
 > 1人で作っていても、レビューはします。AIレビュー（`/code-review`）も受けますが、**「問題なし」は安全という意味ではなく、マージするかどうかは自分で決めます。**
 
@@ -20,7 +22,9 @@ PRの画面には、次のようなタブがあります。[^tabs]
 
 出典: GitHub公式ドキュメント（一部のみ抜粋）[^tabs]
 
-PRを作るときは、**何を変えたのか、どんな問題を解決するのか**を書きます。第8章のイシューを解決するPRなら、イシューとつなげます。決まった言葉でつなげると、PRがマージされたときにイシューが自動で閉じられます。[^describe]
+PRを作るときは、**何を変えたのか、どんな問題を解決するのか**を書きます。[^describe]
+
+あとの第8章では、**イシュー**（やることやバグを書き留めておく、GitHubの記録）を使います。イシューを解決するPRなら、PRの説明に `fixes #番号` のような決まった言葉でイシューを書いて、つなげてください。そうすると、PRがマージされたときに、そのイシューが自動で閉じられます。[^describe] 今は、こうしたつながりがあることだけ知っておけば十分です。
 
 **小さなPRのほうが、レビューしやすく、マージしても安全です。** 他の人にレビューをお願いする前に、まず自分で確認します。変更内容を読み、うっかり変えたところがないかを見て、ビルドとテストが動いたかを確かめます。[^small]
 
@@ -46,7 +50,13 @@ GitHubのチュートリアルは、**1人で作業していても**、マージ
 
 出典: GitHub公式ドキュメント[^decisions]
 
-レビューの基準は、第3章の**SPEC.md**です。公式のベストプラクティスの文書にある例のプロンプトは、作り終えたあとに**SPEC.mdと照らし合わせて**すべての要求が実装されたかを確かめさせ、正確さに影響する抜けだけを報告させて、**スタイルは飛ばす**ように言っています（例ではサブエージェントに任せていますが、このガイドでは新しいセッションに置き換えて書いています）。[^against-spec] 理由も書かれています。問題を探すように頼むと、レビューする側は**いつも何かを見つけてきます。**[^always-finds] それを全部直していくと、余計な飾りが増えてしまいます。
+レビューの基準は、第3章の**SPEC.md**です。Claude Codeの公式ベストプラクティスの文書は、作り終えたあとに次のようにレビューする例を挙げています。[^against-spec]
+
+- **SPEC.mdと照らし合わせて**、すべての要求が実装されたかを見る。
+- 正確さに影響する抜けだけを報告する。
+- 文字の見た目や名前の付け方のような**スタイルは飛ばす。**
+
+なぜスタイルを飛ばすのでしょうか。問題を探すように頼むと、レビューする側は**いつも何かを見つけてきます。**[^always-finds] それを全部直していくと、余計な飾りが増えてしまいます。正確さだけを見てもらえば、本当に直すべきものだけが残ります。
 
 ```
 新しいセッションで、いまのブランチの変更をSPEC.mdと照らし合わせてレビューして。要求がすべて実装されているか、確認基準ごとに検査があるかを見て、正確さに影響する抜けだけを教えて。スタイルは飛ばして。
@@ -56,14 +66,20 @@ GitHubのチュートリアルは、**1人で作業していても**、マージ
 
 ## AIにレビューしてもらう
 
-Claude Codeには、レビュー用のコマンド `/code-review` があります。作業中のセッションで入力すると、自分のブランチの変更を読み、正確さの問題を探して、会話で知らせてくれます。[^local] 使用量は、セッションのほかの部分とまったく同じように、自分のプランで計算されます。[^usage]
+Claude Codeには、レビュー用のコマンド `/code-review` があります。作業中のセッションで入力すると、自分のブランチの変更を読み、正確さの問題を探して、会話で知らせてくれます。[^local] どのプランでも使えます。[^plans]
 
-デスクトップアプリでは、コミットする前に入力欄へ `/code-review` と入力して、レビューを受けられます。[^desktop-review] PRを開いたあとは、セッション情報パネルで、PRと自動チェックの状態を見られます。この機能には、GitHub CLI（`gh`）がインストールされ、ログインしている必要があります。[^monitor]
+たとえば最初の画面を作り終えたら、入力欄に `/code-review` とだけ入力すればよいです。説明を付けなくても、いまのブランチの変更を見てくれます。
 
 **AIレビューには、はっきりした限界があります。**
 
 - AIレビューは、バグやセキュリティの問題を見逃すことがあります。**指摘がないからといって、エラーがない、または安全だという意味ではありません。**[^miss]
-- GitHubのPRに自動で付く管理型レビューも、PRを承認したりブロックしたりしません。**マージするかどうかは、人が決めます。**[^decide] この管理型レビューはTeamとEnterpriseのプラン向けで、個人はどのプランでも `/code-review` を使えます。[^plans]
+- GitHubのPRに自動でレビューを付ける管理型レビューも、PRを承認したりブロックしたりしません。**マージするかどうかは、人が決めます。**[^decide]
+
+::: details 詳しく（クリックして開く）
+- **使用量**: レビューも自分のセッションの中で動くので、セッションのほかの部分とまったく同じように、自分のプランの使用量として計算されます。[^usage]
+- **デスクトップアプリ**: コミットする前に入力欄へ `/code-review` と入力して、レビューを受けられます。[^desktop-review] PRを開いたあとは、セッション情報パネルで、PRと自動チェックの状態を見られます。この機能には、GitHub CLI（`gh`、GitHubをコマンドで操作するプログラム）がインストールされ、ログインしている必要があります。[^monitor]
+- **管理型レビュー**: GitHubのPRに自動でレビューを付ける機能は、TeamとEnterpriseのプラン向けです。個人はどのプランでも `/code-review` を使えます。[^plans]
+:::
 
 ステップ3で「作った人と確認する人を分ける」ことを学んだなら、同じClaudeでも**新しいセッション**でレビューさせるほうがよいです。作ったときの会話の流れに引っ張られないからです。
 
@@ -73,7 +89,7 @@ Claude Codeには、レビュー用のコマンド `/code-review` がありま�
 
 レビューを終えて確認の仕組みが通ったら、PRを**マージします**（Merge）。GitHub flowの最後は、ブランチを削除することです。ブランチを削除しても、**PRとコミットの記録は消えない**ので、心配はいりません。[^delete]
 
-あとで人が増えたら、「承認がないとマージできない」といった**保護ルール**を設定できます。保護ルールは、デフォルトで強制上書きとブランチの削除を防ぎます。[^protect]
+あとで人が増えたら、「承認がないとマージできない」といった**保護ルール**を設定できます。[^protect] 1人で練習している今は、知らなくても大丈夫です。
 
 <Quiz id="ch706-merge" />
 
@@ -114,7 +130,7 @@ Claude Codeには、レビュー用のコマンド `/code-review` がありま�
 [^risks]: Claude Code 公式ドキュメント、「Common workflows」。"Review Claude's generated PR before submitting and ask Claude to highlight potential risks or considerations." https://code.claude.com/docs/en/common-workflows (確認日 2026-11-01)
 [^alone]: GitHub 公式ドキュメント、「Reviewing your proposed changes」。"Even when you work alone, a deliberate review builds a habit that keeps your software projects healthy and makes collaboration easier later." https://docs.github.com/en/get-started/start-your-journey/reviewing-your-proposed-changes (確認日 2026-11-01)
 [^decisions]: GitHub 公式ドキュメント、「Quickstart for reviewing pull requests」。"**Approve** signals that the changes are ready to merge." / "**Request changes** flags feedback the author must address before merging." https://docs.github.com/en/pull-requests/get-started/reviewing-pull-requests-quickstart (確認日 2026-11-01)
-[^against-spec]: Claude Code 公式ドキュメント、「Best practices for Claude Code」。"use a subagent to review the rate limiter diff against SPEC.md, check every requirement is implemented and the listed edge cases have tests, report gaps that affect correctness and skip style" https://code.claude.com/docs/en/best-practices (確認日 2026-11-01)
+[^against-spec]: 公式の例ではこのレビューをサブエージェント（subagent、Claudeが仕事を切り分けて任せる別のClaude）に任せていますが、このガイドでは新しいセッションに置き換えて書いています。Claude Code 公式ドキュメント、「Best practices for Claude Code」。"use a subagent to review the rate limiter diff against SPEC.md, check every requirement is implemented and the listed edge cases have tests, report gaps that affect correctness and skip style" https://code.claude.com/docs/en/best-practices (確認日 2026-11-01)
 [^always-finds]: Claude Code 公式ドキュメント、「Best practices for Claude Code」。"A reviewer that's asked to find problems will always find *something*." https://code.claude.com/docs/en/best-practices (確認日 2026-11-01)
 [^local]: Claude Code 公式ドキュメント、「Review locally with /code-review」。"Claude reviews the changes on your branch, looks for correctness bugs, and reports what it found in your conversation." https://code.claude.com/docs/en/code-review-local (確認日 2026-11-01)
 [^usage]: Claude Code 公式ドキュメント、「Review locally with /code-review」。"The review runs in your own session, so it counts toward your plan's usage or API billing the same way the rest of the session does." https://code.claude.com/docs/en/code-review-local (確認日 2026-11-01)
@@ -124,5 +140,5 @@ Claude Codeには、レビュー用のコマンド `/code-review` がありま�
 [^decide]: Claude Code 公式ドキュメント、「Code Review」。"A review never approves or blocks the pull request, so the decision to merge stays with your team." https://code.claude.com/docs/en/code-review (確認日 2026-11-01)
 [^plans]: Claude Code 公式ドキュメント、「Code Review」。"**Plans**: [Team and Enterprise](https://code.claude.com/docs/en/feature-availability.md)" / "Run [`/code-review`](https://code.claude.com/docs/en/code-review-local) in your Claude Code session on any plan, or [compare all the options](#compare-ways-to-get-a-review)." https://code.claude.com/docs/en/code-review (確認日 2026-11-01)
 [^delete]: GitHub 公式ドキュメント、「GitHub flow」。"Don't worry about losing information. Your pull request and commit history will not be deleted." https://docs.github.com/en/get-started/using-github/github-flow (確認日 2026-11-01)
-[^protect]: GitHub 公式ドキュメント、「About protected branches」。"By default, each branch protection rule disables force pushes to the matching branches and prevents the matching branches from being deleted." https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches (確認日 2026-11-01)
+[^protect]: 保護ルールは、デフォルトで強制上書き（force push、記録を無理やり上書きしてアップロードすること）とブランチの削除を防ぎます。GitHub 公式ドキュメント、「About protected branches」。"By default, each branch protection rule disables force pushes to the matching branches and prevents the matching branches from being deleted." https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches (確認日 2026-11-01)
 [^create-pr]: GitHub 公式ドキュメント、「Quickstart for pull requests」。"then click **New pull request**." / "For the **compare** branch, select the branch that contains your changes." / "Click **Create pull request**." https://docs.github.com/en/pull-requests/get-started/pull-request-quickstart (確認日 2026-11-01)

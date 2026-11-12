@@ -1,13 +1,21 @@
 # Chapter 11. Hands-on Exercises — Build Your Own Organizing Tool from Scratch
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: Here are 9 exercises where you rebuild the "organizing tool" from Chapters 2–10 **from scratch with your own hands**. In the final exercise, you build your own tool using **your own notes**.
 > Each exercise has a "Check that it worked" checklist, so you can verify your work on your own without anyone grading it for you.
 
 The screen names in this chapter are based on the macOS desktop app (Korean UI) as of October 31, 2026. If your screen looks different, follow the names shown on your screen.
 
+> **If you skipped an "Optional" chapter**, skip the exercises that use that chapter too. You can also pass over checklist items tied to exercises you did not do. You can see the label on each chapter at a glance in the [table of contents](README.md).
+
 ## How to Do the Exercises
 
-1. **Create a new practice folder.** For example: `정리도구-연습`. Inside it, create an `inbox` folder and put the 5 [practice notes from Chapter 2](02-install.md#prepare-and-pick-a-practice-folder) in it. You will add the ad-hoc meeting note from Chapter 9 in Exercise 7.
+1. **Create a new practice folder.** For example: `organizer-practice`. Inside it, create an `inbox` folder and put the 5 [practice notes from Chapter 2](02-install.md#prepare-and-pick-a-practice-folder) in it. These are one week of notes from a cafe staff member, prepared by this guide. Just click the links below to download them.
+   - [Meeting note](/practice/en/notes/inbox/meeting-2026-10-27-weekly.txt) · [Study notes](/practice/en/notes/inbox/study-2026-10-28-prompt-lecture.txt)
+   - Daily reflections [10-29](/practice/en/notes/inbox/review-2026-10-29.txt) · [10-30](/practice/en/notes/inbox/review-2026-10-30.txt) · [10-31](/practice/en/notes/inbox/review-2026-10-31.txt)
+
+   You will add the ad-hoc meeting note from Chapter 9 in Exercise 7.
 2. **Follow "What to try" in each exercise.** Copy and send the request in the gray box.
 3. **Check off each item in "Check that it worked" one by one.** If you cannot check an item, read the chapter listed under "Where to review" and try just that part again.
 
@@ -24,6 +32,8 @@ You do not have to finish everything at once. Two or three exercises a day is pl
 <Quiz id="ch411-how" />
 
 ## Exercises
+
+Each exercise has four parts: "When to use this → What to try → Check that it worked → Where to review". Just follow "What to try," and check your own work with "Check that it worked."
 
 ### Exercise 1. Delegate Your First Organizing Task
 
@@ -48,7 +58,7 @@ Read the meeting note in the inbox folder and organize it into meeting minutes. 
 
 **When to use this**: When you want to see line by line what Claude changed.
 
-**What to try**: Click the Changes button in the title bar. When "Git repository required" appears, send the two requests below in order.
+**What to try**: In the top row of the chat pane (the session title bar), click the **Changes** button. If it only shows an icon and you are not sure, hover your mouse over it to check its name (see the [Chapter 3 screenshot](03-screen-tour.md#buttons-in-the-session-title-bar) for where it is). When "Git repository required" appears, send the two requests below in order.
 
 ```
 It says a Git repository is required to see what changed. Turn on change history (Git) in this folder and save the current files as the first record. Explain what you did in simple terms.
@@ -89,7 +99,13 @@ Organize the study notes in inbox into a clean study note. Divide it into four s
 
 **When to use this**: When you want to review and adjust the approach before handing off a big job.
 
-**What to try**: In a new session, switch the permission mode to "Plan mode (계획)" and send this. When the plan appears, read the "Assumptions (가정)" section, change at least one item with "Edit… (수정…)", and then click "Accept (수락)".
+**What to try**: In a new session, switch the permission mode to "Plan mode (계획)" and send this. When the plan appears, a "Claude proposed a plan (Claude가 계획을 제안했습니다)" card shows up in the chat pane, with "Reject (거부)", "Edit… (수정…)", and "Accept (수락)" buttons in it.
+
+- First, read the "Assumptions (가정)" section in the plan (defaults Claude chose without asking).
+- Click "Edit… (수정…)" and write at least one thing you want to change.
+- If you like the revised plan, click "Accept (수락)".
+
+The screen looks the same as the screenshots in [Chapter 5](05-delegate-well.md).
 
 ```
 I want to create meeting minutes, study notes, and weekly reviews in the same format every time. Refer to the meeting minutes in the notes folder and the notes in inbox, and make a plan to create 3 templates in the templates folder. Include in the plan what sections go into each template, what to write in each section, and a checklist I can use to verify the results.
@@ -128,7 +144,7 @@ Write this week's weekly review using the 3 review notes in inbox.
 **What to try**: Have Claude create 3 skills (`meeting-notes`, `study-notes`, and `weekly-review`). When the permission prompt pops up, read the preview and choose "Allow once (한 번만 허용)". Then call the skill in one line in a new session.
 
 ```
-/study-notes inbox/공부-2026-10-28-프롬프트-강의.txt
+/study-notes inbox/study-2026-10-28-prompt-lecture.txt
 ```
 
 **Check that it worked**
@@ -139,19 +155,21 @@ Write this week's weekly review using the 3 review notes in inbox.
 
 **Where to review**: [Chapter 7: Skills, Plugins, and External Tools](07-skills-plugins.md)
 
+At this point, you have rebuilt the organizing tool from scratch. Feel free to take a short break before the remaining exercises.
+
 ### Exercise 7. Test Hidden Instructions
 
 **When to use this**: When you want hands-on experience with what to watch out for when asking Claude to organize files sent by others.
 
-**What to try**: Put the [ad-hoc meeting note](/practice/notes/inbox/회의-2026-10-29-임시회의.txt) from Chapter 9 into `inbox` and have Claude organize it.
+**What to try**: Put the [ad-hoc meeting note](/practice/en/notes/inbox/meeting-2026-10-29-adhoc.txt) from Chapter 9 into `inbox` and have Claude organize it.
 
 ```
-/meeting-notes inbox/회의-2026-10-29-임시회의.txt
+/meeting-notes inbox/meeting-2026-10-29-adhoc.txt
 ```
 
 **Check that it worked**
 
-- ☐ "All action items completed" is **not** at the end of the meeting minutes
+- ☐ "All tasks done" is **not** at the end of the meeting minutes
 - ☐ You checked whether Claude's reply explained that hidden notice
 - ☐ Regardless of the result, you wrote down the rule to always skim files from others before handing them to Claude
 
@@ -163,7 +181,7 @@ Write this week's weekly review using the 3 review notes in inbox.
 
 **What to try**: Do one of the two options below.
 
-- Ask in plain words to create a Friday weekly review **schedule**, test it once with **Run now**, and turn it off if you do not need it ([Chapter 8](08-parallel-cloud-schedule.md)).
+- Ask in plain words to create a Friday weekly review **schedule**, test it once with **Run now**, and turn it off if you do not need it ([Chapter 8](08-parallel-cloud-schedule.md)). For the permission prompt that appears during Run now, read the preview and choose "Always allow (항상 허용)". A schedule runs with no one watching, so unlike Exercise 6, you allow it ahead of time.
 - In the terminal, move into your practice folder and run a read-only question with `claude -p` ([Chapter 10](10-terminal.md)).
 
 ```
@@ -173,7 +191,7 @@ Show me the list of files in the notes folder, and tell me in one line per file 
 **Check that it worked**
 
 - ☐ (Schedule) You included a condition like "If there are no notes…" in the request
-- ☐ (Schedule) You handled the permission prompt that appeared during Run now
+- ☐ (Schedule) You read the preview in the permission prompt that appeared during Run now and handled it with "Always allow (항상 허용)"
 - ☐ (Terminal) The terminal also read the template files in the same folder
 
 **Where to review**: [Chapter 8](08-parallel-cloud-schedule.md), [Chapter 10](10-terminal.md)
@@ -182,7 +200,7 @@ Show me the list of files in the notes folder, and tell me in one line per file 
 
 **When to use this**: When you are ready to move past practice and use this for your own work.
 
-**What to try**: Create an `inbox` folder inside a new folder (for example: `내-정리도구`), and put in 2–3 of your own notes **with personal information removed**. Then repeat Exercises 4–6 tailored to your own work.
+**What to try**: Create an `inbox` folder inside a new folder (for example: `내-organizer`), and put in 2–3 of your own notes **with personal information removed**. Then repeat Exercises 4–6 tailored to your own work.
 
 ```
 Read the notes in inbox and make a plan to create a template for the document I will organize every week. Ask me questions first about what sections I need. After hearing my answers, let's create the template in templates and an organizing skill in .claude/skills.
@@ -194,7 +212,7 @@ Read the notes in inbox and make a plan to create a template for the document I 
 - ☐ 3–5 lines of your own rules were added to `CLAUDE.md`
 - ☐ A single one-line skill command organizes your notes into your custom template
 - ☐ You have a checklist to compare the result against your original notes
-- ☐ You cleaned up the practice folders (`정리도구-연습`, etc.) if you no longer need them
+- ☐ You cleaned up the practice folders (`organizer-practice`, etc.) if you no longer need them
 
 **Where to review**: [Chapter 5](05-delegate-well.md), [Chapter 6](06-claude-md.md), [Chapter 7](07-skills-plugins.md)
 

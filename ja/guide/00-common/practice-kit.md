@@ -22,12 +22,12 @@
 
 | ファイル | 内容 |
 |---|---|
-| [memo-next-month.txt](/practice/memo-next-month.txt) | 11月の集まりのメモ。整理されていない幹事のメモ |
-| [minutes-last-meeting.txt](/practice/minutes-last-meeting.txt) | 10月の集まりの議事録。決まったこと・やること・決まらなかったこと |
-| [members.csv](/practice/members.csv) | メンバー名簿（仮名）。出席と会費の支払い状況 |
-| [fees.csv](/practice/fees.csv) | 10月の会費帳簿。収入と支出 |
-| [memo-last-month.txt](/practice/memo-last-month.txt) | 10月の集まりのメモ。「答えを知っているテスト」用 |
-| [last-notice.txt](/practice/last-notice.txt) | 先月実際に送った10月の案内文。「答えを知っているテスト」の正解 |
+| [memo-next-month.txt](/practice/ja/memo-next-month.txt) | 11月の集まりのメモ。整理されていない幹事のメモ |
+| [minutes-last-meeting.txt](/practice/ja/minutes-last-meeting.txt) | 10月の集まりの議事録。決まったこと・やること・決まらなかったこと |
+| [members.csv](/practice/ja/members.csv) | メンバー名簿（仮名）。出席と会費の支払い状況 |
+| [fees.csv](/practice/ja/fees.csv) | 10月の会費帳簿。収入と支出 |
+| [memo-last-month.txt](/practice/ja/memo-last-month.txt) | 10月の集まりのメモ。「答えを知っているテスト」用 |
+| [last-notice.txt](/practice/ja/last-notice.txt) | 先月実際に送った10月の案内文。「答えを知っているテスト」の正解 |
 
 CSVファイルはExcelで開ける表ファイルです。メンバー名簿には連絡先を入れていません。実際の集まりの資料で試すときも、名前や連絡先は消すか仮の名前に変えてからアップロードしてください（[第9章](09-safety.md)）。
 

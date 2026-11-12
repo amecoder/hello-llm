@@ -1,6 +1,6 @@
 # 第4章 第一次會話
 
-<Badge type="tip" text="必讀" /> 想跟著這一階段學下去，一定要讀這一章。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
 
 > **一句話總結**：進入要工作的資料夾，輸入 `claude`。在信任確認視窗裡選 `Yes`，然後用說話的方式交代任務。要停下按 `Esc`，要結束輸入 `/exit`。
 
@@ -13,14 +13,14 @@
 Mac·Linux 這樣輸入。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude
 ```
 
 Windows PowerShell 這樣輸入。
 
 ```powershell
-cd $HOME\hello-ai-연습\터미널
+cd $HOME\hello-ai-practice\terminal
 claude
 ```
 
@@ -42,7 +42,7 @@ claude
 ```text
  Accessing workspace:
 
- ~/hello-ai-연습/터미널
+ ~/hello-ai-practice/terminal
 
  Quick safety check: Is this a project you created or one you trust? (Like your own code, a
  well-known open source project, or work from your team). If not, take a moment to review what's in
@@ -74,8 +74,8 @@ claude
 
 ```text
  ▐▛███▛█   Claude Code v2.1.318
-▝▜██████▀  Opus 5.5 · Claude 套餐名稱
- ▝▝   ▝▝   ~/hello-ai-연습/터미널
+▝▜██████▀  Opus 5.5 · Claude 方案名稱
+ ▝▝   ▝▝   ~/hello-ai-practice/terminal
 
 ▎ Auto mode is now Claude Code's default permission mode.
 ▎ Auto mode lets Claude handle permission prompts automatically. Claude checks each tool call for
@@ -118,7 +118,7 @@ claude
 現在讓它幹活。像跟同事說話一樣寫就行。[^colleague] 把這句話輸入到輸入框裡，按 Enter。
 
 ```text
-讀一下 inbox 裡的會議筆記，儲存成 회의록.md。回答只要一行。
+讀一下 inbox 裡的會議筆記，儲存成 minutes.md。回答只要一行。
 ```
 
 `.md` 是 Markdown 檔案。是用記事本也能開啟的文字檔案。
@@ -133,7 +133,7 @@ claude
 ![建立檔案前的許可視窗。這是建立另一個檔案時截的圖。① 要建立的檔名，② 選項。選 1 號 Yes 就是只允許這一次](../../../guide/23-claude-code-cli/assets/shot-04-create-marked.png)
 
 ```text
- Do you want to create 회의록.md?
+ Do you want to create minutes.md?
  ❯ 1. Yes
    2. Yes, and switch to accept edits (auto-approve file edits and common file commands) for this
       session (shift+tab)
@@ -147,13 +147,13 @@ claude
 完成後，它會這樣回答。
 
 ```text
-● 已整理成 회의록.md。筆記裡的 10/27（週一）和 11/3（週一）在 2026 年的日曆上是星期二，所以在檔案裡標註了
+● 已整理成 minutes.md。筆記裡的 10/27（週一）和 11/3（週一）在 2026 年的日曆上是星期二，所以在檔案裡標註了
   需要確認。
 ```
 
 就算它提到星期幾的事，也不要驚訝。練習筆記裡的星期是編出來的，和日曆對不上。Claude 發現了這一點。回答的句子每次執行都可能不同。輸入框裡也可能淺淺地顯示出下一個請求的建議。不用也沒關係。
 
-用同一份筆記做出的成果物在 [4장-회의록.txt](/practice/cli/results/4장-회의록.txt) 裡。可以和你自己的結果比一比。不需要一模一樣。
+用同一份筆記做出的成果物在 [ch4-minutes.txt](/practice/zh-hant/cli/results/ch4-minutes.txt) 裡。可以和你自己的結果比一比。不需要一模一樣。
 
 <Quiz id="ch804-first" />
 
@@ -162,7 +162,7 @@ claude
 會話就是對話。可以接著前面的事繼續交代。這次來修改檔案。
 
 ```text
-在 회의록.md 的最上面一行加上"草稿"這一行。回答只要一行。
+在 minutes.md 的最上面一行加上"草稿"這一行。回答只要一行。
 ```
 
 這次它會顯示要改動的行，然後問你。帶 `+` 的行是要新加入的行。
@@ -174,7 +174,7 @@ claude
  4  - **日期時間：** 10/27（週一）
 ```
 
-在它下面會問 `Do you want to make this edit to 회의록.md?`。要改動的行的樣子，取決於你的會議記錄。
+在它下面會問 `Do you want to make this edit to minutes.md?`。要改動的行的樣子，取決於你的會議記錄。
 
 許可視窗要讀完再選。這是你能核對它做的是不是你交代的事的時刻。
 
@@ -196,10 +196,10 @@ claude
 
 ```bash
 ls
-cat 회의록.md
+cat minutes.md
 ```
 
-如果在 PowerShell 裡文字顯示成亂碼，就用 `Get-Content -Encoding UTF8 회의록.md` 來看。
+如果在 PowerShell 裡文字顯示成亂碼，就用 `Get-Content -Encoding UTF8 minutes.md` 來看。
 
 在空的輸入框裡按兩次 `Ctrl + D` 也能結束。[^ctrl-d] 一開始，用文字輸入的 `/exit` 最不容易搞混。怎麼繼續已經結束的對話，在第6章講。
 
@@ -247,7 +247,7 @@ cat 회의록.md
 
 下一章：[第5章 輸入技巧與命令](05-input-commands.md)
 
-[^screens]: 本章和後面的圖，是在 Linux 終端裡用 Claude Code 2.1.319 截的。資料夾路徑是練習用的臨時資料夾，所以和你的介面不同；套餐名稱已經遮住。介面上的資料夾路徑和套餐名稱，按本課程改寫過。文字框是為了方便複製另外謄寫的。有些地方是從別的執行裡搬過來的，所以路徑或檔名可能和圖不一樣。
+[^screens]: 本章和後面的圖，是在 Linux 終端裡用 Claude Code 2.1.319 截的。資料夾路徑是練習用的臨時資料夾，所以和你的介面不同；方案名稱已經遮住。介面上的資料夾路徑和方案名稱，按本課程改寫過。文字框是為了方便複製另外謄寫的。有些地方是從別的執行裡搬過來的，所以路徑或檔名可能和圖不一樣。
 [^start]: Claude Code 官方文件，「Quickstart」. "Open your terminal in any project directory and start Claude Code:" https://code.claude.com/docs/en/quickstart （確認日期 2026-11-06）
 [^header]: Claude Code 官方文件，「Quickstart」. "The Claude Code prompt appears with the version, current model, and working directory shown above it." https://code.claude.com/docs/en/quickstart （確認日期 2026-11-06）
 [^arrows]: Claude Code 官方文件，「Terminal guide for new users」. "You can't click on things in the terminal. Use the arrow keys to move around." https://code.claude.com/docs/en/terminal-guide （確認日期 2026-11-06）

@@ -1,5 +1,7 @@
 # Chapter 2. Creating a GitHub Repository — Building a Home for Your Project
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: A repository is where you keep your project files and **their entire change history**. Creating a repository on GitHub gives you a safe backup outside your computer and a space to collaborate.
 > Your choice between public and private connects directly to **whether you can publish your site to the web for free later**, so decide from the start.
 
@@ -35,11 +37,13 @@ The very first thing you decide when creating a repository is its **visibility**
 
 Source: GitHub official docs[^visibility]
 
-On a free account, this choice connects directly to deployment in Chapter 7. **Free accounts can only use GitHub Pages (free web publishing) with public repositories.**[^pages-free] That is why GitHub's own beginner tutorial tells you to choose **Public** so you can publish your project as a live site later.[^tutorial-public]
+In this guide, you choose **Public**. That is because this choice connects directly to deployment in Chapter 7. **Free accounts can only use GitHub Pages (free web publishing) with public repositories.**[^pages-free] GitHub's own beginner tutorial also tells you to choose **Public** for the same reason.[^tutorial-public]
 
 Public repositories come with a trade-off. Because your entire codebase is visible to everyone, there is a higher risk that someone might look for weaknesses or sensitive information.[^public-risk] So **never put personal information, passwords, or notes containing real names into a public repository.** We will cover this in detail in Chapter 9.
 
+::: details What if you switch it to private later? (click to expand)
 You can change the visibility later, but there is a catch. On a free account, if you switch a public repository to private, any published Pages site is automatically taken down.[^switch]
+:::
 
 <Quiz id="ch702-visibility" />
 
@@ -49,9 +53,17 @@ When you create a new repository, you can include three starter files right away
 
 - **README**: The first guide visitors see when they open your repository.[^readme] It explains what the project does, why it is useful, and how to get started. The tutorial recommends selecting **Add README** because it gives you a starting file and a place to describe your project.[^add-readme]
 - **.gitignore**: A list that tells Git which **files to ignore** when you make a commit.[^gitignore] You list things that should never be uploaded, like configuration files containing passwords. Keep one important rule in mind: **if a file has already been committed, simply adding it to this list will not make Git ignore it.**[^already] That is why it is best to set it up from the very beginning.
-- **License**: Tells other people what they can and cannot do with your code. You do not have to pick one, but without a license, default copyright laws apply—meaning nobody can copy, distribute, or modify your work.[^license] If you are unsure which to pick, GitHub recommends choosealicense.com. GitHub also notes that this guidance is not legal advice.[^not-lawyer]
+- **License**: Tells other people what they can and cannot do with your code. You do not have to pick one.[^license] If you don't pick one, default copyright laws apply, so other people cannot copy, distribute, or modify your code.[^license] For a practice repository, you don't need to pick one.
 
-If you are importing an existing repository that already has a Git history, do not select any of these three options. Doing so can clash with your folder and cause a merge conflict.[^conflict]
+::: details If you want to pick a license (click to expand)
+If you are unsure which to pick, GitHub recommends choosealicense.com. GitHub also notes that this guidance is not legal advice.[^not-lawyer]
+:::
+
+::: details When uploading a folder that already has a Git history (click to expand)
+When you create a new repository for the first time, as in this guide, you don't need to worry about this.
+
+If you are importing an existing repository that already has a Git history, do not select any of these three options. The files newly created on GitHub and the history in your folder can get out of step. Then Git stops because it doesn't know which side to keep. This is called a merge conflict.[^conflict]
+:::
 
 <Quiz id="ch702-files" />
 
@@ -83,7 +95,7 @@ Clone this GitHub repository into the ~/hello-ai-practice/todo-board folder: <re
 1. Sign up or log in at [github.com](https://github.com) (a free account is fine).
 2. Click **+** in the top right → **New repository** to create a new repository. Name it `cafe-todo-board`, set visibility to **Public**, and select **Add README**. Add a `.gitignore` as well if you like (follow the on-screen prompts to choose a template).
 3. On the repository page, check that your README is visible.
-4. Use GitHub Desktop or Claude Code to clone the repository into `~/hello-ai-practice/todo-board`. To upload (push) your changes to GitHub later, the tool you use must be logged in to your GitHub account. If a login window pops up the first time you upload, follow the prompts.
+4. Use GitHub Desktop or Claude Code to clone the repository into `~/hello-ai-practice/todo-board`. Later, uploading the history on your computer to GitHub is called pushing (push) (covered in Chapter 4). To push, the tool you use must be logged in to your GitHub account. If a login window pops up the first time you upload, follow the prompts.
 5. Open the cloned folder in the Claude Code app and verify that `README.md` is inside.
 
 **Up next**: In Chapter 3, you will let Claude interview you about what to build in this repository and organize the plan into `SPEC.md`.

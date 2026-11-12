@@ -1,5 +1,7 @@
 # 第2章 熟悉界面 — 什么在哪里
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：ChatGPT 的界面，你只要认得四个地方：**左边的侧边菜单**（以前的对话和功能）、**中间的输入框**（提问的地方）、**上方的 Chat/Work 切换**、
 > **左下角的账号菜单**（设置）。刚开始时，只用输入框和「新聊天（새 채팅）」就足够了。
 
@@ -27,7 +29,7 @@
 帮我写一条短信，告诉老顾客社区小菜店开业的消息。三句话，语气要温暖。
 ```
 
-::: details 得到的回答大致是这样（示例 — 点击展开）
+::: details 得到的回答大致是这样（示例 — 点击展开）（点击展开）
 这是本指南制作的示例。实际的回答会因服务和每次情况而不同。
 
 > 您好，我是○○小菜店。○月○日，我们终于开业啦。我们会用用心做好的小菜，热情地迎接您。
@@ -42,21 +44,21 @@
 
 侧边菜单的上半部分是功能按钮，下半部分是对话列表。图中的红色编号就是下表的编号。
 
+列表里出现的**会话**（thread）是对一个对话的另一种叫法。「置顶会话（고정된 스레드）」的意思就是“固定住的对话”。
+
 ![只放大了侧边菜单的图。红色编号标在：① 右上角的放大镜，② 「新聊天（새 채팅）」，③ 「定时任务（예약）」，④ 「资料库（라이브러리）」，⑤ 「插件（플러그인）」，⑥ 「探索（탐색）」，⑦ 「置顶会话（고정된 스레드）」，⑧ 「项目（프로젝트）」，⑨ 「最近（최근）」](../../../guide/11-chatgpt/assets/shot-01-home-sidebar.png)
 
 | 编号 | 项目 | 作用 | 详细内容 |
 |---|---|---|---|
 | ① | 放大镜（「搜索（검색）」） | 查找以前的对话 | [第3章](03-chats.md) |
 | ② | 「新聊天（새 채팅）」 | 新开一个空白对话 | [第3章](03-chats.md) |
-| ③ | 「定时任务（예약）」 | 集中查看到约定时间执行的定时任务 | [第11章](11-expert.md#到点自动去做-—-定时任务) |
-| ④ | 「资料库（라이브러리）」 | 汇集你上传或生成的文件的地方（正在改成「Space」） | [第4章](04-files-images.md#资料库-—-汇集上传文件的地方) |
+| ③ | 「定时任务（예약）」 | 集中查看到约定时间自动去做的事（例如早上的提醒） | [第11章](11-expert.md#到点自动去做-—-定时任务) |
+| ④ | 「资料库（라이브러리）」 | 汇集你上传或生成的文件的地方[^space] | [第4章](04-files-images.md#资料库-—-汇集上传文件的地方) |
 | ⑤ | 「插件（플러그인）」 | 查找给 ChatGPT 增加功能的扩展 | [第7章](07-projects-plugins.md) |
 | ⑥ | 「探索（탐색）」 | 浏览其他功能 | — |
 | ⑦ | 「置顶会话（고정된 스레드）」 | 把常打开的对话固定在最上面的列表 | [第3章](03-chats.md) |
 | ⑧ | 「项目（프로젝트）」 | 按主题把对话和文件归在一起的文件夹 | [第7章](07-projects-plugins.md) |
 | ⑨ | 「最近（최근）」 | 最近的对话列表 | [第3章](03-chats.md) |
-
-**会话**（thread）是对一个对话的另一种叫法。「置顶会话（고정된 스레드）」的意思就是“固定住的对话”。
 
 <Quiz id="ch102-sidebar" />
 
@@ -67,7 +69,7 @@
 - **Chat**：就是你一直以来熟悉的 ChatGPT。一问一答地对话。本指南大部分内容都以 Chat 为准。
 - **Work**：把需要经过多个步骤的长时间任务交给它，然后拿到文档、表格、演示资料、报告这类**成品**的模式。
 
-Work 在网页和手机上，只有**付费套餐（不含 Free、Go）** 才能用。Free 和 Go 只能在电脑 App 上有限地使用。[^rn-work] 使用方法在[第7章](07-projects-plugins.md)里讲。
+使用方法在[第7章](07-projects-plugins.md)里讲。在网页和手机上，只有**付费套餐（不含 Free、Go）** 才能用。[^rn-work][^work-desktop]
 
 <Quiz id="ch102-chat-work" />
 
@@ -93,8 +95,10 @@ Work 在网页和手机上，只有**付费套餐（不含 Free、Go）** 才能
 
 输入框右边有**麦克风按钮**（用说话来输入）和**语音按钮**（用声音对话，[第9章](09-voice.md)）。
 
-> **粘贴很长的文字会变成附件。** 粘贴超过1万字的文字时，会自动变成附件。
-> 如果想把它留在输入框里当文字，点「Show in text field」就行。[^paste]
+::: details 粘贴长文字后变成了附件的话（点击展开）
+粘贴超过1万字的文字时，会自动变成附件。
+如果想把它留在输入框里当文字，点「Show in text field」（在输入框里以文字显示）就行。这是帮助中心里用英文名称写的按钮。[^paste]
+:::
 
 <Quiz id="ch102-plus" />
 
@@ -106,21 +110,7 @@ Work 在网页和手机上，只有**付费套餐（不含 Free、Go）** 才能
 ![点了输入框右边「推理级别（추론 수준）」的界面。请看小窗口里有「Medium」这个字，和一个可以左右移动的滑块](../../../guide/11-chatgpt/assets/shot-03-model-menu-marked.png)
 
 对话标题和账号名称已换成示例。① 点「推理级别（추론 수준）」按钮后，会出现 ② 当前级别（「Medium」）和 ③ 滑块。
-
-| 级别 | 特点 | 可使用的套餐 |
-|---|---|---|
-| Instant（即时） | 马上回答。适合轻松的问题 | 付费 |
-| Medium（中等）· High | 想得更久。适合做计划、比较、计算 | Plus 以上 |
-| Extra High · Pro | 想得最深 | Pro·Business·Enterprise |
-
-出处：OpenAI 帮助中心[^levels]
-
-有两点需要注意。
-
-- **用话语说“想得更深一点”，级别也不会改变。** 即使保持在 Instant 的情况下这么写，也不会自动升高。请自己拖动滑块。[^levels]
-- **免费（Free）和 Go 套餐不是用滑块，而是打开「思考（생각하기）」。** 在 Go 套餐的手机 App 上，要在 + 菜单里选「Think harder」。[^go-think]
-
-<!-- 需要截图：在 Free 套餐网页界面中打开「思考（생각하기）」的位置 -->
+免费（Free）和 Go 套餐里没有滑块，而是「思考（생각하기）」（见下面的「可使用的套餐」）。
 
 **什么时候要调高呢？** 不只是计算。像润色一句短话这种简单或风险小的事，用快速级别就够了。条件有好几个、要按标准比较各个选项、或者要找出我写的计划里漏掉的假设时，请调高级别。[^academy-content]
 ```
@@ -128,12 +118,29 @@ Work 在网页和手机上，只有**付费套餐（不含 Free、Go）** 才能
 推荐其中一个，并告诉我怎样减少它的缺点。
 ```
 
-同一个问题，只改变级别再问一次。你马上就能感受到快速回答和深入回答的差别。
+把下面的储蓄计算问题，用低级别发一次，再用高级别发一次。你马上就能感受到快速回答和深入回答的差别。
 
 ```
 月薪300万韩元的上班族，想在3年内攒到2,000万韩元，每个月要存多少？
 请分成考虑定期存款利息和不考虑利息两种情况，展示计算过程。
 ```
+
+### 可使用的套餐
+
+| 级别 | 特点 | 可使用的套餐 |
+|---|---|---|
+| Instant（即时） | 马上回答。适合轻松的问题 | 付费 |
+| Medium（中等）· High | 想得更久。适合做计划、比较、计算 | Plus 以上 |
+| Extra High · Pro | 想得最深 | Pro·Business·Enterprise |
+
+Pro 是给用量非常大的人准备的套餐，Business 和 Enterprise 是以公司为单位使用的套餐（[第1章](01-getting-started.md)）。出处：OpenAI 帮助中心[^levels]
+
+有两点需要注意。
+
+- **用话语说“想得更深一点”，级别也不会改变。** 即使保持在 Instant 的情况下这么写，也不会自动升高。请自己拖动滑块。[^levels]
+- **免费（Free）和 Go 套餐不是用滑块，而是打开「思考（생각하기）」。**[^go-think]
+
+<!-- 需要截图：在 Free 套餐网页界面中打开「思考（생각하기）」的位置 -->
 
 <Quiz id="ch102-reasoning" />
 
@@ -155,7 +162,7 @@ Work 在网页和手机上，只有**付费套餐（不含 Free、Go）** 才能
 |---|---|---|---|
 | ① | 「常规（일반）」 | 界面语言（「自动检测（자동 감지）」） | — |
 | ② | 「外观（모양）」 | 浅色界面、深色界面、文字对比度、强调色 | — |
-| ③ | 「安全与登录（보안 및 로그인）」 | 多重验证、查看已登录的设备、账号 PIN（打开上锁对话的4位数字）、锁定模式 | [第8章](08-privacy.md#保护账号)、[第3章](03-chats.md) |
+| ③ | 「安全与登录（보안 및 로그인）」 | 多重验证、查看已登录的设备、账号 PIN、锁定模式 | [第8章](08-privacy.md#保护账号)、[第3章](03-chats.md) |
 | ④ | 「已归档的聊天（보관된 채팅）」 | 查看归档起来的对话 | [第3章](03-chats.md) |
 | ⑤ | 「家长控制（자녀 보호）」·「可信联系人（신뢰할 수 있는 연락처）」 | 关联青少年子女的账号，指定紧急时接收通知的人 | [第8章](08-privacy.md#为家人和安全准备的功能) |
 | ⑥ | 「语音风格（음성 스타일）」 | 语音对话的声音 | [第9章](09-voice.md) |
@@ -164,6 +171,15 @@ Work 在网页和手机上，只有**付费套餐（不含 Free、Go）** 才能
 | ⑨ | 「用量（사용량）」 | 剩余的使用额度、积分 | [第1章](01-getting-started.md#改成付费之前要知道的事) |
 | — | 「插件（플러그인）」（图下方的「集成（통합）」组） | 已连接的应用和默认权限 | [第7章](07-projects-plugins.md#设置已连接应用的权限) |
 | ⑩ | 「数据管理（데이터 관리）」[^data-name] | 允许用于训练、分享链接、导出数据 | [第8章](08-privacy.md) |
+
+表格里不熟悉的词是这些意思。现在不用全部记住。详细内容在表格中各自对应的章节里讲。
+
+- **多重验证**：除了密码，再用另一种方法（例如手机验证码）确认一次是你本人的登录方式。
+- **账号 PIN**：打开上锁对话的4位数字。
+- **锁定模式**：阻止网页搜索这类对外连接功能的设置。它是为处理敏感信息的人准备的。
+- **可信联系人**：事先指定的人，紧急时会收到确认你是否安好的通知。
+- **自定义指令**：写下 ChatGPT 在每次对话里都要遵守的规则的地方。比如写上“回答要简短”。
+- **积分**：用完套餐额度后，为了继续用 Work 这类功能而另外购买的用量。如果只是普通聊天，就用不着。
 
 如果界面显示的是英文，在「Settings」→「General」→「Language」里选择韩语就行。语言**只有在登录状态下**才能更改。[^lang]
 在「外观（모양）」里选的深色界面，要**每台设备分别**设定。在网页上改了，手机 App 还是原样。在 App 里也请再选一次。[^appearance]
@@ -201,11 +217,13 @@ Work 在网页和手机上，只有**付费套餐（不含 Free、Go）** 才能
 
 下一章：[第3章. 对话管理](03-chats.md)
 
-[^rn-work]: OpenAI 帮助中心，「ChatGPT release notes」2026-07-09 条目。"ChatGPT Work is an agent for longer, more involved tasks." / "rolling out to paid plans except Free and Go"。https://help.openai.com/en/articles/6825453（确认日期 2026-10-23）。Free 和 Go 在桌面端的有限使用，见 OpenAI，「套餐与价格」https://openai.com/chatgpt/pricing 中的“데스크톱에서 ChatGPT Work의 제한적 이용”（确认日期 2026-10-23）
-[^paste]: OpenAI 帮助中心，「ChatGPT release notes」2026-08-04 条目。"If you paste more than 10k characters…"。https://help.openai.com/en/articles/6825453（确认日期 2026-10-23）
-[^levels]: OpenAI 帮助中心，模型菜单与思考级别说明文档（文档标题里带有当前模型的名称，因此本指南不写出）。表格 "Plus — Included / Not included / Not included" / "Asking ChatGPT to "think harder"… won't automatically switch"。https://help.openai.com/en/articles/20001354（确认日期 2026-10-23）
-[^go-think]: OpenAI 帮助中心，「What is ChatGPT Go?」。"On mobile, select Think harder from the + menu." https://help.openai.com/en/articles/11989085（确认日期 2026-10-23）
-[^lang]: OpenAI 帮助中心，「How to change your language setting in ChatGPT」。"you can only update the ChatGPT language setting if you are logged in." https://help.openai.com/en/articles/8357869（确认日期 2026-10-24）
-[^appearance]: OpenAI 帮助中心，「Updating your visual experience」。"changing the appearance on the web doesn't automatically change the appearance in the mobile app." 设置菜单名称于 2026-10-24 在网页设置界面上确认。https://help.openai.com/en/articles/11958281（确认日期 2026-10-24）
+[^rn-work]: OpenAI 帮助中心，「ChatGPT release notes」2026-07-09 条目。"ChatGPT Work is an agent for longer, more involved tasks." / "rolling out to paid plans except Free and Go"。https://help.openai.com/en/articles/6825453 （确认日期 2026-10-23）。Free 和 Go 在桌面端的有限使用，见 OpenAI，「套餐与价格」https://openai.com/chatgpt/pricing 中的“데스크톱에서 ChatGPT Work의 제한적 이용”（确认日期 2026-10-23）
+[^paste]: OpenAI 帮助中心，「ChatGPT release notes」2026-08-04 条目。"If you paste more than 10k characters…"。https://help.openai.com/en/articles/6825453 （确认日期 2026-10-23）
+[^levels]: OpenAI 帮助中心，模型菜单与思考级别说明文档（文档标题里带有当前模型的名称，因此本指南不写出）。表格 "Plus — Included / Not included / Not included" / "Asking ChatGPT to "think harder"… won't automatically switch"。https://help.openai.com/en/articles/20001354 （确认日期 2026-10-23）
+[^go-think]: 在 Go 套餐的手机 App 上，要在 + 菜单里选「Think harder」。出处：OpenAI 帮助中心，「What is ChatGPT Go?」。"On mobile, select Think harder from the + menu." https://help.openai.com/en/articles/11989085 （确认日期 2026-10-23）
+[^lang]: OpenAI 帮助中心，「How to change your language setting in ChatGPT」。"you can only update the ChatGPT language setting if you are logged in." https://help.openai.com/en/articles/8357869 （确认日期 2026-10-24）
+[^appearance]: OpenAI 帮助中心，「Updating your visual experience」。"changing the appearance on the web doesn't automatically change the appearance in the mobile app." 设置菜单名称于 2026-10-24 在网页设置界面上确认。https://help.openai.com/en/articles/11958281 （确认日期 2026-10-24）
 [^academy-content]: OpenAI Academy「Applied AI Foundations」课程正文（需要登录和注册）。"Use a faster model when the task is simple and/or low-stakes." / "Use a reasoning model when the task has:" "Several constraints" / "A need to compare options" / "Compare options against criteria instead of giving a generic list of pros and cons" / "Review your draft recommendation for missing assumptions"（确认日期 2026-10-26）
+[^space]: 「资料库（라이브러리）」正在改名为「Space」。详细内容见[第4章](04-files-images.md#资料库-—-汇集上传文件的地方)。
+[^work-desktop]: Free 和 Go 套餐只能在电脑 App 上有限地使用 Work。出处见前一个脚注里的「套餐与价格」。
 [^data-name]: 帮助文档中有的地方写作「数据控制」，但实际的界面名称是「数据管理（데이터 관리）」。

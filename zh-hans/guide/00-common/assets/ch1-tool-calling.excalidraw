@@ -1,0 +1,200 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "x": -20,
+   "y": 40,
+   "width": 1040,
+   "height": 170,
+   "backgroundColor": "#e9ecef",
+   "strokeColor": "transparent"
+  },
+  {
+   "type": "rectangle",
+   "x": -20,
+   "y": 250,
+   "width": 1040,
+   "height": 150,
+   "backgroundColor": "#e9ecef",
+   "strokeColor": "transparent"
+  },
+  {
+   "type": "text",
+   "x": 0,
+   "y": 0,
+   "text": "提问：“今天首尔天气怎么样？”",
+   "fontSize": 22
+  },
+  {
+   "type": "text",
+   "x": 0,
+   "y": 48,
+   "text": "模型 — 只写请求",
+   "fontSize": 16
+  },
+  {
+   "type": "text",
+   "x": 0,
+   "y": 300,
+   "text": "服务 —\n实际去执行",
+   "fontSize": 18
+  },
+  {
+   "type": "rectangle",
+   "id": "t1",
+   "x": 0,
+   "y": 80,
+   "width": 200,
+   "height": 100,
+   "backgroundColor": "#a5d8ff",
+   "label": {
+    "text": "① 决定用不用\n学到的内容里\n没有今天的天气",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "t2",
+   "x": 280,
+   "y": 80,
+   "width": 200,
+   "height": 100,
+   "backgroundColor": "#a5d8ff",
+   "label": {
+    "text": "② 写请求\n网页搜索：\n首尔 今天天气",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "t3",
+   "x": 400,
+   "y": 280,
+   "width": 200,
+   "height": 100,
+   "backgroundColor": "#b2f2bb",
+   "label": {
+    "text": "③ 执行\n实际去搜索",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "t4",
+   "x": 690,
+   "y": 280,
+   "width": 200,
+   "height": 100,
+   "backgroundColor": "#b2f2bb",
+   "label": {
+    "text": "④ 贴上结果\n把搜索结果\n贴进对话",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "t5",
+   "x": 800,
+   "y": 80,
+   "width": 200,
+   "height": 100,
+   "backgroundColor": "#ffec99",
+   "label": {
+    "text": "⑤ 回答\n“今天首尔\n晴，18度”",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 202,
+   "y": 130,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     76,
+     0
+    ]
+   ],
+   "width": 76,
+   "height": 0,
+   "start": {
+    "id": "t1"
+   },
+   "end": {
+    "id": "t2"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 380,
+   "y": 182,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     120,
+     96
+    ]
+   ],
+   "width": 120,
+   "height": 96,
+   "start": {
+    "id": "t2"
+   },
+   "end": {
+    "id": "t3"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 602,
+   "y": 330,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     86,
+     0
+    ]
+   ],
+   "width": 86,
+   "height": 0,
+   "start": {
+    "id": "t3"
+   },
+   "end": {
+    "id": "t4"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 790,
+   "y": 278,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     110,
+     -96
+    ]
+   ],
+   "width": 110,
+   "height": 96,
+   "start": {
+    "id": "t4"
+   },
+   "end": {
+    "id": "t5"
+   }
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 # 第12章 同时工作与远程
 
-<Badge type="tip" text="必读" /> 要跟上这个阶段，请一定读完。
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
 
 > **一句话总结**：用 Git 留下第一次记录后，就能用 worktree **分出工作文件夹**，让几项工作并排进行。
 
@@ -25,14 +25,14 @@ Git 是保存文件夹变更历史的程序。保存下来的一个时间点叫�
 现在在练习文件夹里开始记录。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 git init
 ```
 
-`git init` 是让这个文件夹开始记录变更历史的命令。接下来决定**不**记录哪些东西。第7章的 `비밀`（秘密）文件夹虽然是假文件，但我们就当它是真的秘密，把它排除掉。下一节的 worktree 文件夹也一起排除。[^wt-ignore] 启动 `claude`，发送下面的内容。
+`git init` 是让这个文件夹开始记录变更历史的命令。接下来决定**不**记录哪些东西。第7章的 `secret`（秘密）文件夹虽然是假文件，但我们就当它是真的秘密，把它排除掉。下一节的 worktree 文件夹也一起排除。[^wt-ignore] 启动 `claude`，发送下面的内容。
 
 ```text
-在这个文件夹里新建 .gitignore 文件，写上"비밀/"和".claude/worktrees/"这两行。
+在这个文件夹里新建 .gitignore 文件，写上"secret/"和".claude/worktrees/"这两行。
 ```
 
 `.gitignore` 是写着让 Git 装作看不见的文件的列表。现在用 `/exit` 退出，在终端里输入。
@@ -58,15 +58,15 @@ git status --short
 A  .claude/skills/meeting-notes/SKILL.md
 A  .gitignore
 A  CLAUDE.md
-A  inbox/회의-2026-10-27-주간회의.txt
-A  notes/회의록-2026-10-27.md
-A  주간정리.sh
-A  회의록.md
+A  inbox/meeting-2026-10-27-weekly.txt
+A  notes/minutes-2026-10-27.md
+A  weekly-summary.sh
+A  minutes.md
 ```
 
-你的列表里文件可能更多。如果去掉第三行，韩文名字会显示成 `\355\232…` 这样的数字，就算 `비밀` 文件夹被收进去了也很难认出来。
+你的列表里文件可能更多。如果去掉第三行，韩文名字会显示成 `\355\232…` 这样的数字，就算 `secret` 文件夹被收进去了也很难认出来。
 
-这时问问自己：`비밀` 文件夹从列表里去掉了吗？去掉了就保存。如果还能看到，就不要提交。改好 `.gitignore` 的两行后，再输入一次 `git reset` 和 `git add .`。`git reset` 是把刚才用 `git add .` 收集的文件重新放下的命令。文件本身不会被删除，放心。
+这时问问自己：`secret` 文件夹从列表里去掉了吗？去掉了就保存。如果还能看到，就不要提交。改好 `.gitignore` 的两行后，再输入一次 `git reset` 和 `git add .`。`git reset` 是把刚才用 `git add .` 收集的文件重新放下的命令。文件本身不会被删除，放心。
 
 ```bash
 git commit -m "第一次记录"
@@ -74,7 +74,7 @@ git commit -m "第一次记录"
 
 `git commit` 才是真正留下记录。`-m` 是 message（消息）的缩写，引号里是这次记录的说明。
 
-这个顺序我们在新文件夹里运行过，确认了 `비밀` 文件夹被排除、提交也留了下来。
+这个顺序我们在新文件夹里运行过，确认了 `secret` 文件夹被排除、提交也留了下来。
 
 <Quiz id="ch812-git" />
 
@@ -93,7 +93,7 @@ claude --worktree memo-fix
 ```text
  ▐▛███▛█   Claude Code v2.1.318
 ▝▜██████▀  Opus 5.5 · Claude 套餐名称
- ▝▝   ▝▝   ~/hello-ai-연습/터미널/.claude/worktrees/memo-fix
+ ▝▝   ▝▝   ~/hello-ai-practice/terminal/.claude/worktrees/memo-fix
 ```
 
 文件夹建在 `.claude/worktrees/memo-fix`，新分支的名字是 `worktree-memo-fix`。[^wt-where] 我们没有给会话起名，什么也没改，就用 `/exit` 结束，文件夹马上被删掉了。
@@ -107,7 +107,7 @@ worktree 的名字和会话的名字是两回事。官方文档说明，如果�
 
 有两点要知道。
 
-- **这是新取出来的副本。**[^wt-fresh] 提交里没有的文件，里面也没有。上面排除的 `비밀` 文件夹也没有。如果看不到笔记，先确认有没有提交。
+- **这是新取出来的副本。**[^wt-fresh] 提交里没有的文件，里面也没有。上面排除的 `secret` 文件夹也没有。如果看不到笔记，先确认有没有提交。
 - **如果还有没处理完的工作，结束时会问你保留还是删除。** 选择删除，文件夹、分支以及里面的工作会一起消失。以后想回来，就用结束时显示的 `claude --worktree <名称> --resume` 命令。[^wt-remove]
 
 把 worktree 的结果合并回主文件夹，是 Git 的分支合并。本章不做合并。只要知道这是一个不碰主文件夹、单独工作的地方就够了。如果好奇怎么合并，可以看[第4阶段 · AI-SDLC 指南](/zh-hans/guide/30-ai-sdlc/)里讲 PR 的那一章。PR（Pull Request）是请求把分支的变更合并到主线的操作。
@@ -124,22 +124,22 @@ worktree 的名字和会话的名字是两回事。官方文档说明，如果�
 在第一个窗口里这样输入。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude --worktree memo-fix
 ```
 
 在第二个窗口里这样输入。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude --worktree study-note
 ```
 
 这样两个窗口就在不同的文件夹里工作。正如上一节看到的，worktree 建在 `.claude/worktrees/<名称>` 里。
 
 ```text
-窗口 1：~/hello-ai-연습/터미널/.claude/worktrees/memo-fix     修改会议记录
-窗口 2：~/hello-ai-연습/터미널/.claude/worktrees/study-note   整理学习笔记
+窗口 1：~/hello-ai-practice/terminal/.claude/worktrees/memo-fix     修改会议记录
+窗口 2：~/hello-ai-practice/terminal/.claude/worktrees/study-note   整理学习笔记
 ```
 
 同时运行两个窗口，本指南没有实际试过。做完后问问自己：两项工作有没有碰到对方的文件？窗口多了，用量也可能增加。用[第13章](13-cost-safety-trouble.md)的 `/usage` 留意着，只在真正需要时使用。
@@ -192,7 +192,7 @@ claude --worktree study-note
 3. 用 `claude --worktree memo-fix` 启动，用 `! pwd` 确认当前文件夹。
 4. 什么都不改，用 `/exit` 结束，然后读一读界面上的提示。
 
-问问自己：第一次记录里排除了 `비밀` 文件夹吗？你能用 `pwd` 说出自己现在在哪个文件夹吗？
+问问自己：第一次记录里排除了 `secret` 文件夹吗？你能用 `pwd` 说出自己现在在哪个文件夹吗？
 
 ## 小结
 

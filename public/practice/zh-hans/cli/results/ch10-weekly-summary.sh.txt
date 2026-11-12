@@ -1,0 +1,10 @@
+#!/bin/bash
+# 把 inbox 里的会议笔记逐个整理成会议记录。
+for memo in inbox/meeting-*.txt; do
+  echo "正在整理：$memo"
+  if claude -p "/meeting-notes $memo" --allowedTools "Read,Write" --max-turns 10; then
+    echo "完成：$memo"
+  else
+    echo "失败：$memo"
+  fi
+done

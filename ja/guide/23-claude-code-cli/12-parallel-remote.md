@@ -25,14 +25,14 @@ Gitは、フォルダの変更の履歴を保存しておくプログラムで�
 では、練習フォルダで記録を始めます。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 git init
 ```
 
-`git init` は、このフォルダの変更の履歴を記録し始めるようにというコマンドです。次に、記録 **しない** ものを決めます。7章の `비밀`（秘密）フォルダは偽物のファイルですが、本当の秘密だと思って外してみましょう。次の節のworktreeのフォルダも一緒に外します。[^wt-ignore] `claude` を起動して、こう送ります。
+`git init` は、このフォルダの変更の履歴を記録し始めるようにというコマンドです。次に、記録 **しない** ものを決めます。7章の `secret`（秘密）フォルダは偽物のファイルですが、本当の秘密だと思って外してみましょう。次の節のworktreeのフォルダも一緒に外します。[^wt-ignore] `claude` を起動して、こう送ります。
 
 ```text
-このフォルダに .gitignore ファイルを作って、"비밀/" と ".claude/worktrees/" の2行を書いて。
+このフォルダに .gitignore ファイルを作って、"secret/" と ".claude/worktrees/" の2行を書いて。
 ```
 
 `.gitignore` は、Gitが見なかったことにするファイルを書く一覧です。では、`/exit` で抜けて、ターミナルに入力します。
@@ -58,15 +58,15 @@ git status --short
 A  .claude/skills/meeting-notes/SKILL.md
 A  .gitignore
 A  CLAUDE.md
-A  inbox/회의-2026-10-27-주간회의.txt
-A  notes/회의록-2026-10-27.md
-A  주간정리.sh
-A  회의록.md
+A  inbox/meeting-2026-10-27-weekly.txt
+A  notes/minutes-2026-10-27.md
+A  weekly-summary.sh
+A  minutes.md
 ```
 
-自分の一覧には、もっと多くのファイルがあるかもしれません。3行目を省くと、ハングルの名前が `\355\232…` のような数字で表示されるので、`비밀` フォルダが入っていても見分けにくくなります。
+自分の一覧には、もっと多くのファイルがあるかもしれません。3行目を省くと、ハングルの名前が `\355\232…` のような数字で表示されるので、`secret` フォルダが入っていても見分けにくくなります。
 
-ここで自分に聞いてみてください。`비밀` フォルダは一覧から外れたか？ 外れていれば保存します。見えたら、コミットしないでください。`.gitignore` の2行を直してから、`git reset` と `git add .` をもう一度入力します。`git reset` は、さっき `git add .` で集めたファイルを、もう一度下ろすコマンドです。ファイルそのものは消えないので、安心してください。
+ここで自分に聞いてみてください。`secret` フォルダは一覧から外れたか？ 外れていれば保存します。見えたら、コミットしないでください。`.gitignore` の2行を直してから、`git reset` と `git add .` をもう一度入力します。`git reset` は、さっき `git add .` で集めたファイルを、もう一度下ろすコマンドです。ファイルそのものは消えないので、安心してください。
 
 ```bash
 git commit -m "最初の記録"
@@ -74,7 +74,7 @@ git commit -m "最初の記録"
 
 `git commit` が、実際に記録を残します。`-m` はメッセージ（message）の略で、引用符の中が、この記録の説明です。
 
-この手順は、新しいフォルダで実行して、`비밀` フォルダが外れ、コミットが残るところまで確認しました。
+この手順は、新しいフォルダで実行して、`secret` フォルダが外れ、コミットが残るところまで確認しました。
 
 <Quiz id="ch812-git" />
 
@@ -93,7 +93,7 @@ claude --worktree memo-fix
 ```text
  ▐▛███▛█   Claude Code v2.1.318
 ▝▜██████▀  Opus 5.5 · Claudeのプラン名
- ▝▝   ▝▝   ~/hello-ai-연습/터미널/.claude/worktrees/memo-fix
+ ▝▝   ▝▝   ~/hello-ai-practice/terminal/.claude/worktrees/memo-fix
 ```
 
 フォルダは `.claude/worktrees/memo-fix` にでき、新しいブランチの名前は `worktree-memo-fix` です。[^wt-where] セッションに名前を付けず、何も変えないまま `/exit` で終えたら、フォルダはすぐに消されました。
@@ -107,7 +107,7 @@ worktreeの名前とセッションの名前は別のものです。セッショ
 
 知っておきたい点が2つあります。
 
-- **新しく取り出したコピーです。**[^wt-fresh] コミットに入っていないファイルは、その中にはありません。上で外した `비밀` フォルダもありません。メモが見当たらなければ、まずコミットしたかを確認してください。
+- **新しく取り出したコピーです。**[^wt-fresh] コミットに入っていないファイルは、その中にはありません。上で外した `secret` フォルダもありません。メモが見当たらなければ、まずコミットしたかを確認してください。
 - **残っている作業があれば、終えるときに残すか削除するかを聞かれます。** 削除を選ぶと、フォルダとブランチ、その中の作業が一緒に消えます。あとで戻ってくるには、終了するときに表示される `claude --worktree <名前> --resume` のコマンドを使います。[^wt-remove]
 
 worktreeの結果を元のフォルダにまとめるのは、Gitのブランチのマージ（統合）です。この章では、まとめません。元のフォルダに手を付けずに、別に作業してみる場所だということだけわかれば十分です。まとめる方法が気になるなら、[ステップ4 · AI-SDLC ガイド](/ja/guide/30-ai-sdlc/)のPRの章を見てください。PR（Pull Request）は、ブランチの変更を本流にまとめてほしいと依頼することです。
@@ -124,22 +124,22 @@ worktreeの結果を元のフォルダにまとめるのは、Gitのブランチ
 1つ目のウィンドウでは、こう入力します。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude --worktree memo-fix
 ```
 
 2つ目のウィンドウでは、こう入力します。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude --worktree study-note
 ```
 
 2つのウィンドウは、こうして別々のフォルダで作業します。前の節で見たとおり、worktreeは `.claude/worktrees/<名前>` にできるからです。
 
 ```text
-ウィンドウ1: ~/hello-ai-연습/터미널/.claude/worktrees/memo-fix     議事録を直す
-ウィンドウ2: ~/hello-ai-연습/터미널/.claude/worktrees/study-note   勉強ノートを整理する
+ウィンドウ1: ~/hello-ai-practice/terminal/.claude/worktrees/memo-fix     議事録を直す
+ウィンドウ2: ~/hello-ai-practice/terminal/.claude/worktrees/study-note   勉強ノートを整理する
 ```
 
 ウィンドウ2つを同時に動かすことは、このガイドでは試していません。終わったら、自分に聞いてみてください。2つの作業が、お互いのファイルに触っていなかったか？ ウィンドウを増やすと、使う量も増えることがあります。[13章](13-cost-safety-trouble.md)の `/usage` で様子を見ながら、本当に必要なときだけ使ってください。
@@ -192,7 +192,7 @@ claude --worktree study-note
 3. `claude --worktree memo-fix` で始めて、`! pwd` で今のフォルダを確認します。
 4. 何も変えずに `/exit` で終えたあと、画面の案内を読みます。
 
-自分に聞いてみてください。最初の記録から `비밀` フォルダは外れたか？ 今自分がどのフォルダにいるかを、`pwd` で言えるか？
+自分に聞いてみてください。最初の記録から `secret` フォルダは外れたか？ 今自分がどのフォルダにいるかを、`pwd` で言えるか？
 
 ## まとめ
 

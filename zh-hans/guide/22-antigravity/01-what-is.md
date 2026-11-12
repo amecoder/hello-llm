@@ -1,5 +1,7 @@
 # 第1章 Antigravity 是什么，和前面两个工具有什么不同
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：Antigravity 是 Google 做的、**直接在我电脑的文件夹里工作**的 AI 工具。有桌面应用和终端程序 `agy`。
 > 它和前面两个工具有两点不同。**用免费的 Google 账号也能使用全部功能**，并且它**原样读取在 Codex 阶段做的 `AGENTS.md` 和 `.agents/skills`。**
 
@@ -36,15 +38,29 @@ Antigravity **在所有套餐里都提供全部功能**。定时任务和 CLI �
 
 用量不是按提问的个数，而是按**智能体做的工作量**减少。工作越简单，能问的次数越多。[^work]
 
-个人 Google 账号（例：@gmail.com）可以免费使用。[^personal] 不过必须**满18周岁以上**，并且要在可使用的国家（韩国在名单里）。[^age][^country] 由公司、学校管理的账号不是个人账号，需要管理员允许。[^workspace]
+举个例子。
+
+- 像「只帮我改掉这个文件里的错别字」这样的小事，用量只会减少一点。
+- 像「把文件夹里的文件全部读一遍并整理好」这样的大事，一次就会减少很多。
 
 **三个工具里，能用免费账号使用全部功能的只有 Antigravity。** Claude Code 需要付费订阅，Codex 章节以 Plus 以上为准。如果你还没有付费套餐，从这个阶段开始实践也可以。
+
+个人 Google 账号（例：@gmail.com）可以免费开始使用。[^personal] 不过必须**满18周岁以上**。[^age]
+
+::: details 详细说明（点击展开）
+- 只能在可使用的国家使用。韩国在名单里。[^country]
+- 由公司、学校管理的账号不是个人账号。所以需要管理员允许才能用。[^workspace]
+:::
 
 <Quiz id="ch601-plans" />
 
 ## 选择模型
 
-在 Antigravity 里，除了 Gemini，也可以选其他公司的模型，还可以决定思考级别（Low·Medium·High）。[^models] 可以选择的模型因套餐而异。
+在 Antigravity 里，除了 Gemini，也可以选其他公司的模型。
+
+还可以决定思考级别（Low·Medium·High）。思考级别是决定 AI 在回答之前要想得多深的值。Low 回答得快，适合简单的修改；High 想得久，适合好几个步骤交织在一起的难事。[^models]
+
+可以选择的模型因套餐而异。
 
 | 模型 | 免费 | Pro | Ultra |
 |---|---|---|---|
@@ -54,7 +70,11 @@ Antigravity **在所有套餐里都提供全部功能**。定时任务和 CLI �
 
 出处：Antigravity 官方文档（只摘取了一部分，Pro 的 Claude 不含试用版）[^model-table]
 
-文档写明，免费时可以选的 Claude 4.6 系列**预计在2026年11月2日下架**（以2026-11-01的确认为准）。[^removed] 所以如果是免费账号，可以理解为用 Gemini 3.8 Flash 来实践。
+如果是免费账号，可以理解为**用 Gemini 3.8 Flash 来实践**。一开始不用为选模型发愁。
+
+::: details 详细说明（点击展开）
+文档写明，免费时可以选的 Claude 4.6 系列**预计在2026年11月2日下架**（以2026-11-01的确认为准）。[^removed] 所以免费账号能选的模型，以 Gemini 3.8 Flash 为准。
+:::
 
 <Quiz id="ch601-models" />
 
@@ -105,19 +125,19 @@ Antigravity **在所有套餐里都提供全部功能**。定时任务和 CLI �
 
 下一章：[第2章. 安装应用与第一次整理](02-first-task.md)
 
-[^surfaces]: Antigravity 官方文档，「Choose your Antigravity」。"Evolved from the Agent Manager into a standalone desktop command center (Antigravity App) alongside native terminal, editor, and programmatic SDK interfaces, Antigravity supports both synchronous interactive pair-programming and asynchronous background agent workflows independent of a single IDE." https://antigravity.google/docs/overview（确认日期 2026-11-01）
-[^ide]: Antigravity 官方文档，「Get started」。"Install the official Google Antigravity extension for your preferred editor, or download the standalone **Antigravity IDE**:" https://antigravity.google/docs/getting-started（确认日期 2026-11-01）
-[^sdk]: Antigravity 官方文档，「Google Antigravity SDK」。"The Google Antigravity SDK is a Python SDK for building autonomous AI agents powered by Antigravity and Gemini." https://antigravity.google/docs/sdk/overview（确认日期 2026-11-01）
-[^same]: Antigravity 官方文档，「Antigravity features」。"The Antigravity App and the Antigravity CLI run the same agent, so most features work on both." https://antigravity.google/docs/features（确认日期 2026-11-01）
-[^auth]: Antigravity 官方文档，「Authenticate」。"Signing in on one local surface shares your credentials across your local environment." https://antigravity.google/docs/install（确认日期 2026-11-01）
-[^all-features]: Antigravity 官方文档，「Plans」。"All plans receive the following baseline features:" / "Access to all product features, such as scheduled tasks and the CLI" https://antigravity.google/docs/plans（确认日期 2026-11-01）
-[^plans]: Antigravity 官方文档，「Plans」。"The highest, most generous quota, refreshed every five hours" / "A high, generous quota, refreshed every five hours until the weekly limit is reached" / "A meaningful quota, refreshed weekly" https://antigravity.google/docs/plans（确认日期 2026-11-01）
-[^work]: Antigravity 官方文档，「Plans」。"As a result, you receive more prompts when your tasks are straightforward and the agent can complete the work quickly, while more complex tasks consume more quota." https://antigravity.google/docs/plans（确认日期 2026-11-01）
-[^personal]: Antigravity 官方文档，「FAQ」。"Personal Google Accounts (such as `@gmail.com` addresses) can use Google Antigravity on any plan, including the free tier." https://antigravity.google/docs/faq（确认日期 2026-11-01）
-[^age]: Antigravity 官方文档，「FAQ」。"Currently, Antigravity is unavailable to users under 18." https://antigravity.google/docs/faq（确认日期 2026-11-01）
-[^workspace]: Antigravity 官方文档，「FAQ」。"Work or school accounts managed by an organization, such as Google Workspace accounts, aren’t personal Google Accounts." https://antigravity.google/docs/faq（确认日期 2026-11-01）
-[^models]: Antigravity 官方文档，「Choose a model」。"You can switch models at any time and choose a thinking level (`Low`, `Medium`, or `High`) to balance response speed for quick edits against deeper multi-step reasoning for complex architecture and debugging tasks." https://antigravity.google/docs/models（确认日期 2026-11-01）
-[^model-table]: Antigravity 官方文档，「Choose a model」。模型表中 Gemini 3.8 Flash·Gemini 4 Argon·Claude Sonnet 5.5 各行，以及 "\*\* Available on Google AI Pro for non-trial subscriptions only." https://antigravity.google/docs/models（确认日期 2026-11-01）
-[^removed]: Antigravity 官方文档，「Choose a model」。"\* Will be removed on November 2, 2026." https://antigravity.google/docs/models（确认日期 2026-11-01）
-[^discovery]: Antigravity 官方文档，「Customization discovery」。"**Workspace**: the `.agents/` folder in your project, plus `AGENTS.md` and `GEMINI.md` files." https://antigravity.google/docs/customization-discovery（确认日期 2026-11-01）
-[^country]: Antigravity 官方文档，「FAQ」。"Google Antigravity is available in the following countries and territories." / "South Korea" https://antigravity.google/docs/faq（确认日期 2026-11-01）
+[^surfaces]: Antigravity 官方文档，「Choose your Antigravity」。"Evolved from the Agent Manager into a standalone desktop command center (Antigravity App) alongside native terminal, editor, and programmatic SDK interfaces, Antigravity supports both synchronous interactive pair-programming and asynchronous background agent workflows independent of a single IDE." https://antigravity.google/docs/overview （确认日期 2026-11-01）
+[^ide]: Antigravity 官方文档，「Get started」。"Install the official Google Antigravity extension for your preferred editor, or download the standalone **Antigravity IDE**:" https://antigravity.google/docs/getting-started （确认日期 2026-11-01）
+[^sdk]: Antigravity 官方文档，「Google Antigravity SDK」。"The Google Antigravity SDK is a Python SDK for building autonomous AI agents powered by Antigravity and Gemini." https://antigravity.google/docs/sdk/overview （确认日期 2026-11-01）
+[^same]: Antigravity 官方文档，「Antigravity features」。"The Antigravity App and the Antigravity CLI run the same agent, so most features work on both." https://antigravity.google/docs/features （确认日期 2026-11-01）
+[^auth]: Antigravity 官方文档，「Authenticate」。"Signing in on one local surface shares your credentials across your local environment." https://antigravity.google/docs/install （确认日期 2026-11-01）
+[^all-features]: Antigravity 官方文档，「Plans」。"All plans receive the following baseline features:" / "Access to all product features, such as scheduled tasks and the CLI" https://antigravity.google/docs/plans （确认日期 2026-11-01）
+[^plans]: Antigravity 官方文档，「Plans」。"The highest, most generous quota, refreshed every five hours" / "A high, generous quota, refreshed every five hours until the weekly limit is reached" / "A meaningful quota, refreshed weekly" https://antigravity.google/docs/plans （确认日期 2026-11-01）
+[^work]: Antigravity 官方文档，「Plans」。"As a result, you receive more prompts when your tasks are straightforward and the agent can complete the work quickly, while more complex tasks consume more quota." https://antigravity.google/docs/plans （确认日期 2026-11-01）
+[^personal]: Antigravity 官方文档，「FAQ」。"Personal Google Accounts (such as `@gmail.com` addresses) can use Google Antigravity on any plan, including the free tier." https://antigravity.google/docs/faq （确认日期 2026-11-01）
+[^age]: Antigravity 官方文档，「FAQ」。"Currently, Antigravity is unavailable to users under 18." https://antigravity.google/docs/faq （确认日期 2026-11-01）
+[^workspace]: Antigravity 官方文档，「FAQ」。"Work or school accounts managed by an organization, such as Google Workspace accounts, aren’t personal Google Accounts." https://antigravity.google/docs/faq （确认日期 2026-11-01）
+[^models]: Antigravity 官方文档，「Choose a model」。"You can switch models at any time and choose a thinking level (`Low`, `Medium`, or `High`) to balance response speed for quick edits against deeper multi-step reasoning for complex architecture and debugging tasks." https://antigravity.google/docs/models （确认日期 2026-11-01）
+[^model-table]: Antigravity 官方文档，「Choose a model」。模型表中 Gemini 3.8 Flash·Gemini 4 Argon·Claude Sonnet 5.5 各行，以及 "\*\* Available on Google AI Pro for non-trial subscriptions only." https://antigravity.google/docs/models （确认日期 2026-11-01）
+[^removed]: Antigravity 官方文档，「Choose a model」。"\* Will be removed on November 2, 2026." https://antigravity.google/docs/models （确认日期 2026-11-01）
+[^discovery]: Antigravity 官方文档，「Customization discovery」。"**Workspace**: the `.agents/` folder in your project, plus `AGENTS.md` and `GEMINI.md` files." https://antigravity.google/docs/customization-discovery （确认日期 2026-11-01）
+[^country]: Antigravity 官方文档，「FAQ」。"Google Antigravity is available in the following countries and territories." / "South Korea" https://antigravity.google/docs/faq （确认日期 2026-11-01）

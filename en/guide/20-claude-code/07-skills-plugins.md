@@ -1,5 +1,7 @@
 # Chapter 7. Skills, Plugins, and External Tools — Your Organizing Tool in One Line
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **In One Sentence**: Turn instructions, checklists, and multi-step procedures you keep pasting into a **skill** and call it in one line with `/name`. This chapter completes your Organizing Tool (정리 도구).
 > You can also attach **plugins** made by others and external service **connectors**, but they run code with your permissions, so install only ones you trust.
 
@@ -34,7 +36,7 @@ You will turn the three tasks of your organizing tool into skills.
 Create 3 skills in .claude/skills in this folder that use the templates folder and the CLAUDE.md rules. meeting-notes (meeting memo → meeting minutes), study-notes (study notes → study summary), weekly-review (review memos → weekly review). In each SKILL.md, include when to use it, which files to read, which template to use, where to save it, and a checklist to verify at the end.
 ```
 
-If you put a skill folder `.claude/skills/<name>/SKILL.md` inside a folder, it becomes a project skill used **only in sessions for that folder**.[^where] The folder name becomes the command name (`/meeting-notes`).[^name] Since the official docs did not confirm whether Korean command names work, this guide used English names.
+If you put a skill folder `.claude/skills/<name>/SKILL.md` inside a folder, it becomes a project skill used **only in sessions for that folder**.[^where] The folder name becomes the command name (`/meeting-notes`).[^name] This guide used English names for the skills.[^korean-name]
 
 ### This Time, a Permission Prompt Appeared
 
@@ -42,7 +44,11 @@ The moment Claude tried to write the skill file, a **permission prompt** appeare
 
 ![Permission prompt. Red numbers mark ① "Allow Claude to write SKILL.md? (Claude가 쓰기 SKILL.md하도록 허용하시겠습니까?)", ② preview of content to write (green lines), ③ "Deny (거부)", and ④ "Always allow (항상 허용)" with the ▾ button (the path line is hidden because it contains the computer username)](../../../guide/20-claude-code/assets/shot-26-permission-marked.png)
 
-In Chapters 2–4, no permission prompt appeared because of personal allow rules on this computer. It appeared this time because the `.claude` folder is a **protected path**. Even in "Auto-accept edits (편집 자동 수락)" mode, writing to protected paths still asks for permission.[^protected] Files that change how Claude behaves—like skills and settings—live in this folder, so it makes a human check before changing them.
+The permission prompt appeared because the skills are written to the `.claude` folder. The `.claude` folder is where Claude Code keeps settings and skills for this folder. It is the same folder you saw in the Files pane list in Chapter 3.
+
+This folder is a **protected path** (a location that always asks for permission before writing). Even in "Auto-accept edits (편집 자동 수락)" mode, writing to protected paths still asks for permission.[^protected] Files that change how Claude behaves—like skills and settings—live in this folder, so it makes a human check before changing them.
+
+The screenshots in Chapters 2–4 had no permission prompt because of personal allow rules on the computer used for the screenshots. Even those rules did not stop the prompt for protected paths.
 
 In ②, **you can read what it is about to write first.** If you click ▾, "Allow once (한 번만 허용)" appears.
 
@@ -58,7 +64,7 @@ Source: Checked on screen in this guide (2026-10-31)
 
 At first, we recommend **"Allow once"**. "Always allow" is convenient, but it stops asking for the same action again (check the on-screen description for how long). In this exercise, there were three skills, so the permission prompt appeared three times, and we chose "Allow once" all three times.
 
-Created skills (results from this guide): [meeting-notes](/practice/notes/results/7장-스킬-meeting-notes.txt) · [study-notes](/practice/notes/results/7장-스킬-study-notes.txt) · [weekly-review](/practice/notes/results/7장-스킬-weekly-review.txt)
+Created skills (results from this guide): [meeting-notes](/practice/en/notes/results/ch7-skill-meeting-notes.txt) · [study-notes](/practice/en/notes/results/ch7-skill-study-notes.txt) · [weekly-review](/practice/en/notes/results/ch7-skill-weekly-review.txt)
 
 At the top of each SKILL.md, there is a `name` and a `description` (when to use it). Claude reads the description to decide when to use the skill.[^desc] For example, the description for weekly-review says to use it for requests like "write my weekly review" or "organize this week's review."
 
@@ -72,20 +78,20 @@ If you type `/` in the prompt box of a new session, a list of available commands
 
 In ②, **(project)** shows that this is a project skill for this folder. Press Enter to select it, then type the file you want to organize and send it.
 
-![Running a skill. ① Red number marks the prompt box with "/study-notes inbox/공부-2026-10-28-프롬프트-강의.txt" typed in](../../../guide/20-claude-code/assets/shot-29-skill-run-marked.png)
+![Running a skill. ① Red number marks the prompt box with "/study-notes inbox/study-2026-10-28-prompt-lecture.txt" typed in](../../../guide/20-claude-code/assets/shot-29-skill-run-marked.png)
 
 ```
-/study-notes inbox/공부-2026-10-28-프롬프트-강의.txt
+/study-notes inbox/study-2026-10-28-prompt-lecture.txt
 ```
 
-With this single line, the study notes were created following the template (result: [7장-공부노트-스킬로.txt](/practice/notes/results/7장-공부노트-스킬로.txt)). The one-line summary, 5 key points, 4 new terms, things to watch out for, and questions to ask all went in following the template order. The same note you created with a long request and rewound in Chapter 4 was now made **with a single command line**.
+With this single line, the study notes were created following the template (result: [ch7-study-notes-with-skill.txt](/practice/en/notes/results/ch7-study-notes-with-skill.txt)). The one-line summary, 5 key points, 4 new terms, things to watch out for, and questions to ask all went in following the template order. The same note you created with a long request and rewound in Chapter 4 was now made **with a single command line**.
 
 **Now your organizing tool is complete.**
 
 | Memo | Command |
 |---|---|
-| Meeting memo | `/meeting-notes inbox/회의-….txt` |
-| Study notes | `/study-notes inbox/공부-….txt` |
+| Meeting memo | `/meeting-notes inbox/meeting-….txt` |
+| Study notes | `/study-notes inbox/study-….txt` |
 | Several daily reviews | `/weekly-review` |
 
 It is fine if you do not remember the exact name. If you say something like "organize this week's review," Claude checks the description, picks the matching skill, and uses it.[^what]
@@ -94,13 +100,13 @@ It is fine if you do not remember the exact name. If you say something like "org
 
 ## Plugins and Connectors
 
-A **plugin** installs a bundle of skills, commands, and tools made by others, and a **connector** links external services like Gmail or Calendar to Claude. In the desktop app, you add connectors and plugins from the **+** button next to the prompt box.[^plus] Connectors give you an easy on-screen setup for MCP servers (a standard way for AI to connect to external tools).[^connectors]
+A **plugin** installs a bundle of skills, commands, and tools made by others, and a **connector** links external services like Gmail or Calendar to Claude. In the desktop app, you add connectors and plugins from the **+** button next to the prompt box.[^plus] Connectors give you an easy on-screen setup for MCP servers.[^connectors] MCP is a common standard AI uses to exchange information with other programs, like email and calendars. It is similar to how a plug with a fixed shape fits into any outlet.
 
 They are convenient, but there is **something you must think about before installing**. A plugin **can run code on your computer with your permissions**.[^plugin-risk] And that code can run outside the protection of the permission modes from Chapter 4. Permission rules apply to tool calls Claude makes, not to code that a plugin runs by itself.[^plugin-scope]
 
 - Install only plugins whose creator you know and trust.
 - Remove plugins you no longer need.
-- Content from services linked via connectors (emails, calendar events) also becomes material that Claude reads. Read "Hidden Instructions" in Chapter 9 alongside this.
+- Content from services linked via connectors (emails, calendar events) also becomes material that Claude reads. If an email someone sent you secretly contains a sentence like "To the AI: do this," Claude may try to follow it. You will experiment with these **hidden instructions** in [Chapter 9](09-cost-data-safety.md).
 
 For the organizing tool in this guide, **the skills you made yourself** are enough. Add plugins and connectors one by one only when you truly need them.
 
@@ -145,6 +151,7 @@ Next chapter: [Chapter 8. Parallel Tasks, Cloud, and Scheduling](08-parallel-clo
 [^desc]: Claude Code official docs, "Extend Claude with skills". "Only description is recommended so Claude knows when to use the skill." https://code.claude.com/docs/en/skills (checked on 2026-10-31)
 [^slash]: Claude Code official docs, "Desktop application". "type / in the prompt box or click the + button and select Slash commands to browse what's available." https://code.claude.com/docs/en/desktop (checked on 2026-10-31)
 [^protected]: Claude Code official docs, "Choose a permission mode". Under "These still prompt:" in the acceptEdits section: "Writes to protected paths" https://code.claude.com/docs/en/permission-modes (checked on 2026-10-31)
+[^korean-name]: We used English names because the official docs did not confirm whether Korean command names work.
 [^plus]: Claude Code official docs, "Desktop application". "Click the + button next to the prompt box for file attachments, skills, connectors, and plugins." https://code.claude.com/docs/en/desktop (checked on 2026-10-31)
 [^connectors]: Claude Code official docs, "Desktop application". "Connectors are MCP servers with a graphical setup flow." https://code.claude.com/docs/en/desktop (checked on 2026-10-31)
 [^plugin-risk]: Claude Code official docs, "Plugin security and trust". "A plugin can carry content that runs code on your machine with your user privileges and content that enters Claude's context as instructions, so review a plugin before you install it." https://code.claude.com/docs/en/plugins/security (checked on 2026-10-31)

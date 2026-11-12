@@ -1,0 +1,10 @@
+#!/bin/bash
+# inbox の会議メモをひとつずつ議事録に整理する。
+for memo in inbox/meeting-*.txt; do
+  echo "整理中: $memo"
+  if claude -p "/meeting-notes $memo" --allowedTools "Read,Write" --max-turns 10; then
+    echo "完了: $memo"
+  else
+    echo "失敗: $memo"
+  fi
+done

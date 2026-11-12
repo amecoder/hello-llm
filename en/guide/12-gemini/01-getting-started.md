@@ -1,5 +1,7 @@
 # Chapter 1. Getting Started — Where to Use It, Signing In, Plans, and Usage Limits
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: You can use Gemini on the web, in a mobile app, and in a computer app with a single Google Account. There is no separate sign-up.
 > Just sign in with the Google Account you already use. Start for free and only consider a paid plan if you often hit the usage limit.
 
@@ -12,25 +14,40 @@ The tips for asking good questions from Part 1 work the same way in Gemini. This
 
 You can use it on the web, in a mobile app, or in a computer app. Wherever you use it, you sign in with the same Google Account.
 
-| Where to use it | How to open it | What you need |
-|---|---|---|
-| Web | Go to gemini.google.com in your browser | Chrome, Safari, Firefox, Opera, or Edge |
-| Android app | Get it on Google Play | Android 9 or later, 2 GB of RAM or more |
-| Mac app | Get it at gemini.google/mac | macOS 15 or later, Apple chip |
-| Windows app | Get it at gemini.google/desktop | Windows 10 or later |
+| Where to use it | How to open it |
+|---|---|
+| Web | Go to gemini.google.com in your browser |
+| Android app | Get it on Google Play |
+| iPhone and iPad app | Get it on the App Store |
+| Mac app | Get it at gemini.google/mac |
+| Windows app | Get it at gemini.google/desktop |
 
 Source: Google Help[^start][^mobile][^mac][^windows]
 
-On an iPhone or iPad, download the Gemini app from the App Store.[^mobile]
 If this is your first time, start on the web. It is the easiest option because there is nothing to install.
 
 There are two requirements to use it.
 
-- You must be in a **supported country**. South Korea is on the list of supported countries for both the web app and the mobile app, and Korean is supported.[^where][^mobile]
-- You must be **13 or older** (for a personal account; the minimum age may vary by country). For a work account, you must be 18 or older.[^signin]
+- You must be in a **supported country**. South Korea is a supported country, and Korean is supported.[^where][^mobile]
+- You must be **13 or older** (for a personal account).[^signin]
 
-However, paid plans and some features (such as customization and importing from other AIs) are only available if you are **18 or older**.[^plans][^customize]
-Accounts managed with Family Link (Google's parental controls), such as a child's account, cannot use Gemini on the web. For the mobile app, parents can turn off their child's access in Family Link settings.[^signin]
+Paid plans and some features (such as customization and importing from other AIs) are only available if you are **18 or older**.[^plans][^customize]
+Accounts managed with Family Link (a feature that lets parents manage a child's account), such as a child's account, cannot use Gemini on the web.[^signin]
+
+::: details More details (click to expand)
+**What each device needs**[^start][^mobile][^mac][^windows]
+
+- Web: Chrome, Safari, Firefox, Opera, or Edge browser
+- Android app: Android 9 or later, 2 GB of RAM or more
+- Mac app: macOS 15 or later, Apple chip
+- Windows app: Windows 10 or later
+
+**Age and account type**[^signin]
+
+- The minimum age of 13 may vary by country.
+- For a work account, you must be 18 or older.
+- For the mobile app, parents can turn off their child's access in Family Link settings.
+:::
 
 When you open it for the first time, try asking this:
 
@@ -84,12 +101,20 @@ Source: Google plans page (South Korea) and Google Help[^plans-screen][^limits]
 There is one thing worth noting. Google AI plans include **Google storage**. This storage is shared across Drive, Gmail, and Google Photos.[^upgrade]
 So if you already pay for extra storage for your photos or emails, factor that in when choosing a plan.
 
-Ultra comes in two tiers: "Ultra 5x (Ultra 5배)" (₩119,000/month, 20 TB) and "Ultra 20x (Ultra 20배)" (₩300,000/month, 30 TB).[^plans-screen]
 Prices can change and limited-time discounts are common. Check the [plans page](https://one.google.com/about/google-ai-plans/) yourself before you pay.
+
+At first, comparing just Free and Pro is enough. Ultra is a plan for people who use it several times more than Pro allows.
+
+"5x or 20x" in the table means Ultra comes in two tiers: "Ultra 5x (Ultra 5배)" (₩119,000/month, 20 TB) and "Ultra 20x (Ultra 20배)" (₩300,000/month, 30 TB).[^plans-screen]
 
 ### What Changes with Each Plan?
 
 It is easier to choose when you focus on **"what changes"** rather than just the numbers.
+
+Before reading the table, learn just two words.
+
+- **Token**: The unit AI uses to count text. The bigger the number, the longer the text it can read at once.
+- **Model**: The AI inside Gemini that actually creates the answers. There are several models of different sizes and characters, and the largest one is Argon. You will see more in [Chapter 2](02-screen-tour.md).
 
 | What changes | Free | Paid |
 |---|---|---|
@@ -98,7 +123,7 @@ It is easier to choose when you focus on **"what changes"** rather than just the
 | **Choosing a model yourself** | No | Yes ([Chapter 2](02-screen-tour.md))[^models] |
 | **Largest model** (Argon) | No | Pro & Ultra[^plans] |
 
-**How much it can read at once** is the [context window](../00-common/01-what-is-llm.md#_3-there-is-a-limit-to-how-much-it-can-see-at-once-—-context-window) you learned about in Part 1. A token is the unit AI uses to count text.
+**How much it can read at once** is the [context window](../00-common/01-what-is-llm.md#_3-there-is-a-limit-to-how-much-it-can-see-at-once-—-context-window) you learned about in Part 1.
 With 1 million tokens, it can read about 1,500 pages of text at once.[^limits] This makes a big difference when you want to upload an entire long report or book and ask questions about it.
 
 If you use the Pro plan with a family plan, your family members can also use the AI features at no extra cost.[^plans]
@@ -170,9 +195,13 @@ Make sure you know the following before paying.
 
 - **You can cancel anytime.**[^plans] Go to Settings (설정) → Manage subscription (구독 관리), then click Cancel membership (멤버십 취소) in Google One settings.[^upgrade][^screen]
 - **You also change your plan in Google One.** Upgrade or downgrade under Manage membership (멤버십 관리) → Change membership plan (멤버십 요금제 변경).[^upgrade]
-- **When your plan ends, your storage goes down too.** Using Pro as an example, Google Help notes that you lose access to the expanded storage across Drive, Gmail, and Photos as well as perks like Gemini in Gmail and Docs.[^upgrade] If you are using a lot of storage, check before you cancel.
-- **Once your paid plan ends, you cannot start new chats with Pro or continue chats that were created with Pro.**[^upgrade]
 - **Work and school accounts cannot subscribe to these plans.** Only personal Google Accounts can subscribe.[^plans]
+- **If you cancel, the extra storage goes away too.** If you have stored a lot of photos and emails, check before you cancel.[^upgrade]
+
+::: details What you lose when you cancel (click to expand)
+- Using Pro as an example, Google Help notes that you lose access to the expanded storage across Drive, Gmail, and Photos as well as perks like Gemini in Gmail and Docs.[^upgrade]
+- Once your paid plan ends, you cannot start new chats with Pro or continue chats that were created with Pro.[^upgrade]
+:::
 
 If you are not sure which plan fits you, tell Gemini your usage habits and ask. Just remember to verify prices and terms on the plans page rather than trusting the AI's answer ([Part 1, Chapter 9](../00-common/09-safety.md)).
 
@@ -193,6 +222,10 @@ Sometimes you might get no reply, see an error message, or fail to sign in. When
 3. **Check your internet connection and wait about 5 minutes.** It may stop working briefly when traffic is heavy.
 4. **Refresh the page or restart the app.**
 
+If it still does not work, send feedback. Go to Settings (설정) → Send feedback (의견 보내기) to write a report and attach a screenshot.[^feedback][^screen]
+**When you send feedback, that chat and any uploaded files are sent to Google along with it.**[^feedback] If the chat contains personal information, make sure that part is hidden.
+
+::: details What each error message means (click to expand)
 Knowing what common messages mean will keep you from panicking.
 
 | Message | What it means | What to try |
@@ -203,9 +236,7 @@ Knowing what common messages mean will keep you from panicking.
 | I cannot fulfill this request | A required connected app is turned off[^errors] | Check your connected apps |
 
 If you see Something went wrong (문제가 발생했습니다) when signing in, the issue may be with your account. Your location, age, or account type (such as a work or school account) could be the reason.[^signin]
-
-If it still does not work, send feedback. Go to Settings (설정) → Send feedback (의견 보내기) to write a report and attach a screenshot.[^feedback][^screen]
-**When you send feedback, that chat and any uploaded files are sent to Google along with it.**[^feedback] If the chat contains personal information, make sure that part is hidden.
+:::
 
 <Quiz id="ch301-trouble" />
 

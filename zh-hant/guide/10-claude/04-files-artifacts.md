@@ -1,5 +1,7 @@
 # 第4章 檔案與工件——展示給它看，讓它做出來
 
+<Badge type="info" text="選讀" /> 需要的時候再讀。跳過也能跟上後面的章節。
+
 > **一句話總結**：難以用語言說明的資料，就**上傳檔案**給它看；需要的文件、表格、簡報，就讓它**生成檔案**。
 > 值得給別人看的成果，會作為**工件**（Artifact）在對話旁邊開啟，可以修改和分享。不過，Claude 不會生成照片或插畫。
 
@@ -11,7 +13,7 @@
 
 ![展開輸入框「+」選單的介面。① 「上傳或新增檔案」，② 「Skills」，③ 「新增聯結器」，④ 「設計系統」，⑤ 「新增外掛」，⑥ 「記憶」都標有紅色編號](../../../guide/10-claude/assets/shot-02-plus-menu-marked.png)
 
-這是免費套餐的介面。**上傳檔案時，只用 ① 就夠了。**[^screen][^upload-name] ⑥ 「記憶」在[第3章](03-chats.md)和[第5章](05-memory.md)裡講。
+這是免費方案的介面。**上傳檔案時，只用 ① 就夠了。**[^screen][^upload-name] ⑥ 「記憶」在[第3章](03-chats.md)和[第5章](05-memory.md)裡講。
 
 可以上傳的東西如下。[^upload]
 
@@ -22,7 +24,15 @@
 | 表格 | Excel（XLSX）、CSV |
 | 其他 | JSON |
 
-Excel 檔案（XLSX）只有在設定裡打開了「程式碼執行和檔案生成」才能上傳。這個設定在下一節裡講。[^upload]
+不認識的格式不用在意。平時用的照片、PDF、Word、Excel 就足夠了。只把陌生的名字解釋一下：
+
+- RTF·ODT：其他文件軟體使用的文件格式
+- EPUB：電子書檔案
+- HTML：網頁檔案
+- CSV：用逗號分隔各欄的簡單表格檔案
+- JSON：程式之間交換資料時用的檔案
+
+Excel 檔案（XLSX）只有在設定裡打開了「程式碼執行和檔案生成」才能上傳。[^upload] 名字裡有「程式碼」，看著陌生，但你自己不用寫程式碼。這個設定是讓 Claude 在後臺執行小程式來處理表格、生成檔案。在哪裡開啟，下一節會講。
 
 與其只上傳檔案然後說"幫我看看"，不如同時寫清楚你想要什麼。這樣得到的回答會有用得多（[第1階段第4章](../00-common/04-prompt-basics.md#好提示詞的5個要素)）。
 
@@ -32,7 +42,7 @@ Excel 檔案（XLSX）只有在設定裡打開了「程式碼執行和檔案生�
 不確定的內容請標註"推測"。
 ```
 
-::: details 收到的回答大概是這樣（示例——點選展開）
+::: details 收到的回答大概是這樣（示例——點選展開）（點選展開）
 這是本指南編寫的示例。實際的回答會因服務和每次情況而不同。
 
 > 下面是比上個月漲得最多的三項。
@@ -47,18 +57,19 @@ Excel 檔案（XLSX）只有在設定裡打開了「程式碼執行和檔案生�
 
 :::
 
-需要知道的事。[^upload]
+一開始只要知道兩件事。[^upload]
 
-- **一個對話最多可以上傳 20 個檔案。**
-- **PDF 最多 1,000 頁。** 100 頁以內，連圖片和圖表都會讀取。從第 101 頁起，只讀取文字。如果圖片對你很重要，請只擷取需要的頁再上傳。
+- **圖片很重要的資料，請用較短的 PDF 上傳。** PDF 在 100 頁以內，連圖片和圖表都會讀取。從第 101 頁起，只讀取文字。所以請只擷取需要的頁再上傳。
 - **PDF 以外的文件只讀取文字。** 放在 Word 檔案裡的圖片讀不出來。如果圖片重要，請轉成 PDF 再上傳。
-- **照片最好寬和高都在 1,000 畫素以上。**
-- **說 PDF 頁碼時，請用螢幕上的頁碼。** 不是文件上印的頁碼，而是 PDF 閱讀軟體上顯示的頁碼。
 
 檔案太大上傳不了的話，可以分開上傳。
 
-::: details 單個檔案最大能上傳多少？（點選展開）
-單個檔案的大小上限，不同的文件寫法不同。上傳檔案的幫助文件寫的是每個檔案 500MB。[^upload] 生成檔案功能的幫助文件寫的是，上傳和下載都是每個檔案 30MB。[^create]
+::: details 檢視更多數字上限（點選展開）
+- **一個對話最多可以上傳 20 個檔案。**[^upload]
+- **PDF 最多 1,000 頁。**[^upload]
+- **照片最好寬和高都在 1,000 畫素以上。**[^upload]
+- **說 PDF 頁碼時，請用螢幕上的頁碼。** 不是文件上印的頁碼，而是 PDF 閱讀軟體上顯示的頁碼。[^upload]
+- 單個檔案的大小上限，不同的文件寫法不同。上傳檔案的幫助文件寫的是每個檔案 500MB。[^upload] 生成檔案功能的幫助文件寫的是，上傳和下載都是每個檔案 30MB。[^create]
 :::
 
 > 身份證、合同、病歷這類包含個人資訊的檔案，上傳之前請先遮住或去掉相關部分。原則在[第1階段第9章](../00-common/09-safety.md#_2-個人資訊和機密——放進去之前先想一想)裡講過。
@@ -77,18 +88,18 @@ Claude 的回答不只有文字，也可以**生成檔案**給你。可以下載
 | PDF | 用於列印的文件 |
 | PNG 圖片 | 用數字畫出的圖表 |
 
-包括免費套餐在內，所有套餐都可以使用。網頁、桌面端、手機應用都可以。[^create] 公式保持有效的表格檔案（電子表格）和可以用 PowerPoint 開啟的簡報也能生成。[^new]
+包括免費方案在內，所有方案都可以使用。網頁、桌面端、手機應用都可以。[^create] 公式保持有效的表格檔案（電子表格）和可以用 PowerPoint 開啟的簡報也能生成。[^new]
 
-**先看看設定是否已經開啟。** 個人套餐（Free·Pro·Max）一開始就是開啟的。[^create] 如果是關閉的，請在「設定 > 功能」（Capabilities）裡開啟 ④ 「程式碼執行和檔案生成」。[^create][^create-name]
+**先看看設定是否已經開啟。** 個人方案（Free·Pro·Max）一開始就是開啟的。[^create] 如果是關閉的，請在「設定 > 功能」（Capabilities）裡開啟 ④ 「程式碼執行和檔案生成」。[^create][^create-name]
 
 ![「設定 > 功能」介面。① 「訊息被標記時切換模型」，② 「工件」，③ 「聊天內視覺化」，④ 「程式碼執行和檔案生成」開關都標有紅色編號](../../../guide/10-claude/assets/shot-09-settings-capabilities-marked.png)
 
-這是免費套餐的介面。**紅色編號對應下面表格裡的同號內容。**[^screen]
+這是免費方案的介面。**紅色編號對應下面表格裡的同號內容。**[^screen]
 
 | 編號 | 名稱 | 作用 |
 |---|---|---|
 | ① | 「訊息被標記時切換模型」 | 觸發安全機制時，換另一個模型繼續 |
-| ② | 「工件」 | 在對話旁邊的窗口裡生成成果 |
+| ② | 「工件」 | 在對話旁邊的視窗裡生成成果 |
 | ③ | 「聊天內視覺化」 | 在對話裡畫圖表、圖示 |
 | ④ | 「程式碼執行和檔案生成」 | 生成文件、表格、簡報、PDF |
 
@@ -119,7 +130,8 @@ Claude 的回答不只有文字，也可以**生成檔案**給你。可以下載
 ## 工件——在對話旁邊開啟的成果
 
 **工件**（Artifact，生成出來的成果）是值得給別人看的成果。比如文件、簡報、設計、小工具。它在對話旁邊的欄裡開啟，可以修改、以後再開啟，也可以和別人分享。[^artifacts]
-包括免費套餐在內，所有套餐都可以使用。前一節的「程式碼執行和檔案生成」必須是開啟的。[^artifacts]
+比如，像下面的圖那樣，對話右邊的欄裡會開啟一張 A4 大小的通知。
+包括免費方案在內，所有方案都可以使用。前一節的「程式碼執行和檔案生成」必須是開啟的。[^artifacts]
 
 它很容易和前一節的生成檔案混淆。區別在於接收的方式。[^academy-artifacts]
 
@@ -132,7 +144,7 @@ Claude 的回答不只有文字，也可以**生成檔案**給你。可以下載
 
 ![傳送下面通知提示詞後的介面。中間的對話裡出現了「讀書會通知 · Claude Design · 僅自己」卡片，右邊欄裡打開了用大字寫著日期、時間、地點的 A4 通知](../../../guide/10-claude/assets/shot-16-design-panel.png)
 
-*這是用下面的通知提示詞做出來的介面。右邊欄上方有下載按鈕和「Fill」「Fit」（顯示大小）按鈕。卡片上的「僅自己」表示目前只有我能看到。對話和工件在拍完後已刪除。*[^screen-design]
+*這是用下面的通知提示詞做出來的介面。右邊欄上方有下載按鈕和「Fill」「Fit」（切換顯示大小的按鈕）。卡片上的「Claude Design」是製作設計類工件的功能名稱（見下面的影片一節），「僅自己」表示目前只有我能看到。對話和工件在拍完後已刪除。*[^screen-design]
 
 生成的方法有三種。[^artifacts]
 
@@ -140,9 +152,11 @@ Claude 的回答不只有文字，也可以**生成檔案**給你。可以下載
 - 點輸入框的「輸出」（Output），選擇模板（文件、簡報之類的模板）。
 - 在側邊選單的「工件」標籤頁裡選擇模板。
 
+如果在輸入框周圍看不到「輸出」，就用第一種或第三種方法。第三種方法在下面的圖裡就能看到。
+
 ![點選側邊選單「工件」後的介面。① 上方的「全部」「我的專案」「與我共享」標籤頁，② 「建立新內容」下面的「文件」「幻燈片」「設計」卡片都標有紅色編號](../../../guide/10-claude/assets/shot-10-artifacts-marked.png)
 
-這是免費套餐的介面。免費賬號的 ② 「建立新內容」裡也能看到「文件」「幻燈片」「設計」。三個都帶有「新」標記。[^screen] 這些卡片就是第三種方法裡的模板。用 ① 的標籤頁，可以把我做的和別人分享給我的分開檢視。[^screen]
+這是免費方案的介面。免費帳號的 ② 「建立新內容」裡也能看到「文件」「幻燈片」「設計」。三個都帶有「新」標記。[^screen] 這些卡片就是第三種方法裡的模板。用 ① 的標籤頁，可以把我做的和別人分享給我的分開檢視。[^screen]
 
 ```
 請做一份發給社群讀書會會員的一頁通知。
@@ -165,7 +179,8 @@ Claude 的回答不只有文字，也可以**生成檔案**給你。可以下載
 
 **只改需要改的地方。** 在文件工件裡，用滑鼠選中要改的文字，點「用 Claude 編輯」（Edit with Claude）。然後寫下你想要的就可以了。[^artifacts] 不用再用語言說明是哪一部分。
 
-**換個方向再試一次。** 修改之前發的訊息並重新發送，對話就會出現另一個分支。這個分支裡也會單獨生成工件，所以不會丟掉之前做的。[^artifacts]
+**換個方向再試一次。** 修改之前發的訊息並重新發送，對話就會出現另一個分支。分支是從同一個對話裡分出來的另一個版本。這個分支裡也會單獨生成工件，所以不會丟掉之前做的。[^artifacts]
+比如，把之前發的"寫得正式一點"改成"寫得親切一點"再發送試試。正式的那份通知也還原樣保留著。
 
 **匯出成檔案。** 點「匯出」（Export），就能得到可以用其他軟體開啟的檔案。[^artifacts]
 
@@ -173,13 +188,16 @@ Claude 的回答不只有文字，也可以**生成檔案**給你。可以下載
 |---|---|
 | 文件 | Word、PDF、Markdown、Google 文件 |
 | 簡報 | PowerPoint、PDF、Google 幻燈片 |
-| 動畫（Team·Enterprise 專用測試版） | MP4 影片 |
 
 需要知道的事。[^artifacts]
 
 - **出錯時，請點「嘗試用 Claude 修復」。** 不過不保證一定能修好。
 - **在手機應用裡可以提要求、檢視和修改。** 分享設定要在網頁或桌面應用裡修改。
-- **2026 年 9 月 16 日之前做的叫「舊版工件」。** 可以繼續使用，但不能再用那種方式新建了。
+
+::: details 公司方案和以前的工件（點選展開）
+- **動畫**可以匯出成 MP4 影片。這是 Team·Enterprise 專用的測試版。[^artifacts]
+- **2026 年 9 月 16 日之前做的叫「舊版工件」。** 可以繼續使用，但不能再用那種方式新建了。[^artifacts]
+:::
 
 <Quiz id="ch204-artifacts" />
 
@@ -188,7 +206,7 @@ Claude 的回答不只有文字，也可以**生成檔案**給你。可以下載
 工件**一開始只有我能看到。** 在你分享之前，誰也看不到。[^share]
 
 1. 開啟工件，點「分享」。
-2. 選擇誰可以看。Pro·Max 套餐可以在「僅自己」和「任何拿到連結的人」之間選擇。
+2. 選擇誰可以看。Pro·Max 方案可以在「僅自己」和「任何拿到連結的人」之間選擇。免費方案能選的可能不一樣，請以你的「分享」視窗裡顯示的選項為準。
 3. 複製連結併發出去。
 
 <!-- 需要截圖：工件「分享」視窗——「僅自己」「任何拿到連結的人」和許可權選擇（網頁） -->
@@ -203,12 +221,12 @@ Claude 的回答不只有文字，也可以**生成檔案**給你。可以下載
 
 需要知道的事。[^share]
 
-- **開啟的人也必須有 Claude 賬號。** 沒有賬號的話，即使有連結也打不開。這是和對話公開連結（第3章）不同的地方。
+- **開啟的人也必須有 Claude 帳號。** 沒有帳號的話，即使有連結也打不開。這是和對話公開連結（第3章）不同的地方。
 - **想停止展示時，** 在「分享」裡改成「僅自己」（Pro·Max）。
 - **別人發來的工件，要像對待陌生人發來的檔案一樣對待。**
 
-::: details 如果是免費套餐（點選展開）
-免費套餐能不能用「任何拿到連結的人」來分享，不同的文件寫法不同。請以你的「分享」窗口裡顯示的選項為準。
+::: details 如果是免費方案（點選展開）
+免費方案能不能用「任何拿到連結的人」來分享，不同的文件寫法不同。所以這本指南請你以自己介面上的選項為準。
 :::
 
 <Quiz id="ch204-share" />
@@ -217,11 +235,24 @@ Claude 的回答不只有文字，也可以**生成檔案**給你。可以下載
 
 根據問題的不同，Claude 有時會不用文字，而是用**看得見的形式**來回答。不需要另外開啟什麼。Claude 會自己判斷，所以像平時一樣提問就行。[^visual]
 
-**天氣、菜譜卡片。** 問天氣或做菜的方法，它可能用卡片的形式回答。需要開啟網頁搜尋。[^visual] 新介面裡沒有網頁搜尋的開關，Claude 會在需要時自己去搜索。[^new][^old-search] 在菜譜卡片裡，可以更改幾人份和計量單位。[^visual] 天氣卡片只能在網頁和桌面端看到，在手機上會以文字顯示。[^visual]
+### 天氣、菜譜卡片
 
-**選擇式回答。** Claude 反問你的時候，可能會彈出單選題、多選題、排序之類的選項。點選回答也可以，直接用文字回答也可以。[^visual]
+問天氣或做菜的方法，它可能用卡片的形式回答。[^visual] 比如，可以問"今天首爾天氣怎麼樣？"或者"教我怎麼做大醬湯"。
 
-**圖示和圖表。** 如果想把說明變成圖來看，就這樣提要求。它會在對話裡畫出流程圖、圖表、可以點選檢視的圖。這個功能叫**自定義視覺化**（Custom visuals）。它是測試版（正式釋出前的試用版），可以在網頁和桌面應用裡使用。[^custom] 「設定 > 功能」裡也有 ③ 「聊天內視覺化」開關。說明是"允許 Claude 在對話中直接生成互動式視覺化、圖表、圖示"。[^screen]
+- 在菜譜卡片裡，可以更改幾人份和計量單位。[^visual]
+- 天氣卡片只能在網頁和桌面端看到，在手機上會以文字顯示。[^visual]
+- 要出現卡片，需要開啟網頁搜尋。新介面裡沒有網頁搜尋的開關，Claude 會在需要時自己去搜索。[^visual][^new][^old-search]
+
+### 選擇式回答
+
+Claude 反問你的時候，可能會彈出單選題、多選題、排序之類的選項。點選回答也可以，直接用文字回答也可以。[^visual]
+
+### 圖示和圖表
+
+如果想把說明變成圖來看，就這樣提要求。它會在對話裡畫出流程圖、圖表、可以點選檢視的圖。這個功能叫**自定義視覺化**（Custom visuals）。它是測試版（正式釋出前的試用版），可以在網頁和桌面應用裡使用。[^custom]
+「設定 > 功能」裡也有 ③ 「聊天內視覺化」開關。說明是"允許 Claude 在對話中直接生成互動式視覺化、圖表、圖示"。[^screen]
+
+用下面的提示詞親手畫一畫吧。
 
 ```
 請把醃泡菜的順序，從醃白菜到裝進泡菜桶，畫成分步驟的流程圖。
@@ -231,11 +262,14 @@ Claude 的回答不只有文字，也可以**生成檔案**給你。可以下載
 
 *這是在隱身聊天裡傳送上面提示詞後的介面。把滑鼠放在圖上，也沒有看到「複製為圖片」「儲存為工件」選單。*[^screen-design]
 
-自定義視覺化像畫在白板上的畫一樣，是**不會另外儲存的臨時圖**。幫助文件介紹了保留它的三個選單。上面的介面裡沒有看到這些選單，所以請先看看你的介面裡有沒有。[^custom][^screen-design]
+自定義視覺化像畫在白板上的畫一樣，是**不會另外儲存的臨時圖**。[^custom]
+幫助文件介紹了保留它的三個選單。不過，這些選單在有些介面上可能看不到。上面的介面裡也沒有。[^custom][^screen-design]
 
 - 「複製為圖片」：複製成圖片，貼上到筆記或簡報裡。
 - 「下載」：以 .svg 或 .html 檔案下載。
 - 「儲存為工件」：變成工件，繼續修改。
+
+把滑鼠放到圖上看看。如果有選單就用一用；沒有的話，想保留的圖就截個屏存下來。
 
 自定義視覺化在手機應用（iPhone·Android）裡看不到。[^custom]
 
@@ -262,7 +296,9 @@ Claude **不會像畫圖 AI（影像生成工具）那樣生成照片或插畫�
 ## Claude Docs——一起寫的文件
 
 **Claude Docs** 是和 Claude 一起、也和其他人一起修改的文件。Claude 會當著你的面寫初稿。寫之前它會先問你不清楚的地方，並用評論說明為什麼這樣寫。[^docs]
-包括免費套餐在內，所有套餐都可以使用，而且一開始就是開啟的。[^docs] 做好的文件儲存在「工件」標籤頁裡。
+包括免費方案在內，所有方案都可以使用，而且一開始就是開啟的。[^docs] 做好的文件儲存在「工件」標籤頁裡。
+
+它和前一節的文件工件不是兩個功能。工件裡的「文件」就叫 Claude Docs。所以建立的地方（「輸出」→「文件」）、儲存的地方（「工件」標籤頁）、匯出的格式都一樣。[^docs][^artifacts] 這一節再來看看怎麼一起修改文件。
 
 開始的方法如下。[^docs]
 
@@ -295,7 +331,7 @@ Claude **不會像畫圖 AI（影像生成工具）那樣生成照片或插畫�
 
 ## 在 Google 文件、表格、幻燈片裡使用
 
-如果你已經在用 Google 文件或表格工作，也可以在那個檔案裡呼叫 Claude。這是一個叫 **Claude for Google Workspace** 的擴充套件程式。Google 文件、表格、幻燈片裡會多出一個 Claude 欄（側邊欄）。它是測試版，Pro 及以上的付費套餐可以使用。[^gws]
+如果你已經在用 Google 文件或表格工作，也可以在那個檔案裡呼叫 Claude。這是一個叫 **Claude for Google Workspace** 的擴充套件程式。Google 文件、表格、幻燈片裡會多出一個 Claude 欄（側邊欄）。它是測試版，Pro 及以上的付費方案可以使用。[^gws]
 
 1. 在 Google Workspace Marketplace（Google 應用市場）裡安裝 Claude。安裝一次，在文件、表格、幻燈片裡都能用。
 2. 開啟檔案，點「擴充套件程式 > Claude > 開啟 Claude」。
@@ -311,10 +347,13 @@ Claude **不會像畫圖 AI（影像生成工具）那樣生成照片或插畫�
 - **只讀取現在開啟的那個檔案。**
 - **一開始修改前會先問你。** 預設模式是「編輯前詢問」。也可以改成「接受所有編輯」，但一開始建議一項一項確認。
 - **修改的內容會以我的名義記錄在版本記錄裡。** 如果不滿意，在「檔案 > 版本記錄」裡恢復到之前的版本就行。
-- **它不能分享檔案，也不能更改許可權。** 即使你要求，它也不會做。
-- **在 Word、Excel、PowerPoint 檔案裡不能用。** 請先轉換成 Google 格式。
-- **工作過程中不要關閉 Claude 欄。** 關閉的話，正在做的事就會停下來。一次任務最長 6 分鐘，所以大的工作請拆開交給它。
-- **在 Chrome、Edge、Safari 裡可以用。** Firefox 不行。
+
+::: details 做不到的事和要注意的事（點選展開）
+- **它不能分享檔案，也不能更改許可權。** 即使你要求，它也不會做。[^gws]
+- **在 Word、Excel、PowerPoint 檔案裡不能用。** 請先轉換成 Google 格式。[^gws]
+- **工作過程中不要關閉 Claude 欄。** 關閉的話，正在做的事就會停下來。一次任務最長 6 分鐘，所以大的工作請拆開交給它。[^gws]
+- **在 Chrome、Edge、Safari 裡可以用。** Firefox 不行。[^gws]
+:::
 
 <Quiz id="ch204-google" />
 
@@ -343,7 +382,7 @@ Claude **不會像畫圖 AI（影像生成工具）那樣生成照片或插畫�
 - PDF 在 100 頁以內連圖片也會讀取，之後只讀文字。PDF 以外的文件只讀文字。
 - 可以讓它生成 Excel、Word、PowerPoint、PDF 檔案。需要開啟「程式碼執行和檔案生成」，而且會多耗用量。
 - 工件是在對話旁邊開啟的成果。它們彙集在「工件」標籤頁裡，用「用 Claude 編輯」修改，用「匯出」得到檔案。
-- 工件一開始只有我能看到。收到分享的人也必須有 Claude 賬號才能開啟。
+- 工件一開始只有我能看到。收到分享的人也必須有 Claude 帳號才能開啟。
 - 自定義視覺化是不會儲存的臨時圖。想保留的話，就複製、下載或儲存為工件。
 - Claude 不會生成照片和插畫。圖示和圖表可以做。
 - Claude Docs 要寫明用途、讀者、內容再提要求。刪除後無法恢復。
@@ -367,7 +406,7 @@ Claude **不會像畫圖 AI（影像生成工具）那樣生成照片或插畫�
 
 下一章：[第5章. 記憶與個性化設定](05-memory.md)
 
-[^screen]: 在 Claude 網頁介面（免費套餐，韓語）中直接確認。 "파일 업로드 또는 추가" / "코드 실행 및 파일 생성" / "코드 실행 및 파일 생성에 필요" / "Skills 사용에 필요합니다" / "채팅 내 시각화" / "새로운 무언가 만들기" (確認日期 2026-10-26)
+[^screen]: 在 Claude 網頁介面（免費方案，韓語）中直接確認。 "파일 업로드 또는 추가" / "코드 실행 및 파일 생성" / "코드 실행 및 파일 생성에 필요" / "Skills 사용에 필요합니다" / "채팅 내 시각화" / "새로운 무언가 만들기" (確認日期 2026-10-26)
 [^upload]: Anthropic 幫助文件，「Upload files to Claude」. "Claude can work with the following document types:" / "Note: You must enable code execution and file creation in your account to upload XLSX files." / "Claude supports the following image formats:" / "Click the "+" button in the lower left corner of the chat box" / "You can also copy images and paste them from your clipboard into Claude." / "File size: 500MB per file" / "Number of files: Up to 20 files per chat" / "You can't upload PDFs over 1000 pages." / "For PDFs from 101 to 1000 pages, Claude processes text only and doesn't analyze visual elements." / "Claude extracts text only from these files. If they contain embedded images, Claude won't be able to read or interpret them." / "For images: Use images that are 1000x1000 pixels or larger." / "use the PDF page numbers as shown in your PDF viewer, not the page numbers printed on the document itself." https://support.claude.com/en/articles/8241126 (確認日期 2026-10-26)
 [^create]: Anthropic 幫助文件，「Create and edit files with Claude」. "Code execution and file creation is available to all Claude users (Free, Pro, Max, Team, and Enterprise) on the web, Claude Desktop, and Claude Mobile." / "Code execution and file creation is enabled by default" / "Be specific in your requests—describe the structure, content, and formatting you want." / "Enable file creation from Settings > Capabilities by toggling Code execution and file creation (called Create and edit files in the updated Settings layout) on." / "You can download the files Claude creates or save them directly to Google Drive." / "Claude can create data visualizations in image files like PNG." / "The maximum file size is 30MB per file for both uploads and downloads." / "Note that creating files will use more of your limit compared to normal chats with Claude." / "we recommend you monitor Claude while using the feature and stop it if you see it using or accessing data unexpectedly." https://support.claude.com/en/articles/12111783 (確認日期 2026-10-26)
 [^new]: Anthropic 幫助文件，「Claude Cowork and chat are one Claude」. "Claude can create documents, spreadsheets with working formulas, and presentations you can open in PowerPoint." / "Web search: There's no web search toggle. Claude searches the web when it helps." https://support.claude.com/en/articles/16761823 (確認日期 2026-10-26)
@@ -383,4 +422,4 @@ Claude **不會像畫圖 AI（影像生成工具）那樣生成照片或插畫�
 [^upload-name]: 幫助文件裡，① 選單的名稱寫的是「新增檔案或照片」（Add files or photos）。名稱可能因介面而異。
 [^create-name]: 幫助文件寫的是，在新的設定介面裡這個名稱是「建立和編輯檔案」（Create and edit files）。名稱可能因介面而異。
 [^old-search]: 如果是舊介面，請把網頁搜尋開關開啟（[第6章](06-search.md)）。
-[^screen-design]: 傳送本節的通知提示詞和醃泡菜流程圖提示詞後直接確認。在隱身聊天裡，Claude 說"Claude Docs는 시크릿 모드 대화에서는 만들 수 없어서(문서가 계정에 남기 때문입니다)"，並把通知以文字寫在了對話裡；在普通對話裡，「Claude Design · 나만」工件在右側欄裡開啟。Claude 指出最初提示詞裡的「11月15日星期六」實際上是星期日，所以本指南把示例日期改成了 11 月 14 日星期六。流程圖在隱身聊天裡也畫出來了（確認日期 2026-10-28，網頁，免費（Free）套餐）
+[^screen-design]: 傳送本節的通知提示詞和醃泡菜流程圖提示詞後直接確認。在隱身聊天裡，Claude 說"Claude Docs는 시크릿 모드 대화에서는 만들 수 없어서(문서가 계정에 남기 때문입니다)"，並把通知以文字寫在了對話裡；在普通對話裡，「Claude Design · 나만」工件在右側欄裡開啟。Claude 指出最初提示詞裡的「11月15日星期六」實際上是星期日，所以本指南把示例日期改成了 11 月 14 日星期六。流程圖在隱身聊天裡也畫出來了（確認日期 2026-10-28，網頁，免費（Free）方案）

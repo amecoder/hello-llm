@@ -1,0 +1,39 @@
+# Weekly Review — 10/26(Mon) ~ 10/31(Sat)
+
+<!-- Original memos: inbox/review-2026-10-29.txt · inbox/review-2026-10-30.txt · inbox/review-2026-10-31.txt -->
+<!-- File name: notes/weekly-review-YYYY-MM-DD.md (the Monday of that week)
+     Look at that week's inbox/review-*.txt memos and sort them into the three sections.
+     Attach numbers (items sold, likes, etc.) as evidence in the sections below. -->
+
+## Went well (Keep)
+
+<!-- 1 to 3. What + why it went well. Use numbers if you have them.
+     e.g. Posted on Instagram all 3 times (Mon, Wed, Fri) — because we split photo and text duties in the meeting. -->
+
+- Posted on Instagram all 3 times this week (10/31(Sat) memo). The 10/29(Thu) post got 12 likes — why I was able to post consistently is (not in notes).
+- 10/30(Fri) The Instagram post draft the AI wrote got much better — because I put in role+format as learned in the lecture.
+- Set sales: 4 on 10/30(Fri), and 11 total this week as written in the 10/31(Sat) memo — why they sold is (not in notes).
+
+## Fell short (Problem)
+
+<!-- 1 to 3. What + why it happened.
+     e.g. Got confused about who was doing what — because I didn't write minutes after the meeting. -->
+
+- 10/31(Sat) Got confused about who was doing what — because I didn't write minutes.
+- 10/30(Fri) The AI draft had the price wrong as 6,000 won, so I fixed it — why the wrong price came out and what the correct price is are (not in notes).
+- 10/29(Thu) Slow again in the afternoon — wondered whether it's because the set isn't promoted yet (guess in the notes).
+
+## Try next week (Try)
+
+<!-- 1 to 3. Actions to fix what fell short, and when.
+     e.g. 11/3(Mon) organize the minutes with the template right after the meeting. -->
+
+| Action item | Owner | Due |
+|---|---|---|
+| Organize the meeting right after it ends | (not in notes) | Right after next week's meeting; exact date is (not in notes) |
+
+## Check Against Original
+
+- Dates and days of the week: based on the year 2026 in the file names, they are 10/29(Thu), 10/30(Fri), 10/31(Sat), but the originals say Wed, Thu, Fri. Check whether the year in the file names is right.
+- Price: the 6,000 won on 10/30(Fri) is an amount the AI wrote by mistake. Need to check the correct price.
+- Sales count: check the 4 on 10/30(Fri) separately from the weekly total of 11 in the 10/31(Sat) memo.

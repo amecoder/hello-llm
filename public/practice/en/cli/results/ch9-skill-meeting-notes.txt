@@ -1,0 +1,7 @@
+---
+description: Turns meeting notes into meeting minutes that follow the rules. Use it for requests to organize meeting notes.
+---
+
+Read the $ARGUMENTS file and make meeting minutes following the CLAUDE.md rules.
+Name the file `minutes-date.md` and save it in the notes folder.
+When done, report the saved file name and the number of to-dos in one line.

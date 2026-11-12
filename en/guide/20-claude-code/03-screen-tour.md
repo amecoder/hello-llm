@@ -1,9 +1,11 @@
 # Chapter 3. Touring the Screen — Title Bar, Changes, Files, and Session Details
 
-> **In short**: The Code tab lets you **open multiple panes (windows) beside the chat**. You use the buttons in the session title bar to open the **Changes, Files, Terminal, and Browser** panes, and check the session details pane to see in numbers what has changed.
-> To see what changed, **change history (Git)** must be turned on for the folder. In this chapter, you will ask Claude to turn it on for you.
+<Badge type="tip" text="Required" /> Read this to follow this stage.
 
-This chapter is based on the Claude Code official docs and the macOS desktop app (Korean interface, paid account) checked on October 31, 2026. It uses the same **정리도구** (organizer tool) folder and meeting notes you made in Chapter 2.
+> **In short**: The Code tab lets you **open multiple panes (windows) beside the chat**. You use the buttons in the session title bar to open the **Changes, Files, Terminal, and Browser** panes, and check the session details pane to see in numbers what has changed.
+> To see what changed, **change history (Git, a tool that keeps a record of when and how files changed)** must be turned on for the folder. In this chapter, you will ask Claude to turn it on for you.
+
+This chapter is based on the Claude Code official docs and the macOS desktop app (Korean interface, paid account) checked on October 31, 2026. It uses the same **organizer** (organizer tool) folder and meeting notes you made in Chapter 2.
 
 ## The Layout at a Glance
 
@@ -56,13 +58,19 @@ When you click the ⑤ Changes button with the folder from Chapter 2, you see th
 
 **Git** is a tool that records when and how your files changed. The Changes pane compares that record with your current files and shows the difference. So in a regular folder with no record, there is nothing to show.
 
+### Turning On Git
+
 You do not need to know any Git commands. **Just ask Claude to turn it on.**
 
 ```
 It says a Git repository is required to view changes. Turn on change history (Git) in this folder, and save the current files as the first record. Explain what you did in simple terms.
 ```
 
+If your computer does not have Git, install it from the official site (git-scm.com).[^git]
+
 In this guide, Claude turned on Git in the folder and saved the 5 memos and the meeting notes as the **first record**. Then the Changes pane showed "No changes to display (표시할 변경 사항이 없습니다)". That means nothing has changed since the first record.
+
+### Reading the Changed Lines
 
 Now let's ask Claude to make a small edit to the meeting notes. This request adds a progress status to each to-do item based on the retrospective memos.
 
@@ -72,7 +80,9 @@ Add a 'Status' column to the to-do table in the meeting notes. Look at the 3 ret
 
 ![The Changes pane, marked with red numbers: ① Changed line count "+7 −7", ② Deleted lines (red), ③ Newly added lines (green, showing the Status (상태) column and Done (10/31) (완료(10/31)), etc.), ④ List of changed files](../../../guide/20-claude-code/assets/shot-08-diff-marked.png)
 
-**Red lines are deleted lines, and green lines are newly added lines.** `+7 −7` means 7 lines were added and 7 lines were deleted. When a column is added to the end of a table row, Git counts that row as "deleted and rewritten." That is why all 7 rows of the to-do table appear once in red and once in green.
+**Red lines are deleted lines, and green lines are newly added lines.** `+7 −7` means 7 lines were added and 7 lines were deleted.
+
+When a column is added to the end of a table row, Git counts that row as "deleted and rewritten." That is why all 7 rows of the to-do table appear once in red and once in green.
 
 Thanks to this pane, **you can see with your own eyes whether Claude followed "do not change any other part."** If no lines outside the table appear in red or green, Claude followed your rule.
 
@@ -80,11 +90,11 @@ Thanks to this pane, **you can see with your own eyes whether Claude followed "d
 In this guide's walkthrough, Claude pointed out one judgment call up front. The retrospectives did not separately mention Junho's photo shoot, but since all 3 posts went up, Claude marked it as "In progress." It also added that if you want to be strict, you can change it to "Needs check." When you see an explanation like this, take a moment to check whether that judgment matches your standard. If it does not, just ask Claude in one line to fix it.
 :::
 
-::: warning Names saved in Git history
-With every record, Git also saves **the name and email address set in this computer's Git settings**. On a work computer, your company account might be included. Check this before showing the history screen to others or uploading the folder. If your computer does not have Git, install it from the official site (git-scm.com).[^git]
-:::
-
 You can also open and close the Changes pane with the shortcut **Cmd+Shift+D**.[^keys]
+
+::: warning Names saved in Git history
+With every record, Git also saves **the name and email address set in this computer's Git settings**. On a work computer, your company account might be included. Check this before showing the history screen to others or uploading the folder.
+:::
 
 <Quiz id="ch403-changes" />
 
@@ -92,7 +102,7 @@ You can also open and close the Changes pane with the shortcut **Cmd+Shift+D**.[
 
 Click the ③ button to open the **session details pane** beside the chat. It shows cards for where this session is running, what it changed, and how much context it has used.[^rail]
 
-![The session details pane, marked with red numbers: ① Environment (This computer · 정리도구 · main), ② Context 12%, ③ Artifacts (meeting notes file), ④ Changes (+7 −7 and the Commit changes (변경 사항 커밋) button)](../../../guide/20-claude-code/assets/shot-09-rail-marked.png)
+![The session details pane, marked with red numbers: ① Environment (This computer · organizer · main), ② Context 12%, ③ Artifacts (meeting notes file), ④ Changes (+7 −7 and the Commit changes (변경 사항 커밋) button)](../../../guide/20-claude-code/assets/shot-09-rail-marked.png)
 
 | Number | Card | What you see |
 |---|---|---|
@@ -103,9 +113,11 @@ Click the ③ button to open the **session details pane** beside the chat. It sh
 
 Source: Card names checked on the screen in this guide (2026-10-31); roles from official docs[^rail][^diff]
 
+The "main" on the Environment card is the name of the line of history (branch) you are working on right now. You do not need to worry about it for now.
+
 **Context** is "how much the AI can see at once," which you learned in Stage 1 ([Stage 1, Chapter 1](../00-common/01-what-is-llm.md#_3-there-is-a-limit-to-how-much-it-can-see-at-once-—-context-window)). When it fills up, Claude **automatically summarizes the conversation so far and keeps working.**[^context] Here is our recommendation: rather than tacking a new task onto a session whose percentage has climbed high, it is cleaner to start a new task in a new session.
 
-The Commit changes (변경 사항 커밋) button in ④ saves your changes as a new record in Git. Recording and undoing changes are covered in [Chapter 4](04-permissions-undo.md).
+The Commit changes (변경 사항 커밋) button in ④ saves your changes as a new record in Git. A commit means "saving one record." You do not need to click it for now. Recording and undoing changes are covered in [Chapter 4](04-permissions-undo.md).
 
 <Quiz id="ch403-rail" />
 
@@ -125,12 +137,13 @@ You can **check the files Claude made right inside the app without opening Finde
 
 ## Terminal and Browser Panes, Plus Shortcuts
 
-You only need a quick idea of the remaining two panes for now.
+For the remaining two panes, you only need to know their names. There is no need to memorize them.
 
 - **Terminal** (④): A pane where you type and run commands yourself. It opens in the same folder as Claude.[^terminal] You do not need to use it at this stage. We cover the terminal in Chapter 10.
 - **Browser** (⑥): A pane that opens web pages right inside the app.[^arrange]
 
-Here are common keyboard shortcuts (macOS).[^keys]
+::: details Common keyboard shortcuts (macOS) (click to expand)
+You do not need to know the shortcuts. They get handy once you are used to them.[^keys]
 
 | Shortcut | What it does |
 |---|---|
@@ -142,15 +155,16 @@ Here are common keyboard shortcuts (macOS).[^keys]
 | Cmd+Shift+M | Open the permission mode menu |
 
 Source: Claude Code official docs[^keys]
+:::
 
 ## Try It Yourself
 
-1. In your session from Chapter 2 (or a new session opened in the 정리도구 folder), click the ⑤ Changes button. If it says Git is required, use the prompt above to ask Claude to turn it on.
+1. In your session from Chapter 2 (or a new session opened in the organizer folder), click the ⑤ Changes button. If it says Git is required, use the prompt above to ask Claude to turn it on.
 2. Send the request to add a 'Status' column to the meeting notes, and check in the Changes pane that **no lines outside the table were changed**.
 3. Open the ③ session details pane to check the context percentage and the number of changed lines.
 4. Open the meeting notes in the ⑦ Files pane and check whether the Status column matches the retrospective memos (light bulbs, copywriting, and cost calculation are Done; Instagram is In progress).
 
-**Follow-up exercise**: Compare your result with this guide's result ([3장-회의록-상태칸.txt](/practice/notes/results/3장-회의록-상태칸.txt)). Even if the table looks a little different, you did great as long as the status values match the retrospectives.
+**Follow-up exercise**: Compare your result with this guide's result ([ch3-minutes-status-column.txt](/practice/en/notes/results/ch3-minutes-status-column.txt)). Even if the table looks a little different, you did great as long as the status values match the retrospectives.
 
 ## Summary
 

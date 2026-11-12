@@ -11,13 +11,24 @@ repo, I = sys.argv[1], sys.argv[2]
 _cc = opencc.OpenCC('s2twp')
 
 
+ITEM_FIXES = [('確認的專案', '確認的項目'), ('核實的專案', '核實的項目'), ('下面的專案', '下面的項目'), ('專案名稱和順序', '項目名稱和順序'), ('按專案列', '按項目列'), ('類別,專案,金額', '類別,項目,金額')]
+
+
 class cc:
     # OpenCC reads '天后' as 'empress' and keeps 后 in '30 天后' (after 30 days) and '聊天后' (after chatting).
     # OpenCC also keeps Simplified quotes “” — Taiwan uses 「」 (tw_quotes.py).
     # OpenCC turns every 对象 into 物件, the programming word; this guide means "target, audience" everywhere.
     @staticmethod
     def convert(s):
-        return tw_quotes.convert(re.sub(r'(\d+ ?天|聊天)后', r'\1後', _cc.convert(s))).replace('物件', '對象')
+        t = tw_quotes.convert(re.sub(r'(\d+ ?天|聊天)后', r'\1後', _cc.convert(s))).replace('物件', '對象')
+        # OpenCC also writes 只 as 隻 (the measure word for animals), and keeps Mainland 賬號·窗口
+        t = re.sub(r'(?<![一兩幾每這那0-9])隻', '只', t.replace('隻讀', '唯讀'))
+        t = t.replace('賬號', '帳號').replace('窗口', '視窗').replace('郵箱', '電子郵件').replace('粘貼', '貼上').replace('套餐', '方案')
+        # 里 (inside) -> 裡, but not in place/unit words or the name 里奧
+        t = re.sub(r'(?<![公千鄰故])里(?![奧程])', '裡', t)
+        # 项目 meaning "item" (not "project"): OpenCC always writes 專案
+        for a, b in ITEM_FIXES: t = t.replace(a, b)
+        return t
 
 # 1. pages
 src_root, dst_root = f'{repo}/zh-hans', f'{repo}/zh-hant'
@@ -28,6 +39,20 @@ for p in pages:
     t = open(p, encoding='utf-8').read().replace('/zh-hans/', '/zh-hant/')
     open(d, 'w', encoding='utf-8').write(cc.convert(t))
 print('pages', len(pages))
+
+# 1b. practice files (English names, translated contents) and diagram sources.
+# The .svg next to each .excalidraw must be rendered again with the excalidraw skill afterwards.
+n = 0
+for f in glob.glob(f'{repo}/public/practice/zh-hans/**/*', recursive=True):
+    if not os.path.isfile(f): continue
+    d = f.replace('/zh-hans/', '/zh-hant/', 1); os.makedirs(os.path.dirname(d), exist_ok=True)
+    open(d, 'w', encoding='utf-8', newline='').write(cc.convert(open(f, encoding='utf-8', newline='').read())); n += 1
+for f in glob.glob(f'{src_root}/guide/**/assets/*.excalidraw', recursive=True):
+    d = f.replace(src_root, dst_root, 1); os.makedirs(os.path.dirname(d), exist_ok=True)
+    # a quote that spans two lines inside a label is not caught by tw_quotes
+    t = cc.convert(open(f, encoding='utf-8').read()).replace('“', '「').replace('”', '」')
+    open(d, 'w', encoding='utf-8').write(t); n += 1
+print('practice files and diagram sources', n)
 
 # 2. locale file
 s = open(f'{repo}/.vitepress/theme/locales/zh-hans.ts', encoding='utf-8').read()

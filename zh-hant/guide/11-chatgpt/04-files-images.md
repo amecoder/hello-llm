@@ -1,9 +1,11 @@
 # 第4章 檔案、照片與生成圖片 — 拿給它看，請它來畫
 
-> **一句話總結**：難以用話語說清楚的東西，就**上傳照片或檔案**給它看；需要的圖畫，就**請它生成**。
-> 上傳的檔案會彙集在「資料庫（라이브러리）」裡，可以再次使用。免費套餐每天能上傳的檔案數量很少。
+<Badge type="info" text="選讀" /> 需要的時候再讀。跳過也能跟上後面的章節。
 
-介面以2026年10月的網頁版（Plus 套餐）為準。免費套餐或手機 App 的選單位置可能略有不同。
+> **一句話總結**：難以用話語說清楚的東西，就**上傳照片或檔案**給它看；需要的圖畫，就**請它生成**。
+> 上傳的檔案會彙集在「資料庫（라이브러리）」裡，可以再次使用。免費方案每天能上傳的檔案數量很少。
+
+介面以2026年10月的網頁版（Plus 方案）為準。免費方案或手機 App 的選單位置可能略有不同。
 
 ## 上傳照片和檔案
 
@@ -12,9 +14,11 @@
 
 ![展開了輸入框 + 選單的介面。請看最上面的「新增照片和檔案 — 從電腦上傳（사진 및 파일 추가 — 컴퓨터에서 업로드）」，以及下面的「從資料庫匯入（라이브러리에서 가져오기）」「生成圖片（이미지 생성）」「草圖（스케치）」專案](../../../guide/11-chatgpt/assets/shot-02-plus-menu-marked.png)
 
-對話標題和賬號名稱已換成示例。這一章用到的是 ① + 按鈕、② 「新增照片和檔案（사진 및 파일 추가）」、③ 「從資料庫匯入（라이브러리에서 가져오기）」、④ 「生成圖片（이미지 생성）」、⑧ 「草圖（스케치）」。
+對話標題和帳號名稱已換成示例。這一章用到的是 ① + 按鈕、② 「新增照片和檔案（사진 및 파일 추가）」、③ 「從資料庫匯入（라이브러리에서 가져오기）」、④ 「生成圖片（이미지 생성）」、⑧ 「草圖（스케치）」。其餘的 ⑤~⑦（網頁搜尋、Work、深度研究）在其他章節裡講（[第2章](02-screen-tour.md#輸入框和-選單)）。
 
-可以上傳的東西如下。[^files]
+### 可以上傳的檔案
+
+可以上傳的東西如下。[^files][^video]
 
 | 種類 | 例子 |
 |---|---|
@@ -24,10 +28,10 @@
 | 演示資料 | PowerPoint（PPTX） |
 | 聲音（僅付費） | WAV、MP3、M4A 錄音檔案 |
 
-影片也可以作為附件。免費套餐也可以。不過能不能成功，要看裝置和上傳方式。另外，ChatGPT 也可能無法完全理解整段影片或聲音。[^image-faq]
-
 谷歌文件（`.gdoc`）不能直接上傳。請先在谷歌文件裡下載成 PDF 或 Word，再上傳。[^files]
 把 PDF 直接上傳到對話裡，它不只讀文字，還會讀**裡面的圖片和圖表**。[^files]
+
+### 把想要什麼一起寫出來
 
 比起只上傳檔案然後說「看看吧」，請把你想要什麼也一起寫出來。這樣得到的回答會好得多。
 
@@ -43,7 +47,7 @@
 請找出我的摘要裡和原件不同的事實和數字，以及原件裡沒有的內容。
 ```
 
-::: details 得到的回答大致是這樣（示例 — 點選展開）
+::: details 得到的回答大致是這樣（示例 — 點選展開）（點選展開）
 這是本指南製作的示例。實際的回答會因服務和每次情況而不同。
 
 > 和原件對照後，有三處不同。
@@ -59,6 +63,8 @@
 **確認一下有沒有答好**：和原件不同的事實、數字，有沒有一個不漏地找出來？原件裡沒有的內容，有沒有單獨標出來？請把回答指出的地方，和真正的原件檔案對照一遍。
 
 :::
+
+### 上傳照片時
 
 如果是照片，可以這樣寫。
 
@@ -76,9 +82,16 @@
 
 <Quiz id="ch104-upload" />
 
-## 可以上傳的數量 — 各套餐的額度
+## 可以上傳的數量 — 各方案的額度
 
-檔案有大小和數量的限制。官方幫助中寫明的數值如下。[^files]
+檔案有大小和數量的限制。在免費方案裡，最先碰到的是**每天3個**。如果需要問好幾個檔案，請先上傳最必要的檔案。
+如果有好幾張照片，把它們拼成一張再上傳也是個辦法。這樣可以省下相應的數量。
+
+其餘的限制一般很少會碰到。只有檔案非常大或非常多的時候，再看下面的表格。
+
+表格裡的 **token**（詞元）是 AI 把文字切成小塊來閱讀的單位。200萬 token 是非常長的篇幅。一般的工作文件很少會碰到這個上限。
+
+官方幫助中寫明的數值如下。[^files]
 
 | 限制 | 數值 |
 |---|---|
@@ -87,14 +100,10 @@
 | 表格檔案（CSV 等） | 約50MB（因內容而異） |
 | 單張照片 | 最多20MB |
 | 上傳數量 | 3小時內最多80個（擁擠時可能更低） |
-| **免費（Free）套餐** | **每天最多3個** |
-| 我的整個賬號的儲存空間 | 最多25GB |
+| **免費（Free）方案** | **每天最多3個** |
+| 我的整個帳號的儲存空間 | 最多25GB |
 | 聲音檔案 | **僅付費**可上傳 |
 
-**token**（詞元）是 AI 把文字切成小塊來閱讀的單位。200萬 token 是非常長的篇幅。一般的工作文件很少會碰到這個上限。
-
-在免費套餐裡，最先碰到的是**每天3個**。如果需要問好幾個檔案，請先上傳最必要的檔案。
-如果有好幾張照片，把它們拼成一張再上傳也是個辦法。這樣可以省下相應的數量。
 額度的數字經常變，所以上面的數值請以確認日期為準。
 
 <Quiz id="ch104-limits" />
@@ -106,23 +115,28 @@
 
 <!-- 需要截圖：開啟側邊選單「資料庫（라이브러리）」的介面（網頁，只顯示示例檔案） -->
 
-資料庫能裝的容量因套餐而異。[^library]
+需要知道的幾點如下。
 
-| 套餐 | 資料庫容量 |
+- **刪除對話後，資料庫裡的檔案仍會保留。** 想去掉檔案，請在資料庫裡另外刪除。[^delete][^library-restore]
+- 在**臨時聊天**（[第3章](03-chats.md)）裡上傳的檔案不會儲存到資料庫。[^library]
+- **對話裡的下載連結很快就會失效。** ChatGPT 生成的檔案請馬上儲存。如果出現「Download failed」（下載失敗）這樣的英文提示，可能是連結已經失效了。這時請讓它重新生成。[^errors]
+
+> **如果側邊選單裡看到「Space」**，就當作和這一節的「資料庫（라이브러리）」是同一個地方。資料庫正在改成 Space。[^space]
+
+::: details 各方案的資料庫容量（點選展開）
+資料庫能裝的容量因方案而異。[^library]
+
+| 方案 | 資料庫容量 |
 |---|---|
 | Free | 500MB |
 | Go | 4GB |
 | Plus · Business | 20GB |
 | Pro | 100GB |
+:::
 
-需要知道的幾點如下。
-
-- **刪除對話後，資料庫裡的檔案仍會保留。** 想去掉檔案，請在資料庫裡另外刪除。[^delete]
-- 刪除的檔案，有時可以在「最近刪除的專案（최근 삭제된 항목）」裡恢復。並且會被安排在30天內永久刪除。[^library]
-- 在**臨時聊天**（[第3章](03-chats.md)）裡上傳的檔案不會儲存到資料庫。[^library]
-- **對話裡的下載連結很快就會失效。** ChatGPT 生成的檔案請馬上儲存；如果像「Download failed」這樣失敗了，請讓它重新生成。[^errors]
-
-> **資料庫正在改成「Space」。** Space 取代資料庫，專案則保持不變。[^space] 在 Space 裡，除了檔案，還可以建立多人一起修改的**頁面**（page，文件）。2026年10月24日，在本指南的介面上還顯示為「資料庫（라이브러리）」。如果側邊選單裡看到「Space」，就當作和這一節的資料庫是同一個地方。
+::: details 想多瞭解一點 Space 是什麼（點選展開）
+Space 取代資料庫，專案則保持不變。在 Space 裡，除了檔案，還可以建立多人一起修改的**頁面**（page，文件）。2026年10月24日，在本指南的介面上還顯示為「資料庫（라이브러리）」。[^space]
+:::
 
 <Quiz id="ch104-library" />
 
@@ -162,11 +176,9 @@ ChatGPT 不只會寫字，還會畫圖。點 + 按鈕 →「生成圖片（이�
 做一張秋夕假期休息通知海報。休息日：10月5日~7日。
 ```
 
-在設定 →「個性化設定（개인 맞춤 설정）」頁面裡，也有「參考照片（참고 사진）」「全身參考照片（전신 참고 사진）」專案。個性化設定在[第5章](05-memory.md)裡講。
+在設定 →「個性化設定（개인 맞춤 설정）」頁面裡，也有「參考照片（참고 사진）」「全身參考照片（전신 참고 사진）」專案。本指南不單獨講這兩項。生成圖片時，像上面那樣把參考照片直接上傳到對話裡就夠了。
 
-ChatGPT 生成的圖片裡帶有 **C2PA**（記錄圖片是怎樣製作出來的國際標準標籤）。[^faq] 它肉眼看不見，是和圖片檔案一起儲存的資訊。
-
-關於 AI 生成圖片的權利，以及上傳別人的照片、作品時的注意事項，請在[第1階段第9章](../00-common/09-safety.md)裡確認。
+關於 AI 生成圖片的權利，以及上傳別人的照片、作品時的注意事項，請在[第1階段第9章](../00-common/09-safety.md)裡確認。[^faq]
 
 <Quiz id="ch104-image" />
 
@@ -211,7 +223,7 @@ ChatGPT 生成的圖片裡帶有 **C2PA**（記錄圖片是怎樣製作出來的
 
 - 透過 + 按鈕 →「新增照片和檔案（사진 및 파일 추가）」上傳照片、文件、表格、演示資料。聲音檔案只有付費版可以。
 - 不要只上傳檔案，也要寫出你想要什麼。
-- 免費套餐每天最多上傳3個。照片最大20MB，文件最大512MB。
+- 免費方案每天最多上傳3個。照片最大20MB，文件最大512MB。
 - 照片裡的韓文、數字可能讀錯，要和原件核對。
 - 上傳的檔案會自動儲存到「資料庫（라이브러리）」（正在改成「Space」），刪除對話後也會保留。
 - 圖片在「生成圖片（이미지 생성）」裡，寫進內容、感覺、佈局、文字來請求，也可以用參考照片或「草圖（스케치）」給它看。
@@ -234,13 +246,15 @@ ChatGPT 生成的圖片裡帶有 **C2PA**（記錄圖片是怎樣製作出來的
 
 下一章：[第5章. 記憶與個性化設定](05-memory.md)
 
-[^files]: OpenAI 幫助中心，「Uploading files and audio to ChatGPT」。"Select + in the prompt area, then Add photos & files." / "You can't upload a .gdoc file directly." / "maximum size of 512 MB per file" / "capped at 2 million tokens per file" / "size limit of approximately 50 MB" / "Images have a limit of 20 MB per image." / "Free users are limited to 3 file uploads per day." / "capped at 25 GB per user" / "Audio uploads are not available on the Free plan at this time." / "ChatGPT can analyze both text and images in PDFs"。https://help.openai.com/en/articles/8555545（確認日期 2026-10-23）
-[^library]: OpenAI 幫助中心，「Using Library to manage files in ChatGPT」。"Library is available on web" / "Select Add from library." / "Free users have up to 500 MB of Library storage." / "scheduled for permanent deletion from OpenAI systems within 30 days" / "files uploaded while using Temporary Chat are not saved to your account or Library"。https://help.openai.com/en/articles/20001052（確認日期 2026-10-23）
-[^image-faq]: OpenAI 幫助中心，「ChatGPT Image Inputs FAQ」。"The model does not perform as well handling images with text of non-Latin alphabets, such as Japanese or Korean." / "The model is not suitable for interpreting specialized medical images like CT scans" / "consider using a photo edit markup tool on your image before uploading." / "ChatGPT can accept video files as attachments through supported upload methods, including on Free plans." / "It may not analyze the entire video or accurately interpret its audio." https://help.openai.com/en/articles/8400551（確認日期 2026-10-24）
-[^errors]: OpenAI 幫助中心，「Troubleshooting ChatGPT Error Messages」。"Ensure that the file is recently generated, files generated by ChatGPT expire quickly"。https://help.openai.com/en/articles/7996703（確認日期 2026-10-24）
-[^space]: OpenAI 幫助中心，「ChatGPT Space: sharing, data, and controls」。"It replaces Library, while your Projects stay as they are." / "Pages are editable documents that you can organize inside other pages and work on with other people." https://help.openai.com/en/articles/20001544（確認日期 2026-10-24）
-[^faq]: OpenAI 幫助中心，「What is ChatGPT: FAQ」。"ChatGPT images include C2PA provenance metadata." https://help.openai.com/en/articles/12677804（確認日期 2026-10-24）
-[^delete]: OpenAI 幫助中心，「Deleting and archiving chats in ChatGPT」。"Deleting a chat does not delete files saved separately in Library." https://help.openai.com/en/articles/8809935（確認日期 2026-10-23）
+[^files]: OpenAI 幫助中心，「Uploading files and audio to ChatGPT」。"Select + in the prompt area, then Add photos & files." / "You can't upload a .gdoc file directly." / "maximum size of 512 MB per file" / "capped at 2 million tokens per file" / "size limit of approximately 50 MB" / "Images have a limit of 20 MB per image." / "Free users are limited to 3 file uploads per day." / "capped at 25 GB per user" / "Audio uploads are not available on the Free plan at this time." / "ChatGPT can analyze both text and images in PDFs"。https://help.openai.com/en/articles/8555545 （確認日期 2026-10-23）
+[^library]: OpenAI 幫助中心，「Using Library to manage files in ChatGPT」。"Library is available on web" / "Select Add from library." / "Free users have up to 500 MB of Library storage." / "scheduled for permanent deletion from OpenAI systems within 30 days" / "files uploaded while using Temporary Chat are not saved to your account or Library"。https://help.openai.com/en/articles/20001052 （確認日期 2026-10-23）
+[^image-faq]: OpenAI 幫助中心，「ChatGPT Image Inputs FAQ」。"The model does not perform as well handling images with text of non-Latin alphabets, such as Japanese or Korean." / "The model is not suitable for interpreting specialized medical images like CT scans" / "consider using a photo edit markup tool on your image before uploading." / "ChatGPT can accept video files as attachments through supported upload methods, including on Free plans." / "It may not analyze the entire video or accurately interpret its audio." https://help.openai.com/en/articles/8400551 （確認日期 2026-10-24）
+[^errors]: OpenAI 幫助中心，「Troubleshooting ChatGPT Error Messages」。"Ensure that the file is recently generated, files generated by ChatGPT expire quickly"。https://help.openai.com/en/articles/7996703 （確認日期 2026-10-24）
+[^space]: OpenAI 幫助中心，「ChatGPT Space: sharing, data, and controls」。"It replaces Library, while your Projects stay as they are." / "Pages are editable documents that you can organize inside other pages and work on with other people." https://help.openai.com/en/articles/20001544 （確認日期 2026-10-24）
+[^faq]: ChatGPT 生成的圖片裡帶有 **C2PA**（記錄圖片是怎樣製作出來的國際標準標籤）。它肉眼看不見，是和圖片檔案一起儲存的資訊。出處：OpenAI 幫助中心，「What is ChatGPT: FAQ」。"ChatGPT images include C2PA provenance metadata." https://help.openai.com/en/articles/12677804 （確認日期 2026-10-24）
+[^video]: 影片也可以作為附件。免費方案也可以。不過能不能成功，要看裝置和上傳方式。另外，ChatGPT 也可能無法完全理解整段影片或聲音。出處見下面的「ChatGPT Image Inputs FAQ」。
+[^library-restore]: 刪除的檔案，有時可以在「最近刪除的專案（최근 삭제된 항목）」裡恢復。並且會被安排在30天內永久刪除。出處見下面的「Using Library to manage files in ChatGPT」。
+[^delete]: OpenAI 幫助中心，「Deleting and archiving chats in ChatGPT」。"Deleting a chat does not delete files saved separately in Library." https://help.openai.com/en/articles/8809935 （確認日期 2026-10-23）
 [^academy-content]: OpenAI Academy 課程正文（需要登入和註冊）。AI Foundations: "Use this template as a model. Rewrite my draft so it follows the same structure and tone." Applied AI Foundations: "Verify" "Check whether a draft is supported by the source"（確認日期 2026-10-26）
-[^screen-sketch]: 親自確認了透過 + 選單 →「草圖（스케치）」開啟的「草圖編輯器（스케치 편집기）」，以及關閉時的確認視窗（「繼續編輯（계속 편집하기）」「放棄更改（변경 사항 삭제）」）（確認日期 2026-10-28，Plus 賬號網頁介面）
-[^screen-image]: 透過 + 選單 →「生成圖片（이미지 생성）」傳送本節的示例提示詞（不含「文字」一行）後親自確認。圖片上方有「編輯（편집）」按鈕和分享按鈕。刪除對話後，圖片仍保留在資料庫「圖片（이미지）」中，因此另行刪除了（確認日期 2026-10-28，Plus 賬號網頁介面）
+[^screen-sketch]: 親自確認了透過 + 選單 →「草圖（스케치）」開啟的「草圖編輯器（스케치 편집기）」，以及關閉時的確認視窗（「繼續編輯（계속 편집하기）」「放棄更改（변경 사항 삭제）」）（確認日期 2026-10-28，Plus 帳號網頁介面）
+[^screen-image]: 透過 + 選單 →「生成圖片（이미지 생성）」傳送本節的示例提示詞（不含「文字」一行）後親自確認。圖片上方有「編輯（편집）」按鈕和分享按鈕。刪除對話後，圖片仍保留在資料庫「圖片（이미지）」中，因此另行刪除了（確認日期 2026-10-28，Plus 帳號網頁介面）

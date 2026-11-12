@@ -25,14 +25,14 @@ First, check whether you have Git with `git --version`. If a number appears, you
 Now start recording in the practice folder.
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 git init
 ```
 
-`git init` is a command that tells Git to start recording this folder's change history. Next, decide what **not** to record. The `비밀` folder from Chapter 7 holds fake files, but let's pretend it is a real secret and leave it out. We also leave out the worktree folder from the next section.[^wt-ignore] Start `claude` and send this:
+`git init` is a command that tells Git to start recording this folder's change history. Next, decide what **not** to record. The `secret` folder from Chapter 7 holds fake files, but let's pretend it is a real secret and leave it out. We also leave out the worktree folder from the next section.[^wt-ignore] Start `claude` and send this:
 
 ```text
-Create a .gitignore file in this folder and write two lines: "비밀/" and ".claude/worktrees/".
+Create a .gitignore file in this folder and write two lines: "secret/" and ".claude/worktrees/".
 ```
 
 `.gitignore` is a list of files Git should pretend not to see. Now leave with `/exit` and type this in the terminal:
@@ -58,15 +58,15 @@ When we ran it in a new folder, this came out:
 A  .claude/skills/meeting-notes/SKILL.md
 A  .gitignore
 A  CLAUDE.md
-A  inbox/회의-2026-10-27-주간회의.txt
-A  notes/회의록-2026-10-27.md
-A  주간정리.sh
-A  회의록.md
+A  inbox/meeting-2026-10-27-weekly.txt
+A  notes/minutes-2026-10-27.md
+A  weekly-summary.sh
+A  minutes.md
 ```
 
-Your list may have more files. Without the third line, Korean names show up as numbers like `\355\232…`, so it is hard to notice even if the `비밀` folder got included.
+Your list may have more files. Without the third line, Korean names show up as numbers like `\355\232…`, so it is hard to notice even if the `secret` folder got included.
 
-Here, ask yourself: Was the `비밀` folder left out of the list? If so, save. If you see it, do not commit. Fix the two lines in `.gitignore`, then type `git reset` and `git add .` again. `git reset` is a command that puts back the files you just gathered with `git add .`. The files themselves are not deleted, so do not worry.
+Here, ask yourself: Was the `secret` folder left out of the list? If so, save. If you see it, do not commit. Fix the two lines in `.gitignore`, then type `git reset` and `git add .` again. `git reset` is a command that puts back the files you just gathered with `git add .`. The files themselves are not deleted, so do not worry.
 
 ```bash
 git commit -m "First record"
@@ -74,7 +74,7 @@ git commit -m "First record"
 
 `git commit` actually leaves the record. `-m` is short for message, and the text in quotes is the description of this record.
 
-We ran these steps in a new folder and checked that the `비밀` folder was left out and that the commit was saved.
+We ran these steps in a new folder and checked that the `secret` folder was left out and that the commit was saved.
 
 <Quiz id="ch812-git" />
 
@@ -93,7 +93,7 @@ When we actually ran it, the folder on the start screen changed like this:
 ```text
  ▐▛███▛█   Claude Code v2.1.318
 ▝▜██████▀  Opus 5.5 · Claude plan name
- ▝▝   ▝▝   ~/hello-ai-연습/터미널/.claude/worktrees/memo-fix
+ ▝▝   ▝▝   ~/hello-ai-practice/terminal/.claude/worktrees/memo-fix
 ```
 
 The folder is created at `.claude/worktrees/memo-fix`, and the new branch name is `worktree-memo-fix`.[^wt-where] We did not name the session, and when we ended with `/exit` without changing anything, the folder was deleted right away.
@@ -107,7 +107,7 @@ The worktree name and the session name are different. The official docs explain 
 
 There are two things to know.
 
-- **It is a fresh copy.**[^wt-fresh] Files that are not in a commit are not in it. The `비밀` folder we left out above is not there either. If you cannot see a note, first check whether you committed it.
+- **It is a fresh copy.**[^wt-fresh] Files that are not in a commit are not in it. The `secret` folder we left out above is not there either. If you cannot see a note, first check whether you committed it.
 - **If there is leftover work, it asks whether to keep or delete it when you finish.** If you choose delete, the folder, the branch, and the work inside disappear together. To come back later, use the `claude --worktree <name> --resume` command shown when you exit.[^wt-remove]
 
 Merging a worktree's results into the main folder is Git's branch merging. We do not merge in this chapter. It is enough to know that it is a place to work separately without touching the main folder. If you are curious how to merge, see the PR chapter of the [Stage 4 · AI-SDLC guide](/en/guide/30-ai-sdlc/). A PR (Pull Request) is a request to merge a branch's changes into the main line.
@@ -124,22 +124,22 @@ Sometimes you want to hand off your study notes while the meeting minutes are be
 In the first window, type this:
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude --worktree memo-fix
 ```
 
 In the second window, type this:
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude --worktree study-note
 ```
 
 The two windows then work in different folders like this. As you saw in the previous section, a worktree is created at `.claude/worktrees/<name>`.
 
 ```text
-Window 1: ~/hello-ai-연습/터미널/.claude/worktrees/memo-fix     fixing meeting minutes
-Window 2: ~/hello-ai-연습/터미널/.claude/worktrees/study-note   organizing study notes
+Window 1: ~/hello-ai-practice/terminal/.claude/worktrees/memo-fix     fixing meeting minutes
+Window 2: ~/hello-ai-practice/terminal/.claude/worktrees/study-note   organizing study notes
 ```
 
 This guide did not try running two windows at the same time. When they finish, ask yourself: Did the two tasks stay out of each other's files? More windows can also mean more usage. Keep an eye on it with `/usage` from [Chapter 13](13-cost-safety-trouble.md), and use this only when you really need it.
@@ -192,7 +192,7 @@ If you need work to keep going even when your computer is off, see [Cloud and Sc
 3. Start with `claude --worktree memo-fix` and check the current folder with `! pwd`.
 4. End with `/exit` without changing anything, then read the message on the screen.
 
-Ask yourself: Was the `비밀` folder left out of the first record? Can you tell which folder you are in now using `pwd`?
+Ask yourself: Was the `secret` folder left out of the first record? Can you tell which folder you are in now using `pwd`?
 
 ## Summary
 

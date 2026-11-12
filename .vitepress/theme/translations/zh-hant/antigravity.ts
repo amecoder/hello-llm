@@ -13,24 +13,24 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
     explain: "官方文件說明，應用和 CLI 執行的是同一個代理，所以大部分功能在兩邊都能用。",
   },
   "ch601-plans": {
-    prompt: "用免費的 Google 賬號使用 Antigravity，會有什麼不同？",
+    prompt: "用免費的 Google 帳號使用 Antigravity，會有什麼不同？",
     choices: [
       "功能都能用，但用量按周重新補滿",
-      "定時任務和 CLI 之類的功能只在付費套餐裡開放，免費賬號只能聊天",
+      "定時任務和 CLI 之類的功能只在付費套餐裡開放，免費帳號只能聊天",
       "一天正好只能問十個問題",
       "不能儲存結果檔案，只能在螢幕上看",
     ],
-    explain: "所有套餐都能使用全部功能。免費賬號的用量按周重新補滿。",
+    explain: "所有套餐都能使用全部功能。免費帳號的用量按周重新補滿。",
   },
   "ch601-models": {
-    prompt: "2026 年 11 月 2 日之後，免費賬號做實操時，這份指南介紹用哪個模型？",
+    prompt: "2026 年 11 月 2 日之後，免費帳號做實操時，這份指南介紹用哪個模型？",
     choices: [
       "Gemini 3.8 Flash",
       "Gemini 4 Argon",
       "Claude Opus 4.6",
       "Claude Sonnet 5.5",
     ],
-    explain: "原來免費賬號可以選的 Claude 4.6 系列在 11 月 2 日下架，Gemini 4 Argon 和 Claude Sonnet 5.5 需要 Pro 以上。",
+    explain: "原來免費帳號可以選的 Claude 4.6 系列在 11 月 2 日下架，Gemini 4 Argon 和 Claude Sonnet 5.5 需要 Pro 以上。",
   },
   "ch601-compare": {
     prompt: "把在 Codex 階段做好的「整理工具」資料夾用 Antigravity 開啟時，需要搬動什麼？",
@@ -46,11 +46,11 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
     prompt: "登入 Antigravity 應用的方法，哪項是對的？",
     choices: [
       "不用登入，直接就能用",
-      "要在應用裡另外建立新的賬號和密碼，還要完成郵箱驗證之後才能夠用",
-      "用 ChatGPT 賬號登入",
-      "點 Sign in，在瀏覽器裡用個人 Google 賬號登入",
+      "要在應用裡另外建立新的帳號和密碼，還要完成郵箱驗證之後才能夠用",
+      "用 ChatGPT 帳號登入",
+      "點 Sign in，在瀏覽器裡用個人 Google 帳號登入",
     ],
-    explain: "點 Sign in 後會開啟瀏覽器，用個人 Google 賬號（Free、Pro、Ultra）登入。",
+    explain: "點 Sign in 後會開啟瀏覽器，用個人 Google 帳號（Free、Pro、Ultra）登入。",
   },
   "ch602-project": {
     prompt: "在 Antigravity 應用裡開啟「整理工具」資料夾，怎麼做？",
@@ -83,7 +83,7 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
     explain: "提到檔案時，內容並不會被貼上進去。只傳路徑，代理在需要時再去讀那個檔案。",
   },
   "ch602-review": {
-    prompt: "在 Review 窗口裡，只想看代理在這次對話裡改過的檔案，該選什麼？",
+    prompt: "在 Review 視窗裡，只想看代理在這次對話裡改過的檔案，該選什麼？",
     choices: [
       "Staged Changes",
       "Uncommitted",
@@ -153,10 +153,10 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
     explain: "應用的 Default 和 Auto 預設裡圍欄是開著的，並且禁止聯網（在 Request Review 和 Turbo 裡是關的）。終端（agy）預設是關的。",
   },
   "ch604-undo": {
-    prompt: "點選 Review 窗口裡的 Discard unstaged changes 時，為什麼要小心？",
+    prompt: "點選 Review 視窗裡的 Discard unstaged changes 時，為什麼要小心？",
     choices: [
       "因為 AGENTS.md 會變成 GEMINI.md",
-      "因為一點下去，Google 賬號就會退出登入，需要重新登入",
+      "因為一點下去，Google 帳號就會退出登入，需要重新登入",
       "因為它不經確認就直接生效，甚至可能刪掉新檔案",
       "因為網路連線會斷開",
     ],
@@ -200,13 +200,13 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
       "只在網頁瀏覽器裡進行",
       "用我電腦裡的檔案和工具進行",
     ],
-    explain: "即使是遠端使用，代理也是用我電腦裡的檔案、工具和登入資訊工作。在其他裝置上用同一個 Google 賬號登入。",
+    explain: "即使是遠端使用，代理也是用我電腦裡的檔案、工具和登入資訊工作。在其他裝置上用同一個 Google 帳號登入。",
   },
   "ch606-install": {
     prompt: "第一次執行 agy 時確認的“Workspace trust”是什麼？",
     choices: [
       "登記「信任這個資料夾」的步驟",
-      "修改 Google 賬號密碼的步驟",
+      "修改 Google 帳號密碼的步驟",
       "換成付費套餐的步驟",
       "把資料夾上傳到雲端的步驟",
     ],
@@ -236,7 +236,7 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
     prompt: "agy -p 以成功（退出碼 0）結束，卻沒有結果檔案。按這份指南的經驗，先做什麼？",
     choices: [
       "讀 stderr 裡的拒絕提示，確認是什麼被攔住了",
-      "重新建立 Google 賬號",
+      "重新建立 Google 帳號",
       "直接加上 --dangerously-skip-permissions",
       "既然成功了，就等檔案過一會兒生成",
     ],
@@ -266,7 +266,7 @@ export const ANTIGRAVITY: Record<string, QuestionText> = {
     prompt: "決定我的對話是否用於改進模型的設定在哪裡？",
     choices: [
       "在 AGENTS.md 最上面寫上「禁止訓練」這幾個字，對話就會照樣不被用於訓練",
-      "Review 窗口裡的 Discard 按鈕",
+      "Review 視窗裡的 Discard 按鈕",
       "/goal 命令的選項",
       "Settings 的 Account 裡的 Enable Telemetry",
     ],

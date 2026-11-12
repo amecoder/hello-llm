@@ -1,7 +1,9 @@
 # 第7章 結構化提示詞 — Markdown·XML 標籤
 
+<Badge type="info" text="選讀" /> 需要的時候再讀。跳過也能跟上後面的章節。
+
 > **一句話總結**：簡短的提問，用平時說話的方式就夠了。但是當請求變長，指令、資料、示例混在一起時，
-> **請試著分成幾個格子來寫。** AI 會少一些困惑。分格子時可以用 Markdown 或 XML 標籤；想把答案搬到 Excel 裡時，就讓它給你表格。
+> **請試著分成幾個格子來寫。** AI 會少一些困惑。分格子的方法，是用 `#` 這樣的符號加標題（Markdown），或者在資料前後貼上名牌（XML 標籤）。想把答案搬到 Excel 裡時，就讓它給你表格。
 
 ## 什麼時候需要
 
@@ -9,14 +11,16 @@
 請給請求裡的每個部分做一個**貼了標籤的格子**。這樣 AI 就能清楚地知道，到哪裡為止是情況說明，從哪裡開始是資料。
 這樣講究格式來寫的請求，叫做**結構化提示詞**（structured prompt）。
 
-![寫成一大塊的請求裡，指令和資料混在一起；分了格子的請求則分成 context（情況）、document（資料）、instructions（要做的事）、format（答案的樣子）](../../../guide/00-common/assets/ch7-structure.svg)
+![寫成一大塊的請求裡，指令和資料混在一起；分了格子的請求則分成 context（情況）、document（資料）、instructions（要做的事）、format（答案的樣子）](assets/ch7-structure.svg)
+
+下表裡的格式名稱，這一章會一個一個講。現在只看括號裡的意思就可以往下走了。
 
 | 情況 | 推薦格式 |
 |---|---|
 | 簡短的提問，一兩句話的請求 | 就用平時的句子 |
-| 請求很長，條件有好幾個 | **Markdown** 標題·列表 |
-| 貼上長資料，或者資料有好幾份 | **XML 標籤** |
-| 要把答案搬到 Excel·Google 表格裡 | **表格**（量大時用 CSV） |
+| 請求很長，條件有好幾個 | **Markdown**（用符號加的標題·列表） |
+| 貼上長資料，或者資料有好幾份 | **XML 標籤**（把資料包起來的名牌） |
+| 要把答案搬到 Excel·Google 表格裡 | **表格**（量大時用以逗號分格的文字，CSV） |
 
 > **不要用過頭。** 對「推薦一下午飯吃什麼」這種話，沒必要再套上標籤。
 > 結構化是一種工具，請求太長、連我自己讀著都犯迷糊時再拿出來用。
@@ -41,7 +45,7 @@
 
 `` ` `` 是鍵盤上數字 1 左邊那個鍵上的符號（反引號）。你自己很少需要輸入它。
 
-![左邊是把情況·任務·條件·客戶資訊混成一大塊的請求，右邊是把同樣內容分成 ## 情況、## 任務、## 條件、## 客戶資訊 四個格子的請求。內容相同，分了格子之後更容易發現漏掉的條件](../../../guide/00-common/assets/ch7-markdown.svg)
+![左邊是把情況·任務·條件·客戶資訊混成一大塊的請求，右邊是把同樣內容分成 ## 情況、## 任務、## 條件、## 客戶資訊 四個格子的請求。內容相同，分了格子之後更容易發現漏掉的條件](assets/ch7-markdown.svg)
 
 把長請求用 Markdown 標題分開，就是這個樣子。
 
@@ -86,9 +90,11 @@
 Markdown 標題只標出「從這裡開始」，而 XML 標籤會把**從哪裡開始、到哪裡結束**都標出來。
 所以在貼上長資料時特別有用。
 
+::: details AI 公司們怎麼說（點選展開）
 Anthropic（開發 Claude 的公司）的官方文件說明，對於指令、背景、示例、輸入混雜在一起的複雜提示詞，可以試試用 XML 標籤。
 據說有了標籤，Claude 讀起來就不容易混淆。[^anthropic]
 OpenAI 的指南也寫道，XML 的效果很好。在處理長文件的測試中，據說也取得了不錯的結果。[^openai]
+:::
 
 ### 例：會議紀要摘要
 
@@ -165,7 +171,7 @@ Markdown 標題沒法標出結尾。所以只要把貼上的資料，用[第5章
 請做一張表格，從價格、交貨期、保修期三方面比較這兩份報價單。
 ```
 
-這裡的 `index="1"` 是標明「1 號資料」的編號。它不是必須寫的。像 `<報價單1>` `</報價單1>` 這樣，把編號寫進名字裡也可以。
+這裡的 `index="1"` 不是要背的語法。它只是標明「1 號資料」的編號備註，刪掉也行。像 `<報價單1>` `</報價單1>` 這樣，把編號寫進名字裡也可以。
 
 如果不想用標籤，就給每份資料加上分隔線和名稱。
 
@@ -186,11 +192,14 @@ Markdown 標題沒法標出結尾。所以只要把貼上的資料，用[第5章
 
 ### 長資料放上面，問題放最底下
 
-資料特別長的時候，請**先貼資料，把問題放在最末尾。**
-按 Anthropic 文件所說，把問題放在末尾時，測試裡答案的質量最多提高了 30%。
-在同時放入多份文件的複雜情況下，效果尤其明顯。[^anthropic] 上面的報價單示例就是按這個順序排的。
+資料特別長的時候，請**先貼資料，把問題放在最末尾。** 上面的報價單示例就是按這個順序排的。
 
-如果有一定要遵守的條件，可以在最前面寫一遍，再在最末尾的問題旁邊寫一遍。
+::: details 差別有多大（點選展開）
+按 Anthropic 文件所說，把問題放在末尾時，測試裡答案的質量最多提高了 30%。
+在同時放入多份文件的複雜情況下，效果尤其明顯。[^anthropic]
+:::
+
+**再教一個要領。** 如果有一定要遵守的條件，可以在最前面寫一遍，再在最末尾的問題旁邊寫一遍。
 因為埋在長資料正中間的指令，很容易被漏掉。[^academy-edges] 資料在上、問題在下的順序，仍然保持不變。
 
 ```
@@ -215,10 +224,10 @@ Markdown 標題沒法標出結尾。所以只要把貼上的資料，用[第5章
 ## 3. 要搬到 Excel 時，讓 AI 給表格
 
 如果想把 AI 的答案搬到 Excel 或 Google 表格裡，就說一句**「整理成表格」**。
-把聊天窗口裡畫出來的表格用滑鼠拖選複製，再貼上過去，通常格子會被分開放進去。
+把聊天視窗裡畫出來的表格用滑鼠拖選複製，再貼上過去，通常格子會被分開放進去。
 
 ```
-把十張名片上的資訊整理成表格。列的順序是姓名、公司、職位、電話、郵箱。
+把十張名片上的資訊整理成表格。列的順序是姓名、公司、職位、電話、電子郵件。
 ```
 
 資料特別多的時候，也會讓 AI 給 **CSV**（用逗號分隔單元格的文字）。不過，直接貼上 CSV 文字，有可能整段全塞進一個格子。
@@ -226,7 +235,7 @@ Markdown 標題沒法標出結尾。所以只要把貼上的資料，用[第5章
 
 ::: details 想了解更多（面向開發者） — JSON 與 JSONL（點選展開）
 
-**普通使用者可以不用瞭解。** 這是把 AI 的答案交給其他程式時用的格式。如果你只是在聊天窗口裡使用 AI，請跳過這部分。
+**普通使用者可以不用瞭解。** 這是把 AI 的答案交給其他程式時用的格式。如果你只是在聊天視窗裡使用 AI，請跳過這部分。
 本指南的第3階段（程式設計工具）和第4階段（AI-SDLC）會正式用到。
 
 **JSON 是什麼**
@@ -235,7 +244,7 @@ Markdown 標題沒法標出結尾。所以只要把貼上的資料，用[第5章
 前面的名稱叫**鍵**（key），後面的內容叫**值**（value）。這種格式比起人，更適合程式來讀。
 
 ```
-從下面的名片內容中，提取姓名、公司、職位、電話號碼、郵箱，只用 JSON 回答。
+從下面的名片內容中，提取姓名、公司、職位、電話號碼、電子郵件，只用 JSON 回答。
 沒有的資訊寫成 null（沒有值），不要附加說明的句子。
 
 <document>
@@ -244,7 +253,7 @@ Markdown 標題沒法標出結尾。所以只要把貼上的資料，用[第5章
 </document>
 ```
 
-答案會是這個樣子。`null` 是 JSON 里約定好的、表示「沒有值」的標記。
+答案會是這個樣子。`null` 是 JSON 裡約定好的、表示「沒有值」的標記。
 
 ```json
 {
@@ -291,7 +300,7 @@ AI 生成的 JSON 也可能出錯，比如漏掉逗號。出了錯，就請它�
 
 <PromptBuilder />
 
-點選**複製**之後，貼上到你所用 AI 服務的聊天窗口裡就行。
+點選**複製**之後，貼上到你所用 AI 服務的聊天視窗裡就行。
 
 > 如果連親自填格子也嫌麻煩，還有一種辦法：把想到什麼就寫什麼的請求交給 AI，讓它來幫你整理。下一章會講。
 
@@ -368,6 +377,6 @@ AI 生成的 JSON 也可能出錯，比如漏掉逗號。出了錯，就請它�
 
 ---
 
-[^anthropic]: Anthropic，《Prompting best practices》中的 "Structure prompts with XML tags" 和處理長文件的條目。https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices（確認日期 2026-10-20）
-[^openai]: OpenAI Cookbook，《GPT-4.1 Prompting Guide》中的分隔符（Delimiters）條目。2025年4月 GPT-4.1 釋出前後撰寫，現為已歸檔（archived）文件。https://developers.openai.com/cookbook/examples/gpt4-1_prompting_guide（確認日期 2026-10-20）
-[^academy-edges]: Claude Academy《AI capabilities and limitations》課程《Try It Out: Working Memory》。"put your most important instructions at the beginning and end of the context" / "If a constraint absolutely must be followed, state it early in the system prompt and restate it near the end." https://academy.claude.com/courses/ai-capabilities-and-limitations/try-it-out-q7hdjm9twcbt（確認日期 2026-10-26）
+[^anthropic]: Anthropic，《Prompting best practices》中的 "Structure prompts with XML tags" 和處理長文件的條目。https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices （確認日期 2026-10-20）
+[^openai]: OpenAI Cookbook，《GPT-4.1 Prompting Guide》中的分隔符（Delimiters）條目。2025年4月 GPT-4.1 釋出前後撰寫，現為已歸檔（archived）文件。https://developers.openai.com/cookbook/examples/gpt4-1_prompting_guide （確認日期 2026-10-20）
+[^academy-edges]: Claude Academy《AI capabilities and limitations》課程《Try It Out: Working Memory》。"put your most important instructions at the beginning and end of the context" / "If a constraint absolutely must be followed, state it early in the system prompt and restate it near the end." https://academy.claude.com/courses/ai-capabilities-and-limitations/try-it-out-q7hdjm9twcbt （確認日期 2026-10-26）

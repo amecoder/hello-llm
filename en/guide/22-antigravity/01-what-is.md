@@ -1,5 +1,7 @@
 # Chapter 1. What Antigravity Is and How It Differs from the First Two Tools
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: Antigravity is an AI tool made by Google that **works directly inside a folder on your computer**. It comes as a desktop app and a terminal program called `agy`.
 > Two things set it apart from the first two tools. You can use **all features even with a free Google Account**, and it **reads the `AGENTS.md` and `.agents/skills` files you made in the Codex stage right as they are.**
 
@@ -36,15 +38,29 @@ Source: Antigravity official docs (selected)[^plans]
 
 Your quota drops based on **how much work the agent does**, not how many questions you ask. If the task is simple, you can ask more times.[^work]
 
-If you have a personal Google Account (like an `@gmail.com` address), you can use it on the free plan.[^personal] However, you must be **18 or older** and live in a supported country (South Korea is on the list).[^age][^country] Accounts managed by a company or school are not personal accounts, so an administrator must allow access.[^workspace]
+Here are some examples.
+
+- A small task like "Just fix the typos in this file" uses only a little of your quota.
+- A big task like "Read every file in the folder and organize them" uses a lot at once.
 
 **Out of the three tools, Antigravity is the only one that lets you use every feature with a free account.** Claude Code needs a paid subscription, and the Codex chapters assumed a Plus plan or higher. If you don't have a paid plan yet, you can start practicing right from this stage.
+
+If you have a personal Google Account (like an `@gmail.com` address), you can start for free.[^personal] However, you must be **18 or older**.[^age]
+
+::: details More details (click to expand)
+- It is available only in supported countries. South Korea is on the list.[^country]
+- Accounts managed by a company or school are not personal accounts. So an administrator must allow access before you can use it.[^workspace]
+:::
 
 <Quiz id="ch601-plans" />
 
 ## Choosing a Model
 
-In Antigravity, you can choose models from other companies besides Gemini, and you can also pick a thinking level (Low, Medium, or High).[^models] Which models you can choose depends on your plan.
+In Antigravity, you can choose models from other companies besides Gemini.
+
+You also pick a thinking level (Low, Medium, or High). The thinking level sets how deeply the AI thinks things through before answering. Low answers quickly and suits simple edits, while High thinks longer and suits hard tasks with many connected steps.[^models]
+
+Which models you can choose depends on your plan.
 
 | Model | Free | Pro | Ultra |
 |---|---|---|---|
@@ -54,7 +70,11 @@ In Antigravity, you can choose models from other companies besides Gemini, and y
 
 Source: Antigravity official docs (selected; Claude on Pro excludes trial subscriptions)[^model-table]
 
-The docs note that the Claude 4.6 models previously available on the free plan **will be removed on November 2, 2026** (as checked on 2026-11-01).[^removed] So if you are on a free account, you can plan on practicing with Gemini 3.8 Flash.
+If you are on a free account, you can plan on **practicing with Gemini 3.8 Flash**. You don't need to worry about choosing a model from the start.
+
+::: details More details (click to expand)
+The docs note that the Claude 4.6 models previously available on the free plan **will be removed on November 2, 2026** (as checked on 2026-11-01).[^removed] So we used Gemini 3.8 Flash as the model to pick on a free account.
+:::
 
 <Quiz id="ch601-models" />
 

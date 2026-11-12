@@ -1,5 +1,7 @@
 # 第1章 Codex 是什么，和 Claude Code 有什么不同
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：Codex 是 OpenAI 做的、**直接在我电脑的文件夹里工作**的 AI 工具。现在是在 **ChatGPT 桌面应用里选择「Codex」**来使用。
 > 它做的事和 Claude Code 几乎一样。在这个阶段，我们把 Claude Code 章节里做的「整理工具（정리 도구）」搬到 Codex 上，同时**只学不同的地方**。
 
@@ -17,7 +19,9 @@
 
 出处：Codex 官方文档（只摘取了一部分）[^modes]
 
-Work 和 Codex 能做的事有重叠。区别在于**展示的方式**。Work 会隐藏 Git、命令这类技术信息，只展示完成的成果。Codex 连改了什么（diff）都会展示出来。[^compare]
+Work 和 Codex 能做的事有重叠。区别在于**展示的方式**。Work 会隐藏 Git、命令这类技术信息，只展示完成的成果。Codex 连改了什么都会展示出来。[^compare]
+
+比如你修改了一份会议记录文件，Codex 会让你看到哪几行被删掉了、哪几行是新加的。像这样只把改动的部分集中展示出来，就叫 diff（差异）。
 
 不写代码也可以使用 Codex。官方文档也说，如果觉得 Codex 用着顺手，调研、文档、演示资料这类工作也可以继续用它。[^prefer] 本指南选择 Codex 的原因是**可以亲自确认改动内容**。如果你已经在 Claude Code 章节里养成了检查备忘整理结果与原件是否一致的习惯，在 Codex 里也能原样延续下去。
 
@@ -41,7 +45,7 @@ Work 和 Codex 能做的事有重叠。区别在于**展示的方式**。Work �
 
 **最大的区别是规则文件的名称。** Codex 在开始工作之前，会读 `AGENTS.md`。[^agents] 如果你把 Claude Code 的 `CLAUDE.md` 原样留着，Codex 是不会读它的。所以搬整理工具时，先改这个文件（第3章）。
 
-也有帮你代劳搬迁的功能。ChatGPT 应用的**导入**（Import），可以把 Claude Code 的规则文件、技能、设置搬到 Codex。[^import] 本指南为了亲眼看看什么会怎样变化，选择**一个个手动**搬。导入功能在第3章末尾介绍。
+本指南为了亲眼看看什么会怎样变化，选择**一个个手动**搬。也有一次性帮你搬过去的**导入**（Import）功能，在第3章末尾单独介绍。[^import]
 
 <Quiz id="ch501-compare" />
 
@@ -53,7 +57,12 @@ Codex 可以在很多地方使用。
 - **终端（Codex CLI）**：在命令窗口里使用。[^cli] 在第7章里讲。
 - **云端**：每项任务会有单独的工作空间，即使我的电脑休眠了也在工作。[^cloud] 在第6章里介绍。
 
-各套餐能用的范围不同。
+各套餐能用的范围不同。本指南的实践以 **Plus 以上**为准。有两点要先了解。
+
+- **Free 和 Go 是“逐步开放”**（rollout，按账号依次开放的方式）。如果你的界面上看不到 Codex，可能是还没有对你开放。
+- 用量是**和 ChatGPT Work 共用的。** 用 Work 交办很多大工作，留给 Codex 的份额也会减少。[^shared] 用量在第8章里会进一步讲。
+
+::: details 各套餐能用的东西（点击展开）
 
 | 套餐 | 月费 | 在 Codex 里能用的东西 |
 |---|---|---|
@@ -64,9 +73,7 @@ Codex 可以在很多地方使用。
 
 出处：Codex 官方文档的价格说明（只摘取了一部分）[^pricing]
 
-**Free 和 Go 是“逐步开放”**（rollout，按账号依次开放的方式）。如果你的界面上看不到 Codex，可能是还没有对你开放。本指南的实践以 **Plus 以上**为准。
-
-用量是**和 ChatGPT Work 共用的。** 用 Work 交办很多大工作，留给 Codex 的份额也会减少。[^shared] 用量在第8章里会进一步讲。
+:::
 
 <Quiz id="ch501-where" />
 
@@ -102,13 +109,13 @@ Codex 可以在很多地方使用。
 
 下一章：[第2章. 在 ChatGPT 应用里开始使用 Codex](02-first-task.md)
 
-[^modes]: Codex 官方文档，「Use ChatGPT」。"Use Chat for a question or back-and-forth. Turn on Work in the switcher when you want ChatGPT to carry a larger task through to a reviewable result." / "Select Codex when you want developer views or more technical detail, especially for software development." https://learn.chatgpt.com/docs/use-chatgpt（确认日期 2026-11-01）
-[^compare]: Codex 官方文档，「Use ChatGPT」。"ChatGPT Work and Codex have overlapping capabilities." / "Hide technical details like Git or shell commands" / "See developer details, including diff and review views" https://learn.chatgpt.com/docs/use-chatgpt（确认日期 2026-11-01）
-[^prefer]: Codex 官方文档，「Use ChatGPT」。"If you prefer Codex, you can keep using it for research, documents, presentations, and other knowledge work." https://learn.chatgpt.com/docs/use-chatgpt（确认日期 2026-11-01）
-[^agents]: Codex 官方文档，「Custom instructions with AGENTS.md」。"Codex reads `AGENTS.md` files before doing any work." https://learn.chatgpt.com/docs/agent-configuration/agents-md（确认日期 2026-11-01）
-[^import]: Codex 官方文档，「Import from another agent」。"The desktop app can import from **Claude Code**, **Claude Cowork**, or **Cursor**." https://learn.chatgpt.com/docs/import（确认日期 2026-11-01）
-[^desktop]: Codex 官方文档，「Quickstart」。"The ChatGPT desktop app is available for macOS, Windows, and Linux." https://learn.chatgpt.com/docs/quickstart（确认日期 2026-11-01）
-[^cli]: Codex 官方文档，「Codex CLI」。"Inspect code, make changes, run commands, and automate repeatable work without leaving your terminal." https://learn.chatgpt.com/docs/codex/cli（确认日期 2026-11-01）
-[^cloud]: Codex 官方文档，「Codex Cloud」。"Each task has its own workspace and can keep working while your computer is asleep." https://learn.chatgpt.com/docs/cloud（确认日期 2026-11-01）
-[^pricing]: Codex 官方文档，「Pricing」。"GPT-6 Luna at Standard speed in the desktop app, subject to rollout" / "Codex on the web, in the CLI, in the IDE extension, and on iOS" / "Plans at $100, $200, or $500 USD per month" https://learn.chatgpt.com/docs/pricing（确认日期 2026-11-01）
-[^shared]: Codex 官方文档，「Pricing」。"ChatGPT Work usage inside ChatGPT uses the same pricing, credits, and usage limits as Codex." https://learn.chatgpt.com/docs/pricing（确认日期 2026-11-01）
+[^modes]: Codex 官方文档，「Use ChatGPT」。"Use Chat for a question or back-and-forth. Turn on Work in the switcher when you want ChatGPT to carry a larger task through to a reviewable result." / "Select Codex when you want developer views or more technical detail, especially for software development." https://learn.chatgpt.com/docs/use-chatgpt （确认日期 2026-11-01）
+[^compare]: Codex 官方文档，「Use ChatGPT」。"ChatGPT Work and Codex have overlapping capabilities." / "Hide technical details like Git or shell commands" / "See developer details, including diff and review views" https://learn.chatgpt.com/docs/use-chatgpt （确认日期 2026-11-01）
+[^prefer]: Codex 官方文档，「Use ChatGPT」。"If you prefer Codex, you can keep using it for research, documents, presentations, and other knowledge work." https://learn.chatgpt.com/docs/use-chatgpt （确认日期 2026-11-01）
+[^agents]: Codex 官方文档，「Custom instructions with AGENTS.md」。"Codex reads `AGENTS.md` files before doing any work." https://learn.chatgpt.com/docs/agent-configuration/agents-md （确认日期 2026-11-01）
+[^import]: Codex 官方文档，「Import from another agent」。"The desktop app can import from **Claude Code**, **Claude Cowork**, or **Cursor**." https://learn.chatgpt.com/docs/import （确认日期 2026-11-01）
+[^desktop]: Codex 官方文档，「Quickstart」。"The ChatGPT desktop app is available for macOS, Windows, and Linux." https://learn.chatgpt.com/docs/quickstart （确认日期 2026-11-01）
+[^cli]: Codex 官方文档，「Codex CLI」。"Inspect code, make changes, run commands, and automate repeatable work without leaving your terminal." https://learn.chatgpt.com/docs/codex/cli （确认日期 2026-11-01）
+[^cloud]: Codex 官方文档，「Codex Cloud」。"Each task has its own workspace and can keep working while your computer is asleep." https://learn.chatgpt.com/docs/cloud （确认日期 2026-11-01）
+[^pricing]: Codex 官方文档，「Pricing」。"GPT-6 Luna at Standard speed in the desktop app, subject to rollout" / "Codex on the web, in the CLI, in the IDE extension, and on iOS" / "Plans at $100, $200, or $500 USD per month" https://learn.chatgpt.com/docs/pricing （确认日期 2026-11-01）
+[^shared]: Codex 官方文档，「Pricing」。"ChatGPT Work usage inside ChatGPT uses the same pricing, credits, and usage limits as Codex." https://learn.chatgpt.com/docs/pricing （确认日期 2026-11-01）

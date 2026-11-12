@@ -1,6 +1,6 @@
 # 第1章 终端与 Claude Code
 
-<Badge type="tip" text="必读" /> 想跟着这一阶段学下去，一定要读这一章。
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
 
 > **一句话总结**：终端是用文字让电脑干活的窗口。本课程会带一个从没打开过终端的人安装 Claude Code，最后做到用一行命令整理每周的笔记。[^tested]
 
@@ -35,7 +35,7 @@ Claude Code 是在终端里运行的**代理型助手**。[^agentic] 代理（Ag
 Claude Code 会自己读需要的文件。[^reads] 它也能读取并整理已有的文件。[^organize] 所以你可以这样说。
 
 ```text
-读一下 inbox 里的会议笔记，保存成 회의록.md。回答只要一行。
+读一下 inbox 里的会议笔记，保存成 minutes.md。回答只要一行。
 ```
 
 现在不用输入。第4章再做。
@@ -83,7 +83,7 @@ Windows 有 PowerShell 和 CMD 两种窗口。它们用的命令不同，所以�
 
 我们用小咖啡馆「街角咖啡馆」员工瑞妍的笔记来练习。把乱糟糟的会议笔记放进文件夹。运行一个脚本（script，按顺序写好命令的文件）。笔记就会一份一份整理成会议记录。
 
-想先看看的话，可以打开[完成的脚本](/practice/cli/results/10장-주간정리.sh.txt)和[这个脚本做出的会议记录](/practice/cli/results/10장-회의록-스크립트로.txt)。现在看不懂也没关系。
+想先看看的话，可以打开[完成的脚本](/practice/zh-hans/cli/results/ch10-weekly-summary.sh.txt)和[这个脚本做出的会议记录](/practice/zh-hans/cli/results/ch10-minutes-by-script.txt)。现在看不懂也没关系。
 
 之所以能这样做，是因为 Claude Code 有一种**回答一次就结束的运行方式**。[^oneshot] 不用来回对话。用一行把要做的事交给它，它回答后就自己结束。这种方式在第10章学。
 

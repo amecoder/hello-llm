@@ -1,5 +1,7 @@
 # 2章. デスクトップアプリのインストールと最初のセッション — インストール・ログイン、Codeタブ、フォルダ選び、最初の仕事の頼み方
 
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
 > **一言まとめ**: Claudeデスクトップアプリをインストールして **Code** タブを開きます。入力欄の下の行で **フォルダを選び**、やってほしいことをふだんの言葉で書いて送ると、Claudeがそのフォルダの中で作業します。
 > この章では、ごちゃごちゃした会議メモを **自分で決めた形式の議事録** に整理してもらいます。ステップ3を通して育てていく「自分のやり方で整理してくれるツール」の第一歩です。
 
@@ -12,7 +14,7 @@ Claude Codeは **Claudeデスクトップアプリの中に入っています。
 1. 公式ドキュメントのインストールページから、自分のパソコンに合ったファイルをダウンロードします。[^quickstart]
    - **macOS**: 1つのファイルで、IntelのMacにもApple siliconのMacにもインストールできます。
    - **Windows**: ふつうのPC（x64）向けのインストーラーがあり、ARM64のPC向けは別にあります。
-   - **Linux**: ベータ版（試験版）で、UbuntuとDebianではapt（Linuxのプログラムインストールツール）でインストールします。
+   - **Linux**: ベータ版（試験版）です。Ubuntu・Debian用があります。[^linux]
 2. ダウンロードしたファイルを実行してインストールします。
 3. アプリを開いて **Anthropicアカウント** でログインします。[^quickstart] 個人のサブスクリプション（Pro・Max・Ultra）なら、claude.aiで使っているアカウントでログインします。[^auth]
 
@@ -28,7 +30,10 @@ Codeを押したときに案内が出たら、次のようにします。[^quick
 
 - **有料プランに切り替えるよう求める案内**: Claude Codeは有料サブスクリプションがないと使えません（[第1章](01-what-is.md#何が必要か-—-料金プラン)）。購読してから、もう一度開きます。
 - **オンラインでログインするよう求める案内**: ログインを済ませて、アプリを再起動します。
-- **403エラー**（アクセスが拒否されたというエラー）: 公式ドキュメントの認証トラブルの案内を見ます。
+
+::: details 「403」というエラーが出たら
+403エラーは、アクセスが拒否されたという意味です。公式ドキュメントの認証トラブルの案内を見ます。
+:::
 
 Codeタブで新しいセッションを開くと、こんな画面が出ます。
 
@@ -47,9 +52,11 @@ Codeタブで新しいセッションを開くと、こんな画面が出ます�
 
 出典: 画面の名前はこのガイドの画面確認（2026-10-31）、役割は公式ドキュメント[^desktop-start]
 
-③の環境は、最初は **이 컴퓨터（このパソコン）** のままで大丈夫です。公式ドキュメントの「Local」（自分のパソコン）がこの項目です。[^quickstart] クラウドで作業する方法は8章で扱います。
+③の環境は、最初は **이 컴퓨터（このパソコン）** のままで大丈夫です。[^local] クラウドで作業する方法は8章で扱います。
 
 モデル（⑤）はあとから変えられます。[^quickstart] 最初は、画面で選ばれているものをそのまま使ってかまいません。
+
+自分の画面が図と違って、入力欄の **上** に「환경 선택」（環境を選ぶ）があるなら、以前の画面配置です。場所が違うだけで役割は同じなので、同じ名前の項目を探して選べば大丈夫です。[^quickstart]
 
 ::: details 入力欄の上に「환경 선택」（環境を選ぶ）があり、下の行に環境がないとき
 以前の画面レイアウトです。公式ドキュメントは、新しいセッションの入力欄の下に環境が見えないときは以前のレイアウト（earlier layout）だと案内しています。[^quickstart] 以前のレイアウトでは、環境とフォルダを **入力欄の上** で、権限モードとモデルを **下の行** で選びます。[^desktop-layout] やることは同じです。
@@ -65,26 +72,26 @@ Claude Codeは **自分が選んだフォルダの中で** 作業します。だ
 
 | ファイル | 内容 |
 |---|---|
-| [회의-2026-10-27-주간회의.txt](/practice/notes/inbox/회의-2026-10-27-주간회의.txt) | ごちゃごちゃした週次会議のメモ |
-| [공부-2026-10-28-프롬프트-강의.txt](/practice/notes/inbox/공부-2026-10-28-프롬프트-강의.txt) | 講座を聞きながら取ったノート |
-| [회고-2026-10-29.txt](/practice/notes/inbox/회고-2026-10-29.txt) · [10-30](/practice/notes/inbox/회고-2026-10-30.txt) · [10-31](/practice/notes/inbox/회고-2026-10-31.txt) | 1日の振り返り3日分 |
+| [meeting-2026-10-27-weekly.txt](/practice/ja/notes/inbox/meeting-2026-10-27-weekly.txt) | ごちゃごちゃした週次会議のメモ |
+| [study-2026-10-28-prompt-lecture.txt](/practice/ja/notes/inbox/study-2026-10-28-prompt-lecture.txt) | 講座を聞きながら取ったノート |
+| [review-2026-10-29.txt](/practice/ja/notes/inbox/review-2026-10-29.txt) · [10-30](/practice/ja/notes/inbox/review-2026-10-30.txt) · [10-31](/practice/ja/notes/inbox/review-2026-10-31.txt) | 1日の振り返り3日分 |
 
 メモの日付と曜日は話のために作ったもので、**実際の2026年のカレンダーとは合いません。** 結果を確認するときは、**メモに書かれている** 日付・曜日と合っているかを見てください。
 
-1. 自分のパソコンに新しいフォルダ **정리도구**（「整理ツール」の意味） を作り、その中に **inbox** フォルダを作ります。
+1. 自分のパソコンに新しいフォルダ **organizer**（「整理ツール」の意味） を作り、その中に **inbox** フォルダを作ります。整理した結果を入れる **notes** フォルダは、前もって作らなくてもかまいません。このガイドの実習では、Claudeが保存するときに作りました。
 2. 上のファイル5つをダウンロードして **inbox** に入れます。
 3. Codeタブの入力欄の下の行にある **선택…**（選択…）（④）を押します。
 
 ![フォルダメニュー。① フォルダ「선택…」（選択…）、② 「폴더 검색…」（フォルダを検索…）欄（図はまだ開いたことのない別の練習フォルダの名前を入れて「일치하는 항목 없음」（一致する項目なし）と出たところ）、③ 「폴더 열기…」（フォルダを開く…）に赤い番号が付いている](../../../guide/20-claude-code/assets/shot-02-folder-menu-marked.png)
 
-4. メニューが開いたら、一番下の **폴더 열기…**（フォルダを開く…）（③）を押します。公式ドキュメントの「Open folder…」がこの項目です。[^quickstart]
-5. ファイルを選ぶウィンドウで **정리도구** フォルダを選び、**열기**（開く）を押します。
+4. メニューが開いたら、一番下の **폴더 열기…**（フォルダを開く…）（③）を押します。[^quickstart]
+5. ファイルを選ぶウィンドウで **organizer** フォルダを選び、**열기**（開く）を押します。
 
 メニューの上のほうには **最近開いたフォルダ** が出ます。一度開いたフォルダは、次からは②の検索欄に名前を入れてすぐ選べます。初めて開くフォルダは、図のように「일치하는 항목 없음」（一致する項目なし）と出るので、**폴더 열기…**（フォルダを開く…）で開きます。
 
 フォルダを選ぶと、④の場所にフォルダ名が表示されます。
 
-![フォルダを選んだあとの入力欄の下の行。① フォルダの場所に「정리도구」が表示されている](../../../guide/20-claude-code/assets/shot-03-folder-picked-marked.png)
+![フォルダを選んだあとの入力欄の下の行。① フォルダの場所に「organizer」が表示されている](../../../guide/20-claude-code/assets/shot-03-folder-picked-marked.png)
 
 **作業フォルダ ＝ Claudeが手を出せる範囲** と考えてください。だから、自分の文書がすべて入った大きなフォルダよりも、今回の仕事に必要なファイルだけが入った小さなフォルダを選ぶほうが安心です。
 
@@ -116,6 +123,8 @@ inboxフォルダの会議メモを読んで、議事録に整理して。決め
 
 権限モードが **수동**（手動。公式ドキュメントのManual）のとき、Claudeはファイルを直したりコマンドを実行したりする **前に、まず聞いてきます。** 何が変わるのかを見せてくれて、変更のたびに許可するか断るかを選べます。[^desktop-modes] 最初は手動にしておいて、何をしようとしているのかを1つずつ見るほうが安心です。権限モードは[第4章](04-permissions-undo.md)で詳しく扱います。
 
+手動なのに、聞かずにすぐファイルを作ることがあります。故障ではありません。ターミナルでClaude Codeを使ったことがあるなら、そのとき決めた設定がアプリにも適用されている可能性があります。このガイドのキャプチャ画面も、そうした設定のあるパソコンで撮ったため、許可のウィンドウがありません。詳しいしくみは下のボックスにあります。
+
 ::: details 手動なのに許可を聞かず、すぐファイルを作ったとき
 ターミナルでClaude Codeを使ったことがあるなら、そのとき決めた設定がアプリにも適用されている可能性があります。**デスクトップアプリは、ターミナル用のClaude Codeと同じ設定ファイルを読みます。**[^desktop-modes] たとえば「ファイルの書き込みは聞かない」という許可ルールを入れてあると、手動でもその作業は聞かずに行います。このガイドのキャプチャ画面も、そうした設定のあるパソコンで撮ったため、許可のウィンドウが出ませんでした。
 :::
@@ -144,18 +153,18 @@ inboxフォルダの会議メモを読んで、議事録に整理して。決め
 | 新メニューは原価を見て決める | 「メモにはいつ決めるかが書かれていない」と別に明記した |
 | 次の会議は11/3 月曜 午前10時 | そのまま書き写した |
 
-出典: このガイドの実習結果（2026-10-31）。結果ファイル: [2장-회의록-2026-10-27-주간회의.txt](/practice/notes/results/2장-회의록-2026-10-27-주간회의.txt)（マークダウン形式のまま）
+出典: このガイドの実習結果（2026-10-31）。結果ファイル: [ch2-minutes-2026-10-27-weekly.txt](/practice/ja/notes/results/ch2-minutes-2026-10-27-weekly.txt)（マークダウン形式のまま）
 
 **同じ依頼でも、結果は毎回少しずつ違います。** 表の形や言い回しがこのガイドと違っても大丈夫です。上の確認の質問にすべて「はい」と答えられれば、うまくいっています。
 
-できあがったファイルは、自分のパソコンの **정리도구/notes** フォルダ（整理ツール/notes）にあります。Finderやファイルエクスプローラーで開いてみてください。アプリの中でファイルや変更内容を見る方法は[第3章](03-screen-tour.md)で扱います。
+できあがったファイルは、自分のパソコンの **organizer/notes** フォルダ（整理ツール/notes）にあります。Finderやファイルエクスプローラーで開いてみてください。アプリの中でファイルや変更内容を見る方法は[第3章](03-screen-tour.md)で扱います。
 
 <Quiz id="ch402-check" />
 
 ## やってみよう
 
-1. **정리도구**（整理ツール）フォルダを作り、練習の材料5つを **inbox** に入れる。
-2. Codeタブで新しいセッションを開き、フォルダを **정리도구** に選ぶ。
+1. **organizer**（整理ツール）フォルダを作り、練習の材料5つを **inbox** に入れる。
+2. Codeタブで新しいセッションを開き、フォルダを **organizer** に選ぶ。
 3. 上の「よりよい頼み方」をそのまま送り、できあがった議事録を確認の質問4つで点検する。
 4. 気に入らない点があれば、1行で直してもらう（例:「やることの表に『状態』の列を入れて」）。
 
@@ -186,5 +195,7 @@ inboxフォルダの会議メモを読んで、議事録に整理して。決め
 [^desktop-start]: Claude Code公式ドキュメント、「Desktop application」。"Before you send your first message, choose the environment, project folder, permission mode, and model in the row under the prompt box" / "Type what you want Claude to do and press Enter to send. Claude reads your project files, makes changes, and runs commands based on your permission mode." / "click the stop button to interrupt immediately, or type a correction and press Enter to send it without stopping the running action." https://code.claude.com/docs/en/desktop （確認日 2026-10-31）
 [^desktop-layout]: Claude Code公式ドキュメント、「Desktop application」。"In the earlier layout, choose the environment and any project folder or repository above the prompt box, and the permission mode and model in the row under it." https://code.claude.com/docs/en/desktop （確認日 2026-10-31）
 [^desktop-modes]: Claude Code公式ドキュメント、「Desktop application」。"Claude asks before editing files or running commands. You see a diff and can accept or reject each change." / "The desktop app reads the same settings files as the CLI." https://code.claude.com/docs/en/desktop （確認日 2026-10-31）
+[^linux]: Linuxでは、apt（Linuxでプログラムをインストールするツール）でインストールします。公式ドキュメント「Get started with the desktop app」参照。https://code.claude.com/docs/en/desktop-quickstart （確認日 2026-10-31）
+[^local]: 公式ドキュメントでは、この項目を「Local」（自分のパソコン）と呼んでいます。フォルダメニューの「폴더 열기…」（フォルダを開く…）は、公式ドキュメントの「Open folder…」です。https://code.claude.com/docs/en/desktop-quickstart （確認日 2026-10-31）
 [^auth]: Claude Code公式ドキュメント、「Authentication」。"Claude Pro, Max, or Ultra subscription: log in with your claude.ai account." https://code.claude.com/docs/en/authentication （確認日 2026-10-31）
 [^update]: Claude Code公式ドキュメント、「Desktop application」。"Open Claude > Check for Updates… on macOS or Help > Check for Updates… on Windows to update." https://code.claude.com/docs/en/desktop （確認日 2026-10-31）

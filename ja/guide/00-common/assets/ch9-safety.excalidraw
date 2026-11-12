@@ -1,0 +1,106 @@
+{
+ "skeleton": [
+  {
+   "type": "rectangle",
+   "id": "before",
+   "x": 0,
+   "y": 0,
+   "width": 300,
+   "height": 170,
+   "backgroundColor": "#ffec99",
+   "fillStyle": "solid",
+   "label": {
+    "text": "送る前\n\n個人情報・秘密を伏せたか？\n他人の資料は区切り文字で囲んだか？",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "ai",
+   "x": 400,
+   "y": 50,
+   "width": 140,
+   "height": 70,
+   "backgroundColor": "#e9ecef",
+   "fillStyle": "solid",
+   "label": {
+    "text": "AI",
+    "fontSize": 22
+   }
+  },
+  {
+   "type": "rectangle",
+   "id": "after",
+   "x": 640,
+   "y": 0,
+   "width": 300,
+   "height": 170,
+   "backgroundColor": "#b2f2bb",
+   "fillStyle": "solid",
+   "label": {
+    "text": "受け取った後\n\n数字・日付・出典を確認したか？\nそのまま使ってもよい結果か？",
+    "fontSize": 18
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 300,
+   "y": 85,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     98,
+     0
+    ]
+   ],
+   "width": 98,
+   "height": 0,
+   "start": {
+    "id": "before"
+   },
+   "end": {
+    "id": "ai"
+   }
+  },
+  {
+   "type": "arrow",
+   "x": 540,
+   "y": 85,
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     98,
+     0
+    ]
+   ],
+   "width": 98,
+   "height": 0,
+   "start": {
+    "id": "ai"
+   },
+   "end": {
+    "id": "after"
+   }
+  },
+  {
+   "type": "rectangle",
+   "x": 0,
+   "y": 190,
+   "width": 940,
+   "height": 40,
+   "strokeColor": "transparent",
+   "backgroundColor": "transparent",
+   "label": {
+    "text": "リスクは入れるときと受け取るときの2か所で生まれる",
+    "fontSize": 18,
+    "strokeColor": "#495057"
+   }
+  }
+ ]
+}

@@ -13,7 +13,7 @@ First, check where you are typing. If the symbol right before the cursor is `%`,
 | `~` | Your home folder | `cd ~` |
 | `.` | The current folder | `git add .` |
 | `..` | The folder one level up | `cd ..` |
-| `*` | Any number of characters (even none) | `inbox/회의-*.txt` |
+| `*` | Any number of characters (even none) | `inbox/meeting-*.txt` |
 | `\|` | Passes the output of the command before it to the next command | `cat memo.txt \| claude -p "Summarize this"` |
 | `>` | Saves the output to a file (overwrites) | `claude -p "Summarize this" > summary.txt` |
 | `>>` | Adds the output to the end of a file | `echo second line >> memo.txt` |

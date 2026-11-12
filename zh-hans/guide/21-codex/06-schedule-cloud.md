@@ -1,5 +1,7 @@
 # 第6章 预约、云端、手机——到点自动运行，人不在也行
 
+<Badge type="info" text="选读" /> 需要的时候再读。跳过也能跟上后面的章节。
+
 > **一句话总结**：每周都一样的事，用**预约**（Scheduled）来跑。用我的文件夹的预约，必须**电脑开着、应用在运行**才会运行。
 > 云端是给有 GitHub 仓库的人用的，手机则像遥控器一样用来操控我的电脑。
 
@@ -9,13 +11,19 @@
 
 预约任务是先定好要重复的事，然后在后台运行的功能。[^schedule] 在应用侧边栏的 **Scheduled** 里，可以看到所有预约和运行记录。[^inbox]
 
-预约在桌面应用或网页上创建，终端（Codex CLI）里没有预约管理界面。[^no-cli] 预约也是通过对话来创建。[^chat-create] 在预约里，还可以用 `$技能名称` 来调用技能。[^skill] 用第5章的技能，可以这样拜托它。
+预约在桌面应用或网页上，像平时一样通过对话来创建。[^chat-create][^no-cli] 在预约里，还可以用 `$技能名称` 来调用技能。[^skill] 用第5章的技能，可以这样拜托它。
 
 ```
 每周五下午 6 点，用 $weekly-review 在 notes 文件夹里做出那一周的周回顾。
 ```
 
-**有条件。** 用我电脑里文件夹的预约，只有在电脑开着、应用正在运行时才会运行。[^awake] macOS·Linux 的 **Prevent sleep while running** 设置，会让电脑在对话**运行期间**不进入睡眠，这样人不在也能让对话继续。[^sleep] 它并不是让电脑一直醒着等到预约时间的功能，所以要使用预约，请另外确认电脑的节能设置。
+**有条件。** 用我电脑里文件夹的预约，只有在电脑开着、应用正在运行时才会运行。[^awake] 要使用预约，请确认电脑的节能设置，看看到那个时间电脑是不是在睡眠。
+
+::: details 应用的「Prevent sleep while running」设置（点击展开）
+
+macOS·Linux 的 **Prevent sleep while running** 设置，会让电脑在对话**运行期间**不进入睡眠，这样人不在也能让对话继续。[^sleep] 它并不是让电脑一直醒着等到预约时间的功能。所以要像上面说的那样，另外确认电脑的节能设置。
+
+:::
 
 预约是**没有人**的情况下运行的。所以，它沿用我默认的围栏（沙盒）范围，但如果组织没有禁止，就会以**不征求许可的方式**运行。[^unattended] 围栏之外的事，没有人可以问，所以可以认为会失败。
 
@@ -23,11 +31,16 @@
 |---|---|
 | 只读 | 需要写文件的预约会失败 |
 | 在文件夹内写入 | 像整理工具那样只在文件夹里写的事可以运行 |
-| Full access | 不问就使用文件·命令甚至互联网。危险 |
+| Full access | 不问就使用文件·命令甚至互联网（危险） |
 
-出处：Codex 官方文档（只摘录了一部分，中间一行是这本指南的整理）[^modes]
+出处：Codex 官方文档（只摘录了一部分，中间一行是这本指南的整理）[^modes][^readonly]
 
-用第4章的权限菜单来说，Ask for approval 和 Approve for me 用的是中间一行（在文件夹内写入）的围栏，Full access 用的是最后一行。[^ask] 不过在预约里，即使是 Ask for approval，也**不会询问。** “只读”是在菜单里可能看不到的设置。
+用第4章的权限菜单来看是这样的。[^ask]
+
+- **Ask for approval** 和 **Approve for me**：用的是中间一行（在文件夹内写入）的围栏。
+- **Full access**：用的是最后一行。
+
+不过在预约里，即使是 Ask for approval，也**不会询问。**
 
 创建预约之前，**请先在平时的对话里把同样的请求跑一遍。** 像第5章那样把结果和原件对一对，没问题时再转成预约。最初几次的运行结果也一定要确认。官方文档也建议同样的顺序。[^test]
 
@@ -35,13 +48,15 @@
 
 ## 云端有什么不同
 
-云端任务在互联网另一端的工作空间里运行，所以我的电脑睡着时它也会继续。[^cloud] 作为交换，有条件。
+云端任务在互联网另一端的工作空间里运行，所以我的电脑睡着时它也会继续。[^cloud]
 
-- 必须有我能使用的**已发布环境**（published environment）。[^env]
-- 创建环境时，要选择并连接**GitHub 仓库**。[^github]
+整理工具文件夹只在我的电脑上，所以这本指南不使用云端。如果你在公司用 GitHub（把文件放到互联网上、一起管理改动记录的服务）工作，只要记住：耗时很久的事可以送到云端，电脑关掉也行。
+
+要使用云端，有几个条件。
+
+- 必须有事先准备好的云端工作空间，也就是**已发布环境**（published environment）。[^env]
+- 要创建这个工作空间，需要选择并连接**GitHub 仓库**。[^github]
 - 我电脑里的文件、正在运行的程序、浏览器登录都不会转到云端。[^not-moved]
-
-整理工具文件夹只在我的电脑上，所以这本指南不使用云端。如果你在公司用 GitHub 工作，只要记住：耗时很久的事可以送到云端，电脑关掉也行。
 
 <Quiz id="ch506-cloud" />
 
@@ -101,4 +116,5 @@
 [^trust]: Codex 官方文档，《Codex on mobile》。"Only connect devices you own and trust." https://learn.chatgpt.com/docs/mobile （确认日期 2026-11-01）
 [^rollout]: Codex 官方文档，《Codex on mobile》。"Use the ChatGPT mobile app with Cloud or a connected Mac or Windows PC. Availability depends on rollout and your workspace settings." https://learn.chatgpt.com/docs/mobile （确认日期 2026-11-01）
 [^ask]: Codex 官方文档，《Permissions》。"For most work, start with **Ask for approval**. It lets ChatGPT work within the current workspace and pauses before reaching beyond that boundary." / "Changing who reviews a request doesn't expand the sandbox." https://learn.chatgpt.com/docs/permission-modes （确认日期 2026-11-01）
-[^no-cli]: Codex 官方文档，《Scheduled tasks》。"Codex CLI doesn't provide the Scheduled management interface." https://learn.chatgpt.com/docs/automations （确认日期 2026-11-01）
+[^readonly]: “只读”是在第4章的权限菜单里可能不会单独显示的设置（这本指南的整理）。
+[^no-cli]: 终端（Codex CLI）里没有预约管理界面。Codex 官方文档，《Scheduled tasks》。"Codex CLI doesn't provide the Scheduled management interface." https://learn.chatgpt.com/docs/automations （确认日期 2026-11-01）

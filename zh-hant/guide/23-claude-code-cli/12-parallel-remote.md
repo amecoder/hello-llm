@@ -1,10 +1,10 @@
 # 第12章 同時工作與遠端
 
-<Badge type="tip" text="必讀" /> 要跟上這個階段，請一定讀完。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
 
 > **一句話總結**：用 Git 留下第一次記錄後，就能用 worktree **分出工作資料夾**，讓幾項工作並排進行。
 
-本章的介面是 2026年11月6日在 Linux 上用 Claude Code 2.1.318 執行的結果。資料夾路徑和套餐名稱按本課程做了改寫。
+本章的介面是 2026年11月6日在 Linux 上用 Claude Code 2.1.318 執行的結果。資料夾路徑和方案名稱按本課程做了改寫。
 
 我們先把當前狀態儲存下來，再做一個不會碰到主資料夾的工作資料夾。
 
@@ -25,14 +25,14 @@ Git 是儲存資料夾變更歷史的程式。儲存下來的一個時間點叫�
 現在在練習資料夾裡開始記錄。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 git init
 ```
 
-`git init` 是讓這個資料夾開始記錄變更歷史的命令。接下來決定**不**記錄哪些東西。第7章的 `비밀`（秘密）資料夾雖然是假檔案，但我們就當它是真的秘密，把它排除掉。下一節的 worktree 資料夾也一起排除。[^wt-ignore] 啟動 `claude`，傳送下面的內容。
+`git init` 是讓這個資料夾開始記錄變更歷史的命令。接下來決定**不**記錄哪些東西。第7章的 `secret`（秘密）資料夾雖然是假檔案，但我們就當它是真的秘密，把它排除掉。下一節的 worktree 資料夾也一起排除。[^wt-ignore] 啟動 `claude`，傳送下面的內容。
 
 ```text
-在這個資料夾裡新建 .gitignore 檔案，寫上"비밀/"和".claude/worktrees/"這兩行。
+在這個資料夾裡新建 .gitignore 檔案，寫上"secret/"和".claude/worktrees/"這兩行。
 ```
 
 `.gitignore` 是寫著讓 Git 裝作看不見的檔案的列表。現在用 `/exit` 退出，在終端裡輸入。
@@ -47,7 +47,7 @@ git status --short
 
 逐行來看是這樣的。
 
-- 第一、二行（`git config user.…`）：設定寫進提交裡的名字和郵箱。只對這個資料夾有效。以後公開倉庫時，這些也會一起公開，所以請用可以公開的值。
+- 第一、二行（`git config user.…`）：設定寫進提交裡的名字和電子郵件。只對這個資料夾有效。以後公開倉庫時，這些也會一起公開，所以請用可以公開的值。
 - 第三行（`git config core.quotePath false`）：讓韓文檔名按原樣顯示。
 - `git add .`：把要儲存的檔案收集起來。`.` 表示當前資料夾。
 - `git status --short`：簡短地顯示收集好的檔案。
@@ -58,15 +58,15 @@ git status --short
 A  .claude/skills/meeting-notes/SKILL.md
 A  .gitignore
 A  CLAUDE.md
-A  inbox/회의-2026-10-27-주간회의.txt
-A  notes/회의록-2026-10-27.md
-A  주간정리.sh
-A  회의록.md
+A  inbox/meeting-2026-10-27-weekly.txt
+A  notes/minutes-2026-10-27.md
+A  weekly-summary.sh
+A  minutes.md
 ```
 
-你的列表裡檔案可能更多。如果去掉第三行，韓文名字會顯示成 `\355\232…` 這樣的數字，就算 `비밀` 資料夾被收進去了也很難認出來。
+你的列表裡檔案可能更多。如果去掉第三行，韓文名字會顯示成 `\355\232…` 這樣的數字，就算 `secret` 資料夾被收進去了也很難認出來。
 
-這時問問自己：`비밀` 資料夾從列表裡去掉了嗎？去掉了就儲存。如果還能看到，就不要提交。改好 `.gitignore` 的兩行後，再輸入一次 `git reset` 和 `git add .`。`git reset` 是把剛才用 `git add .` 收集的檔案重新放下的命令。檔案本身不會被刪除，放心。
+這時問問自己：`secret` 資料夾從列表裡去掉了嗎？去掉了就儲存。如果還能看到，就不要提交。改好 `.gitignore` 的兩行後，再輸入一次 `git reset` 和 `git add .`。`git reset` 是把剛才用 `git add .` 收集的檔案重新放下的命令。檔案本身不會被刪除，放心。
 
 ```bash
 git commit -m "第一次記錄"
@@ -74,7 +74,7 @@ git commit -m "第一次記錄"
 
 `git commit` 才是真正留下記錄。`-m` 是 message（訊息）的縮寫，引號裡是這次記錄的說明。
 
-這個順序我們在新資料夾裡執行過，確認了 `비밀` 資料夾被排除、提交也留了下來。
+這個順序我們在新資料夾裡執行過，確認了 `secret` 資料夾被排除、提交也留了下來。
 
 <Quiz id="ch812-git" />
 
@@ -92,8 +92,8 @@ claude --worktree memo-fix
 
 ```text
  ▐▛███▛█   Claude Code v2.1.318
-▝▜██████▀  Opus 5.5 · Claude 套餐名稱
- ▝▝   ▝▝   ~/hello-ai-연습/터미널/.claude/worktrees/memo-fix
+▝▜██████▀  Opus 5.5 · Claude 方案名稱
+ ▝▝   ▝▝   ~/hello-ai-practice/terminal/.claude/worktrees/memo-fix
 ```
 
 資料夾建在 `.claude/worktrees/memo-fix`，新分支的名字是 `worktree-memo-fix`。[^wt-where] 我們沒有給會話起名，什麼也沒改，就用 `/exit` 結束，資料夾馬上被刪掉了。
@@ -107,7 +107,7 @@ worktree 的名字和會話的名字是兩回事。官方文件說明，如果�
 
 有兩點要知道。
 
-- **這是新取出來的副本。**[^wt-fresh] 提交裡沒有的檔案，裡面也沒有。上面排除的 `비밀` 資料夾也沒有。如果看不到筆記，先確認有沒有提交。
+- **這是新取出來的副本。**[^wt-fresh] 提交裡沒有的檔案，裡面也沒有。上面排除的 `secret` 資料夾也沒有。如果看不到筆記，先確認有沒有提交。
 - **如果還有沒處理完的工作，結束時會問你保留還是刪除。** 選擇刪除，資料夾、分支以及裡面的工作會一起消失。以後想回來，就用結束時顯示的 `claude --worktree <名稱> --resume` 命令。[^wt-remove]
 
 把 worktree 的結果合併回主資料夾，是 Git 的分支合併。本章不做合併。只要知道這是一個不碰主資料夾、單獨工作的地方就夠了。如果好奇怎麼合併，可以看[第4階段 · AI-SDLC 指南](/zh-hant/guide/30-ai-sdlc/)裡講 PR 的那一章。PR（Pull Request）是請求把分支的變更合併到主線的操作。
@@ -124,22 +124,22 @@ worktree 的名字和會話的名字是兩回事。官方文件說明，如果�
 在第一個視窗裡這樣輸入。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude --worktree memo-fix
 ```
 
 在第二個視窗裡這樣輸入。
 
 ```bash
-cd ~/hello-ai-연습/터미널
+cd ~/hello-ai-practice/terminal
 claude --worktree study-note
 ```
 
 這樣兩個視窗就在不同的資料夾裡工作。正如上一節看到的，worktree 建在 `.claude/worktrees/<名稱>` 裡。
 
 ```text
-視窗 1：~/hello-ai-연습/터미널/.claude/worktrees/memo-fix     修改會議記錄
-視窗 2：~/hello-ai-연습/터미널/.claude/worktrees/study-note   整理學習筆記
+視窗 1：~/hello-ai-practice/terminal/.claude/worktrees/memo-fix     修改會議記錄
+視窗 2：~/hello-ai-practice/terminal/.claude/worktrees/study-note   整理學習筆記
 ```
 
 同時執行兩個視窗，本指南沒有實際試過。做完後問問自己：兩項工作有沒有碰到對方的檔案？視窗多了，用量也可能增加。用[第13章](13-cost-safety-trouble.md)的 `/usage` 留意著，只在真正需要時使用。
@@ -177,11 +177,11 @@ claude --worktree study-note
 
 :::
 
-**遠端控制**（Remote Control）把你電腦上正在執行的會話連線到 claude.ai/code 或 Claude 手機應用。在會話裡輸入 `/remote-control`。[^rc-cmd] 能使用的套餐是有限定的。[^rc-what]
+**遠端控制**（Remote Control）把你電腦上正在執行的會話連線到 claude.ai/code 或 Claude 手機應用。在會話裡輸入 `/remote-control`。[^rc-cmd] 能使用的方案是有限定的。[^rc-what]
 
 它**不是**在雲端執行的。工作仍在你的電腦上進行，手機只是檢視那個會話的視窗。所以電腦必須開著，`claude` 也必須一直在執行。[^rc-window]
 
-如果是電腦關著也要執行的工作，請看應用指南里的[雲端與定時](../20-claude-code/08-parallel-cloud-schedule.md)。
+如果是電腦關著也要執行的工作，請看應用指南裡的[雲端與定時](../20-claude-code/08-parallel-cloud-schedule.md)。
 
 <Quiz id="ch812-more" />
 
@@ -192,7 +192,7 @@ claude --worktree study-note
 3. 用 `claude --worktree memo-fix` 啟動，用 `! pwd` 確認當前資料夾。
 4. 什麼都不改，用 `/exit` 結束，然後讀一讀介面上的提示。
 
-問問自己：第一次記錄裡排除了 `비밀` 資料夾嗎？你能用 `pwd` 說出自己現在在哪個資料夾嗎？
+問問自己：第一次記錄裡排除了 `secret` 資料夾嗎？你能用 `pwd` 說出自己現在在哪個資料夾嗎？
 
 ## 小結
 
@@ -232,6 +232,6 @@ claude --worktree study-note
 [^goal-what]: Claude Code 官方文件，「Keep Claude working toward a goal」。"The `/goal` command sets a completion condition and Claude keeps working toward it without you prompting each step." https://code.claude.com/docs/en/goal (確認日期 2026-11-06)
 [^goal-judge]: Claude Code 官方文件，「Keep Claude working toward a goal」。"It doesn't run commands or read files independently, so write the condition as something Claude's own output can demonstrate." / "To bound how long a goal runs, include a turn or time clause in the condition, such as `or stop after 20 turns`." https://code.claude.com/docs/en/goal (確認日期 2026-11-06)
 [^goal-state]: Claude Code 官方文件，「Keep Claude working toward a goal」。"`stop`, `off`, `reset`, `none`, and `cancel` are accepted as aliases for `clear`." https://code.claude.com/docs/en/goal (確認日期 2026-11-06)
-[^rc-what]: 可以在 Pro·Max·Ultra·Team·Enterprise 套餐中使用，用 API 金鑰（[第13章](13-cost-safety-trouble.md)會說明）不能使用。Claude Code 官方文件，「Continue local sessions from any device with Remote Control」。"Remote Control connects claude.ai/code or the Claude app for iOS and Android to a Claude Code session running on your machine." / "available on Pro, Max, Ultra, Team, and Enterprise plans. API keys are not supported." https://code.claude.com/docs/en/remote-control (確認日期 2026-11-06)
+[^rc-what]: 可以在 Pro·Max·Ultra·Team·Enterprise 方案中使用，用 API 金鑰（[第13章](13-cost-safety-trouble.md)會說明）不能使用。Claude Code 官方文件，「Continue local sessions from any device with Remote Control」。"Remote Control connects claude.ai/code or the Claude app for iOS and Android to a Claude Code session running on your machine." / "available on Pro, Max, Ultra, Team, and Enterprise plans. API keys are not supported." https://code.claude.com/docs/en/remote-control (確認日期 2026-11-06)
 [^rc-cmd]: Claude Code 官方文件，「Continue local sessions from any device with Remote Control」。"If you're already in a Claude Code session and want to continue it remotely, use the `/remote-control` (or `/rc`) command:" https://code.claude.com/docs/en/remote-control (確認日期 2026-11-06)
 [^rc-window]: Claude Code 官方文件，「Continue local sessions from any device with Remote Control」。"The web and mobile interfaces are a window into that local session, so your computer has to stay on and the `claude` process has to keep running." https://code.claude.com/docs/en/remote-control (確認日期 2026-11-06)

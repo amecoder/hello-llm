@@ -1,6 +1,6 @@
 # 第7章 許可與撤回
 
-<Badge type="tip" text="必讀" /> 想跟著這個階段走下去，一定要讀這一章。
+<Badge type="tip" text="必讀" /> 想跟著這個階段學下去，一定要讀這一章。
 
 > **一句話總結**：Claude 不問你就能做哪些事，由許可權模式和規則決定。出了錯可以按兩次 Esc 回退，但也有回不來的事。
 
@@ -22,7 +22,7 @@
 - **允許編輯（accept edits）**：在工作資料夾裡新建和修改檔案，都不會問你。[^modes] 常見的檔案命令也會不問就批准。
 - **計劃（plan）**：只調查並提出建議，不做修改。[^modes] 交給它大任務之前，想先看看它打算怎麼做時很好用。
 
-::: details 詳細（點選展開）
+::: details 詳細說明（點選展開）
 在自動模式下連續被攔下三次，它就會停下來，重新來問你。[^practice]
 :::
 
@@ -36,10 +36,10 @@ claude --permission-mode manual
 
 ## 讀懂許可視窗
 
-在手動模式下，如果你請它"讀一下 inbox 裡的會議記錄，儲存成 회의록2.md。回答只用一行。"，就會彈出這樣的視窗。許可視窗會先展示 Claude 打算做的事，再給你選項。[^prompt]
+在手動模式下，如果你請它"讀一下 inbox 裡的會議記錄，儲存成 minutes2.md。回答只用一行。"，就會彈出這樣的視窗。許可視窗會先展示 Claude 打算做的事，再給你選項。[^prompt]
 
 ```text
- Do you want to create 회의록2.md?
+ Do you want to create minutes2.md?
  ❯ 1. Yes
    2. Yes, and switch to accept edits (auto-approve file edits and common file commands) for this
       session (shift+tab)
@@ -50,7 +50,7 @@ claude --permission-mode manual
 
 用上下方向鍵選擇，然後按 Enter。選 1 只允許這一次。選 2 會把這個會話切換成允許編輯模式。選 3 就是不做。Esc 是取消。
 
-修改已有檔案時，它會問 `Do you want to make this edit to 회의록2.md?`，並顯示要改的行。前面帶 `+` 的行是新加進去的行。
+修改已有檔案時，它會問 `Do you want to make this edit to minutes2.md?`，並顯示要改的行。前面帶 `+` 的行是新加進去的行。
 
 ![修改檔案前的許可視窗。① 綠色的行是要新加的內容，② 選項](../../../guide/23-claude-code-cli/assets/shot-05-edit-marked.png)
 
@@ -115,13 +115,13 @@ Shell 命令的許可視窗裡可能會出現 `Yes, and don't ask again`。選�
 用 `/exit` 退出，在終端裡進入練習資料夾。Mac 和 Linux 把下面的內容整段貼上進去。Windows PowerShell 請按照緊接著下面的「如果是 Windows PowerShell」的方法來做。
 
 ```bash
-mkdir 비밀
-echo '假密碼: cafe-1234' > 비밀/암호.txt
+mkdir secret
+echo '假密碼: cafe-1234' > secret/password.txt
 mkdir -p .claude
 cat > .claude/settings.json <<'EOF'
 {
   "permissions": {
-    "deny": ["Read(./비밀/**)"]
+    "deny": ["Read(./secret/**)"]
   }
 }
 EOF
@@ -129,17 +129,17 @@ EOF
 
 我們一行一行讀一下這個框。
 
-- `mkdir 비밀`：建立 `비밀`（秘密）資料夾。
-- `echo '…' > 비밀/암호.txt`：把引號裡的文字儲存到檔案裡。`>` 是把輸出儲存到檔案的符號。
+- `mkdir secret`：建立 `secret`（秘密）資料夾。
+- `echo '…' > secret/password.txt`：把引號裡的文字儲存到檔案裡。`>` 是把輸出儲存到檔案的符號。
 - `mkdir -p .claude`：建立 `.claude` 資料夾。就算已經存在也不會報錯。
 - `cat > .claude/settings.json <<'EOF'`：把從下一行開始到 `EOF` 為止的內容儲存到這個檔案裡。後面的章節建立檔案時也會用這種寫法。
 - 從 `{` 到 `}`：要放進設定檔案的內容。在 `"deny"` 一欄寫上了要擋住的對象。
 
-粘貼後如果還沒執行，就再按一次 Enter。什麼都沒顯示就是成功了。用 `ls` 看看 `비밀` 資料夾有沒有建好。
+貼上後如果還沒執行，就再按一次 Enter。什麼都沒顯示就是成功了。用 `ls` 看看 `secret` 資料夾有沒有建好。
 
-**如果是 Windows PowerShell**：用 `mkdir 비밀`、`mkdir .claude` 建立資料夾。用 `notepad 비밀\암호.txt` 開啟記事本，填入 `假密碼: cafe-1234`。在 `notepad .claude\settings.json` 裡，去掉上面框中以 `cat` 開頭的那一行和 `EOF` 那一行，只填入兩者之間的內容。問你是否新建檔案時點「是（예）」，用 `Ctrl + S` 儲存後關閉。這個方法我們沒有實際執行過。
+**如果是 Windows PowerShell**：用 `mkdir secret`、`mkdir .claude` 建立資料夾。用 `notepad secret\password.txt` 開啟記事本，填入 `假密碼: cafe-1234`。在 `notepad .claude\settings.json` 裡，去掉上面框中以 `cat` 開頭的那一行和 `EOF` 那一行，只填入兩者之間的內容。問你是否新建檔案時點「是（예）」，用 `Ctrl + S` 儲存後關閉。這個方法我們沒有實際執行過。
 
-`Read(./비밀/**)` 的意思是不要讀秘密資料夾裡的任何東西。在終端裡開啟 `claude`，請它"讀一下 비밀/암호.txt 檔案，告訴我內容。"試試。
+`Read(./secret/**)` 的意思是不要讀秘密資料夾裡的任何東西。在終端裡開啟 `claude`，請它"讀一下 secret/password.txt 檔案，告訴我內容。"試試。
 
 我們把同樣的請求用一次就結束的方式（在[第10章](10-headless-automation.md)裡學的方式）發出去，Claude 回答說讀不了這個檔案，也沒有顯示內容。每次執行的措辭可能不一樣。要確認的只有一件事：回答裡出現 `cafe-1234` 了嗎？
 
@@ -198,9 +198,9 @@ Claude 修改的檔案會被自動追蹤。每發一次請求，就多一個可�
 ## 動手試試
 
 1. 在練習資料夾裡用 `claude --permission-mode manual` 開始，按四次 Shift+Tab，看模式轉一圈。
-2. 請它建立 회의록2.md。接著說："在 회의록2.md 的第一行加一行"草稿"。回答只用一行。"讀一讀許可視窗，選 1。
+2. 請它建立 minutes2.md。接著說："在 minutes2.md 的第一行加一行"草稿"。回答只用一行。"讀一讀許可視窗，選 1。
 3. 在輸入框為空時按兩次 Esc。選最後一條請求，再選 `Restore code and conversation`。"草稿"那一行消失了嗎？
-4. 用兩次 Esc 清掉回到輸入框裡的文字，再用 `/exit` 退出。在終端裡建立拒絕規則，開啟 `claude`，請它讀一下 `비밀/암호.txt` 試試。
+4. 用兩次 Esc 清掉回到輸入框裡的文字，再用 `/exit` 退出。在終端裡建立拒絕規則，開啟 `claude`，請它讀一下 `secret/password.txt` 試試。
 
 問問自己：我能說出我的 Claude 不經許可能做哪些事嗎？我能舉出三件用回退回不來的事嗎？
 

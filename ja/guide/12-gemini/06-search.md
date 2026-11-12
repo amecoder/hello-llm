@@ -1,5 +1,7 @@
 # 第6章 検索とDeep Research — 根拠の確認、長い調査レポート、ノートブック、勉強のお助け機能
 
+<Badge type="info" text="選択" /> 必要なときに読んでください。読み飛ばしても、後の章についていけます。
+
 > **一言まとめ**: 複数の資料を探してまとめた**長いレポート**が必要なときは、**Deep Research**を使いましょう。調査の計画を先に見せてくれるので、直したい点があればすぐに直してください。
 > 1つのテーマの資料と会話を長く集めておきたいときは**ノートブック**を、勉強するときは**ガイド付き学習・クイズ・フラッシュカード**を使います。どんな回答でも、根拠は自分で確認します。
 
@@ -41,7 +43,9 @@ Geminiの回答は、間違うことがあります。Googleも、**いつも回
 
 - ①「Deep Research」がオンになったという表示です。入力欄の案内が「무엇을 조사하고 싶으신가요?」（何を調べたいですか？）に変わります。
 - ②「ソース」を押すと、③どこから探すかを選べます。「Google検索」は、最初からチェックされています。
-- ③「チャット」は、自分の過去のGeminiの会話を出典に入れる項目のようです（ヘルプには説明がありません）。GmailやDriveを出典に使うには、Google WorkspaceがGeminiに連携されている必要があります（[第7章](07-skills-apps.md#連携アプリ-—-gmail・drive・カレンダーをgeminiで)）。[^deep]「Google検索」のチェックを外すと、**選んだ出典の中だけ**で探します。[^deep]
+- ③「Google検索」のチェックを外すと、**選んだ出典の中だけ**で探します。[^deep] 最初は、「Google検索」だけにしたまま使っても十分です。
+- ③のGmailやDriveを出典に使うには、GoogleアプリをGeminiに連携しておく必要があります。連携のしかたは、[第7章](07-skills-apps.md#連携アプリ-—-gmail・drive・カレンダーをgeminiで)で学びます。[^deep]
+- ③「チャット」は、自分の過去のGeminiの会話を出典に入れる項目のようです。[^chat-source]
 - ④「ファイル」で、自分のファイルを一緒に入れられます。[^deep]
 
 調べたいテーマを書いて送ると、Geminiがまず**調査計画**を見せてくれます。[^deep]
@@ -57,7 +61,7 @@ Geminiの回答は、間違うことがあります。Googleも、**いつも回
 - ③右側のパネルで、どんな手順で調べているか、どのウェブサイトを見ているかが分かります。[^screen]
 - ④止めたいときは、このボタンを押します。「조사를 취소하시겠어요?」（調査をキャンセルしますか？）が表示されたら、「예, 취소합니다」（はい、キャンセルします）を押してください。[^screen]
 
-**計画を直したいなら、できるだけすぐに「計画を修正」を押してください。** このガイドで一度試したとき、「リサーチを開始」を押していないのに調査が始まりました。図の「リサーチを開始」の吹き出しも、そのとき自然に生じたものです。ヘルプには、「リサーチを開始」を押して初めて始まるとしか書かれていないので、なぜそうなったのかは確認できませんでした。すでに始まっていたら、④で止められます。[^screen]
+**計画を直したいなら、できるだけすぐに「計画を修正」を押してください。** 「リサーチを開始」を押していないのに、調査が始まったことがあるからです。[^auto-start] すでに始まっていたら、④で止められます。[^screen]
 
 レポートは**ふつう5〜10分**かかり、複雑だともっとかかります。待っている間は、会話を離れてもかまいません。完成したらお知らせしてくれます。[^deep]
 
@@ -65,7 +69,7 @@ Geminiの回答は、間違うことがあります。Googleも、**いつも回
 
 - **使用量を多く使います**（[第1章](01-getting-started.md#利用上限-—-5時間・週間・読む量)）。[^limits] 1日にできる調査の数と、同時に動かせる調査の数にも上限があります。上限に近づくと、残りの回数を知らせてくれます。[^deep]
 - **過去のレポートは、会話の一覧から探します。** 「アクティビティを保存（활동 기록 보관）」がオンになっていないと、あとで探せません。[^deep]
-- **レポートは、Docsにエクスポートできます。**[^deep] 音声概要に変えることもできます（[第4章](04-files-create.md#canvas-—-文書とアプリを一緒に直す)）。[^deep]
+- **レポートは、Docsにエクスポートできます。**[^deep] 音声概要（レポートを会話形式の音声で聞かせるもの）に変えることもできます（[第4章](04-files-create.md#canvas-—-文書とアプリを一緒に直す)）。[^deep]
 
 レポートも、Geminiが作った文章です。重要な数字は、レポートの出典リンクを開いて、自分で確認してください。
 
@@ -77,7 +81,11 @@ Geminiの回答は、間違うことがあります。Googleも、**いつも回
 
 ### Deep Thinkは？
 
-**Deep Think**（ディープシンク）は、より長く考える機能でしたが、**Gemini 4 Argonに置き換えられている途中**です。しかも、Google AI Ultraの購読者だけが使えていました。[^deepthink] 難しい問題は、[第2章](02-screen-tour.md#モデルボタン-—-モデルと思考レベル)のモデルボタンで、Argonと思考レベル「高（높음）」を選べば大丈夫です（Pro・Ultra）。
+**Deep Think**（ディープシンク）は、より長く考える機能でした。今は、**Gemini 4 Argonに置き換えられている途中**です。[^deepthink] 難しい問題は、[第2章](02-screen-tour.md#モデルボタン-—-モデルと思考レベル)のモデルボタンで、Argonと思考レベル「高（높음）」を選べば大丈夫です（Pro・Ultra）。
+
+::: details 詳しく（クリックして開く）
+Deep Thinkは、Google AI Ultraの購読者だけが使えていました。[^deepthink]
+:::
 
 <Quiz id="ch306-deep" />
 
@@ -86,7 +94,7 @@ Geminiの回答は、間違うことがあります。Googleも、**いつも回
 **ノートブック**は、1つのテーマの資料（ソース）、指示、会話を1か所にまとめておく場所です。その中で会話すると、入れておいた資料と指示、過去の話を覚えたまま、続けられます。[^notebook]
 たとえば、「読書会」ノートブックに会則、前回の議事録、会の予定表を入れておけば、毎回資料をアップロードし直さなくてすみます。
 
-横のメニューの「ノートブック」の下にある「新しいノートブック（새 노트북）」を押し、名前をつけてから質問してください。資料は「ソースを追加（소스 추가）」で入れます（[第2章](02-screen-tour.md#サイドメニュー-—-新しいチャットと過去の会話)）。[^notebook][^screen]
+横のメニューの「ノートブック」の下にある「新しいノートブック（새 노트북）」を押し、名前をつけてから質問してください。資料は「ソースを追加（소스 추가）」で入れます（[第2章](02-screen-tour.md#サイドメニュー-—-新しいチャットと過去の会話)）。[^notebook][^screen] 1つのノートブックには、プランによって最大600個まで資料を入れられます。[^notebook]
 
 | 入れられる資料 | 例 |
 |---|---|
@@ -97,14 +105,18 @@ Geminiの回答は、間違うことがあります。Googleも、**いつも回
 
 出典: Googleヘルプ[^notebook]
 
-知っておきたい点があります。[^notebook]
+必ず知っておきたい点は2つです。[^notebook]
 
-- **1つのノートブックに、資料を最大600個まで**入れられます（プランによって異なります）。
-- ノートブックの中でも、**ウェブ検索とGeminiのツール**を使えます。
-- ノートブックの名前の変更、指示の追加（「ノートブック設定（노트북 설정）」）、ピン留めは、「すべてのノートブック（모든 노트북）」で、ノートブックの「その他（더보기）」から行います。
-- **ノートブックを削除すると、その中の資料と会話も一緒に削除されます。**
-- 「アクティビティを保存」がオフでも会話はできますが、会話の自動保存、過去の会話の記憶、過去の会話の追加、**Driveのファイルを資料として入れること**など、一部の機能は使えません。
-- 少しずつ開放されている機能なので、まだ表示されないことがあります。
+- **ノートブックを削除すると、その中の資料と会話も一緒に削除されます。** 使い続ける資料は、ノートブックの外にも別に保管しておきましょう。
+- **少しずつ開放されている機能なので、まだ表示されないことがあります。** サイドメニューに「ノートブック」がなければ、あとでもう一度確認してみましょう。
+
+たとえば、議事録のPDFを1つ入れて、「この会議で決まったことを、担当者ごとに整理して」と聞いてみましょう。次の日に同じノートブックでもう一度聞いても、資料をまたアップロードする必要はありません。
+
+::: details そのほかに知っておきたい点（クリックして開く）
+- ノートブックの中でも、**ウェブ検索とGeminiのツール**を使えます。[^notebook]
+- ノートブックの名前の変更、指示の追加（「ノートブック設定（노트북 설정）」）、ピン留めは、「すべてのノートブック（모든 노트북）」で、ノートブックの「その他（더보기）」から行います。[^notebook]
+- 「アクティビティを保存」がオフでも会話はできますが、会話の自動保存、過去の会話の記憶、過去の会話の追加、**Driveのファイルを資料として入れること**など、一部の機能は使えません。[^notebook]
+:::
 
 会話のメニューの「ノートブックに追加（노트북에 추가）」で、過去の会話をノートブックに入れることもできます（[第3章](03-chats.md#固定・名前の変更・削除)）。これも、「アクティビティを保存」がオンになっている必要があります。[^notebook][^screen]
 
@@ -126,8 +138,7 @@ Geminiの回答は、間違うことがあります。Googleも、**いつも回
 ```
 
 - クイズを解くときは、「ヒント（힌트）」を見たり、解き終わったあとに「さらに質問を生成（더 많은 질문 생성）」で問題を追加でもらったりできます。解き終わると、**強みと、もっと勉強すべき部分**を教えてくれます。[^study]
-- フラッシュカードは、シャッフル（「シャッフルモード（셔플 모드）」）と読み上げを使えます。[^study]
-- 練習試験（模擬試験）として、ヘルプに書かれている試験はSAT・JEE Main・NEET UGなどで、韓国の試験は書かれていません。[^study]
+- フラッシュカードは、シャッフル（「シャッフルモード（셔플 모드）」）と読み上げを使えます。[^study][^exams]
 
 **学校の課題に使うときは、学校のAI利用ルールを先に確認してください。**[^learn] Geminiの提案は出発点にして、自分の考えと言葉を加えて仕上げましょう。[^learn]
 
@@ -168,6 +179,9 @@ Geminiの回答は、間違うことがあります。Googleも、**いつも回
 次の章: [第7章 スキルと連携アプリ](07-skills-apps.md)
 
 [^screen]: Gemini Web画面（Google AI Pro、韓国語）で練習用の会話を使って直接確認（会話は撮影後に削除）。「Deep Research」をオンにすると、入力欄の案内 "무엇을 조사하고 싶으신가요?"、「소스」（Google検索が選択済み）と「파일」ボタン。「소스」メニュー "하나 이상의 소스를 선택하세요" — 「Google 검색」「Gmail」「Drive」「채팅」「연결된 앱 사용 설정」。計画の下のボタン 「계획 수정」「연구 시작」（ヘルプの韓国語版は「계획서 수정」「조사 시작」）。調査開始後の返答 "착수할게요. 연구가 완료되면 알려 드릴게요. 그러는 동안 이 대화에서 나가셔도 됩니다."、進行カード "웹사이트 16개 조사 중..."、右側のパネル 「생각하는 과정 표시」。停止ボタンを押すと 「조사를 취소하시겠어요?」 — 「아니요」「예, 취소합니다」。このガイドでは、「연구 시작」を押す操作なしに計画を待っている間に調査が始まったため、進行画面を撮影してからキャンセルした。「도구 더보기」の「가이드 학습」、横のメニュー「노트북」の「새 노트북」「모든 노트북」、会話メニューの「노트북에 추가」。(確認日 2026-10-31)
+[^chat-source]: ヘルプには、「チャット」の項目についての説明がありません。このガイドが、画面の名前を見て推測したものです。
+[^auto-start]: このガイドで一度試したとき、「リサーチを開始」を押していないのに調査が始まりました。図の「リサーチを開始」の吹き出しも、そのとき自然に生じたものです。ヘルプには、「リサーチを開始」を押して初めて始まるとしか書かれていないので、なぜそうなったのかは確認できませんでした（下の画面確認の脚注）。
+[^exams]: 練習試験（模擬試験）として、ヘルプに書かれている試験はSAT・JEE Main・NEET UGなどで、韓国の試験は書かれていません。根拠は、下の「Create quizzes, flashcards, practice tests & more in Gemini Apps」ヘルプです。
 [^learn]: Googleヘルプ「Learn in creative ways with generative AI」（韓国語版「생성형 AI를 활용해 창의적으로 학습하기」）。"Important: Make sure to check and follow your school’s policy on using Generative AI." / "Use its suggestions as a starting point, then add your own unique voice and ideas to create something truly original." / "Always evaluate responses: While generative AI is a powerful tool, it can make mistakes." / "It’s important to always fact-check information using built-in tools or by double-checking with Google Search." / "Be specific: The more specific your questions, the more helpful the AI's answers will be." https://support.google.com/gemini/answer/15216790 (確認日 2026-10-31)
 [^deep]: Googleヘルプ「Use Deep Research in Gemini Apps」（韓国語版「Gemini 앱에서 Deep Research 사용하기」）。"By default, Gemini includes Google Search as a source for your research." / "You can also upload files and add NotebookLM notebooks." / "Be 18 or over." / "Google AI Pro and Google AI Ultra users can generate reports using Pro for even higher quality. All users can use Thinking for their reports." / "In Gemini Apps, there are limits for:" / "Number of research requests you can run at the same time" / "If you’re close to your limit, Gemini Apps notifies you how many research requests are left for the day." / "To update the research plan before you create a report, click Edit plan." / "Click Start research." / "Google Search is included as a source by default. To limit your research to other selected sources, deselect Google Search." / "It usually takes about 5-10 minutes to generate the report since Gemini analyzes many sources. For more complex reports, it may take longer." / "Important: You can only find past research reports if your Keep Activity setting is on." / "To export the report, click Export to Docs ." / "Other Google services, like Gmail and Drive, are only available if the Google Workspace app is connected to Gemini Apps." / "On the right in the Canvas panel, click Create  Audio Overview ." 韓国語版に "Gemini가 주제에 맞는 조사 계획서를 작성합니다." https://support.google.com/gemini/answer/15719111 (確認日 2026-10-31)
 [^limits]: Googleヘルプ「Gemini Apps limits & feature availability」。"This requires Gemini to use multiple, multi-step search queries and several rounds of reasoning sweeps to create a comprehensive report." / "For users without a Google AI plan, some features that require more compute resources, like Deep Research, may be unavailable during periods of high demand." https://support.google.com/gemini/answer/16275805 (確認日 2026-10-31)

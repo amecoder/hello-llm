@@ -1,5 +1,7 @@
 # Chapter 5. Verification and Testing — Give a Check and Get Evidence
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: AI stops when the work **looks done**. If you give it a **check** that tells it whether the work is truly done, AI runs a loop where it fixes and re-checks on its own.
 > And instead of just hearing "everything passed," ask for **evidence** (the command it ran and its output, or a screen).
 
@@ -21,7 +23,17 @@ Source: Summary from this guide (based on official docs)[^loop]
 
 ## Types of Checks
 
-A check can be **anything as long as Claude can read the result**. The official docs give examples like a test file, whether a build succeeded, a linter, an output comparison script, or a browser screen compared side by side with a mockup.[^kinds] They even say that if you have a check like that, **the single most useful line in CLAUDE.md is the command that runs it**.[^claude-md]
+A check can be **anything as long as Claude can read the result**. The official docs give examples like these.[^kinds]
+
+- **Test file**: a check file that lists what to verify, like "Are all 5 to-dos visible?"
+- **Whether the build succeeded**: whether the preparation step (build) from Chapter 4 finished without errors
+- **Linter** (linter): a tool like a spell checker for code
+- **Output comparison script**: a short program (script) that compares the result with a correct answer prepared in advance
+- **Browser screen**: the actual screen compared side by side with a mockup
+
+The to-do board is a web page with no build, so you can start with test files and the browser screen.
+
+They even say that if you have a check like that, **the single most useful line in CLAUDE.md is the command that runs it**.[^claude-md]
 
 The easiest way is to **write it in your prompt**. It works right away today with no setup.[^in-prompt]
 
@@ -29,7 +41,7 @@ The easiest way is to **write it in your prompt**. It works right away today wit
 After fixing the to-do board, check the verification criteria in SPEC.md one by one, and keep going until they all pass.
 ```
 
-In the desktop app, Claude can start a dev server and open it in the **Browser pane** inside the app to verify its own changes. By default, it checks automatically after every edit.[^browser] This is a great fit for the to-do board, which is a web page.
+In the desktop app, Claude can start a dev server (a small program that previews the web page you made only on your own computer) and open it in the **Browser pane** inside the app to verify its own changes. By default, it checks automatically after every edit.[^browser] This is a great fit for the to-do board, which is a web page.
 
 When asking for tests, **be specific about what behavior you want to check**.[^specific-test]
 
@@ -57,12 +69,15 @@ Show me the exact check command you just ran and its output. Also tell me how ma
 
 You can set things up so a person doesn't have to ask for a check every time. **GitHub Actions** is a GitHub feature that runs builds, tests, and deployments automatically. You can make it run tests every time you push a change.[^actions]
 
+In **public repositories**, you can use the standard runners provided by GitHub (GitHub's computers that run checks for you) for free.[^free]
+
+**You don't need to have all the automation in place from day one.** At first, writing it in your prompt and checking in the browser as shown above is plenty. If you want to use it later, you can ask Claude to create the configuration file (a file that says when to run what) for you.
+
+::: details Learn a bit more (click to expand)
 - You define what to do in a YAML file (a configuration file) placed in the `.github/workflows` folder of your repository.[^yaml]
 - The habit of committing often and checking often is called **continuous integration** (CI). It helps you catch errors early.[^ci]
-- GitHub shows the check results on the PR screen from Chapter 6. You can see right away whether the changes in your branch introduced an error.[^ci]
-- In **public repositories**, you can use the standard runners provided by GitHub for free.[^free]
-
-You can ask Claude to create the configuration file for you. At first, though, writing it in your prompt and checking in the browser as shown above is plenty. **You don't need to have all the automation in place from day one.**
+- GitHub shows the check results on the PR screen. A PR is a proposal asking to merge the changes on a branch, covered in Chapter 6. You can see right away whether the changes in your branch introduced an error.[^ci]
+:::
 
 <Quiz id="ch705-actions" />
 

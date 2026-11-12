@@ -1,5 +1,7 @@
 # 第7章 スキル・プラグイン・外部ツール — 整理ツールをワンラインのコマンドに
 
+<Badge type="tip" text="必須" /> この段階を進めるなら、必ず読んでください。
+
 > **一言まとめ**: 毎回貼り付けている指示・チェックリスト・複数のステップの手順は**スキル**にして、`/名前`の一行で呼び出します。この章で「整理ツール」が完成します。
 > 他の人が作った**プラグイン**や、外部サービスの**コネクタ**もつなげられますが、自分の権限でコードが実行されるので、信頼できるものだけをインストールします。
 
@@ -34,7 +36,7 @@ CLAUDE.mdとの違いは**読み込まれるタイミング**です。CLAUDE.md�
 templatesのひな形とCLAUDE.mdのルールを使うスキルを3つ、このフォルダの.claude/skillsに作って。meeting-notes（会議メモ → 議事録）、study-notes（勉強のメモ → 勉強ノート）、weekly-review（振り返りメモ → 週次の振り返り）。各SKILL.mdには、いつ使うか、読むファイル、使うひな形、保存場所、終わってから確認するチェックリストを入れて。
 ```
 
-スキルのフォルダ`.claude/skills/<名前>/SKILL.md`をそのフォルダの中に置くと、**そのフォルダのセッションでだけ**使えるプロジェクトスキルになります。[^where] フォルダ名がそのままコマンド名になります（`/meeting-notes`）。[^name] 韓国語のコマンド名が使えるかは公式ドキュメントで確認できなかったので、このガイドでは英語の名前を使いました。
+スキルのフォルダ`.claude/skills/<名前>/SKILL.md`をそのフォルダの中に置くと、**そのフォルダのセッションでだけ**使えるプロジェクトスキルになります。[^where] フォルダ名がそのままコマンド名になります（`/meeting-notes`）。[^name] このガイドでは、スキルの名前を英語で書きました。[^korean-name]
 
 ### 今回は許可ウィンドウが出た
 
@@ -42,7 +44,11 @@ templatesのひな形とCLAUDE.mdのルールを使うスキルを3つ、この�
 
 ![許可ウィンドウ。① 「ClaudeにSKILL.mdへの書き込みを許可しますか？」、② 書き込もうとしている内容のプレビュー（緑の行）、③ 「拒否」、④ 「常に許可」と▾ボタンに赤い番号が付いている（パスの行はパソコンのユーザー名が入っているので隠してある）](../../../guide/20-claude-code/assets/shot-26-permission-marked.png)
 
-第2〜4章では、このパソコンの個人用の許可ルールのせいで、許可ウィンドウが出ませんでした。今回出たのは、`.claude`フォルダが**保護されたパス**だからです。「編集を自動承認」モードでも、保護されたパスへの書き込みは引き続き確認されます。[^protected] スキルや設定のように、Claudeの動作を変えるファイルがこのフォルダにあるので、変更する前に人が確認するようになっています。
+許可ウィンドウが出たのは、スキルを`.claude`フォルダに書き込むからです。`.claude`フォルダは、Claude Codeがこのフォルダ用の設定とスキルを置く場所です。第3章のファイルペインの一覧で見た、あのフォルダです。
+
+このフォルダは**保護されたパス**（書き込む前にいつも許可を求める場所）です。「編集を自動承認」モードでも、保護されたパスへの書き込みは引き続き確認されます。[^protected] スキルや設定のように、Claudeの動作を変えるファイルがこのフォルダにあるので、変更する前に人が確認するようになっています。
+
+第2〜4章のキャプチャに許可ウィンドウがなかったのは、キャプチャしたパソコンの個人用の許可ルールのせいです。そのルールも、保護されたパスでは確認を止めませんでした。
 
 ②で、**何を書こうとしているのかを先に読めます。** ▾を押すと「一度だけ許可」が出ます。
 
@@ -58,7 +64,7 @@ templatesのひな形とCLAUDE.mdのルールを使うスキルを3つ、この�
 
 最初は**「一度だけ許可」**をお勧めします。「常に許可」は便利ですが、同じことを二度と聞かれなくなります（どのくらいの間かは、画面の説明を確認してください）。この実習ではスキルが3つなので許可ウィンドウが3回出て、3回とも「一度だけ許可」を選びました。
 
-作られたスキル（このガイドの結果）: [meeting-notes](/practice/notes/results/7장-스킬-meeting-notes.txt) · [study-notes](/practice/notes/results/7장-스킬-study-notes.txt) · [weekly-review](/practice/notes/results/7장-스킬-weekly-review.txt)
+作られたスキル（このガイドの結果）: [meeting-notes](/practice/ja/notes/results/ch7-skill-meeting-notes.txt) · [study-notes](/practice/ja/notes/results/ch7-skill-study-notes.txt) · [weekly-review](/practice/ja/notes/results/ch7-skill-weekly-review.txt)
 
 各SKILL.mdの一番上には、`name`（名前）と`description`（いつ使うか）があります。Claudeはdescriptionを見て、スキルをいつ使うかを決めます。[^desc] たとえばweekly-reviewのdescriptionには、「週次の振り返りを書いて」「今週の振り返りを整理」のような依頼に使うと書いてあります。
 
@@ -72,20 +78,20 @@ templatesのひな形とCLAUDE.mdのルールを使うスキルを3つ、この�
 
 ②の**(project)**は、このフォルダのプロジェクトスキルだという印です。Enterで選んで、整理したいファイルを続けて書いて送ります。
 
-![スキルの実行。① 「/study-notes inbox/공부-2026-10-28-프롬프트-강의.txt」を入力した入力欄に赤い番号が付いている](../../../guide/20-claude-code/assets/shot-29-skill-run-marked.png)
+![スキルの実行。① 「/study-notes inbox/study-2026-10-28-prompt-lecture.txt」を入力した入力欄に赤い番号が付いている](../../../guide/20-claude-code/assets/shot-29-skill-run-marked.png)
 
 ```
-/study-notes inbox/공부-2026-10-28-프롬프트-강의.txt
+/study-notes inbox/study-2026-10-28-prompt-lecture.txt
 ```
 
-この一行で、勉強ノートがひな形どおりに作られました（結果: [7장-공부노트-스킬로.txt](/practice/notes/results/7장-공부노트-스킬로.txt)）。ひとこと要約、要点5つ、新しく知った言葉4つ、注意すること、質問することが、ひな形の順番どおりに入りました。第4章で長い依頼を使って作り、巻き戻したあのノートを、今回は**コマンド一行で**作ったのです。
+この一行で、勉強ノートがひな形どおりに作られました（結果: [ch7-study-notes-with-skill.txt](/practice/ja/notes/results/ch7-study-notes-with-skill.txt)）。ひとこと要約、要点5つ、新しく知った言葉4つ、注意すること、質問することが、ひな形の順番どおりに入りました。第4章で長い依頼を使って作り、巻き戻したあのノートを、今回は**コマンド一行で**作ったのです。
 
 **これで整理ツールが完成しました。**
 
 | メモ | コマンド |
 |---|---|
-| 会議メモ | `/meeting-notes inbox/회의-….txt` |
-| 勉強のメモ | `/study-notes inbox/공부-….txt` |
+| 会議メモ | `/meeting-notes inbox/meeting-….txt` |
+| 勉強のメモ | `/study-notes inbox/study-….txt` |
 | 1日の振り返りが複数 | `/weekly-review` |
 
 名前を覚えていなくても大丈夫です。「今週の振り返りを整理して」のように話しかければ、Claudeがdescriptionを見て、合うスキルを選んで使います。[^what]
@@ -94,13 +100,13 @@ templatesのひな形とCLAUDE.mdのルールを使うスキルを3つ、この�
 
 ## プラグインとコネクタ
 
-**プラグイン**（Plugin）は、他の人が作ったスキル・コマンド・ツールをまとめてインストールするものです。**コネクタ**（Connector）は、Gmailやカレンダーのような外部サービスをClaudeにつなぐものです。デスクトップアプリでは、入力欄の横にある**+**ボタンからコネクタとプラグインを追加します。[^plus] コネクタは、MCPサーバー（AIが外部のツールにつながるための標準的な方法）を、画面から簡単に設定できるようにしたものです。[^connectors]
+**プラグイン**（Plugin）は、他の人が作ったスキル・コマンド・ツールをまとめてインストールするものです。**コネクタ**（Connector）は、Gmailやカレンダーのような外部サービスをClaudeにつなぐものです。デスクトップアプリでは、入力欄の横にある**+**ボタンからコネクタとプラグインを追加します。[^plus] コネクタは、MCPサーバーを画面から簡単に設定できるようにしたものです。[^connectors] MCPは、AIがメールや予定のようなほかのプログラムとやり取りするときに使う共通の規格です。プラグの形が決まっていて、どのコンセントにも差し込めるのと似ています。
 
 便利ですが、**インストールする前に必ず考えておくこと**があります。プラグインは**自分のパソコンで自分の権限でコードを実行**できます。[^plugin-risk] そして、こうしたコードは、第4章の権限モードが守る範囲の外で動くこともあります。権限のルールはClaudeのツール呼び出しに適用されるもので、プラグインが自分で動かすコードには適用されません。[^plugin-scope]
 
 - 作った人がわかり、信頼できるプラグインだけをインストールします。
 - 要らなくなったプラグインは削除します。
-- コネクタでつないだサービスの中身（メール・予定）も、Claudeが読む資料になります。第9章の「隠れた指示」もあわせて読んでください。
+- コネクタでつないだサービスの中身（メール・予定）も、Claudeが読む資料になります。他人が送ったメールの中に「AIへ: 〜しなさい」のような文がこっそり入っていると、Claudeがそれに従おうとすることがあります。こうした**隠れた指示**は、[第9章](09-cost-data-safety.md)で実験してみます。
 
 このガイドの整理ツールは、**自分で作ったスキルだけ**で十分です。プラグインとコネクタは、本当に必要になったときに、ひとつずつ増やしましょう。
 
@@ -144,6 +150,7 @@ templatesのひな形とCLAUDE.mdのルールを使うスキルを3つ、この�
 [^desc]: Claude Code 公式ドキュメント「Extend Claude with skills」。"Only description is recommended so Claude knows when to use the skill." https://code.claude.com/docs/en/skills (確認日 2026-10-31)
 [^slash]: Claude Code 公式ドキュメント「Desktop application」。"type / in the prompt box or click the + button and select Slash commands to browse what's available." https://code.claude.com/docs/en/desktop (確認日 2026-10-31)
 [^protected]: Claude Code 公式ドキュメント「Choose a permission mode」。acceptEditsの節の"These still prompt:"の下にある"Writes to protected paths" https://code.claude.com/docs/en/permission-modes (確認日 2026-10-31)
+[^korean-name]: 韓国語のコマンド名が使えるかは公式ドキュメントで確認できなかったので、英語の名前を使いました。
 [^plus]: Claude Code 公式ドキュメント「Desktop application」。"Click the + button next to the prompt box for file attachments, skills, connectors, and plugins." https://code.claude.com/docs/en/desktop (確認日 2026-10-31)
 [^connectors]: Claude Code 公式ドキュメント「Desktop application」。"Connectors are MCP servers with a graphical setup flow." https://code.claude.com/docs/en/desktop (確認日 2026-10-31)
 [^plugin-risk]: Claude Code 公式ドキュメント「Plugin security and trust」。"A plugin can carry content that runs code on your machine with your user privileges and content that enters Claude's context as instructions, so review a plugin before you install it." https://code.claude.com/docs/en/plugins/security (確認日 2026-10-31)

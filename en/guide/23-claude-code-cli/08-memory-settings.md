@@ -1,6 +1,6 @@
 # Chapter 8. Project Memory and Settings
 
-<Badge type="tip" text="Required" /> Be sure to read this to follow this stage.
+<Badge type="tip" text="Required" /> Read this to follow this stage.
 
 > **One-line summary**: Rules you're tired of repeating every time go in `CLAUDE.md`. Rules that must be followed become deny rules in `settings.json`.
 
@@ -33,7 +33,7 @@ You can check whether the better example was followed or not. There's no way to 
 
 ## Making and Checking CLAUDE.md
 
-Here are the practice rules (view as a file: [8장-CLAUDE.md.txt](/practice/cli/results/8장-CLAUDE.md.txt)). Leave with `/exit` and move to the practice folder in the terminal. On Mac and Linux, paste the whole block below. It also creates the `notes` folder.
+Here are the practice rules (view as a file: [ch8-CLAUDE.md.txt](/practice/en/cli/results/ch8-CLAUDE.md.txt)). Leave with `/exit` and move to the practice folder in the terminal. On Mac and Linux, paste the whole block below. It also creates the `notes` folder.
 
 ```bash
 mkdir notes
@@ -113,8 +113,8 @@ Deny rules are the exception. A tool denied at any level can't be allowed by ano
 - Trailing commas and comments aren't allowed.[^json-rule] If something doesn't take effect after you edit by hand, check the commas first.
 
 ```text
-Wrong example: { "deny": ["Read(./비밀/**)"], }
-Right example: { "deny": ["Read(./비밀/**)"] }
+Wrong example: { "deny": ["Read(./secret/**)"], }
+Right example: { "deny": ["Read(./secret/**)"] }
 ```
 
 The wrong example has a comma left after the `]`.
@@ -126,7 +126,7 @@ The wrong example has a comma left after the `]`.
 Claude Code reads instructions, settings, and memory from the project folder and from `~/.claude` in your home folder.[^folder] Folders whose names start with a dot are normally hidden. You can see them with `ls -a` (`ls -Force` in PowerShell).
 
 ```text
-~/hello-ai-연습/터미널/        This project
+~/hello-ai-practice/terminal/        This project
 ├── CLAUDE.md                  Shared instructions
 ├── CLAUDE.local.md            Instructions just for me
 └── .claude/
@@ -153,7 +153,7 @@ This is the most important section in this chapter. The two lines below look sim
 
 ```text
 Written in CLAUDE.md:     Don't read the secret folder.
-Written in settings.json: "deny": ["Read(./비밀/**)"]
+Written in settings.json: "deny": ["Read(./secret/**)"]
 ```
 
 Words in `CLAUDE.md` affect **what Claude tries to do**. But they can't change **what Claude Code allows**. Permission rules are enforced by the Claude Code program, not by the model.[^permissions] In company terms, `CLAUDE.md` is a work guide, and permission rules are the lock on the door.
@@ -169,7 +169,7 @@ So put the truly important things in deny rules.[^practice] Try dividing them li
 ## Try It Yourself
 
 1. In the terminal, create the `CLAUDE.md` and `notes` folder above, and ask about the rules with `claude -p`.
-2. Start `claude` and ask, "@inbox/회의-2026-10-27-주간회의.txt Organize this memo into meeting notes." You didn't say to use a table, but does a table appear? Was the file saved in `notes`?
+2. Start `claude` and ask, "@inbox/meeting-2026-10-27-weekly.txt Organize this memo into meeting notes." You didn't say to use a table, but does a table appear? Was the file saved in `notes`?
 3. Open `/memory` and `/status`, and close them with Esc.
 4. Leave with `/exit` and find the `.claude` folder in the terminal with `ls -a` (`ls -Force` in PowerShell).
 

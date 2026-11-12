@@ -1,10 +1,11 @@
 # Chapter 5. Memory and Personalization — So You Don't Have to Introduce Yourself Every Time
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: Write rules you always want Claude to follow in **Instructions**, and let **Memory** remember what it learns about you as you chat.
 > You will learn how to view, edit, and turn off what Claude remembers. We will also look at break reminders that help you rest when you have been chatting for a long time.
 
-The screenshots in this chapter are based on the web version from October 2026. Because a new Claude interface and a new Settings layout are rolling out gradually, menu names and locations may look different on your screen.
-The screenshots here show the Free plan on the web. We use the menu names shown in the screenshots (in Korean, with English translations). Other names used in the official help docs are collected in footnotes and expandable boxes.
+The screens are based on the web version from October 2026, and the screenshots show the Free plan. If a menu name looks a little different on your screen, look for a similar name. The difference comes from the new screens being rolled out gradually.
 
 ## Three Ways to Tell Claude About Yourself
 
@@ -43,7 +44,7 @@ The name and email in this screenshot have been replaced with examples (Free pla
 - ③ "Log out of all devices (모든 기기에서 로그아웃)"
 - ④ "Delete account (계정 삭제)"
 
-Above box ②, a note explains that Claude keeps these instructions in mind across your chats and Cowork.[^screen] Inside the empty box, faint placeholder text says "Example: Keep explanations brief and to the point (예시: 설명을 간단명료하게 유지)".[^screen]
+Above box ②, a note explains that Claude keeps these instructions in mind across your chats and Cowork (a feature for handing off whole multi-step tasks, [Chapter 8](08-cowork.md)).[^screen] Inside the empty box, faint placeholder text says "Example: Keep explanations brief and to the point (예시: 설명을 간단명료하게 유지)".[^screen]
 
 ::: details If you see "Your Claude" instead of "Account (계정)" in Settings (click to expand)
 In the official help docs, this box appears under "Settings" → "Your Claude" → "Instructions".[^personal] If your account has the new Settings layout, it may look like that. Follow the name shown on your screen.
@@ -76,14 +77,17 @@ For rules you only need for a specific task, it is better to put them in **proje
 ## Memory — What Claude Remembers as You Chat
 
 **Memory** is a feature where Claude remembers things it learns about you during your conversations.
-On Free, Pro, and Max plans, it is **turned on by default** across the web, desktop, and mobile apps.[^memory]
-On work plans (Team and Enterprise), an administrator must enable it first, and it stays off for each member until they turn it on themselves.[^memory]
-
-Claude does not wait until a conversation ends to summarize it. It saves memories by topic **while you are chatting**.[^memory]
+Claude saves memories by topic **while you are chatting**. It does not summarize everything at once after a conversation ends.[^memory]
 So if you say "The deadline changed," your very next chat will already know that fact.
+
+On Free, Pro, and Max plans, it is **turned on by default** across the web, desktop, and mobile apps. There is nothing you need to turn on.[^memory]
 
 In [Stage 1, Chapter 6](../00-common/06-conversation.md#in-a-new-chat-it-starts-fresh-by-default) and in other AI courses, you learn that "every new conversation starts from scratch."[^academy-memory] In Claude, when Memory is turned on, a new conversation can start already knowing what you have told it before.
 If you want to see Claude start from a completely blank slate, turn off "+" → "Memory (메모리)" before sending your first message in a new chat. Claude will not use its memories in that chat.[^off] You will find the exact steps below under "Turning Off Memory for a Single Chat".
+
+::: details If you are on a work plan (click to expand)
+On work plans (Team and Enterprise), an administrator must enable it first, and it stays off for each member until they turn it on themselves.[^memory]
+:::
 
 ### What Claude Remembers
 
@@ -161,7 +165,7 @@ If you just want to take a break from Memory, choose Pause memory. If you choose
 
 ### Turning Off Memory for a Single Chat
 
-You can also leave Memory turned on overall and turn it off **just for your current chat**.[^off]
+You can also leave Memory turned on overall and turn it off **just for your current chat**.[^off] This is the same method you saw in "Keeping the Chat and Turning Off Memory Only" in [Chapter 3](03-chats.md). This chapter goes over it again.
 
 1. Open a new chat.
 2. Click the "+" button in the message input box.
@@ -187,6 +191,7 @@ A chat started this way is different from an **incognito chat** in [Chapter 3](0
 
 You can also ask Claude things like, "Remember what we talked about last time?"
 On paid plans (Pro, Max, Team, and Enterprise), Claude can **search your past conversations** and build on them.[^past]
+This is the same feature as "asking Claude to find it for you" in [Chapter 3](03-chats.md#finding-past-chats). Here, we focus on how it differs from Memory. Memory is notes Claude has written down in advance, while this feature digs through your past chats directly each time you ask.
 
 Just ask naturally.
 
@@ -210,7 +215,7 @@ Here are a few things to keep in mind:
 If you switched to Claude from another AI service, you can bring over the memories you built up there.
 This is available on **all plans** on the web and desktop app.[^import]
 
-1. **Export your memories from your previous AI.** The official help docs provide a recommended prompt. It is an English prompt starting with "I'm moving to another service and need to export my data." Copy the full prompt from the help link in the footnote.[^import]
+1. **Export your memories from your previous AI.** Open the Anthropic Help Center article ["Import and export your memory from Claude"](https://support.claude.com/en/articles/12123587) and you will find a recommended prompt. It is an English prompt starting with "I'm moving to another service and need to export my data." Copy it in full and send it to the AI you used before. It is fine to send it in English as is. The answer you get back is your exported memories.[^import]
 2. **Open the import tool in Claude.** Go to "Settings" → "Memory" and click "Start import (가져오기 시작)" next to ③ "Import memory from other AI providers (다른 AI 제공업체에서 메모리 가져오기)".[^screen][^your-claude]
 3. **Paste the text.** Paste the exported text into the box and click "Add to memory (메모리에 추가)".[^import]
 4. **Check the result.** When it finishes, click "See what Claude learned about you (Claude가 나에 대해 학습한 내용 보기)" to review what was added.[^import]
@@ -235,6 +240,7 @@ Save the response as a file on your computer to keep as a backup.
 
 ## Break Reminders and Quiet Hours
 
+Memory and instructions are settings that fit Claude to you. You can also set the time you spend using it to suit you.
 When you are chatting with AI, it is easy to lose track of time. Claude has two features to help with this.
 They are available in **beta** (a test feature before official release) on Free, Pro, and Max plans.[^wellbeing]
 

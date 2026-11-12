@@ -1,5 +1,7 @@
 # Chapter 1. What Codex Is and How It Differs from Claude Code
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **In one line**: Codex is an AI tool made by OpenAI that **works directly inside a folder on your computer**. Today, you use it by **selecting "Codex" inside the ChatGPT desktop app**.
 > It does almost the same job as Claude Code. In this stage, you will move the "organizing tool" you built in the Claude Code chapters over to Codex and learn **only what is different**.
 
@@ -17,7 +19,9 @@ On desktop, you do not install Codex separately. Three modes live together **ins
 
 Source: Codex official docs (excerpted)[^modes]
 
-Work and Codex overlap in what they can do. The difference is **how they show their work**. Work hides technical details like Git or commands and shows you the finished result. Codex also shows you exactly what changed (the diff).[^compare]
+Work and Codex overlap in what they can do. The difference is **how they show their work**. Work hides technical details like Git or commands and shows you the finished result. Codex also shows you exactly what changed.[^compare]
+
+For example, if it edited a meeting notes file, Codex shows you which lines were removed and which lines were added. Showing just the changed parts like this is called a diff (difference).
 
 You can use Codex even if you do not write code. The official docs also say that if you prefer Codex, you can keep using it for research, documents, and presentations.[^prefer] This guide chose Codex **because you can inspect the changes yourself**. If you built the habit of checking whether organized notes match the original in the Claude Code chapters, you can keep that exact habit in Codex.
 
@@ -41,7 +45,7 @@ Source: Compiled by this guide (the official docs do not compare the two tools d
 
 **The biggest difference is the name of the rules file.** Codex reads `AGENTS.md` before it starts working.[^agents] If you leave Claude Code's `CLAUDE.md` as is, Codex will not read it. That is why we change this file first when moving our organizing tool (Chapter 3).
 
-There is also a feature that moves things for you. **Import** (가져오기) in the ChatGPT app copies your rules file, skills, and settings from Claude Code into Codex.[^import] In this guide, we move them **by hand, one by one**, so you can see for yourself what changes and how. We introduce Import at the end of Chapter 3.
+In this guide, we move things **by hand, one by one**, so you can see for yourself what changes and how. There is also an **Import** feature that moves everything at once. We introduce it separately at the end of Chapter 3.[^import]
 
 <Quiz id="ch501-compare" />
 
@@ -53,7 +57,12 @@ You can use Codex in several places.
 - **Terminal (Codex CLI)**: Used inside the command-line window.[^cli] Covered in Chapter 7.
 - **Cloud**: Creates a separate workspace for each task and keeps working even while your computer is asleep.[^cloud] Introduced in Chapter 6.
 
-What you can use depends on your pricing plan.
+What you can use depends on your pricing plan. The hands-on exercises in this guide assume **Plus or higher**. There are two things to know in advance.
+
+- **Free and Go are on a "gradual rollout"** (opening access to accounts in stages). If you do not see Codex on your screen, it may not have been rolled out to your account yet.
+- Your usage limit is **shared with ChatGPT Work**. If you hand off many big jobs to Work, you will have less left for Codex.[^shared] We cover usage limits in more detail in Chapter 8.
+
+::: details What each plan can use (click to expand)
 
 | Plan | Monthly price | What you can use in Codex |
 |---|---|---|
@@ -64,9 +73,7 @@ What you can use depends on your pricing plan.
 
 Source: Codex official docs pricing page (excerpted)[^pricing]
 
-**Free and Go are on a "gradual rollout"** (opening access to accounts in stages). If you do not see Codex on your screen, it may not have been rolled out to your account yet. The hands-on exercises in this guide assume **Plus or higher**.
-
-Your usage limit is **shared with ChatGPT Work**. If you hand off many big jobs to Work, you will have less left for Codex.[^shared] We cover usage limits in more detail in Chapter 8.
+:::
 
 <Quiz id="ch501-where" />
 

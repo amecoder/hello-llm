@@ -1,5 +1,7 @@
 # Chapter 5. Memory and Personalization — So You Don't Have to Introduce Yourself Every Time
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: ChatGPT tailors its answers to you using **Memory**, which remembers what you tell it, and
 > **Custom Instructions**, where you write rules you want it to always follow. You will learn how to see what it remembers and how to delete what you don't need.
 
@@ -28,12 +30,21 @@ In the "ChatGPT Memory (ChatGPT 메모리)" section at the top, you will see two
 
 ![The Personalization screen. Red numbers show ① Enable memory, ② Manage memory summary, ③ Reference my writing style, ④ Reference photos, ⑤ Default style and tone, ⑥ Warmth. At the top, under "ChatGPT Memory," you see the "Enable memory" switch and the "Manage" button next to "Memory summary," followed by the "Reference my writing style" switch below it, and the "Default style and tone" and "Warmth" selection buttons at the bottom.](../../../guide/11-chatgpt/assets/shot-06-personalization-marked.png)
 
-- **① Enable memory (메모리 활성화)** — When turned on, ChatGPT tailors answers to you based on your chats, files, and connected apps. When turned off, it does not use memory.
+This section looks at ① and ②. ③, ⑤, and ⑥ are covered in the "Choosing a Tone" section of this chapter. This guide does not cover ④ "Reference photos (참고 사진)" separately.
+
+- **① Enable memory (메모리 활성화)** — When turned on, ChatGPT tailors answers to you based on your chats, files, and connected apps. When turned off, it does not use memory. **Connected apps** are other services, like Gmail, that you have linked to ChatGPT ([Chapter 7](07-projects-plugins.md)). If you have never connected one, you do not need to worry about it.
 - **② Memory summary (메모리 요약) → Manage (관리)** — Lets you see at a glance what ChatGPT has learned about you. The note on the screen also says to put information you want it to always remember into Custom Instructions.[^screen]
 
 ### What ChatGPT Looks At to Remember You
 
-When creating a personalized answer, ChatGPT refers to your **past chats, saved memories, custom instructions, library files, and connected apps** (for example, Gmail).
+When creating a personalized answer, ChatGPT refers to the following.
+
+- **Past chats**: Conversations you had before
+- **Saved memories**: Information saved separately when you said "Remember this" (explained just below)
+- **Custom instructions**: Rules you wrote yourself (explained later in this chapter)
+- **Library files**: Files you uploaded before ([Chapter 4](04-files-images.md#library-—-where-your-uploaded-files-are-kept))
+- **Connected apps**: Other services like Gmail ([Chapter 7](07-projects-plugins.md))
+
 If you want to know what a specific answer referred to, check "Sources (출처)" below the answer.[^memory]
 
 ### Saved Memories and Reference Chat History Are Different
@@ -43,7 +54,7 @@ Memory comes in two parts.[^memory]
 - **Saved memories** (저장된 메모리) — Information saved separately, such as when you say "Remember this." It is stored separately from your chat history. Example: "I am a vegetarian. Remember this."
 - **Reference chat history** (채팅 기록 참조) — Pulls needed details from past chats on the fly, even if you never asked to save them separately. For example, it might use your child's age from last week's chat in today's answer.
 
-If you turn off referencing saved memories, referencing chat history turns off together with it.[^memory]
+If you turn off referencing saved memories, referencing chat history turns off together with it.[^memory] On the web, the switch to turn it off is ① "Enable memory (메모리 활성화)" in the image above.
 
 To ask ChatGPT to remember something directly, try saying this:
 
@@ -66,9 +77,11 @@ If something ChatGPT remembers is wrong or you no longer want it used, delete it
 There are two points that are easy to mix up.[^memory]
 
 - **Deleting a chat does not delete saved memories.** A saved memory created during a chat stays even if you delete that chat. You must delete the memory itself separately.
-- **When you turn off reference chat history**, information remembered from past chats is scheduled to be deleted from OpenAI's systems within 30 days. Your original chats remain intact.
+- **When you turn off reference chat history**, information remembered from past chats is scheduled to be deleted from OpenAI's systems within 30 days. Your original chats remain intact.[^memory-30]
 
+::: details If you use connected apps (click to expand)
 The same applies to connected apps ([Chapter 7](07-projects-plugins.md#setting-permissions-for-connected-apps)). Even if you disconnect an app like Gmail, **content already brought in from that app into your chats or memory is not deleted.** ChatGPT simply cannot read new data from it going forward. Delete any remaining content separately using the methods above.[^apps]
+:::
 
 <Quiz id="ch105-delete" />
 
@@ -77,13 +90,6 @@ The same applies to connected apps ([Chapter 7](07-projects-plugins.md#setting-p
 While Memory is what ChatGPT remembers on its own, **Custom Instructions** are rules you write down yourself.
 On the web, open them via the "Custom instructions (사용자 지정 지침)" link on the "Personalization (개인 맞춤 설정)" screen.
 In the mobile app, look under Settings → "Customize ChatGPT (ChatGPT 맞춤 설정)," and make sure "Enable for new chats (맞춤 설정 사용)" is turned on.[^ci]
-
-The character limit depends on your plan.[^ci]
-
-| Plan | Maximum Characters |
-|---|---|
-| Free · Go | 1,500 characters |
-| Plus · Pro · Business · Enterprise · Edu | 5,000 characters (increased on 2026-07-15)[^rn] |
 
 For example, try writing something like this. Think of it as picking out the parts of the five prompt elements from [Stage 1, Chapter 4](../00-common/04-prompt-basics.md) that stay the same every time (context, audience, constraints).
 
@@ -94,20 +100,27 @@ I am a shop owner in my 50s running a neighborhood side-dish shop. I don't know 
 - If you are not sure about something, do not make it up; tell me you don't know.
 ```
 
-You don't have to write only about tone. You can also write **how you want to be helped**. Here are examples of instructions from an OpenAI Academy course:[^academy-content]
+You don't have to write only about tone. You can also write **how you want to be helped**. For example, if you asked for advice and got only vague answers like "It depends," try writing this. These are examples from an OpenAI Academy course.[^academy-content]
 ```
 - When I ask for advice, give a clear recommendation, explain the tradeoffs, and call out any assumptions.
 - If something is uncertain, say so clearly. Do not guess, and tell me what information would make the answer stronger.
 ```
 
+The character limit for instructions depends on your plan. The examples above fit easily on any plan.[^ci]
+
+| Plan | Maximum Characters |
+|---|---|
+| Free · Go | 1,500 characters |
+| Plus · Pro · Business · Enterprise · Edu | 5,000 characters[^rn] |
+
 After editing your instructions, **open a new chat** to test them. Even the official help pages give mixed answers on whether changes apply right away to an ongoing chat. It is safest to assume they take effect starting with a new chat.[^ci]
-Information you write in Custom Instructions may also be used to improve models. If you do not want this, turn off the training setting ([Chapter 8](08-privacy.md)).[^ci]
+Information you write in Custom Instructions may also be used to improve models. If you do not want this, go to Settings → "Data controls (데이터 관리)" and turn off the setting that allows training ([Chapter 8](08-privacy.md)).[^ci]
 
 <Quiz id="ch105-instructions" />
 
 ## Choosing a Tone — Default Style and Tone, Warmth, Reference My Writing Style
 
-Near the bottom of the "Personalization (개인 맞춤 설정)" screen, there are controls that set the tone of ChatGPT's answers.[^screen] The numbers below match the screenshot in the "Turning On and Checking Memory" section earlier in this chapter.
+Near the bottom of the "Personalization (개인 맞춤 설정)" screen, there are controls that set the tone of ChatGPT's answers.[^screen] "Reference my writing style (내 문체 참고)" (③) is just below the "ChatGPT Memory (ChatGPT 메모리)" section, and "Default style and tone (기본 스타일 및 톤)" (⑤) and "Warmth (따뜻함)" (⑥) are at the very bottom. The numbers below match the screenshot in the "Turning On and Checking Memory" section earlier in this chapter.
 
 | Number | Screen Label | What It Does |
 |---|---|---|
@@ -121,7 +134,7 @@ For example, you can turn on "Reference my writing style (내 문체 참고)" an
 Write a text message to my regular customers announcing this week's side dishes. Use the tone I usually write in.
 ```
 
-::: details What the answer roughly looks like (Example — click to expand)
+::: details What the answer roughly looks like (Example — click to expand) (click to expand)
 This is an example created for this guide. Actual answers vary by service and over time.
 
 > Hello~ Here is this week's side-dish news! On [Day], we have fresh [Side dish name] coming out. Thank you as always for visiting us!
@@ -141,15 +154,10 @@ When that happens, click the "Temporary Chat (임시 채팅)" button in the top 
 
 ![The Temporary Chat screen. Clicking "Personalized" in the top right opens a menu with two choices: "Personalized — This chat may reference memory, plugins, and custom instructions" and "Unpersonalized — This chat ignores memory, plugins, and custom instructions."](../../../guide/11-chatgpt/assets/shot-19-temporary-personal-marked.png)
 
-| Option | Saved Memories & Instructions | New Memories |
-|---|---|---|
-| ② Personalized (개인화됨, default) | Uses them to answer | Does not create any |
-| ③ Unpersonalized (개인화되지 않음) | Ignores them | Does not create any |
+The difference between the two choices is the same as what you saw in [Chapter 3](03-chats.md#leaving-no-record-—-temporary-chat). ② "Personalized (개인화됨)" uses your saved memories and instructions, and ③ "Unpersonalized (개인화되지 않음)" ignores them.
 
 Either way, **nothing you say in a Temporary Chat is saved as a new memory.** You cannot change this choice after the conversation starts.[^temp]
-So if you start an "Unpersonalized (개인화되지 않음)" temporary chat and ask "Do you remember me?", it is normal for ChatGPT not to know. Other details about Temporary Chat (history and retention period) are covered in [Chapter 3](03-chats.md#leaving-no-record-—-temporary-chat).
-
-> In the past, Temporary Chat always turned off memory and instructions, but now you can choose. If your screen looks different, follow what is on your screen.
+So if you start an "Unpersonalized (개인화되지 않음)" temporary chat and ask "Do you remember me?", it is normal for ChatGPT not to know.[^temp-history] Other details about Temporary Chat (history and retention period) are covered in [Chapter 3](03-chats.md#leaving-no-record-—-temporary-chat).
 
 <Quiz id="ch105-temporary" />
 
@@ -186,7 +194,9 @@ Next chapter: [Chapter 6. Search and Deep Research](06-search.md)
 
 [^memory]: OpenAI Help Center, "Memory in ChatGPT". https://help.openai.com/en/articles/8590148 (checked on 2026-10-23)
 [^ci]: OpenAI Help Center, "ChatGPT Custom Instructions". https://help.openai.com/en/articles/8096356 (checked on 2026-10-23)
-[^rn]: OpenAI Help Center, "ChatGPT release notes", 2026-07-15 entry. https://help.openai.com/en/articles/6825453 (checked on 2026-10-23)
+[^rn]: The 5,000-character limit on paid plans was increased on 2026-07-15. Source: OpenAI Help Center, "ChatGPT release notes", 2026-07-15 entry. https://help.openai.com/en/articles/6825453 (checked on 2026-10-23)
+[^memory-30]: Information remembered from past chats is scheduled to be deleted from OpenAI's systems within 30 days. The source is "Memory in ChatGPT" above.
+[^temp-history]: In the past, Temporary Chat always turned off memory and instructions, but now you can choose. If your screen looks different, follow what is on your screen.
 [^apps]: OpenAI Help Center, "Connecting and managing app accounts in ChatGPT". "Disconnecting an app does not automatically delete existing or archived conversations, saved files, your Memory summary, or other saved memories." https://help.openai.com/en/articles/20001494 (checked on 2026-10-24)
 [^temp]: OpenAI Help Center, "Temporary chat in ChatGPT". "Unpersonalized: Does not use memory, custom instructions, or plugins." / "Neither option creates or updates memories while the chat remains temporary. You cannot change personalization after the conversation starts." https://help.openai.com/en/articles/8914046 (checked on 2026-10-24)
 [^screen]: Verified directly on the ChatGPT web interface (Plus plan, Korean). The "Personalization (개인 맞춤 설정)" screen (checked on 2026-10-23) and the "Personalized (개인화됨)" menu on the "Temporary Chat (임시 채팅)" screen (checked on 2026-10-24)

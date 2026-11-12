@@ -1,7 +1,9 @@
 # 第10章 音声とスマホ — 声で聞いて、スマホでもっと速く
 
+<Badge type="info" text="選択" /> 必要なときに読んでください。読み飛ばしても、後の章についていけます。
+
 > **一言まとめ**: 入力欄の**マイク**は自分の声を文字に書き起こし（音声入力）、**音波のマーク**はClaudeと声でやり取りさせてくれます（音声モード）。
-> スマホでは、ウィジェット・ショートカット・ロック画面からもっと速く開けて、メッセージやメールの下書きをアプリにそのまま渡してもらえます。
+> スマホでは、ウィジェット（ホーム画面に置く小さなショートカットの枠）・ショートカット（いくつもの動作をボタン一つにまとめるiPhoneの機能）・ロック画面からもっと速く開けて、メッセージやメールの下書きをアプリにそのまま渡してもらえます。
 
 画面は2026年10月のWeb版を基準にしています。スマホアプリとパソコンアプリでは、ボタンの位置が少し異なることがあり、設定メニューの名前も画面によって違うことがあります。
 
@@ -24,7 +26,7 @@
 
 ## 音声入力をやってみる
 
-この節では、スマホアプリ（iPhone・Android）の音声入力を説明します。[^dictation] パソコンアプリのCoworkでも、音声入力を使えます。[^voice]
+この節では、スマホアプリ（iPhone・Android）の音声入力を説明します。[^dictation] パソコンアプリのCowork（[第8章](08-cowork.md)）でも、音声入力を使えます。[^voice]
 
 1. Claudeアプリで新しいチャットを開きます。
 2. 入力欄の右にある**マイク**を押します。
@@ -45,12 +47,17 @@
 
 ### Macで — クイック入力
 
+Macを使っていないなら、この部分は読み飛ばしてもかまいません。
+
 MacでClaudeデスクトップアプリを使っているなら、**Optionキーを2回**押してみてください。どのアプリを使っていても、すぐにClaudeの入力欄が開きます。[^quick] 作業を止めずに聞くことができます。
 
 - 画面の一部をドラッグしてスクリーンショットとして貼り付けたり、アプリのウィンドウを押してその内容を一緒に送ったりできます。[^quick]
-- 音声入力のショートカットをオンにしておくと、Caps Lockを押して声で入力できます。最初はオフになっています。[^quick]
 - 無料を含むすべてのプランで使えますが、Macのデスクトップアプリでだけ使えます。アプリが裏でもいいので起動している必要があります。[^quick]
+
+::: details 詳しく（クリックして開く）
+- 音声入力のショートカットをオンにしておくと、Caps Lockを押して声で入力できます。最初はオフになっています。[^quick]
 - Macの画面収録のような権限が必要です。「システム設定 > プライバシーとセキュリティ（시스템 설정 > 개인정보 보호 및 보안）」で確認します。[^quick]
+:::
 
 見慣れない表やエラーのウィンドウを見ながら、すぐに聞きたいときに便利です。
 
@@ -99,7 +106,7 @@ Claudeが的外れな方向に進んだら、そのまま話し始めてくだ�
 私が答えたら、よかった点を一つ、直す点を一つだけ短く言って、次の質問に進んでください。
 ```
 
-::: details もらえる答えはだいたいこんな感じです（例 — 押して開く）
+::: details もらえる答えはだいたいこんな感じです（例 — 押して開く）（クリックして開く）
 このガイドが作った例です。実際の答えは、サービスやそのときによって異なります。
 
 > いいですよ、面接を始めますね。最初の質問です。簡単に自己紹介をしていただけますか？
@@ -116,8 +123,8 @@ Claudeが的外れな方向に進んだら、そのまま話し始めてくだ�
 
 - 音声での会話も、**プランの使用上限に含まれます**（[第1章](01-getting-started.md)）。
 - 同じ会話の中で文章と声を行き来しても、**前の内容は引き継がれます。** インターネットのアドレスのように正確に打つ必要があるものは、途中で文章で入力すればOKです。
-- 文章のチャットで最後に使ったモデルで始まり、会話中に変えられます。ただし、Claude Fableは音声モードではまだ使えません（2026-10-26確認）。
-- つないでおいたツール（Gmail・Googleカレンダーなど）も、音声モードで使えます。音声モードのヘルプには、無料プランではツールを一つつなげると書かれています。ツールの接続は[第7章](07-projects-tools.md)で扱います。
+- 文章のチャットで最後に使ったモデルで始まり、会話中に変えられます。ただし、Claude Fableは音声モードではまだ使えません。[^voice-fable]
+- つないでおいたツール（Gmail・Googleカレンダーなど）も、音声モードで使えます。[^voice-tools] ツールの接続は[第7章](07-projects-tools.md)で扱います。
 - 新しい画面では、Claudeが作業中の会話を含めて、どの会話でも音声モードを使えます。[^voice][^cowork-voice-old]
 
 <Quiz id="ch210-voice" />
@@ -160,10 +167,10 @@ Claudeの声は、決まったいくつかの中からだけ選びます。誰�
 
 ### iPhone（iOS 18以上）
 
-- **「Claudeに聞く（Claude에 물어보기）」**（Ask Claude）: アプリを開かずに質問します。Spotlight検索、Siri、共有メニューから使えます。たとえば、文章を選んで共有メニューからそのままClaudeに送れます。
-- **ウィジェット**: ホーム画面や「今日」ビューにClaudeのウィジェットを置くと、新しいチャット、音声入力、写真を撮って送ることを、ボタン一つで開きます。
-- **「Claudeで写真を分析（Claude로 사진 분석）」**（Analyze Photo with Claude）: コントロールセンターやロック画面に入れておくと、ロックを解除しなくても写真を撮って送れます。
-- **「Open Claude」**: ロック画面、コントロールセンター、アクションボタン（Action button）に入れて、Claudeをすぐに開きます。[^ios][^lock]
+- **「Claudeに聞く（Claude에 물어보기）」**（Ask Claude）: アプリを開かずに質問します。Spotlight検索（ホーム画面の真ん中を下にスワイプすると出る検索欄）、Siri、共有メニューから使えます。たとえば、文章を選んで共有メニューからそのままClaudeに送れます。
+- **ウィジェット**: ホーム画面や「今日」ビュー（ホーム画面のいちばん左の画面）にClaudeのウィジェットを置くと、新しいチャット、音声入力、写真を撮って送ることを、ボタン一つで開きます。
+- **「Claudeで写真を分析（Claude로 사진 분석）」**（Analyze Photo with Claude）: コントロールセンター（画面の右上から下にスワイプすると出るボタンの集まり）やロック画面に入れておくと、ロックを解除しなくても写真を撮って送れます。
+- **「Open Claude」**: ロック画面、コントロールセンター、アクションボタン（Action button。一部のiPhoneの側面にあるボタン）に入れて、Claudeをすぐに開きます。[^ios][^lock]
 
 「Claudeに聞く」とショートカットは、アプリを開いたときに表示される標準のモデルを使います。[^ios]
 
@@ -220,7 +227,9 @@ Claudeが位置情報やカレンダーを初めて使おうとすると、許�
 - **iPhone**: 「設定」→「Claude」
 - **Android**: 「設定」→「アプリ」→「Claude」→「権限」[^ios-apps][^android-apps]
 
+::: details 韓国ではまだ使えない機能（クリックして開く）
 健康データを読む機能もありますが、試験版で、ProとMaxプランのアメリカでだけ使えます。[^ios-apps]
+:::
 
 <Quiz id="ch210-apps" />
 
@@ -286,4 +295,6 @@ iPhoneならホーム画面にClaudeのウィジェットを、Androidなら Cla
 [^android-apps]: Anthropicヘルプ「Use Claude with Android apps」。"This feature is supported on all Claude plans and works with your device's native and third-party apps" / "Reminders: These are exclusively available on Claude for iOS, so Claude can’t create and manage reminders on Android." / "These permissions can be managed at any time in your device settings by going to Settings > Apps > Claude > Permissions." https://support.claude.com/en/articles/11869629 （確認日 2026-10-26）
 [^quick]: Anthropicヘルプ「Use quick entry with Claude Desktop on Mac」。"Quick entry is available to all Claude users (free, Pro, Max, Team, and Enterprise plans) using Claude Desktop on macOS." / "Instant access: Double-tap the Option key to open Claude from any app." / "Visual context: Capture screenshots or click application windows to share what you're working on." / "The voice dictation shortcut is disabled by default because it takes over your Caps Lock key." / "Claude Desktop needs to be running on your Mac, but it can run in the background." / "Screen recording: Required to capture screenshots and share application windows." / "You can review or change these permissions in System Settings > Privacy & Security." https://support.claude.com/en/articles/12626668 （確認日 2026-10-26）
 [^cowork-voice-old]: 同じヘルプには、Cowork（[第8章](08-cowork.md)）では音声入力だけが使えて音声モードは使えない、という文もあります。
+[^voice-fable]: Anthropicヘルプ「Use voice mode」。"Note: Claude Fable is not currently available in voice mode." （確認日 2026-10-26）
+[^voice-tools]: 音声モードのヘルプには、無料プランではツールを一つつなげると書かれています。
 [^voice-settings-name]: ヘルプは「設定」→「機能」と案内しています。画面によって異なることがあります。

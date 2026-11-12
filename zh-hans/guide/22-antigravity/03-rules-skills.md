@@ -1,9 +1,18 @@
 # 第3章 规则与技能——不用搬
 
+<Badge type="tip" text="必读" /> 想跟着这个阶段学下去，一定要读这一章。
+
 > **一句话总结**：Antigravity 把文件夹里的 **`AGENTS.md`** 当作始终开启的规则来读，并自己挑选 **`.agents/skills`** 里的技能。在 Codex 阶段做好的文件**原样**就能用。
 > 用同一份笔记，一次把 `AGENTS.md` 拿走，一次放回去，各整理一遍，以此来确认这一点。
 
-本章依据 2026 年 11 月 1 日确认过的 Antigravity 官方文档，以及本指南用 Antigravity CLI `agy` 1.4.12 运行的结果写成。本指南是在练习用的另一个 AI 工具里调用并运行 `agy` 的。官方 FAQ 对个人套餐不支持这样的用法（[第7章](07-safety-choose.md)），所以你照着做的时候，请直接在应用或终端里运行。应用和 CLI 用的是同一个智能体（[第1章](01-what-is.md)）。规则文件和技能是什么，已在 [Claude Code 第 6、7 章](../20-claude-code/06-claude-md.md)里讲过。
+先来弄清两个词。
+
+- **规则文件**是写下 AI 每次在这个文件夹里干活时都要遵守的约定的文件。
+- **技能**是把常做的事情的步骤写下来的一组指令。
+
+更详细的说明在 [Claude Code 第 6、7 章](../20-claude-code/06-claude-md.md)里（选读）。
+
+本章的运行结果，是本指南用终端程序 `agy` 亲自跑出来的。应用和 CLI 用的是同一个智能体（[第1章](01-what-is.md)），所以在应用里照着做也可以。[^howrun]
 
 ## Antigravity 会找的地方
 
@@ -20,7 +29,7 @@ Antigravity 会在固定的文件夹里查找规则和技能。[^where]
 
 `CLAUDE.md` 不在规则文件列表里。[^names] 如果有只在 Claude Code 里用过的规则，也请写进 `AGENTS.md`（和 Codex 第3章的理由相同）。
 
-`AGENTS.md` 不需要开头的设置，**整个内容始终是开启的。**[^always] 修改过的规则和技能，从下一条消息起立刻生效。[^reread]
+`AGENTS.md` 不用在文件最前面另加设置行，直接写就行。而且**整个内容始终是开启的**（`always_on`）。[^always] 修改过的规则和技能，从下一条消息起立刻生效。[^reread]
 
 <Quiz id="ch603-where" />
 
@@ -28,10 +37,10 @@ Antigravity 会在固定的文件夹里查找规则和技能。[^where]
 
 `AGENTS.md` 里有 Codex 第3章加进去的规则。就是"在整理好的文件最下面设一节「与原件核对」"。这条规则只在 `AGENTS.md` 里有，所以看结果里有没有这一节，就能知道 `AGENTS.md` 有没有被读取。
 
-在 Codex 阶段的审查中，有人指出"前后用不同的笔记，就不是严格的比较"。所以这次用**同一份笔记、同一个请求**运行了两次。
+用**同一份笔记、同一个请求**运行了两次。条件相同，才能知道差别是不是 `AGENTS.md` 造成的。[^same-memo]
 
 ```
-把 inbox/회의-2026-10-27-주간회의.txt 这份笔记整理成会议纪要，保存成 notes/ 文件夹里的新文件。
+把 inbox/meeting-2026-10-27-weekly.txt 这份笔记整理成会议纪要，保存成 notes/ 文件夹里的新文件。
 ```
 
 | 运行 | 「与原件核对」一节 |
@@ -41,18 +50,22 @@ Antigravity 会在固定的文件夹里查找规则和技能。[^where]
 
 来源：本指南的实操结果（2026-11-01，各 1 次）
 
-结果：[没有 AGENTS.md 时](/practice/notes/results/antigravity/3장-회의록-AGENTS없이.txt) · [有 AGENTS.md 时](/practice/notes/results/antigravity/3장-회의록-AGENTS있을때.txt)
+结果：[没有 AGENTS.md 时](/practice/zh-hans/notes/results/antigravity/ch3-minutes-without-AGENTS.txt) · [有 AGENTS.md 时](/practice/zh-hans/notes/results/antigravity/ch3-minutes-with-AGENTS.txt)
 
 看运行记录，差别会更明显。
 
 - **没有 `AGENTS.md` 时**：智能体自己去找并打开了 `AGENTS.md`、`CLAUDE.md`、`GEMINI.md`。
 - **有 `AGENTS.md` 时**：没有另外打开那个文件，却遵守了新规则。看起来是因为它作为始终开启的规则，一开始就被放进去了。
 
-`CLAUDE.md` 两次都是**自己打开读了。** 虽然它没有自动作为规则文件放进去，但这似乎意味着，只要文件夹里有，就可以当作参考资料来读。这台电脑上还有个人规则文件（`~/.gemini/GEMINI.md`），也一起放进了运行里，所以无法分辨这个行为是不是受它的影响。这是各做一次的结果。
+`CLAUDE.md` 两次都是**自己打开读了。** 它并没有作为规则文件被自动放进去。这似乎意味着，只要文件夹里有，就可以当作参考资料来读。
 
-同一份笔记，结果里还有一处差别。Codex 把笔记里的星期按 2026 年的日历改了，而 Antigravity 直接用了笔记里写的星期（`10/27(月)`）。练习笔记里的星期是为了故事编出来的，和真实日历对不上。每个工具的这类判断都不一样，所以日期请始终和原件对照。
+不过，这个结果是**各做一次得到的**。而且这台电脑上还有个人规则文件（`~/.gemini/GEMINI.md`），也一起放进了运行里。所以无法分辨读取 `CLAUDE.md` 的行为是不是受它的影响。请把它看作这次实操中看到的样子，而不是确定的规律。
 
 还有一个日期是错的。在有 `AGENTS.md` 时生成的会议纪要里，热红酒成本调查的期限，写成了 `10/30(周五)`，而不是 `10/31(周五)`（笔记里是"周五前"）。**即使遵守了规则那一节，日期也可能出错。** 不要因为有「与原件核对」这一节就放心，要亲自核对。
+
+::: details 详细说明（点击展开）
+- 同一份笔记，结果里还有一处差别。Codex 把笔记里的星期按 2026 年的日历改了，而 Antigravity 直接用了笔记里写的星期（`10/27(月)`）。练习笔记里的星期是为了故事编出来的，和真实日历对不上。每个工具的这类判断都不一样，所以日期请始终和原件对照。
+:::
 
 <Quiz id="ch603-test" />
 
@@ -70,7 +83,7 @@ Antigravity 会在固定的文件夹里查找规则和技能。[^where]
 
 本指南在终端里说出名称——"用 weekly-review 技能整理这周的回顾"——来运行。智能体读取了 `.agents/skills/weekly-review/SKILL.md`，用 3 份回顾笔记做出了每周回顾。
 
-结果：[用技能做出的每周回顾](/practice/notes/results/antigravity/3장-주간회고-스킬로.txt)
+结果：[用技能做出的每周回顾](/practice/zh-hans/notes/results/antigravity/ch3-weekly-review-with-skill.txt)
 
 要和原始笔记对照的 8 个事实，**全都**在里面。12 个赞、6,000 韩元的错误、4 个套餐、合计 11 个、Instagram 3 次、热红酒 1,800 韩元、灯泡、写文案花了 2 小时。同一个技能，Codex 做出的回顾里漏了 3 个（[Codex 第5章](../21-codex/05-skills.md)）。这是同样的指令，各个工具的结果也可能不同的例子。
 
@@ -80,11 +93,15 @@ Antigravity 会在固定的文件夹里查找规则和技能。[^where]
 
 ## 条件规则和留下学到的东西
 
-规则变多之后，可以按文件拆到 `.agents/rules/` 文件夹里。这些文件最前面必须写明什么时候开启（`trigger`）。不写或写错的话，会**悄悄地被丢弃。**[^trigger] 像整理工具这样规则只有几行，一个 `AGENTS.md` 就够了。
+规则变多之后，可以按文件拆到 `.agents/rules/` 文件夹里。这些文件必须在最前面的设置行里写明什么时候开启（`trigger`）。不写或写错的话，会**悄悄地被丢弃。**[^trigger]
+
+值连拼写都必须准确。比如，始终开启的值是用小写字母和下划线写的 `always_on`。像 `alwaysOn` 这样连着写，它就认不出来，会丢掉。[^trigger][^always] 像整理工具这样规则只有几行，一个 `AGENTS.md` 就够了。
 
 规则用于"始终要遵守的事"，技能用于"分多个步骤完成的工作"。[^rule-skill] 比如，"日期写成 10/27(周一) 的样子"是规则，"把 3 份回顾笔记汇总，做出每周回顾"是技能。
 
-想把对话中纠正过的内容留成规则或技能，就用 `/learn`。智能体会提出要修改的内容，**只有我批准之后**才会写文件。[^learn]
+想把对话中纠正过的内容留成规则或技能，就在输入框里输入 `/learn`。智能体会提出要修改的内容，**只有我批准之后**才会写文件。[^learn]
+
+比如，假设你在对话中纠正过它：「日期写成 10/27(周一) 的样子」。之后输入 `/learn`，智能体就会提议把这一点留成规则。要等我读过并批准，才会写进文件。
 
 <Quiz id="ch603-rules" />
 
@@ -116,6 +133,8 @@ Antigravity 会在固定的文件夹里查找规则和技能。[^where]
 
 下一章：[第4章. 权限与撤销](04-permissions-undo.md)
 
+[^howrun]: 本章依据 2026 年 11 月 1 日确认过的 Antigravity 官方文档，以及本指南用 Antigravity CLI `agy` 1.4.12 运行的结果写成。本指南是在练习用的另一个 AI 工具里调用并运行 `agy` 的。官方 FAQ 对个人套餐不支持这样的用法（[第7章](07-safety-choose.md)），所以你照着做的时候，请直接在应用或终端里运行。
+[^same-memo]: 在 Codex 阶段的审查中，有人指出"前后用不同的笔记，就不是严格的比较"。所以这次用同一份笔记运行了两次。
 [^where]: Antigravity 官方文档，「Customization discovery」. "**Workspace**: the `.agents/` folder in your project, plus `AGENTS.md` and `GEMINI.md` files." / "| [Rules](https://antigravity.google/docs/rules) | `rules/*.md`, `AGENTS.md`, `GEMINI.md` |" / "| [Skills](https://antigravity.google/docs/skills) | `skills/<name>/SKILL.md` |" https://antigravity.google/docs/customization-discovery (确认日期 2026-11-01)
 [^global]: Antigravity 官方文档，「Rules」. "**Standalone global files** (no frontmatter needed, always active): `~/.gemini/AGENTS.md`, `~/.gemini/GEMINI.md`, `~/.gemini/config/AGENTS.md`, or `~/.gemini/config/GEMINI.md`" https://antigravity.google/docs/rules (确认日期 2026-11-01)
 [^global-skill]: Antigravity 官方文档，「Customization discovery」. "To use a personal skill in both the Antigravity App and the Antigravity CLI, put it in `~/.gemini/config/skills/`." https://antigravity.google/docs/customization-discovery (确认日期 2026-11-01)

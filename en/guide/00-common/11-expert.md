@@ -1,5 +1,7 @@
 # Chapter 11. Using AI Like a Pro — Judge, Test, and Build Up
 
+<Badge type="warning" text="Advanced" /> Read this once you are comfortable with the earlier chapters and want to use it even better.
+
 > **One-line summary**: Using AI well takes more than knowing extra buttons. It takes the ability to **judge what to hand off, test before you hand it off, and save what you repeat**.
 > This chapter collects ways of working that apply to any AI service. Menu locations and service-specific features are covered in Stage 2: [ChatGPT Chapter 11](/en/guide/11-chatgpt/11-expert.md) and [Claude Chapter 12](/en/guide/10-claude/12-expert.md).
 
@@ -26,7 +28,7 @@ This chapter focuses on the remaining skill: **deciding what to hand off**.
 
 ## Picking Your First Task to Practice
 
-You do not need to start with your biggest, most important job. At first, pick a task like this. These criteria are the flip side of what the OpenAI course advises you to avoid (tasks that are too broad, done only rarely, high-stakes, or hard to verify).[^academy-openai]
+You do not need to start with your biggest, most important job. At first, pick a task like this.[^guide-pick]
 
 - You do it often
 - The result is clear
@@ -46,14 +48,14 @@ The tasks on the left are so broad that you get stuck just trying to figure out 
 
 ## Test Before You Hand It Off
 
-"Can I trust AI with this job?" Do not guess—test it. The method is simple: try it on **a task where you already know the answer**. Anthropic's course calls this evaluations, or Evals.[^academy-eval] The course uses Claude as an example, but you can use the same method with any other AI (this guide's judgment).
+"Can I trust AI with this job?" Do not guess—test it. The method is simple: try it on **a task where you already know the answer**. Anthropic's course calls this evaluations, or Evals.[^academy-eval] The course uses Claude as an example, but you can use the same method with any other AI.[^guide-judgment]
 
 1. Pick one task you do often. For example, a monthly notice email you sent last month, or a summary table you made last quarter.
 2. Gather 5 to 10 past results that you created yourself.
 3. Give the AI the raw notes or materials you had back then, and ask it to do the same job.
 4. Put the AI's result next to yours and compare them.
 
-For example, you might send a prompt like this. Do not show the AI the email you wrote back then yet (this guide's suggestion). That way, you can see what the AI creates on its own instead of just copying you.
+For example, you might send a prompt like this. Do not show the AI the email you wrote back then yet.[^guide-judgment] That way, you can see what the AI creates on its own instead of just copying you.
 
 ```
 Use the notes below to write next month's notice email for our neighborhood book club members.
@@ -73,7 +75,13 @@ Even if the AI passes your test, keep checking its work. Testing builds confiden
 
 Do not pick a menu first. First, look at the shape of the work in front of you. Once you see that, the right feature to use will follow naturally.[^academy-tabs]
 
-Even if feature names differ from service to service, the features that fit each type of work are similar.
+Even if feature names differ from service to service, the features that fit each type of work are similar. You will learn the features in the table below, with screens, in the Stage 2 service guides. For now, just know that these features exist.
+
+- **Web search**: The AI looks things up on the internet and answers.
+- **Deep research / Research**: The AI finds and reads many sources and organizes them into a report.
+- **Projects**: Keeps the chats, files, and instructions for one job together in one folder.
+- **Work / Cowork**: Instead of a question-and-answer chat, the AI works through several steps and makes a finished file for you.
+- **Scheduled tasks**: When a set time comes, the AI does the job on its own.
 
 | If the work looks like this | ChatGPT | Claude |
 |---|---|---|
@@ -94,12 +102,14 @@ Most of the time, the top row—a single, clear prompt—is enough.[^academy-ope
 
 As you use AI, you will find yourself saying the same things over and over. If you write down what you repeat once, the AI will already know it next time you start.
 
-There are four places to store it. You do not need to use all four from day one. Add them one by one in the order below as you need them.[^academy-layers]
+For example, if you write "Use polite language, in five lines or fewer" in every chat, you only need to write that one line down once.
 
-1. **You make the same request in every chat** → Put it in your instructions. In ChatGPT, this is [Custom Instructions (사용자 지정 지침)](/en/guide/11-chatgpt/05-memory.md#custom-instructions-—-rules-you-want-always-followed); in Claude, it is [Instructions (지침)](/en/guide/10-claude/05-memory.md#instructions-—-rules-for-all-conversations).
-2. **You keep working on the same ongoing job** → Group that work into a Project.
-3. **You explain the same step-by-step process every time** → Save that sequence as a reusable template. Start by putting the template from [Chapter 8, "4. Turn It into a Reusable Template"](08-meta-prompting.md#_4-turn-it-into-a-reusable-template) into your Project instructions. If your service and plan support it, you can also turn it into a Skill.
-4. **You want to share a well-polished template with others** → Share the template as a document, or bundle it using a sharing feature provided by the service (such as a plugin). Depending on your service and plan, this feature may not be available.
+There are four places to store it. You do not need to use all four from day one. Add them one by one in the order below as you need them.[^academy-layers] You will learn the names in Stage 2, so for now, just see it as "moving into bigger and bigger boxes."
+
+1. **You make the same request in every chat** → Put it in your instructions (a note of your requests that is automatically attached to every chat). In ChatGPT, this is [Custom Instructions (사용자 지정 지침)](/en/guide/11-chatgpt/05-memory.md#custom-instructions-—-rules-you-want-always-followed); in Claude, it is [Instructions (지침)](/en/guide/10-claude/05-memory.md#instructions-—-rules-for-all-conversations).
+2. **You keep working on the same ongoing job** → Group that work into a Project (a folder that gathers that job's chats, files, and instructions).
+3. **You explain the same step-by-step process every time** → Save that sequence as a reusable template. Start by putting the template from [Chapter 8, "4. Turn It into a Reusable Template"](08-meta-prompting.md#_4-turn-it-into-a-reusable-template) into your Project instructions. If your service and plan support it, you can also turn it into a Skill (a feature that saves a reusable work sequence in the service).
+4. **You want to share a well-polished template with others** → Share the template as a document, or bundle it using a sharing feature provided by the service (such as a plugin, a bundle of several templates packaged so you can hand them to others). Depending on your service and plan, this feature may not be available.
 
 Going step by step in this order gradually reduces how much you have to explain from scratch each time.
 
@@ -153,11 +163,13 @@ How you upload files and get charts differs by service. See [ChatGPT Chapter 11,
 
 When you want to learn something, do not ask for the answer right away. Instead, ask the AI to guide you so you can think it through yourself. When you figure out the answer on your own, you learn the path to solving it at the same time.
 
+For example, suppose you want to learn VLOOKUP in Excel. VLOOKUP is an Excel function that looks at a number in one table, then finds the matching value (for example, a price) in another table and fills it in. If you don't use Excel, read it with something you want to learn in place of VLOOKUP.
+
 ```
 I want to learn VLOOKUP in Excel. Don't give me the answer right away—ask me questions one at a time so I can think it through myself.
 ```
 
-::: details What the reply roughly looks like (Example — click to expand)
+::: details What the reply roughly looks like (Example — click to expand) (click to expand)
 This is an example created for this guide. Actual replies vary by service and situation.
 
 > Sure, let's think it through together. First question: one table has product IDs and prices, and another table only has product IDs. If you were filling in the prices by hand, how would you do it?
@@ -178,7 +190,7 @@ Having the AI ask you questions works on the same principle as [Chapter 5, "4. H
 
 You learned the habit of checking results before using them in [Chapter 9, "Four Habits for Checking"](09-safety.md#four-habits-for-checking). Here, we will look at how closely to check and at which stage to check.
 
-**You do not need to check every answer with the same level of intensity.** Match your review to the weight of the task.[^academy-openai] The last row of the table comes from the course guidelines, and the first three rows are everyday examples chosen by this guide.
+**You do not need to check every answer with the same level of intensity.** Match your review to the weight of the task.[^academy-openai][^guide-weight]
 
 | For a task like this | Check this much |
 |---|---|
@@ -187,7 +199,7 @@ You learned the habit of checking results before using them in [Chapter 9, "Four
 | Summarizing an article or document | Compare against the original text |
 | Work affecting health, money, jobs, or legal rights | Have an expert review thoroughly or follow an approved process |
 
-**Check at each step, not just once at the end.** If a job takes multiple steps, pause briefly before moving to the next step.[^academy-openai] Ask yourself the following three questions. This guide picked these three from the course's CLEAR review checklist.[^academy-openai]
+**Check at each step, not just once at the end.** If a job takes multiple steps, pause briefly before moving to the next step.[^academy-openai] Ask yourself the following three questions.[^guide-clear]
 
 - **Facts**: Are the numbers, names, dates, and sources right?
 - **Logic**: Do the "because... therefore..." connections make sense?
@@ -215,7 +227,7 @@ Just like in [Chapter 10](10-practice.md), use made-up information instead of re
 4. Make up a 10-row table with dates, items, and amounts, and calculate the total for each item by hand first. Then give the same table to the AI, ask it to show its calculation steps, and compare the two results.
 5. Using the VLOOKUP prompt from this chapter, pick one thing you want to learn lately and practice learning it by answering the AI's questions.
 
-**Ongoing Project** ([Preparing for the Book Club](practice-kit.md)): If you did step 2 using the sample files, your project starts right here. You will find the next step at the end of each chapter in Stage 2. If you follow along with this project, you will finish Stage 2 with a complete November meeting notice package.
+**Ongoing Project** ([Preparing for the Book Club](practice-kit.md)): You become the organizer of a neighborhood book club and prepare its November meeting—one project you carry on little by little, from this chapter to the last chapter of Stage 2 (Service Guides). If you did step 2 using the sample files, your project starts right here. The next steps continue at the end of each chapter in Stage 2. If you follow it to the end, you will have the November meeting notice and a bundle of materials that goes with it (the notice package).
 
 ## Summary
 
@@ -242,6 +254,10 @@ Just like in [Chapter 10](10-practice.md), use made-up information instead of re
 
 Next chapter: You have completed Stage 1. Check your AI understanding level with the [Understanding Check Quiz](certificate.md), or move on to the Stage 2 guides for [ChatGPT](/en/guide/11-chatgpt/01-getting-started.md) and [Claude](/en/guide/10-claude/01-getting-started.md).
 
+[^guide-pick]: These criteria are the flip side of what the OpenAI course advises you to avoid (tasks that are too broad, done only rarely, high-stakes, or hard to verify). The source is the OpenAI Academy footnote below.
+[^guide-judgment]: The course uses Claude as an example. That you can use the same method with other AIs is this guide's judgment, and not showing the AI the email you wrote before is this guide's suggestion.
+[^guide-weight]: The last row of the table comes from the OpenAI Academy course guidelines, and the first three rows are everyday examples chosen by this guide.
+[^guide-clear]: This guide picked these three from the OpenAI Academy course's CLEAR review checklist (Complete, Logical, Evidence, Audience, Relevant: is everything included, does the logic hold, is there evidence, does it fit the reader, is it relevant). The source is the OpenAI Academy footnote below.
 [^academy-4d]: Claude Academy course "Claude 101", lesson "Getting better results". "AI Fluency is the ability to collaborate effectively with AI tools—not just knowing which buttons to click, but developing the judgment to use AI well across different situations." / "Deciding on what work should be done by humans, what work should be done by AI, and how to distribute tasks between them." / "Effectively communicating with AI systems." / "Thoughtfully and critically evaluating AI outputs, processes, behaviors and interactions." / "Using AI responsibly and ethically." / "maintaining transparency, and taking accountability for AI-assisted work." https://academy.claude.com/courses/claude-101/getting-better-results (checked on 2026-10-26)
 [^ways]: OpenAI, "How workers are unlocking new ways of working". Analysis showing that people include more examples and background and ask for verification more often when doing tasks outside their own occupation. https://openai.com/index/unlocking-new-ways-of-working (checked on 2026-10-24)
 [^academy-eval]: Claude Academy course "Claude 101", lesson "Getting better results". "Evals (short for evaluations) are a way to develop intuition for assessing Claude's outputs on the tasks that matter to you." / "Collect 5-10 examples of a task you do regularly—emails you've written, reports you've created, analyses you've done." / "Include the context you'd naturally have when doing this work." / "Does Claude capture the key information?" / "Is the tone and style appropriate?" / "What's missing or could be improved?" / "But if you can't get there after several refinements, you've learned that this isn't a task you should delegate." / "Just remember, validation builds confidence, but it doesn't eliminate responsibility." https://academy.claude.com/courses/claude-101/getting-better-results (checked on 2026-10-26)

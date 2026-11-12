@@ -1,5 +1,7 @@
 # Chapter 10. Hands-on Exercises — One Full Loop from Start to Finish
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: Put Chapters 1 to 9 together into one continuous flow: **Plan → Build → Verify → Review → Deploy → Operate → Safety Check**.
 > For the final exercise, build something from scratch for **your own problem**. Check your work with the checklist.
 
@@ -76,7 +78,9 @@ Source: Summary from this guide
 
 ## Try It with Other Tools
 
-Codex and Antigravity from Stage 3 have matching features, so you can follow the same flow with them.
+This section is optional. If you used only Claude Code in Stage 3, you can skip it.
+
+Besides Claude Code, Stage 3 has guides for Codex (OpenAI's coding tool) and Antigravity (Google's coding tool). These two tools also have matching features, so you can follow the same flow with them. The names in the table are the commands, screens, or files that do that job in each tool.
 
 | What you do | Codex | Antigravity |
 |---|---|---|

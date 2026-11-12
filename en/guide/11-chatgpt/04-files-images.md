@@ -1,5 +1,7 @@
 # Chapter 4. Files, Photos, and Creating Images — Show It, Ask It to Draw
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: If something is hard to explain in words, **upload a photo or file** to show it. If you need a picture, **ask ChatGPT to make one**.
 > Uploaded files are collected in Library (라이브러리) so you can use them again. On the Free plan, you can only upload a few files per day.
 
@@ -12,9 +14,11 @@ Once the file appears above the message box, type what you want to do with it an
 
 ![Screen showing the expanded + menu in the message box. Look at "Add photos & files — Upload from computer" at the top, followed by "Add from library", "Create image", and "Sketch" below it](../../../guide/11-chatgpt/assets/shot-02-plus-menu-marked.png)
 
-Chat titles and the account name in this screenshot were replaced with examples. In this chapter, we use ① the + button, ② Add photos & files, ③ Add from library (라이브러리에서 가져오기), ④ Create image (이미지 생성), and ⑧ Sketch (스케치).
+Chat titles and the account name in this screenshot were replaced with examples. In this chapter, we use ① the + button, ② Add photos & files, ③ Add from library (라이브러리에서 가져오기), ④ Create image (이미지 생성), and ⑧ Sketch (스케치). The rest, ⑤–⑦ (web search, Work, deep research), are covered in other chapters ([Chapter 2](02-screen-tour.md#the-input-box-and-the-menu)).
 
-Here is what you can upload.[^files]
+### Files You Can Upload
+
+Here is what you can upload.[^files][^video]
 
 | Type | Examples |
 |---|---|
@@ -24,10 +28,10 @@ Here is what you can upload.[^files]
 | Presentations | PowerPoint (PPTX) |
 | Audio (paid plans only) | WAV, MP3, M4A audio recordings |
 
-You can also attach videos. This works on the Free plan too. However, availability depends on your device and how you upload. Also, ChatGPT might not understand the entire video or its audio.[^image-faq]
-
 You cannot upload Google Docs (`.gdoc`) directly. Download the file from Google Docs as a PDF or Word file first, then upload it.[^files]
 When you upload a PDF directly to a chat, ChatGPT reads not only the text but also **the pictures and charts inside it**.[^files]
+
+### Write What You Want Along With It
 
 Instead of just uploading a file and saying "Look at this," write what you want along with it. You will get a much better answer.
 
@@ -43,7 +47,7 @@ The first file is the official notice (original), and the second file is my summ
 Find all facts or numbers in my summary that differ from the original, and anything that is not in the original.
 ```
 
-::: details What the reply looks like (example — click to expand)
+::: details What the reply looks like (example — click to expand) (click to expand)
 This is an example created for this guide. Actual replies vary by service and situation.
 
 > Comparing it with the original, there are three differences.
@@ -59,6 +63,8 @@ This is an example created for this guide. Actual replies vary by service and si
 **Check if you got a good answer**: Did it find all the facts and numbers that differ from the original? Did it separately mark content that is not in the original? Compare the places it pointed out against the actual original file once yourself.
 
 :::
+
+### When Uploading Photos
 
 For a photo, you can write like this.
 
@@ -78,7 +84,14 @@ Keep these points in mind when uploading photos.[^image-faq]
 
 ## How Much You Can Upload — Limits by Plan
 
-Files have size and count limits. Here are the numbers from the official help center.[^files]
+Files have size and count limits. On the Free plan, the first limit you will bump into is **3 files per day**. If you need to ask about several files, upload the most important ones first.
+If you have several photos, stitching them into a single image before uploading is one workaround. That saves your daily upload count.
+
+You will rarely hit the other limits. Check the table below only when your files are very large or numerous.
+
+A **token** in the table is a small piece of text that AI breaks words into when reading. Two million tokens is a huge amount of text. Everyday work documents rarely hit this limit.
+
+Here are the numbers from the official help center.[^files]
 
 | Limit | Value |
 |---|---|
@@ -91,10 +104,6 @@ Files have size and count limits. Here are the numbers from the official help ce
 | Total storage for your account | Up to 25 GB |
 | Audio files | **Paid plans only** |
 
-A **token** is a small piece of text that AI breaks words into when reading. Two million tokens is a huge amount of text. Everyday work documents rarely hit this limit.
-
-On the Free plan, the first limit you will bump into is **3 files per day**. If you need to ask about several files, upload the most important ones first.
-If you have several photos, stitching them into a single image before uploading is one workaround. That saves your daily upload count.
 Limit numbers change often, so treat the values above as current as of the checked date.
 
 <Quiz id="ch104-limits" />
@@ -106,6 +115,15 @@ If you want to reuse a file you uploaded earlier, click the + button → Add fro
 
 <!-- 스크린샷 필요: 옆 메뉴 「라이브러리」를 연 화면 (웹, 예시 파일만 보이게) -->
 
+Here are a few things to know.
+
+- **Deleting a chat does not delete its files from Library.** To remove a file, delete it separately inside Library.[^delete][^library-restore]
+- Files uploaded in **Temporary Chat** ([Chapter 3](03-chats.md)) are not saved to Library.[^library]
+- **Download links inside a chat expire quickly.** Download files created by ChatGPT right away. If an English message like "Download failed" appears, the link may have expired. In that case, ask ChatGPT to make the file again.[^errors]
+
+> **If you see "Space" (스페이스) on your side menu,** treat it as the same place as Library in this section. Library is being renamed to Space.[^space]
+
+::: details Library storage by plan (click to expand)
 How much you can store in Library depends on your plan.[^library]
 
 | Plan | Library storage |
@@ -114,15 +132,11 @@ How much you can store in Library depends on your plan.[^library]
 | Go | 4 GB |
 | Plus · Business | 20 GB |
 | Pro | 100 GB |
+:::
 
-Here are a few things to know.
-
-- **Deleting a chat does not delete its files from Library.** To remove a file, delete it separately inside Library.[^delete]
-- You can sometimes restore deleted files from Recently Deleted (최근 삭제된 항목). They are scheduled to be permanently deleted within 30 days.[^library]
-- Files uploaded in **Temporary Chat** ([Chapter 3](03-chats.md)) are not saved to Library.[^library]
-- **Download links inside a chat expire quickly.** Download files created by ChatGPT right away. If it fails with a message like "Download failed", ask ChatGPT to generate the file again.[^errors]
-
-> **Library is being replaced by "Space" (스페이스).** Space replaces Library, while Projects stay as they are.[^space] In Space, besides files, you can also create **pages** (editable documents) to work on together with other people. As of October 24, 2026, the screen in this guide still showed Library. If you see "Space" on your side menu, treat it as the same place as Library in this section.
+::: details Want to know more about Space? (click to expand)
+Space replaces Library, while Projects stay as they are. In Space, besides files, you can also create **pages** (editable documents) to work on together with other people. As of October 24, 2026, the screen in this guide still showed Library.[^space]
+:::
 
 <Quiz id="ch104-library" />
 
@@ -162,11 +176,9 @@ The attached photo is our shop sign. Keeping the colors and lettering style of t
 create a Chuseok holiday closure notice poster. Closed: October 5–7.
 ```
 
-Under Settings → Personalization (개인 맞춤 설정), you will also find Reference photo (참고 사진) and Full-body reference photo (전신 참고 사진). We cover Personalization in [Chapter 5](05-memory.md).
+The Settings → Personalization (개인 맞춤 설정) screen also has Reference photo (참고 사진) and Full-body reference photo (전신 참고 사진). This guide does not cover these two items separately. When making a picture, uploading a reference photo straight into the chat as shown above is enough.
 
-Pictures made by ChatGPT include **C2PA** (an international standard tag that records how an image was made).[^faq] You cannot see it on the picture, as it is saved inside the image file itself.
-
-For the rights to AI-generated images and what to watch out for when uploading other people's photos or artwork, check [Part 1, Chapter 9](../00-common/09-safety.md).
+For the rights to AI-generated images and what to watch out for when uploading other people's photos or artwork, check [Part 1, Chapter 9](../00-common/09-safety.md).[^faq]
 
 <Quiz id="ch104-image" />
 
@@ -239,7 +251,9 @@ Next chapter: [Chapter 5. Memory and Personalization](05-memory.md)
 [^image-faq]: OpenAI Help Center, "ChatGPT Image Inputs FAQ". "The model does not perform as well handling images with text of non-Latin alphabets, such as Japanese or Korean." / "The model is not suitable for interpreting specialized medical images like CT scans" / "consider using a photo edit markup tool on your image before uploading." / "ChatGPT can accept video files as attachments through supported upload methods, including on Free plans." / "It may not analyze the entire video or accurately interpret its audio." https://help.openai.com/en/articles/8400551 (checked on 2026-10-24)
 [^errors]: OpenAI Help Center, "Troubleshooting ChatGPT Error Messages". "Ensure that the file is recently generated, files generated by ChatGPT expire quickly". https://help.openai.com/en/articles/7996703 (checked on 2026-10-24)
 [^space]: OpenAI Help Center, "ChatGPT Space: sharing, data, and controls". "It replaces Library, while your Projects stay as they are." / "Pages are editable documents that you can organize inside other pages and work on with other people." https://help.openai.com/en/articles/20001544 (checked on 2026-10-24)
-[^faq]: OpenAI Help Center, "What is ChatGPT: FAQ". "ChatGPT images include C2PA provenance metadata." https://help.openai.com/en/articles/12677804 (checked on 2026-10-24)
+[^faq]: Pictures made by ChatGPT include **C2PA** (an international standard tag that records how an image was made). You cannot see it on the picture, as it is saved inside the image file itself. Source: OpenAI Help Center, "What is ChatGPT: FAQ". "ChatGPT images include C2PA provenance metadata." https://help.openai.com/en/articles/12677804 (checked on 2026-10-24)
+[^video]: You can also attach videos. This works on the Free plan too. However, availability depends on your device and how you upload. Also, ChatGPT might not understand the entire video or its audio. The source is "ChatGPT Image Inputs FAQ" below.
+[^library-restore]: You can sometimes restore deleted files from Recently Deleted (최근 삭제된 항목). They are scheduled to be permanently deleted within 30 days. The source is "Using Library to manage files in ChatGPT" below.
 [^delete]: OpenAI Help Center, "Deleting and archiving chats in ChatGPT". "Deleting a chat does not delete files saved separately in Library." https://help.openai.com/en/articles/8809935 (checked on 2026-10-23)
 [^academy-content]: OpenAI Academy course content (login and registration required). AI Foundations: "Use this template as a model. Rewrite my draft so it follows the same structure and tone." Applied AI Foundations: "Verify" "Check whether a draft is supported by the source" (checked on 2026-10-26)
 [^screen-sketch]: Verified directly by opening Sketch Editor (스케치 편집기) via + menu → Sketch and checking the confirmation dialog when closing ("Continue editing" (계속 편집하기) / "Discard changes" (변경 사항 삭제)) (checked on 2026-10-28, Plus account web app)

@@ -1,5 +1,7 @@
 # Chapter 6. Search and Research — Getting Up-to-Date Information with Sources
 
+<Badge type="info" text="Optional" /> Read this when you need it. You can skip it and still follow the later chapters.
+
 > **One-line summary**: Use **web search** for things that happened today or information that changes often, and hand off big questions that need gathering and comparing multiple sources to
 > **Research**. Either way, opening and checking the attached sources yourself is part of the deal.
 
@@ -36,7 +38,8 @@ For questions that need pictures, it sometimes shows **images** found through se
 ## Giving It a Link to Read
 
 If there is a web page you want Claude to read, paste the **address** (URL, the internet address attached to each web page).
-When web search is on, Claude reads the content of that page directly. This is called **web fetch**.[^fetch]
+Then Claude reads the content of that page directly. This is called **web fetch**.[^fetch]
+Web fetch only works when web search is available.[^fetch] On the new screen, as you saw in the section above, there is nothing separate to turn on.
 
 ```
 Read the article below and summarize in three lines only the parts that apply to a small restaurant like our shop.
@@ -60,7 +63,7 @@ This screenshot was taken in incognito mode (free plan). **The red numbers match
 
 - ① **"Searched the web (웹 검색함)"** — A label showing that Claude looked on the internet. Click it to expand what it searched for.
 - ② **Source badge** — The small tag at the end of a sentence ("museum", "segye", etc.) is the site that sentence came from.
-- ③ A notice that because this is incognito mode, this conversation is not used for history, memory, or training.[^screen]
+- ③ A notice that appears because this screen was captured in incognito mode. It has nothing to do with search, so you can skip it.[^screen]
 
 If you click ① and expand it once more, you can see the search query Claude used and the list of sites returned in the search results.
 
@@ -91,7 +94,7 @@ Leave out personal blog sources from your last answer, and tell me again using o
 Attach which page each piece of information came from.
 ```
 
-For questions where location matters, like "good restaurants nearby," Claude may use an approximate location inferred from your **IP address** (a number assigned to each device connected to the internet).[^search] If you get results for the wrong area, write the neighborhood name directly.
+For questions where location matters, like "good restaurants nearby," write the neighborhood name directly. If you don't, Claude may use a location guessed from your internet connection (IP address, a number assigned to each device connected to the internet). Then you may sometimes get results for the wrong area.[^search]
 
 <Quiz id="ch206-citations" />
 
@@ -100,6 +103,8 @@ For questions where location matters, like "good restaurants nearby," Claude may
 **Research** is a feature that digs deep into a single question.
 It runs multiple searches in a row and decides what to look into next based on what it finds.[^research]
 It is available on paid plans (Pro, Max, Team, Enterprise) on the web, desktop, and mobile apps.[^research]
+
+If you are on the free plan, just skimming this section is enough. There are two key points. **Write your question in detail, and check the numbers in the report you get against the sources.** These two points apply just the same to web search.
 
 ### How to Start
 
@@ -116,7 +121,7 @@ Even on the Korean screen, "Research" may appear in English as is.
 ![Screen where typing ① "/deep" in the input box brings up ② "deep-research" in the list, with ③ an English description next to it](../../../guide/10-claude/assets/shot-12-deep-research-marked.png)
 
 This is the free plan screen. ① Even when you type just `/deep` in the input box, ② "deep-research" pops up in the list. ③ Next to it is an English description of when to use the feature.[^screen]
-There was no "Research" in the "+" menu on a free account. Although the name showed up in the list, the help docs say Research is a paid plan feature.[^research] This guide did not test sending a Research request from a free account.
+There was no "Research" in the "+" menu on a free account. Although the name showed up in the list, the help docs say Research is a paid plan feature.[^research] So this guide has no screenshot of Research results. That is because we did not try sending one from a free account.
 
 The more detailed your question, the better. Try putting in all five elements from [Stage 1, Chapter 4](../00-common/04-prompt-basics.md#the-5-elements-of-a-good-prompt).
 
@@ -128,7 +133,7 @@ Write a report comparing delivery app fees that a neighborhood side-dish shop ca
 - Prioritize 2026 materials, and mark any materials with unknown dates separately
 ```
 
-::: details The answer you get looks roughly like this (example — click to expand)
+::: details The answer you get looks roughly like this (example — click to expand) (click to expand)
 This is an example created for this guide. Actual answers vary by service and over time.
 
 > **One-line conclusion**: For an owner running 1 shop, App ○ is the best deal when you add up all three costs.
@@ -158,11 +163,16 @@ Try including conditions like budget, area, and timeframe.[^academy-research] Ha
 
 - **It can use up your usage limit quickly.** The limit is the same as regular chats. However, because it gathers multiple sources and writes a long answer, it uses up your limit faster.[^research]
 - **If it does not seem to be using Research,** tell it directly: "Claude, please use the research tool to..."[^research]
-- **It also uses connected apps.** If you have turned on connectors (other apps connected to Claude, [Chapter 7](07-projects-tools.md)), it uses those tools automatically during Research without asking each time.[^research]
-- **Starting on mobile searches only the web.** It skips connectors without telling you separately. If you need materials from your connected apps too, start on the web or desktop.[^research]
 - **The model is fixed.** Regardless of which model you picked, a specific model set for Research runs.[^research]
 
 The longer and more convincing a report looks, the easier it is to skip checking. Start with the numbers used in the conclusion and open the sources to verify them.
+
+::: details If you have connected other apps such as email or calendar (click to expand)
+You can connect other apps such as email or calendar to Claude. Apps connected this way are called **connectors** ([Chapter 7](07-projects-tools.md)). If you have never connected one, you can skip this box.
+
+- **It also uses connected apps.** If you have turned on connectors, it uses those tools automatically during Research without asking each time.[^research]
+- **Starting on mobile searches only the web.** It skips connectors without telling you separately. If you need materials from your connected apps too, start on the web or desktop.[^research]
+:::
 
 <Quiz id="ch206-research" />
 
@@ -183,6 +193,7 @@ You can choose among them like this:[^when]
 Research fits broad investigations that use tools five or more times over 1 to 3 minutes.[^when]
 
 If you turn on extended thinking and Research **together**, Claude plans its approach first and then gathers information broadly to produce a longer report.[^when]
+The extended thinking toggle appears in the model menu depending on your plan and model ([Chapter 2](02-screen-tour.md)). If you see the toggle, leave it on and start Research. If you don't, using Research alone is fine.
 
 <Quiz id="ch206-when" />
 

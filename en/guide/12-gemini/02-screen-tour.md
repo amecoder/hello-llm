@@ -1,5 +1,7 @@
 # Chapter 2. Tour the Screen — Where Everything Is
 
+<Badge type="tip" text="Required" /> Read this to follow this stage.
+
 > **One-line summary**: On the Gemini screen, you only need to know four places: the **left sidebar** (past chats), the **center text box** (where you ask questions, plus "+"),
 > the **model button on the right of the text box** (model and thinking level), and **Settings (설정) at the bottom left**. At first, using just the text box is enough.
 
@@ -25,6 +27,8 @@ It is easy if you divide the screen into five areas.
 
 Source: Checked directly on the Gemini web screen[^screen]
 
+**Notebooks** in ① is where you group materials and chats by topic. We cover it in [Chapter 6](06-search.md).
+
 Below the text box, the Chat (채팅) and Task (작업) switch lets you choose between a normal conversation and a **task where you hand off a whole job**. We cover tasks in [Chapter 8](08-tasks.md), so leave it on Chat for now.[^screen][^models]
 
 You do not need to know everything right away. Just typing a question in the text box and sending it is enough. Come back to this chapter for the rest when you need it.
@@ -39,7 +43,7 @@ From top to bottom, the left sidebar has the following items.[^screen]
 - **New chat (새 채팅)**: Open a new conversation. Click here when you change topics ([Chapter 1](01-getting-started.md)).[^start]
 - **Library (라이브러리) · Images (이미지)**: View the files and pictures you uploaded or created in one place ([Chapter 4](04-files-create.md)).
 - **Scheduled (예약됨)**: View tasks set to run automatically at a chosen time.
-- **Customize (맞춤설정)**: Add skills and connected apps.
+- **Customize (맞춤설정)**: Add skills (saved instructions for requests you make often) and connected apps (Google apps like Gmail and Drive that you use together with Gemini). We cover these in [Chapter 7](07-skills-apps.md).
 - **Notebooks (노트북)**: Group materials and chats by topic. Includes New notebook (새 노트북) and All notebooks (모든 노트북).
 - **All (전체)**: The list of conversations you have had so far. The most recent chat is at the top.
 
@@ -73,7 +77,7 @@ Source: Checked directly on the Gemini web screen[^screen]
 
 It looks like a lot of menus, but at first you only need to know Upload files (파일 업로드). We cover the rest one by one starting in Chapter 4.
 
-You can upload **up to 10 files** at a time. Each video can be up to 2 GB, and any other file can be up to 100 MB.[^files]
+You can upload **up to 10 files** at a time. See [Chapter 4](04-files-create.md) for size limits.[^files]
 
 Click the microphone (Voice input (음성기록)) on the right side of the text box to speak your prompt instead of typing.[^screen]
 
@@ -132,7 +136,8 @@ If you do not choose one, the default is Low (낮음).[^models] Some Korean help
 ### When to Turn It Up
 
 **More advanced models and higher thinking levels use more of your usage limit.**[^models] So you do not need to keep them at the highest setting all the time.
-Normally, use the default (Low) or a lighter setting, and move up one step only when an answer feels shallow or wrong. "Argon High (Argon 높음)" in the screenshot was chosen just to show the menu in this guide. Argon only appears on Pro and Ultra plans ([Chapter 1](01-getting-started.md)). Making the AI think longer does not always produce a better answer either ([Stage 1 Chapter 5](../00-common/05-prompt-patterns.md)).
+Normally, use the default (Low) or a lighter setting. Move up one step only when an answer feels shallow or wrong.
+Making the AI think longer does not always produce a better answer either ([Stage 1 Chapter 5](../00-common/05-prompt-patterns.md)).[^argon-shot]
 
 Keep two things in mind.[^models]
 
@@ -241,6 +246,7 @@ Next chapter: [Chapter 3. Managing Conversations](03-chats.md)
 
 [^screen]: Checked directly on the Gemini web screen (Google AI Pro, Korean). Home screen greeting "How can I help you? (무엇을 도와드릴까요?)", text box "Ask Gemini (Gemini에게 물어보기)", "Upload and tools (업로드 및 도구)" (+), model button and "Voice input (음성기록)", top-right "Install app (앱 설치)" and "Temporary chat (임시 채팅)" icons, and "Chat (채팅)" / "Task (작업)" switch below the text box. Temporary chat notice: "Temporary chats won't appear in your recent chats and won't be used to improve Google AI. For safety, they are stored for 72 hours. (임시 채팅은 최근 채팅에 표시되지 않으며, Google AI를 개선하는 데 사용되지 않습니다. 안전을 위해 72시간 동안 저장됩니다.)" Sidebar items: "Search for chats (채팅 검색)", "Close sidebar (사이드바 닫기)", "New chat (새 채팅)", "Library (라이브러리)", "Images (이미지)", "Scheduled (예약됨)", "Customize (맞춤설정)", "Notebooks (노트북)", "All (전체)", and account name, plan badge, and "Settings (설정)" at the bottom. + menu items: "Upload files (파일 업로드)", "Add files from Drive (Drive에서 파일 추가)", "More uploads (업로드 더보기)", "Create image (이미지 만들기)", "Create video (동영상 만들기)", "Create music (음악 만들기)", "More tools (도구 더보기)", and under "More tools": "Canvas", "Deep Research", "Guided Learning (가이드 학습)", "Personal Intelligence (Labs) (개인 인텔리전스(Labs))" (on 2026-10-30, these tools were on the first level of the + menu). Model menu: "3.5 Flash-Lite — Fastest answers (가장 빠른 답변 제공)", "3.8 Flash — Get help with anything (무엇이든 도움을 받으세요)", "3.1 Pro — Advanced reasoning (고급 추론)", "4 Argon — Complex tasks (복잡한 작업)", and thinking levels "Low — Fast and efficient (낮음 — 빠르고 효율적)", "Medium — Balanced depth (보통 — 균형 잡힌 깊이)", "High — Very thorough (높음 — 매우 철저함)". Settings menu: "Account (계정)" ("Usage limits (사용량 한도)", "Manage subscription (구독 관리)"), "Preferences (환경설정)" ("Personal Intelligence (개인 인텔리전스)", "Skills (스킬)", "Theme (테마)", "Task settings (작업 설정)"), "Data & privacy (데이터 및 개인 정보 보호)" ("Import memory to Gemini (Gemini로 메모리 가져오기)", "My public links (내 공개 링크)", "Send feedback (의견 보내기)", "Help (도움말)", "Location (위치)", "Activity (활동)"). "Activity" opens in a new tab as "Gemini Apps Activity (Gemini 앱 활동)". Korean Help Center UI labels: "Edit text (텍스트 수정)", "Update (업데이트)" (13275745), "See response details (응답 세부정보 보기)" (18648722). (checked on 2026-10-30; screenshots, + menu, and temporary chat checked on 2026-10-31)
 [^start]: Google Help, "Use Gemini Apps". "In the text box at the bottom, enter your question or prompt." / "To start a new chat, at the top left, click New chat" / "You can start a temporary chat that won’t appear in your Gemini Apps Activity or your recent chats." / "A personal Google Account. This feature is not available for users signed in to a work or school Google Account." / "When you leave the temporary chat, you’ll no longer have access to that chat, and it won’t appear in your recent chats." / "Use Connected Apps and other integrated services that require the Keep Activity setting to be turned on." / "Get personalized responses." / "If you want to revise your prompt, you can edit it, and Gemini will regenerate the response." https://support.google.com/gemini/answer/13275745 (checked on 2026-10-30)
+[^argon-shot]: "Argon High (Argon 높음)" in the screenshot was chosen just to show the menu in this guide. Argon only appears on Pro and Ultra plans ([Chapter 1](01-getting-started.md)).
 [^files]: Google Help, "Upload & analyze files in Gemini Apps". "Up to 10 files (subject to availability) can be uploaded in the same prompt. When uploading a folder, each file inside will count towards this limit." / "Each video can be up to 2 GB. All other supported file types can be up to 100 MB." https://support.google.com/gemini/answer/14903178 (checked on 2026-10-30)
 [^models]: Google Help, "About Gemini models". "Gemini Flash-Lite: A fast, cost-efficient model built for quick answers to everyday questions and lightweight tasks." / "Gemini Pro: An advanced reasoning model designed for complex prompts, sophisticated coding, and in-depth problem-solving." / "Gemini Argon: Top-tier intelligence, dynamic deep reasoning, and the highest performance for complex workflows." / "Auto or Flash-Lite*" / "If you have a Google AI plan you can manually switch models in both Chat Mode and Task Mode." / "Higher-tier models marked with a lock icon require an eligible plan upgrade" / "Low: Provides fast, concise answers for straightforward queries." / "High: Allows the model to carefully process and reason through complex, multistep prompts." / "If you don’t select a thinking level, it will default to Low." / "More advanced models and higher thinking levels require more of your usage." / "If you have a Google AI plan and reach your usage limit, your chat will continue with Flash-Lite." / "Gemini will continue to use that model and thinking level during the current conversation including if you later return to that same conversation." / "From the menu, select See response details ." / "Access to specific Gemini models, thinking levels, and task features varies depending on your plan and your remaining available usage." The Help Center states that automatic model selection is the default, but the model menu on the Pro account checked for this guide did not have an "Auto (자동)" item. https://support.google.com/gemini/answer/18648722 (checked on 2026-10-30)
 [^privacy]: Google Help, "Gemini Apps Privacy Hub". "Temporary chats and chats you have when Keep Activity is off are retained with your account for 72 hours and used to:" / "Temporary chats are not used to train Google’s AI models." https://support.google.com/gemini/answer/13594961 (checked on 2026-10-30)
