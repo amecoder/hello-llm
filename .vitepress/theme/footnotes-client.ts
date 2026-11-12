@@ -1,13 +1,20 @@
 // Browser side of the folded footnote box (.vitepress/footnotes.ts builds the HTML).
-// - clicking a footnote number opens the box first, so the jump lands on a visible note
+// - a footnote number (or a #fnN address) opens the box and scrolls to the note
 // - the toggle shows or hides the English source quotes
 import type { Router } from 'vitepress'
 
-function openBoxFor(id: string): void {
-  if (!id) return
-  const target = document.getElementById(decodeURIComponent(id))
+function openBoxFor(id: string, scroll: boolean): void {
+  let target: HTMLElement | null = null
+  try {
+    target = id ? document.getElementById(decodeURIComponent(id)) : null
+  } catch {
+    return // a malformed address in the URL bar
+  }
   const box = target?.closest('details.footnotes-box')
-  if (box instanceof HTMLDetailsElement) box.open = true
+  if (!(box instanceof HTMLDetailsElement) || !target) return
+  box.open = true
+  // VitePress scrolls before the box opens in some browsers; scroll again once it is open
+  if (scroll) requestAnimationFrame(() => target?.scrollIntoView({ block: 'start' }))
 }
 
 function onClick(event: MouseEvent): void {
@@ -17,20 +24,20 @@ function onClick(event: MouseEvent): void {
     const box = toggle.closest('details.footnotes-box')
     const shown = box?.classList.toggle('show-quotes') ?? false
     toggle.textContent = (shown ? toggle.dataset.hide : toggle.dataset.show) ?? ''
+    toggle.setAttribute('aria-pressed', String(shown))
     return
   }
   const ref = el?.closest('a[href^="#fn"]')
-  if (ref instanceof HTMLAnchorElement) openBoxFor(ref.hash.slice(1))
+  if (ref instanceof HTMLAnchorElement) openBoxFor(ref.hash.slice(1), true)
 }
 
 export function setupFootnotes(router: Router): void {
   if (typeof window === 'undefined') return
-  // capture phase: open the box before VitePress scrolls to the note
-  window.addEventListener('click', onClick, true)
-  window.addEventListener('hashchange', () => openBoxFor(location.hash.slice(1)))
+  window.addEventListener('click', onClick)
+  window.addEventListener('hashchange', () => openBoxFor(location.hash.slice(1), true))
   const previous = router.onAfterRouteChange
   router.onAfterRouteChange = async (to) => {
     await previous?.(to)
-    requestAnimationFrame(() => openBoxFor(location.hash.slice(1)))
+    requestAnimationFrame(() => openBoxFor(location.hash.slice(1), true))
   }
 }

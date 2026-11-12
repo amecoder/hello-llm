@@ -34,19 +34,32 @@ function isSourceQuote(inner: string): boolean {
   return !CJK.test(text) && (text.match(/[A-Za-z]/g)?.length ?? 0) >= 12
 }
 
-function hideQuotes(list: string): string {
-  const wrapped = list.replace(QUOTE, (whole, inner: string) =>
+// Quotes are hidden only in a note that cites a web source; a note without a link records
+// what the guide itself saw, and its quoted words are part of the sentence.
+// A note with an odd number of quote marks is left alone: pairing would go wrong.
+function hideQuotesIn(item: string): string {
+  if (!/<a href="https?:\/\//.test(item)) return item
+  if ((item.match(/&quot;/g)?.length ?? 0) % 2 === 1) return item
+  const wrapped = item.replace(QUOTE, (whole, inner: string) =>
     isSourceQuote(inner) ? `<span class="fn-quote">${whole}</span>` : whole,
   )
   // "A" / "B" → one hidden run, so no stray slash is left
   return wrapped.replace(/<\/span>(\s*\/\s*)<span class="fn-quote">/g, '$1')
 }
 
-// a link whose text is its own URL shows only the site name
+function hideQuotes(list: string): string {
+  return list.replace(/<li id="fn[\s\S]*?<\/li>/g, hideQuotesIn)
+}
+
+// a link whose text is its own URL shows only the site name; the full address stays in title
 function shortenUrls(list: string): string {
-  return list.replace(/<a href="(https?:\/\/[^"]+)"([^>]*)>\1<\/a>/g, (_whole, href: string, attrs: string) => {
-    const host = new URL(href).hostname.replace(/^www\./, '')
-    return `<a href="${href}"${attrs}>${host}</a>`
+  return list.replace(/<a href="(https?:\/\/[^"]+)"([^>]*)>\1<\/a>/g, (whole, href: string, attrs: string) => {
+    try {
+      const host = new URL(href).hostname.replace(/^www\./, '')
+      return `<a href="${href}"${attrs} title="${href}">${host}</a>`
+    } catch {
+      return whole // a decoration must never break the build
+    }
   })
 }
 
@@ -58,7 +71,7 @@ export function foldFootnotes(html: string, lang: FootnoteLang): string {
   // one "back to text" arrow per note is enough; repeats (#fnref1:1, :2 …) only add clutter
   const list = shortenUrls(hideQuotes(m[1])).replace(/\s*<a href="#fnref\d+:\d+" class="footnote-backref">↩︎<\/a>/g, '')
   const toggle = list.includes('class="fn-quote"')
-    ? `<button type="button" class="fn-quote-toggle" data-show="${t.show}" data-hide="${t.hide}">${t.show}</button>\n`
+    ? `<button type="button" class="fn-quote-toggle" aria-pressed="false" data-show="${t.show}" data-hide="${t.hide}">${t.show}</button>\n`
     : ''
   const box = `<details class="footnotes-box"><summary>${t.title(count)}</summary>\n${toggle}<section class="footnotes">${list}</section>\n</details>`
   return html.replace(m[0], () => box)
