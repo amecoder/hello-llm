@@ -63,3 +63,23 @@ test('the favicon loads', async ({ page, request }) => {
   expect(href).toBe('/hello-llm/favicon.svg')
   expect((await request.get(href!)).status()).toBe(200)
 })
+
+test('footnotes start folded, a footnote number opens them, and quotes show on request', async ({ page }) => {
+  await page.goto('guide/10-claude/10-voice-mobile.html')
+  const box = page.locator('details.footnotes-box')
+  await expect(box).toHaveCount(1)
+  await expect(box).not.toHaveAttribute('open', '')
+  await page.locator('.footnote-ref a').first().click()
+  await expect(box).toHaveAttribute('open', '')
+  await expect(page.locator('#fn1')).toBeVisible()
+  const quote = box.locator('.fn-quote').first()
+  await expect(quote).toBeHidden()
+  await box.locator('.fn-quote-toggle').click()
+  await expect(quote).toBeVisible()
+})
+
+test('opening a page at a footnote address shows that note (English page)', async ({ page }) => {
+  await page.goto('en/guide/10-claude/10-voice-mobile.html#fn2')
+  await expect(page.locator('details.footnotes-box')).toHaveAttribute('open', '')
+  await expect(page.locator('#fn2')).toBeInViewport()
+})
