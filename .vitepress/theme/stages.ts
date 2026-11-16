@@ -1,8 +1,9 @@
 // Learning stages and how chapter numbers map to them: 1-99 are the common guide,
 // 101-199 the ChatGPT guide (101 = its chapter 1), 201-299 the Claude guide, 301-399 the Gemini guide,
 // 401-499 the 3단계 Claude Code guide, 501-599 the 3단계 Codex guide, 601-699 the 3단계 Antigravity guide, 701-799 the 4단계 AI-SDLC guide, 801-899 the 3단계 Claude Code terminal guide,
+// 901-999 the 5단계 내 서비스 만들기 guide (Korean only for now),
 // so one number names a chapter site-wide. STAGES is in menu order, which need not follow base.
-export type StageId = 'common' | 'chatgpt' | 'claude' | 'gemini' | 'claude-code' | 'codex' | 'antigravity' | 'claude-code-cli' | 'ai-sdlc'
+export type StageId = 'common' | 'chatgpt' | 'claude' | 'gemini' | 'claude-code' | 'codex' | 'antigravity' | 'claude-code-cli' | 'ai-sdlc' | 'my-service'
 
 export type Stage = { id: StageId; title: string; dir: string; base: number; link: string }
 
@@ -16,6 +17,7 @@ export const STAGES: readonly Stage[] = [
   { id: 'codex', title: '3단계 · Codex', dir: 'guide/21-codex', base: 500, link: '/guide/21-codex/' },
   { id: 'antigravity', title: '3단계 · Antigravity', dir: 'guide/22-antigravity', base: 600, link: '/guide/22-antigravity/' },
   { id: 'ai-sdlc', title: '4단계 · AI-SDLC', dir: 'guide/30-ai-sdlc', base: 700, link: '/guide/30-ai-sdlc/' },
+  { id: 'my-service', title: '5단계 · 내 서비스 만들기', dir: 'guide/40-my-service', base: 900, link: '/guide/40-my-service/' },
 ]
 
 export function stageOf(chapter: number): Stage {

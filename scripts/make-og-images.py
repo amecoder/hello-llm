@@ -27,6 +27,7 @@ CARDS = [
     ("21-codex", "Codex", 3, "#34d399"),
     ("22-antigravity", "Antigravity", 3, "#60a5fa"),
     ("30-ai-sdlc", "AI-SDLC", 4, "#c084fc"),
+    ("40-my-service", "My Service", 5, "#f472b6"),
 ]
 
 
@@ -37,8 +38,8 @@ def draw_card(name: str, text: str, stage: int, accent: str) -> None:
     draw.text((96, 250), text, font=ImageFont.truetype(FONT, 124), fill=INK, anchor="lm")
     if stage:
         draw.text((96, 76), "hello-ai", font=ImageFont.truetype(FONT, 40), fill=MUTED, anchor="lm")
-    # four steps of the roadmap; the page's stage and those before it are filled
-    for step in range(4):
+    # five steps of the roadmap; the page's stage and those before it are filled
+    for step in range(5):
         left = 96 + step * 150
         filled = stage == 0 or step < stage
         draw.rounded_rectangle((left, 470, left + 130, 486), radius=8, fill=accent if filled else EMPTY)

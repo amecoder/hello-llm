@@ -36,7 +36,7 @@ test('every Korean chapter starts with one reading label: 필수, 선택 or 심�
       count++
     }
   }
-  assert.equal(count, 97)
+  assert.equal(count, 109)
 })
 
 test('each stage table of contents shows the same label as the chapter itself', () => {

@@ -103,6 +103,10 @@ features:
     details: AI와 함께 작은 웹 페이지를 기획부터 배포·개선까지 — GitHub 저장소, SPEC.md, 확인 장치, PR·리뷰, GitHub Pages, 안전까지 10장
     link: /guide/30-ai-sdlc/
     linkText: AI-SDLC 가이드 시작
+  - title: 5단계 · 내 서비스 만들기
+    details: 내가 정말 쓰고 싶은 것을 만들어 쓰는 곳에 놓기까지 — 업무·가게·게임·재테크 네 트랙, 데이터 저장, 접근, 안전과 법, 백업까지 12장
+    link: /guide/40-my-service/
+    linkText: 내 서비스 만들기 시작
   - title: AI 지식 레벨 시험 — 초급부터 전문가까지
     details: 자격증 필기시험처럼 5과목 50문제, 과락 있음. 합격하면 다음 레벨이 열리는 초급·중급·고급·전문가 4단계
     link: /guide/00-common/level-test
@@ -121,6 +125,7 @@ features:
 - **일과 공부에 자주 쓰고 싶다면**: 위의 길 + 그 서비스 가이드를 끝까지
 - **내 컴퓨터의 파일 일을 AI에게 맡기고 싶다면**: 위의 길 + 3단계 도구 **하나**(처음이면 Claude Code)
 - **AI와 함께 웹 페이지를 만들어 보고 싶다면**: 3단계 Claude Code → 4단계 AI-SDLC
+- **내가 매일 쓸 도구나 친구에게 보낼 게임을 만들고 싶다면**: 위의 길 + 5단계 내 서비스 만들기
 
 2단계의 ChatGPT·Claude·Gemini 가이드는 서로를 전제로 하지 않습니다. 셋 다 볼 필요는 없습니다.
 
@@ -132,3 +137,4 @@ features:
 | 2 | [ChatGPT](/guide/11-chatgpt/) · [Claude](/guide/10-claude/) · [Gemini](/guide/12-gemini/) | 서비스별 기능과 활용법 |
 | 3 | [Claude Code](/guide/20-claude-code/) · [Claude Code 터미널](/guide/23-claude-code-cli/) · [Codex](/guide/21-codex/) · [Antigravity](/guide/22-antigravity/) | 내 컴퓨터에서 일하는 코딩 AI 도구 |
 | 4 | [AI-SDLC](/guide/30-ai-sdlc/) | AI와 함께 기획부터 배포까지 — 소프트웨어 개발 전 과정(SDLC) |
+| 5 | [내 서비스 만들기](/guide/40-my-service/) | 내가 쓰고 싶은 것을 만들어 쓰는 곳에 놓기 — 업무·가게·게임·재테크 |

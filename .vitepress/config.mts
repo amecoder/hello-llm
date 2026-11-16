@@ -34,6 +34,7 @@ export default defineConfig({
     'guide/23-claude-code-cli/README.md': 'guide/23-claude-code-cli/index.md',
     'guide/22-antigravity/README.md': 'guide/22-antigravity/index.md',
     'guide/30-ai-sdlc/README.md': 'guide/30-ai-sdlc/index.md',
+    'guide/40-my-service/README.md': 'guide/40-my-service/index.md',
     'en/guide/00-common/README.md': 'en/guide/00-common/index.md',
     'en/guide/11-chatgpt/README.md': 'en/guide/11-chatgpt/index.md',
     'en/guide/10-claude/README.md': 'en/guide/10-claude/index.md',
@@ -1246,6 +1247,7 @@ export default defineConfig({
           { text: '3단계 · Codex', link: '/guide/21-codex/' },
           { text: '3단계 · Antigravity', link: '/guide/22-antigravity/' },
           { text: '4단계 · AI-SDLC', link: '/guide/30-ai-sdlc/' },
+          { text: '5단계 · 내 서비스 만들기', link: '/guide/40-my-service/' },
         ],
       },
       {
@@ -1258,6 +1260,27 @@ export default defineConfig({
       },
     ],
     sidebar: {
+      '/guide/40-my-service/': [
+        {
+          text: '5단계 · 내 서비스 만들기 가이드',
+          items: [
+            { text: '목차', link: '/guide/40-my-service/' },
+            { text: '1장. 내 서비스 정하기', link: '/guide/40-my-service/01-choose' },
+            { text: '2장. 아이디어를 설명서로', link: '/guide/40-my-service/02-spec' },
+            { text: '3장. 보기 좋은 화면', link: '/guide/40-my-service/03-screen' },
+            { text: '4장. 데이터는 어디에', link: '/guide/40-my-service/04-data' },
+            { text: '5장. 누가 무엇을 볼 수 있나', link: '/guide/40-my-service/05-access' },
+            { text: '6장. 인터넷에 올리기, 내 컴퓨터에 두기', link: '/guide/40-my-service/06-launch' },
+            { text: '7장. 진짜처럼 확인하기', link: '/guide/40-my-service/07-check' },
+            { text: '8장. 안전과 법', link: '/guide/40-my-service/08-safety-law' },
+            { text: '9장. 고장과 되돌리기', link: '/guide/40-my-service/09-backup' },
+            { text: '10장. 사람들에게 알리기', link: '/guide/40-my-service/10-share' },
+            { text: '11장. 운영과 비용', link: '/guide/40-my-service/11-operate' },
+            { text: '12장. 실습 과제와 다음 걸음', link: '/guide/40-my-service/12-practice' },
+            { text: '← 4단계 · AI-SDLC', link: '/guide/30-ai-sdlc/' },
+          ],
+        },
+      ],
       '/guide/30-ai-sdlc/': [
         {
           text: '4단계 · AI-SDLC 가이드',

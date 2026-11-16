@@ -8,7 +8,8 @@
   1. `00-common` — 모든 LLM에 통하는 공통 원리·사용법
   2. `10-claude` · `11-chatgpt` — 웹 서비스별 심화
   3. `20-claude-code` · `21-codex` · `22-antigravity` · `23-claude-code-cli`(터미널 전용 강좌) — 코딩 에이전트 도구
-  4. `30-ai-sdlc` — AI와 함께하는 소프트웨어 개발 전 과정(최종 목표)
+  4. `30-ai-sdlc` — AI와 함께하는 소프트웨어 개발 전 과정
+  5. `40-my-service` — 내 서비스 만들기 심화 과정(업무·가게·게임·재테크 네 트랙, 장 번호 base 900, 한국어만 — 번역은 보류)
 - **실습 환경 (예정)**: 실제 서비스와 같은 UI를 재현한 연습 화면 + 화면 요소를 하나씩 짚어 주는
   코치 마크(coach mark, 처음 쓰는 사람에게 버튼·입력창 위에 말풍선으로 안내를 띄우는 온보딩 UI)
 
@@ -29,6 +30,7 @@ guide/                 # 독자에게 보여줄 가이드 본문 (번호 = 학�
   10-claude/  11-chatgpt/
   20-claude-code/  21-codex/  22-antigravity/  23-claude-code-cli/
   30-ai-sdlc/
+  40-my-service/
 docs/                  # 프로젝트 운영 문서 (독자용 아님)
   plans/  reports/  architecture/
 assets/                # README 그림 (.excalidraw 원본 + .svg)

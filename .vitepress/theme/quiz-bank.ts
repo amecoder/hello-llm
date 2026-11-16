@@ -8,6 +8,7 @@ import { CLAUDE_CODE_CLI_CHAPTERS, CLAUDE_CODE_CLI_QUESTIONS } from './quiz-bank
 import { CODEX_CHAPTERS, CODEX_QUESTIONS } from './quiz-bank-codex.ts'
 import { ANTIGRAVITY_CHAPTERS, ANTIGRAVITY_QUESTIONS } from './quiz-bank-antigravity.ts'
 import { AI_SDLC_CHAPTERS, AI_SDLC_QUESTIONS } from './quiz-bank-ai-sdlc.ts'
+import { MY_SERVICE_CHAPTERS, MY_SERVICE_QUESTIONS } from './quiz-bank-my-service.ts'
 
 export const CHAPTERS: Record<number, { title: string; link: string }> = {
   1: { title: '1장. LLM이란 무엇인가', link: '/guide/00-common/01-what-is-llm' },
@@ -40,6 +41,7 @@ export const CHAPTERS: Record<number, { title: string; link: string }> = {
   ...CODEX_CHAPTERS,
   ...ANTIGRAVITY_CHAPTERS,
   ...AI_SDLC_CHAPTERS,
+  ...MY_SERVICE_CHAPTERS,
 }
 
 export const QUESTIONS: readonly Question[] = [
@@ -1756,4 +1758,5 @@ export const QUESTIONS: readonly Question[] = [
   ...CODEX_QUESTIONS,
   ...ANTIGRAVITY_QUESTIONS,
   ...AI_SDLC_QUESTIONS,
+  ...MY_SERVICE_QUESTIONS,
 ]
